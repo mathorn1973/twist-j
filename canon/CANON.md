@@ -1,8 +1,38 @@
-# TWIST-J Public Canon v103
+# TWIST-J Public Canon v109
 
-**Release identity.** Public Canon v103. Normative authority and activation
+**Release identity.** Public Canon v109. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
+
+**Specified constructions and readings.** An existence theorem states that
+the explicitly defined carrier, source, evolution and reading have the
+claimed properties. The supplied definitions are part of its premises.
+Such a theorem does not require the reading to be the only possible decoder,
+to be forced by J alone, or to be derived from the original map U. A claim
+about one stated model is assessed on that model and its complete proof.
+Relations between distinct models, and identifications with measured physical
+quantities, are separate claims when they are made.
+
+**Conservative known-input preparation.** The declared integral relative
+contact has sharp initial auxiliary trace accounts 12 for the signed target
+and 27 for the positive target, with exactly four auxiliary slots on a
+complete 26-slot carrier. The account is conserved while the ready bank
+changes. Retained-output renewal and common-program residue constraints
+remain explicit. A complete common finite apparatus now processes two
+independently chosen prepared inputs and retains both records on one carrier.
+The same contact also has an exact three-slot rhythm classification. These
+are L1 constructions; their supplied operations and finite resources remain
+part of the claims.
+
+**Restored workspace and retained history.** For every specified finite k,
+one fixed contact/SWAP program now restores the same complete source, clock,
+controls and two working banks after each prepared input. It retains the
+history in 2k separately funded archive banks on 26+25k slots, at conserved
+account 68+74k. This restores workspace, not occupied retained archives.
+A separate native F5 construction transfers the actual first receiver to
+a marked carry circuit. Its exact integral pairing and restricted carry
+reader are proved, and its 62-register compiled realization is finitely
+audited. These carriers have no identified physical interface.
 
 **Residual step with in-machine records.** RESIDUAL-STEP-RECORD [T]
 joins the exact residual readout step and its two one-shot records on one
@@ -20,7 +50,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v103 also declares the discrete architecture used to read
+only. Public Canon v109 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. The native architecture introduces no fitted dimensionless parameter.
@@ -33,7 +63,7 @@ calibration anchor remains the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v103 does not claim
+seed of the two algebraic projections. Public Canon v109 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -138,7 +168,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v103 contains no such
+deriving the architecture from J; Public Canon v104 contains no such
 theorem.
 
 ---
@@ -11635,6 +11665,3901 @@ physical apparatus owners, including QDD-INSTRUMENT-APPARATUS. They
 create no additional registered obligation or gate and close no physical
 interface.
 
+### JM-RESULTANT-TRACE-SEAM [T]
+
+Let `j` and `m` be primitive fifth and eighth roots of unity, respectively,
+`J=1+j^2`, `M=1+m+m^2`, and
+
+```
+f=x^4-3x^3+4x^2-2x+1,
+g=x^4-4x^3+8x^2-4x+1,
+A=Z[J], B=Z[M], S=A x B, R=Z[x]/(fg).
+```
+
+Embed R into S by evaluation at `(J,M)`. Then
+
+```
+R = {(a,b) in S : a(19)=b(19) mod41},       [S:R]=41.
+```
+
+In cyclotomic coordinates `(1,j,j^2,j^3;1,m,m^2,m^3)`,
+
+```
+S={z=(a0,a1,a2,a3,b0,b1,b2,b3) in Z^8:b1-b2-b3=0 mod3},
+ell=(1,10,18,16,-1,-27,-32,-3),
+R={z in S:ell z=0 mod41}.
+```
+
+The selected positive trace form
+`b(z,w)=Tr_K5(z5 conjugate(w5))+Tr_K8(z8 conjugate(w8))`
+has Gram `G=diag(5I4-11^T,4I4)`. Thus `I<=G<=5I`,
+`det G=32000`, and its determinants on the power bases of S and R
+are 288000 and 484128000. The source S has index 3 in `O5 x O8`;
+R has index 123. Inherited conjugation need not preserve R.
+
+Proof. The power-coordinate transitions are
+
+```
+TJ=[[1,1,0,-2],[0,0,-1,-2],[0,1,1,0],[0,0,-1,-3]], det TJ=-1,
+TM=[[1,1,0,-5],[0,1,2,0],[0,1,3,5],[0,0,2,7]], det TM=-3.
+```
+
+Direct reduction by `1+j+j^2+j^3+j^4=0` and `m^4=-1` gives these
+columns and `f(J)=g(M)=0`. Their nonzero determinants prove the four
+powers independent, hence f and g are the minimal polynomials. Every TM
+column satisfies the stated mod3 congruence. That congruence has index 3,
+so equality with the TM image follows. TJ is unimodular.
+
+The polynomial identity
+
+```
+(14x^3-36x^2+43x+64)f+(-14x^3+22x^2-7x-23)g=41
+```
+
+and the exact factorizations over F41
+
+```
+f=(x-11)(x-17)(x-19)(x-38),
+g=(x-6)(x-7)(x-13)(x-19)
+```
+
+give `Z[x]/(f,g)=F41`, with x acting as 19. Since f and g are monic
+and coprime over Q, `(f) intersect (g)=(fg)` in Z[x]. The resulting
+exact sequence `0 -> R -> A x B -> Z[x]/(f,g) -> 0`, with last map
+the difference of evaluations, proves the fiber product and index 41.
+The unique cyclotomic residues consistent with `J=M=19` are `j=10`
+and `m=27`: their powers are `(1,10,18,16)` and `(1,27,32,3)`.
+This gives ell. For off-diagonal fifth-root powers the trace is−1;
+for nonconstant eighth-root powers with exponent magnitude at most3 it
+is0. Diagonal traces are4. Hence G has eigenvalues1,5,5,5,4,4,4,4.
+Changing lattices multiplies Gram determinants by the square of the index.
+Finally conjugation gives `bar J=17` and `bar M=7` in the selected
+residues, so `(bar J,bar M)` fails the seam. This is compatible with
+using conjugation in the ambient trace pairing; it does not make R a
+conjugation-stable ring.
+
+### JM-POSITIVE-REFERENCED-READING [T]
+
+Use the preceding S, R, G and `q(z)=z^T G z`. On `S tensor_Z bar S`
+define the outer record `Q(z)=z tensor bar z`. Its coefficient matrix is
+`X=zz^T`. The kernel action is `Phi(z tensor bar w)(t)=z b(w,t)`,
+so `Phi(Q(z))=XG`. For nonzero z the record
+
+```
+(q,rho)=(q(z),zz^T G/q(z))
+```
+
+is positive and trace one in the G metric, and reconstructs X exactly by
+`X=q rho G^-1`. It determines z up to simultaneous sign and determines
+seam membership through `ell X ell^T=0 mod41`. Zero has a distinct record.
+A bare reading invariant under every nonzero integer scaling cannot
+determine R-membership on `S\{0}`. A fixed affine reference instead gives
+an injective normalized reading, including zero and sign:
+
+```
+G0=diag(1,G), y_z=(1,z), A_z=1+q(z),
+rho_z=y_z y_z^T G0/A_z,
+z_i=(rho_z)_(i,0)/(rho_z)_(0,0),
+q(z)=1/(rho_z)_(0,0)-1.
+```
+
+Proof. The kernel product contracts the middle factors by b, and its
+involution exchanges the two legs. Its rational representation is faithful
+because G is invertible. The operator `zz^T G` is G-self-adjoint and
+`b(t,zz^T Gt)=b(z,t)^2>=0`. Its square is q times itself and its
+trace is q, proving the normalized identities. Equality `zz^T=ww^T`
+with nonzero integer vectors forces `w=+/-z`: one nonzero diagonal entry
+fixes the common sign and its row fixes every coordinate. The seam criterion
+follows from `ell zz^T ell^T=(ell z)^2`, since F41 is a field. In contrast,
+`41S subset R`, so any scaling-invariant F satisfies `F(s)=F(41s)`.
+Take `s=(1,0,0,0,-1,0,0,0)`, whose ell value is 2: it lies outside R
+while 41s lies inside. Finally the zeroth column of the referenced projector
+is `y_z/A_z`, yielding the reconstruction formulas. The reference is fixed
+when z is scaled; thus this affine map does not satisfy the homogeneous
+scaling premise. These are exact data readings, not assertions of one-shot
+measurement of a complete density matrix.
+
+### JM-BOUNDED-READOUT-PRECISION [T]
+
+Fix an integer `Q>=8` and the complete finite preparation class
+`B_Q={z in S:0<q(z)<=Q}`. Choose the 45 fixed binary projector contexts
+`(P_v,I-P_v)` for
+
+```
+v in {e_i:0<=i<9} union {e_i+e_j:0<=i<j<9},
+P_v=v v^T G0/(v^T G0 v),
+p_v(z)=tr(rho_z P_v)=(v^T G0 y_z)^2/((v^T G0 v)A_z).
+```
+
+All effects are rational, positive and bounded by identity; their denominators
+are among 1,4,5,6,8. The complete profile determines z. If Delta_Q is the
+minimum sup-norm profile distance between opposite seam labels, then
+
+```
+1/[72(Q+1)] <= Delta_Q <12/Q,                Q>=14112.
+```
+
+The upper order bound applies to any family of effects bounded by identity.
+Consequently response error smaller than `1/[144(Q+1)]` permits an exact
+seam decision by finite enumeration. Under additionally supplied independent
+Born Bernoulli trials on fresh identical pure copies, the worst-case number
+of copies for fixed error less than one half has order Q^2, even if arbitrary
+collective measurements are allowed.
+
+Proof. Put `p0=p_e0` and `d_i=(G0)_ii`. The 17 contexts `e_i,e0+e_i`
+give
+`(Gz)_i=((1+d_i)p_(e0+ei)-p0-d_i p_ei)/(2p0)`, so inversion of G
+recovers z. For two distinct z,w let `A=1+q(z)`, `B=1+q(w)` and
+`c=1+b(z,w)`. The trace distance D of their pure projectors obeys
+`D^2=1-c^2/(AB)`. This follows by diagonalizing their difference on its
+at most two-dimensional support. Moreover
+
+```
+AB-c^2=q(z-w)+q(z)q(w)-b(z,w)^2 >= q(z-w)>=1.
+```
+
+Thus `D>=1/(Q+1)`. If delta is the maximum context-response difference,
+set `Y=y_z y_z^T/A-y_w y_w^T/B` and `H=G0 Y G0`.
+The coordinate contexts give `|H_ii|<=4delta`; the sum contexts give
+`|H_ij|<=8delta`. Thus `||H||_F<=72delta`, whereas
+`sqrt(2)D=||G0^(1/2)Y G0^(1/2)||_F<=||H||_F`, since `G0>=I`.
+This proves the displayed lower bound.
+
+For the upper bound take `v=(1,0,0,0,-1,0,0,0)`, `a=41n`, `b=a+1`
+and `Q_n=8b^2`, n>=1. Then `av` is on the seam and `bv` is off it,
+and
+`D_n^2=8/[(1+8a^2)(1+8b^2)]<9/Q_n^2`.
+For every bounded effect its response difference is at most D_n by the
+two eigenvalues `+D_n,-D_n`. Since `Q_(n+1)<4Q_n`, the largest n
+with `Q_n<=Q` gives `D_n<12/Q`. Enumerate integer coordinates bounded
+by `floor(sqrt Q)`, filter B_Q, and retain profiles within the specified
+response error. No opposite labels can both survive if twice that error
+is less than the proved separation.
+
+For the sampling upper bound choose `epsilon=1/[288(Q+1)]`. The centered
+Bernoulli log moment generating function has second derivative at most1/4,
+so `Pr(|p_hat-p|>=epsilon)<=2 exp(-2N epsilon^2)`. A union bound over 45
+settings gives error at most eta when each setting uses
+`N>=ceil(41472(Q+1)^2 log(90/eta))` copies. For the difficult pair above,
+N pure copies have squared overlap `(1-D_n^2)^N`; diagonalizing their
+rank-two difference gives optimal equal-prior error
+`(1-sqrt(1-(1-D_n^2)^N))/2`. For `eta<1/2`, achieving that error requires
+`N>Q^2 log(1/[4eta(1-eta)])/288`, using `-log(1-d)<=2d` for `d<=1/2`.
+This proves the fixed-confidence order. The copy and Bernoulli premises
+are part of this comparison model.
+
+### JM-PREPARATION-MEMORY-SEPARATION [T]
+
+For any probability law pi on B_Q define
+
+```
+REDRAW_k(pi)=(sum_z pi_z rho_z) tensor-power k,
+HOLD_k(pi)=sum_z pi_z (rho_z tensor-power k).
+```
+
+These contracts have the same one-copy marginal but different block states
+in general. Equal averaged densities remain indistinguishable for every
+REDRAW block. At `Q=14112` there are entirely on-seam and entirely off-seam
+preparations with equal one-copy density and distinct two-copy HOLD states.
+Their two-copy trace distance is exactly `31872/1210262180216419`.
+
+Proof. With the v above set
+`sigma_t=(rho_(tv)+rho_(-tv))/2`, `p_t=1/(1+8t^2)` and
+`lambda=354161/735212`. Relative to the orthogonal reference and source line,
+`sigma_t=p_t P_ref+(1-p_t)P_v`. Direct rational substitution gives
+`p41=lambda p40+(1-lambda)p42`, hence
+`sigma41=lambda sigma40+(1-lambda)sigma42`. All pure labels on the left
+lie in R, all on the right lie outside R, and all lie in B_14112.
+Tensor powers of the equal averaged density are equal, proving REDRAW
+indistinguishability by every effect or fixed state-only channel.
+
+For HOLD, fair opposite signs retained across both outputs give, in an
+orthonormal two-coordinate proof chart,
+
+```
+Gamma_t=[[p^2,0,0,p(1-p)],
+         [0,p(1-p),p(1-p),0],
+         [0,p(1-p),p(1-p),0],
+         [p(1-p),0,0,(1-p)^2]].
+```
+
+The off-minus-on difference is
+
+```
+V * [[1,0,0,-1],[0,-1,-1,0],[0,-1,-1,0],[-1,0,0,1]],
+V=(p40-p41)(p41-p42)=15936/1210262180216419.
+```
+
+Its eigenvalues are `2V,-2V,0,0`; half the trace norm is2V. The positive
+eigenspace gives an effect attaining the difference. In the original pair
+metric `diag(1,8,8,64)` it is the rational rank-one projector onto
+`(8,0,0,-1)`, of squared norm128. This is nonzero statistical separation,
+not certain one-block discrimination or a source-independent operation
+recovering lost preparation labels.
+
+### JM-HELD-SEAM-DETECTOR [T]
+
+On the complete B_Q under HOLD there is a positive product effect that is
+exactly dark on every on-seam label and strictly bright on every off-seam
+label. Define
+
+```
+C=ell G^-1 ell^T=19639/20,
+m=floor(sqrt(CQ)/41), d=2m+1,
+L_j=(-41j,ell), u_j=G0^-1 L_j^T,
+c_j=C+1681j^2, E_j=u_j u_j^T G0/c_j,    -m<=j<=m.
+```
+
+Use one distinct held output for each E_j, and declare affirmative only
+when every binary context returns yes. Then
+
+```
+h_Q(z)=product_j (ell z-41j)^2/[c_j(1+q(z))],
+h_Q(z)=0 iff z in R,
+beta_Q=1/[(Q+1)^d product_j c_j]>0.
+```
+
+For any HOLD mixture of off-seam weight w, its affirmative probability lies
+between `beta_Q w` and w. If k_min(Q) is the least block length permitting
+any positive effect with this universal exact one-sided contract, then
+
+```
+2 floor(sqrt((Q-8)/(8*41^2)))+1 <= k_min(Q)
+ <=2 floor(sqrt((19639/20)Q)/41)+1,             Q>=16.
+```
+
+Thus `k_min(Q)=Theta(sqrt Q)`, and at Q=14112 the bounds are 3 and 181.
+No fixed finite block works on the unbounded source family.
+
+Proof. Cauchy gives `|ell z|<=sqrt(CQ)`. Every E_j is a normalized
+rank-one projector, so it and its complement are positive. On-seam inputs
+have `ell z=41j` in the complete interval, causing a zero factor. Off-seam
+inputs have every numerator a nonzero integer square. Bounding each positive
+denominator by `c_j(Q+1)` gives beta_Q; averaging gives the mixture bounds.
+
+For the lower bound restrict to the affine line
+`z_t=(1+t,0,0,0,1-t,0,0,0)`, with `q(z_t)=8+8t^2` and `ell z_t=2t`.
+For `n=floor(sqrt((Q-8)/(8*41^2)))` it contains the 2n+1 on-seam parameters
+`-41n,...,0,...,41n` and the off-seam parameter1. Stripping positive
+normalization from k copies leaves the vector polynomial
+`Y_t=(1,z_t) tensor-power k` of degree at most k. If a positive effect E
+is dark, `E^(1/2)Y_t=0`. Each coordinate is a polynomial of degree at most k;
+when `k<2n+1`, the on-seam roots force it identically zero, including at1,
+a contradiction. The same reasoning with infinitely many roots excludes
+fixed finite k without a bound. The square root here is only a proof chart,
+not a rational arithmetic implementation requirement.
+
+The memory premise is necessary: at Q=14112 the on-seam labels
+`z0=(1,0,0,0,1,0,0,0)` and `z1=(41,0,0,0,-41,0,0,0)` have distinct zero
+settings 0 and 2. Their equal REDRAW mixture has a strictly positive mean at
+every setting and therefore a positive all-click probability. HOLD is dark.
+The block bound concerns nonzero success probability; it makes no improvement
+claim for total sample cost, since beta_Q can be extremely small.
+
+### JM-RETAINED-RATIONAL-PAIR-SOURCE [T]
+
+Fix Q>=8, K>=1, the metric `G0`, and pair metric `L=G0 tensor G0` on
+`V tensor_Q V`, `V=Q^9`. A classical retained digital program z controls
+one rational isometry producing two anchored outputs from a common ready pair.
+For admitted `z in B_Q` put
+
+```
+e=e0 tensor e0, y=(1,z), A=1+q(z), w=y tensor y,
+v=Ae-w, d=A(A-1), U_z=I-v v^T L/d.
+```
+
+For invalid z use identity with no admitted preparation promise. Then
+`U_z^2=I`, `U_z^T L U_z=L`, `U_z e=w/A`, and the prepared pair density
+is `rho_z tensor rho_z`. A fixed addressed source with K common ready pair
+cells prepares 2K held outputs, replaces arbitrary occupied output ports
+losslessly, and retains their complete contents and correlations.
+
+Proof. `e^TLe=e^TLw=1` and `w^TLw=A^2` imply
+`v^TLv=2A(A-1)` and `v^TLe=A-1`. Substitution proves the involution,
+isometry and preparation identities. Factoring the outer density proves
+`(w/A)(w/A)^T L=rho_z tensor rho_z`. All coefficients are rational.
+For a nonsquare A, an odd number k of clean rational output factors with
+no program-dependent residual output would require a scalar
+`c in Q` with `c^2 A^k=1`, which is impossible. Pair preparation avoids
+this restricted obstruction. For odd requested counts retain the spare partner.
+
+The rational comparison isometry extends to the real or complex Hilbert space with the same finite metric; density operators and arbitrary entanglement below are interpreted on this space.
+
+The full rational tensor carrier has the program, integer counter n, output
+pair P, stock pairs B_0,...,B_(K-1), and arbitrary spectators. At a valid
+address 0<=n<K apply `SWAP_(P,B_n) U_z^(B_n)` and increment n; otherwise
+increment n without changing the pair registers. Inverse decrements n first
+and applies `U_z^(B_n) SWAP_(P,B_n)` at the recovered valid address.
+Hence this is a complete bijection and comparison isometry, including dirty
+or entangled inputs. If unused B_n is in the common pure ready state e and
+uncorrelated with the rest, then for arbitrary old port/spectator density sigma,
+
+```
+sigma_(P,E) tensor |e><e|_(B_n)
+ -> (rho_z tensor rho_z)_P tensor sigma_(B_n,E).
+```
+
+Thus all old correlations are retained, and each supported round yields a
+fresh pair conditional on z. Induction gives K such pairs and the old port
+in the used stock. Averaging over a diagonal classical program law pi gives
+`sum pi_z rho_z tensor-power(2K)`, hence every smaller HOLD block by retaining
+unused factors. Interventions on already emitted outputs may be included if
+they do not alter the program or unused ready stock.
+
+After K rounds no additional preparation is promised. Reversal restores
+all original contents if all subsequent interactions and records are also
+reversed. Dirty stock already in `w/A` returns to e and fails the readiness
+promise, while the inverse remains valid. Arbitrary lossless replacement of
+an 81-dimensional port needs an archive of dimension at least 81:81 orthogonal
+old inputs must leave orthogonal environmental outputs when the new port is
+fixed pure. The same-size swap attains this bound. The digital program is
+an orthogonal instruction, not a nonorthogonal specimen being cloned.
+
+### JM-INTEGER-PAIR-INVOLUTION [T]
+
+Fix Q>=8 and the preceding `U_z=N_z/d_z` for admitted z, with
+`N_z=d_z I-v_z v_z^T L`. On the universal integer cell carrier
+`C_int=Z^81 x Z_(>0)`, let `m(X,D)=gcd(X_0,...,X_80,D)`. For admitted z set
+
+```
+Y=N_z X, M=d_z D, g=gcd(Y_0,...,Y_80,M),
+Uhat_z(X,D)=(m(X,D)Y/g,m(X,D)M/g).
+```
+
+Invalid programs act by identity. This map is an exact involution on every
+integer cell, preserves m, and its rational readout satisfies
+`X'/D'=U_z(X/D)` and `(X'^T L X')/D'^2=(X^T L X)/D^2`.
+For admitted z it exchanges `(e,1)` and `(w_z,A_z)`.
+
+Proof. The rank-one identities above give
+`N_z^2=d_z^2 I`, `N_z^T L N_z=d_z^2 L` and
+`N_z e=(A_z-1)w_z`. The denominator M is positive; division by g is exact
+and makes `(Y/g,M/g)` primitive. Multiplication by the old content m
+preserves that content exactly. Applying the map twice preserves both m
+and the rational vector, since U_z is an involution. A rational vector has
+exactly one primitive integer numerator/positive-denominator representation;
+fixing m therefore determines the complete integer pair, proving involution.
+For `(e,1)` the first coordinate of w_z is1, so
+`gcd((A_z-1)w_z,A_z(A_z-1))=A_z-1`, giving the stated ready mapping.
+This is exact integer arithmetic including gcd and exact division. The
+Cartesian tuples of these cell encodings do not by themselves encode an
+arbitrary entangled joint quantum state; that stronger carrier belongs to
+the preceding rational-source theorem.
+
+### JM-FUNDED-INTEGER-PAIR-SOURCE [T]
+
+Fix Q>=8 and K>=1. Let
+
+```
+u=(z,z_arch,P,(B_0,...,B_(K-1)),n,p),
+z,z_arch in Z^8, P,B_j in C_int, n in Z, p in {0,1},
+E_cell(X,D)=X^T L X+D^2,
+E(u)=1+q(z)+q(z_arch)+E_cell(P)+sum_j E_cell(B_j)+n^2+p^2.
+```
+
+Define the forward core T_+ as follows. At phase 0, apply Uhat_z to B_n
+if z is admitted and0<=n<K, then set phase 1. At phase 1, swap P and B_n
+under the same validity condition, then set `(n,p)=(n+1,0)`.
+The reverse core T_- undoes phase 1 preparation when p=1, or undoes the
+swap at address n-1 and sets `(n,p)=(n-1,1)` when p=0.
+For bank b>=0 and direction eps in{−1,+1}, propose
+
+```
+u'=T_eps(u), b'=b+E(u)-E(u').
+```
+
+Accept `(u',b',eps)` when b'>=0; otherwise keep u,b and reverse eps.
+This funded map F is a bijection, `F^-1=J_dir F J_dir`, and conserves
+E+b. Every fixed-total-budget level is finite.
+
+For admitted z, arbitrary occupied P and arbitrary program archive,
+starting with K ready cells `(e,1)` and `(n,p,eps)=(0,0,+1)`, the sharp
+bank sufficient and necessary to complete K pair rounds is
+
+```
+b_sharp(z,K)=2K(A_z^2-1)+K^2=2K q(z)(q(z)+2)+K^2.
+```
+
+It is independent of the old port and program archive. At Q=14112 and K=91,
+the uniform sufficient bound is 36,250,180,057; this supplies 182 one-cell
+outputs, including a retained spare for the 181-output detector.
+
+Proof. T_- is the exact inverse of T_+ because the reverse phase determines
+the original address and each pair gate and swap is an involution. If a
+funded edge is accepted, its reversed edge has bank equal to the original
+nonnegative bank. If rejected, reversal proposes the same unaffordable edge
+and flips direction again. This proves the displayed inverse; each accepted
+or reflected step conserves E+b. Since `G>=I` and `L>=I`, every unbounded
+integer coordinate of u has absolute value at most sqrt(C) on `E+b=C`,
+while `0<=b<=C`; all other coordinates have finite ranges. The level is finite.
+
+The ready cell costs 2 and the prepared cell costs `2A_z^2`. The first
+phase of round r increases E by `2(A_z^2-1)+1`; the second swaps two
+complete cell encodings without changing their total cell cost, and changes
+`n^2+p^2` by 2r. Therefore
+
+```
+E_(2r)-E_0=2r(A_z^2-1)+r^2,
+E_(2r+1)-E_0=2(r+1)(A_z^2-1)+r^2+1.
+```
+
+These are nondecreasing over the whole supported trajectory, so the maximum
+prefix cost is the final cost displayed in b_sharp. It is both sufficient
+and necessary and contains no P or archive term. At one less bank and K>=2,
+the source completes 2K−1 steps, retains bank 2K−3, rejects the last step
+of cost 2K−2, and unwinds those steps in the reverse direction. After supported
+capacity is exhausted the same funded map remains defined; it supplies no
+additional fresh pairs. This account is a declared positive integer resource
+functional, with no empirical energy unit or additional output-measurement
+cost asserted. The ready-product trajectory read through X/D realizes the
+pair outputs of the rational source theorem on this precise integer carrier.
+
+
+### AUTONOMOUS-SOURCE-WORK-RECORD-CHAIN [T]
+
+For every N>=2 the following specified integer source, chain and receiver
+form an autonomous conservative bijection on their complete 32N-coordinate
+carrier. It preserves the exact charges, divergences and Gauss defects on
+all inputs, including occupied ports and refusal branches. Two ready
+preparations with zero initial resources, equal total energy34 and equal
+source residues modulo5 release10 units of source field energy at steps1
+and5. Their first receiver writes occur at N and N+4. The same current
+pointer reading distinguishes them at the four boundaries N through N+3.
+Their complete states obey an exact four-step translation in time.
+The source, contact placement, preparation and accounting law below are
+part of the theorem's premises.
+
+**Proof and construction.**
+
+#### Complete carrier and accounts
+
+Use DEF-FIELD-WORK-RECORD-CHAIN with the following explicitly
+specified source operation. The complete data are restated here. Cell i is c_i=(m_i,b_i,z_i,r_i), with three ordered
+reacting vectors m_ij and three spectator vectors b_ij in Z^4, raw field
+z_i=(E_i,M_i) in Z^4 x Z^2 and resource r_i in N_0: 31 coordinates.
+There are N>=2 cells, N-1 neutral resources q_j in N_0 and one receiver
+pointer p in C5. The receiver is t=N-1. The full carrier has 32N stored
+coordinates; literal equality retains all of them.
+
+The fixed matrices and energy forms are
+
+```text
+C = [[1,-1],[-1,0],[0,1],[0,1]],
+D = [[1,1,1,0],[-1,-1,0,-1],[0,0,-1,1]], D C=0,
+Kmat = [[6,2,-1,2],[2,6,2,-1],[-1,2,6,2],[2,-1,2,6]],
+Q(w)=w^t Kmat w, chi(w)=sum(w),
+Hraw(E,M)=E^t E+M^t M+E^t C M,
+Hcell(c)=sum_j Q(m_j)+sum_j Q(b_j)+Hraw(z)+r,
+Htot=sum_i Hcell(c_i)+sum_j q_j+1.
+```
+
+The pointer's energy 1 is the specified chosen constant, not a measured
+memory cost. All these forms and the graph remain declared architecture.
+The actual charge is
+
+```text
+rho_i=(chi(b_i0)+sum_j chi(m_ij), chi(b_i1), chi(b_i2));
+div_i=D E_i; defect_i=div_i-rho_i.
+```
+
+The active/static maps, whose symbol S is NOT the signed block swap, are
+
+```text
+P(a,b,c,d)=(a-b,-a,b,b,c,d),
+S(u,v)=(u,u,v,u-v,0,0),
+H(a,b,c,d)=2a^2-2ab+3b^2+c^2+d^2+2ac-ad-bc+3bd,
+Hraw(P y+S(u,v))=H(y)+3u^2-2uv+2v^2.
+```
+
+The rational split of an arbitrary raw field is unique:
+
+```text
+a=(2E0-3E1+E2+E3)/5,
+b=(-E0-E1+2E2+2E3)/5,
+c=M0, d=M1,
+u=(2E0+2E1+E2+E3)/5,
+v=(E0+E1+3E2-2E3)/5.
+```
+
+It is integral exactly when g=2E0-3E1+E2+E3 is divisible by 5.
+Off this sublattice the source operation below is the identity. In particular
+we do not round, erase the static field or discard a raw-field coset.
+The identity D P_E=0 will preserve every divergence, including nonzero
+Gauss defects and charged spectator preparations.
+
+The specified free map is
+
+```text
+Fraw(E,M)=(E+C M, M-C^t(E+C M)),
+Fraw^-1(E',M')=((I-C C^t)E'-C M', M'+C^t E'),
+A_f=[[1,0,1,0],[0,1,0,1],[-2,1,-1,1],[1,-3,1,-2]],
+Fraw P=P A_f, Fraw S=S, A_f^5=I, H(A_f y)=H(y).
+```
+
+It preserves Hraw and divergence on every raw integer field, not only
+integrally split ones. The shell maps are
+
+```text
+L=[[1,-3,-1,-2],[-3,4,-2,1],[0,5,1,2],[5,-5,2,-1]],
+Vinv=[[1,2,1,2],[2,-1,2,-1],[0,-5,1,-3],[-5,5,-3,4]],
+Vinv L=L Vinv=5I, H(Lx)=5H(x),
+y=(a,b,c,d) in L Z^4 iff a+2b=c+2d=0 mod5.
+```
+
+With Z4 the zero vector, literal ordered matter endpoints are
+
+```text
+R=((1,-2,1,0),Z4,Z4), Qsum(R)=18,
+AM=((1,0,0,0),(0,-1,0,0),(0,-1,1,0)), Qsum(AM)=20,
+ZM=(Z4,Z4,Z4).
+```
+
+The base total local involution G exchanges funded pairs
+
+```text
+(R,b,PLx+S sigma,r) <-> (AM,b,Px+S sigma,r+4H(x)-2).
+```
+
+On R the split must be integral, y must be in L Z^4, x=Vinv y/5 and
+r+4H(x)-2>=0. On AM the split must be integral and r+2-4H(y)>=0.
+Every other whole input is fixed, including all ZM inputs. The spectator,
+static field, reacting-vector sum, charge, divergence and defect are fixed.
+The two endpoint energy equality proves full Hcell conservation.
+
+At the receiver replace G by
+
+```text
+e(c)=1 iff the actual G(c) accepts R -> AM, otherwise 0,
+Ghat_t(c,p)=(G(c),p+e(c) mod5),
+Ghat_t^-1(c',p')=(G(c'),p'-e(G(c')) mod5).
+```
+
+All other operations fix p. This writer has a recovered-input inverse;
+it is not an involution. The fixed reader O(p) is BLANK for p=0 and HIT
+otherwise. It reads no clock, N, source coordinates or history.
+
+Contact layers A and B exchange r_j with q_j, then q_j with
+r_(j+1), respectively. Both are complete swaps, including occupied slots.
+The base macrostep is That=F B A Ghat, with rightmost operation first.
+A fixed cut j omits BOTH swaps incident with q_j, retains its content,
+and changes neither the local reactions nor the source operation below.
+
+#### The source-local operation
+
+To distinguish the signed block swap from static S and contact B, call it
+
+```text
+Bstar(a,b,c,d)=(-c,-d,-a,-b), Bstar^2=I,
+f(a,b)=(a-b)^2+b^2,
+Delta(y)=H(Bstar y)-H(y)=f(c,d)-f(a,b).
+```
+
+Expanding H gives the displayed difference; equivalently its cross terms
+are unchanged while the diagonal block weights exchange. Hence
+Delta(Bstar y)=-Delta(y).
+
+Define Ksrc on an arbitrary complete cell:
+
+1. If its raw split is not integral, retain the whole cell.
+2. Otherwise calculate Delta(y). If r-Delta(y)<0, retain the whole cell.
+3. Otherwise replace (P y+S sigma,r) by
+   (P Bstar y+S sigma,r-Delta(y)), retaining m,b and sigma.
+
+The accepted image is integrally split. Applying Ksrc again is funded,
+since (r-Delta(y))-Delta(Bstar y)=r>=0, and recovers the exact input.
+Thus accepted states occur in transpositions or fixed points. A refused
+state cannot be an accepted image, by the same identity. Nonsplit states
+remain nonsplit fixed points. This proves Ksrc^2=I on the entire cell
+carrier, including arbitrary occupied resources and all refusal branches.
+
+All unchanged matter and spectator terms remain in the energy account.
+The static field is retained, and H(Bstar y)+(r-Delta(y))=H(y)+r.
+Thus Ksrc preserves Hcell, resource nonnegativity, spectators and all
+reacting-vector sums. Its field difference P(Bstar y-y) is divergence
+free. Charge, divergence and Gauss defect are separately preserved on
+ALL cells, without assuming Gauss's law initially.
+
+The operation retains matter, so its change in the matter energy is zero.
+Its full-state inverse and conservation follow from the displayed formulas.
+
+#### One autonomous law on the unchanged carrier
+
+Apply Ksrc at cell 0 before every base macrostep:
+
+```text
+Tnew = F B A Ghat Ksrc_0,
+Tnew^-1 = Ksrc_0 Ghat^-1 A B F^-1.
+```
+
+Each adjacent inverse cancels, so both inverse identities hold on the full
+carrier. Every factor preserves Htot and each cell's charge, divergence and
+Gauss defect. The local field, reaction and source factors preserve Hcell;
+the contact swaps redistribute resource energy between cells and channels. The same applies with any fixed cut. The added factor has radius
+zero, so the two-way dependence radius remains at most two stored-block
+edges; depth increases from four to five. All cells, occupied channels
+and pointer are retained; no stored counter, new clock, selector bit,
+one-off prefix or direct energy reader is added.
+
+The prescribed contact at the distinguished source is a new selected law.
+It is not translation invariant over interchangeable source/receiver roles.
+Its fixed position and placement before Ghat are explicit construction
+data shared by every preparation and control.
+
+For positivity, Kmat is symmetric with diagonal6 and absolute off-diagonal
+row sums5, hence positive definite. The eigenvalues of C^t C are
+(5+sqrt5)/2 and (5-sqrt5)/2, both below4. Therefore
+Hraw=||E+CM/2||²+M^t(I-C^t C/4)M is positive definite.
+Positive-definite Q and Hraw, nonnegative r,q and finite p make each fixed
+finite-energy shell finite. Since Tnew is a bijection preserving the shell,
+every complete finite-energy state is periodic. This does not imply a
+permanent event record, a physical clock or dissipation.
+
+#### Zero-resource, same-residue source preparations
+
+For every N>=2 prepare zero spectators, static fields, channels and all
+cell resources. Source matter and intermediate matter are ZM; the receiver
+is (R,0,0,0) and p=0. Change only the source active field between
+
+```text
+v=(2,-1,0,0),          H(v)=15,
+v_late=A_f v=(2,-1,-5,5), H(v_late)=15.
+```
+
+Call the complete preparations s_early and s_late. Their common total is
+15+18+1=34. Their actual charges and Gauss defects are zero. They also
+have the same full raw-field residue modulo 5 since v_late-v=(0,0,-5,5).
+No source-dependent answer is stored in the receiver or a bank.
+
+The exact free orbit and proposed contact costs are
+
+| phase a | A_f^a v | Delta |
+|---|---|---:|
+| 0 | (2,-1,0,0) | -10 |
+| 1 | (2,-1,-5,5) | 115 |
+| 2 | (-3,4,5,-10) | 260 |
+| 3 | (2,-6,-5,10) | 225 |
+| 4 | (-3,4,5,-5) | 60 |
+
+Matrix multiplication gives A_f^5 v=v; direct f evaluation gives all
+five costs. On v at r=0 the source operation accepts and produces
+y0=(0,0,-2,1), H(y0)=5 and r=10. On the other four phases it refuses
+at r=0. In the first four steps from s_late, the source remains ZM,
+every resource stays zero, intermediate G rejects, receiver G is
+unfunded, and F only advances the source phase. Therefore
+
+```text
+Tnew^4(s_late)=s_early
+```
+
+as literal equality of the COMPLETE state. Autonomy then gives
+Tnew^(n+4)(s_late)=Tnew^n(s_early) for every n>=0 (indeed for all integer
+n by bijectivity). This is a phase/latency discriminator. No larger
+eventual output energy or permanent distinction is inferred.
+
+For completeness, the subsequent free orbit of y0 has costs
+10,55,75,40,0. At r=0 the first four refuse, and the fifth Bstar is an
+actual fixed point, (2,-1,-2,1). Thus a source with zero returned resource
+retains energy 5 on this orbit; it cannot release a second pulse before
+the base pulse reaches the receiver.
+
+#### First arrival, actual work, and bounded current record
+
+In step 1 from s_early, Ksrc converts ten units of source field energy
+into its base r0. Source G rejects because its matter is ZM. The
+receiver G occurs before arrival and rejects at r=0. The base contact
+permutation puts ten in r1. Intermediate ZM cells cannot react.
+
+For 1<=k<=N-1 the first ten-unit pulse occupies r_k at boundary k;
+all other resources and channels are zero. Before reaching the receiver
+there is no return resource at the source, and the y0 cost observation
+above rules out another emission. The field evolves as P A_f^k y0.
+For k<N-1 the receiver remains exactly ready and p=0. This induction
+includes N=2, where the first recipient is already the receiver.
+
+At boundary N-1 the receiver has r=10. In step N its actual R-to-AM
+reaction costs two resource units, raises its matter energy from 18 to20
+and increments p to1. The remaining eight units go to q_(N-2) in the
+contact layer. This is the first write; source energy has already fallen
+from15 to5 and no external reserve was present.
+
+Accounts through that step are
+
+```text
+initial:            15 + 18 + 0 + 1 = 34,
+first transit:       5 + 18 +10 + 1 = 34,
+after receiver work: 5 + 20 + 8 + 1 = 34.
+```
+
+The four-step full-state identity implies first arrival N+3 and first
+write N+4 from s_late. Its first emission is step5. The ten-unit emission
+and two-unit receiver reaction are exact chosen accounting quantities,
+not an SI energy calibration or an identified particle rest energy.
+
+After a receiver increment its matter is AM. Another R-to-AM increment
+requires an intervening AM-to-R step; Ksrc never touches this receiver
+because N>=2. Hence successive increments are at least two macrosteps
+apart. Starting with p=0, after the first event j at most four increments
+occur through j+7, so the pointer is nonzero on all eight boundaries
+j,...,j+7. This specified retention argument holds for the source law too.
+
+Consequently the SAME current-pointer reader gives
+
+```text
+O(Tnew^k s_early)=HIT,
+O(Tnew^k s_late)=BLANK,       N<=k<=N+3.
+```
+
+There are four common distinguishing boundaries, not eight. Later the
+delayed state also writes. Neither first arrival nor first write is
+observable from a universal ready-state test asserted here: these times
+are conditional statements about the fixed preparations. No optimal
+latency or robustness to arbitrary perturbations is claimed.
+
+For an arbitrary initial p, every accepted receiver event still adds one
+modulo5 and has the same inverse. The HIT/BLANK guarantee above requires
+the frozen ready p=0; occupied-pointer continuation does not promise
+non-destructive archival or distinguishability for every old pointer.
+
+#### Controls with zero initial reserves
+
+If the source field is zero and the same zero-resource preparation is
+retained, Ksrc fixes it, source ZM rejects, all swaps exchange zeros and
+receiver R is always unfunded. The receiver stays BLANK for all time.
+Its total energy is19, transparently different from the two H15 signals.
+
+Disabling only Ksrc leaves source matter ZM and active energy15 under F.
+There is no release to r. Both base source preparations therefore
+leave the base receiver BLANK for all time. This equal-total-energy
+control retains every initial resource and field and changes only the
+declared source operation.
+
+For any one fixed cut j the downstream component is initially ready,
+with zero fields/resources/channels, ZM intermediate matter and receiverR.
+Every remaining primitive fixes it. Ksrc belongs upstream and no surviving
+swap crosses the cut. The stored q_j is retained. Thus every such cut
+keeps the receiver BLANK for all time, for either source. This is a
+primitive-level induction and not an extrapolation from finite runs.
+
+These controls establish source/contact/path dependence within the chosen
+preparation family. A HIT in an arbitrary occupied apparatus is only a
+local accepted-event record; it is not a universal certificate of source
+identity, provenance or initial energy.
+
+
+### EVEN-CONTACT-3ADIC-PURE-PAIR-OBSTRUCTION [T]
+
+#### Literal finite apparatus and source
+
+Let
+
+    Y=((0,0,0),(1,1,0),(1,0,1),(0,1,1),(2,0,0)),
+    B0={0} union {d in Z³: ||d||² in {2,4,8,10,16}},
+    D={y+b+b': y in Y, b,b' in B0}.
+
+Use the lexicographic order on D. This is the finite705-site domain; the60 nonzero vectors in B0 carry weights6,1,15,1,1 respectively for the five listed squared norms. Define the rational symmetric matrix H on Q^D by
+
+    H_xx=10/9,
+    H_xy=w(x−y)/324 when x−y is a listed nonzero vector,
+    H_xy=0 otherwise.
+
+Only endpoints in D are retained. Let P:Q⁴->Q^D inject into the first four sites of Y, in that order, and put J0=I−PPᵀ and K=I−PPᵀ/2. The complete amplitude tuple is z=(u,v,A0,A1,B0t,B1), with u,v in Q^D and four tapes in Q⁴, dimension1426. The symbol B0t denotes a tape and is distinct from the displacement set B0. The one-free-step map F is
+
+    u'=v,
+    v'=−J0 u+K H v+2P A0,
+    A0'=A1, A1'=B1,
+    B0t'=Pᵀu/2−PᵀH v/4,
+    B1'=B0t.
+
+Its exact inverse is
+
+    v=u',
+    u=−J0 v'+K H u'+2P B0t',
+    A0=Pᵀv'/2−PᵀH u'/4,
+    A1=A0', B0t=B1', B1=A1'.
+
+These identities follow by substitution, using J0P=0, KP=P/2 and PᵀP=I. Set T=F² and Hpair=ker(T−I). For every z in Hpair, the two vectors(z+Fz)/2 and(z−Fz)/2 give its unique decomposition into ker(F−I) and ker(F+I), without assuming that F is diagonalizable on the whole carrier.
+
+For eta in Q⁴ define Ssrc eta to have values eta_j−sum(eta)/5 at Y_j for j=0,…,3, value−sum(eta)/5 at Y_4, and zero elsewhere. Let e0,e1 be the first two standard basis vectors of Q⁴, Dv=Ssrc[e0,e1]/2, and Dsrc alpha=(0,Dv alpha,0,0,0,0). An admitted effective contact impulse is a vector alpha in Z² with |alpha1|<=2 and |alpha2|<=3; a refusal is alpha=0. Consider arbitrary finite words of these impulses, with exactly two free F steps between consecutive contact opportunities, beginning from any z_in in Hpair. Guards, source labels, counters and finite controls may select any subset of these words. Identity/no-contact rows do not change amplitudes.
+
+#### The finite computation that supplies the rank premise
+
+Over F3 define Abar=81H modulo3, Kbar=I+PPᵀ and Bbar=Kbar Abar. Thus Abar has exactly the adjacency entries at squared norms4,10,16, all of weight1, with zero diagonal; Kbar multiplies the four port rows by2. The five nonzero rows of Dbar_v=Dv modulo3, in Y order, are
+
+    (1,2), (2,1), (2,2), (2,2), (2,2).
+
+**Finite rank fact R3.** The registered public-probe computation establishes rank_F3(Bbar^705 Dbar_v)=2 on precisely this domain and these matrices. Its exact image rows at indices0 and1, coordinates(−8,0,0) and(−8,1,1), are(1,1) and(2,0). Their determinant is−2=1 modulo3, so these computed rows certify rank2, the maximum possible for two columns.
+
+The entire705×2 image is retained in probes/P-EVEN-CONTACT-3ADIC-TEST-1/EXPECTED.txt. The frozen primary verifier and separately authored companion compute and compare that image using distinct rank implementations. Their pinned DOMAIN.tsv is the explicit lexicographic domain above. The proof of the displayed image rows is the accepted finite computation, whose evidence is probes/P-EVEN-CONTACT-3ADIC-TEST-1/RESULT.md with the public-probe bundle and two-architecture replay. Merely printing the final2×2 minor would not replace that computation.
+
+#### Analytical consequence for every finite contact word
+
+**Theorem.** For the preceding specified apparatus, finite rank fact R3 implies the following, and R3 is established by the retained finite evidence. Starting anywhere in Hpair, every finite contact history with at least one nonzero effective impulse ends outside Hpair at every subsequent finite cut. In particular it cannot return to zero. The statement includes arbitrary occupied tapes in the initial pure pair and every guard-selected subfamily of the declared bounded impulse class. It does not concern arbitrary initial states outside Hpair or contacts with another amplitude/timing law.
+
+**Proof.** Work over Z_(3), the rationals whose reduced denominators are prime to3, and let v3 of a vector be its minimum coordinate valuation, with v3(0)=+infinity. The matrix81F is3-integral. On reduction modulo3 all its output blocks vanish except
+
+    v_out=Bbar v_in,
+    (B0t)_out=−Pᵀ Abar v_in.
+
+Therefore its n-th power has v-block Bbar^n on any input supported in v. In particular the leading v-block of3⁸T is Bbar².
+
+The ascending kernel chain of Bbar, acting on a705-dimensional space, stabilizes by exponent705: ker(Bbar^705)=ker(Bbar^(705+j)) for every j>=0. Each strict inclusion increases dimension, and equality at any successive pair forces equality thereafter. R3 says that im(Dbar_v) meets ker(Bbar^705) only at zero. Hence Bbar^n Dbar_v beta is nonzero for every n>=0 and nonzero beta in F3²: for n<=705 multiply a hypothetical zero up to705, and for n>705 use the stable kernel.
+
+For a nonzero admitted alpha put nu=min(v3(alpha1),v3(alpha2)). The impulse bounds imply nu is0 or1; nu1 is possible only for alpha=(0,3) or(0,−3). For every j>=0,
+
+    3^(8j−nu) T^j Dsrc alpha=(81F)^(2j) Dsrc(alpha/3^nu).
+
+The right side is3-integral, and its v-block reduces to Bbar^(2j)Dbar_v beta, where beta is the nonzero reduction of alpha/3^nu. The preceding argument therefore gives the exact valuation
+
+    v3(T^j Dsrc alpha)=v3(v(T^j Dsrc alpha))=nu−8j.
+
+Immediately after N contact opportunities the contact contribution is
+
+    w_N=sum_(i=0)^(N−1) T^(N−1−i) Dsrc alpha_i.
+
+Its oldest nonzero term has a unique largest age j, and valuation at most1−8j. Every younger nonzero term has age at most j−1 and valuation at least8−8j. The gap is at least7, so the oldest v-block cannot cancel. This proves v3(v(w_N))=nu_old−8j and w_N!=0. Applying T lowers that same minimum by8, so Tw_N!=w_N and(T−I)w_N!=0. This is an argument for every finite N, with no search over word lengths.
+
+At an arbitrary later cut the amplitude has the form z_out=F^M z_in+F^r w_N for nonnegative integers M,r, where M counts all free steps and r is the common free padding after the last listed opportunity. F commutes with T and is invertible. Since(T−I)z_in=0,
+
+    (T−I)z_out=F^r(T−I)w_N!=0.
+
+Thus z_out lies outside Hpair. Later contact opportunities are handled by the same oldest-impulse argument, including zero effective impulses and refusals. An initially occupied pure pair is allowed because its contribution is annihilated by T−I; no assertion that the same word could be funded from blank is used.
+
+This theorem supplies a boundary for the specified bounded-contact apparatus. It neither forbids another explicitly supplied source law nor supplies a positive uniform approximation gap.
+
+
+### TWO-CONTACT-INTERACTION-ACCOUNT [T]
+
+Work on the explicitly specified complete carrier
+
+    (n,gamma,h0,h1,h2),
+    n in Z, gamma=(A,z,r) in {1,4}² x F5, hi in F5².
+
+The coordinates n,gamma are retained by the contacts. They may have any
+separately supplied common continuation which is a map of (n,gamma)
+alone, independent of every content coordinate and extended by identity
+on all hi. The contacts commute with every such continuation. There are 312500 content
+and gamma states at fixed n. If piston coordinates are wanted, put k=Az,
+B=3A, q=z-4A-r, C=k(2+3mu), D=k(1+3lambda) for h=(mu,lambda), and set
+
+    a=3(A+C+2), c=3(A-C-2),
+    b=3(B+D+1), d=3(B-D-1).
+
+The inverse is A=a+c, B=b+d, C=a-c-2, D=b-d-1,
+z=A+B+q+r, mu=2(kC-2), lambda=2(kD-1), with k=Az on this image.
+Thus these coordinate formulas are invertible over F5, so each cell can be
+read as the six checkpoint coordinates (a,b,c,d,q,r) on this image.
+The mathematical account below uses the complete displayed carrier.
+
+Let u=(2,0), w=(1,1). For each rho in F5² define the complete
+transposition T0 by
+
+    (rho,rho+u,rho) <-> (rho,rho+w,rho+w)
+
+on (h0,h1,h2), fixing every other triple. The transpositions are disjoint,
+since their first component is rho, and their two endpoints are distinct.
+Let S01 exchange h0,h1 and put T1=S01 T0 S01. Both are involutions on
+every input, including occupied inputs and all fixed branches.
+
+For kappa>0 and eta>=0, use the real account
+
+    f(0)=0, f(±1)=1, f(±2)=kappa,
+    D(x,y)=2 sum_(j=1)^2 f(x_j-y_j),
+    E=D(h1,h0)+D(h2,h0)+eta D(h1,h2).
+
+It is nonnegative and vanishes exactly when h0=h1=h2. It is invariant
+under common translations, sign changes and exchange of the two content
+coordinates. The following statements are exact on the whole carrier:
+
+    T0 conserves E iff kappa(1+eta)=4;
+    T1 conserves E iff kappa=1+eta;
+    both conserve E iff (kappa,eta)=(2,1).
+
+Invariance of E under every permutation of the three cell labels holds
+iff eta=1. These are classifications within the stated family of accounts.
+
+**Proof.** The two changed endpoints of T0 have E equal to
+2 kappa(1+eta) and8. All other states are fixed. The changed endpoints
+of T1 are (rho+u,rho,rho) and (rho+w,rho,rho+w), with accounts4 kappa
+and4(1+eta). The two equalities give (1+eta)²=4; positivity forces
+eta=1 and kappa=2. Conversely those values satisfy both equalities.
+For permutation symmetry, equal edge weights suffice. Necessity follows
+by comparing (h0,h1,h2)=(0,(1,0),0), of account2(1+eta), with the
+exchange of cells0,1, of account4. The symmetry of the account does
+not require T0 to commute with that exchange: on (0,u,0), the two
+orders give (u,0,0) and (w,0,w), respectively.
+
+If an added store is to conserve E plus its independently specified
+account, the forward T0 branch must change that store by
+2 kappa(1+eta)-8. In particular the square account kappa4 with eta1
+requires the store to receive8. This is a necessary balance equation;
+the contact as defined retains all other coordinates. The two-contact
+result itself needs no additional store.
+
+### COMMON-CONTENT-ADDITIVE-ACCOUNT-BOUNDARY [T]
+
+For the complete T0 of TWO-CONTACT-INTERACTION-ACCOUNT, fix any n,gamma
+and any real function h:F5²->R. Allow any additional reference account
+B(n,gamma,rho). T0 conserves
+
+    h(h1)+h(h2)+B(n,gamma,h0)
+
+on every reference content and every input iff h is constant.
+
+**Proof.** Conservation on its changed branch is precisely
+
+    h(rho+(2,0))+h(rho)=2h(rho+(1,1)).
+
+Putting y=rho+(1,1) gives the averaging equation
+h(y)=(h(y+(1,-1))+h(y+(-1,-1)))/2. A maximum exists on the finite
+25-point space. Both neighbors of a maximum are also maxima. The two
+increments have determinant -2!=0 in F5 and generate the additive space;
+their nonnegative multiples already generate their inverses because
+they have order5. Iteration therefore makes h constant. Conversely a
+constant h and the retained reference account are conserved.
+
+The common-function and all-reference hypotheses are explicit. Different
+functions h1(a,b)=g(a), h2(a,b)=g(a+1), for any nonconstant real g on F5,
+do give a conserved sum on the changed branches. The positive interaction
+account in TWO-CONTACT-INTERACTION-ACCOUNT is also outside this additive
+class and supplies a conserved account for the stated contact.
+
+### RATIONAL-STAR-PRICE-CAPACITY [T]
+
+For m>=1, choose the following separate comparison class: one retained
+reference rho in F5², m signal blocks, common spectator coordinates
+n,gamma as above, and content differences v in F5^(2m). Let c1(v),c2(v)
+count coordinates of signed magnitude1 and2 and define
+
+    E_kappa(v)=2(c1(v)+kappa c2(v)), kappa>0.
+
+A transition changing the count pair can conserve this account iff
+kappa=p/q is a positive rational in lowest terms with max(p,q)<=2m.
+For that rational price the sharp minimum block count and minimum common
+account of any count-changing branch are
+
+    m_min=ceil(max(p,q)/2), E_min=2p.
+
+Both are attained by a complete reversible contact with all other
+coordinates retained.
+
+**Proof.** Conservation says Delta c1+kappa Delta c2=0. If the count
+pair changes, both changes are nonzero. Hence kappa is rational and
+(Delta c1,Delta c2)=(pt,-qt) for a nonzero integer t. Reverse the branch
+if necessary so t>0. Its output contains at least pt unit coordinates
+and its input at least qt double coordinates. Thus2m>=max(p,q)t and
+the common account is at least2pt>=2p.
+
+Conversely choose v with p ones and all other coordinates zero and w
+with q twos and all others zero. They are distinct and both cost2p.
+Let C transpose these two vectors and fix every other vector. With
+D_m rho=(rho1,rho2,...,rho1,rho2), the full map on signal contents c is
+
+    (n,gamma,rho,c) -> (n,gamma,rho,D_m rho+C(c-D_m rho)).
+
+It is a total involution, conserves E_kappa on all inputs and commutes
+with any common continuation that acts on (n,gamma) alone, independently
+of all contents, and retains every content coordinate. Padding with zeros
+attains the stated minimum m. For irrational kappa, every conserving
+transition therefore keeps both counts. Exactly two prepared blocks
+are needed for the eight reduced prices
+
+    {1/4,1/3,2/3,3/4,4/3,3/2,3,4}.
+
+These bounds use this prepared block class. For example, in the different
+space {v in F5^4:sum v=0}, the vectors (1,1,1,2) and (2,-2,0,0)
+have counts(3,1) and(0,2); at kappa3 both cost12. Thus that different
+four-coordinate class is not assigned the prepared-block minimum by
+this theorem.
+
+
+### COMPLETE-AFFINE-ENDPOINT-WORD [T]
+
+Use three complete raw cells x_i=(a,b,c,d,q,r) in F5^6, i=0,1,2.
+A diagonal letter D_g applies the same cell map g to all three. Supply
+R_i:x_(i+1)->x_(i+1)+x_i on the complete cells, with indices modulo3.
+This is the declared coupling alphabet of KERNEL-CONNECT-ALL-K. The
+needed cell involutions are
+
+    g_a(x)=(b,a,d,c,q,r),
+    g_c(x)=(2-c,1-d+r,2-a,1-b-r,1-q,-r),
+    g_d(x)=(2-a,1-b,3-c,4-d,1-q,1-r).
+
+Put v_d=(2,1,3,4,1,1), so g_d(x)=v_d-x. Products act right to left.
+For t in F5, set S_i(t)=D_d R_(i-1)^(-t) D_d R_(i-1)^t.
+It is exactly the translation adding t v_d to cell i, fixing every
+other cell. Indeed on the source/target pair (x,y), the successive
+targets are y+tx, v_d-y-tx, (1-t)v_d-y, y+tv_d. The source and all
+other cells undergo two g_d and are restored.
+
+For a fixed epsilon in {1,-1}, define
+
+    L_epsilon=S_1(epsilon)S_2(2epsilon)
+       D_a S_1(-epsilon)S_2(2epsilon)D_a
+       D_c S_2(-epsilon)D_c.
+
+This fixed word has the complete action
+
+    x0'=x0,
+    x1'=x1+epsilon(1,-1,-1,1,0,0),
+    x2'=x2+epsilon(-1,-1,1,1,0,0).
+
+It uses39 leaves when each R power is expanded positively, has order5,
+and has inverse L_(-epsilon). On the prepared chart of
+TWO-CONTACT-INTERACTION-ACCOUNT with k=Az=epsilon, it sends
+
+    (rho,rho+(2,0),rho) -> (rho,rho+(1,1),rho+(1,1))
+
+for every rho, with all endpoint controls and the complete reference
+restored. The same construction applies to any ordered reference/signal
+role by replacing cell indices.
+
+**Proof.** An affine conjugation sends a translation vector v to M_g v,
+where M_g is its linear part. Here
+
+    M_a v_d=(1,2,4,3,1,1),
+    M_c v_d=(-3,-3,-2,-2,-1,-1),
+    v_d-M_a v_d=(1,-1,-1,1,0,0),
+    2v_d+2M_a v_d-M_c v_d=(-1,-1,1,1,0,0).
+
+The five translations in the displayed word commute, giving the complete
+action. Each nonzero S_i uses five positive R leaves and two D_d leaves;
+the five blocks cost35 and the two conjugating pairs add4. The nonzero
+translation has exact order5. A chart content change has raw piston
+change (-k Delta mu,-k Delta lambda,k Delta mu,k Delta lambda), giving
+the claimed endpoint map. On the opposite k sector the increments reverse.
+
+The entire five-cycle from X_rho=(rho,rho+(2,0),rho) has contents
+
+    h0=rho, h1=rho+(2-t,t), h2=rho+(t,t), t in F5.
+
+For the account E_(kappa,eta) of TWO-CONTACT-INTERACTION-ACCOUNT its
+values at t=0,1,2,3,4 are respectively
+
+    2kappa(1+eta), 8, 2kappa(3+eta),
+    2(1+3kappa+eta), 2(kappa+3+eta).
+
+These follow by substitution into
+2{f_kappa(2-t)+3f_kappa(t)+eta f_kappa(2-2t)}. Since E2-E0=4kappa>0,
+the whole word does not conserve any account in this positive family,
+even when its first transition does. It realizes the stated endpoints;
+it is not the sparse involution T0 on all inputs.
+
+There are also two exact affine boundaries on the prepared full layer
+with gamma and rho retained. First T0 exchanges two of625 signal points
+and fixes623. A nonidentity affine map on F5^4 has either no fixed point
+or a proper affine fixed subspace of at most125 points. Hence no fixed
+affine full word with affine preparation/output maps implements that
+whole T0; affine auxiliary preparations do not change this conclusion.
+
+Second, for kappa>0, kappa!=1, eta>=0, no affine map of all signal
+contents can preserve E_(kappa,eta) and send X_rho to its specified
+Y_rho. Center at (rho,rho). The account has a unique zero, so a preserving
+affine map fixes zero and is linear. Let P1,P2 be the weighted counts of
+unit and double raw piston differences on the three edges, with weights
+1,1,eta. Doubling centered contents interchanges P1,P2. Conservation at
+v and2v gives Delta P1+kappa Delta P2=0 and
+Delta P2+kappa Delta P1=0, forcing both differences zero. But X to Y
+has Delta P1=8. This proves the boundary for that complete affine class.
+The supplied nonlinear sparse contacts below are well-defined alternatives.
+
+### ROLE-CONTACT-GRAPH [T]
+
+On the complete content carrier of TWO-CONTACT-INTERACTION-ACCOUNT,
+put u=(2,0), w=(1,1). Let A_j(rho) have cell j at rho+u and the other
+two at rho; let B_i(rho) have cell i at rho and the other two at rho+w.
+For each ordered pair i!=j supply T_ij which transposes A_j(rho) and
+B_i(rho) for all rho, and fixes every other triple and the spectator
+coordinates. These six maps are full involutions; T0=T_01 and T1=T_10.
+
+Their active domain consists of25 disjoint six-element sets
+O_rho={A0,A1,A2,B0,B1,B2} at that rho. The graph is the six-cycle
+
+    A1 --01-- B0 --02-- A2 --12-- B1 --10-- A0 --20-- B2 --21-- A1.
+
+All other15475 content triples are fixed by every contact. The generated
+group is one diagonal S6 acting identically on all O_rho, and any five
+of the six generators already generate it. A selected subfamily gives
+the product of symmetric groups on its graph components, again repeated
+diagonally over rho. For s selected distinct contacts, the vector space
+of invariant real content functions at fixed n,gamma has dimension
+
+    15625-25 min(s,5), 0<=s<=6.
+
+**Proof.** The repeated value and the unique exceptional position recover
+rho and j from an A state. For a B state the minority value and its
+position recover rho and i. Equality between any A and B would force
+u=-w, which is false. Thus the25 sets are disjoint. Each contact has
+exactly its displayed edge in each set; the complement count is
+25^3-25*6=15475. Edge transpositions of a connected graph generate its
+whole symmetric group: conjugating along a path produces transpositions
+between its first vertex and every other vertex, and these generate all
+permutations. The same word gives the same permutation in every rho
+copy, and its restriction to one copy is faithful, proving the diagonal
+rather than independent-product claim. A proper subset of this cycle
+is a forest with6-s components; the full cycle has one. A real function
+is invariant iff constant on each orbit, giving the displayed dimension.
+
+The two contacts T_01,T_10 have disjoint supports and generate C2 x C2;
+they do not by themselves make a longer transport orbit. In contrast
+T_02 T_01 sends A1 to B0 to A2 and is a three-cycle on those states.
+Both of these latter contacts preserve the square-star account (4,0).
+For repeated routing set
+
+    R12=T_01 T_02 T_01, R02=T_10 T_12 T_10, F_A=R12 R02,
+    Q12=T_10 T_20 T_10, Q02=T_01 T_21 T_01, F_B=Q12 Q02.
+
+Conjugation of transpositions shows that R12 exchanges A1,A2 and R02
+exchanges A0,A2, while Q12 exchanges B1,B2 and Q02 exchanges B0,B2.
+Thus F_A cycles A0->A1->A2->A0, F_B cycles B0->B1->B2->B0, each fixes
+all other states, and each is a complete six-contact word of order3.
+Both preserve the equal-triangle account (2,1). These are literal
+routing laws for the prepared states, with all spectator data retained.
+
+Each active state has equal-triangle account8. The state (0,u,u) also
+has account8 but belongs to none of the O_rho and is fixed by every
+contact: its repeated value u has deviation -u, and its minority to
+majority difference u differs from w. Therefore equal account does not
+imply common reachability even in the complete six-contact family.
+
+### ROLE-CONTACT-PRICE-CLASSIFICATION [T]
+
+Keep exactly the complete contacts of ROLE-CONTACT-GRAPH. For each cell
+edge e in {01,02,12}, independently choose positive real alpha_e,beta_e,
+put f_e(0)=0, f_e(±1)=alpha_e, f_e(±2)=beta_e, and define
+
+    E=2 sum_(e={i,j}) sum_(l=1)^2 f_e(h_(i,l)-h_(j,l)).
+
+This declares coordinate additivity and equal treatment of the two
+content coordinates on each edge. With a_i=sum_(e incident i)alpha_e
+and y_i=(sum_(e incident i)beta_e)/2, the complete classification is
+
+    T_ij conserves E iff a_i=y_j.
+
+For s distinct roles these equations have rank min(s,5) and their
+strictly positive solution family has dimension6-min(s,5). Calibrating
+E(0,e1,e1)=4, where e1=(1,0), leaves dimension5-min(s,5). Consequently
+any five distinct roles select exactly alpha_e=1,beta_e=2, while fewer
+leave a positive family. In the subfamily beta_e=kappa alpha_e with
+one common positive kappa, any three distinct roles select kappa=2 and
+equal alpha_e; three is sharp. These uniqueness statements are within
+the specified families and calibration.
+
+**Proof.** The endpoint prices are E(A_j)=4y_j and E(B_i)=4a_i; other
+branches are fixed. The coordinate change is invertible: for distinct
+i,j,l,
+
+    alpha_ij=(a_i+a_j-a_l)/2, beta_ij=y_i+y_j-y_l.
+
+Thus the contact equations identify endpoint prices precisely along
+the six-cycle. Their rank is the number of vertices minus components,
+namely min(s,5). The equal-price solution alpha_e=1,beta_e=2 is strictly
+positive. Independently perturbing the constants on its graph components
+keeps all recovered prices positive for sufficiently small perturbations,
+so positivity supplies no further equality. Calibration fixes a0=2 and
+removes one free component constant. Any five edges connect the graph,
+forcing all a_i,y_i=t; calibration gives t=2 and the stated prices.
+
+For a concrete calibrated four-contact family admit01,02,10,12 and set,
+for -2<t<2,
+
+    alpha_01=1-t/2, alpha_02=alpha_12=1+t/2,
+    beta_01=beta_02=beta_12=2.
+
+Then a0=a1=2, a2=2+t and all y_i=2. All four equations hold; either
+remaining contact forces t=0. This family is not a common rescaling.
+
+Under beta_e=kappa alpha_e, the equations become kappa a_j=2a_i.
+An opposite pair forces kappa²=4, hence kappa=2. Any third distinct
+role connects all three indices and makes all a_i equal. Without an
+opposite pair, three roles orient the three edges of a triangle.
+Multiplying ratios around it yields (kappa/2)^r=1 for an odd
+r in {-3,-1,1,3}, again forcing kappa=2 and equal a_i. Invertibility
+of the displayed coordinate change then makes all alpha_e equal.
+Two opposite roles leave one a_i free near the positive solution;
+two nonopposite roles form a tree, allowing kappa near2 with ratios
+propagated along it and scale fixed by a0=2. Positivity persists, proving
+sharpness in both possible two-role cases.
+
+For comparison, allow instead any even whole-content pair function g
+on F5² with g(0)=0 and E_g=sum_(i<j)g(h_i-h_j). Every nonempty role
+family conserves it iff g(u)=g(w), because active endpoint prices are
+2g(u),2g(w). The24 nonzero contents form12 sign pairs and this one
+independent equality leaves11 parameters. The positive example
+
+    E_disc=2 * number of unequal cell pairs
+
+satisfies the same calibration, all cell permutations and common content
+translations and is conserved by all six roles. It gives4 rather than8
+on every active state. It is not coordinate-additive, since its pair
+price g(1,1)=2 differs from g(1,0)+g(0,1)=4. This supplies an explicit
+alternative outside the stated price family while leaving its exact
+classification intact.
+
+
+### SOURCE-WORK-SHARP-SIX-DIGIT-REPRESENTATION [T]
+
+Let O=Z[j], 1+j+j²+j³+j⁴=0, and lambda=1−j. Identify O with Z⁴ by iota(alpha)=Jcyc coeff(alpha), using the ordered basis1,j,j²,j³ and
+
+    Jcyc=[[0,1,0,0],[0,0,1,−1],[1,−1,0,−1],[0,1,−2,1]],
+    A=[[1,0,1,0],[0,1,0,1],[−2,1,−1,1],[1,−3,1,−2]],
+    L=(I−A)(I−A²),
+    H(a,b,c,d)=2a²−2ab+3b²+c²+d²+2ac−ad−bc+3bd,
+    S(a,b,c,d)=(−c,−d,−a,−b).
+
+For integers s>=0 put I_s=iota(lambda^s O). For any N>=2 the complete restricted carrier is
+
+    Sigma_N={ (y,r0,…,r_(N−1),q0,…,q_(N−2),e,p):
+              y in Z⁴, r_i,q_j in N0, e in {0,1}, p in F5,
+              H(y)+sum_i r_i+sum_j q_j+2e=15 }.
+
+In the full field/work/record chain these coordinates describe its invariant subspace with source and intermediate matter ZM, receiver R for e=0 or AM for e=1, source raw field Py, every other raw field zero, and all spectators/static components zero. All those fixed coordinates remain part of the underlying state. Receiver baseline matter account18 and pointer account1 make the total account34. The following formulas give every nontrivial primitive on this whole subspace, so arbitrary occupied resources and pointer values are included.
+
+The source contact K sends (y,r0) to (Sy,r0−Delta(y)) when r0>=Delta(y), where Delta(y)=H(Sy)−H(y), and otherwise fixes them. All other coordinates are retained. The receiver gate G acts on (e,r_(N−1),p) by
+
+    (0,r,p) -> (1,r−2,p+1)  if r>=2,
+    (1,r,p) -> (0,r+2,p),
+    (0,r,p) -> (0,r,p)      if r<2.
+
+Let Ares simultaneously exchange r_j with q_j for0<=j<=N−2, and let Bres simultaneously exchange q_j with r_(j+1) for the same indices. Each layer uses disjoint pairs. F replaces y by Ay. The full forward step is T=F Bres Ares G K, rightmost map first.
+
+For each s, Pi_s replaces only y with its class modulo I_s and retains every other original coordinate. Its target is the actual image Pi_s(Sigma_N), not an unconstrained Cartesian product of a quotient and resources.
+
+**Theorem.** On every Sigma_N, each primitive and its true inverse preserves the carrier. Pi_6 is injective and conjugates every primitive, its inverse, and every positive or negative iterate of T to exact maps on Pi_6(Sigma_N). Thus six ramified digits retain the entire continuing state and all its future funded decisions. Six is the minimum within the specified Pi_s family on this whole carrier, even if the reading also retains exact H(y): one common input at every s<=5 has two different source-contact outputs and two different full-step outputs. Every Sigma_N is finite and T is a permutation of it.
+
+**Proof.** The matrix of2H has leading principal minors4,20,20,5; hence H is positive definite and takes positive integer values on nonzero integer vectors. Direct identities from the displayed matrices are
+
+    det Jcyc=−1, A iota(alpha)=iota(j alpha), A⁵=I,
+    AᵀBf A=Bf, LᵀBf L=5Bf,
+    L iota(alpha)=iota(lambda²(1+j)alpha),
+
+where Bf is the matrix of2H. The relation (1+j)⁻¹=−j−j³ shows that1+j is a unit. Consequently I_(2r)=L^r Z⁴ and H(L^r z)=5^r H(z).
+
+If H(y),H(y')<=E and y−y' is a nonzero vector of I_(2r), write y−y'=L^r z with nonzero integer z. Integer positivity and the quadratic identity give
+
+    5^r<=H(y−y')=2H(y)+2H(y')−H(y+y')<=4E.
+
+Thus5^r>4E implies injectivity of reduction modulo I_(2r) on the energy ball H<=E. On Sigma_N, H<=15 and5³=125>60, proving injectivity of Pi_6. The inverse on its image is constructive: positivity bounds the four integer coordinates, so the unique representative is obtained by finite exact congruence testing in H<=15. No unproved search cutoff is used.
+
+For the source map S²=I and Delta(Sy)=−Delta(y). An accepted K edge has reverse bank r0−Delta(y)>=−Delta(y), so its reverse is accepted and restores y,r0. A refused state is fixed. Therefore K is an involution preserving H(y)+r0 and nonnegativity. The inverse receiver gate is
+
+    (1,r,p) -> (0,r+2,p−1),
+    (0,r,p) -> (1,r−2,p)  if r>=2,
+    (0,r,p) -> (0,r,p)    if r<2.
+
+The two formulas compose to identity and preserve2e+r. Each resource layer is an involution preserving the resource sum and nonnegativity. F has inverse A⁴ and preserves H. Thus every primitive and true inverse stays in Sigma_N, and T⁻¹=K G⁻¹ Ares Bres F⁻¹. Positive definiteness, the finite resource budget and finite pointer make Sigma_N finite.
+
+For each primitive V define Vbar=Pi_6 V Pi_6⁻¹ on the exact image. Injectivity and invariance make this a total bijection with inverse Pi_6 V⁻¹ Pi_6⁻¹. Composition proves Tbar^k Pi_6(x)=Pi_6(T^k x) for every integer k. This conclusion includes every occupied continuation admitted by Sigma_N; it is stronger than agreement on selected initial source phases.
+
+For sharpness take u=(−3,0,1,0) and v=(2,0,1,0). Both satisfy H=13. Let r0=2, e=0, p=0 and every other resource be zero, giving legal complete states at every N>=2. Since iota⁻¹(e0)=1−j⁴=−j⁴lambda and u−v=−5e0,
+
+    iota⁻¹(u−v)=5j⁴lambda.
+
+The cyclotomic identity lambda⁴=5(1+j²)², with1+j² a unit, shows that this difference has lambda valuation exactly5. Hence the two complete readings agree for all s<=5, including their identical energy13. But the accepted source contacts give
+
+    u -> (−1,0,3,0), H=5,  r0'=10,
+    v -> (−1,0,−2,0), H=10, r0'=5.
+
+Both guards accept because their costs are−8 and−3. The changed integer resource is retained by Pi_s, so no function of its common input can produce both quotient outputs. The discrepancy also survives the full step: initially the receiver has r_(N−1)=0 and e=0, so G fixes it; Ares then Bres moves the respective10 or5 to r1, and F leaves all resources fixed, including when N=2. This rules out every s<=5 for both K and T. Together with the complete conjugacy at6, it proves the stated sharp minimum.
+
+The lower witnesses lie outside Lambda=LZ⁴, whereas the five named source-phase preparations stay in Lambda. The minimum is therefore asserted for the entire explicitly defined Sigma_N and Pi_s family, not for those five trajectories alone, not for a Boolean guard, and not for every possible encoding. All other machine coordinates are retained exactly.
+
+
+### SIGNED-B-FUNDED-MINIMUM [T]
+
+For y=(a,b,c,d) in Z⁴ define
+
+    H(y)=2a²−2ab+3b²+c²+d²+2ac−ad−bc+3bd,
+    Lambda={y:a+2b=c+2d=0 modulo5},
+    S(a,b,c,d)=(−c,−d,−a,−b).
+
+The symmetric matrix Bf satisfying H(y)=yᵀBf y/2 is
+
+    Bf=[[4,−2,2,−1],[−2,6,−1,3],[2,−1,2,0],[−1,3,0,2]].
+
+Let C=Lambda×F5², beta(y,q,r)=(Sy,−q,−r), and pi(y,q,r)=(b,a,d,c,q,r) modulo5. Define the finite-checkpoint permutation b0(a,b,c,d,q,r)=(−c,−d,−a,−b,−q,−r). The complete apparatus state is (Cs,Cr,B,c0) in C×C×N0×Z/2 with account E=H(ys)+H(yr)+B. K exchanges both complete cells. F applies beta to the receiver and sets B'=B−Delta(yr) if B>=Delta(yr), where Delta(y)=H(Sy)−H(y); otherwise F fixes the complete state. Source and phase are spectators of F. Ustar applies K at phase0 or F at phase1, then toggles phase.
+
+**Theorem.** On the entire coset (2,−1,0,0)+5Z⁴ the minimum of H is exactly15. From y1=(0,0,−2,1), with H(y1)=5, the literal signed swap reaches that minimum and therefore achieves the sharp required increase10 to residue (2,4,0,0). S preserves Lambda, beta is an involution, and pi beta=b0 pi. The specified Ustar is a total bijection conserving E on all occupied and refused states; every fixed-E shell is finite. For source cells (y1,1,1) and (y2,1,1), where y2=(2,−1,−4,2), use the same zero receiver, bank30 and phase0. After two steps the source is zero, the current receiver readings H are15 and35, and banks are20 and0, respectively, while the total account is35 in both cases. The common bank threshold for both intended signed-swap outputs is exactly30.
+
+**Proof.** Bf has leading principal minors4,20,20,5, so H is positive definite and integer-valued. Set yb=(2,−1,0,0). Direct multiplication gives H(yb)=15 and Bf yb=5(2,−2,1,−1), whence for every v in Z⁴,
+
+    H(yb+5v)=15+25(H(v)+(2,−2,1,−1)·v).
+
+The bracket is integral. A nonnegative number congruent to15 modulo25 is at least15, and yb attains it. The whole coset lies in Lambda. S²=I, and S exchanges the two defining congruences with a minus sign, so S maps Lambda onto itself. Substitution proves pi beta=b0 pi and
+
+    Delta(a,b,c,d)=(c−d)²+d²−(a−b)²−b².
+
+K²=I. On an accepted F edge, the new cost is −Delta and the new bank B−Delta is at least −Delta because B>=0; the reverse edge is accepted and restores the exact old cell and bank. A refused state is fixed. Thus F²=I, and both maps preserve E. The inverse of Ustar toggles phase first and applies the involution indexed by that preceding phase. Positive definiteness bounds both integer cells at fixed E; the bank, fibers and phase then have finitely many possibilities, proving finite shells and periodic full-state dynamics.
+
+Both y1,y2 lie in Lambda and satisfy H=5. K literally exchanges each with the common zero receiver, retaining arbitrary occupied receiver data in the source slot on general inputs. The signed outputs are Sy1=(2,−1,0,0) and Sy2=(4,−2,−2,1), with H values15 and35. Their costs10 and30 prove the output banks and the sharp common threshold30. The reader uses current receiver coordinates alone. Equal total account35 is redistributed between field and bank; this does not assert unequal total received energy. Projection to b0 applies on the accepted F branch; refusal is explicitly part of the declared reversible law.
+
+
+### PRIME-FIVE-FOURIER-SUPPORT-SAMPLING [T]
+
+Let z=exp(2πi/5), f:Z/5→C and fhat(k)=sum_x f(x)z^(−xk).
+Every nonempty square minor of [z^(xk)] and [z^(−xk)] is nonzero.
+Consequently nonzero f satisfies
+
+    |supp f|+|supp fhat|>=6,
+
+with equality at every split a+(6−a), 1<=a<=5. For a specified frequency
+set K of size b, the values at any b distinct positions uniquely determine
+every f supported in K in frequency.
+
+**Proof.** Import Chebotarev's prime Fourier minor theorem as stated and
+proved in Lemma1.3 of [Terence Tao, *An uncertainty principle for cyclic groups
+of prime order*](https://arxiv.org/pdf/math/0308286), Math. Res. Lett.
+12(2005),121–127. Apply it with p=5; conjugation gives the negative-sign
+matrix. If S=supp f and T=supp fhat had |S|+|T|<=5, choose |S| positions
+outside T. Their square Fourier block on S is invertible and annihilates
+f|S, a contradiction. For sharpness take f_a to be the coefficient vector
+of the nonzero polynomial
+
+    P_a(t)=product_(k=1)^(a−1)(t−z^(−k)).
+
+Its two support sizes are at most a and6−a, respectively, so the bound
+forces equality. Finally Fourier inversion restricts on positions X and
+frequencies K to the invertible block [z^(xk)]/5.
+
+This is an algebraic statement on the specified complex five-point
+carrier. Sampling assumes K is known; no position, momentum, physical
+action constant or preparation law is asserted.
+
+
+### FIVE-PHASE-THREE-REFERENCE-RETAINED-RECORD [T]
+
+On the following explicitly supplied contact carrier, two simultaneously
+prepared messages from five marked phases have a common182-leaf prefix
+using seven native cells and one bit. The prefix restores both original
+sources, three shared reference cells and the bit. Its two collector cells
+feed a specified funded wave/tape apparatus, whose final record recovers
+both phases. A common classical account B=5 accepts both contacts. Three
+binary reference results are necessary and sufficient within the declared
+bit-factor class.
+
+#### Native carrier, binary contact and complete prefix
+
+A native cell is(a,b,c,d,q,r) in F5^6, with piston matrix
+X=[[a,b],[c,d]]. Mark the five source pistons
+
+    p0=(1,0,0,0), p1=(0,1,0,0), p2=(0,0,1,0),
+    p3=(0,0,0,1), p4=(4,4,4,4),
+
+representing1,j,j²,j³,j⁴ in the marked coefficient basis. Each source has
+q=0,r=1, so all have the same quotient(sum of six coordinates,q,r)=(2,0,1).
+For a reference piston Y put
+
+    h(X,Y)=(det(X+Y)−det X−det Y)/2,  δY(X)=1−h(X,Y)^4.
+
+Thus δ is a bit. For Y=(u,v,w,z), direct polarization gives
+
+    (h(p0,Y),…,h(p4,Y))=(z,−w,−v,u,v+w−u−z)/2.
+
+Choose the common determinant-one references
+
+    YA=(0,2,2,0), YB=(4,2,2,0), YC=(1,1,0,1).
+
+Their bit triples and weighted code M=δA+2δB+4δC in F5 are
+
+| Phase index k | δAδBδC | M |
+|---:|---:|---:|
+|0|110|3|
+|1|001|4|
+|2|000|0|
+|3|100|1|
+|4|010|2|
+
+Hence k=M+2 modulo5. In the bit-factor class the receiver depends on m
+binary reference outcomes only. Two outcomes allow at most4 distinct
+messages, while the displayed three distinguish all5. This also proves
+the worst-case binary-query lower bound3. It does not assert a physical
+cell lower bound or encode all eight arbitrary triples injectively in F5.
+
+The following declared maps implement each bit without setting an
+endpoint from a supplied answer. Local involutions used in the contact are
+
+    b(a,b,c,d,q,r)=(−c,−d,−a,−b,−q,−r),
+    d(a,b,c,d,q,r)=(2−a,1−b,3−c,4−d,1−q,1−r),
+    e(a,b,c,d,q,r)=(2−a,1−b,3−c,4−d,2−q,1−r).
+
+With B=b_x b_y, h changes to−h. A shared bit is η in{0,1}. The involution
+W_b fixes h=0; for h≠0, put σ(h)=1 for h in{3,4}, otherwise0. If
+η=σ(h), W_b fixes the state; otherwise it applies B and sets η=σ(h).
+Since σ(−h)=1−σ(h), this is an involution. Composition acts right to left.
+Direct branch substitution gives
+
+    E=W_b B W_b=B when h=0,
+    E=bit flip with all native coordinates fixed when h≠0.
+
+The map τ_y=e_y d_y increments only q_y. Thus K_y=E τ_y E τ_y^−1
+increments q_y by−2δ=3δ and restores every other coordinate. Let Ucal_y
+replace r_y by P_(q_y)(r_y), where the following permutations fix all
+unlisted field elements:
+
+    P0=(1 2), P1=I, P2=(0 2), P3=P4=(0 1).
+
+The complete A_y=Ucal_y K_y Ucal_y has endpoint
+
+    q_y'=q_y+3δ,  r_y'=P_(q_y+3δ) P_(q_y)(r_y).
+
+It fixes the source, both pistons and η on every occupied fibre. Its
+inverse replaces+3δ by−3δ. Its literal chronological involution list is
+
+    Ucal_y,e_y,d_y,W_b,b_x,b_y,W_b,
+    d_y,e_y,W_b,b_y,b_x,W_b,Ucal_y.
+
+The inverse is the reversed list. In particular a clean reference(Y,0,0)
+becomes(Y,3δ,δ).
+
+Define whole-cell CSUM(y,C)=(y,C+y). The chronological block
+A_y; CSUM_(y→C)^w; A_y^−1 adds
+
+    w(Y,q+3δ,P_(q+3δ)P_q(r))
+
+to C and restores the full source, reference and bit. CSUM fixes the
+control, so the subsequent inverse is applied to precisely the contact
+output; this proves the claim for occupied as well as clean fibres.
+
+Initialize each collector to Z=(4,0,4,2,0,0), and each reference fibre to
+(0,0). Applying the three blocks with weights1,2,4 gives
+
+    YA+2YB+4YC=(2,0,1,4),
+    C(M)=(1,0,0,1,3M,M).
+
+There are two original source cells, these three references, two collectors
+and one shared bit: F5^42×{0,1}. Run the three blocks on source A and its
+collector, then on source B and its collector. Each source costs
+3(14+14)+1+2+4=91 leaves, hence182 in all:96 local letters,48 W_b,
+24 Ucal and14 CSUM. The collectors themselves are the apparatus heads.
+The source cells, references and bit are restored after every block and
+are spectators thereafter. The prefix fixes the classical coordinates.
+
+#### Specified native output and funded wave/tape model
+
+The one native step selects g_(sum cell), with(g0,g1,g2,g3,g4)=(a,b,c,d,e),
+where b,d,e are above and
+
+    a(a,b,c,d,q,r)=(b,a,d,c,q,r),
+    c(a,b,c,d,q,r)=(−c+2,−d+1+r,−a+2,−b+1−r,1−q,−r).
+
+For C(M) its selector is2+4M. Let ell on(0,1,2,3,4) be(0,1,2,−2,−1),
+and lift the actual output fibre to
+z=(ell(q)/2,(ell(r)+1)/2,0,0). Substitution gives
+
+|M|g|Output(q,r)|z first two entries|Cold energy e(z)|
+|---:|---:|---|---|---:|
+|0|2|(1,0)|(1/2,1/2)|3/20|
+|1|1|(2,4)|(1,0)|2/5|
+|2|0|(1,2)|(1/2,3/2)|17/20|
+|3|4|(3,3)|(−1,−1/2)|2/5|
+|4|3|(4,2)|(−1/2,3/2)|23/20|
+
+These are five distinct vectors. Both head outputs are taken at this
+actual first native step; retain the second output in a buffer until its
+contact. No source piston or precomputed phase label supplies either lift.
+
+Here are full definitions of the classical map used by the construction.
+Set
+
+    Y=((0,0,0),(1,1,0),(1,0,1),(0,1,1),(2,0,0)),
+    Bdisp={0} union {d in Z³: ||d||² in{2,4,8,10,16}},
+    D={y+b+b': y in Y, b,b' in Bdisp}.
+
+The symmetric Dirichlet matrix H on Q^D has diagonal10/9 and entries
+w(d)/324 for differences d of those five nonzero squared lengths, with
+weights6,1,15,1,1 respectively; all other entries vanish. Let P insert
+Q⁴ into the first four sites of Y. Put J0=I−PPᵀ and K=I−PPᵀ/2.
+The source Sz places z_i−s/5 at Y_i for i<4 and−s/5 at Y_4, with
+s=sum_i z_i, and zero elsewhere. Thus SᵀS=I−11ᵀ/5.
+
+The state is(u,v,A0,A1,B0t,B1), two waves on D and four tapes in Q⁴.
+One free step F computes
+
+    w=K(Hv−J0u+4PA0),  bout=A0−Pᵀ(w−u)/2,
+    (u',v')=(v,w),
+    A0'=A1, A1'=B1, B0t'=bout, B1'=B0t.
+
+The energy is
+
+    E=1/2(||u||²+||v||²−uᵀHv)
+      +2(||A0||²+||A1||²+||B0t||²+||B1||²).
+
+There are12,6,12,24,6 displacement vectors in the five shells. Their
+weighted row sum is8/9, so the absolute row sums of H are at most2.
+Symmetry gives ||H||<=2, proving E>=0. Rearranging F gives
+
+    w+u−Hv=2P(A0+bout),  Pᵀ(w−u)=2(A0−bout).
+
+Consequently ΔE_wave=(w−u)ᵀ(w+u−Hv)/2
+=2(||A0||²−||bout||²), exactly cancelled by the tape change. Thus F
+preserves E.
+
+A cold source state is V(z)=(0,Sz,0,0,0,0), of energy
+e(z)=||Sz||²/2, giving the table. For each contact, form the candidate
+state by adding V(z) to the current wave/tape tuple, with energy change
+Δ. The funded guard accepts when its candidate bank b−Δ lies in[0,B].
+On acceptance set b←b−Δ, W←W+Δ and that contact's sign from+ to−;
+a refusal leaves the state unchanged. The preparation has zero waves and
+tapes, b=B=5, W=0, both signs+, and no stored classical source.
+
+After the prefix and simultaneous native output/capture step, the fixed
+schedule is contact A,F,F,contact B,F,F. The first contact costs
+e_A<=23/20 and accepts. After two free steps its energy is still e_A.
+Since the square root of a nonnegative quadratic form is a seminorm,
+
+    0<=E_candidate<= (sqrt(e_A)+sqrt(e_B))² <=23/5<5.
+
+The account identities E=W and b+W=5 therefore give the second candidate
+bank5−E_candidate in[2/5,5]. The second contact also accepts, including
+when its energy increment is negative. This proves acceptance for all25
+ordered pairs, without a finite trajectory enumeration.
+
+#### Inversion from the retained record
+
+The final amplitude tuple is F⁴V(z_A)+F²V(z_B). Define R0 z as bout of
+the first F applied to V(z), and D2 z as bout of its third F. These are
+explicit rational linear maps determined by the equations above. The
+literal tape permutation gives
+
+    b0=A0_final=R0 z_A,
+    b2=B1_final=D2 z_A+R0 z_B.
+
+The first two outgoing tape cuts occupy final A0,A1; neither is changed by
+the second injection. Directly from the five coordinates Y and H,
+
+    PᵀHP=(59/54)I+11ᵀ/54,
+    PᵀH e_(Y4)=(1/324,1/54,1/54,0)ᵀ,
+    PᵀHS=(59/54)I+γ1ᵀ,
+    γ=−(349,354,354,348)ᵀ/1620.
+
+The first cold step gives R0=−PᵀHS/4. The determinant formula for a
+rank-one update yields
+
+    det R0=(1/4)^4(59/54)^3(73/324)>0,
+
+since59/54+1ᵀγ=73/324. Hence the record-only reader returns
+
+    z_A=R0^−1 b0,  z_B=R0^−1(b2−D2 z_A).
+
+The displayed five-vector table determines each M, then k=M+2 modulo5.
+It follows that the25 ordered phase pairs have25 distinct retained record
+pairs. The reader uses only(b0,b2) and the acceptance signs, omitting the
+buffer, heads, sources, references and work bit.
+
+All preparation choices except the two source pistons are common. The
+result establishes the specified finite construction and restricted binary
+minimum. The182-leaf prefix is externally addressed; its preparation,
+energy and autonomous implementation are not part of the classical B=5
+account. The messages are both present initially. No fresh later arrival,
+indefinite archive reuse or arbitrary-source decoding is asserted. Indeed
+a zero piston has bits111 and M=2, aliasing phase j⁴ outside the promised
+family.
+
+
+### COMMON-HISTORY-FUNDED-AREA-RECEIVER [T]
+
+For every fixed integer L>=1, the following declared L1 apparatus has one
+autonomous history linking prepared native source contents, funded integer
+loops, their actual orientation records, transported Weyl operators and a
+fixed occupied native receiver. Its core map is a bijection on the complete
+carrier, conserves the specified account on every branch and delivers the
+L prepared binary messages on its initial forward segment exactly when its
+initial bank is at least 52L. The source, reader, contacts, resources and
+account in this assertion are the explicit ones below.
+
+#### Native cells, common time and fixed ports
+
+All native and phase coordinates are in F5; all geometric coordinates and
+bank values are integers. For gamma=(A,z,r) in {1,4}² x F5, h=(mu,lambda)
+in F5² and k=Az, define the checkpoint chi_gamma(h)=(x1,x2,x3,x4,q_N,r) by
+
+    B=3A, q_N=z−4A−r, C=k(2+3mu), D=k(1+3lambda),
+    x1=3(A+C+2), x3=3(A−C−2),
+    x2=3(B+D+1), x4=3(B−D−1).
+
+Its inverse is
+
+    A=x1+x3, B=x2+x4, C=x1−x3−2, D=x2−x4−1,
+    z=A+B+q_N+r, mu=1+2AzC, lambda=3−BzD.
+
+Substitution, using A=2B and (Az)²=1, proves both inverse identities.
+The fixed source port(x1,x3,q_N,r) recovers z=4A+q_N+r and mu; the
+fixed receiver port(x2,x4,q_N,r) recovers z=3B+q_N+r and lambda.
+The receiver reading is PRESENT(lambda), including lambda=0, throughout
+this prepared image.
+
+For completeness, the original native generators on this checkpoint are
+
+    a(x)=(x2,x1,x4,x3,q_N,r),
+    b(x)=(−x3,−x4,−x1,−x2,−q_N,−r),
+    c(x)=(−x3+2,−x4+1+r,−x1+2,−x2+1−r,1−q_N,−r),
+    d(x)=(2−x1,1−x2,3−x3,4−x4,1−q_N,1−r),
+    e(x)=(2−x1,1−x2,3−x3,4−x4,2−q_N,1−r).
+
+At counter n select generator 0,...,4=(a,b,c,d,e) by
+z+2theta_n modulo5, where theta_n is the parity of the binary digit sum
+of n. The raw preparation(new,old,−new,−old,0,0) has the selected prefix
+a,c,e and reaches(−old,−new,1+old,3+new,1,1) at n=3. This is
+chi_(1,1,1)(old,new), as direct substitution shows.
+
+On the prepared tail, selected b sends gamma to(−A,−z,−r), while
+selected d or e sends it to(−A,z,1−r). Every h remains fixed. Indeed b
+fixes C,D and k while reversing A,z; selected d/e reverse C,D,k while
+fixing z. Their displayed formulas give the claimed r and q_N. For
+z in {1,4}, selection admits only these cases. Hence the counter fixes a
+known common sequence gamma_n from gamma_3=(1,1,1), independently of
+all contents. Use only its synchronized slices(n,gamma_n), n>=3.
+
+Retain L+1 native cells h0,...,hL and a reference h_ref, all at this common
+time and gamma. The core retains h_ref. Cell0 contains the working source
+mu0 and fixed receiver lambda0. The intended initial contents are
+
+    h0=(s0,m), hj=(o_j,e_j) for 1<=j<=L, e_j in {1,4},
+
+with arbitrary s0,m,o_j,h_ref. All have the preceding literal native
+preparation with the corresponding old,new pair.
+
+#### Complete data, gates and the account
+
+Retain bundles w_i=(q_i,p_i,u_i,v_i;alpha_i,beta_i,tau_i) in Z⁴ x F5³,
+0<=i<=L, and scratch coordinates zeta_j in F5,1<=j<=L. The integer q_i
+is distinct from native q_N. Bundle0 is working; every other bundle is
+a donor/archive slot. On the intended initial class, w0 is arbitrary,
+each donor is(0,0,1,−1;0,0,0), and all zeta_j=0. The full law below
+also covers arbitrary occupied donors and scratch.
+
+Put epsilon(1)=1, epsilon(4)=−1 and epsilon(0)=epsilon(2)=epsilon(3)=0.
+For h in {−1,0,1}, define working gates, retaining all other coordinates,
+
+    Q_h:(q,p,u,v;alpha,beta,tau)
+         ->(q+h,p,u,v;alpha,beta+h,tau−h alpha),
+    P_h:(q,p,u,v;alpha,beta,tau)
+         ->(q,p+h,u+hq,v+hq;alpha+h,beta,tau).
+
+The phase operations use residues modulo5 and the input alpha. Integer
+coordinates retain their ordinary integer values. Each transaction j
+has the following 24 gates, in this fixed order:
+
+1. Exchange mu0 and lambda_j; reconstruct all changed native checkpoints
+   with chi_gamma and retain every other content.
+2. Exchange the entire bundles w0,w_j, including their phase labels.
+3. Repeat five times Q_1,P_eta,Q_−1,P_−eta, where eta=epsilon(mu0).
+4. Add report(u0,v0)=sgn(u0²−v0²) modulo5 to zeta_j.
+5. Exchange zeta_j and the actual receiver content lambda0.
+
+This gives a fixed gate list g0,...,g_(M−1), M=24L. Each gate is a full
+bijection: exchanges are involutions; Q_h^-1=Q_−h and P_h^-1=P_−h;
+the controlled gate leaves mu0 unchanged; report addition is inverted by
+subtracting the same report because it leaves u0,v0 unchanged. All
+occupied data are retained. The report gate reads the actual integer
+record produced by the geometric gates.
+
+Let ell(0,1,2,3,4)=(0,1,2,−2,−1). For the complete retained data s put
+
+    H(s)=sum_(i=0)^L(q_i²+p_i²+u_i²+v_i²)
+          +2 sum_(i in {0,...,L,ref})(ell(mu_i)²+ell(lambda_i)²)
+          +2 sum_(j=1)^L ell(zeta_j)².
+
+For fixed integer capacity Bcap>=0, the bank b lies in[0,Bcap] and the
+total account is H(s)+b. In particular each ready donor initially costs 2,
+old working data retain their price after exchange, and all native and
+scratch archives are included. The finite phase labels, program position,
+direction and common native controller/counter have explicitly zero
+varying price in this declared account.
+
+Retain program position c in {0,...,M} and direction d in {+1,−1}; write
+y=(s,b,c,d). Define an edge map Epair as follows. For d=+1,c<M propose
+
+    s'=g_c(s), c'=c+1, d'=−1, b'=b+H(s)−H(s').
+
+For d=−1,c>0 propose
+
+    s'=g_(c−1)^−1(s), c'=c−1, d'=+1, b'=b+H(s)−H(s').
+
+Accept iff 0<=b'<=Bcap. Otherwise Epair fixes the entire state. It also
+fixes the outward endpoints(0,−1),(M,+1). Let J flip d and define
+the core tick F=J Epair. Thus an accepted tick traverses an edge and keeps
+direction; refusal or an outward endpoint flips only direction.
+
+An accepted edge's reverse proposal applies its actual inverse gate and
+returns bank b'+H(s')−H(s)=b, which is admissible. Its endpoints are
+therefore paired in both directions. Refused and outward points are
+fixed by Epair. This proves Epair²=J²=I on the whole carrier, so
+
+    F^−1=Epair J,       H(Fy)+bank(Fy)=H(s)+b.
+
+Here H(Fy) means H of its data component. Both maps preserve the bank
+interval. For each fixed total E, the core shell H(s)+b=E is finite:
+every integer coordinate has magnitude at most sqrt(E), and all other
+core coordinate sets are finite. F permutes this shell.
+
+#### One complete advancing history and its operator reading
+
+The full tick first performs the core operation, then one actual native
+step on every cell, including the reference:
+
+    Ffull(n,gamma_n,y)=(n+1,gamma_(n+1),F(y)), n>=3.
+
+Native steps change only the known background; core gates change only
+contents and the additional retained data. Hence they commute on these
+slices, and both source and receiver are their actual native ports.
+Ffull is injective, with inverse on its image n>=4 obtained by taking
+the previous known slice and F^−1. Its forward carrier starts at n=3,
+so it is not asserted surjective there. The full fixed-account carrier
+is infinite because its counter advances. A core refusal still includes
+the prescribed native step.
+
+Let omega be a primitive fifth root and, on Q(omega)^5 with basis e_k,
+k in F5, define X e_k=e_(k+1), Z e_k=omega^k e_k. Read a bundle's phase
+as
+
+    R(alpha,beta,tau)=omega^tau Z^alpha X^beta,
+    R(alpha,beta,tau)e_k=omega^(tau+alpha(k+beta))e_(k+beta).
+
+ZX=omega XZ gives the label product and inverse
+
+    (a,b,c)*(A,B,C)=(a+A,b+B,c+C−bA),
+    (a,b,c)^−1=(−a,−b,−c−ab).
+
+Thus Q_h left-multiplies R by X^h and P_h by Z^h. Accepted inverse
+edges contribute inverse operators; refusals contribute I. For one
+retained bundle's geometric path, let q*,p*,u*,v*,W* be its initial
+integer values and phase operator, and define actual displacements
+Delta q,Delta p and Apath=sum q_i Delta p_i over accepted edges.
+The gates give
+
+    u_out=u*+Apath, v_out=v*+Apath,
+    Lpath e_k=omega^(k Delta p+Apath−q* Delta p)e_(k+Delta q),
+    W_out=Lpath W*.
+
+To prove the middle identity, a P displacement Delta p_i contributes
+(k+q_i−q*)Delta p_i to the exponent; a Q displacement changes only
+the basis index. Summing proves it, also for accepted inverse edges and
+arbitrary occupied starting labels. In ordered coordinates Lpath has
+label(Delta p,Delta q,Apath−q*Delta p−Delta p Delta q). In particular
+closed integer paths have Lpath=omega^Apath I. Scalar closure requires
+only Delta q=Delta p=0 modulo5; it does not require integer closure.
+
+Transport exchanges complete bundles. The path formula follows each
+bundle through its own geometric segments, not the working slot across
+an exchange. On the additional tensor space (Q(omega)^5)^(tensor(L+1))
+there is also a single operator reading
+
+    G(y)=(tensor_(i=0)^L R(w_i)) P_(pi(c)),
+
+where pi(c) is the ordered product of the bundle exchanges in the unique
+program prefix 0,...,c. Geometric edges left-multiply G on the working
+factor; an accepted bundle exchange left-multiplies by the corresponding
+tensor-factor swap S_(0j). Indeed
+S_(0j)(tensor R(w_i))=(tensor R(w'_i))S_(0j), with the two labels
+exchanged and pi'= (0j)pi. The same identity holds backwards. Every
+backtrack cancels its permutation, so c suffices to specify pi. All other
+gates and refusals contribute I. No injectivity of this tensor reading
+as a reading of the complete state is asserted.
+
+#### Actual delivery, exact funding and finite retention
+
+One signed geometric loop Q_1,P_eta,Q_−1,P_−eta from arbitrary q,p,u,v
+returns q,p and adds eta to both u,v: its two shears add
+eta(q+1)−eta q=eta. Its relative Weyl operator is omega^eta I.
+Five loops therefore preserve every starting phase label. On a ready
+donor their endpoint is
+
+    (q,p,u,v;alpha,beta,tau)=(0,0,1+5eta,−1+5eta;0,0,0).
+
+For eta=+1 and−1 respectively, the ordered squared records are(36,16)
+and(16,36), and u²−v²=20eta. Hence the actual report is the source
+symbol e_j, even though the five-loop local Weyl operator is I.
+
+Start with the specified binary inputs, ready donors, fresh scratch,
+c=0,d=+1 and b0<=Bcap. In transaction j the source exchange loads e_j
+into mu0 and archives the old source in lambda_j. The unused donor
+provides its ready integer record while preserving the entire old
+working bundle in slot j. The 20 geometric edges leave mu0 unchanged.
+Their actual report adds e_j to the fresh zeta_j; the final exchange
+puts that value in the fixed receiver and archives its old content.
+Induction proves PRESENT(e_j) at each completed transaction and until
+the next completed forward transaction. At the final forward cut,
+
+    zeta_1=m, zeta_j=e_(j−1) for j>=2,
+    lambda_1=s0, lambda_j=e_(j−1) for j>=2, mu0=e_L.
+
+Every o_j and the native reference are unchanged; all old integer/phase
+bundles are retained. Occupied receiver values need not differ from the
+new report.
+
+After t complete loops the ready donor has integer cost 2+2t². In loop
+t,1<=t<=5, its four successive costs are
+
+    3+2(t−1)², 4+2t², 3+2t², 2+2t².
+
+These follow from q=1,p=eta at the first P endpoint and the successive
+returns of q,p to zero. Thus the five loops have net gain 50 and largest
+transient gain 52 above initial donor cost 2. Reporting into fresh scratch
+adds 2. Source, bundle and receiver exchanges preserve H exactly because
+the exchanged coordinates have equal weights. Each transaction has net
+gain 52, maximum prefix gain 52 and no negative prefix gain. Earlier
+completed transactions contribute 52(j−1), so the maximum cumulative
+gain through transaction j is 52j. Therefore all forward proposals are
+admitted iff b0>=52L, provided Bcap>=b0, and the final bank is b0−52L.
+Sufficiency follows because every proposed bank lies in[0,b0]; necessity
+follows from total gain 52L and bank nonnegativity. The bound is independent
+of all occupied initial data and binary sign choices.
+
+After such a successful segment every reverse edge visits the same state
+and bank in reverse order, so is admitted. Including the two endpoint
+direction flips, the core returns after 2M+2 ticks. The full counter has
+advanced by that amount. Retention is asserted along the initial forward
+archive; the specified inverse excursion later undoes it.
+
+The complete law remains reversible on dirty preparations, but the
+delivery assertion has the displayed ready hypotheses. In particular a
+donor with u=v=0 reports 0 after five loops, and a scratch initially t
+installs t+e_j. Symbols 0,2,3 use epsilon=0, so this is the specified
+binary source family. The contacts, bank, program and degenerate prices
+are declared parts of the apparatus; the native prefix proves the stated
+native preparations. No account for producing the additional ready
+resources, physical phase measurement or SI calibration is supplied.
+
+### Scope of conservative preparation
+
+The following statements concern the supplied integral relative contact.
+The positive minimum 27 and signed minimum 12 are for exactly four auxiliary
+slots on a complete 26-slot carrier and the specified known input. The
+trace account is conserved; these values count initial prepared resources,
+not dissipated energy or heat. A separate construction of a response or
+archive is not a composition theorem on this carrier.
+
+### Integral relative contact on the declared Cartesian carrier
+
+
+#### Definition and exact accounts
+
+Let
+
+$$
+ O=\mathbb Z[j]=\mathbb Z[X]/(1+X+X^2+X^3+X^4),\qquad
+ K=\mathbb Q(j),\qquad \bar j=j^{-1},\qquad \rho=j^2=J-1.
+$$
+
+Use the marked coefficient basis \((1,j,j^2,j^3)\). The full state carrier is
+\(O^N\), with a specified finite number of labelled slots. Define
+
+$$
+ q(a)=\frac{\operatorname{Tr}_{K/\mathbb Q}(a\bar a)}2
+      =\frac{5\sum_{k=0}^3a_k^2-(\sum_{k=0}^3a_k)^2}{2},\qquad
+ E(z)=\sum_iq(z_i),\qquad h(z)=\sum_i z_i\bar z_i,\qquad
+ S(z)=\sum_i z_i.
+$$
+
+The trace formula follows from
+\(\operatorname{Tr}(j^r)=4\) for \(5\mid r\) and \(-1\) otherwise.
+Its numerator is even. Cauchy's inequality gives
+\(q(a)\ge\sum_k a_k^2/2\), so \(q\) is a nonnegative integer,
+vanishes only at zero, and has finite bounded sublevel sets.
+
+The carrier, labelled slots and these accounts are supplied model data.
+In particular \(E\) is an arithmetic trace account; identifying it with
+physical energy or an account of native \(U\) is not part of the statement.
+
+Prescribe the pair equations
+
+$$
+ x'+y'=x+y,\qquad x'-y'=\rho(x-y).
+$$
+
+They have the unique field solution
+\(x'=y+J(x-y)/2\), \(y'=x+y-x'\).
+Since \(J^{-1}=-j-j^2\in O\), the solution is integral exactly when
+\(x-y\in2O\). The admitted sublattice
+\(\Gamma=\{(x,y):x-y\in2O\}\) has index \(16\) in \(O^2\):
+the difference map onto \(O/2O\) is surjective and has kernel \(\Gamma\).
+This index is not an occurrence probability.
+
+Supply identity on the whole refused complement, defining the total contact
+
+$$
+ C(x,y)=
+ \begin{cases}
+ (s+\rho t,s-\rho t),&x-y\in2O,
+       \quad s=(x+y)/2,\quad t=(x-y)/2,\\
+ (x,y),&x-y\notin2O.
+ \end{cases}
+$$
+
+All divisions here are exact. Identity refusal is an additional choice;
+it is not derived from the requirement of reversibility.
+
+#### Complete law and conservation
+
+**RELATIVE-CONTACT-INTEGRAL-LAW [T].** The total contact is a bijection. Its inverse replaces \(\rho\) by
+\(\rho^{-1}\), and \(C^5=I\). It preserves \(S\), \(h\) and \(E\)
+on every complete state, including occupied and refused states. Every
+individual slot residue modulo \(\pi=1-j\) is unchanged.
+
+Indeed, an admitted difference becomes \(\rho(x-y)\), which remains in
+\(2O\); multiplication by the unit \(\rho\) preserves admission in both
+directions. The refused complement is fixed. Thus inversion never confuses
+the two branches. On the admitted branch
+
+$$
+ C^k(x,y)=(s+\rho^kt,s-\rho^kt),\qquad \rho^5=1,
+$$
+
+and
+
+$$
+ (s+\rho t)\overline{(s+\rho t)}+
+ (s-\rho t)\overline{(s-\rho t)}
+ =2s\bar s+2t\bar t=x\bar x+y\bar y.
+$$
+
+The pair sum is \(2s\). These identities prove the account claims before
+and after taking the trace. Finally
+\(x'-x=(\rho-1)t\) and \(y'-y=-(\rho-1)t\).
+Because \(\rho-1=j^2-1\in(\pi)\), both residues are fixed.
+Here \(O/(\pi)\simeq\mathbb F_5\), by setting \(j=1\) in \(\Phi_5\).
+This quotient differs from coefficientwise reduction modulo \(5\).
+
+Applying these contacts to specified pairs and allowing whole-slot
+permutations gives conservative bijections on \(O^N\). The inverse of a
+finite word reverses its order and inverts each letter. The histogram of
+all \(N\) residues in \(O/(\pi)\) is invariant, since contacts fix the
+individual residues and permutations merely reassign their positions.
+This includes every data, auxiliary and archive slot in the declared carrier.
+
+The supplied law is nonlinear on the full Cartesian lattice:
+\(C(1,0)=(1,0)\), whereas
+\(C(2,0)=(1+\rho,1-\rho)\ne(2,0)\).
+Neither this law nor its slot order, graph or program is an implementation
+of native \(U\) or contact walk \(W\). Conservation of the account permits
+loss of a particular preparation capability; no energy dissipation follows.
+
+**Falsifier.** an integral solution outside \(\Gamma\), a
+nonintegral admitted output, a failure of either inverse composition, or a
+failure of the displayed full-state account or residue identities.
+
+The proof is analytical. The exact supplementary audit is
+[relative-contact](../reproduce/relative-contact/README.md); its finite
+cases audit these identities without replacing the universal argument.
+
+### Four-slot known-input minima
+
+The complete carrier has exactly 26 slots: 22 data slots and four auxiliary
+slots. Initial data are
+
+```text
+d_in = (6,0^21).
+```
+
+The two target data states, each again occupying 22 slots, are
+
+```text
+d_plus = (3,3,3,3,0^18),
+d_signed = (-3,3,3,3,0^18).
+```
+
+The initial and final auxiliary entries are arbitrary elements of O.
+Every intermediate state includes all 26 slots. Final equality is complete
+state equality up to the allowed whole-slot permutations, so no auxiliary
+remainder or nonzero entry is discarded.
+
+**RELATIVE-CONTACT-FOUR-SLOT-MINIMUM [T].**
+For this carrier, input, alphabet and equality, the least initial auxiliary
+account is 27 for d_plus and 12 for d_signed. Both endpoints have the same
+auxiliary account. This is a minimum of prepared auxiliary resources for
+these particular known-input transitions, not a shortest-word theorem or
+a common encoder for unknown inputs.
+
+**Proof of the lower-bound reduction.** Reduction modulo pi identifies
+O/(pi) with F_5. Put r(x)=sum_i c_i mod 5. On an admitted pair,
+
+```text
+x' - x = (rho^k-1)(x-y)/2 in pi O,
+y' - y = -(x' - x).
+```
+
+Each slot therefore retains its residue under a contact; permutations move
+residues between addresses. The complete residue histogram is invariant.
+In residue order 0,1,2,3,4,
+
+```text
+H(d_in)     = (21,1,0,0,0),
+H(d_plus)   = (18,0,0,4,0),
+H(d_signed) = (18,0,1,3,0).
+```
+
+With exactly four auxiliary slots, a positive preparation must start with
+four residues 3, while a signed preparation must start with residues
+2,3,3,3. The final bank in either case has residues 0,0,0,1.
+Modulo 5, the formula for q gives
+
+```text
+q(x) = 2 r(x)^2 mod 5.
+```
+
+Thus every source entry of residue 2 or 3 costs at least 3. Both auxiliary
+accounts are at least 12. For the positive case,
+the auxiliary total E_aux is congruent to 2 modulo 5, so the only totals
+below 27 are 12,17,22.
+
+The positive data at both endpoints have h=36 and E=72. Their sums
+are 6 and 12. Consequently an initial bank a and final bank b must satisfy
+
+```text
+S(b) = S(a)-6,       h(b) = h(a).
+```
+
+For auxiliary total at most 22 every constituent has q<=22. The inequality
+above puts every coefficient in [-6,6]. Enumerating this entire box,
+then every source multiset of four residue-3 entries and every target
+multiset of three residue-0 entries and one residue-1 entry at each fixed
+total, is therefore complete. No Galois representatives or missing
+historical bank list are required.
+
+One further invariant is the parity of the number of slots in each of
+the sixteen classes of O/2O. An admitted contact removes two entries in
+one common class and adds two entries in one common class; refusal and
+permutation preserve these parities.
+
+The exact finite certificate in
+`probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/` gives:
+
+| Auxiliary E | Initial banks | Final banks | Account-compatible pairs | Parity excluded | Closed target component | Closed source component | Unresolved |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 12 | 715 | 1830 | 0 | 0 | 0 | 0 | 0 |
+| 17 | 5500 | 18880 | 1692 | 1584 | 108 | 0 | 0 |
+| 22 | 31075 | 114985 | 70664 | 62988 | 7564 | 112 | 0 |
+
+Here states are sorted multisets of all 26 entries, including zeros.
+This quotient preserves reachability because all whole-slot permutations
+are admitted. For each pair of distinct values in a common O/2O class,
+the verifier includes every power C^k. Equal-value pairs and mismatched
+classes are identities; reversing the orientation merely exchanges the
+outputs. These are all nonidentity generator edges, and inverse edges
+are included.
+
+A component excludes the opposite endpoint only after its breadth-first
+queue is exhausted. The exploration cap of 60 states is solely a stopping
+rule: a 61st state returns UNKNOWN, never an exclusion. Every remaining
+endpoint pair has a completely closed source or target component and
+the opposite endpoint is absent. Thus the table excludes every cheaper
+positive preparation. The full finite enumeration and exact replay, not
+the displayed counts or their hashes alone, are the computational part of
+the proof.
+
+**Attainment.** Number slots 0 through 25, with initial 6 at slot 0,
+zeros at slots 1 through 21, and the listed bank at slots 22 through 25.
+A token (i,l,k) means C^k applied to those two labelled slots.
+Each token below is admitted.
+
+For the positive target use
+
+```text
+a_plus = (-1-j, 1+2j, 2+j^3, 2+j^2),
+q entries = (3,8,8,8),
+
+(1,0,3), (22,1,2), (1,2,3), (1,24,4),
+(1,0,3), (3,0,1), (1,22,3), (3,1,4),
+(0,22,1), (24,22,3), (22,23,3), (3,23,1),
+(22,1,3), (1,3,1), (0,1,3), (0,25,4).
+```
+
+The final complete multiset equals d_plus together with
+
+```text
+b_plus = (1, -1+j, -2-2j-j^3, 2j+j^2+2j^3),
+q entries = (2,5,10,10).
+```
+
+For the signed target set eta=1+j and use
+
+```text
+a_signed = (eta,-eta,-eta,-eta),
+q entries = (3,3,3,3),
+
+(0,1,3), (0,23,1), (0,1,1), (23,24,2),
+(0,24,1), (22,24,2), (1,23,1), (0,25,3),
+(0,1,2), (0,24,1), (23,25,3), (0,23,1),
+(0,1,1), (22,23,4).
+```
+
+The final complete multiset equals d_signed together with
+
+```text
+b_signed = (-2eta,0,0,0),       E(b_signed)=12.
+```
+
+These are the 16-token positive witness and 14-token signed witness of
+[P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1](../probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/RESULT.md). A final permutation places the target data and bank
+at their designated addresses. Undo that permutation and apply the tokens
+in reverse order with exponents 5-k to restore the exact original labelled
+state. The verifier checks complete accounts after every token, full final
+multiset equality and the labelled inverse before final rearrangement.
+This establishes attainment and completes both minima.
+
+Tokens count powers C^k. They are not all single applications of C or
+C^-1, and no minimal length in either metric is claimed.
+
+### Retained outputs require changing auxiliary resources
+
+**RELATIVE-CONTACT-RETAINED-BANK-CAPACITY [T].**
+The two preparations above cannot restore their initial bank while keeping
+their prepared data unchanged and restoring every other resource to its
+initial exact state. For N disjoint known-input loads of d_in and N retained
+outputs of the stated signed or positive type, count every auxiliary slot
+whose state may change, including spent banks and archives. Suppose all
+operations belong to the same contact/permutation alphabet and no uncounted
+external state exchanges residues. Then
+
+```text
+L_aux >= 4N,       E_aux(initial) >= 12N.
+```
+
+For the signed target these bounds are attained simultaneously by N disjoint
+copies of the signed word, with all N inputs and sites prepared in advance.
+For the positive target independent copies give E_aux(initial)<=27N with
+4N auxiliary slots. No claim that 27N is the positive many-output minimum
+is made.
+
+**Proof.** In a positive preparation the initial bank histogram is
+(0,0,0,4,0), and its final histogram is (3,1,0,0,0). For a signed preparation
+the initial histogram is (0,0,1,3,0), with the same final histogram.
+If final data stay fixed and every other resource returns exactly, total
+histogram conservation would require the bank histograms to be equal,
+which they are not.
+
+For N loads the initial data contain no residue-2 or residue-3 entries.
+The retained signed outputs contain N residue-2 and 3N residue-3 entries;
+the positive outputs contain 4N residue-3 entries. Conservation therefore
+requires the initial changing auxiliary supply to contain at least those
+entries. Resources that return to their original state cancel from the
+histogram equation. There must be at least 4N changing auxiliary slots.
+Each required residue costs at least 3, proving E_aux>=12N. Disjoint
+witness copies establish the stated upper bounds and signed equality.
+
+The bank keeps its trace account while changing the residues needed for
+another retained preparation. Inverting the whole word restores the bank
+while undoing the output. Swapping in a fresh bank transfers the spent
+state into another resource. Neither operation supplies clean bank renewal
+under the retained-output contract. No energetic dissipation follows.
+
+### One fixed program preserves input residue distance
+
+**RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY [T].**
+For any finite number of slots m, let F be one fixed finite word of the
+declared marked contacts and whole-slot permutations on O^m. Its contact
+admission may depend on the current input, as the defined law requires,
+but its sequence of marked operations and permutations is fixed.
+There is a single permutation sigma of the m residues, independent of
+the input, such that for all z,w in O^m,
+
+```text
+r(F(z)) = P_sigma r(z),
+r(F(z)-F(w)) = P_sigma r(z-w).
+```
+
+In particular the Hamming distance between the complete residue vectors of
+two inputs is exactly preserved.
+
+**Proof.** Each admitted or refused contact is the identity on the residue
+vector at its marked addresses. Each whole-slot permutation acts by its
+fixed permutation matrix. Composing them proves the first equation; taking
+the difference proves the second and preserves its support cardinality.
+
+If two source inputs are given the same initial bank, additional identical
+auxiliary entries add zero coordinates to their residue difference.
+Consequently no fixed word with that common bank can produce prescribed
+data outputs whose residue difference already has more nonzero coordinates
+than the complete initial difference. Allowing more unchanged common-bank
+slots or a larger initial trace account cannot change this obstruction.
+The conclusion is a necessary condition, not a classification of all
+possible encoders. A program chosen separately for each input or a
+state-dependent permutation controller has a different contract and
+requires its own complete state and resource accounting.
+
+The preceding preparation and capacity bounds alone do not compose an
+occupied-record apparatus. The construction below supplies its own complete
+common carrier, prepared input family, fixed word and funded finite reuse.
+Neither these bounds nor that construction supplies a native-U implementation,
+physical event, measured energy scale or cross-layer lift.
+
+### Exact rhythms of the declared three-slot contact
+
+The following four theorems concern the supplied integral relative contact
+on three marked slots and the fixed order left contact then right contact.
+They are L1 arithmetic statements. The operation law is the one in
+**RELATIVE-CONTACT-INTEGRAL-LAW [T]**; its definitions and the identities
+needed here are repeated so that the proofs are self-contained.
+
+#### Carrier, contact and accounts
+
+Let
+$$
+O=\mathbb Z[j],\qquad 1+j+j^2+j^3+j^4=0,\qquad \rho=j^2.
+$$
+Use the four marked coefficients in the basis \((1,j,j^2,j^3)\). All marked
+coefficient indices range over \(\{0,1,2,3\}\). For
+\(z=\sum_{i=0}^3z_i j^i\), set
+$$
+Q(z)=\frac{5\sum_i z_i^2-(\sum_i z_i)^2}{2}.
+$$
+This is the Canon's trace account \(q\), written with a capital letter to
+distinguish it from the depth below. It is integer valued. Appending \(z_4=0\)
+gives the exact identity
+$$
+2Q(z)=\sum_{0\le i<k\le4}(z_i-z_k)^2. \tag{1}
+$$
+The appended fifth coefficient is only a presentation device, not an
+additional marked coordinate. Thus \(Q(z)=0\) exactly when \(z=0\).
+If \(z\ne0\), separate the \(k\)
+occurrences of the lowest of the five coefficients from the remaining \(5-k\).
+At least \(k(5-k)\ge4\) terms in (1) are at least one, so \(Q(z)\ge2\).
+Bounded sublevel sets are finite. Multiplication by \(\rho\) preserves \(Q\):
+in the five-coefficient presentation it is a cyclic shift followed by
+subtraction of one common coefficient, both preserving (1).
+
+The total contact on a labelled pair is
+$$
+C(a,b)=
+\begin{cases}
+(s+\rho t,s-\rho t),&a-b\in2O,\quad
+s=(a+b)/2,\quad t=(a-b)/2,\\
+(a,b),&a-b\notin2O.
+\end{cases} \tag{2}
+$$
+All divisions in the admitted branch are integral. A refusal is an identity;
+an admitted pair with \(a=b\) is also an identity, but **is not a refusal**.
+Identity on the refused complement is supplied model data.
+
+On \(O^3\), number the slots 1, 2, 3 and write \(A=C_{12}\), \(B=C_{23}\).
+Here \(F=B\circ A\), meaning \(F(x)=B(A(x))\): the left contact acts first.
+In the zero-based chronological notation of the apparatus below, this same
+tick is C(0,1) C(1,2). For \(x=(a,b,c)\), put
+$$
+S(x)=a+b+c,\qquad E(x)=Q(a)+Q(b)+Q(c),
+$$
+$$
+M(x)=Q(a-b)+Q(b-c)+Q(a-c)=3E(x)-Q(S(x)). \tag{3}
+$$
+Each contact preserves \(S\) and \(E\), by its center-relative form and the
+parallelogram identity for \(Q\). Equation (3) proves conservation of \(M\).
+Each contact satisfies \(C^5=I\): an admitted difference remains admitted
+and is multiplied by \(\rho\), while a refused pair stays fixed. Consequently
+\(F\) is a bijection preserving a finite \(E\)-level. Every trajectory is a
+finite cycle, with no transient segment.
+
+Let \(r(x)\in\{0,1,2\}\) count refusals during one tick, testing the right
+contact on the state **after** the left contact. For a least cycle of length
+\(P\), let \(R=\sum_{n=0}^{P-1}r(F^n x)\).
+
+#### First return and complete rhythm classification
+
+**RELATIVE-CONTACT-RHYTHM-CLASSIFICATION [T].** Every state of the declared
+three-slot system is periodic. Doubling has the exact first-return and
+least-period laws below. Every nondiagonal cycle belongs to exactly one of
+the three primitive types at a finite maximal depth, with the displayed
+least-period/refusal pair. The simultaneous-parity search has sharp bound
+eight ticks; the diagonal is a separate fixed class.
+
+Modulo two, \(\Phi_5(X)=X^4+X^3+X^2+X+1\) has no linear root and is not
+divisible by the only irreducible quadratic \(X^2+X+1\). It is therefore
+irreducible, and \(O/2O\) is a field of sixteen elements. The residue of
+\(\rho\) has exact order five. Thus \(1-\rho^k\) is invertible modulo two
+for \(k=1,2,3,4\).
+
+**First-return lemma.** For every \(y\in O^3\),
+$$
+\tau(y)=1+4r(y),\qquad F^{\tau(y)}(2y)=2F(y). \tag{4}
+$$
+The time \(\tau(y)\) is the first positive return of \(2y\) to \((2O)^3\)
+at a whole-tick boundary. Exactly \(4r(y)\) refusals occur in this upper
+return segment.
+
+**Proof.** An admitted lower contact lifts in one upper contact to exactly
+twice its lower output, still in the even sublattice. This includes an
+admitted identity.
+
+For a refused lower pair \((a,b)\), write \(\delta=a-b\notin2O\).
+After \(k\) contacts on its doubled pair, its two entries are
+$$
+a+b+\rho^k\delta,\qquad a+b-\rho^k\delta. \tag{5}
+$$
+For \(k=1,2,3,4\), both have the same nonzero residue
+\((1+\rho^k)\delta\) modulo two. The untouched third entry is even.
+Hence the neighboring contact refuses at each intervening opportunity.
+The fifth contact on the active pair restores \((2a,2b)\) exactly.
+
+The complete tick order gives four cases:
+
+| Lower left/right decisions | Upper whole ticks | Upper refusals |
+|---|---:|---:|
+| admitted / admitted | 1 | 0 |
+| refused / admitted | 5 | 4 |
+| admitted / refused | 5 | 4 |
+| refused / refused | 9 | 8 |
+
+In the second row, the first four right contacts refuse; the fifth left
+contact restores the doubled lower input, and the right contact performs
+the admitted lower action. In the third row, the admitted left action occurs
+first, the right pair starts its five-cycle, and the next four left contacts
+refuse. In the fourth row the fifth left contact and the first right contact
+share the fifth whole tick. Four further right contacts complete the second
+five-cycle. This is nine ticks, not ten.
+
+Every inserted intermediate whole-tick state has exactly two slots with
+nonzero parity and one even slot. There is no earlier even return. The
+endpoints and refusal counts in all four rows prove (4). \(\square\)
+
+**Least-period lifting.** If the lower cycle has least period \(P\) and
+refusal count \(R\), its doubled cycle has
+$$
+P'=P+4R,\qquad R'=4R. \tag{6}
+$$
+Its even return states are exactly
+\(2y,2F(y),\ldots,2F^{P-1}(y)\), in that cyclic order. The sum of their
+first-return times is \(P+4R\). A shorter return to \(2y\) would itself be
+an even return and imply a shorter lower cycle. The same decomposition
+counts exactly \(4R\) upper refusals. This proves (6) also for fixed lower
+states; no nontrivial-motion assumption is needed. Iteration gives
+$$
+R_d=4^dR_0,\qquad P_d=P_0+\frac{4R_0(4^d-1)}3. \tag{7}
+$$
+The inserted five-cycles belong to the doubled trajectory. Equation (4) does
+not insert unprescribed microsteps into the original refused identity.
+
+#### Avoiding the simultaneous parity section
+
+Define
+$$
+H=\{(a,b,c):a-b\in2O,\ b-c\in2O\}.
+$$
+Membership is tested at whole-tick boundaries. In difference coordinates
+\(u=a-b,\ v=b-c\), the admitted actions are
+$$
+A(u,v)=(\rho u,v+(1-\rho)u/2),\qquad
+B(u,v)=(u+(1-\rho)v/2,\rho v). \tag{8}
+$$
+
+**No-H lemma and bounded search.** A cycle disjoint from \(H\) has least
+period one or five. From any state outside \(H\), either its complete
+one- or five-cycle is recognized, or a state in \(H\) occurs within eight
+ticks. Eight is sharp.
+
+**Proof.** If both differences are non-even, both contacts refuse and the
+state is fixed. The state is also fixed when its sole even difference is zero.
+
+If only \(v\) is even and nonzero, the left contact refuses. Under successive
+right contacts,
+$$
+v_k=\rho^k v,\qquad u_k=u+(1-\rho^k)v/2.
+$$
+Either \(u_k\) becomes even for some \(1\le k\le4\), reaching \(H\) at the
+end of that tick, or the five right contacts close the original cycle.
+A first entry into \(H\) cannot occur at \(k=5\), because the original
+non-even \(u\) has then returned.
+
+If only \(u\) is even and nonzero, the same argument applies to successive
+left contacts while the right one refuses. Either they close a five-cycle,
+or within four left contacts the intermediate state lies in \(H\). If the
+following right contact retains \(H\), the required whole-tick boundary
+has already been found.
+
+Otherwise that right contact leaves \(H\). Its input difference \(v_*\)
+then has exact common two-adic valuation one: the even left difference is
+changed by \((1-\rho)v_*/2\), which is non-even precisely in that case.
+After \(k=1,2,3,4\) right contacts from this intermediate \(H\)-state,
+the left difference is changed by \((1-\rho^k)v_*/2\) and is non-even.
+All intervening left contacts therefore refuse. The fifth right contact
+returns to that same intermediate \(H\)-state, now at a whole-tick boundary.
+At most four additional ticks were needed, giving the bound eight. \(\square\)
+
+For sharpness, take
+$$
+x_0=(1+\rho,1-\rho,-2),\qquad (u_0,v_0)=(2\rho,3-\rho).
+$$
+Its differences at times \(n=0,1,2,3\) are
+\((2\rho^{n+1},3-\rho^{n+1})\); at times \(n=4,5,6,7\) they are
+\((3-\rho^{n-3},2\rho^{n-3})\). Each of these eight states has exactly
+one non-even difference, since \(1-\rho^k\ne0\) modulo two for
+\(1\le k\le4\). At time eight the differences are \((2,2)\), and the
+sum-zero state is \((2,0,-2)\in H\). These exact formulas give an eight-tick
+first hit without relying on a search sample.
+
+#### Classification by maximal depth
+
+For \(z\in O\), let \(\nu_2(z)\) be the common divisibility exponent of its
+four coefficients, with \(\nu_2(0)=\infty\). Set
+$$
+h(a,b,c)=\min\{\nu_2(a-b),\nu_2(b-c)\},\qquad
+d=\max_{0\le n<P}h(F^n x). \tag{9}
+$$
+The fully diagonal state \((a,a,a)\) is separate:
+\(P=1,R=0,M=0,h=d=\infty\). A nondiagonal cycle never reaches the fixed
+diagonal, because \(F\) is bijective, and therefore has finite \(d\).
+
+At fixed conserved sum \(S\), center integrally by
+$$
+T_S(a,b,c)=(3a-S,3b-S,3c-S). \tag{10}
+$$
+Common translation commutes with each contact. Multiplication by the odd
+integer three preserves admission and commutes with its action. Therefore
+\(T_SF=FT_S\), with the same refusal sequence. The map is injective on a
+fixed-sum slice, so it preserves least period. Its differences are three times
+the original differences, preserving \(h\) and \(d\). It is not asserted
+to be injective on all of \(O^3\).
+
+On the sum-zero slice, common divisibility of all differences by \(2^e\)
+is equivalent to divisibility of all three entries by \(2^e\). The entries
+are congruent to a common value, and their zero sum gives three times that
+value zero modulo \(2^e\); three is invertible there. In particular \(H\)
+is exactly the even sublattice on this slice.
+
+Choose a phase attaining maximal \(d\) and write its centered state as
+\(2^d v\), with \(v\in O^3\) and sum zero. The cycle of \(v\) cannot meet
+\(H\). If it did, repeated use of the first-return lemma would place its
+corresponding \(2^d\)-multiple on the upper cycle with depth at least \(d+1\),
+a contradiction.
+
+The no-H lemma gives exactly three nondiagonal primitive types:
+
+| Primitive type | \(P_0\) | \(R_0\) |
+|---|---:|---:|
+| One refused contact and one admitted diagonal identity | 1 | 1 |
+| Both contacts refused | 1 | 2 |
+| One active edge cycles while the other always refuses | 5 | 5 |
+
+In the last row the other edge cannot be an admitted diagonal: both differences
+would then be even at an intermediate or initial state, and the no-H proof
+would force a whole-tick visit to \(H\). A nonzero admitted relative difference
+has exact order five, so this row is not a fixed state.
+
+Put \(A_d=(4^{d+1}-1)/3\) for \(d\ge0\). Equation (7) proves
+$$
+\boxed{(P,R)=(A_d,4^d),\quad(2A_d-1,2\cdot4^d),
+\quad(5A_d,5\cdot4^d).} \tag{11}
+$$
+All three classes are attained. Primitive preparations are \((1,0,0)\),
+\((0,1,0)\), and \((1,-1,0)\), respectively; multiply them by \(2^d\).
+Their primitive cycles have no \(H\), and the first-return construction
+increases maximal depth by exactly one at every doubling. Numerical periods
+alone do not identify a class: periods one and five occur in more than one
+row/depth combination.
+
+A short exact classifier follows. Center as in (10), seek an even state or
+primitive cycle using at most eight ticks, divide an even state by two, and
+repeat. Every division reduces the positive relative account by four. This
+terminates at a primitive type and computes (11) without enumerating the
+potentially long upper cycle. Translation, centering and division are
+mathematical coordinate operations, not free apparatus operations or a
+physical measurement protocol.
+
+#### Sharp relative-account bounds
+
+**RELATIVE-CONTACT-RHYTHM-ACCOUNT-BOUNDS [T].** At every finite maximal
+depth, the following class-specific relative-account minima are sharp.
+Every nondiagonal cycle, including a nondiagonal fixed state, satisfies
+\(3P\le2M-5\). The fully diagonal fixed states are excluded from that
+inequality. These are state-account minima, not costs of preparing those
+states by contacts.
+
+At a phase of maximal depth, subtract its third entry and divide by \(2^d\):
+$$
+z=((a-c)/2^d,(b-c)/2^d,0)\in O^3,\qquad M(x)=4^dM(z). \tag{12}
+$$
+Centering \(z\) produces exactly the primitive centered state above.
+Consequently \(z\) has the same primitive type and its cycle avoids \(H\).
+Every nondiagonal triple has at least two nonzero pair differences; (1) gives
+\(M(z)\ge4\).
+
+For primitive type III an active pair has integral form \((s+t,s-t)\),
+with \(t\ne0\). If the third entry is \(c\), the quadratic identity gives
+$$
+M(z)=Q(2t)+Q(s+t-c)+Q(s-t-c)
+     =6Q(t)+2Q(s-c)\ge12. \tag{13}
+$$
+These bounds are attained:
+
+| Class at depth \(d\) | Sharp minimum of \(M\) | Attaining preparation |
+|---|---:|---|
+| I: \(P=A_d\) | \(4^{d+1}\) | \((2^d,0,0)\) |
+| II: \(P=2A_d-1\) | \(4^{d+1}\) | \((0,2^d,0)\) |
+| III: \(P=5A_d\) | \(12\cdot4^d\) | \((2^d,-2^d,0)\) |
+
+Substitution into (11) gives, for every nondiagonal cycle,
+$$
+\boxed{3P\le2M-5.} \tag{14}
+$$
+The lower bounds on \(2M-5-3P\) in classes I, II, III are respectively
+\(4^{d+1}-4\), zero, and \(4^{d+1}\). Thus every minimum-account class-II
+preparation attains equality. It is also attained at \(d=0\) in class I
+with \(M=4\). Nondiagonal fixed states are included; only the fully diagonal
+case is excluded.
+
+These are minima of the account of states in a specified class, not minimum
+costs of a contact preparation procedure. Odd integer multiplication preserves
+admission and least periods while multiplying \(M\) and \(E\) by its square.
+The account does not uniquely determine a period.
+
+#### Deepest marks and an unresolved fivefold phase
+
+**RELATIVE-CONTACT-RHYTHM-FIVEFOLD-PHASE [T].** Classes I and II have one
+deepest mark in each least cycle, while class III has five equally spaced
+deepest marks. The exact states below have the same complete \(E,S,M\),
+all local residues modulo \(1-j\), and the entire depth history, but have
+least periods five and twenty-five. This obstruction concerns that stated
+reading, not every possible local observation.
+
+On the centered sum-zero slice, each inserted intermediate state in (4) has
+depth zero. Doubled lower return states have the lower depth plus one.
+Induction shows that deepest upper phases are exactly the \(2^d\)-multiples
+of primitive phases. Classes I and II have one per least cycle; class III
+has exactly five.
+
+For their spacing in class III, begin with any primitive tick. It has length
+one and one refusal. Its lifted segments obey the additive first-return count
+\((L,R)\mapsto(L+4R,4R)\). Starting at \((1,1)\), after \(d\) lifts the
+length is \(A_d\). Every one of the five primitive ticks has this count.
+
+| Class | Interval between deepest marks | Least period of full state |
+|---|---:|---:|
+| I | \(A_d\) | \(A_d\) |
+| II | \(2A_d-1\) | \(2A_d-1\) |
+| III | \(A_d\) | \(5A_d\) |
+
+This includes class III at \(d=0\), when every phase is deepest and the mark
+is constantly one. A return of a mark need not be a return of the full state.
+
+For example, \((4,0,2)=2(2,0,1)\) has \(E=40,S=6,M=48,d=1,P=25\).
+Its five deepest states are
+$$
+(2+2\rho^k,2-2\rho^k,2),\qquad k=0,1,2,3,4,
+$$
+at times \(0,5,10,15,20\). Intermediate phases have depth zero.
+
+A stronger pair keeps the specified accounts and local invariant residues
+identical. Define
+$$
+w=1-j,\qquad v=2-j-j^2,\qquad
+X=(6w,0,0),\qquad Y=(2w+2v,2w-2v,2w). \tag{15}
+$$
+Here \(Q(w)=5,Q(v)=15\). The quadratic identities give
+$$
+E(X)=E(Y)=180,\quad S(X)=S(Y)=6w,\quad M(X)=M(Y)=360.
+$$
+The state \(X/2=(3w,0,0)\) is a primitive class-I fixed state since
+\(3w\notin2O\). The state \(Y/2=(w+v,w-v,w)\) is a primitive class-III
+cycle: after \(k\) left contacts it is
+\((w+\rho^kv,w-\rho^kv,w)\), whose right difference
+\(-\rho^kv\notin2O\). Formula (4) therefore proves analytically
+$$
+P(X)=5,\quad P(Y)=25,\quad d(X)=d(Y)=1,
+$$
+$$
+h(F^nX)=h(F^nY)=
+\begin{cases}1,&5\mid n,\\0,&5\nmid n.\end{cases} \tag{16}
+$$
+Let \(\sigma(z)=\sum_i z_i\pmod5\), the residue modulo the ideal \((1-j)\).
+Each slot's \(\sigma\) is preserved: an admitted increment is
+\((\rho-1)t\in(1-j)O\), and refusal changes nothing. Both \(w\) and \(v\)
+have \(\sigma=0\), so every local residue of both trajectories is zero.
+
+Thus even the full infinite depth history, supplemented by these accounts
+and local residues, does not determine full-state period. The stronger
+coefficient residues in \(O/5O\) already differ at time zero:
+$$
+X:\ (1,4,0,0),(0,0,0,0),(0,0,0,0),
+$$
+$$
+Y:\ (1,1,3,0),(3,0,2,0),(2,3,0,0).
+$$
+The initial local slot accounts also differ: they are \((180,0,0)\) for
+\(X\) and \((140,20,20)\) for \(Y\). Thus the witness does not equate
+every local observation. The invariant \(O/(1-j)\cong\mathbb F_5\)
+must not be confused with
+coefficient reduction in \(O/5O\), which has 625 elements per slot.
+
+#### Sufficient injectivity of coefficient readings
+
+**RELATIVE-CONTACT-COEFFICIENT-READ-INJECTIVITY [T].** On any fixed
+\(S,M\) slice of \(O^3\), reduction of all twelve marked coefficients
+modulo a positive integer \(m\) is injective if \(3m^2>M\). Reduction
+of the two adjacent differences is also injective under the additional
+hypothesis \(\gcd(3,m)=1\). The inequality is sufficient; no universal
+necessity or smallest modulus is asserted.
+
+Fix \(S\) and \(M\), and reduce all twelve state coefficients modulo a
+positive integer \(m\). If distinct states collide, then \(x-y=mz\), with
+\(z\ne0\) and \(\sum_i z_i=0\). At least two slots of \(z\) are nonzero:
+$$
+E(x-y)=m^2E(z)\ge4m^2. \tag{17}
+$$
+For centered triples \(X_i=3x_i-S,\ Y_i=3y_i-S\), equation (3) gives
+\(E(X)=E(Y)=3M\). The parallelogram identity yields
+$$
+9E(x-y)=E(X-Y)\le2E(X)+2E(Y)=12M. \tag{18}
+$$
+Hence a collision requires \(3m^2\le M\), proving
+$$
+\boxed{3m^2>M\ \Longrightarrow\
+\text{coefficient reduction modulo }m\text{ is injective at fixed }S,M.}
+\tag{19}
+$$
+This is sufficient, not a universal necessary condition. For the difference
+reading \(u=a-b,v=b-c\), the same conclusion holds when \(\gcd(3,m)=1\):
+\(3b=S-u+v,\ a=b+u,\ c=b-v\) reconstruct the absolute residues.
+
+#### Scope of the arithmetic classification
+
+The contact and its order are supplied. The trace account is not identified
+with measured energy, and a tick is not assigned physical duration. The
+centering, division and residue readings used in these proofs are
+mathematical coordinate operations. They do not by themselves construct a
+contact-built mark, interval counter, retained record, funded renewal or
+native-U implementation. Any same-carrier apparatus theorem has its own
+complete contract and evidence.
+
+No finite shell census, minimum-modulus computation, finite marker partition
+or sample-count audit is used as a premise of these four theorems.
+
+### A common finite apparatus with an independently variable second input
+
+**RELATIVE-CONTACT-COMMON-APPARATUS-OPEN [T].** at L1 the supplied total relative contact and five declared whole-slot transpositions admit one complete fixed program on O^56, with O=Z[j], that processes every ordered pair from the ten-input prepared family {0,1} times Z/5 through the same read core; the 46 designated auxiliary coordinates have one common initial state of positive half-trace account 128 and the complete account is 156; the current four archive banks distinguish all 100 input pairs, the first archives retain their addresses and values throughout reload and the second experiment, the shared controls become ready with initially funded fresh second banks, and every spent input and bank remains in the exact final state; the construction positively decides the common-apparatus existence question at the declared two-experiment horizon, with within-stage retention at complete read and step boundaries, and asserts no raw-input synthesis, arbitrary external post-start loading, contact-only implementation of the transpositions, regeneration of used memory, unbounded reuse, resource minimum, native-U realization or physical interpretation
+
+The carrier, input interface, common initial resources, complete word, output
+equality, retention interval and final resource disposition are specified
+together below. Preparation means the displayed common-ready loading map.
+Both prepared inputs and the finite stock are supplied initially. Their
+independence is the full Cartesian input domain, not a probability law.
+
+#### Carrier, operations and common preparation
+
+Let O=Z[j], where j is a primitive fifth root of unity, and put
+
+```text
+rho = j^2,  u_e = 1-rho^e,  w_e = 1+rho^e,
+u = u_1,   w = w_1,        b = w_2.
+```
+
+Indices on u_e and w_e are modulo five; u_0=0 and w_0=2. For a in O,
+written uniquely as a=sum(i=0..3) a_i j^i, the positive half-trace account
+and the residue at j=1 are
+
+```text
+Q(a) = (5 sum_i a_i^2 - (sum_i a_i)^2)/2,
+epsilon(a) = sum_i a_i mod 5.
+```
+
+For z in O^56 write E(z)=sum_i Q(z_i), Sigma(z)=sum_i z_i and
+H(z)=sum_i z_i conjugate(z_i). The total contact is
+
+```text
+C(x,y) = (x,y)                                      if x-y is not in 2O,
+C(x,y) = ((x+y+rho(x-y))/2, (x+y-rho(x-y))/2)        if x-y is in 2O.
+```
+
+This is the contact of RELATIVE-CONTACT-INTEGRAL-LAW. On its admitted
+branch the sum is fixed and the difference is multiplied by rho, so
+admission persists and C^5=id. Its refused branch is fixed. Thus C^-1=C^4
+on the entire pair carrier. It preserves the pair sum, Hermitian account,
+positive half-trace account and each labelled residue epsilon. A supplied
+SWAP(i,h) exchanges whole coordinates and is its own inverse; it preserves
+the complete accounts and sum while generally permuting labelled residues.
+SWAP is an additional admitted primitive, not a contact compilation.
+
+All slot addresses are zero based. A product acts chronologically from
+left to right. Exponents mean literal repetition of the displayed primitive
+or word. The only data-dependent branch is the contact's own admission rule.
+
+Define F=C(0,1)C(1,2) on three source slots, T=C(3,4) on two clock slots,
+and the following exact source and clock states:
+
+```text
+Y_0 = (0,2,0),
+Y_e = (u_e,w_e,0)             for e=1,2,3,4,
+Y_(4+e) = (0,w_e,u_e)         for e=1,2,3,4,
+X_k = (rho^k w,-rho^k w)      for k in Z/5.
+```
+
+The source index is modulo nine. The displayed states satisfy
+F(Y_a)=Y_(a+1) and T(X_k)=X_(k+1). To verify the source identity, use
+C(u_e,w_e)=(u_(e+1),w_(e+1)) and its reversed-pair version. For e=1,2,3,4,
+contact between w_e and zero is refused. At e=4 the first source contact
+produces (0,2), enabling the second contact and entering the other branch;
+the last contact from Y_8 returns Y_0. All nine source states and all five
+clock states are distinct.
+
+A fresh ten-slot memory is M_empty=(-b,b)^5. For p in Z/5, M[p] replaces
+only its pair p by (-rho b,rho b). The five pairs are labelled. Thus M[0]
+is a present zero-labelled record and is different from M_empty.
+
+The admitted input domain and complete loading map are
+
+```text
+I = {0,1} x Z/5,
+(n,k,m,l) in I x I,
+L(n,k,m,l) =
+  (Y_n,X_k,0,u,0,0,w,0,
+   M_empty,M_empty,M_empty,M_empty,Y_m,X_l).
+```
+
+| Slots | Role | Initial account |
+| --- | --- | ---: |
+| 0..2 | First source Y_n | 8 |
+| 3..4 | First clock X_k | 6 |
+| 5 | Marker g=0 | 0 |
+| 6..8 | Selector A, B, skip: (u,0,0) | 5 |
+| 9 | Helper h=w | 3 |
+| 10 | Sampling gate t=0 | 0 |
+| 11..20, 21..30 | First experiment's two fresh banks | 60 |
+| 31..40, 41..50 | Second experiment's two fresh banks | 60 |
+| 51..53 | Queued source Y_m | 8 |
+| 54..55 | Queued clock X_l | 6 |
+
+Ten coordinates are allocated to the two input systems. Eight coordinate
+values actually vary over this family: initial source coordinates 2 and 53
+are always zero. The 46 designated auxiliary coordinates are identical for
+every one of the 100 input pairs. This is the declared interface partition,
+not a claim that exactly 46 coordinates are literally constant.
+
+Direct evaluation gives Q(u)=5, Q(w)=Q(b)=3, Q(Y_a)=8, Q(X_k)=6,
+Sigma(Y_a)=2 and Sigma(X_k)=0. Multiplication by rho preserves Q, so every
+fresh or valid recorded bank has account 30 and sum zero. Consequently
+
+```text
+E_aux = 8 + 4*30 = 128,
+E(L) = 128 + 2*(8+6) = 156,
+Sigma(L) = 2+2+(u+w) = 6.
+```
+
+All sources have residue vector (0,2,0), all clocks have (2,3), and every
+bank has (3,2)^5. The complete common labelled residue vector is
+
+```text
+(0,2,0,2,3,0,0,0,0,2,0,(3,2)^20,0,2,0,2,3).
+```
+
+#### One explicit read word
+
+The following zero-based blocks completely specify the oriented contacts.
+The symbol O_1 denotes a word, distinct from the coefficient ring O.
+
+```text
+O_1 = C(1,5),      A_0 = C(5,9),      B_c = C(c,9),
+O_2 = C(9,10),     T = C(3,4),
+E_c = A_0 B_c A_0^4 B_c^4,
+E_c^-1 = B_c A_0 B_c^4 A_0^4.
+```
+
+For memory base q=11 or 21 and p=0,1,2,3,4, let a_p=q+2p and b_p=q+2p+1.
+Define
+
+```text
+K_p = C(3,a_p)^4 C(a_p,b_p)^4 C(3,a_p) C(a_p,b_p),
+SCAN_q = product_(p=0..4) (C(3,10) K_p C(3,10)^4 T),
+W_A = E_6 O_2 SCAN_11 O_2^4 E_6^-1,
+W_B = E_7 O_2 SCAN_21 O_2^4 E_7^-1,
+D(c,d) = C(9,c)^3 C(9,d)^3 C(9,c) C(9,d) C(9,c),
+V(c,d) = A_0 D(c,d) A_0^4 D(c,d),
+R = O_1 W_A W_B V(7,8) V(6,7) O_1^4,
+F = C(0,1) C(1,2),       F^-1 = C(1,2)^4 C(0,1)^4,
+S = R F^-1 R F F T.
+```
+
+The SCAN product is in increasing p order. Its length is 5*(1+10+4+1)=80.
+The respective lengths of E, W_A, W_B, D, V, R and S are
+10, 105, 105, 9, 23, 261 and 535 contacts.
+
+We prove the complete read action from these local operations. No abstract
+write, selector or expected endpoint is substituted for a contact.
+
+First, O/2O is the field with sixteen elements: Phi_5 is irreducible over
+F_2 because 2 has order four modulo five. The image of rho has order five.
+Every w_e for e=1,2,3,4 is nonzero there, and u_e=w_e there. For the barred
+value of w, one has w^3=rho^4. If w were rho^s, this would force s=3; but
+1+rho=rho^3 and Phi_5(rho)=0 would then imply rho^2=rho^4, contrary to
+order five. Thus w is not in the subgroup <rho>. Since b=w^2 modulo two,
+the cosets <rho>w and <rho>b are disjoint. These observations decide all
+refusals used below.
+
+**Marker and selected sampling gate.** At Y_0, O_1 changes the source's
+middle coordinate and g from (2,0) to (w,u). At every other source phase
+that middle coordinate is a nonzero w_e modulo two, so O_1 refuses and
+g stays zero. With h=w and g,c in {0,u}, the complete E_c action is
+
+| Initial (g,c,h) | Final (g,c,h) |
+| --- | --- |
+| (0,0,w) | (0,0,w) |
+| (u,0,w) | (u,0,w) |
+| (0,u,w) | (0,u,w) |
+| (u,u,w) | (u,0,2) |
+
+Indeed, in the last row A_0 produces (u_2,u,w_2), B_c refuses,
+A_0^4 restores (u,u,w), and B_c^4 produces (u,0,2). In the second row
+B_c and B_c^4 refuse, so the A_0 powers cancel. In the third row the
+temporary (c,h)=(u_2,w_2) makes A_0^4 refuse and the B_c powers cancel.
+The first row consists entirely of refusals. Therefore O_2, with t=0,
+produces (h,t)=(w,u) exactly in the fourth row. In every other row it
+refuses on (w,0). The work token is borrowed through this reversible
+helper interaction; it is not copied.
+
+**Active write and inactive occupied continuation.** For a raw clock
+coordinate rho^r w and t=u, the sampling contact C(3,10) is admitted
+exactly at r=0 modulo five. It then changes (w,u) to (b,u_2). For t=0
+it is refused at every clock phase.
+
+On a raw clock coordinate and a memory pair (-rho^v b,rho^v b), the
+clock-to-memory contacts in K_p refuse, since the two cosets above are
+disjoint. The memory fourth power temporarily changes v to v+4; the
+following memory contact returns it to v. Thus ungated K_p is identity
+for any v, including an occupied pair v=1.
+
+At a gated phase-zero scan of a fresh selected pair, the actual K_p states,
+listed as (clock,a_p,b_p) after its four displayed blocks, are
+
+```text
+(b,-b,b)
+  -> (rho^4 b,-rho^4 b,b)
+  -> (rho^4 b,-rho^4 b,b)
+  -> (b,-b,b)
+  -> (b,-rho b,rho b).
+```
+
+The second block refuses because (1+rho^4)b is nonzero modulo two.
+The inverse sampling contact restores (w,u), and T advances the full raw
+clock phase. Five successive scan positions encounter clock phase zero
+exactly once, at p=-r, and return the clock to its starting phase. With an
+active gate and a fresh bank the scan writes M[-r]. With an inactive gate
+it preserves both fresh and occupied banks. Later scan positions do not
+revisit the pair just written.
+
+At a complete W_A or W_B boundary the scan has returned t and h to their
+values just after O_2. Thus O_2^4 followed by E_c^-1 restores g, c, h and
+t exactly. A selected fresh bank alone has changed. The other bank's
+module is inactive, even if that other bank is already occupied. No active
+overwrite formula for an occupied selected bank is used.
+
+**Selector.** The action of D(c,d) on the only admitted token pairs is
+fully fixed by the following table. Its columns follow the five displayed
+blocks of D; the entries are (h,c,d).
+
+| Initial | After C(9,c)^3 | After C(9,d)^3 | After C(9,c) | After C(9,d) | After C(9,c) |
+| --- | --- | --- | --- | --- | --- |
+| (w,u,0) | (w_4,u_4,0) | (w_4,u_4,0) | (2,0,0) | (w,0,u) | (w,0,u) |
+| (w,0,u) | (w,0,u) | (w_4,0,u_4) | (w_4,0,u_4) | (2,0,0) | (w,u,0) |
+| (w,0,0) | (w,0,0) | (w,0,0) | (w,0,0) | (w,0,0) | (w,0,0) |
+
+These entries use C^a(w_e,u_e)=(w_(e+a),u_(e+a)) and refusal of
+C(w_e,0) for e nonzero. With initial helper w_2, D is identity on all
+three token pairs: w_2 is congruent modulo two to neither zero nor u.
+If g=u and h=w, the first A_0 in V gives (g,h)=(u_2,w_2), so the first
+D is identity; A_0^4 restores (u,w) and the second D swaps the tokens.
+If g=0, both A_0 blocks refuse and the two identical D transpositions
+cancel. Hence V swaps its token pair exactly when g=u, restoring g and h.
+The ordered pair V(7,8)V(6,7) therefore cycles the one-token selector
+A -> B -> skip -> A on an event, and fixes it otherwise.
+
+Finally O_1^4 restores the source and marker to their presented state.
+For a phase-zero source the borrowed (w,u) returns to (2,0); otherwise
+the closing contact still refuses. This proves all five complete read facts:
+
+1. R restores the presented source, clock, g=t=0 and h=w.
+2. Away from source phase zero it preserves selector and both banks.
+3. At source phase zero, selection A or B with that selected bank fresh
+   writes only its pair -r and preserves the other bank, occupied or fresh.
+4. Source phase zero with skip preserves both banks, including two records.
+5. On that event the selector cycles A, B, skip; otherwise it is unchanged.
+
+These facts concern exactly the ready token states and admitted fresh or
+occupied histories used below. They make no assertion about an arbitrary
+active overwrite, an arbitrary marker value or a binary marker at every
+intermediate primitive boundary.
+
+#### Stage evolution and the complete reload
+
+At a step start with source/clock phases (a,r), the first R sees a and the
+second R, following F^-1, sees a-1. Both restore the phases they receive.
+The two final F factors and T leave step-boundary phases (a+1,r+1).
+Starting at (s,r), s in {0,1}, step t therefore begins at
+(s+t mod 9,r+t mod 5). The first read is active when the step-start source
+phase is zero; the second is active when it is one. The complete event list
+within ten steps is
+
+| Initial source s | Event step and read | Selected action |
+| --- | --- | --- |
+| 0 | (0,first), (1,second), (9,first) | A, B, skip |
+| 1 | (0,second), (8,first), (9,second) | A, B, skip |
+
+There is no fourth event in the stage. The two selected acquisitions occur
+while their banks are fresh, and all occupied continuations use the inactive
+or skip actions already proved. Set Delta_0=1 and Delta_1=8. One stage
+writes the two labels (-r,-r-Delta_s) modulo five, ends at Y_(s+10),X_r,
+and restores the six controls (g,A,B,skip,h,t)=(0,u,0,0,w,0).
+The records persist at every subsequent complete R and S boundary of that
+stage. They need not remain constant inside the constituent read contacts.
+
+Let S_A be the displayed word on addresses 0..30. For S_B, replace each
+memory address i in 11..30 by i+20 and fix every address 0..10. This is a
+fixed second embedding of the same program; it is not a runtime relabelling
+of stored values. Both stages use the same eleven core slots.
+
+Define the five actual transpositions and the common complete word
+
+```text
+Pi = SWAP(0,51) SWAP(1,52) SWAP(2,53) SWAP(3,54) SWAP(4,55),
+P = S_A^10 Pi S_B^10.
+```
+
+There is no input-dependent edge or schedule choice. Every future input
+and fresh memory used by P already belongs to L. For
+
+```text
+a = -k,  a' = -k-Delta_n,  c = -l,  c' = -l-Delta_m   (mod 5),
+```
+
+the complete states are
+
+```text
+after S_A^10:
+  (Y_(n+10),X_k,0,u,0,0,w,0,
+   M[a],M[a'],M_empty,M_empty,Y_m,X_l),
+
+after Pi:
+  (Y_m,X_l,0,u,0,0,w,0,
+   M[a],M[a'],M_empty,M_empty,Y_(n+10),X_k),
+
+after P:
+  (Y_(m+10),X_l,0,u,0,0,w,0,
+   M[a],M[a'],M[c],M[c'],Y_(n+10),X_k).
+```
+
+To justify these equalities on the same carrier, project onto the support
+of S_A. Each of its contacts commutes with that projection and fixes its
+complement, so the first stage implication applies while leaving the second
+banks and queued input untouched. Pi then places the actual queued input
+in the shared ports and parks the actual evolved first input, Y_(n+10),X_k.
+It touches neither controls nor archives. The shared core and second banks
+are precisely the ready preparation required for the same stage implication
+with input (m,l). Applying that implication proves the final equality.
+
+Every second-stage edge excludes slots 11..30 and 51..55. The first archives
+therefore keep their original addresses and are literally unchanged after
+the first stage, through all five reload primitives and every second-stage
+primitive. The parked old input is likewise unchanged during the second
+stage. This support argument holds even for arbitrary values in the excluded
+slots; the admitted histories themselves are the ten-by-ten Cartesian family.
+No separate disconnected state array or omitted spent resource is needed.
+
+Each reload swap exchanges equal residues, since every source phase has
+(0,2,0) and every clock phase has (2,3). Thus the full labelled residue vector
+above, Sigma=6, E=156 and the complete Hermitian account are conserved along
+each admitted trajectory. The supplied word respects the fixed-word residue
+boundary. Its four-slot preparation minima are not being applied as minima
+for this different complete loading contract.
+
+#### Reading, funded reuse and exact inverse
+
+The output reader receives only the forty current archive coordinates
+11..50, partitioned into four banks. A valid bank must equal exactly one
+of M[0],...,M[4]; M_empty and every other bank value are rejected. These
+five states are distinct because their changed pair positions differ and
+rho b is not b. For a valid pair of bank labels (x,y), define
+
+```text
+decode(x,y) = (0,-x mod 5)     if x-y = 1 mod 5,
+decode(x,y) = (1,-x mod 5)     if x-y = 3 mod 5,
+decode(x,y) = INVALID         otherwise.
+```
+
+The complete reader returns (decode(a,a'),decode(c,c')). Since
+Delta_0=1 and Delta_1=3 modulo five, this returns exactly
+((n,k),(m,l)) for every admitted preparation. Hence the four-bank output
+map is injective on all 100 inputs. The reader has no access to the initial
+input label, parked or current sources, clocks, event counters or expected
+answer. It distinguishes only the two admitted gap alternatives; no general
+interval recovery from a residue modulo five is asserted.
+
+The reusable part is the shared read core. The first stage restores its
+six controls; the fixed cartridge exchange supplies the independently chosen
+second prepared source and clock, and the second pair of banks is fresh.
+The four initially fresh banks are consumed in order 4 -> 3 -> 2 -> 1 -> 0.
+Each used bank still has account 30. The final state keeps all four records,
+both evolved input systems and every control. This is funded reuse through
+two experiments, with the full changing stock accounted for. It is not a
+return of all resources to their initial states while retaining records.
+Returning the selector to A does not make a used bank fresh. The retained-bank
+capacity boundary is therefore respected without claiming regeneration.
+
+The word has 20*535=10700 contacts and five supplied transpositions.
+Its exact inverse reverses the entire mixed word, replaces each contact by
+four contacts, and uses each transposition as its own inverse. It has 42800
+contacts and five transpositions, and restores every one of the 56 initial
+coordinates. This inverse removes the records; it is distinct from the
+record-preserving forward reuse just proved.
+
+An exhaustive finite audit of all 100 preparations consequently has 4000
+complete R boundaries, 2000 complete S boundaries, 100 complete reloads,
+600 designated events and 100 full inverse restorations. Forward and inverse
+trajectories use 5350000 contacts and 1000 swaps. Source-orbit setup and local
+identity calculations are outside these trajectory counters. These counts
+describe the finite witness; the displayed algebra proves its assertions
+without relying on a successful execution marker.
+
+For completeness, the two R onsets in S have contact ordinals 1 and 270;
+their completions are 261 and 530. The first two acquisition onsets are
+(1,805) for s=0 and (270,4281) for s=1, with completions (261,1065) and
+(530,4541). The respective within-stage gaps are 804 and 4011 contacts.
+The second stage adds 5350 to contact-only ordinals, or 5355 when the five
+transpositions count as elementary operations. These are program ordinals,
+not a physical time calibration.
+
+This complete construction supplies a positive witness for the finite L1
+common-apparatus question. Its conclusion includes every admitted input and
+occupied continuation of the declared two-experiment horizon. It supplies no
+third experiment on the spent endpoint, arbitrary external input stream,
+thermal or raw-input preparation, contact-only swap compiler, autonomous
+unbounded renewal, minimum resource account, occurrence law or cross-layer
+transfer. QDD-INSTRUMENT-APPARATUS and QUADRATIC-MEMORY-NATIVE-CONTACT retain
+their separate unresolved physical and native contracts.
+
+### Copying a positional bank into a fresh bank
+
+**RELATIVE-CONTACT-POSITIONAL-BANK-COPY [T].** at L1 on O=Z[j], rho=j^2 and b=1+rho^2, the supplied total integral relative contact admits one fixed 60-contact word on two disjoint ten-slot positional banks taking (M[p],M_empty) to (M[p],M[p]) for every p in Z/5; the source is restored at each 12-contact module boundary, exactly 41 contacts are admitted, the complete two-bank account is 60 and sum zero, and the literal 240-contact inverse restores the complete state; the target must be fresh, source constancy inside a module and arbitrary occupied-target writes are not asserted, and neither minimum length nor physical copying is claimed
+
+Use the ring and total contact of RELATIVE-CONTACT-INTEGRAL-LAW. Write
+O=Z[j], where j is a primitive fifth root, and set
+
+```text
+rho=j^2,  u_e=1-rho^e,  w_e=1+rho^e,
+u=u_1,    w=w_1,        b=w_2=1+rho^2.
+```
+
+The subscripts are modulo five; u_0=0 and w_0=2. A word below acts in
+chronological order from left to right. Exponents denote literal repetition.
+Addresses are zero based except for the explicitly numbered six-place
+module. The contact's own admission rule is the only state-dependent choice:
+
+```text
+C(x,y)=(x,y)                                      if x-y is not in 2O,
+C(x,y)=(s+rho*d,s-rho*d),
+    s=(x+y)/2, d=(x-y)/2                         if x-y is in 2O.
+```
+
+On the admitted branch s,d lie in O and the output difference is 2*rho*d.
+Admission therefore persists. Since rho^5=1, C^5=id and C^-1=C^4 on the
+whole pair carrier, including the fixed refused and diagonal pairs. This
+is a total bijection; the formula on one branch is not a claim of global
+O-linearity.
+
+For z=sum(i=0..3) z_i*j^i define
+
+```text
+Q(z)=(5*sum_i z_i^2-(sum_i z_i)^2)/2,
+epsilon(z)=sum_i z_i mod 5,
+E(x)=sum_i Q(x_i),  Sigma(x)=sum_i x_i,
+H(x)=sum_i x_i*conjugate(x_i).
+```
+
+The half-trace identity can be seen directly. The field trace of j^m is
+4 for m=0 and -1 for nonzero m between -3 and 3. Thus
+
+```text
+Tr(z*conjugate(z))
+  =4*sum_i z_i^2-sum_(i!=h) z_i*z_h
+  =5*sum_i z_i^2-(sum_i z_i)^2,
+E(x)=Tr(H(x))/2.
+```
+
+The numerator is even, and (sum_i z_i)^2<=4*sum_i z_i^2 proves positive
+definiteness. The admitted formula preserves the pair sum, and
+rho*conjugate(rho)=1 gives
+
+```text
+(s+rho*d)*conjugate(s+rho*d)+(s-rho*d)*conjugate(s-rho*d)
+  =2*s*conjugate(s)+2*d*conjugate(d).
+```
+
+Consequently every contact preserves Sigma,H,E. The residue map is the
+ring homomorphism j->1 into F5. The changes to the two labelled entries
+are multiples of rho-1, so both labelled residues are fixed. A supplied
+whole-slot SWAP is a separate involution preserving Sigma,H,E; generally
+it transports the two residues with their entries.
+
+The fresh bank and five present records are
+
+```text
+M_empty=(-b,b)^5,
+M[p]=M_empty with pair p replaced by (-rho*b,rho*b), p in Z/5.
+```
+
+The pairs are labelled and ordered negative entry first. Since
+b=(0,-1,-1,-1) in the j basis, Q(b)=3. Multiplication by rho preserves
+Q and H, so each fresh or valid recorded bank has account 30, sum zero,
+and labelled residue vector (3,2)^5. The five M[p] are distinct from each
+other and from M_empty: b is nonzero and rho*b differs from b. In particular
+M[0] is a present zero-labelled record, not an empty bank.
+
+To decide the contacts used in copying, reduce modulo two. The polynomial
+Phi_5(X)=X^4+X^3+X^2+X+1 has no root in F2 and is not divisible by
+X^2+X+1, the only irreducible quadratic over F2. It is therefore irreducible,
+O/2O is F16, and the image of rho has order five. In particular b=1+rho^2
+is nonzero there. For two oppositely signed entries
+(-rho^P*b,+rho^Q*b), admission is equivalent to P=Q modulo five: their
+difference vanishes modulo two exactly when rho^P=rho^Q. An admitted pair
+has center zero and both phases increase by one. The same phase rule holds
+when the positive entry is first.
+
+Number six local places 1 through 6. Places 1,2 are source pair p, places
+3,4 are source pair q, and places 5,6 are fresh target pair p. Define
+
+```text
+A=C(1,4), B=C(4,5), D=C(1,6),
+W6=A^2 B A^3 D^4 A D
+  =C14 C14 C45 C14 C14 C14 C16 C16 C16 C16 C14 C16.
+```
+
+Only places 1,4,5,6 are touched. Denote their phases by (P,Q,R,S); their
+signs are (-,+,-,+). A increments P,Q exactly when they are equal, B
+increments Q,R exactly when equal, and D increments P,S exactly when equal.
+The complete block calculation is therefore
+
+| Initial phases | A^2 | B | A^3 | D^4 | A | D |
+| --- | --- | --- | --- | --- | --- | --- |
+| (0,0,0,0) | (2,2,0,0) | (2,2,0,0) | (0,0,0,0) | (4,0,0,4) | (4,0,0,4) | (0,0,0,0) |
+| (1,0,0,0) | (1,0,0,0) | (1,1,1,0) | (4,4,1,0) | (4,4,1,0) | (0,0,1,0) | (1,0,1,1) |
+| (0,1,0,0) | (0,1,0,0) | (0,1,0,0) | (0,1,0,0) | (4,1,0,4) | (4,1,0,4) | (0,1,0,0) |
+
+The rows have respectively 10,6,5 admitted contacts. A source mark at p is
+copied; a source mark at q or elsewhere leaves the target pair fresh.
+Both complete source pairs are restored because places 2,3 never move and
+places 1,4 recover their original phases. Restoration is at the twelve-contact
+boundary; intermediate source pairs need not have the balanced pair form.
+
+The fresh-target premise matters. For example the same rule sends the
+occupied-target phases (0,0,1,1), successively at the displayed block
+boundaries, to
+
+```text
+(2,2,1,1), (2,2,1,1), (0,0,1,1),
+(0,0,1,1), (1,1,1,1), (2,1,1,2).
+```
+
+Thus the positive local identity does not extend to arbitrary occupied
+targets. This counterexample is not a classification of all occupied words.
+
+For disjoint ten-slot source and target banks with bases a,d, concatenate
+W6 for p=0,1,2,3,4, always taking q=p+1 modulo five and relabelling
+
+```text
+(1,2,3,4,5,6)
+  -> (a+2p,a+2p+1,a+2q,a+2q+1,d+2p,d+2p+1).
+```
+
+Call this fixed word K(a,d). At module p an input M[r] lies in exactly one
+of the three rows: r=p, r=q, or neither. Since the whole source bank is
+restored at each module boundary, the same classification applies at the
+next module. The current target pair is fresh because only earlier target
+pairs have been addressed. No completed target pair is touched again.
+Induction over the five modules proves
+
+```text
+K(a,d)(M[r],M_empty)=(M[r],M[r])  for every r in Z/5.
+```
+
+Exactly one module has r=p and one has r=q. Hence 6+5+3*10=41 of the
+60 contacts are admitted for each code input. A constant count is not a
+claim that every input has the same full admission trace. The complete
+two-bank account is 60 and sum zero; the primitive conservation identities
+hold throughout. The source is restored at all five module boundaries.
+
+Reverse the sixty edges and replace each contact by four copies of itself.
+This 240-contact literal inverse restores every complete input on the whole
+carrier, and in particular returns (M[r],M[r]) to (M[r],M_empty). The
+construction does not require K itself to be an involution, and its word
+length is an explicit upper bound, not an optimum.
+
+### A four-place obstruction to literal copying
+
+**RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION [T].** at L1 for any nonzero b in O=Z[j] with rho=j^2, no fixed word of the supplied total relative contacts on four places satisfies both G(E)=E and G(A)=T for E=(-b,b,-b,b), A=(-rho*b,rho*b,-b,b) and T=rho*E; guard-preserving global rho equivariance and bijectivity give the obstruction; the carrier has no additional changing reference, and a different output code or the twenty-place positional-bank copier is outside the obstruction
+
+Here b may be any nonzero element of O, not only the bank parameter above.
+Consider exactly four places, with no additional changing reference, and
+set
+
+```text
+E=(-b,b,-b,b),
+A=(-rho*b,rho*b,-b,b),
+T=(-rho*b,rho*b,-rho*b,rho*b)=rho*E.
+```
+
+Multiplication of every coordinate by rho commutes with every total
+contact. Indeed rho is an integral unit, so x-y lies in 2O if and only if
+rho*(x-y) does; admission and refusal agree before and after multiplication.
+The admitted formula commutes with that multiplication and so does the
+refused identity. Every fixed contact word G is therefore rho-equivariant
+and bijective on the complete four-place carrier.
+
+If G(E)=E, equivariance implies G(T)=rho*G(E)=T. If also G(A)=T,
+injectivity gives A=T. Their last two coordinates would give rho*b=b,
+impossible in the domain O when b is nonzero and rho!=1. This proves the
+obstruction without an orbit search. For b=0 the three states coincide,
+which is why the nonzero hypothesis is necessary.
+
+This statement requires the exact two endpoint conditions, four-place
+carrier and contact alphabet. It does not exclude a different output code,
+an added reference pair, or the twenty-place copier above. In that copier
+the unchanged neighbouring pairs belong to the explicitly funded source
+bank, and the admitted complete prepared family is not closed under global
+multiplication by rho. The four-place contradiction therefore does not
+apply to it. This is distinct from a four-auxiliary-slot preparation minimum.
+
+### Finite reuse of one work core with retained archives
+
+**RELATIVE-CONTACT-FINITE-WORKBANK-REUSE [T].** at L1, for every k>=1 fixed in advance, one supplied contact/SWAP word P_k on 26+25k slots accepts all 10^k tuples from ({0,1} times Z/5)^k with one common preparation of the 26+20k auxiliary slots; each cycle writes two records, copies them to fresh archive banks and reverses the complete 31-slot work core, restoring the same work-bank addresses and the current prepared source and clock; fixed swaps load prequeued inputs and retain all actual earlier inputs, the 2k archive banks alone decode the ordered input tuple, and each completed archive is untouched through the remainder of the forward P_k; total account is 68+74k, auxiliary account 68+60k and ring sum 2(k+1); P_k has 26870k contacts and 5(k-1) swaps, and its unreduced inverse has 107480k contacts and 5(k-1) swaps and restores every initial coordinate while removing the records; B five-valued marked banks alone require 5^B>=10^k, so 2k is a construction upper bound and not a storage minimum; no one finite carrier retaining unlimited history, occupied-archive regeneration, post-start external loading, autonomous schedule, contact-only swap compilation, native-U realization or physical interpretation follows
+
+Fix k>=1 before selecting the input values. The quantifiers are: for each
+such finite k there is its complete carrier and fixed program P_k, and the
+same program satisfies the endpoint identity for every tuple in
+({0,1} times Z/5)^k. No one finite carrier or word is being used for all k.
+
+Use the canonical read construction in
+RELATIVE-CONTACT-COMMON-APPARATUS-OPEN, restricted to its first 31 slots.
+Its whole ready core for s in {0,1}, r in Z/5 is
+
+```text
+I(s,r)=(Y_s,X_r,0,u,0,0,w,0,M_empty,M_empty),
+Y_0=(0,2,0),
+Y_e=(u_e,w_e,0), Y_(4+e)=(0,w_e,u_e), e=1,2,3,4,
+X_r=(rho^r*w,-rho^r*w).
+```
+
+The source index is modulo nine. Source slots are 0..2, clock slots 3..4,
+controls 5..10 are (g,A,B,skip,h,t)=(0,u,0,0,w,0), and the two work banks
+are 11..20 and 21..30. The canonical definition specifies every contact of
+its read R and tick
+
+```text
+F=C(0,1) C(1,2),   F^-1=C(1,2)^4 C(0,1)^4,
+T_clock=C(3,4),   S=R F^-1 R F F T_clock,   W=S^10.
+```
+
+The canonical local read proof applies to the actual occupied states here:
+R restores its presented source, clock, marker, helper and sampling gate;
+away from source phase zero it preserves the selector and both valid banks;
+on phase zero it writes only the selected fresh bank or skips both banks,
+and cycles the selector A->B->skip->A. It permits an occupied bank only in
+the inactive or skip branch, not an arbitrary active overwrite.
+
+For clarity, two algebraic details used by that construction are explicit
+here. Modulo two, b=w^2 and
+
+```text
+w^3=(1+rho)(1+rho^2)=rho^4.
+```
+
+If w=rho^a, then 3a=4 modulo five forces a=3. Together with Phi_5(rho)=0,
+1+rho=rho^3 would imply rho^2=rho^4, contradicting order five. Thus
+w is not in the subgroup generated by rho. If the nonzero cosets
+<rho>*w and <rho>*b met, b=w^2 would imply w is in that subgroup.
+Their disjointness proves the inactive clock-memory refusals used in the
+canonical read; it supplies no active occupied-bank overwrite.
+
+Also, with the canonical A_0=C(5,9), B_c=C(c,9), the helper word is
+E_c=A_0 B_c A_0^4 B_c^4. Reversing its individual contacts gives the
+unreduced inverse B_c^16 A_0^16 B_c^4 A_0^4. By the global identity
+C^5=id this equals B_c A_0 B_c^4 A_0^4, the exact ten-contact inverse
+used by R. The sampling inverse is likewise C(9,10)^4. These equalities
+hold on the complete carrier, so they may act on the actual occupied
+checkpoint without an assumed reset.
+
+The block-defined R has 261 contacts and S has
+261+8+261+2+2+1=535. Its expansion is the mathematically defined word.
+Identification with `probes/P-RELATIVE-CONTACT-WORKBANK-REUSE-1/WORD535.txt`
+is a separate finite comparison of all 535 ordered edges, using the
+stated one-based to zero-based conversion. That exact list identification
+is checked by the frozen probe and separately reported by the review
+comparison. Byte identity of a fixture is not inferred from a group
+identity, and the proof below uses the canonical block-defined word.
+
+The source and clock satisfy F(Y_a)=Y_(a+1) and
+T_clock(X_r)=X_(r+1). At step t of S^10, starting from (s,r), their phases
+are (s+t modulo 9,r+t modulo 5). The first R is active exactly when
+s+t=0 modulo nine; the second, after F^-1, exactly when s+t-1=0 modulo
+nine. Solving these equations for 0<=t<=9 gives all events:
+
+| Initial s | Events in chronological order | Selected actions |
+| --- | --- | --- |
+| 0 | (0,first), (1,second), (9,first) | A, B, skip |
+| 1 | (0,second), (8,first), (9,second) | A, B, skip |
+
+Both reads see clock phase r+t. With Delta_0=1 and Delta_1=8, the first
+two events write -r and -r-Delta_s modulo five; the third skips. All
+selected writes have fresh targets. The controls are ready after the three
+selector events. Consequently the complete 5350-contact stage identity is
+
+```text
+W I(s,r)=
+  (Y_(s+10),X_r,0,u,0,0,w,0,M[-r],M[-r-Delta_s]).
+```
+
+Within this forward stage the written work records persist at subsequent
+complete R and S boundaries, not necessarily inside their constituent
+contacts. The unreduced literal W^-1 has 21400 contacts and restores
+I(s,r) from this complete occupied output.
+
+#### One cycle restores the same work-bank addresses
+
+Take two disjoint fresh archive banks with bases a,d outside slots 0..30.
+Define the chronological word
+
+```text
+U(a,d)=W K(11,a) K(21,d) W^-1.
+```
+
+It has 5350+60+60+21400=26870 contacts. W first creates its actual two
+work records. The two K words copy these records to their fresh targets
+and restore both work banks. They touch neither source, clock nor controls.
+Thus the complete 31-slot core immediately before W^-1 is exactly W's
+complete output, not just a state with equal record labels. The inverse
+therefore restores every core coordinate. Its support excludes both
+archives. This proves the full identity
+
+```text
+U(a,d)(I(s,r),M_empty,M_empty)
+  =(I(s,r),M[-r],M[-r-Delta_s]).
+```
+
+The same work addresses 11..30 are fresh again, and the source, clock and
+controls return to the original preparation. No coordinate is assigned an
+expected endpoint by an external reset. The record copies remain in two
+separate counted banks. Every other coordinate is untouched: the identity
+extends with an arbitrary O-valued complement, including all older archives
+and queued or parked inputs. It does not make its two used archives fresh.
+
+#### Induction on the actual occupied carrier
+
+For k inputs (s_j,r_j), j=0..k-1, allocate
+
+```text
+core:                    0..30;
+archive A_j:             base 31+20j, j=0..k-1;
+archive B_j:             base 41+20j, j=0..k-1;
+queued input j:          base 31+20k+5(j-1), j=1..k-1.
+```
+
+Each queued input stores the five coordinates (Y_(s_j),X_(r_j)). The core
+starts at I(s_0,r_0), every archive starts at M_empty, and the controls and
+both work banks have the same initial values for every input tuple. Put
+U_j=U(31+20j,41+20j). For j=1..k-1 let Pi_j be the five fixed whole-slot
+transpositions exchanging core slots 0..4 with the five corresponding
+coordinates of queued input j. The common program is
+
+```text
+P_k=U_0 Pi_1 U_1 Pi_2 U_2 ... Pi_(k-1) U_(k-1).
+```
+
+All later inputs are present before execution. Their values are independent
+choices from the full Cartesian domain; no probability law or post-start
+loading is assumed. The alphabet and address schedule are supplied and do
+not branch on those values.
+
+Inductively, immediately after U_j the complete state has:
+
+- core I(s_j,r_j), including ready controls and both fresh work banks;
+- archives A_i,B_i equal to M[-r_i],M[-r_i-Delta_(s_i)] for i<=j;
+- every archive for i>j still fresh;
+- input compartment i, for 1<=i<=j, holding the actual restored earlier
+  input (Y_(s_(i-1)),X_(r_(i-1)));
+- input compartment i>j still holding its original queued input.
+
+The first cycle proves the base case. Pi_(j+1) exchanges only the current
+five input coordinates with the next untouched input. It leaves the ready
+controls, fresh work banks and all archives unchanged. The following U
+therefore receives exactly its proved ready core and two fresh target
+banks. All older occupied data belong to its untouched complement. The
+cycle identity proves the next induction step on that actual used state.
+At no step is a used auxiliary state replaced by the initial one.
+
+The final core is I(s_(k-1),r_(k-1)); all k archive pairs hold the displayed
+records; input compartment i holds the restored input indexed i-1. This
+accounts for every coordinate. During the forward P_k, after an archive's
+own copy word has completed, no later primitive addresses it. Its values
+and original addresses are literally retained through the remainder of
+that forward program. The work banks are different: their source roles
+are restored only at copy-module boundaries and W^-1 intentionally erases
+their records.
+
+There are 26870k contacts and 5(k-1) supplied swaps in P_k. Reverse the
+whole mixed word, replace each contact by C^4 and keep each swap as its
+own inverse. The resulting unreduced inverse has 107480k contacts and
+5(k-1) swaps and restores every initial coordinate, including all fresh
+archives. It intentionally removes the retained records; forward retention
+is not asserted during inverse execution. Counts are word lengths, not
+optimal lengths or calibrated physical durations.
+
+#### Complete accounts and an archive-only reader
+
+The source has account 8 and sum 2, the clock account 6 and sum zero,
+the six controls account Q(u)+Q(w)=8 and sum u+w=2, and both work banks
+account 60 and sum zero. Thus I(s,r) has account 82 and sum 4. The complete
+initial preparation has
+
+```text
+slots = 31+20k+5(k-1) = 26+25k,
+E_total = 82+60k+14(k-1) = 68+74k,
+Sigma_total = 4+2(k-1) = 2(k+1).
+```
+
+The 5k designated input addresses contribute 14k. The remaining 26+20k
+auxiliary addresses have one common initial state of account 68+60k.
+One source coordinate in each initially prepared five-slot input is zero,
+so only four coordinate values per input vary. Allocated input addresses
+and variable coordinate values are different counts. All parked inputs
+and used archives remain included in E,H,Sigma throughout.
+
+The source residue vector is (0,2,0), the clock's is (2,3), the controls'
+is (0,0,0,0,2,0), and each bank's is (3,2)^5. Consequently each reload swap
+exchanges equal corresponding residues on this family. Besides contact
+conservation, even the supplied swaps therefore preserve the full labelled
+residue vector here. These are complete initial stock accounts, not energy
+consumed by execution.
+
+A reader is given only the current coordinates of the 2k archive banks.
+For each ten-coordinate bank it checks equality with the five exact M[p]
+patterns and rejects M_empty or any other pattern. If one pair of present
+labels is (a,a'), put d=a-a' modulo five and decode
+
+```text
+(s,r)=(0,-a mod 5) if d=1,
+(s,r)=(1,-a mod 5) if d=3,
+INVALID otherwise.
+```
+
+On the proved outputs d=Delta_s, with Delta_0=1 and Delta_1=3 modulo five,
+so this recovers (s_j,r_j) for every archive pair. It recovers the ordered
+k-input tuple using no initial label, parked input, current source, counter
+or saved trajectory. The archive output map is therefore injective on all
+10^k inputs.
+
+If a different reader is restricted to B marked five-valued banks and no
+other readable datum or empty-state option, injectivity necessarily gives
+5^B>=10^k. For k=3, four banks offer only 625 states, so at least five are
+needed in that restricted code. This construction uses six. Its 2k-bank
+allocation is an explicit upper bound, not a storage optimum and not an
+obstruction for different alphabets or output codes.
+
+The k=3 instance has 101 slots, total account 290, auxiliary account 248,
+sum 8, six archive banks, 80610 forward contacts and 10 swaps; its inverse
+has 322440 contacts and 10 swaps. Exhaustive execution of all 1000 input
+triples audits this finite instance with 403050000 contact applications and
+20000 swaps across forward and inverse trajectories. The universal finite-k
+claim follows from the preceding occupied-state induction, not from that
+finite corpus.
+
+After cycle U_j the remaining fresh archive stock is 2(k-j-1). This is a
+property of the declared forward prefix, not a monotone quantity under all
+further contact words or under the inverse. The construction restores its
+work banks while spending fresh archive capacity. It does not regenerate
+occupied retained archives, retain unbounded independent history in one
+finite carrier, synthesize the admitted inputs, choose a schedule
+autonomously, compile the supplied swaps into contacts, or realize native U
+or a physical apparatus. The relative-contact and native receiver/carry
+carriers retain their separate contracts.
+
+### First-tick transfer and the current trace boundary
+
+**U-FIRST-TICK-AFFINE-TRACE-TRANSFER [T].** At L1, use the unchanged
+native law on `N_0 x F5^6`, with coordinates `x=(A,B,C,D,q,r)`,
+`z(x)=A+B+C+D+q+r`, and
+
+$$
+U(n,x)=(n+1,g_{z(x)+2\theta_n}(x)),\qquad
+\theta_n=\operatorname{popcount}(n)\bmod 2.
+$$
+
+The ordered generators are `(g_0,g_1,g_2,g_3,g_4)=(a,b,c,d,e)`:
+
+```text
+a(x)=(B,A,D,C,q,r),
+b(x)=(-C,-D,-A,-B,-q,-r),
+c(x)=(2-C,1-D+r,2-A,1-B-r,1-q,-r),
+d(x)=(2-A,1-B,3-C,4-D,1-q,1-r),
+e(x)=(2-A,1-B,3-C,4-D,2-q,1-r).
+```
+
+All checkpoint arithmetic is in F5. Start at counter zero with
+`(A,B,C,D,0,1)`, put `s=A+B+C+D+1`, and admit exactly `s!=0`.
+There are 500 admitted preparations, 125 for each nonzero s. The actual
+first receiver satisfies `s=q_1+r_1+2`. This transfer is unique among
+scalar affine maps of the current receiver on the four admitted rows.
+It needs neither the original pistons nor a separately loaded source sum.
+
+**First-tick proof.** Since `theta_0=0`, the actual selected generator is
+g_s. Substitution in the displayed generators gives the complete table:
+
+| s | Generator | `(q_1,r_1)` | `q_1+r_1+2` |
+| ---: | :---: | :---: | ---: |
+| 0 | a | `(0,1)` | 3 |
+| 1 | b | `(0,4)` | 1 |
+| 2 | c | `(1,4)` | 2 |
+| 3 | d | `(1,0)` | 3 |
+| 4 | e | `(2,0)` | 4 |
+
+For each fixed s, three pistons are arbitrary and the fourth is then
+unique, proving the multiplicities. The five receiver pairs are distinct.
+The excluded sheet `s=0` is the 125-input sheet with piston sum 4; the
+zero piston tuple instead has `s=1` and is admitted. Exclusion of the zero
+trace is therefore a restriction of this transfer, not an absence rule or
+a prohibition of zero input.
+
+If `alpha*q+beta*r+gamma` takes the admitted rows to s, subtracting the
+s=1 row from the s=2 row gives `alpha=1`. Subtracting the s=2 row from the
+s=3 row gives `beta=1`, because `0-4=1` in F5. The first admitted row, s=1, then gives
+`gamma=2`, and the fourth row satisfies this choice. This proves the
+claimed uniqueness only in the affine scalar class. A different reader
+can distinguish all five rows, including the excluded one.
+
+Let `chi` be the quadratic character, with
+`chi(0)=0`, `chi(1)=chi(4)=1`, and `chi(2)=chi(3)=-1`.
+Define the receiver convention `R_q(0)=R_q(2)=1`, `R_q(1)=-1`.
+Its values elsewhere are outside this contract. The table proves
+`R_q(q_1)=chi(s)` on the admitted rows. Omitting the transfer offset
+instead supplies `s-2`, a wrong marked digit on every admitted row.
+Nevertheless `chi(s-2)=chi(s)` holds for s=1 and fails for s=2,3,4.
+Thus a sign-only check would miss the wrong mark on 125 preparations.
+
+**Current-trace obstruction.** The same generators send the total trace
+z to `z,-z,2-z,2-z,3-z`, respectively, on the complete checkpoint space.
+Thus for a common supplied bit t the map `T_t(x)=g_(z(x)+2t)(x)` has a
+closed trace update. In input order `0,1,2,3,4`, the two trace maps are
+
+```text
+tau_0=(0,4,0,4,4),
+tau_1=(2,1,1,3,1).
+```
+
+Each has image size two on `{1,2,3,4}`. Every later common bit applies
+another function to that image and cannot increase its size. Consequently
+no nonempty fixed binary clock word makes the actual current trace equal
+the four-valued permutation `s -> 2s` on all admitted initial sheets. The
+origin-zero native driver is included in this common-word class. This
+obstruction concerns the current trace port only. It does not concern
+the full receiver, which already distinguishes five first-tick rows,
+a saved history, added registers, or the supplied affine transfer.
+
+### Marked carry pairing and a reversible register circuit
+
+**J-MARKED-CARRY-MIRROR [T].** At L1, let `O=Z[j]`,
+`Phi_5(j)=0`, `lambda=1-j`, and `J=1+j^2`. Multiplication by J and its
+inverse on `O/(lambda^2)` gives two mutually inverse digit maps
+
+$$
+F(\ell,h)=(2\ell,3\ell+2h),\qquad
+I(\ell,h)=(3\ell,3\ell+3h).
+$$
+
+On four registers `(q,r,h,k)` in F5, let
+`S(q,r,h,k)=(q+r+2,r,h,k)`, let `F_hat` apply F to `(q,h)` and leave
+r,k fixed, and let `P` swap h and k. Composition in the following
+formula is right-first. Set `M=F_hat o S`. Then
+
+$$
+L=M^{-1}\circ P\circ M,
+\qquad
+L(q,r,h,k)=(q,r,b+3k,3b+2h),\qquad b=q+r+2,
+$$
+
+and `L^2=id` on all 625 states, including occupied h and k. With `h=k=0`,
+L restores q,r and retains the two carry residues `h=b`, `k=3b`.
+For the first-tick receiver above, b is the actual recovered s. The
+primary pistons are untouched, so this circuit restores its complete
+six-coordinate post-tick checkpoint.
+
+**Digit and inverse proof.** The exact identities are
+
+$$
+J^{-1}=-j-j^2,\qquad
+J=2-2\lambda+\lambda^2,\qquad
+J^{-1}=-2+3\lambda-\lambda^2.
+$$
+
+The first follows from
+`(1+j^2)(-j-j^2)=-(j+j^2+j^3+j^4)=1`; the other two follow by
+substituting `j=1-lambda`. Evaluation at j=1 identifies `O/(lambda)`
+with F5. Also
+
+$$
+5=\prod_{t=1}^{4}(1-j^t)\in(\lambda^4),
+\qquad 5/\lambda\in(\lambda^3),
+$$
+
+because each factor is divisible by lambda. Substitution of j in an
+integral polynomial shows that every class modulo lambda squared is
+`lo+hi*lambda` for two F5 digits. For uniqueness, reduction modulo
+lambda first fixes lo modulo 5. A difference of its integer lifts is
+a multiple of 5 and hence vanishes modulo lambda squared. Cancellation
+of lambda in the remaining difference fixes hi modulo 5. This proves
+the two-digit representation. Reducing the exact expressions for J and
+its inverse now gives F and I; either composition has low `6lo=lo` and
+high `15lo+6hi=hi` in F5.
+
+The chronological circuit is `S`, then `F_hat`, then `P`, then
+`F_hat^-1`, then `S^-1`. Starting from arbitrary h,k, its intermediate
+low/high/archive triples are
+
+```text
+(b,h,k) -> (2b,3b+2h,k) -> (2b,k,3b+2h)
+        -> (b,b+3k,3b+2h).
+```
+
+The final inverse shear restores q. Substitution into the displayed L
+formula gives new high `b+3(3b+2h)=h` and new archive
+`3b+2(b+3k)=k` on a second application. This proves the complete inverse
+without a blank-register assumption. With blank h,k, the inverse
+multiplier receives the actual forward low `a=2b`, after its actual
+forward high `v=3b` has moved into the archive. It receives `(a,0)`,
+not the complete forward pair `(a,v)`. Applying I to that complete
+forward pair instead gives `(b,0)` and erases the high digit. Applying
+L twice likewise removes the two records. Neither operation restores
+all resources while retaining those records elsewhere for free.
+
+**Exact integral pairing.** Fix one integer digit section, either
+`D={0,1,2,3,4}` or `D={-2,-1,0,1,2}`. For `b in D`, let a be the
+representative of `2b mod5` in the same D and set
+
+$$
+C=(Jb-a)/\lambda.
+$$
+
+Its numerator has zero residue modulo lambda, so C lies in O. The
+inverse multiplier at this actual a returns the same representative b,
+since `3a=b mod5`. Its integral carry therefore satisfies the exact,
+untruncated identity
+
+$$
+C_{\rm pair}=(J^{-1}a-b)/\lambda=-J^{-1}C.
+$$
+
+The integer term `(2b-a)/lambda` lies in `(lambda^3)`. The exact
+expansion of J thus gives `v=res(C)=3b`. Since `res(-J^-1)=2`, the
+paired residue is `w=res(C_pair)=2v=b`. These identities agree with
+the two simultaneous digit registers above, for either section.
+
+For every nonzero representative b in the chosen section, the
+convention-free character relations are
+
+$$
+\chi(v)=-\chi(b),\qquad
+\chi(w)=\chi(b),\qquad
+\chi(a)=-\chi(b).
+$$
+
+They use specifically `chi(2)=chi(3)=-1` in F5. Marked inverse pairing
+alone does not force a character reversal for an arbitrary unit. With
+the declared carry-sign convention `-chi(res C)`, the forward and paired
+readings become `chi(b)` and `-chi(b)`. Their comparison with the chosen
+native q-reader is a definitional sign convention. It is not an
+independent confirmation of the Legendre-symbol identity.
+
+The same-input control is different: if J inverse receives unchanged b
+with blank carry, its residue is again 3b, so its first-carry character
+agrees with the forward one. This control, the complete inverse on
+`(a,v)`, and the marked pairing on `(a,0)` are three different inputs.
+For b=0 all the stated marked carries and digit records are zero.
+
+**A separately initialized second native observation.** Prepare another
+native device at its own counter zero with fixed checkpoint
+`(4,0,0,0,0,1)`. A reversible SUM adds the actual live a to its first
+piston and leaves a unchanged. Its trace is now a, so one genuine origin
+tick selects g_a. Direct substitution gives the complete secondary
+outputs:
+
+| a | Secondary output after its origin tick |
+| ---: | :--- |
+| 1 | `(0,0,0,0,0,4)` |
+| 2 | `(2,2,1,0,1,4)` |
+| 3 | `(0,1,3,4,1,0)` |
+| 4 | `(4,1,3,4,2,0)` |
+
+Its same q-reader equals `chi(a)=-chi(b)` when `a=2b` is nonzero.
+This is another use of `chi(2)=-1`, not a second independent sign
+mechanism. The ready device is source independent and its later change
+comes from the declared SUM on an existing wire. The extra receiver,
+write and enabled first-step origin are nevertheless supplied operations.
+The construction does not invert the native tick or derive this wiring
+from unchanged U. Two forward low-digit multiplications would give
+`4b=-b`, rather than the marked return b supplied by I.
+
+### The next carry coefficient distinguishes the fixed multipliers
+
+**J-FIXED-INPUT-CARRY-PRECISION [T].** Compare J and J inverse at the
+same tick, with zero initial carry and the same input representative
+`b in D`, where D is either digit section just specified. Assume
+`b mod5!=0`, equivalently b is a nonzero member of D. Let each operation
+choose its own output representative `a_+` or `a_-` in that same D.
+For their first integral carries, the coefficients modulo lambda squared
+are
+
+| Multiplier | Output residue | `v=res(C)` | `u=res((C-v_lift)/lambda)` | `u/v` |
+| --- | --- | --- | --- | --- |
+| J | `2b` | `3b` | `b` | 2 |
+| J inverse | `3b` | `3b` | `-b` | 3 |
+
+One fixed reader of `(v,u)`, without b, output letter, multiplier label
+or clock direction as arguments, distinguishes the two multipliers.
+Modulo lambda alone their carry observations coincide for every fixed b,
+so no reader of that residue and the common tick can distinguish them.
+This is the minimum among ideal-power precisions of this first-carry
+observation on this declared input family.
+
+**Proof.** The exact unit expansions above give
+
+$$
+C_+=(2b-a_+)/\lambda-2b+b\lambda,
+\qquad
+C_-=(-2b-a_-)/\lambda+3b-b\lambda.
+$$
+
+The integer numerators in the first terms are multiples of 5. Their
+quotients by lambda lie in `(lambda^3)`, so modulo lambda squared the
+two carries are `3b+b*lambda` and `3b-b*lambda`. To read u from either
+integral carry, subtract any integer lift of its residue v, divide by
+lambda, and reduce modulo lambda. Changing that lift by `5m` changes
+the quotient by `5m/lambda`, which has zero residue. Thus the reading is
+well defined and independent of the two digit-lift conventions.
+
+For the admitted b, `v=3b` is nonzero. Division gives slopes `1/3=2`
+and `-1/3=3`, which are distinct. The two sets of carry observations
+at this precision are therefore disjoint even when b is unknown to the
+reader. At the preceding precision the observations are identical for
+each fixed b, proving the stated lower bound. The slopes are properties
+of this pair of multipliers; the reader identifies their labels and does
+not recognize inversion in general.
+
+For b=0, both output representatives and both integral carries are zero;
+no precision of this carry distinguishes the operations, and u/v is
+undefined. A nonzero integer divisible by 5 is not an admitted nonzero
+digit representative. No claim is made for arbitrary non-integer sources
+or nonzero initial carry.
+
+The two-digit product circuit records the output letter a and v, not u.
+The carry-only restriction is essential: its own stored pair (a,v) is
+(2b,3b) for J and (3b,3b) for J inverse, so the fixed reader v/a gives
+4 and 1, respectively, for every admitted b. It needs neither the input
+letter nor a clock-direction label. Thus this device can distinguish the
+multipliers in F5 when both stored digits may be read. If both original
+and output letters are available, their ratio also distinguishes them.
+These are different observation contracts. Obtaining the next coefficient
+from the carry alone requires its lambda-squared precision, supplied by
+the product modulo lambda cubed or the integral carry. This coefficient
+theorem supplies neither a new output of the compiled device nor a
+physical time-direction reading.
+
+### Finite compiled receiver and carry circuit
+
+**U-CARRY-MIRROR-FINITE-CIRCUIT [C].** The public evidence bundle is
+`probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/RESULT.md`, resolved to that
+complete probe directory. Its byte-identical local compiler
+`arithmetic_compiler.py` has 13728 bytes and SHA-256
+`0e3668a7e664f572e6c6c34c49bf454e8d931e6dd05b8f2ebaf3c1b0cd761027`.
+Together with `compiled_audit.py`, `verify.py` and
+`RUNTIME_SOURCES.json`, this fixes the executable witness. The
+preregistration, exact expected output, run record and result complete
+its evidence. No wider compiler claim or another source branch is
+adopted by this bounded use of the hash-bound copy.
+
+The word is the primitive expansion of `multiplier_blocks(2,app)` with
+`app=layout(2)` from that compiler. Its six discrete basis-register
+primitives have distinct control and target wires and the following
+semantics in F5, with all unmentioned registers unchanged:
+
+| Primitive | Target update |
+| --- | --- |
+| SUM | `t <- t+c*x` |
+| EQ | `t <- t+c*[x=d]` |
+| MUL | `t <- t+c*x*y` |
+| SHIFT | `t <- t+c` |
+| REFLECT | `t <- 4-t` |
+| SCALE | `t <- c*t`, `c!=0` |
+
+Every primitive is a bijection. The inverse of an additive primitive
+negates its coefficient; REFLECT is its own inverse; SCALE uses the
+inverse coefficient. The forward word W has 40348 such primitives:
+
+| EQ | MUL | REFLECT | SCALE | SHIFT | SUM |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 30368 | 5840 | 1168 | 2 | 112 | 2858 |
+
+The inverse used here is literally W in reverse order with each primitive
+inverted. It is not a second independently compiled J-inverse circuit.
+The finite component audit executes all 25 low/high inputs in each
+direction, compares the complete endpoints with F and I, requires all
+48 work cells to return to zero, and keeps a nonzero extra archive
+sentinel unchanged. It also executes all five marked mirrors and their
+literal complete undo. These finite checks concern clean initial work
+cells; they do not assert cleanup of arbitrary occupied workspace.
+
+The integrated carrier has exactly 62 addressed F5 registers:
+
+```text
+compiler low/high:     0,1
+compiler work:         2,...,49
+forward carry archive: 50
+primary native wires:  (51,52,53,54,0,55)
+secondary native wires:(56,57,58,59,60,61)
+```
+
+The primary q cell is compiler low 0 from initialization onward.
+Only the four primary pistons at 51..54 vary. Initialize primary
+`(P,0,1)`, secondary `(4,0,0,0,0,1)`, high and archive zero, and all
+48 work cells zero. The remaining 58 cells consequently have identical
+initial values in every admitted preparation.
+
+The chronological schedule is:
+
+1. Execute the primary native origin tick and retain its actual checkpoint
+   for the endpoint comparison.
+2. Apply the shear `q <- q+r+2`, then the complete W on low/high and work.
+3. SUM the live low into secondary piston 56, then execute that device's
+   own native origin tick.
+4. Exchange high 1 and archive 50 using `k+=h`, `h-=k`, `k+=h`, `h*=-1`.
+5. Execute the literal inverse word, then undo the receiver shear.
+
+The four-operation exchange sends arbitrary `(h,k)` successively to
+`(h,k+h)`, `(-k,k+h)`, `(-k,h)`, `(k,h)`, proving the swap without a
+blank-register assumption. The secondary SUM preserves low; it and the
+secondary tick write only addresses 56..61. The compiler is confined to
+0..49 and the exchange to 1,50. Thus the added secondary operations
+preserve every register needed by the four-register circuit proof.
+
+For all 500 admitted piston tuples, the finite audit confirms the complete
+62-cell endpoint: the primary six-coordinate state equals its actual
+post-tick checkpoint, high 1 is s, archive 50 is 3s, work 2..49 is zero,
+and secondary 56..61 equals the complete displayed native output at
+`a=2s`. The workspace is zero at both multiplier boundaries. The actual
+first receiver supplies s through the shear; no source sum or character
+is loaded into the multiplier. Four carry/receiver boundary classes each
+occur 125 times; these are not 500 independent carry predictions.
+
+Each integrated preparation uses `2*40348+9=80705` discrete primitives
+and two separately enabled native origin ticks. The nine routing
+primitives are two for the shear, one secondary SUM, four for the swap,
+and two for the inverse shear. The 500 integrated runs use 40352500
+primitives and 1000 native ticks. Component checks add 2824400 primitives,
+so the specified audit total is 43176900. These are properties of this
+exact witness, not minimal counts, physical pulses, energy or measured
+time. Two-architecture byte agreement is bound to this same public probe.
+
+The algebraic composition proves why the audited interfaces give the
+claimed endpoint; the finite C statement supplies the executed primitive
+word and its complete endpoint checks. It does not supply the extra carry
+coefficient of the preceding theorem. The two native origins, interconnection
+and schedule are additional supplied controls, so 62 counts F5 registers
+rather than the complete resources of an autonomous controller. The
+native updates have not been globally inverted. The retained archive
+and secondary output are not regenerated ready resources. No physical
+realization, native time reversal, indefinite finite-capacity operation,
+contact-bank identification or L1-to-L4 bridge follows from this circuit.
+
 ## 3. The kernel and the census
 
 F_5^6, 15625 checkpoint states; the Klein-100 typology; 313
@@ -13586,6 +17511,278 @@ supplies neither a native-Hodge intertwiner nor a physical clock or gravity
 law. SQRT-PHI-TIME-GRAVITY remains open.
 
 The exact public audit and its scope are in [P-J-HODGE-COUNTER-CARRY-FACTOR-1](../probes/P-J-HODGE-COUNTER-CARRY-FACTOR-1/RESULT.md).
+
+### U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS [T]
+
+**Scope.** Exact arithmetic of the unchanged native update on the complete
+trace sheets \(X_1,X_4\), with the fixed origin-zero Thue–Morse counter.
+These are densities of sets of starting counters. They are not physical
+outcome probabilities, independent prepared contacts or reset rates.
+The return translation is already present in CENSUS-HOSTING, and the
+clock factor frequencies are already established by
+TT-NATIVE-FOUR-WORD-LAW. The result here classifies their whole-sheet
+return windows and distinguishes two source admissions.
+
+Write \(x=(p_1,p_2,p_3,p_4,q,r)\in\mathbf F_5^6\),
+
+$$
+z(x)=p_1+p_2+p_3+p_4+q+r,
+\qquad X_z=\{x:z(x)=z\},\qquad
+\theta_n=s_2(n)\bmod2.
+$$
+
+Here \(s_2(n)\) is the binary digit sum. The four \(p_i\) are the four
+native piston slots in their existing order.
+For \(L\ge1\), let \(F_{n,L}\) be the checkpoint map of \(L\) actual native
+ticks starting at counter \(n\). A whole-sheet return on \(X_z\) means
+
+$$
+F_{n,L}(x)=x+(0,0,0,0,-\delta,\delta)
+\quad\text{for every }x\in X_z,
+\tag{WR-1}
+$$
+
+for one \(\delta\in\mathbf F_5\). It is nonzero when \(\delta\ne0\)
+and an identity when \(\delta=0\). In particular the complete sheet,
+not a selected point or special piston configuration, is quantified.
+
+**Supplied-sheet admission.** Supply \(X_1\) separately at every start.
+Then (WR-1) holds if and only if \(L\) is even and
+\(\theta_{n+L-1}=1\). The least length admitting a nonzero return is four.
+Its only nonzero clock words and shifts are
+
+| Clock word | Chronological letters | \(\delta\) |
+| --- | --- | ---: |
+| \(0011\) | \(b,e,b,d\) | \(+2\) |
+| \(1001\) | \(d,b,e,b\) | \(-2\) |
+
+Their densities among all starting counters are respectively \(1/12\)
+and \(1/6\). At length two the returning words \(01,11\) give respectively
+\(b,b\) and \(d,d\), both identities.
+
+Count all starts \(0\le n<N\), permitting their windows to continue beyond
+\(N\). For \(N=2^k, k\ge3\), put \(\epsilon=(-1)^k\). The exact counts are
+
+| Length | Nonzero returns | Identity returns | Limiting nonzero density |
+| ---: | --- | --- | ---: |
+| \(2\) | \(0\) | \(N/2+1\) | \(0\) |
+| \(4\) | \(N/4-(1+\epsilon)/2\) | \(N/4+(\epsilon-1)/2\) | \(1/4\) |
+| \(6\) | \(11N/24-1-\epsilon/3\) | \(N/24+\epsilon/3\) | \(11/24\) |
+| \(8\) | \(N/2+1\) | \(0\) | \(1/2\) |
+
+The length-four nonzero count alone has the displayed formula already for
+\(k\ge2\). Its separate signed counts are
+
+$$
+C_{0011}(N)=\frac{N/4-\epsilon}{3},\qquad
+C_{1001}(N)=\frac{N-3-\epsilon}{6}.
+\tag{WR-2}
+$$
+
+In particular \(N=4096\) gives nonzero counts \(0,1023,1876,2049\),
+identity counts \(2049,1024,171,0\), and length-four signed counts
+\(341,682\).
+
+**Occupied-sheet admission.** Follow an uninterrupted origin-zero
+trajectory starting in \(X_1\cup X_4\). For every \(n\ge1\), its occupied
+sheet has
+
+$$
+z_n=4+2\theta_{n-1}\pmod5.
+\tag{WR-3}
+$$
+
+Apply (WR-1) to that entire sheet \(X_{z_n}\). A four-tick return then
+occurs exactly for these five-bit factors starting at \(n-1\):
+
+| Five-bit factor | \(\delta\) | Parity of \(n\) |
+| --- | ---: | --- |
+| \(00110, 11001\) | \(-2\) | even |
+| \(01100, 10011\) | \(+2\) | odd |
+
+Each factor has density \(1/12\). Thus the density of nonzero whole-sheet
+four-tick returns is \(1/3\), with each direction contributing \(1/6\).
+There are no identity four-tick returns in this class. Starts on \(X_1\)
+and starts on \(X_4\) each contribute \(1/6\) among all counters;
+conditioned on either occupied sheet, the return density is \(1/3\).
+This does not classify all pointwise returns of special trajectories.
+
+**Proof.** Put \(P(p_1,p_2,p_3,p_4,q,r)=(p_3,p_4,p_1,p_2,q,r)\),
+\(c=(2,1,3,4,1,1)\), and \(v_q=(0,0,0,0,1,0)\). On the admitted sheets
+the native generators are
+
+$$
+b(x)=-Px,\qquad d(x)=c-x,\qquad e(x)=c+v_q-x.
+$$
+
+On \(X_1\), bits \(0,1\) choose \(b,d\); on \(X_4\), they choose \(e,b\).
+Their next trace is always \(4+2t\) for the current bit \(t\). This proves
+(WR-3) and uniformity of the selected word on every admitted sheet.
+
+For the existing bijective chart, set
+
+$$
+A=p_1+p_3,\quad B=p_2+p_4,\quad
+C=p_1-p_3-2,\quad D=p_2-p_4-1,
+$$
+
+$$
+v=(A,B,\chi(z)C,\chi(z)D),\qquad
+\chi(1)=1,\quad\chi(4)=-1.
+$$
+
+The inverse recovers \(C,D\) by multiplication by \(\chi(z)\), then
+\(p_1=3(A+2+C), p_3=3(A-2-C), p_2=3(B+1+D),
+p_4=3(B-1-D)\), and \(q=z-A-B-r\). Thus \(v,r\) vary freely on each
+sheet. Write \(h=0\) for \(X_1\), \(h=1\) for \(X_4\). Substitution gives
+
+$$
+h'=1-t,\qquad v'=-v,\qquad r'=-r+(h\mathbin{\mathrm{xor}}t).
+\tag{WR-4}
+$$
+
+For a supplied \(X_1\) and clock word \(t_0,\ldots,t_{L-1}\), define
+\(c_0=t_0\) and \(c_i=1_{t_{i-1}=t_i}\) for \(i\ge1\). Iteration gives
+
+$$
+v_L=(-1)^L v_0,\qquad h_L=1-t_{L-1},\qquad
+r_L=(-1)^L r_0+\sum_{i=0}^{L-1}(-1)^{L-1-i}c_i.
+\tag{WR-5}
+$$
+
+An odd length cannot translate freely varying \(r\). At an even length
+the piston sums return, while returning every piston also requires the
+same sheet: otherwise both freely varying centered differences change
+sign. Conversely the same sheet and returned \(v\) recover all pistons
+by the chart inverse. The trace determines the opposite \(q\) shift.
+This proves the qualification criterion and
+
+$$
+\delta=-c_0+c_1-c_2+\cdots+c_{L-1}\pmod5.
+\tag{WR-6}
+$$
+
+The native four-bit language is
+\(0010,0011,0100,0101,0110,1001,1010,1011,1100,1101\).
+The five words ending in one give shifts \(2,0,-2,0,0\), respectively
+for \(0011,0101,1001,1011,1101\). At length two both qualifying words
+give zero. This proves minimality. In particular bits at counters
+\(5,6,7,8\) are \(0011\), so the actual word \(b,e,b,d\) gives
+
+$$
+U^4(5,x)=(9,x+(0,0,0,0,3,2))\qquad(x\in X_1).
+$$
+
+The checkpoint translation \(dbeb\) is the previously identified
+CENSUS-HOSTING translation; its actual timing follows here from the
+selector, not from freely commanding its letters.
+
+For longer even length \(L=2m\), split starts by parity using
+\(\theta_{2j}=\theta_j\), \(\theta_{2j+1}=1-\theta_j\). Let \(N_{10}(a)\)
+count adjacent descents in a parent word \(a\). For an even start the
+parent has length \(m\); for an odd start it has length \(m+1\). Equation
+(WR-6) gives
+
+$$
+\begin{array}{lll}
+\text{even start:}&\text{return iff last}(a)=0,&\delta=-2N_{10}(a),\\
+\text{odd start:}&\text{return iff last}(a)=1,&\delta=+2N_{10}(a).
+\end{array}
+\tag{WR-7}
+$$
+
+Indeed the unreduced even displacement is
+\(-a_0-\sum_{i\ge1}1_{a_{i-1}\ne a_i}\); the odd displacement is
+\(-(1-a_0)+\sum_{i\ge1}1_{a_{i-1}\ne a_i}\). Counting rises and descents
+under the indicated last-bit condition gives (WR-7).
+For length six the even parents \(010,100,110\) each have one descent;
+among four-bit parents ending in one only \(0011\) has none.
+For length eight every admitted four-bit parent ending in zero has
+one or two descents. A five-bit parent ending in one has at most two
+descents and cannot have zero, since a nondecreasing five-bit word
+contains \(000\) or \(111\), both absent from the clock. This proves the
+identity classifications at lengths six and eight.
+
+For completeness, the clock's one-letter imbalance is at most one.
+In pair order \(00,01,10,11\), the normalized pair-count vector \(p_N\)
+satisfies
+
+$$
+p_{2M}=(0,1/4,1/4,0)+\tfrac12 P_2p_M+O(1/M),
+$$
+
+where \(P_2\) is the odd-child permutation
+\(00\mapsto10, 01\mapsto11, 10\mapsto00, 11\mapsto01\).
+An odd terminal start adds \(O(1/N)\). Contraction by \(1/2\) gives the
+all-prefix limit \((1,2,2,1)/6\), with error \(O(\log N/N)\).
+The even and odd triples from a parent pair \(ab\) are
+\(a,(1-a),b\) and \((1-a),b,(1-b)\). Each of the six admitted triples
+therefore has frequency \(1/6\). The four-bit parity forms are
+\(a,(1-a),b,(1-b)\) and \((1-a),b,(1-b),c\). They give frequency \(1/6\)
+to \(0110,1001\), and \(1/12\) to each other admitted word, as in
+TT-NATIVE-FOUR-WORD-LAW. Formula (WR-7) now gives all four density rows.
+The length-six identity density is \(\tfrac12\cdot\tfrac1{12}=1/24\).
+
+For the finite formulas, let \(p_h^{00}\) count \(00\) pairs at starts
+below \(2^h\), including the endpoint pair. Balance of the first \(2^h\)
+bits, \(\theta_0=0\), and \(\theta_{2^h}=1\) imply that the \(11\) count
+is \(p_h^{00}+1\). Parity splitting gives the following recurrence for
+\(h\ge2\), with its closed form valid for \(h\ge1\):
+
+$$
+p_1^{00}=0,\qquad
+p_h^{00}=2^{h-2}-p_{h-1}^{00}-1
+=\frac{2^h-3-(-1)^h}{6}.
+$$
+
+For \(C_w(M)\) counting word starts below \(M\), the same splitting gives
+
+$$
+C_{1001}(2M)=C_{10}(M),\quad
+C_{0011}(2M)=C_{101}(M),\quad
+C_{101}(2K)=C_{00}(K)+C_{11}(K).
+$$
+
+Substitution proves (WR-2), including its initial \(k=2\) case.
+The total qualifying count at length \(L\) is
+\(\sum_{0\le n<N}\theta_{n+L-1}\). For \(N=2^k\), use
+\(\theta_{N+j}=1-\theta_j\) for \(0\le j<N\): the boundary corrections
+are \(+1,-1,-1,+1\) at lengths \(2,4,6,8\). The length-six identity count
+is \(C_{0011}(N/2)=N/24+\epsilon/3\). Subtracting these identities from
+the qualifying counts proves the finite table.
+
+For occupied-sheet admission, (WR-4) gives
+\(h_n=1-\theta_{n-1}\). An even four-tick window returns that entire
+sheet exactly when \(\theta_{n+3}=\theta_{n-1}\).
+The even and odd five-bit substitution forms are
+\(a,(1-a),b,(1-b),c\) and \((1-a),b,(1-b),c,(1-c)\).
+Equality of the end bits requires \(a=c\), leaving parent triples
+\(010,101\). These give exactly the four displayed factors, each in
+one parity and each of density \((1/2)(1/6)=1/12\).
+Substitution in (WR-4) gives the stated shifts and excludes identities.
+Two factors start from each occupied sheet. Each sheet itself has density
+\(1/2\), proving both the unconditional and conditional sheet counts.
+
+**Affine certificate.** For any fixed \(n,L\), the uniform selected word
+makes \(F_{n,L}|_{X_1}\) affine. The six standard unit vectors \(e_i\)
+are an affine basis of \(X_1\); for every \(x\in X_1\),
+
+$$
+F_{n,L}(x)=\sum_{i=1}^6 x_iF_{n,L}(e_i).
+$$
+
+Hence identical displacements \(F_{n,L}(e_i)-e_i=w\) certify translation
+by \(w\) on the entire sheet. Requiring its first four entries to vanish
+and its last two to sum to zero certifies (WR-1). An unspecified number
+of sampled points is insufficient without their affine span or another
+complete discrimination proof.
+
+The two admissions quantify different entire sheets at each start.
+Their densities cannot be interchanged. The counted windows overlap;
+no coherent source, independent repeated uses, permanent record, energy
+account or physical occurrence law follows from this theorem.
+
+<!-- END NATIVE-WHOLE-SHEET-RETURN-WINDOWS -->
 
 ## 4. The two places
 
@@ -15567,6 +19764,773 @@ The general norm and trace-image proofs are independent of that finite
 audit. This adds arithmetic image recognition, not apparatus, native
 continuation, physical time, dimension, noise tolerance, or occurrence law.
 
+### CM5-POLARIZATION-DICTIONARY [T]
+
+**Specified model and statement.** Work over $\mathbb C$. Let $C$ be the
+smooth projective model of $y^2=x^5-1$, let $B=\operatorname{Jac}(C)$,
+and let $\lambda_0:B\to B^\vee$ be its canonical principal polarization.
+Fix $\zeta=\exp(2\pi i/5)$ and the action of
+$T:(x,y)\mapsto(\zeta x,y)$. Put
+$K=\mathbb Q(\zeta)$, $F=\mathbb Q(\sqrt5)$,
+$\phi=(1+\sqrt5)/2$, and $L=\log\phi$.
+Then $\mathcal O_K=\mathbb Z[\zeta]$,
+$\mathcal O_F=\mathbb Z[\phi]$, and the following dictionary is exact:
+
+$$
+\operatorname{End}_{\mathbb C}(B)=\mathcal O_K,\qquad
+\beta^\dagger=\lambda_0^{-1}\beta^\vee\lambda_0=\bar\beta,
+\qquad
+\operatorname{NS}(B)\simeq\mathcal O_F,\quad
+D_\eta\longleftrightarrow\lambda_0^{-1}\lambda_{D_\eta}=\eta.
+                                                               \tag{B1}
+$$
+
+Here polarizations mean ample Neron--Severi classes, equivalently
+polarization homomorphisms, rather than line bundles retaining a
+$\operatorname{Pic}^0$ parameter. For $\eta=x+y\phi$,
+
+$$
+D_\eta\text{ is ample}\ \Longleftrightarrow\ \eta\gg0,\qquad
+q(D_\eta):=D_\eta^2/2=N_F(\eta)=x^2+xy-y^2,\qquad
+\deg\lambda_{D_\eta}=q(D_\eta)^2.                              \tag{B2}
+$$
+
+Ample classes modulo the full origin-preserving automorphism group
+are in norm-preserving bijection with nonzero integral ideals:
+
+$$
+\mathcal P(B):=\{\text{ample }D\}/\operatorname{Aut}(B,0)
+ \simeq\mathcal O_F^{++}/\phi^{2\mathbb Z}
+ \xrightarrow[\ [D_\eta]\mapsto(\eta)\ ]{\ \sim\ }
+ \{\mathfrak a\subset\mathcal O_F:\mathfrak a\ne0\}.             \tag{B3}
+$$
+
+The first elementary divisor of $D_\eta$ is
+$c=\gcd(|x|,|y|)$; its type is $(c,N_F(\eta)/c)$. Every orbit has a
+unique representative $x\ge1$, $0\le y<x$. Its rapidity
+$t=\tfrac12\log(\sigma_1\eta/\sigma_2\eta)$ lies in $\lbrack0,2L)$,
+and $x^2\le q\le5x^2/4$. Integral endomorphism pullback has the
+explicit rule $\beta^*D_\eta=D_{\beta\bar\beta\eta}$.
+
+This establishes one specified mathematical reading and its domain,
+equivalence and formulas. Its existence and correctness do not require
+it to be the only possible reading of an algebraic carrier.
+
+**Proof.** The curve has genus two. Its holomorphic differentials
+$dx/y$ and $x\,dx/y$ have $T^*$-eigenvalues $\zeta,\zeta^2$;
+their conjugates supply $\zeta^4,\zeta^3$ in complex cohomology.
+Thus the faithful rational homology action of $T$ has minimal
+polynomial $\Phi_5$, embeds $K$ in $\operatorname{End}^0(B)$, and
+makes $H_1(B,\mathbb Q)$ a rank-one $K$-module. Its CM type is
+$\Phi=\{1,2\}$, up to the corresponding dual convention.
+
+One can determine the full endomorphism algebra directly.
+For the Galois field $K$, every rational linear map $K\to K$ has a
+unique expression $\sum_{g\in\operatorname{Gal}(K/\mathbb Q)}a_g g$
+with $a_g\in K$: the distinct field automorphisms are linearly
+independent over $K$ and both spaces have rational dimension sixteen.
+Over $\mathbb C$ a nonzero summand $a_g g$ has a nonzero matrix entry
+in every embedding position associated to $g$. Different $g$ occupy
+different positions, so entries cannot cancel between them.
+Preservation of the Hodge decomposition therefore permits $a_g\ne0$
+only if $g\Phi=\Phi$. The four translates are
+$\{1,2\},\{2,4\},\{3,1\},\{4,3\}$, with trivial stabilizer.
+Every endomorphism consequently lies in $K$; multiplication by $K$
+already acts. The integral endomorphism ring is an order containing
+the maximal order $\mathbb Z[\zeta]$, hence is exactly that order.
+
+The curve automorphism preserves the canonical Jacobian polarization,
+so $T^\vee\lambda_0T=\lambda_0$, giving $T^\dagger=T^{-1}=\bar T$.
+Since $T$ generates $K$, Rosati is conjugation on the entire
+endomorphism ring. Its integral fixed ring is $\mathcal O_F$.
+
+The classical complex-abelian-variety identifications used here are
+the homology description of maps, the identification of Neron--Severi
+classes with symmetric maps to the dual, the Riemann positivity
+criterion and Riemann--Roch for the degree. Their hypotheses hold for
+this complex Jacobian and its principal polarization; see
+[Conrad, Theorems 1.2.1, 3.1.3, 5.1.4, Corollary 5.1.5 and Lemma 5.2.1](https://math.stanford.edu/~conrad/papers/cmchina.pdf).
+The kernel of the line-bundle map is $\operatorname{Pic}^0(B)$.
+Because $\lambda_0$ is an isomorphism, symmetric homomorphisms
+identify integrally with the Rosati-fixed ring; this proves (B1).
+The Hermitian form for $D_\eta$ is the positive principal form with
+$\eta$ inserted. Its two real eigenvalues are
+$\sigma_1(\eta),\sigma_2(\eta)$, proving the ampleness criterion.
+On rational homology the determinant of multiplication by $\eta$ is
+$N_K(\eta)=N_F(\eta)^2$. Riemann--Roch identifies this degree with
+$(D_\eta^2/2)^2$. Both $D_\eta^2/2$ and $N_F(\eta)$ are positive
+on the ample cone, giving (B2). Translating $\eta$ by large positive
+integers and comparing quadratic polynomials extends the intersection
+identity to all of $\mathcal O_F$.
+
+For completeness, the elementary arithmetic supplies the orbit
+statement without a narrow-class ambiguity. The Minkowski ideal-class
+bound $\sqrt5/2<2$ gives $h_F=1$. The unit group is
+$\mathcal O_F^\times=\{\pm\phi^j:j\in\mathbb Z\}$. To see the latter
+directly, make the first embedding of a unit positive and multiply by
+a power of $\phi$ until its value $r$ lies in $\lbrack1,\phi)$. Its other
+embedding is $\pm r^{-1}$. In norm $+1$ its integer trace is in
+$\lbrack2,\sqrt5)$, forcing trace two and $r=1$. In norm $-1$ its integer
+trace is in $\lbrack0,1)$, forcing trace zero and $r=1$; the latter would
+give an element with embeddings $1,-1$, which is impossible.
+Thus the adjusted unit is one. The four units $1,-1,\phi,-\phi$
+realize all sign pairs, and the positive units are
+$\phi^{2\mathbb Z}$. Every ideal therefore has a positive generator.
+
+The full group $\operatorname{Aut}(B,0)$ is $\mathcal O_K^\times$.
+Functoriality of the polarization map gives
+$u^*D_\eta=D_{u\bar u\eta}$. Every $u\bar u$ is a totally positive
+unit of $F$, and every such unit occurs because
+$N_{K/F}(\phi^j)=\phi^{2j}$. Thus two positive generators give the
+same orbit exactly when they generate the same ideal. This proves
+(B3). The same functorial formula proves the stated rule for every
+nonzero integral endomorphism, not only for units.
+
+Let $E_0$ be the unimodular principal alternating form on integral
+homology and $M_\eta$ the integral matrix of $\eta$.
+The form for $D_\eta$ is $E_\eta=E_0M_\eta$. An integer $d>0$
+divides all entries of $E_\eta$ exactly when it divides all entries
+of $M_\eta$. The latter says that the complex-linear rational map
+$\eta/d$ preserves the lattice, hence is an integral endomorphism,
+and is equivalent to $\eta/d\in\mathcal O_F$ by (B1).
+The entry gcd is therefore $\gcd(|x|,|y|)$.
+The alternating elementary-divisor normal form has first divisor
+equal to that gcd and product of its two divisors equal to $q$,
+which proves the type formula.
+
+Positive-unit multiplication shifts $t$ by $2jL$, so choose its
+unique representative in $\lbrack0,2L)$. For a positive $\eta=x+y\phi$,
+$t\ge0$ is equivalent to $y\ge0$, while
+$t<2L$ is equivalent to $\eta/\eta'<\phi^4$, hence to $x>y$:
+$\phi^4\eta'-\eta=(\phi^4-1)(x-y)$.
+This proves the unique cone. The norm identity gives
+$q=x^2+y(x-y)$ and the stated bounds. At rational prime norm
+the type must be $(1,p)$; the quadratic splitting law gives two
+classes for $p\equiv1,4\pmod5$, one for $p=5$, and none for
+$p\equiv2,3\pmod5$. Conjugate ideals are distinct orbits.
+
+### CM5-HECKE-NORMALIZATION [T]
+
+**Specified family and statement.** Use the fields, embeddings and
+class dictionary of CM5-POLARIZATION-DICTIONARY. For $m\in\mathbb Z$
+put $\epsilon_m=m\bmod2\in\{0,1\}$ and $\mu_m=\pi m/(2L)$.
+On nonzero fractional ideals define
+
+$$
+\Xi_m((\alpha))=
+ \operatorname{sgn}(N_F\alpha)^m
+ \left|\frac{\sigma_1\alpha}{\sigma_2\alpha}\right|^{i\mu_m}.
+                                                               \tag{B4}
+$$
+
+This is a well-defined unitary Hecke character of finite conductor
+one. It has real sign parities $(\epsilon_m,\epsilon_m)$ and
+opposite archimedean imaginary parameters $(-\mu_m,+\mu_m)$.
+These are all finite-unramified unitary characters that are trivial
+on the positive diagonal archimedean subgroup; nonzero $m$ has
+infinite order. On positive generators,
+
+$$
+\Xi_m(\mathfrak a)=e^{\pi i m t(\mathfrak a)/L}
+                 =e^{2\pi i m\theta(\mathfrak a)},\qquad
+\theta=t/(2L)\pmod1.                                          \tag{B5}
+$$
+
+Let $L_m(s)=L_F(s,\Xi_m)$ and
+$\Gamma_{\mathbb R}(s)=\pi^{-s/2}\Gamma(s/2)$. The exact completion is
+
+$$
+\Lambda_m(s)=5^{s/2}
+ \Gamma_{\mathbb R}(s+\epsilon_m-i\mu_m)
+ \Gamma_{\mathbb R}(s+\epsilon_m+i\mu_m)L_m(s),\qquad
+\Lambda_m(s)=\Lambda_{-m}(1-s)=\Lambda_m(1-s).                  \tag{B6}
+$$
+
+The global root number is $+1$ for every $m$. For $m\ne0$, $L_m$
+and $\Lambda_m$ are entire. For $m=0$, $L_0=\zeta_F=\zeta L(s,\chi_5)$
+has a simple pole at one, and $\Lambda_0$ has simple poles at zero
+and one. Nonzero-mode trivial zeros are exactly the simple zeros
+
+$$
+-\epsilon_m-2k+i\mu_m,\quad-\epsilon_m-2k-i\mu_m
+\qquad(k=0,1,2,\ldots).                                      \tag{B7}
+$$
+
+The principal mode has a simple zero at zero and double zeros at
+the negative even integers. These statements make no hypothesis
+or conclusion about the location of all nontrivial zeros.
+
+**Proof.** For a unit $\pm\phi^j$, the sign in (B4) changes by
+$(-1)^{mj}$ and the exponential by $e^{i\pi mj}=(-1)^{mj}$.
+They cancel. Since $h_F=1$, the formula defines every ideal value
+and is multiplicative. Its finite local component is
+$\chi_{m,\mathfrak p}(x)=\Xi_m(\mathfrak p)^{v_{\mathfrak p}(x)}$,
+trivial on local units. Its real components are
+
+$$
+\chi_{m,1}(x)=\operatorname{sgn}(x)^{\epsilon_m}|x|^{-i\mu_m},
+\qquad
+\chi_{m,2}(x)=\operatorname{sgn}(x)^{\epsilon_m}|x|^{i\mu_m}.
+$$
+
+Their product on diagonal $F^\times$ cancels the finite product,
+so they define the global idelic character. Conversely, triviality
+on the positive archimedean diagonal leaves components
+$\operatorname{sgn}(x_1)^a\operatorname{sgn}(x_2)^b
+ |x_1/x_2|^{it}$. The unit $-1$ forces $a=b=\epsilon$; the unit
+$\phi$ forces $(-1)^\epsilon e^{2itL}=1$.
+Thus $t=\pi j/(2L)$ with $j\equiv\epsilon\pmod2$.
+Class number one leaves no extra finite unramified class character,
+proving completeness. For $m\ne0$, varying the real idele $(e^r,1)$
+gives the infinite image $e^{-i\mu_m r}$ and also excludes a pure
+idele-norm power.
+
+Conjugation of ideals gives
+$\Xi_m(\bar{\mathfrak a})=\Xi_{-m}(\mathfrak a)$, whence
+$L_m=L_{-m}$ and real Dirichlet coefficients.
+For $T_p=p^{-s}$, the finite Euler factors are
+
+$$
+L_{m,p}(s)=
+\begin{cases}
+[(1-z_pT_p)(1-z_p^{-1}T_p)]^{-1},
+ &p\equiv1,4\pmod5,\quad z_p=\Xi_m(\mathfrak p),\\
+(1-T_p^2)^{-1},&p\equiv2,3\pmod5,\\
+(1-(-1)^mT_p)^{-1},&p=5 .
+\end{cases}                                                   \tag{B8}
+$$
+
+The inert prime ideal is $(p)$ and has character value one.
+The different is $\mathfrak d_F=(\sqrt5)=\mathfrak p_5$,
+and (B4) gives $\Xi_m(\mathfrak p_5)=(-1)^m$.
+Absolute convergence and nonvanishing for $\Re s>1$ follow
+from the Euler product and comparison with $\zeta_F$.
+
+Here the classical Hecke continuation and local/global functional
+equations are used in the conventions of
+[Poonen, Tate's thesis, Theorems 4.18 and 5.22](https://math.mit.edu/~poonen/786/notes.pdf).
+Their pole exception is a pure norm character, already excluded
+for $m\ne0$. For an explicit normalization choose the global
+additive character with real component $e^{-2\pi ix}$ and the
+positive finite additive exponential, and self-dual additive
+measures. The local equation is normalized as
+
+$$
+\frac{Z_v(1-s,\chi_v^{-1},\widehat f)}{L_v(1-s,\chi_v^{-1})}
+ =\varepsilon_v(s,\chi_v)\frac{Z_v(s,\chi_v,f)}{L_v(s,\chi_v)}.
+$$
+
+At a real place, $f(x)=x^{\epsilon_m}e^{-\pi x^2}$ has Fourier
+transform $(-i)^{\epsilon_m}f$ and zeta integral
+$\Gamma_{\mathbb R}(s+\epsilon_m\mp i\mu_m)$. Thus the two real
+epsilon factors multiply to $(-1)^m$. At a finite place with
+different generator $\delta_v$ of valuation $d_v$ and residue
+size $q_v$, self-duality gives
+$\widehat{\mathbf1_{\mathcal O_v}}
+ =q_v^{-d_v/2}\mathbf1_{\delta_v^{-1}\mathcal O_v}$.
+The unramified zeta integrals then give exactly
+$\varepsilon_v(s)=\chi_{m,v}(\delta_v)q_v^{d_v(1/2-s)}$.
+Only the place above five has nontrivial different; its factor is
+$(-1)^m5^{1/2-s}$. Multiplying all local factors gives
+$5^{1/2-s}$, so extracting $5^{s/2}$ yields (B6) and root number
+one. The principal mode has the usual Dedekind-zeta pole exception.
+
+To determine the zeros forced by the gamma factors, first note that
+for $\sigma>1$ the Euler logarithms give
+
+$$
+\zeta_F(\sigma)^3
+ |L_m(\sigma+it)|^4|L_{2m}(\sigma+2it)|\ge1,
+$$
+
+by $3+4\cos v+\cos2v=2(1+\cos v)^2\ge0$.
+For $m\ne0$, a zero of $L_m$ on the line one would force
+the left side to zero: its fourth-order vanishing exceeds the
+zeta pole order three and $L_{2m}$ is entire. The same argument
+works for $m=0,t\ne0$; the remaining principal point is a pole.
+Thus there are no zeros on the line one.
+
+At a point in (B7), exactly one gamma factor has a simple pole.
+Reflection by (B6) gives a point of real part at least one with
+nonzero finite $L$-value, using the Euler product or the preceding
+line-one argument. The reflected gamma factors are finite and
+nonzero. Hence $\Lambda_m$ is nonzero at the original point,
+and the cancelling zero of $L_m$ is exactly simple.
+At other points of $\Re s\le0$ the same reflection excludes zeros.
+For $m=0$, the double gamma pole at zero cancels the simple
+completed pole, giving a simple zero of $L_0$; at each negative
+even integer the completed value is finite and nonzero, giving
+a double zero. Real coefficients and (B6) make the completed
+function real on the critical line, but do not establish RH.
+
+Finally the ideal bijection (B3) identifies the exact weighted
+polarization series, absolutely for $\Re s>1$, as
+
+$$
+\sum_{\lbrack D\rbrack\in\mathcal P(B)}
+ e^{\pi i m t(D)/L}q(D)^{-s}=L_m(s),\qquad
+\sum_{\substack{\lbrack D\rbrack\in\mathcal P(B)\\D\ \mathrm{primitive}}}
+ e^{\pi i m t(D)/L}q(D)^{-s}=\frac{L_m(s)}{\zeta(2s)}.          \tag{B9}
+$$
+
+Indeed every class is uniquely a positive integer content times
+a primitive class; multiplying by content $c$ multiplies $q$ by
+$c^2$ and leaves its angle unchanged, and $\Xi_m((c))=1$.
+Thus the full Fourier family observes the period $2L$;
+retaining only even $m$ projects it to period $L$.
+
+
+### CM5-INTEGRAL-PULLBACK-REACHABILITY [T]
+
+**Scope and definitions.** Put $K=\mathbb Q(\zeta_5)$,
+$F=\mathbb Q(\sqrt5)$, $\phi=(1+\sqrt5)/2$, and $L=\log\phi$.
+Conjugation on $K/F$ is denoted by a bar. The integral rings are
+$\mathcal O_K=\mathbb Z[\zeta_5]$ and $\mathcal O_F=\mathbb Z[\phi]$.
+Define the set of classes
+
+$$
+\mathcal P=\mathcal O_F^{++}/\phi^{2\mathbb Z},\qquad
+q([\eta])=N_{F/\mathbb Q}\eta,
+$$
+
+where $++$ means positive at both real embeddings. A class is primitive
+when $\eta=x+y\phi$ has $\gcd(|x|,|y|)=1$. This condition is invariant
+under units. The allowed integral operation is
+
+$$
+[\eta]\longmapsto[\beta\bar\beta\eta],
+\qquad 0\ne\beta\in\mathcal O_K.
+$$
+
+In the fixed CM dictionary for the canonically principally polarized
+$B=\operatorname{Jac}(y^2=x^5-1)$, these are its ample Neron--Severi
+classes modulo $\operatorname{Aut}(B,0)$, $q=D^2/2$, and the operation
+is the pullback $D\mapsto\beta^*D$. This specifies one mathematical
+model and operation. In particular, the operation contains no division
+by the rational content of a resulting parameter.
+
+**Theorem.** A class $[\eta]$ is reachable from $[1]$ by integral
+pullbacks if and only if
+
+$$
+v_{\mathfrak p}(\eta)\equiv0\pmod2
+\quad\text{for every prime }\mathfrak p\text{ of }F
+\text{ inert in }K/F.                                      \tag{R1}
+$$
+
+Equivalently, its specified positive integral representative has an
+integral factorization $\eta=\beta\bar\beta$. For arbitrary starting
+classes, each inert valuation modulo two is invariant under every finite
+sequence of allowed operations. No finite set of starting classes can
+reach every primitive class.
+
+**Proof.** The discriminants of $F,K$ are $5,125$. The Minkowski
+ideal-class bounds are respectively $\sqrt5/2<2$ and
+$15\sqrt5/(2\pi^2)<2$, so both rings have class number one. Here the
+standard ideal-class bound is the theorem stated in
+[Sutherland, Lecture 14, Theorems 14.13 and 14.15](https://math.mit.edu/classes/18.785/2016fa/LectureNotes14.pdf).
+The units of $F$ are $\{\pm\phi^j:j\in\mathbb Z\}$, and their
+totally positive subgroup is $\phi^{2\mathbb Z}$. The four units
+$1,-1,\phi,-\phi$ realize all sign patterns, so every ideal has a
+positive generator. Relative norms of $K$-units are positive units;
+conversely $N_{K/F}(\phi^j)=\phi^{2j}$. Thus the relative unit-norm
+image is the entire positive-unit group. These facts identify
+$[\eta]\mapsto(\eta)$ bijectively with the nonzero integral ideals of
+$F$.
+
+At a relatively inert prime, the unique prime $\mathfrak P$ above
+$\mathfrak p$ has residue degree two, so
+$v_{\mathfrak p}(\beta\bar\beta)=2v_{\mathfrak P}(\beta)$.
+This proves necessity and the parity invariant. For sufficiency, factor
+$(\eta)$. Above a split prime assign its full exponent to one of the
+two $K$-primes; above an inert prime assign half its even exponent;
+above a ramified prime assign its exponent. This gives an integral ideal
+$\mathfrak b\subset\mathcal O_K$ whose relative norm is $(\eta)$.
+Since $h_K=1$, write $\mathfrak b=(\alpha)$ with integral
+$\alpha$. Then $\alpha\bar\alpha/\eta=\phi^{2j}$ for some integer
+$j$. Setting $\beta=\alpha\phi^{-j}\in\mathcal O_K$ gives the exact
+factorization. A finite sequence of pullbacks equals the single pullback
+by the product of its integral factors.
+
+The splitting types follow from the order of $p$ in
+$(\mathbb Z/5\mathbb Z)^\times$: for $p\equiv1\pmod5$, the two
+$F$-primes are relatively split; for $p\equiv4\pmod5$, both are
+relatively inert; for $p\equiv2,3\pmod5$, the unique $F$-prime of
+norm $p^2$ is relatively inert. The prime above $5$ is relatively
+ramified. Consequently the existing/reachable counts at prime norm are
+$2/2$ for residue $1$, $2/0$ for residue $4$, $1/1$ at $5$,
+and $0/0$ for residues $2,3$. Conjugate ideals are separate classes.
+
+For the finite-seed assertion choose positive representatives
+$\eta_1,\ldots,\eta_k$. Let $S$ be the set of primes
+$p\equiv4\pmod5$ dividing their norms and let $M=\prod_{p\in S}p$.
+The Chinese remainder theorem supplies arbitrarily large integers
+$x\equiv0\pmod M$, $x\equiv4\pmod5$. The element
+$\eta=x+\phi$ is positive and primitive and has norm
+$N=x^2+x-1\equiv4\pmod5$. No prime congruent to $2$ or $3$ can
+divide $N$: its inert ideal $(p)$ would divide $\eta$, contrary to
+the coefficient $1$. Also $5\nmid N$, and $N\equiv-1\pmod p$
+for every $p\in S$. Thus some new prime $p\equiv4\pmod5$ has odd
+exponent in $N$. Primitivity prevents both $F$-primes over $p$
+from dividing $\eta$, so one has odd valuation, whereas every seed
+has valuation zero there. The invariant excludes all the seeds.
+
+Explicit checks are
+
+$$
+(2+\zeta_5)(2+\zeta_5^{-1})=3+2\phi,\quad N_F(3+2\phi)=11,
+\qquad N_{K/F}\bigl(\phi(1-\zeta_5)\bigr)=2+\phi.
+$$
+
+The positive primitive element $4+\phi$ has norm $19$ and odd
+valuation at a relatively inert prime; it has no integral norm
+factorization. Its polarization isogeny $\lambda_0m_{4+\phi}$
+nevertheless exists, with degree $19^2$. The obstruction concerns its
+factorization as $\beta^\vee\lambda_0\beta$, not its existence.
+Division by rational content would be a different operation: for
+example $19\mapsto1$ changes both inert parities above $19$.
+
+### CM5-REACHABLE-PRIMITIVE-DENSITY [T]
+
+**Scope.** Use the integral operation and class set of
+CM5-INTEGRAL-PULLBACK-REACHABILITY. Let $r(n)$ count reachable
+primitive classes of norm $n$, with each class counted once, and put
+$R_*(X)=\sum_{n\le X}r(n)$. Let $P_*(X)$ count all primitive
+classes of norm at most $X$. Define the positive absolutely convergent
+product, with congruences understood modulo five,
+
+$$
+\mathcal E=
+\prod_{p\equiv1}(1-p^{-2})
+\prod_{p\equiv4}(1+p^{-2})
+\prod_{p\equiv2,3}(1-p^{-4})^{1/2}.
+$$
+
+**Theorem.** Unconditionally,
+
+$$
+R_*(X)=C_R\frac{X}{\sqrt{\log X}}
+ \left(1+O((\log X)^{-1})\right),\qquad
+C_R=\frac{24\sqrt{\pi L}}{5^{11/4}}\mathcal E>0,             \tag{R2}
+$$
+
+$$
+P_*(X)=\frac{2L}{\sqrt5\zeta(2)}X+O(\sqrt X\log X),
+\qquad
+\frac{R_*(X)}{P_*(X)}=
+ \frac{2\pi^{5/2}\mathcal E}{5^{9/4}\sqrt L\sqrt{\log X}}
+ \left(1+O((\log X)^{-1})\right).                           \tag{R3}
+$$
+
+The density is among primitive polarization classes ordered by their
+integer norm. It specifies no transition probabilities or physical
+sampling distribution.
+
+**Proof.** Under the ideal correspondence, primitivity means that the
+ideal is not divisible by a rational integer greater than one. At a
+split rational prime it can therefore use at most one of the conjugate
+prime ideals. Combining this with (R1) gives the multiplicative table
+
+$$
+r(1)=1,\qquad
+r(p^\nu)=
+\begin{cases}
+2,&p\equiv1,\ \nu\ge1,\\
+2,&p\equiv4,\ \nu\ge2\text{ even},\\
+1,&p=5,\ \nu=1,\\
+0,&\text{otherwise}.
+\end{cases}                                                \tag{R4}
+$$
+
+At inert rational primes any factor would already have rational content;
+at $5$, the square of its prime ideal is $(5)$. Thus, for
+$\Re s>1$, the absolutely convergent Dirichlet series is
+
+$$
+R(s)=(1+5^{-s})
+\prod_{p\equiv1}\frac{1+p^{-s}}{1-p^{-s}}
+\prod_{p\equiv4}\frac{1+p^{-2s}}{1-p^{-2s}}.                 \tag{R5}
+$$
+
+Apply the nonnegative multiplicative mean theorem of
+[de la Breteche and Tenenbaum, arXiv:2010.12929v8, Theorem 2.1](https://arxiv.org/pdf/2010.12929v8),
+with prime mean $1/2$, logarithmic saving parameter $A=2$, and
+summability parameter $\sigma_0=3/4$. Its hypotheses hold here:
+the fixed-modulus prime number theorem gives
+
+$$
+\sum_{p\le x}r(p)\log p
+=2\sum_{\substack{p\le x\\p\equiv1\ (5)}}\log p+O(1)
+=\tfrac12x+O(x/\log^2x),
+$$
+
+and (R4) bounds the required sum
+$\sum_p\{r(p)^2p^{-2\sigma_0}+
+\sum_{\nu\ge2}r(p^\nu)p^{-\nu\sigma_0}\}$
+by a constant times $\sum_p p^{-3/2}<\infty$.
+The prime theorem used here is, for example,
+[Tao, 254A Notes 2, Exercise 64](https://terrytao.wordpress.com/2014/12/09/254a-notes-2-complex-analytic-multiplicative-number-theory/)
+at the fixed modulus five; removing proper prime powers costs
+$O(\sqrt x\log^2x)$. The cited mean theorem now yields (R2), with
+
+$$
+C_R=\frac1{\sqrt\pi}\lim_{s\downarrow1}(s-1)^{1/2}R(s).
+$$
+
+To identify the theorem's ordered Euler-product constant with this
+limit, subtract half the ordinary weighted prime theorem from the
+displayed prime mean. Partial summation then makes
+$\sum_p(r(p)-1/2)/p$ convergent. The logarithm of each normalized local
+factor is $(r(p)-1/2)p^{-s}+O(p^{-2\Re s})$, uniformly near the real
+point one. Abelian convergence of the first sum and absolute convergence
+of the remainder identify the ordered product with
+$\lim_{s\downarrow1}\zeta(s)^{-1/2}R(s)$; the simple zeta pole gives
+the displayed formula.
+
+For an explicit evaluation let $\chi$ be the primitive quartic
+character modulo five with $\chi(2)=i$; put $\chi_5=\chi^2$.
+Multiplication of the local factors in (R5) gives
+
+$$
+R(s)=\zeta_K(s)^{1/2}H(s),\quad
+\zeta_K=\zeta L(s,\chi_5)L(s,\chi)L(s,\bar\chi),
+$$
+
+$$
+H(s)=(1+5^{-s})(1-5^{-s})^{1/2}
+\prod_{p\equiv1}(1-p^{-2s})
+\prod_{p\equiv4}(1+p^{-2s})
+\prod_{p\equiv2,3}(1-p^{-4s})^{1/2}.
+$$
+
+All branches in $\Re s>1$ are fixed by the positive real axis.
+The product for $H$ converges absolutely and is nonzero in
+$\Re s>1/2$; no zero-free square root of $\zeta_K$ throughout that
+half-plane is asserted. At one, $H(1)=12\mathcal E/(5\sqrt5)$.
+The finite Fourier identity for $\chi_5$ and the convergent
+logarithmic sine series give
+
+$$
+L(1,\chi_5)=\frac2{\sqrt5}
+ \log\frac{\sin(2\pi/5)}{\sin(\pi/5)}=\frac{2L}{\sqrt5}.
+$$
+
+Pairing residues $1,4$ and $2,3$ in the quartic series, the
+[cotangent partial fraction expansion](https://dlmf.nist.gov/4.22.E3)
+gives
+
+$$
+L(1,\chi)=\frac\pi5
+  \bigl(\cot(\pi/5)+i\cot(2\pi/5)\bigr),\qquad
+|L(1,\chi)|^2=\frac{2\pi^2}{25}.
+$$
+
+Substitution in $H(1)\sqrt{L(1,\chi_5)|L(1,\chi)|^2}/\sqrt\pi$
+is the constant in (R2).
+
+For completeness the denominator needs no prime theorem. The unique
+positive-unit fundamental cone is $x\ge1, 0\le y<x$, with
+$q=x^2+xy-y^2$. In positive embedding coordinates
+$u_1=\sqrt q\,e^t, u_2=\sqrt q\,e^{-t}$, its range is
+$0\le t<2L$. The Jacobian of $(q,t)\mapsto(u_1,u_2)$ has absolute
+value one; the embedding lattice has covolume $\sqrt5$. Its bounded
+piece $q\le X$ is the $\sqrt X$-dilate of a fixed region with
+piecewise smooth finite-length boundary. Covering the boundary by
+lattice fundamental cells gives
+$A(X)=2LX/\sqrt5+O(\sqrt X+1)$ for all classes. Every class is a
+unique positive integer content times a primitive class, and its norm
+is multiplied by the square of that content. Mobius inversion gives
+$P_*(X)=\sum_{d\le\sqrt X}\mu(d)A(X/d^2)$.
+The absolutely convergent main sum and the harmonic error sum prove
+(R3), including its displayed ratio.
+
+### CM5-PRIME-NORM-FULL-CIRCLE [T]
+
+**Scope and statement.** Retain $F,\phi,L,\mathcal P$ above. Every
+ideal has a totally positive generator; define
+
+$$
+\theta(\mathfrak a)=\frac1{4L}
+ \log\frac{\sigma_1\eta}{\sigma_2\eta}\pmod1,
+\qquad\mathfrak a=(\eta),\quad\eta\gg0.
+$$
+
+Positive units $\phi^{2j}$ shift the coordinate by integers, so it
+is well defined. The corresponding rapidity circle has period $2L$.
+Fix $0<a,b<1/5$, $0<\nu<1/3$, and let
+$h=X^{1-b}$, $r=X^{-a}$,
+$I_X(\theta_0)=\{\theta:\|\theta-\theta_0\|<r\}$.
+Uniformly for all centers, including centers depending on $X$,
+
+$$
+\sum_{\substack{\mathfrak p\ \mathrm{prime},\ N\mathfrak p=p\ \mathrm{prime}\\
+ X\le p<X+h,\ \theta(\mathfrak p)\in I_X(\theta_0)}}\log p
+=2X^{1-a-b}\bigl(1+O_{a,b,\nu}(e^{-c(\log X)^\nu})\bigr),   \tag{R6}
+$$
+
+for some $c>0$. The unweighted number is the right side divided
+by $\log X$, with the same form of relative error. Under the fixed
+CM dictionary these are distinct primitive polarization classes of
+type $(1,p)$. Conjugate ideals are counted separately. This is an
+unconditional application of the cited analytic theorems below; it does
+not identify this family with a decoder forced by an original operator.
+
+**Proof and external input.** For $m\in\mathbb Z$, put
+$\epsilon_m=m\bmod2\in\{0,1\}$, $\mu_m=\pi m/(2L)$, and
+
+$$
+\Xi_m((\alpha))=\operatorname{sgn}(N_F\alpha)^m
+ \left|\frac{\sigma_1\alpha}{\sigma_2\alpha}\right|^{i\mu_m}.
+$$
+
+Multiplication by $\pm\phi^j$ introduces two factors
+$(-1)^{mj}$, so this ideal character is independent of the generator.
+On positive generators it equals $e^{2\pi im\theta}$. Its finite
+conductor is one. The complete family, including odd modes, is exactly
+the rank-one norm-neutral character family on positive principal ideals:
+invariance under $\phi^2$ requires $4Lv\in2\pi\mathbb Z$.
+The narrow class group is trivial, so there is no further class twist.
+Thus $\Xi_1$, rather than its square, is a basis for the family in
+[Khale et al., arXiv:2008.09677v3, Section 1.1](https://arxiv.org/pdf/2008.09677v3).
+
+Write $L_m=L_F(s,\Xi_m)$. The Hecke normalization used here is
+
+$$
+\Lambda_m(s)=5^{s/2}
+ \Gamma_{\mathbb R}(s+\epsilon_m+i\mu_m)
+ \Gamma_{\mathbb R}(s+\epsilon_m-i\mu_m)L_m(s),
+\qquad\Lambda_m(s)=\Lambda_m(1-s).
+$$
+
+For $m\ne0$ this completion and $L_m$ are entire; $L_0=\zeta_F$
+has a simple pole at one. These are the usual Hecke continuation and
+functional equation with their explicit specialization: the real local
+epsilon factors multiply to $(-1)^m$, and the different
+$\mathfrak p_5=(\sqrt5)$, with $\Xi_m(\mathfrak p_5)=(-1)^m$,
+contributes $(-1)^m5^{1/2-s}$. Their signs cancel. Conjugation of
+ideals gives $L_m=L_{-m}$. The local/global functional equations in
+[Poonen, Tate's thesis, Theorems 4.18 and 5.22](https://math.mit.edu/~poonen/786/notes.pdf)
+give precisely this completion. Nonzero $m$ is not a pure norm power,
+so its pole exceptions do not occur.
+
+The analytic estimates imported from Khale et al. are Theorems 2.5
+and 2.6, with the full basis just identified, $n=2$, finite modulus
+one and trivial narrow-class twist:
+
+$$
+\sum_{|m|\le T}N_m(\sigma,T)
+ \ll T^{5(1-\sigma)}(\log T)^B,
+$$
+
+and a zero-free width of order
+$(\log V)^{-2/3}(\log\log V)^{-1/3}$,
+$V=\max(|m|,|\Im s|)$, outside bounded parameters. A possible
+exceptional zero belongs to the fixed principal mode. Their Lemma 2.7
+supplies a per-mode local zero count $O(\log(2+|t|+|m|))$.
+These are classical theorem inputs, not claims of a new proof of their
+zero-density estimates.
+
+Choose $\max(a,b)<\tau'<\tau<1/5$, $M=\lfloor X^\tau\rfloor$,
+and $u=X^{1-\tau'}$. Smooth radial minorants and majorants $g^\pm$
+of the window, with transition width $u$, are nonnegative, supported
+in $[X/2,2X]$, and have integrals $h+O(u)$. Their Mellin transforms
+$G^\pm$ satisfy, for $0\le\sigma\le1$,
+
+$$
+|G^\pm(\sigma+it)|\ll hX^{\sigma-1},\qquad
+|G^\pm(\sigma+it)|\ll_\ell
+hu^{-\ell}X^{\sigma+\ell-1}(1+|t|)^{-\ell}.
+$$
+
+Periodic interval majorants/minorants of degree $M$ have coefficients
+$c_0^\pm=2r+O(M^{-1})$ and $ |c_m^\pm|\ll r+M^{-1}\ll r$.
+They are the one-dimensional approximation in Khale et al.,
+Theorem 2.2 and Lemma 2.3. Translation of the center changes only
+coefficient phases. Positivity sandwiches the desired von Mangoldt
+ideal sum between the two products $g^\pm F^\pm$. A potentially
+negative angular minorant is harmless, because its radial factor is
+nonnegative and supported inside the window.
+
+Mellin inversion of $-L'_m/L_m$, followed by a contour shift, gives
+
+$$
+\sum_{\mathfrak a}g(N\mathfrak a)\Xi_m(\mathfrak a)
+ \Lambda_F(\mathfrak a)
+=\mathbf1_{m=0}G(1)-\sum_{\rho\ \mathrm{nontrivial}}G(\rho)-T_m(G),
+$$
+
+where $\Lambda_F(\mathfrak p^j)=\log N\mathfrak p$.
+The contour can be chosen separately for each mode; no simultaneous
+zero gap for all modes is used. For nonzero modes,
+$T_m(G)=\sum_{k\ge0}\{G(-\epsilon_m-2k+i\mu_m)+
+G(-\epsilon_m-2k-i\mu_m)\}$; for zero mode it is
+$G(0)+2\sum_{k\ge1}G(-2k)$. These exact multiplicities follow
+from the gamma factors and nonvanishing on $\Re s=1$. The latter
+also follows directly from
+
+$$
+\zeta_F(\sigma)^3|L_m(\sigma+it)|^4
+ |L_{2m}(\sigma+2it)|\ge1\quad(\sigma>1)
+$$
+
+using $3+4\cos v+\cos2v\ge0$; the pole order three cannot
+compensate a zero of order at least four. The principal case at $t=0$
+has its pole instead. Hence finitely many bounded-parameter zeros have
+a fixed positive distance from the line one.
+
+Let $Z=\sum_{|m|\le M}\sum_{|\Im\rho|\le M}X^{\Re\rho-1}$,
+with only nontrivial zeros. Functional-equation symmetry bounds this
+by twice the part $\Re\rho\ge1/2$. Set
+$\eta_M=c_0(\log M)^{-2/3}(\log\log M)^{-1/3}$.
+The identity
+$X^{\beta-1}=X^{-1/2}+(\log X)\int_{1/2}^{\beta}X^{\sigma-1}d\sigma$,
+the cited density bound, and the zero-free width imply
+
+$$
+Z\ll X^{-1/2}M^{5/2}(\log M)^B+
+(\log X)(\log M)^B
+\int_{1/2}^{1-\eta_M}X^{-(1-5\tau)(1-\sigma)}d\sigma
++O(X^{-\kappa})
+\ll e^{-c(\log X)^\nu}.
+$$
+
+This includes any fixed exceptional zero in the last term. It costs
+$O(rh e^{-c(\log X)^\nu})$ in the Fourier sum. For the high zeros
+the per-mode local count and repeated Mellin integration by parts give
+
+$$
+\sum_{|m|\le M}|c_m|\sum_{|\Im\rho|>M}|G(\rho)|
+\ll_\ell rh X^{2\tau-\ell(\tau-\tau')}\log X.
+$$
+
+Choose $\ell>2\tau/(\tau-\tau')$. The trivial-zero contribution
+is $O(rhM/X)$, since the support of $g$ gives
+$|T_m(G)|\ll h/X$ uniformly. The main term is
+$c_0G(1)=2rh+O(rh(X^{a-\tau}+X^{b-\tau'}))$.
+Every extra error is a negative power of $X$ relative to $rh$.
+The sandwich therefore proves the same asymptotic for the sharp ideal
+von Mangoldt sum.
+
+Proper prime-ideal powers and prime ideals of residue degree two have
+total weight $O(\sqrt X\log^2X)$ up to norm $2X$, by summing
+$\log p$ over $p^j\le2X$, $j\ge2$. This is negligible compared
+with $rh=X^{1-a-b}$, since $a+b<2/5$. Removing them proves (R6).
+On the remaining interval $\log p=\log X+O(X^{-b})$, giving the
+unweighted formula. All estimates were independent of the center.
+Endpoint changes are harmless: two prime-norm ideals with equal angle
+have positive generators whose quotient, after a positive unit change,
+has equal embeddings, hence is positive rational. Its squared value is
+a ratio of rational primes, forcing the same prime and the same ideal.
+Each angular endpoint thus contributes at most one ideal.
+
+The result concerns the full $2L$ circle for the strict bounds
+$a,b<1/5$. It does not extend the projected-circle exponent $0.235$
+to the full circle, include endpoint exponents $1/5$, or assert
+integral reachability of every prime-norm class. At a symmetric arc
+around $0$ or $1/2$, conjugate ideals occur together; replacing
+class counts by distinct rational-prime counts then requires division
+by two. No such division occurs in (R6).
+
 ## 5. The force is the curvature
 
 The finite Weyl commutator is exact on all five basis states
@@ -15651,6 +20615,22 @@ alpha* = 1/p and the strong root is 1 x 3/4 x 1 = 3/4; the seed
 ratio EM to strong is 15 : 4. Dark
 energy w = -14/15. Running and scheme are frontier rows
 (ALPHA-S-RUNNING, SCHEME-DICTIONARY).
+
+### RAMIFIED-AREA-WEYL-COVARIANCE [T]
+
+Let O=Z[j]=Z[X]/(X^4+X^3+X^2+X+1), J=1+j² and phi=−j²−j³. On O² define T=diag(J,phi) and omega((a,b),(c,d))=ad−bc. In the quotient O/(1−j), identify the residue of an integer with its class in F5. Separately choose the complex embedding j=exp(2pi i/5), V=C⁵ with basis |k>, k in F5, and
+
+    Z|k>=j^k|k>, X|k>=|k+1>, D|k>=|3k>,
+    W(a,b)=Z^a X^b.
+
+**Theorem.** The specified reciprocal map satisfies omega(T^n u,T^n v)=j^n omega(u,v) for every integer n; T⁵ preserves omega. Its ramified reduction is A=diag(2,3) in SL2(F5). The selected Weyl realization implements A exactly:
+
+    D W(a,b) D⁻¹=W(2a,3b),
+    W(u)W(v)=j^omega(u,v) W(v)W(u).
+
+The four characters chi_t(a)=j^(ta), t in F5 minus {0}, are distinct faithful additive characters compatible with A-area covariance. The rational diagonal matrices commuting with D are exactly diag(h0,h1,h1,h1,h1); a matrix commuting with both X and Z is scalar.
+
+**Proof.** The cyclotomic relation gives J phi=−(1+j²+j³+j⁴)=j, and J⁻¹=−j−j², phi⁻¹=phi−1. Thus T is an integral automorphism and its determinant gives the stated alternating-form identity, including negative n. Substitution X=1 identifies O/(1−j) with Z/5, where (j,J,phi) maps to (1,2,3); 2·3=1 in F5, so A preserves omega. In the chosen complex representation, D⁻¹|k>=|2k>; evaluation on each basis vector gives DZD⁻¹=Z² and DXD⁻¹=X³. Also ZX=jXZ, hence W(a,b)W(c,d)=j^(−bc)W(a+c,b+d), which gives the displayed commutator and conjugation. Each nonzero t yields a distinct faithful character because its value on 1 is j^t; invariance follows from omega(Au,Av)=omega(u,v). Finally multiplication by 3 on F5 has orbits {0} and {1,3,4,2}, proving the diagonal-cost classification. The five eigenvalues of Z are distinct, so a matrix commuting with Z is diagonal; commuting also with X makes all diagonal entries equal. In particular, choosing h0=0 permits any rational h1>=0 in the D-invariant class. These facts do not obstruct the specified representation or select its energy gap.
 
 ## 6. Alpha and the observable register
 
@@ -19355,6 +24335,159 @@ claim. The universal conclusions follow from the proof; the bounded
 exact audit, including its negative controls, is recorded in
 [the target-reconstruction result](../probes/P-RAPIDITY-TARGET-RECONSTRUCTION-1/RESULT.md).
 
+### A declared permanently bound two-stream model
+
+Let G be a real symmetric positive-definite 2 by 2 matrix, Pi a real symmetric matrix, r in R^2 and rho in R^2\{0}. Use the canonical one-form
+
+    theta = tr(Pi dG) + rho^T dr
+
+and fix kappa>0. The explicit Hamiltonian is
+
+    h = K+E+V,
+    K = tr(G Pi G Pi)/2,
+    E = sqrt(rho^T G rho),
+    V = kappa r^T G^(-1)r.
+
+This is the zero-total-momentum reduction of two occupied streams with x1=X+r, x2=X-r, p1=rho/2 and p2=-rho/2 and the positive interaction kappa(x1-x2)^T G^(-1)(x1-x2)/4. The interaction is a declared model input. Frobenius differentiation of the common action gives
+
+    Gdot = G Pi G,
+    Pidot = -Pi G Pi-rho rho^T/(2E)+kappa G^(-1)r r^T G^(-1),
+    rdot = G rho/E,
+    rhodot = -2 kappa G^(-1)r.
+
+Both h and the matrix j=2G Pi+r rho^T are conserved. Indeed, differentiating j makes the stream and interaction terms cancel pairwise; differentiating K,E,V gives respectively -A+Z, A-W and W-Z, where A=rho^T G Pi G rho/(2E), W=2 kappa r^T rho/E and Z=kappa r^T Pi r. Put delta=det j-(tr j)^2/4.
+
+**RELATIONAL-ELLIPTIC-BOUND-PAIR [T].** Every initial point with delta>0 has a unique complete trajectory for all real time. With h=h0 its proper pair separation d=2 sqrt(r^T G^(-1)r) satisfies
+
+    4 sqrt(delta)/h0 <= d <= 2 sqrt(h0/kappa),
+    E >= 2 sqrt(kappa delta/h0)>0.
+
+These bounds hold uniformly in a neighborhood whose delta is bounded away from zero and whose energy is bounded above.
+
+**Proof.** Whiten by B=G^(1/2)Pi G^(1/2), y=G^(-1/2)r and q=G^(1/2)rho. Then jhat=G^(-1/2)jG^(1/2)=2B+yq^T. Writing jhat=[[s+u,v+a],[v-a,s-u]], symmetry of B gives 2a=y1q2-y2q1 and delta=a^2-u^2-v^2. Therefore
+
+    E^2 V=kappa |q|^2 |y|^2 >=4 kappa delta.
+
+Since K,E,V are nonnegative and no larger than h0, this proves the displayed lower bounds and the upper separation bound. Also ||B||op<=sqrt(2h0), hence -cG<=Gdot<=cG with c=sqrt(2h0). On every finite time interval, G and G^(-1) are bounded. Energy then bounds Pi,r,rho, while the positive lower bound for E keeps rho away from zero. Thus no finite endpoint reaches either boundary of the smooth vector-field domain; local uniqueness and continuation give a complete flow. The uniform neighborhood statement follows by continuity of delta and h. This theorem concerns the reduced P=0 sector; it does not assert arbitrary nonzero-P stability.
+
+### A stable periodic rest minimum
+
+**RELATIONAL-STABLE-REST-ORBIT [T].** At kappa=3 and the exact charge
+
+    j* = [[0,4],[-2,0]],
+
+the global minimum of h is ten. It is attained at
+
+    z* = (G=I, Pi=[[0,-1],[-1,0]], r=e1, rho=6e2).
+
+The solution through z* has proper separation two, period sqrt(2) pi and nonlinear orbital stability on the exact fixed-j* level modulo the centralizer Z(j*) in GL(2,R).
+
+**Proof.** For a traceless elliptic charge, define in the whitened variables z=y^Tq, w=|y||q|, a=|y1q2-y2q1|/2 and b=sqrt(a^2-delta). Orthogonal decomposition into scalar and traceless symmetric parts and the reverse triangle inequality give
+
+    K >= z^2/16+(w/2-b)^2/4.
+
+Since w^2=z^2+4a^2 and E+V=E+kappa w^2/E^2,
+
+    h >= f(a) = 3 kappa^(1/3)a^(2/3)
+                         +(a-sqrt(a^2-delta))^2/4,
+    a >= sqrt(delta).
+
+Its stationary equation, with u=sqrt(1-delta/a^2), is delta^2(1-u)^4=64 kappa u^3(1+u)^2. The left side strictly decreases and the right side strictly increases on 0<u<1. Since f' tends to minus infinity at the lower endpoint and f tends to infinity, this gives the unique global minimum. At kappa=3,delta=8 it occurs at a=3,b=1; all inequalities are saturated at z* and h=1+6+3=10.
+
+Set Omega=[[0,-2],[1,0]], A(t)=exp(t Omega). The explicit trajectory is
+
+    G=A A^T, Pi=A^(-T)Pi* A^(-1),
+    r=A r*, rho=A^(-T)rho*.
+
+At t=0 its derivatives satisfy the displayed Hamilton equations; GL covariance and [Omega,j*]=0 prove this for all t. Omega^2=-2I gives the full labeled period sqrt(2)pi. At half the period r and rho change sign, so the full state has not returned.
+
+The equality conditions in the bound characterize the entire minimum set as Z(j*)z*. To see compactness of sublevels modulo that group, write j*=nu S R S^(-1) with nu=sqrt(8), S=diag(sqrt(2),1) and R=[[0,1],[-1,0]], and put Gbar=S^(-1)G S^(-T). Then
+
+    ||G^(-1/2)j*G^(1/2)||F^2
+       =nu^2(lambda1(Gbar)/lambda2(Gbar)+lambda2(Gbar)/lambda1(Gbar)).
+
+The left side is bounded on an energy sublevel by jhat=2B+yq^T. Scalar matrices lie in Z(j*), allowing det Gbar=1. Consequently G,G^(-1),Pi,r,rho have compact normalized sublevels inside the smooth domain. If arbitrarily small positive h-10 sublevels escaped a neighborhood of the minimum orbit in the quotient, normalized convergent representatives would limit to a minimum outside that neighborhood, a contradiction. Conservation of h-10 proves the stated stability. It does not assert attraction or position stability against free rescaling.
+
+### The original full center has a precise transport boundary
+
+Restore canonical X,P and the original full Hamiltonian
+
+    H_old=K+(|P+rho|G+|P-rho|G)/2+V,
+    J=j+XP^T,
+
+where |v|G=sqrt(v^TGv) and the smooth domain excludes P+rho=0 and P-rho=0. P,J,H_old are conserved and jdot=-Xdot P^T.
+
+**RELATIONAL-OLD-CENTER-TRANSPORT-BOUNDARY [T].** Every forward-complete smooth finite-energy trajectory at P!=0 has finite total longitudinal displacement and zero longitudinal mean velocity:
+
+    integral_0^infinity E_P Xdot^T G^(-1)Xdot dt < infinity,
+    lim_(T->infinity) P^T[X(T)-X(0)]/T=0,
+
+where E_P=(|P+rho|G+|P-rho|G)/2.
+
+**Proof.** For u=G^(1/2)P, q=G^(1/2)rho, a=|u+q|, b=|u-q| and n_+=(u+q)/a,n_-=(u-q)/b,
+
+    P^T Xdot=E_P |(n_++n_-)/2|^2
+            =E_P Xdot^T G^(-1)Xdot>=0.
+
+The triangle inequality gives |q|<=E_P, so at H_old=H0
+
+    |tr j|<=4sqrt(H0)+H0sqrt(H0/kappa)=C.
+
+Since P^TX=tr J-tr j, longitudinal displacement is monotone and bounded by 2C. Integration proves the assertion. This does not exclude transverse drift or all possible bound trajectories. It explains why the following moving model changes the center Hamiltonian explicitly.
+
+### An explicit stable moving completion and model inertia
+
+Declare a fixed SPD inverse metric gamma, c>0 and a separate canonical center X,P while retaining the intrinsic system above. Set
+
+    H=sqrt(h^2+c^2P^T gamma P).
+
+**RELATIONAL-DECLARED-BOOST-INERTIA [T].** On the intrinsic elliptic sector delta>0, this declared model has complete bound free trajectories and an explicit stable moving minimum family
+
+    E*(P)=sqrt(100+c^2P^T gamma P),
+    z(t)=z*((10/E*)t), Xdot=c^2gamma P/E*.
+
+Stability is on fixed intrinsic j*,P modulo the inherited intrinsic symmetry and center translations. Its energy curvature and rest acceleration under a declared center force give the same model mass m=10/c^2.
+
+**Proof.** Since h and P are constant, the intrinsic vector field is (h/H)X_h and the center velocity is c^2gamma P/H. Thus free intrinsic motion is a constant time-rescaling of the complete h-flow. At fixed j*,P, H strictly increases with h, so the same minimum set and conserved h-10 establish the stated quotient stability. Expanding E* gives 10+(c^2/20)P^Tgamma P+O(|P|^4). For H_total=H+W(X,t), f=-grad W gives
+
+    Xddot=(c^2gamma/H-c^4(gamma P)(gamma P)^T/H^3)f,
+
+which at rest is gamma f/(h/c^2). A smooth compactly supported force pulse from P=0 has the exact preparation P(t)=integral f, intrinsic clock tau(t)=integral 10/H(t), and z=z*(tau). It keeps the intrinsic minimum unchanged and yields work Delta H=integral Xdot^T f dt. The pulse and gamma,c are specified inputs.
+
+The law has actual canonical planar Poincare generators. In orthonormal coordinates x=gamma^(-1/2)X,p=gamma^(1/2)P, put R=[[0,-1],[1,0]], S=tr(jR), ell=x1p2-x2p1 and
+
+    L=ell+S, K=(H/c^2)x-SRp/(H+h).
+
+With epsilon12=1, direct Poisson differentiation gives {Ki,pj}=deltaijH/c^2, {Ki,H}=pi, {K1,K2}=-L/c^2, {L,pi}=epsilonijpj and {L,Ki}=epsilonijKj. The nontrivial spin contribution to the boost bracket is (2HS/c^2)(f+qf_q)=-S/c^2 for f=-1/(H+h), q=p^2. The exact Casimirs are H^2-c^2p^2=h^2 and HL-c^2(K1p2-K2p1)=hS.
+
+Within the expressly restricted class H=F(h,q), F(h,0)=h,F>0,F_h>0, the boost premises {Ki,pj}=deltaijH/c^2, {Ki,H}=pi and {Ki,h}=0 force 2FF_q=c^2, hence this same H. This conditional uniqueness within a declared class is optional evidence, not a requirement for the existence theorem. No uniqueness across all readings is asserted. The old simultaneous active GL charge j+XP^T is not conserved in the fixed-gamma model; its derivative is c^2gamma PP^T/H.
+
+### Closed recoil and a finite-clock mass ratio
+
+At the same kappa=3 there is a second stable intrinsic minimum
+
+    G_B=I, Pi_B=[[0,-3],[-3,0]], r_B=2e1,rho_B=24e2,
+    j_B=[[0,42],[-6,0]], delta_B=252,
+    (K_B,E_B,V_B,h_B)=(9,24,12,45).
+
+The preceding sharp bound applies with a=24,b=18: f'(24)=0, f(24)=45 and all equality conditions are attained. Its relative-equilibrium generator [[0,-7/2],[1/2,0]] gives the exact labeled period 4pi/sqrt(7), and the same centralizer compactness argument proves fixed-charge quotient stability.
+
+**RELATIONAL-CLOSED-RECOIL-RATIO [T].** Two such stable objects with h_A=10 and h_B=45, each using the common declared dispersion, admit a complete autonomous finite-energy recoil preparation. A specified finite common reference and calibrated intrinsic clocks read the exact model inertia ratio m_B/m_A=9/2.
+
+**Proof.** Use H_AB=epsilon_A+epsilon_B+W(X_A-X_B), epsilon_i=sqrt(h_i^2+c^2P_i^Tgamma P_i), with smooth nonnegative bounded finite-range repulsive W and bounded force. Then h_i,j_i and total P_A+P_B are conserved; intrinsic motion remains the original bound orbit with clock rate a_i=h_i/epsilon_i. Energy bounds both momenta and center speed is bounded, so the interacting flow is complete. For the explicit radial potential and gamma=I below, the bodies start at rest under a nonzero outward force and remain on the common radial line. After a short positive time their outward momenta are positive and nondecreasing until exit, so separation reaches the edge of the finite-range interaction in finite time. If initial W=w and M=h_A+h_B+w, outgoing momenta are opposite and
+
+    epsilon_A=(M^2+h_A^2-h_B^2)/(2M),
+    epsilon_B=(M^2+h_B^2-h_A^2)/(2M),
+    v_A=c^2gamma p/epsilon_A, v_B=-c^2gamma p/epsilon_B.
+
+Therefore |v_A|a_B/(|v_B|a_A)=h_B/h_A=9/2 in any common vector norm. A finite spectator C on the h_C=10 minimum with P_C=0 has constant center and tau_C=t; using relative positions against C supplies the two velocities and common clock without inserting a measured mass of C.
+
+For c=1,gamma=I and Q=|X_A-X_B|^2, choose W=22exp[1/3-Q/(1-Q)] for Q<1 and zero otherwise. Initial separation e1/2 gives w=22, total AB energy 77, outgoing energies (26,51), opposite momenta of length24, speeds (12/13,8/17) and calibrated clock rates (5/13,15/17). Thus the ratio is exactly9/2. The exact checks are 26^2-24^2=10^2, 51^2-24^2=45^2 and 26+51=77.
+
+For a free covariant center reading use Y=x+c^2S Rp/(h(H+h)). It has {Y_i,H}=c^2p_i/H, {Y_i,K_j}=Y_jp_i/H and {Y1,Y2}=c^2S/(hH). Its free shift from x is constant, so the velocity ratio is unchanged. The interaction above uses canonical X; interacting Lorentz locality is not asserted. Clock rates require a calibrated finite phase-tracking window or retained cycle history. An instantaneous periodic state alone is not an unbounded clock.
+
+These theorems establish existence and correctness of the specified models, preparations and readings. They neither require nor establish that U uniquely forces the declared Hamiltonian, physical clock calibration, species assignment, detector coupling, SI mass or equality of inertial and gravitational mass.
+
 ## 11. The pentit ring and the magic boundary
 
 In F_25 = F_5[tau]/(tau^2 - 2), the ramified images are J = 2 and
@@ -20480,6 +25613,170 @@ compatible with the frozen action and observables; negative closure requires
 an exhaustive exact classification yielding no lift or more than one
 inequivalent lift under every registered constraint.
 
+### DECLARED-CONTACT-MERIDIAN-ALGEBRA [T]
+
+**Scope.** The following statements concern exact permutations of the
+specified finite carriers. They distinguish the group of fixed words in
+six one-cell operations from an explicitly enlarged two-cell interface.
+The carrier and the chosen operations are the premises of this
+existence theorem.
+
+Work over F5. A complete cell is x=(p1,p4,p1p,p4p,q,r), with
+p=(p1,p4,p1p,p4p). Define the permutations
+
+    a(x)=(p4,p1,p4p,p1p,q,r),
+    b(x)=(-p1p,-p4p,-p1,-p4,-q,-r),
+    c(x)=(-p1p+2,-p4p+1+r,-p1+2,-p4+1-r,1-q,-r),
+    d(x)=((2,1,3,4)-p,1-q,1-r),
+    e(x)=((2,1,3,4)-p,2-q,1-r).
+
+Applying any one of these five maps twice gives x, so each is
+a permutation of the complete cell.
+
+Supply the additional involution Ucal(p,q,r)=(p,q,P_q(r)),
+where P_q acts on the ordered set (0,1,2,3,4) as follows:
+
+| q | P_q |
+|---|---|
+| 0 | (0,2,1,3,4) |
+| 1 | (0,1,2,3,4) |
+| 2 | (2,1,0,3,4) |
+| 3 | (1,0,2,3,4) |
+| 4 | (1,0,2,3,4) |
+
+Composition is from right to left. Let
+Gamma_plus=<a,b,c,d,e,Ucal> be the group of their complete
+permutations on F5^6. It contains every finite fixed word and its
+inverse; the word can have arbitrary length but is selected
+independently of the input state.
+
+There is an exact S3 subgroup generated by M=Ucal and
+N=e Ucal e. Both fix p and q, and
+
+    M_q=P_q,                 N_q(r)=1-P_(2-q)(1-r).
+
+The complete transposition table is
+
+| q | M_q | N_q |
+|---|---|---|
+| 0 | (1 2) | (1 4) |
+| 1 | I | I |
+| 2 | (0 2) | (0 4) |
+| 3 | (0 1) | (0 1) |
+| 4 | (0 1) | (0 1) |
+
+Consequently M²=N²=(MN)³=I and MNM=NMN on the entire
+carrier, including occupied r registers. These relations give
+at most six elements: put t=MN, so t³=I, M²=I and
+MtM=t^(-1), reducing every word to t^i or t^i M.
+The q=0 fiber realizes all six distinct permutations of
+{1,2,4}, so the complete generated group is exactly S3.
+In particular it is a noncyclic image of the abstract braid
+presentation <s,t | sts=tst>, with both generators of order two.
+
+Nevertheless every homomorphism
+
+    rho:SL2(F5) -> Gamma_plus
+
+kills the central matrix -I. Thus this fixed-word group contains
+no faithful copy of SL2(F5), the binary icosahedral group
+identified in COLOR-CORE-2I.
+
+Here is a proof for all fixed words, without a word-length search.
+Every element of Gamma_plus has the form
+
+    q'=epsilon q+k,
+    r'=pi_q(r),
+    p'=L p+t(q,r),
+
+where epsilon is ±1, k is in F5, each pi_q is a permutation
+of F5, t:F5²->F5^4, and L is independent of p,q,r.
+The possible L lie in the abelian group generated by
+
+    A_p(p)=(p4,p1,p4p,p1p),
+    B_p(p)=(-p1p,-p4p,-p1,-p4), and -I4.
+
+These are commuting involutions. Each named generator has
+this form; in particular c has translation
+(2,1+r,2,1-r), so its r-dependence is retained. Composition
+and inversion preserve the form: in a product F G the
+translation is L_F t_G(q,r)+t_F(q_G,r_G).
+The q action lies in the solvable dihedral group of order ten.
+After projecting simultaneously to (q,r,L), the kernel consists
+of p translations t(q,r), a subgroup of the additive group
+(F5^4)^(F5²). This kernel has exponent five.
+
+Put G=SL2(F5). It is perfect. To prove this directly, let
+u(t)=[[1,t],[0,1]], l(t)=[[1,0],[t,1]] and H=diag(2,3).
+Using comm(A,B)=ABA^(-1)B^(-1),
+
+    comm(H,u(t))=u(3t),           comm(H,l(t))=l(3t).
+
+The elementary matrices generate G: row additions eliminate
+the lower-left and upper-right entries whenever the first pivot
+is nonzero; a row interchange handles a zero pivot. All needed
+diagonals are elementary products, since
+
+    w(a)=u(a)l(-a^(-1))u(a)
+        =[[0,a],[-a^(-1),0]],
+    w(a)w(-1)=diag(a,a^(-1)).
+
+As 3 is invertible, every elementary generator is a commutator.
+Therefore G=[G,G].
+
+Every homomorphism G->S5 kills -I. Its image is perfect and
+has trivial sign, hence lies in A5. If the image of -I were
+nontrivial, it would be a double transposition. As -I is
+central, the whole image would lie in its centralizer in A5.
+For (1 2)(3 4) that centralizer is the four-element group
+{I,(1 2)(3 4),(1 3)(2 4),(1 4)(2 3)}: a commuting
+permutation fixes the unique fixed letter5, and the even
+elements in the eight-element centralizer on the other four
+letters are precisely these. It is abelian, contradicting a
+nontrivial perfect image.
+
+Now rho(G) has trivial projection to both the abelian L group
+and the solvable q group, since a perfect solvable image is
+trivial. It fixes each q fiber and gives five homomorphisms
+G->S5 on r. Each kills -I by the preceding argument.
+Thus rho(-I) lies in the exponent-five p-translation kernel,
+while its order divides two. It is the identity, as claimed.
+This argument concerns homomorphisms into Gamma_plus. It
+does not automatically classify arbitrary quotient groups of
+Gamma_plus, state-selected programs, or additional interfaces.
+
+There is a complementary positive construction on two complete
+cells x,y in F5^6. Explicitly supply the full-cell shears
+
+    C0(x,y)=(x+2y,y),
+    D0(x,y)=(x,y+2x).
+
+On the cell index these are the matrices
+C0=[[1,2],[0,1]] and D0=[[1,0],[2,1]]. Direct multiplication gives
+
+    C0 D0 C0=D0 C0 D0=[[0,2],[2,0]],
+    C0^5=D0^5=I,
+    (C0 D0)^3=-I.
+
+Their powers include every upper and lower elementary matrix,
+since 2 generates the additive group F5. The elimination above
+therefore proves <C0,D0>=SL2(F5). Its order is 120: there
+are 24 nonzero choices for the first column, and exactly five
+choices of second column with determinant one. Its action on
+the pair of complete cells is faithful. Indeed, evaluating an
+index matrix on (v,0) and (0,v), for any nonzero cell vector v,
+recovers both columns. In particular -I sends (x,y) to
+(-x,-y) and is nontrivial. The shears preserve x wedge y by
+bilinearity and alternatingness of the exterior product.
+
+Thus the specified two-cell interface has a faithful order-five
+braid-generator pair with nontrivial central involution, whereas
+the six specified one-cell fixed-word operations cannot supply
+such a faithful group action. These are statements about two
+explicitly different operation classes. A faithful algebraic
+action alone does not supply a spatial embedding or topological
+stability of a knot.
+
 ## 13. Gravity and cosmology
 
 The bridge law alpha B g = 1; G proportional to alpha^20 with the
@@ -21262,6 +26559,622 @@ emission theorem.
 The exact proof is the complete construction and first-variation argument
 above, together with the separately proved K1 bound in this Canon. No
 external draft or numerical source fixture is a premise of this closure.
+
+### Explicit source, reversible occupied record and finite funding
+
+Let O=Z[j], where 1+j+j²+j³+j⁴=0 and conjugation sends j to j⁻¹. Put phi=−j²−j³, J=1+j², A=diag(J,phi), B(q)=[[1,q],[0,1]]. Herm_2(O) has eight integer coordinates: for H=[[a,c],[c*,d]], write a=a0+a1 phi, d=d0+d1 phi, c=sum_(i=0)^3 c_i j^i. Define
+
+    N(H)=Tr_(Q(j)/Q)(tr(H²))
+        =4a0²+4a0a1+6a1²+4d0²+4d0d1+6d1²
+         +10sum_i c_i²−2(sum_i c_i)².
+
+The full core x=(s,q,H,R,Z,p) has s,q in Z, H,R,Z in Herm_2(O), and phase p in Z/6. At phases0,…,5, respectively, apply
+
+    (s,q) <- (s−q,s),
+    H <- B(−q) H B(−q)†,
+    H <- A⁻¹ H A⁻†,
+    H <- B(q) H B(q)†,
+    H <- A H A†,
+    Z <- Z+H−R,
+
+then increment phase modulo6; unmentioned coordinates are retained. This is one autonomous bare map T. Its declared positive account is
+
+    E(x)=1+s²−sq+q²+N(H)+N(R)+N(Z).
+
+For b>=0 and epsilon=±1, attempt y=T^epsilon x. Accept with bank b'=b+E(x)−E(y) if b'>=0; otherwise retain x,b and reverse epsilon. Denote this full transition F and direction reversal Rev.
+
+**INTEGER-HERMITIAN-OCCUPIED-SOURCE [T].** T and F are bijections on their complete declared carriers, F⁻¹=Rev F Rev, E+b is conserved, and every fixed-total-account shell is finite with purely periodic complete F orbits. On the two ready states
+
+    s=a in {−1,+1}, q=0, H=R=diag(0,1),
+    Z=Z0=[[1,j],[j*,1]], p=0, epsilon=+1,
+
+both with the same initial bank772 and core account26, six accepted microsteps produce an occupied record whose fixed reading coeff_j(Z01)−1 is exactly a. The sharp required banks are716 and772, respectively; final banks at common bank772 are56 and0. The old detector state remains exactly recoverable.
+
+**Proof.** The identities phi²=phi+1, phi⁻¹=phi−1, J⁻¹=−j−j² and J phi=j show that every transport and its inverse are integral. The source kick has inverse(s',q')↦(q',q'−s'), and the last gate has inverse Z↦Z−H+R. The phase identifies the preceding gate, so T is a bijection. Accepted funded edges reverse with bank exactly b. A rejected edge yields the same rejection when tested in the reversed inverse construction, proving F⁻¹=Rev F Rev. Both branches preserve E+b.
+
+The displayed trace polynomial gives N(H)>=2||H_8||², since (sum c_i)²<=4sum c_i² and each diagonal pair is at least2(a0²+a1²). Also s²−sq+q²>=(s²+q²)/2. Thus every fixed E+b shell has finitely many integer states; its bijection F is a finite permutation.
+
+Write v=J/phi−1=−2+j−j² and w=v v*=9−5phi. The four transport gates compose to C_q=A B(q) A⁻¹ B(−q)=[[1,qv],[0,1]]. After the source kick q=a, so H_final=[[w,av],[av*,1]] and
+
+    Z_final=[[1+w,j+av],[j*+av*,1]].
+
+The j coefficient changes from1 to1+a, proving the source reading. Direct trace reduction gives N(H) through the four transport gates as16,36,120,350; N(Z0)=16 and N(R)=4. At the last gate N(Z_final)=414+28a, since Tr(w)=26, Tr(w²)=294 and Tr(jv*+j*v)=14. Hence the full prefix account lists are
+
+    a=−1: 26,26,38,58,142,372,742;
+    a=+1: 26,26,38,58,142,372,798.
+
+Their prefix maxima prove the sharp banks and final balances. The inverse last gate reconstructs Z_old=Z_final−H_final+R without overwriting any source/reference coordinate. This theorem uses all Hermitian detector states: positive cost N does not require a positive-semidefinite detector matrix. The occupied a=+1 output may be indefinite.
+
+### A primitive integer sourced metric reader
+
+Let m=324, e=(1,1,1,1,1), ell=(1,−1,0,0,0), and let S shift five cyclic sites. Put
+
+    C=460I+29(S+S⁻¹)+65(S²+S⁻²), L=2I−C/m.
+
+Extend the preceding core by P,Q in Z⁵ and k>=1, replace the phase set by Z/7, and retain the same first six gates. At phase6, read the retained source coefficient chi=coeff_j((H−R)01) and set, for the fixed coupling lambda in {0,1},
+
+    P'=CP−a(k)Q+2lambda chi ell, Q'=P, k'=k+1,
+    a(1)=m, a(k)=m² for k>=2.
+
+Increment phase modulo7. The full core now has38 coordinates and the funded carrier40. Its account is E_field=E+k+||P||²+||Q||². Use the same domain-and-bank reflection, with undefined backward core moves refused.
+
+For any listed word
+
+    w in {0010,0011,0100,0101,0110,1001,1010,1011,1100,1101},
+
+set u_t=w_(t+2)−w_t for t=0,1, read site indices modulo5, and let P_t be the two-one vector at sites u_t,u_t+1. Initialize P=P1,Q=P0,k=1 and the preceding ready source, now allowing a=0 as well. Let D0=2 and D_n=2m^(n−1) for n>=1. The metric reading at a reached field counter n is
+
+    h_n=P_n/D_n,
+    g_n(r)=diag(−1,1+h_n(r),1−h_n(r),1).
+
+The free K1 theorem already in Canon gives sum h_n^free=1 and −59/100<h_n^free(r)<99/100 for these ten initial words at all counters. It is the sole imported analytical bound below.
+
+**INTEGER-PRIMITIVE-SOURCED-METRIC [T].** The extended core map is injective with its exact stated congruence inverse, and its funded completion is a total bijection conserving E_field+b with finite shells. The current-state reader reproduces exactly
+
+    (Delta_c²+L)h_n=lambda chi_n ell/m^n,
+    chi_n=a(1,2,2,1,0,0) periodically.
+
+For every integer forcing sequence lambda chi_n, the minimal common denominator is exactly d_n=2m^(n−1) at n>=1. On the ready-source histories the displayed metric is Lorentzian at every reached counter, including retraced funded prefixes. At equal word and reached counter2, source signs±1 with lambda1 give the nonzero exact difference h_2^(+)−h_2^(−)=ell/162. Thus this specified occupied source, exact integer transition and primitive reader produce a definite sourced metric response.
+
+**Proof.** The six source inverses are already explicit. A candidate field image(P',Q',k',0) has a predecessor precisely when k'>=2 and every coordinate of CQ'−P'+2lambda chi ell is divisible by a(k'−1). The unique predecessor has P=Q', Q=(CQ'−P'+2lambda chi ell)/a(k'−1), k=k'−1, phase6; chi remains available because the field gate retained H,R. Distinct output phases cannot collide. Domain-and-bank reflection therefore satisfies the preceding two inverse compositions. Properness of E_field gives finite shells. The height7(k−1)+p strictly increases under bare forward gates, so every admitted component of L vertices is a path and its full reflected period is2L.
+
+The successive loop parameters are a,a,0,−a,−a,0, so the cumulative shears are a,2a,2a,a,0,0. Because C_q C_t=C_(q+t) and coeff_j(v)=1, the source coefficient is exactly the displayed chi_n. Dividing the first field step by D2 and subsequent ones by D_(n+1) gives the displayed rational recurrence. Since e^TC=2m e^T and e^Tell=0, induction gives sum P_n=D_n.
+
+Modulo2, C=J5+I, all P_n have even sum and the other terms are even; hence P_n=P1 modulo2 for n>=1. Thus at least one numerator is odd. Modulo3, C=−I−J5. Select a site r* among2,3,4 outside the two-one support of P1; ell(r*)=0. The first step gives P2(r*)=1 modulo3. For n>=2, sum P_n=D_n=0 modulo3, so P_(n+1)(r*)=−P_n(r*) modulo3 and this entry never vanishes. Since D_n has only prime factors2,3, no common factor cancels; d_n=D_n. The numerator vector is primitive because its sum is D_n. Consequently any common-integer-pair representation h=Ptilde/Dtilde has Dtilde>=d_n and ||Ptilde||²+Dtilde²>=(6/5)d_n². The actual account does not charge a separately stored denominator, so its own lower bound is E_field>=||P_n||²>=d_n²/5.
+
+On e-perp, L has eigenvalues(235±18sqrt5)/324 in(1/2,1). Writing cos omega=1−mu/2 gives sin²omega=mu(1−mu/4)>3/8, so the zero-initial-data Green operator satisfies ||G_j||<sqrt(8/3). Since |chi1|<=1, later |chi_t|<=2 and ||ell||=sqrt2,
+
+    ||h_n−h_n^free||_infinity
+      <(5/2)(1/m+2sum_(t>=2)m^(−t))
+      =1625/209304<1/125.
+
+Together with the imported free bound this gives −299/500<h_n(r)<499/500 and det g_n(r)=−(1−h_n(r)²)<−999/250000. Reversal retraces the same field readings. Unrestricted integer core states can yield degenerate/non-Lorentz metrics, so this signature conclusion is restricted to ready histories. Finally P2^(+)−P2^(−)=4ell and D2=648 give ell/162. A sufficiently large finite prefix bank exists by the explicit proper account; an unlimited forward history from one finite bank is not asserted.
+
+
+### A reciprocal autonomous action and its exact energy
+
+On five cyclic sites let e=(1,1,1,1,1), ell=(1,-1,0,0,0), m=324, g=1/m and
+
+    C5=460I+29(S+S^(-1))+65(S^2+S^(-2)),
+    L=(648I-C5)/324,
+    V=((L,-g ell),(-g ell^T,1)).
+
+Here S is the cyclic shift. Fix a in {-1,0,1}, f=(0,0,0,0,0,a/4), and a real six-component field x=(h,chi). The declared reduced discrete action is
+
+    A=sum_n (||x_(n+1)-x_n||^2/2-x_n^T V x_n/2+f^T x_n),
+
+with fixed endpoints or finite-support interior variations. It gives exactly
+
+    (Delta_c^2+L)h_n=g chi_n ell,
+    (Delta_c^2+1)chi_n=a/4+g ell^T h_n.
+
+Both kinetic signs are positive and both source/field feedback terms come from the same interaction. Summing the first equation preserves a constant spatial mean when the initial two means agree. The following positive-definiteness assertions restrict to the fixed-mean difference space E=e^perp x R.
+
+**INTEGER-JOINT-ACTION-ENERGY [T].** There is a unique coupled equilibrium x* on every fixed spatial mean. With z_n=x_n-x*, the interaction-inclusive bond quantity
+
+    H_n=||z_n-z_(n-1)||^2/2+z_(n-1)^T V z_n/2
+
+is exactly conserved and positive definite on E x E. The discrete action gives a canonical symplectic kick-and-drift map. Its conserved alternating pairing applies to tangent solutions or solutions centered at the same equilibrium.
+
+**Proof.** On e^perp, the eigenvalues of L are (235+/-18sqrt(5))/324, each twice, between 1/2 and1. The coupling perturbation has norm sqrt(2)/324. Therefore every eigenvalue of V on E lies strictly between0 and2, while its full kernel is span((e,0)). Hence V is invertible on E and gives the unique equilibrium there. For mean sum h=1, define q=8683757; direct substitution yields
+
+    chi*=(a/4)8684010/q,
+    h*=e/5+(a/4)(40986,-40986,5832,0,-5832)/q.
+
+The centered equation is z_(n+1)-2z_n+z_(n-1)+Vz_n=0. For arbitrary slices,
+
+    H_(n+1)-H_n
+      =(z_(n+1)-z_(n-1))^T
+        [z_(n+1)-2z_n+z_(n-1)+Vz_n]/2.
+
+It vanishes on every solution. Put u=z_n-z_(n-1), v=(z_n+z_(n-1))/2. Then
+
+    H_n=u^T(I-V/4)u/2+v^T Vv/2,
+
+which proves positivity on E x E; on the unrestricted two-slice space it is semidefinite because of the constant spatial mode. The one-bond Lagrangian gives p'=p-Vx+f and x'=x+p'. Its derivative is symplectic by direct block multiplication, since V=V^T. For centered solutions the conserved pairing is z_(n-1)^1 dot z_n^2-z_n^1 dot z_(n-1)^2. On uncentered affine solutions its difference is f dot(x_n^1-x_n^2), so conservation of that uncentered expression is not asserted. A symplectic form is alternating, not positive; the positive energy and positive kinetic metric are separate forms. The exact discrete map is not identified with the unit-time continuous flow of H_n.
+
+### A complete integer realization with funding
+
+Let B=m(2I6-V)=((C5,ell),(ell^T,m)), which is integral. An integer core has Z,R in Z^6, D>=1 and a Hermitian matrix H in Herm_2(Z[j]), where 1+j+j^2+j^3+j^4=0. Decode the current and previous fields as Z/D and R/D. Let Y be the sixth coordinate of Z and define
+
+    Z'=BZ-mR+81aD e6, R'=mZ, D'=mD,
+    H'=M(Y'-Y)H M(Y'-Y)^dagger,
+    M(t)=[[1,t(-2+j-j^2)],[0,1]].
+
+**INTEGER-JOINT-FUNDED-REALIZATION [T].** This integer core step is an injection whose exact inverse image is decided by thirteen divisibility conditions. With the proper positive integer account
+
+    Ecore=1+D+||Z||^2+||R||^2+N(H),
+    N(H)=Tr_(Q(j)/Q)(tr(H^2)),
+
+adjoin b>=0 and epsilon in {+1,-1}. Attempt the core step in direction epsilon. If the inverse is undefined or the new bank b+Ecore(x)-Ecore(y) would be negative, fix the core and bank and reverse epsilon; otherwise execute it and update the bank. This is a total bijection. It separately conserves Ecore+b and the decoded H_n. Every fixed-account shell is finite and every complete orbit is periodic.
+
+**Proof.** Dividing the integer step by mD gives exactly the preceding reciprocal field/source equations. A proposed image forces D=D'/m, Z=R'/m and R=(BZ+81aDe6-Z')/m. Thus divisibility of D', the six R' entries and the six final numerators is necessary and sufficient. M(t)^(-1)=M(-t) supplies the occupied Hermitian inverse. There is no overwritten source or pointer.
+
+For H=[[a,c],[c*,d]], write a=a0+a1phi,d=d0+d1phi, phi=-j^2-j^3, and c=sum_(i=0)^3 c_i j^i. Then
+
+    N(H)=4a0^2+4a0a1+6a1^2+4d0^2+4d0d1+6d1^2
+                       +10sum c_i^2-2(sum c_i)^2
+         >=2||(a0,a1,d0,d1,c0,c1,c2,c3)||^2.
+
+This proves properness. An accepted edge is reversed with exactly the old nonnegative bank. A refused edge is again refused after conjugating by direction reversal Rev. Consequently F^(-1)=Rev F Rev on the entire carrier; F itself need not be an involution. Accepted edges preserve both accounts, and refusals change neither decoded slice. Properness makes the fixed Ecore+b shell finite. Along bare forward edges D strictly grows by m, so each component is a path; an L-vertex funded path has period exactly2L including its endpoint reflections. This does not identify arithmetic storage cost with the quadratic field energy or assert an unlimited finite-bank forward trajectory.
+
+### An exact scalar-lapse action and Ward identity
+
+For the same rational symmetric V define
+
+    C=I6-V/2, D=I6-C^2,
+    K=[[0,I6],[-D,0]], M0=((C,I6),(-D,C)),
+    H(q,p)=(p^Tp+q^TDq)/2.
+
+C,D commute and C^2+D=I6. Since0<V<2 on E, D is positive on E and has kernel span((e,0)). Direct block multiplication proves M0 is symplectic and preserves H, K is its Hamiltonian generator and [M0,K]=0. Set
+
+    R(s)=exp(sK), M(s)=M0R(s)=[[U(s),B(s)],[-DB(s),U(s)]].
+
+The block functions are symmetric and commute, U'=-DB, B'=U, U(0)=C, B(0)=I6 and U^2+DB^2=I6. On every regular chart det B(s)!=0, put E(s)=B(s)^(-1), A(s)=E(s)U(s), and
+
+    F_s(q,Q)=(q^TA(s)q+Q^TA(s)Q)/2-q^TE(s)Q.
+
+**SCALAR-LAPSE-EXACT-WARD-FAMILY [T].** F_s is an exact type-1 generating family for M(s), with rational coefficients at every formal order. The action S=sum_b F_(s_b)(x_(b-1),x_b)+(x_0^TVx_0+x_T^TVx_T)/4 is nearest-bond and separable in its lapse parameters at every order. It admits the following exact off-shell Ward symmetry for endpoint-zero t:
+
+    delta s_b=t_b-t_(b-1),
+    delta x_n=t_n(l_n+r_n)/2,
+    l_n=A(s_n)x_n-E(s_n)x_(n-1),
+    r_n=E(s_(n+1))x_(n+1)-A(s_(n+1))x_n.
+
+**Proof.** E'=-AE, A'=-E^2 and E^2-A^2=D follow from the block identities. Thus p=-partial_q F_s=EQ-Aq and P=partial_Q F_s=AQ-Eq give exactly (Q,P)=M(s)(q,p), and partial_s F_s=-H(q,p)=-H(Q,P). The interior field gradient of S is l_n-r_n. Summation by parts turns lapse work into sum_n t_n(H(x_n,r_n)-H(x_n,l_n))=-sum_n t_n(l_n-r_n) dot(l_n+r_n)/2, exactly cancelling field work. No field equation was used. Each action term has only one bond's fields and lapse, proving locality and separability. The formal inverse exists since B(0)=I6. Analytic configuration claims retain det B!=0; a global configuration chart or global rational exponential is not asserted. Full phase maps themselves are entire.
+
+Adding any specified skew operator A_t(s) times the field gradient preserves this Ward identity because f^TA_t f=0. It does not automatically make the generators commute. The adjustment acts only on interior vertices 1,...,T-1; endpoint rows and columns are absent. In neighbor formulas set f0=fT=0, without imposing endpoint field equations. In the particular nearest-neighbor adjustment with upper block [A_t(s)]_(n,n+1)=s_(n+1)(t_n+t_(n+1))I6/8 and antisymmetric lower block, generators commute through order two for the scaled fields delta_t=epsilon V_t, where
+V_t s_b=t_b-t_(b-1) and V_t x_n=t_n(l_n+r_n)/2+[A_t(s)f]_n,
+with f_n=l_n-r_n and s_b=epsilon alpha_b. The convention for the bracket is
+[V_t,V_r]=V_t V_r-V_r V_t on coordinate functions. They have the following boundary.
+
+**SCALAR-LAPSE-CUBIC-COMMUTATOR-BOUNDARY [T].** For T=4, x3=u=(1,0,-1,0,0,0), all other fields zero, alpha3=1 and vertex parameters t1=1,r2=1, the specified adjusted bracket has degree-three coefficient -Cu/8 at slice1 and zero elsewhere, namely
+
+    (-395/5184,0,395/5184,-1/144,1/144,-1/5184).
+
+**Proof.** Differentiating the raw mean-momentum generators gives
+
+    [delta_t,delta_r]x_n=-epsilon^2/4 *
+      [(r_n t_(n-1)-t_n r_(n-1)) E_n f_(n-1)
+       +(r_n t_(n+1)-t_n r_(n+1)) E_(n+1) f_(n+1)],
+
+where r in the vertex coefficients denotes the second fixed parameter,
+not the right momentum. The upper neighboring entry contributed by the
+adjustment at degree two is
+
+    [(t_(n+1)-t_n)(r_n+r_(n+1))
+      -(r_(n+1)-r_n)(t_n+t_(n+1))]/8
+      =(r_n t_(n+1)-t_n r_(n+1))/4.
+
+It cancels the displayed raw bracket at E_b(0)=I; the lower entry is its
+negative transpose, and all lapse components vanish. This proves degree-two
+commutation for every state and endpoint-zero parameter pair.
+At s3=a, write A=A(a),E=E(a). The exact gradients are f1=0,f2=-Eu,f3=(A+C)u. Differentiating the full neighboring generator expressions, including terms whose values vanish at this witness, gives [V_t,V_r]x1=-a(A+C)u/16 and other components zero. Substitution a=epsilon and the overall epsilon^2 factor give -epsilon^3Cu/8+O(epsilon^4). This proves noncommutation of this particular extension; it does not exclude later higher-range or higher-order corrections.
+
+### What fixed total lapse determines
+
+**SCALAR-FIXED-DURATION-CLASSIFICATION [T].** At fixed horizon T>=3, field-stationary phase histories of the displayed scalar family, modulo the specified endpoint-fixed finite lapse redistribution, are completely classified by their initial phase z0 and total lapse Lambda. Fixing Lambda before variation imposes no numerical energy. For prescribed configuration endpoints and an additional energy shell, the solution fiber is explicitly an affine kernel intersected with a sphere.
+
+**Proof.** Field stationarity matches left and right momenta, so z_b=M(s_b)z_(b-1). If a_n=sum_(b<=n)s_b, commutation gives z_n=M0^nR(a_n)z0. Under s'_b=s_b+theta_b-theta_(b-1), z'_n=R(theta_n)z_n and theta0=thetaT=0, z0 and Lambda are invariant. Conversely equal z0,Lambda give the required unique theta_n=a'_n-a_n. The invariant dressed phases are R(-a_n)z_n=M0^nz0. This is the declared finite phase equivalence, not an assertion that all regular representatives can be joined without crossing a configuration caustic.
+
+Since partial_(s_b)F=-H and every stationary bond has the same H, independently varying all s_b in S forces H=0. In S+Efixed sum s_b it forces H=Efixed. Under the prior constraint sum delta s_b=0, however, lapse work is (-H+Efixed)sum delta s_b=0 for every H. Therefore adding Efixed Lambda to a fixed-Lambda variational problem cannot select energy.
+
+Write the total phase map M0^T R(Lambda) with upper blocks U_T,B_T, where the superscript T here denotes the integer horizon power. Given configuration endpoints q,Q, the initial momentum must satisfy B_Tp0=Q-U_Tq. If inconsistent there is no history. Otherwise write p0=p*+w with p* the minimum-norm solution perpendicular to ker B_T. On the separately imposed shell H=Efixed one has ||w||^2=2Efixed-q^TDq-||p*||^2=rho^2. If k=dim ker B_T=0 there is one solution exactly when rho^2=0. If k>0, negative rho^2 gives none, zero gives one and positive rho^2 gives S^(k-1). These are real phase-space classifications, not rational point counts or a physical measurement law.
+
+
+### SCALAR-LAPSE-QUARTIC-STENCIL-CLOSURE [T]
+
+Scope: the declared six-component scalar-lapse family, every finite horizon
+`T>=3`, fixed endpoint configurations, and endpoint-zero gauge parameters.
+The Ward symmetry below is exact on every regular configuration chart and
+as a formal series. The adjusted off-shell bracket vanishes through degree
+four in the scaled lapse expansion. The stated stencil widths concern the
+skew operators acting on interior field gradients.
+
+Use the symmetric matrix V and the scalar generating family already defined
+in `SCALAR-LAPSE-EXACT-WARD-FAMILY`. Thus `C=I6-V/2`, `D=I6-C^2`,
+`M(s)=M0 exp(sK)`, `E(s)=B(s)^(-1)`, `Acoef(s)=E(s)U(s)`, and
+
+```
+F_s(q,Q)=(q^T Acoef(s)q+Q^T Acoef(s)Q)/2-q^T E(s)Q,
+S(q,s)=sum_(b=1)^T F_(s_b)(q_(b-1),q_b)
+                   +(q_0^T Vq_0+q_T^T Vq_T)/4.
+```
+
+All operators below have interior rows and columns `1,...,T-1`; no endpoint
+field equation is imposed. Set the endpoint components of an interior gradient
+to zero when a neighbor formula needs them. Put
+
+```
+l_n=Acoef(s_n)q_n-E(s_n)q_(n-1),
+r_n=E(s_(n+1))q_(n+1)-Acoef(s_(n+1))q_n,
+g_n=l_n-r_n,                    W_t(q)_n=t_n(l_n+r_n)/2,
+partial_t=sum_(b=1)^T (t_b-t_(b-1)) partial/partial s_b,
+t_0=t_T=0.
+```
+
+Let H be the interior Hessian of S and `L_t=partial W_t/partial q_int`.
+For arbitrary fixed endpoints, g and W_t are affine functions of the interior
+fields: `g=Hq_int+c(s;q_0,q_T)`. They are not silently replaced by their
+linear parts. Their nonzero Hessian and Jacobian blocks are
+
+```
+H_nn=Acoef(s_n)+Acoef(s_(n+1)),
+H_(n,n-1)=-E(s_n),              H_(n,n+1)=-E(s_(n+1)),
+(L_t)_nn=t_n[Acoef(s_n)-Acoef(s_(n+1))]/2,
+(L_t)_(n,n-1)=-t_n E(s_n)/2,   (L_t)_(n,n+1)=t_n E(s_(n+1))/2.
+```
+
+For any specified skew interior matrix series `J_t(s)=-J_t(s)^T`, linear in
+t, define a vector field by
+
+```
+V_t s_b=t_b-t_(b-1),       V_t q_int=W_t(q)+J_t(s)g.
+```
+
+It satisfies `V_t S=0`, `V_t g=-(L_t+J_t H)^T g`, and
+
+```
+[V_t,V_r] q_int=F_(t,r)g,
+F_(t,r)=Omega_(t,r)+partial_t J_r-partial_r J_t
+       +L_r J_t+J_t L_r^T-L_t J_r-J_r L_t^T
+       +J_r H J_t-J_t H J_r,
+(Omega_(t,r))_(n,n+1)=-(r_n t_(n+1)-t_n r_(n+1))E(s_(n+1))/4.
+```
+
+Omega has the negative-transpose lower band and zero other blocks. F is
+skew. Every lapse component of the bracket is zero.
+
+Here is an explicit skew choice `J_t=J_t^1+J_t^2+J_t^3`, with the superscript
+denoting homogeneous degree in s. The following are its upper blocks;
+lower blocks are their negative transposes and all other blocks are zero:
+
+```
+(J_t^1)_(n,n+1)=(t_n+t_(n+1))s_(n+1) I6/8,
+(J_t^2)_(n,n+1)=-(t_n+t_(n+1))s_(n+1)^2 C/16,
+(J_t^2)_(n,n+2)=-[s_(n+1)^2 t_(n+2)
+              +4s_(n+1)s_(n+2)t_(n+1)+s_(n+2)^2 t_n] I6/32.
+```
+
+For the cubic choice, write `x=s_(n+1)`, `y=s_(n+2)` and, in the third band,
+`z=s_(n+3)`. Then
+
+```
+(J_t^3)_(n,n+1)=(t_n+t_(n+1))x^3 C^2/48+(W_L(n)+W_R(n))I6,
+
+W_L(n)=s_n[s_n^2(t_(n-1)-t_(n+1))
+           +3s_n x(t_(n-1)-3t_(n+1))+6x^2 t_(n-1)]/384  (n>=2),
+W_L(1)=-s_1^2(s_1+3s_2)t_2/96,
+
+W_R(n)=s_(n+2)[s_(n+2)^2(t_(n+2)-t_n)
+           +3s_(n+2)x(t_(n+2)-3t_n)+6x^2 t_(n+2)]/384 (n<=T-3),
+W_R(T-2)=-s_T^2(s_T+3s_(T-1))t_(T-2)/96,
+
+(J_t^3)_(n,n+2)=[4x^3 t_(n+2)+3x^2 y(5t_(n+1)+3t_(n+2))
+                  +3xy^2(3t_n+5t_(n+1))+4y^3 t_n] C/384,
+
+(J_t^3)_(n,n+3)=[4y^3(t_(n+1)+t_(n+2))
+     +12y^2[x(t_(n+2)+t_(n+3))+z(t_n+t_(n+1))]
+     +24xyz(t_(n+1)+t_(n+2))
+     +3xz[x(3t_(n+2)+t_(n+3))+z(t_n+3t_(n+1))]] I6/768.
+```
+
+These definitions apply only when both block indices are interior. At `T=3`
+the single neighbor block uses both displayed boundary wings.
+
+With `J^1+J^2`, `F_(t,r)=O(s^2)`; with all three terms,
+`F_(t,r)=O(s^3)`. More explicitly put `s_b=epsilon alpha_b` and define
+the scaled derivation `delta_t=epsilon V_t` on `(q,s)`, equivalently
+`delta_t alpha_b=t_b-t_(b-1)` and
+`delta_t q=epsilon[W_t(q)+J_t(epsilon alpha)g]`. Then
+
+```
+[delta_t,delta_r]q=O(epsilon^4) for J=J^1+J^2,
+[delta_t,delta_r]q=O(epsilon^5) for J=J^1+J^2+J^3.
+```
+
+The nonzero third-degree witness of the specified neighbor-only extension
+is therefore canceled by an explicit two-band correction. With J^1 fixed,
+no additional degree-two skew operator supported only at distance at most
+one can make its degree-one curvature coefficient zero for all horizons.
+The nonlinear term `J_r H J_t-J_t H J_r` is needed in the fourth-degree
+curvature equation: omitting it makes the equation for a cubic primitive
+inconsistent on horizons containing a distance-three interior pair.
+
+Proof. The exact Ward identity gives `partial_t S+g^T W_t=0`. Adding
+`g^T J_t g=0` preserves it. Differentiating with respect to the interior
+fields, including the affine endpoint terms, gives the stated covariant
+gradient transformation. Differentiating its quadratic coefficients gives
+`partial_t H=-HL_t-L_t^T H`. Direct differentiation of the raw momenta
+using `E'=-Acoef E`, `Acoef'=-E^2` and `E^2-Acoef^2=D` gives the raw
+bracket Omega g. Expanding the adjusted bracket cancels
+`-J_r H L_t+J_r H L_t` and `J_t H L_r-J_t H L_r` and leaves exactly Fg.
+This argument uses no inverse of H and remains valid at singular interior
+Hessians. Skewness follows term by term.
+
+For completeness the curvature cancellation is a finite local polynomial
+identity. The required Taylor coefficients are
+
+```
+E=I6-sC+s^2(I6+C^2)/2+O(s^3),
+Acoef=C-sI6+s^2 C+O(s^3),
+(H0)_nn=2C,                 (H0)_(n,n+1)=-I6,
+(L_t^0)_(n,n+1)=t_n I6/2, (L_t^0)_(n,n-1)=-t_n I6/2,
+(L_t^1)_nn=t_n(s_(n+1)-s_n)I6/2,
+(L_t^1)_(n,n-1)=t_n s_n C/2,
+(L_t^1)_(n,n+1)=-t_n s_(n+1)C/2.
+```
+
+Define `dJ_(t,r)=partial_t J_r-partial_r J_t` and
+`P(L,J)_(t,r)=L_r J_t+J_t L_r^T-L_t J_r-J_r L_t^T`. The three equations
+to check are precisely
+
+```
+Omega^0+dJ^1=0,
+Omega^1+P(L^0,J^1)+dJ^2=0,
+Omega^2+P(L^0,J^2)+P(L^1,J^1)
+        +J_r^1 H0 J_t^1-J_t^1 H0 J_r^1+dJ^3=0.        (*)
+```
+
+For the first equation the upper entry of dJ^1 is
+`(r_n t_(n+1)-t_n r_(n+1))I6/4`. In the second, the distance-one
+entry Omega^1 is `(r_n t_(n+1)-t_n r_(n+1))s_(n+1)C/4` and the only
+other upper band is
+
+```
+P(L^0,J^1)_(n,n+2)=
+ {s_(n+2)[r_n(t_(n+1)+t_(n+2))-t_n(r_(n+1)+r_(n+2))]
+ +s_(n+1)[t_(n+2)(r_n+r_(n+1))-r_(n+2)(t_n+t_(n+1))]}I6/16.
+```
+
+Differentiating the two displayed blocks of J^2 gives their negatives.
+The distance-two block is not identically zero, while d preserves matrix
+band support. This proves the stated curvature obstruction for a further
+neighbor-only term. At the earlier T=4 witness its contribution at slice
+one is `-Cu/8`, explaining the retained cubic boundary claim.
+
+To verify the last equation of (*), substitute its displayed H0,L0,L1
+blocks and differentiate J^3. On distance one, its C^2 part cancels
+separately, and the I6 coefficients split into a left path and a right
+path, canceled by dW_L and dW_R. On distances two and three, the C and I6
+coefficients respectively cancel by the last two displayed blocks of J^3.
+There is no diagonal or wider coefficient: the products of symmetric
+polynomials in C commute, the diagonal skew blocks vanish, and the maximum
+path length is three. At the left endpoint, replacing the formal bulk
+value with t_0=0 by W_L(1) adds exactly
+
+```
+-s_1^2(s_1+s_2)t_2 I6/128.
+```
+
+Its parameter curl is
+`+s_1(s_1+s_2)(r_1t_2-r_2t_1)I6/64`, canceling the missing path through
+vertex zero. The right endpoint is the reversed identity. The only local
+patterns are a bulk pair, either boundary pair, and the single pair with
+both boundary wings for horizon T=3; thus the identity holds for every horizon.
+All these checks are polynomial identities in the commuting symbol C,
+so they apply to the specified matrix C without spectral assumptions.
+
+Writing R^2 for the last left side before dJ^3, (*) gives `R^2=-dJ^3`.
+Consequently its cyclic parameter derivative is zero by commuting partial
+derivatives, without an invertibility assumption on H0. In contrast the
+distance-three part of the quadratic term Q is
+
+```
+Q_(t,r;n,n+3)=-s_(n+1)s_(n+3)
+ [(r_n+r_(n+1))(t_(n+2)+t_(n+3))
+ -(t_n+t_(n+1))(r_(n+2)+r_(n+3))]I6/64.
+```
+
+For `t=e_n,r=e_(n+1),u=e_(n+2)`, the cyclic derivative of `R^2-Q`
+is `s_(n+3)I6/32`, which is not zero. Since d squared is zero, no cubic
+primitive solves that omitted-term equation. This tests the incomplete
+curvature expression, not the exact expression in (*). The construction
+proves no commutation coefficient beyond the stated fourth degree.
+
+### SCALAR-LAPSE-FORCED-AFFINE-SHELL [T]
+
+Scope: the same declared scalar family on every finite horizon, forcing
+`a in {-1,0,1}`, fixed endpoint configurations, and free independent bond
+lapse variations on regular charts. Formal Ward identities hold to all
+orders; the explicitly adjusted bracket has the fourth-degree bound above.
+
+Let `f_*=(0,0,0,0,0,a/4)`. On `E=1_5^perp x R`, the unique equilibrium
+`Vx_*=f_*` and its equilibrium energy are
+
+```
+x_*=(a/17367514)(20493,-20493,2916,0,-2916,4342005),
+E_*=f_*^T x_*/2=(4342005/8683757)(a/4)^2.
+```
+
+Set `tilde q_n=q_n-x_*` and define the action with its additive constant
+fixed explicitly:
+
+```
+S^a(q,s)=(tilde q_0^T V tilde q_0+tilde q_T^T V tilde q_T)/4
+       +sum_(b=1)^T [F_(s_b)(tilde q_(b-1),tilde q_b)+(1+s_b)E_*]-E_*.
+```
+
+At zero lapse this is exactly
+
+```
+sum_(b=1)^T ||q_b-q_(b-1)||^2/2
+ -sum_(n=1)^(T-1) (q_n^T Vq_n/2-f_*^T q_n).
+```
+
+The affine generator obtained by applying the preceding W_t and skew
+correction to the full shifted history tilde q preserves S^a exactly.
+Its scaled commutator is `O(epsilon^5)` with the displayed three skew
+terms. This assertion includes arbitrary fixed endpoints; the shifted
+interior gradient includes their affine boundary contribution.
+
+For a field-stationary history let `tilde z_0=(q_0-x_*,tilde p_0)` be
+its initial phase. Then independent lapse stationarity is exactly
+
+```
+partial_(s_b) S^a=-H(tilde z_0)+E_*=0 for every b,
+H(tilde q,tilde p)=(||tilde p||^2+tilde q^T D tilde q)/2.
+```
+
+For the canonical zero-lapse cold-start history `q_(-1)=q_0=0`, this
+constraint holds even for `a=+/-1`, and that history is non-static:
+
+```
+q_1=f_*,    tilde q_0=-x_*,    tilde p_0=f_*/2,
+q_2=a(1/1296,-1/1296,0,0,0,1/2),
+h_2^(+)-h_2^(-)=(1/648)(1,-1,0,0,0).
+```
+
+It supplies a free-lapse stationary history for any horizon with the
+endpoint chosen from that trajectory. It does not assert compatibility
+with every prescribed endpoint pair. The selected energy is supplied by
+the explicit E_* term in the action.
+
+Proof. The already proved positivity of V on E implies the equilibrium is
+unique; multiplying the displayed rational vector by V gives f_*. Since
+`D=V-V^2/4`,
+
+```
+x_*^T D x_*/2=E_*-||f_*||^2/8
+             =(26052283/69470056)(a/4)^2.
+```
+
+Expanding F_0 and adding the displayed endpoint terms cancels the endpoint
+potentials. Each interior shifted potential contributes
+`-q_n^T Vq_n/2+f_*^T q_n-E_*`; the added `(T-1)E_*` cancels its last
+term exactly. This proves the zero-lapse action equality, including its
+constant. Because `sum_b(t_b-t_(b-1))=0`, the added E_* lapse term has
+zero gauge variation. Translation by the fixed x_* then transports both
+the exact Ward identity and the stated commutator identity.
+
+Field stationarity matches the generating momenta on adjacent bonds, hence
+`tilde z_n=M0^n exp((sum_(b<=n)s_b)K)tilde z_0`; all factors preserve H.
+The generating-family identity `partial_s F_s=-H` therefore gives the
+displayed lapse residual on every bond. At zero lapse the forced recurrence
+is `q_(n+1)=2Cq_n-q_(n-1)+f_*`. The cold-start values give q_1=f_* and
+
+```
+tilde p_0=tilde q_1-C tilde q_0
+          =f_*-(I6-C)x_*=f_*/2.
+```
+
+Thus its kinetic energy `||f_*||^2/8` exactly restores the subtracted amount
+in `x_*^T D x_*/2`, and `H(-x_*,f_*/2)=E_*`. Every later bond has the same
+energy. Applying the recurrence once more gives the stated q_2 and metric
+difference. Omitting the actual initial momentum or the E_* action term
+would change this lapse equation.
+
+
+### FIVE-SITE-LOCAL-CONTINUITY-CONSTRAINT [T]
+
+Let the vertices be Z/5 and the ten oriented edges be(r,r+1) and(r,r+2),
+with respective weights29/324 and65/324. Let Bf on an edge be its head
+value minus its tail value, W the diagonal weight matrix, e=(1,1,1,1,1)ᵀ
+and Π0=I−eeᵀ/5. The following local identity and constraint solution hold
+for the explicitly given coupled fields; they require no variational
+claim about a global multiplier action.
+
+Put L=BᵀWB=L_int/324, where, with indices modulo5,
+
+    (L_int f)_r=188f_r−29(f_(r−1)+f_(r+1))−65(f_(r−2)+f_(r+2)),
+    (L_adj f)_r=188f_r−65(f_(r−1)+f_(r+1))−29(f_(r−2)+f_(r+2)).
+
+Then
+
+    L_int L_adj=L_adj L_int=53605Π0,
+    ker L=span(e),  dim ker Bᵀ=6.
+
+To prove these statements, summing weighted edge products gives
+fᵀBᵀWBg=fᵀLg. Positivity and the connected weight29/324 cycle give
+ker L=ker B=span(e); rank B=4 implies dim ker Bᵀ=10−4. If S is cyclic
+shift and X=S+S^−1, then on e^perp, S²+S^−2=−I−X and X²=I−X.
+Consequently L_int=253I+36X and L_adj=217I−36X there. Their product is
+(54901−1296)I=53605I; both operators annihilate e, proving the full identity.
+
+For a in{−1,0,1}, set A=a/4, g=1/324, ell=(1,−1,0,0,0)ᵀ and
+σ=(1/2,1/2,0,0,0)ᵀ. Take any three rational slices h_−,h,h_+ in Q⁵ and
+χ_−,χ,χ_+ in Q. Define q_h=h_+−h_−, q_χ=χ_+−χ_− and residuals
+
+    R_h=h_+−2h+h_−+Lh−gχ ell,
+    R_χ=χ_+−χ+χ_−−A−g ellᵀh.
+
+For a bond joining(v,ξ) to(w,ζ), define vertex energy density
+
+    ε_h(r)=(w_r−v_r)²/2
+           +(1/4)sum_(edges incident to r) w_e(Bw)_e(Bv)_e,
+    ε_χ(r)=σ_r((ζ−ξ)²/2+ξζ/2−A(ξ+ζ)/2),
+    ε_int(r)=−(g/2)ell_r(ξw_r+ζv_r),
+    ε(r)=ε_h(r)+ε_χ(r)+ε_int(r).
+
+Let ε_− be this density on(h_−,χ_−;h,χ), and ε_+ on(h,χ;h_+,χ_+).
+The current on an edge with tail u and head v is
+
+    j_h(u,v)=(w_(u,v)/4)(h_v−h_u)(q_h,u+q_h,v),
+    j_int=−(g/4)q_χ(h_0+h_1) 1_(edge(0,1)),  j=j_h+j_int.
+
+The exact identity at all five vertices is
+
+    ε_+−ε_−+Bᵀj=(q_h ⊙ R_h+σ q_χ R_χ)/2.                 (1)
+
+Here ⊙ is coordinatewise multiplication. To verify it, the kinetic
+difference at r is q_h,r(h_+,r−2h_r+h_−,r)/2. On an edge(u,v), its
+endpoint energy-share difference is(w_e/4)(Bh)_e(q_h,v−q_h,u).
+Subtracting j_h at u gives−(w_e/2)(Bh)_e q_h,u; adding it at v gives
++(w_e/2)(Bh)_e q_h,v. Summing incident edges gives q_h,r(Lh)_r/2.
+Thus the field contribution is q_h⊙R_h/2+gχ ell⊙q_h/2.
+The scalar density difference is σ q_χ R_χ/2+gσ q_χ ellᵀh/2.
+The interaction difference is−gχ ell⊙q_h/2−g q_χ ell⊙h/2.
+Their remaining mismatch is g q_χ(σ ellᵀh−ell⊙h)/2. The bracket equals
+(−(h_0+h_1)/2,(h_0+h_1)/2,0,0,0)ᵀ, so it is cancelled exactly by
+Bᵀj_int. This proves(1) for arbitrary slices, without the field equations.
+
+Each edge contributes twice to sum_r ε_h(r), and sum_r σ_r=1. Therefore
+the total density is exactly
+
+    sum_r ε(r)=||w−v||²/2+vᵀLw/2
+               +(ζ−ξ)²/2+ξζ/2−A(ξ+ζ)/2
+               −g(ξ ellᵀw+ζ ellᵀv)/2.
+
+Adding any time-independent constant E_*/5 at each vertex preserves(1)
+and adds E_* to this total bond energy. On shell R_h=0,R_χ=0, both the
+pointwise continuity equation and conservation of the summed energy follow.
+
+For either adjacent bond define
+
+    τ_±=(162/53605)L_adj ε_±,
+    p=−j/2−WB(τ_+−τ_−).
+
+The Green identity proves that τ_± is the unique vector in e^perp solving
+2Lτ_±=Π0ε_±. Since Bᵀj has zero sum, applying Bᵀ to p and substituting
+these two constraints gives
+
+    Bᵀp=−(1/2)Π0(ε_+−ε_−+Bᵀj)
+        =−(1/4)Π0(q_h⊙R_h+σ q_χ R_χ).                    (2)
+
+Thus the explicitly solved momentum p is co-closed on every on-shell
+three-slice triple. Equations(1)–(2) are local algebraic continuity and
+constraint identities. They do not assert uniqueness of a gauge branch,
+full global action stationarity or a continuum gravitational field law.
 
 ## 14. The gravitational wave program
 
@@ -23044,6 +28957,2902 @@ Fourth, METRO-FINITE-STATE-RATIONALITY [T] is a base dependency only. It
 proves conditional rationality of an already existing one-dimensional limit
 inside part of R1. It proves neither convergence, R1 closure, the reduction
 calculus, nor the higher-rank child.
+
+### CONTACT-W-SPECTRAL-READING [T]
+
+**Scope.** This is an exact theorem about the following specified L1
+unitary model and energy reading. The carrier, contact and reading are
+construction data. Their existence and correctness do not require a
+uniqueness theorem or an identification with the original native update.
+
+Let X be the Pauli matrix with off-diagonal entries 1. On
+S=ell²(Z_R × Z_r) tensor C⁴, in coin order (++,+-,-+,--), define
+
+    G=((I+2iX) tensor (I+2iX))/5,
+    W_f=S_stream G,
+    W=Gamma W_f,
+    Gamma=exp(-ig P0),              g=2pi/5,
+
+where P0 projects onto r=0 in all four coin channels. The Fourier
+convention is f_hat(P,q)=sum_(R,r) exp[-i(PR+qr)] f(R,r), and streaming
+has symbol diag(exp(iP),exp(iq),exp(-iq),exp(-iP)). Thus contact acts
+after streaming. Each streaming displacement has lattice l1 length one.
+The normalized one-copy coin (I+2iX)/sqrt(5) is unitary, so G, W_f,
+Gamma and W are unitary.
+
+Put
+
+    a=atan(2),                    b=pi-2a=2atan(1/2),
+    delta=pi-2b=acos(7/25),      omega=(delta-g)/2,
+    alpha=(pi-g)/2=3pi/10.
+
+The full free spectrum is exactly
+
+    spec(W_f)={exp(i theta): theta in [-b,b] union [pi-b,pi+b]}.
+
+Indeed, writing k1=(P+q)/2 and k2=(P-q)/2 factors its symbol as
+U1(k1) tensor U1(k2), where
+U1(k)=exp(ikZ)(I+2iX)/sqrt(5). Its eigenvalues exp(±i theta(k)) obey
+cos(theta(k))=cos(k)/sqrt(5), with theta(k) ranging over [a,pi-a].
+The sums fill [2a,2pi-2a] and the differences fill [-b,b]. The map
+(k1,k2) -> (P,q)=(k1+k2,k1-k2) is onto the momentum torus; its
+twofold ambiguity changes both one-copy matrices by a minus sign and
+leaves their product unchanged. The continuous Fourier symbol therefore
+has exactly the displayed full direct-integral spectrum.
+
+Since P0 is an orthogonal projection,
+
+    ||exp(ig/2)W-W_f||=2sin(g/4).
+
+For normal B, dist(z,spec(B))>||A-B|| makes
+(z-A)=(z-B)[I-(z-B)^(-1)(A-B)] invertible by a Neumann series.
+Applying this to the last equality, and converting chord distance on
+the unit circle to angular distance, gives
+
+    spec(W) subset
+      {exp(i theta): theta in [-b-g,b] union [pi-b-g,pi+b]}.
+
+This is an inclusion for the entire contact operator, including all
+momenta and spectral sectors; equality with the enclosing arcs is not
+asserted. Both delta and g lie in (0,pi), and
+
+    cos(g)=(sqrt(5)-1)/4 > 7/25=cos(delta),
+
+because sqrt(5)>53/25 is equivalent to 3125>2809. Thus omega>0.
+The open arc (alpha-omega,alpha+omega) and its translate by pi are
+spectral gaps, each of guaranteed width 2omega.
+
+Choose Log_alpha with argument in (alpha-2pi,alpha). Analytic
+functional calculus defines the fixed bounded self-adjoint reading
+
+    H=i Log_alpha(W),
+    exp(-iH)=W,
+    spec(H) subset [-alpha+omega,2pi-alpha-omega].
+
+In particular 0<=H+alpha I<=2pi I. This scalar shift preserves
+energy differences and commutators; its exponential is
+exp(-i alpha)W. The exact logarithm of W in this definition is H.
+
+The reading has an explicit exponential spatial bound. Set
+
+    rho=sin(omega/2)/2,
+    mu=log(1+rho/2),
+    ell_C=4pi-2omega+4rho,
+    F_C=2pi-alpha-log(1-rho),
+    C0=ell_C F_C/(pi rho).
+
+Use the positively oriented boundary C of the annular sector
+
+    1-rho < |z| < 1+rho,
+    alpha-2pi+omega/2 < arg_alpha(z) < alpha-omega/2.
+
+It encloses spec(W), stays in the logarithm domain, has length ell_C,
+and is at least rho from the spectrum. The circular edges have radial
+distance rho; each radial edge has angular separation at least
+omega/2 and hence distance at least sin(omega/2)=2rho from the
+unit-circle spectrum. On C, |i Log_alpha(z)|<=F_C.
+
+For any spatial set F let d(x,F) be the lattice l1 distance and put
+M_N(x)=exp(mu min(d(x,F),N)), acting identically on the coin.
+These bounded invertible weights commute with G and Gamma. The unit
+streaming range gives
+
+    ||M_N W M_N^(-1)-W|| <= exp(mu)-1=rho/2.
+
+The resolvent bound on C and a second Neumann series imply
+||(z-M_NWM_N^(-1))^(-1)||<=2/rho. Cauchy's formula then gives
+||M_N H M_N^(-1)||<=C0 uniformly in N. If psi is supported in F,
+monotone convergence of the squared weighted norm yields
+
+    ||1_{d(x,F)>=l} H psi|| <= C0 exp(-mu l)||psi||,       l>=0.
+
+Thus the reading is exponentially local in both original coordinates.
+Strict finite range is not asserted.
+
+There is also a uniform bound for small momentum shifts. Let
+U=exp(-i alpha)W and K=i(I+U)(I-U)^(-1). The spectral gap gives
+dist(1,spec(U))>=2sin(omega/2); K is bounded self-adjoint, and scalar
+functional calculus gives
+
+    H=(pi-alpha)I-2atan(K).
+
+For bounded self-adjoint A,
+atan(A)=integral_0^infinity exp(-t) sin(tA)/t dt in operator norm.
+Duhamel's identity bounds ||sin(tA)-sin(tB)|| by |t| ||A-B||.
+Consequently ||atan(A)-atan(B)||<=||A-B||. The resolvent identity for
+K=i[2(I-U)^(-1)-I] therefore gives, for two operators with this gap,
+
+    ||H1-H2|| <= csc²(omega/2)||U1-U2||.
+
+Let W(P) denote the center-momentum fiber, an operator on
+ell²(Z_r) tensor C⁴. With Q=diag(1,0,0,-1), contact commutes with Q
+and W(P+eta)=exp(i eta Q)W(P). The same spectral gap holds in every
+fiber, by norm continuity of the fiber family. Therefore
+
+    ||H(P+eta)-H(P)|| <= 2 C_H |sin(eta/2)| <= C_H |eta|,
+    C_H=csc²(omega/2).
+
+The analytic functional calculus also makes H(P) norm analytic, so
+||H'(P)||<=C_H. With R=i partial_P on its natural periodic Sobolev
+domain, H preserves D(R) and (HR-RH) extends to a bounded operator of
+norm at most C_H. For the specified scalar kick V_eta=exp(i eta R),
+
+    ||V_eta* H V_eta-H|| <= 2 C_H |sin(eta/2)|.
+
+All these estimates concern the full space and the fixed chosen
+logarithm. No claim that the step or locality uniquely forces this
+energy reading is needed.
+
+### DEF-COHERENT-INTEGER-W
+
+This L1 architecture specifies a coherent coefficient walk, its localized
+amplitude carrier and a factor into coupled native cells. The carrier,
+coin, routing, target contact, coupling and retained clock are construction
+data. The following existence and identity results use those choices.
+
+Write X,Y,Z for the Pauli matrices, with
+Y=[[0,-i],[i,0]]. Set t=exp(i*pi/10), i=t^5, zeta=t^4, and
+
+    O=Z[t]=Z[t]/(t^8-t^6+t^4-t^2+1),
+    M=I+2iX,
+    H_space=ell2(Z_R x Z_r) tensor C^4,
+    M_raw=direct_sum_(R,r) O^4,
+    M_amp=direct_sum_(R,r) O[1/5]^4.
+
+Use the displayed principal complex embedding iota. Direct sums mean
+finite support. Algebraic zero is allowed; normalized readings and Rayleigh
+quotients require a nonzero input. Arithmetic precision is unbounded.
+
+In channel order (++,+-,-+,--), let
+
+    delta_0=(-1,0), delta_1=(0,-1),
+    delta_2=(0,1),  delta_3=(1,0).
+
+The local raw update and its amplitude reading are
+
+    (Aa)_(x,c)=g(x) sum_d (M tensor M)_(c,d) a_(x-delta_c,d),
+    g(R,r)=zeta^(-1) if r=0, and 1 otherwise,
+    W=A/5=Gamma S (M tensor M)/5.
+
+Coin, streaming and target contact occur in that order. The Z^2 lattice is
+the equal-parity two-particle configuration lattice:
+R=(x_1+x_2)/2 and r=(x_1-x_2)/2. It is a stipulated infinite lattice.
+
+The retained-phase variant uses
+
+    p=1+2i, c=p/sqrt(5), theta=arg(c)=atan(2),
+    A_LC=p^2 A, W_LC=A_LC/25=c^2 W.
+
+Its LC designation refers to the stationary matrix S_1=(X+2Z)/(1-2i)
+and the fixed port swap and basis change proved below. It does not identify
+the discrete evolution with the full finite-pulse response of a dispersive
+LC circuit.
+
+For the raw cover, retain the clock n>=0, finite-support static label field
+lambda_x in F_5^4 and a in M_raw. The clock increases by one; a is replaced
+by A a precisely when n+1 is divisible by three. All other ticks leave a
+unchanged. The LC variant substitutes A_LC. Put k(n)=floor(n/3).
+
+The unnormalized linear reading on a fixed clock sheet is
+
+    chi(n,a)=5^(-k(n)) iota(a),
+    chi_LC(n,a)=25^(-k(n)) iota(a).
+
+If a unit Hilbert vector is required, keep the raw preparation a_0 unchanged
+and attach one fixed preparation parameter s=1/||iota(a_0)||. Read s chi or
+s chi_LC along that trajectory. A coherent prepared superposition receives
+one common s for the entire state. Normalized vectors need not belong to
+M_amp: (1,1)/sqrt(2) is an example, since sqrt(2) is not in Q(zeta_20).
+Indeed Gal(Q(zeta_20)/Q)=C4 x C2 has exactly three quadratic subfields,
+Q(i), Q(sqrt(5)) and Q(sqrt(-5)). This normalization belongs to the Hilbert
+reading, not to raw-register arithmetic. Across arbitrary preparations it
+is nonlinear unless s is retained as a separate static parameter.
+
+### GOLDEN-CLIFFORD-COIN-IDENTITY [T]
+
+Let
+
+    L=[[0,1],[1,-1]], K=I+2L=2X+Z, N_1=X+2Z,
+    T=[[1,2],[-2,1]], D_0=diag(1,i).
+
+Then
+
+    L^2+L=I, L^3=K-2I,
+    K^2=N_1^2=5I,
+    ZK=N_1 X=T, KZ=T^T,
+    D_0^(-1) T D_0=M, M^dagger M=5I.
+
+Consequently the ordered normalized reflections Z and K/sqrt(5), and the
+routed normalized scattering numerator N_1 X/sqrt(5), give the same coin
+up to the fixed D_0 basis change. Keeping the complete scattering phase gives
+
+    D_0^(-1) [N_1/(1-2i)] X D_0=c M/sqrt(5).
+
+**Proof.** Multiply the displayed two-by-two matrices. The mixed terms in
+K^2 and N_1^2 vanish because XZ+ZX=0 and X^2=Z^2=I. Also
+1/(1-2i)=p/5, which gives the phase identity. The reverse order of the
+reflections is explicitly T^T. These are identities for the named matrices;
+no weight-selection or spatial magnetic-flux statement follows from them.
+
+**Falsifier.** An exact failure of one displayed identity with the declared
+basis, signs and order.
+
+### COHERENT-W-SPATIAL-CLIFFORD-PROPAGATION [T]
+
+For one particle let E|x>=|x-1>, so (Ef)(x)=f(x+1), and define
+
+    C_s=(E+E^dagger)/2, P_s=(E-E^dagger)/(2i),
+    V=diag(E,E^dagger) M/sqrt(5).
+
+Then [C_s,P_s]=0, C_s^2+P_s^2=I, and
+
+    V=I tensor C_s/sqrt(5)+iD,
+    D=X tensor (2 C_s/sqrt(5))
+      +[(Z-2Y)/sqrt(5)] tensor P_s.
+
+Thus gamma_1=X and gamma_2=(Z-2Y)/sqrt(5) are anticommuting Hermitian
+involutions, while P_1=2C_s/sqrt(5) and P_2=P_s commute. Their square is
+
+    D^2=I tensor (4I+P_s^2)/5
+       =I tensor [9I/10-(E^2+E^(-2))/20].
+
+It is not a scalar spatial operator. For every n>=0,
+
+    <-n,+|V^n|0,+>=5^(-n/2).
+
+The dispersion is cos(omega(k))=cos(k)/sqrt(5), with
+atan(2)<=omega<=pi-atan(2) and max |omega'(k)|=1/sqrt(5).
+D=(V-V^dagger)/(2i) is the local sine part. The corresponding branch
+generator is H_1(k)=-omega(k)D(k)/sin(omega(k)); D itself is not that
+logarithmic generator.
+
+For the specified two-particle W, write W_f=S(M tensor M)/5. Then
+
+    ||[Gamma,W_f]||=|zeta^(-1)-1|=2 sin(pi/5).
+
+For every n>=0 a separate two-particle witness is
+
+    <R=0,r=n,c=2|W^n|R=0,r=0,c=2>=5^(-n).
+
+**Proof.** Expanding V gives the displayed D. Pauli anticommutation cancels
+its mixed terms and the shift identity gives its square. At the leftmost
+point after n steps there is exactly one channel history; each diagonal
+coin coefficient is 1/sqrt(5). The trace and determinant of the Fourier
+matrix give its two eigenvalues exp(plus-or-minus i omega). Differentiation
+gives |omega'|=|sin(k)|/sqrt(4+sin(k)^2), whose maximum is attained at
+|sin(k)|=1.
+
+Let P_0 be projection to r=0. The local coin commutes with P_0, so
+[Gamma,W_f]=(zeta^(-1)-1)[P_0,S] (M tensor M)/5. On the two moving relative
+channels, [P_0,S] is a signed partial permutation on the entering and
+leaving contact edges. Its squared absolute value is a nonzero orthogonal
+projection; its norm is one. The other two channels contribute zero. This
+proves the norm on the infinite lattice as well as in each center-momentum
+fiber. Finally the two-particle extreme site (0,n) has a unique all-c=2
+history with diagonal coefficient 1/5; its target r is positive at every
+positive step, so no contact phase occurs on that history.
+
+The two particle factors commute across their tensor factors. This theorem
+does not replace them by one anticommuting two-dimensional Dirac family.
+The extreme-history witnesses establish unbounded support, without making
+a claim that all states lack bound components.
+
+**Falsifier.** An exact violation of the stated operator decomposition,
+square, dispersion, contact norm or extreme-history amplitude.
+
+### COHERENT-W-LOCALIZED-RING-CLOSURE [T]
+
+The chosen W is a finite-range automorphism of M_amp, with
+
+    A^dagger A=AA^dagger=25I,
+    W^(-1)=A^dagger/5,
+    <W psi,W phi>=<psi,phi>.
+
+Every output is an admissible next input. In the fixed eight-element basis
+of O, each port can be represented by eight integer numerators and a
+nonnegative denominator exponent. At a local node, align denominator
+exponents, apply the fixed coin, increase the exponent by one, route, and
+apply the target contact. Cancelling (5a,k+1) to (a,k) leaves that port's
+amplitude identical. No per-port norming or global gcd operation is needed.
+
+Among coefficient rings containing the declared O whose full free port
+modules admit W, O[1/5] is minimal. The raw map A on M_raw is injective
+but not onto, and must not be conflated with this amplitude automorphism.
+There is no unital ring map O[1/5] -> F_5.
+
+**Proof.** M^dagger M=5I makes the tensor coin a similitude of squared
+norm gain 25. Streaming and Gamma are unitary and preserve the integral
+coefficient module. The adjoint is also local and integral. Dividing A and
+A^dagger by five proves the two-sided automorphism on the localization.
+A unit ++ input at r!=0 has a neighboring ++ output exactly 1/5; every
+ring in the declared full-module class must contain this scalar.
+
+Injectivity of A follows from A^dagger A=25I. A unit output in a ++
+port at r!=0 has an inverse A^dagger/25 with a coefficient 1/25, which is
+not an algebraic integer, so it has no preimage in M_raw. Finally a unital
+map to F_5 would imply 1=rho(5*1/5)=0. Hence the native residues below
+belong to the raw cover with its retained scale; they do not descend to
+localized amplitudes. The normalization convention in the definition
+preserves this distinction.
+
+**Falsifier.** A failure of the two-sided inverse, Hermitian identity,
+finite-range closure, local arithmetic or stated minimality within the
+declared full-module class.
+
+### COHERENT-W-LOCAL-NATIVE-NETWORK [T]
+
+Define rho_j:O -> F_5 by t -> j for j=2,3. These are well-defined since
+Phi_20(j)=0 modulo five. At rho_2, i maps to 2 and zeta maps to 1. With
+h=(1,-1,-1,1)^T, direct reduction gives
+
+    rho_2(M tensor M)=h h^T,
+    q_x=h^T rho_2(a_x), z_x=sum_c rho_2(a_(x,c)),
+    rho_2(Aa)_(x,c)=h_c q_(x-delta_c),
+    q'=Adj q, epsilon_k=4^(-k)q_k,
+    epsilon_(k+1)=B epsilon_k, B=4 Adj.
+
+Here Adj is the sum over the four lattice neighbors. In F_5, four is its
+own inverse and the sum of all epsilon labels is conserved.
+
+We specify the native interfaces explicitly. For a head
+x=(p_1,p_4,p'_1,p'_4,Q,r) in F_5^6, let theta_n be the binary digit-sum
+parity of n, and set U_n(x)=g_j(x), j=(sum(x)+2theta_n) mod 5, where
+
+    g_0(x)=(p_4,p_1,p'_4,p'_1,Q,r),
+    g_1(x)=(-p'_1,-p'_4,-p_1,-p_4,-Q,-r),
+    g_2(x)=(2-p'_1,1-p'_4+r,2-p_1,1-p_4-r,1-Q,-r),
+    g_3(x)=(2-p_1,1-p_4,3-p'_1,4-p'_4,1-Q,1-r),
+    g_4(x)=(2-p_1,1-p_4,3-p'_1,4-p'_4,2-Q,1-r).
+
+Put F_n=U_(n-1)...U_0. For n>=3 the registered native chart J_n is the
+inverse of the label chart in U-NATIVE-CHART-AND-QDD-READBACK. Explicitly,
+
+    S(0)=0, S(m)=m-S(floor(m/2)),
+    t_n=(-1)^(n-3), h_n=(-1)^(n+theta_(n-1)),
+    N_n=S(floor((n-1)/2))-1,
+    A_0=t_n alpha, B_0=t_n beta,
+    C_0=2+h_n gamma, D_0=1+h_n delta,
+    r=t_n(epsilon+N_n), Q=4-3theta_(n-1)-A_0-B_0-r,
+    J_n(alpha,beta,gamma,delta,epsilon)
+      =(3(A_0+C_0),3(B_0+D_0),3(A_0-C_0),3(B_0-D_0),Q,r).
+
+Compute the clock functions, S and exponents on integers, and reduce the
+displayed chart coordinates modulo five. The theorem gives U_n J_n=J_(n+1) and
+bijectivity of J_n onto the synchronized sheet. For y on the sheet at
+time 3, the actual antecedents from initial sheet z are
+
+    x_0(y)=g_0 g_2 g_4(y), x_1(y)=g_3(y), x_2(y)=g_4(y),
+    x_3(y)=g_3 g_1 g_3(y), x_4(y)=g_4 g_1 g_3(y),
+
+with the rightmost map applied first. Substitution in the five displayed
+native maps verifies sum(x_z)=z and F_3 x_z(y)=y. Each x_z is an affine
+inverse on its sheet; together the five sheets exhaust F_5^6.
+
+Prepare each cell by
+
+    E_x=x_(z_x)(J_3(lambda_x,q_x)).
+
+Every residue pair (q_x,z_x) is realized by the two channel residues
+a_(x,0)=(q_x+z_x)/2, a_(x,1)=(z_x-q_x)/2, with the remaining two zero.
+Together with lambda_x this prepares every local native head. On the
+infinite lattice, the admissible network configurations have finitely many
+deviations from the specified reference configuration; the four lambda labels also have
+finite support. If a nonzero raw amplitude is required, adding five to one
+port realizes the same residues with a nonzero raw state. This construction
+couples the amplitudes and native heads; they are not independently chosen.
+
+Define U_net at tick n by first applying U_n to every cell and, when
+n+1 is divisible by three, then replacing the attained chart labels by
+(lambda_x,(B epsilon)_x). The first coupling occurs at the actual 2->3
+transition, after F_3. Define
+
+    (Pi_loc(n,lambda,a))_x=F_n E_x                         for n<3,
+    (Pi_loc(n,lambda,a))_x=J_n(lambda_x,4^(-k(n))q_x)      for n>=3.
+
+With the clock included in both source and target, this is a surjective
+semiconjugacy:
+
+    Pi_loc U_tilde = U_net Pi_loc.
+
+For the unrestricted time-tagged target, its n=0,1,2 sheets are the actual
+cellwise F_n images of the initial configuration space. Its n>=3 sheets
+are finite deviations in J_n, relative to J_n(0,0). The earlier reference configuration is
+F_n x_0(J_3(0,0)); it need not be the zero head. Surjectivity on each such
+sheet follows from the residue preparation above, including multiplication
+of a desired late epsilon by 4^k to choose q. If only trajectories starting
+at n=0 are admitted, restrict both systems to their reachable subsets;
+surjectivity there follows by intertwining the surjective preparation.
+This does not assert that all unrestricted late sheets are reachable from
+time zero.
+
+**Proof.** Rank-one reduction gives the channel formula. Multiplying by
+h_c and summing uses h_c^2=1, hence q'=Adj q and the compensated B rule.
+At ordinary ticks the raw field does not change and U_n J_n=J_(n+1).
+At the first coupling F_3 E_x=J_3(lambda_x,q_x), while the raw update reads
+4^(-1)Adj q=B q. At each later coupling,
+4^(-(k+1))Adj q=B(4^(-k)q). These establish all ticks. The preparation
+and the time-tagged domain statements give the asserted surjectivity.
+For n=0,1 the raw field is unchanged and F_(n+1)E=U_n F_n E verifies
+the two unsynchronized transitions directly. Conservation follows from
+sum_x(B epsilon)_x=16 sum_x epsilon_x=sum_x
+epsilon_x in F_5. No residue homomorphism on the localized ring is used.
+
+**Falsifier.** An admitted exact failure of the residue channel law,
+two-residue preparation, native antecedent, chart transport or all-tick
+semiconjugacy on the stated target sheets.
+
+### COHERENT-W-NATIVE-FROBENIUS-PROPAGATION [T]
+
+On finitely supported F_5 fields over Z^2, B is injective but not onto.
+For the prepared label epsilon_0=delta_(0,0), every k>=1 has value 4^k
+at the four extreme points (plus-or-minus k,0),(0,plus-or-minus k).
+For every m>=0, with N=5^m, the stronger complete-support identity is
+
+    epsilon_N=B^N delta_(0,0)
+      =4[delta_(N,0)+delta_(-N,0)+delta_(0,N)+delta_(0,-N)].
+
+These profiles occur at microscopic times n=3*5^m for preparation at n=0.
+Since J_n is injective, each nonzero epsilon produces a head different from
+the native reference configuration when lambda=0. This proves unbounded native-label
+propagation on the chosen infinite configuration lattice. The same result
+holds in the retained-phase variant below.
+
+The finite-support boundary has a precise formal alternative. Put
+R=F_5[u,u^(-1)] and define R((v)) to consist of formal series
+sum_(j>=j0) r_j v^j, with j0 an integer and each r_j in R. On this
+one-sided Laurent-series completion b=4(u+u^(-1)+v+v^(-1)) is a unit:
+
+    b^(-1)=4v [1+(u+u^(-1))v+v^2]^(-1)
+          =4v sum_(j>=0) (-1)^j [(u+u^(-1))v+v^2]^j.
+
+This inverse has infinite support. It is not an inverse on the original
+direct sum, a finite-range operation, or a prescription for arbitrary
+two-sided infinite fields. Choosing this completion changes the carrier.
+
+The four-point cancellation is a characteristic-five assertion. For the
+integer comparison B_Z=4 Adj, the coefficient at (3,0) in B_Z^5 delta_0
+is 25600, rather than zero. This comparison operator is not the raw
+coherent A or A_LC. Their coefficients lie in the characteristic-zero
+ring O; the Frobenius cancellation belongs to their stated F_5 residue
+readings, not to the raw amplitudes.
+
+**Proof.** Identify finitely supported fields with Laurent polynomials over
+F_5. Then B is multiplication by
+
+    b(u,v)=4(u+u^(-1)+v+v^(-1))
+          =4(uv)^(-1)(u+v)(uv+1).
+
+The Laurent ring is an integral domain, so multiplication by nonzero b is
+injective. It is not onto: evaluation at (u,v)=(1,-1) is defined on the
+Laurent ring and gives b=0, whereas the unit impulse is the constant
+polynomial 1. Thus no finite-support preimage of that impulse exists.
+
+Define T_R delta_(R,r)=delta_(R+1,r) and
+T_r delta_(R,r)=delta_(R,r+1). The four shifts commute. In characteristic
+five the Frobenius map gives
+
+    B^(5^m)=4^(5^m)[T_R^(5^m)+T_R^(-5^m)
+                         +T_r^(5^m)+T_r^(-5^m)].
+
+Since 4=-1 and 5^m is odd, 4^(5^m)=4. Applying this identity to delta_0
+proves the four-point formula, including cancellation at every other site.
+Their total label is 4*4=1. At general k, each extreme site has exactly one
+length-k nearest-neighbor history, of weight 4^k. The first coupling is
+at 2->3, so there have been exactly k couplings at microscopic time 3k.
+
+Finite support is essential to the injectivity assertion: on all infinite
+fields epsilon(R,r)=(-1)^R is a nonzero element of ker(B). This boundary
+does not affect the theorem on the declared direct-sum carrier.
+
+For the formal completion, factor
+b=4v^(-1)[1+(u+u^(-1))v+v^2]. The term in brackets has constant
+coefficient one, so its displayed geometric inverse is defined in R[[v]].
+At each fixed v degree only finitely many terms contribute; each
+coefficient remains a Laurent polynomial in u. The inverse of 4 is 4 in
+F_5. The kernel example above has support unbounded below in the v
+direction and is not an element of R((v)), so the two assertions are
+compatible. Finally, over the integers, the five-step paths to (3,0)
+consist of five arrangements of four right steps and one left step, and
+twenty arrangements of three right steps, one up and one down. Each has
+weight 4^5. Thus the coefficient is (5+20)4^5=25600, which vanishes
+after reduction modulo five but not in characteristic zero.
+
+**Falsifier.** An exact violation of the Laurent identity, finite-support
+injectivity/non-surjectivity, extreme-site value, four-point formula or
+specified clock conversion on the declared infinite lattice, or of the
+formal inverse or characteristic-zero coefficient on their stated carriers.
+
+### COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR [T]
+
+The full-phase step is an automorphism of M_amp and satisfies
+
+    A_LC^dagger A_LC=A_LC A_LC^dagger=625I,
+    W_LC^(-1)=A_LC^dagger/25.
+
+At rho_3, i maps to 3, zeta maps to 1, p^2 maps to 4, and
+rho_3(M tensor M)=e e^T for e=(1,1,1,1)^T. Put
+
+    q_x^+=e^T rho_3(a_x), z_x^+=h^T rho_3(a_x).
+
+Then q^{+prime}=B q^+ with the very same B, without a clock compensation.
+The local native preparation uses x_(z_x^+)(J_3(lambda_x,q_x^+)). At n>=3
+the projection is J_n(lambda_x,q_x^+). At earlier ticks it is the actual
+F_n of that preparation. It intertwines the retained-phase raw cover with
+the same U_net at every tick and has the same sheetwise surjectivity.
+
+**Proof.** p conjugate(p)=5, so |p^2|^2=25 and the raw squared gain is
+625. The scalar commutes with A, proving the inverse and closure after
+division by 25. Reduction at rho_3 gives each output channel
+4 q^+_(x-delta_c); summing gives B q^+. The independent initial pair
+(q^+,z^+) is obtained from channel residues (q^++z^+)/2 and
+(q^+-z^+)/2. Apply the preceding native proof, with no 4^(-k) factor.
+In contrast rho_2(p)=0, so using the old place would annihilate all new
+raw output residues. The two residue maps are not star homomorphisms;
+no Hilbert-norm interpretation over F_5 is claimed.
+
+After k common steps the two complex evolutions differ by c^(2k).
+For coherent alternatives with different passage counts this phase must
+remain, for example in diag(W_LC,I). The latter controlled block is an
+additional amplitude construction; the native factor above is not asserted
+for that enlarged controlled carrier.
+
+**Falsifier.** An exact violation of the gain, inverse, rho_3 identities,
+preparation or all-tick local factor, or a failure of the retained phase
+relative to a waiting branch.
+
+### INTEGER-W-SPECTRAL-ENERGY-PULLBACK [T]
+
+Let H=i Log_alpha(W) be exactly the fixed reading of
+CONTACT-W-SPECTRAL-READING, alpha=3pi/10, so exp(-iH)=W and
+0<=H+alpha I<=2pi I. For nonzero a in M_raw define
+
+    E_H(a)=<iota(a),(H+alpha I)iota(a)>/||iota(a)||^2.
+
+Then 0<=E_H<=2pi and E_H(Aa)=E_H(a). More strongly every normalized
+spectral measure of H is invariant under both A and A_LC. Also
+
+    H_LC=H-2theta I,
+    exp(-iH_LC)=W_LC,
+    H_LC+(alpha+2theta)I=H+alpha I.
+
+**Proof.** For a spectral projector E_H(Omega), functional calculus gives
+W^dagger E_H(Omega)W=E_H(Omega). Both numerator and denominator of its
+normalized expectation acquire the same factor 25 under A=5W. Under
+A_LC=25c^2W the common factor is 625. This proves the whole spectral
+measure identity and hence the energy statement. The scalar shift gives
+the phase identity. Between raw macrosteps a is unchanged, so the reading
+is invariant at every microscopic tick as well. Fixed preparation scalars
+cancel from these quotients.
+
+This is a conserved spectral reading, not a positive-definite quadratic
+energy of unbounded integer registers. It gives no bound on their magnitude
+or memory cost and includes no SI calibration.
+
+**Falsifier.** An exact failure of the raw-to-unitary identities, the cited
+spectral premise or one of the normalized spectral measure equalities.
+
+#### Coefficient and residue scope
+
+The archimedean amplitude realization and the native residue factor use
+different carriers. W is a two-sided automorphism of M_amp. The residues
+rho_2 and rho_3 are defined on O, send zeta to one, and do not extend to a
+unital ring map on O[1/5]. Thus the full coherent amplitude and its fifth-root
+phase are retained in the coefficient cover; a faithful residue counterpart
+of that complete amplitude carrier or of its spectral Hamiltonian is not
+provided by this construction.
+
+The native correspondence contains the original cellwise U and the separately
+specified intercell coupling B every third tick. The unbounded coefficient
+field, the retained clock and the static labels remain explicit resources.
+The factor is not a derivation of that extra coupling from the original
+checkpoint update. The scalar convolution B on finite-support F_5 fields is
+injective and not onto. This is not an injectivity claim for the complete
+four-channel reduction of A. The one-sided formal-series inverse of B
+belongs to a different carrier.
+
+These seven L1 results do not extend the factor to the complete capture,
+current and occupied-receiver apparatus. They supply no physical occurrence,
+selective finite detector, persistent record, reset or renewable apparatus.
+The conserved normalized spectral measure does not bound raw integer size
+and is not a storage-energy account. All existing open apparatus, native
+contact, reading-selection and photon obligations retain their stated scope.
+
+<!-- END COHERENT-INTEGER-W -->
+
+### SELECTED-SPECTRAL-ENERGY-SOURCE [T]
+
+**Scope.** For any specified bounded system energy and specified unitary
+target there is the following explicit source with finite nonnegative
+energy capacity, exact additive energy conservation and controlled
+implementation error. The source is a continuous, infinite-dimensional
+Hilbert register. Its initial coherent state, the target and the energy
+reading are part of the construction.
+
+Let H_S be bounded self-adjoint on a separable Hilbert space S, with
+0<=H_S<=hI and h>0. Let V be unitary on S. Define
+
+    D=V* H_S V-H_S,
+    C_V=||D||=||[H_S,V]||,
+    a_D=sup spec(D)-inf spec(D).
+
+For any L>0 set
+
+    A=L+2h,
+    B=L²([0,A],de),
+    (H_B b)(e)=e b(e),
+    b_L(e)=sqrt(2/L) sin[pi(e-h)/L]  for h<=e<=h+L,
+           0                        otherwise.
+
+Then ||b_L||=1, its initial mean energy is h+L/2=A/2, and the weak
+derivative of its zero extension to R has squared norm pi²/L².
+In particular the extension is in H¹(R). The source energy obeys
+0<=H_B<=AI, even though B has infinite dimension.
+
+The spectral theorem writes
+S=integral^oplus K_E dnu(E), with E in [0,h]. In the tensor product
+with the battery, replace e by the total-energy variable t=E+e.
+Fubini's theorem defines a unitary transformation T onto
+integral^oplus S_t dt, where
+
+    S_t=1_[max(0,t-A),min(h,t)](H_S)S.
+
+An empty interval means the zero space. This construction uses the
+original spectral measure dnu(E), so it includes point, absolutely
+continuous and singularly continuous system spectra. It does not
+postulate normalizable eigenvectors at sharp continuous energies.
+In these coordinates H0=H_S tensor I+I tensor H_B is multiplication
+by t. For h<=t<=A, the fiber S_t is the complete system space S.
+
+Define a measurable unitary family on the entire direct integral by
+
+    (T U T*)_t=V       for h<=t<=A,
+               I_S_t otherwise.
+
+Every fiber action is unitary and preserves t; hence U is unitary and
+
+    U* H0 U=H0.
+
+On every input psi tensor b_L, all total energies lie in [h,A]:
+E lies in [0,h] and the initial battery energy in [h,h+L]. Thus only
+the full-fiber action V is used. After any system transition E -> E',
+the battery energy becomes e'=t-E' in [0,A]. No boundary amplitude
+is discarded, measured or renormalized.
+
+For quantitative estimates, embed the battery by zero extension into
+L²(R) and use the Fourier convention
+b_hat(tau)=(2pi)^(-1/2) integral exp(-i tau e)b(e)de. The full-line
+total-energy construction agrees exactly with U on these prepared
+inputs; its outputs remain inside [0,A]. In Fourier coordinates its
+conditional system action is
+
+    K_tau=exp(i tau H_S)Vexp(-i tau H_S).
+
+This follows directly because E -> E' shifts battery energy by E-E'.
+The Fourier coordinate is an auxiliary proof variable, not a claimed
+canonical self-adjoint time operator on the bounded energy interval.
+With p_L(tau)=|b_hat_L(tau)|², Parseval's identity gives
+
+    integral p_L=1,
+    integral tau² p_L=pi²/L².
+
+The density p_L is even because b_L is real. Duhamel's identity gives
+||K_tau-V||<=|tau| C_V. Integrating its squared norm proves, also
+after adjoining any passive auxiliary Hilbert space,
+
+    ||U(psi tensor b_L)-(Vpsi) tensor b_L|| <= pi C_V/L.
+
+Thus the worst-case entanglement infidelity of the reduced system
+channel is at most min(1,pi² C_V²/L²). Exact return of the battery
+state is not assumed; small correlations can accompany the energy
+transfer.
+
+The reduced channel is exactly
+
+    E_L(rho)=integral p_L(tau) K_tau rho K_tau* dtau.
+
+Let F_tau=Ad_(K_tau) and let mathcal L(X)=i[H_S,X] on trace class.
+Subtracting the center of the interval [0,h] gives
+||mathcal L||_diamond<=h. Moreover
+
+    F_tau=exp(tau mathcal L) F_0 exp(-tau mathcal L),
+    F_0^(-1) mathcal L F_0-mathcal L=(X -> i(DX-XD)).
+
+Subtracting the spectral midpoint of D gives
+||[mathcal L,F_0]||_diamond<=a_D and consequently
+||F_tau''||_diamond<=2h a_D. Unitary conjugations preserve these
+norms, including after adjoining an arbitrary passive reference.
+Taylor's formula with integral remainder and the evenness of p_L
+cancel the first derivative term. Hence the half-diamond error obeys
+
+    d_L=(1/2)||E_L-Ad_V||_diamond
+        <=min(1,pi² h a_D/(2L²)).
+
+Energy conservation gives the exact actual account
+
+    Delta<H_B>=-Delta<H_S>.
+
+The target work on input rho is Tr(D rho). Since
+
+    E_L*(H_S)=H_S+integral p_L(tau)
+                         exp(i tau H_S)Dexp(-i tau H_S)dtau,
+
+the same even Taylor argument bounds the difference between actual
+and target work by pi²||(H_S²D-2H_SDH_S+DH_S²)||/(2L²). Center H_S and D
+as above to obtain
+
+    |Tr(H_S E_L(rho))-Tr(H_S rho)-Tr(D rho)|
+        <=pi² h² a_D/(4L²).
+
+This estimate applies to every density operator rho, with no finite
+dimensional or commensurate-energy hypothesis. Conservation is exact;
+the target unitary is approximated with the displayed error.
+
+For position readout, let X be self-adjoint, assume that H_S preserves
+D(X) with bounded commutator ||[H_S,X]||<=C_X, and that V preserves
+D(X) and commutes with X. Duhamel's identity then gives
+||[X,K_tau]||<=2|tau|C_X. The finite second Fourier moment proves
+that U preserves the joint position domain on psi tensor b_L for
+psi in D(X). Integrating the commutator expectation and using
+Cauchy-Schwarz yields the separate unbounded-observable estimate
+
+    |Delta<X> during U|<=2pi C_X/L.
+
+For the contact walk of CONTACT-W-SPECTRAL-READING, one may take
+H_S=H+alpha I, h=2pi and V=exp(i eta R). A moving reference is
+obtained by using a second full copy of that same walk, with
+coordinates Y,s, and setting
+
+    W_pair=W_R tensor W_Y,
+    H_pair=H_R tensor I+I tensor H_Y,
+    H_S=H_pair+2alpha I,             h=4pi,
+    V_eta=exp[i eta(R-Y)].
+
+Then exp(-iH_pair)=W_pair and
+
+    ||D_eta||<=4 C_H |sin(eta/2)|<=2 C_H|eta|,
+    a_D<=2||D_eta||.
+
+The source accounts for the energy of both moving copies. Common
+translations of R and Y commute with H_S and V_eta; their spectral
+action therefore also commutes with T, every energy-boundary fiber
+projection, and U. Total quasimomentum is conserved modulo 2pi.
+Each K_tau shifts the two momentum densities by +eta and -eta;
+for every bounded measurable circular function f,
+
+    K_tau* f(P,Q)K_tau=f(P+eta,Q-eta).
+
+This exact identity persists after tracing out the battery. A global
+operator identity for the sum of principal angular coordinates is
+not asserted.
+
+In particular the fixed schedule q=5^ell, ell>=1,
+eta=2atan(1/q), L=q has capacity q+8pi and initial battery mean
+energy q/2+4pi. For all inputs, including entangled inputs, it gives
+joint vector error O(q^-2), entanglement infidelity O(q^-4),
+half-diamond error O(q^-3), and work error O(q^-3)=o(eta²).
+After any subsequent free evolution, a bounded current observable
+of norm at most one differs from its ideal-kick expectation by at
+most 2d_L. Each center coordinate has the separate apparatus
+displacement bound 2pi C_H/q. These estimates do not alone select
+a particular particle preparation or identify a particle species.
+
+There is also an explicit bounded autonomous generator for one
+combined intervention period. Choose by Borel functional calculus
+0<=K0<=2pi I with exp(-iK0)=V. Define K by K_t=K0 in the full
+fibers h<=t<=A and K_t=0 elsewhere. Then K commutes with H0,
+exp(-iK)=U, and
+
+    H_tot=H0+K>=0,
+    H_tot<=(A+h+2pi)I,
+    exp(-iH_tot)=exp(-iH0)U.
+
+The interaction energy K is included and is separately conserved.
+For the contact application, the free factor is the selected W
+(or W_pair), the free battery phase and the explicitly stated
+scalar energy-origin phase. Further autonomous periods repeat U;
+an intrinsic switch to later purely free periods is not constructed.
+
+The chosen logarithm, coherent source and intervention law specify
+one concrete realization. Neither uniqueness among all readings nor
+derivation from the original native update is required by this
+theorem. Exponential locality of H does not by itself establish
+uniform spatial locality of the full battery interaction, a finite
+integer carrier, or intrinsic stopping clocks.
+
+
+### CONTACT-W-BOUND-PAIR-RESPONSE [T]
+
+**Scope.** For the specified contact walk W of
+CONTACT-W-SPECTRAL-READING there is a simple exponentially localized
+relative eigenbranch at zero center momentum, with an exact positive
+curvature. Finite, unprojected binomial packets have the corresponding
+mean displacement response after a specified scalar kick. Two moving
+copies, acted on by SELECTED-SPECTRAL-ENERGY-SOURCE with the nominated
+energy H, have the same limiting relative response with exact energy
+and circular total-momentum conservation. All preparations, kicks,
+energy readings and source states in this theorem are construction
+data.
+
+Here is a complete local dispersion calculation. Temporarily let
+mu>0, 0<g<2atan(mu), z=exp(-ig), and set
+
+    C_mu=(I+i mu X)/sqrt(1+mu²),
+    M_mu=C_mu tensor C_mu,
+    F_mu(P,q)=diag(exp(iP),exp(iq),exp(-iq),exp(-iP)) M_mu,
+    V0=|r=0><r=0| tensor I4,
+    W_mu,g(P)=[I+(z-1)V0] F_mu(P).
+
+F_mu(P) is the relative Fourier multiplier with displayed matrix
+F_mu(P,q). All four coin channels and every r in Z are included.
+The fixed walk in the theorem is mu=2, g=2pi/5. The Fourier and
+position conventions are exactly those in
+CONTACT-W-SPECTRAL-READING.
+
+The complete free characteristic polynomial is
+
+    p(P,q;lambda)
+      =lambda⁴
+       -[2(cos(P)+cos(q))/(1+mu²)](lambda³+lambda)
+       +[2(1-mu²)+4cos(P)cos(q)]lambda²/(1+mu²)+1.       (1)
+
+Indeed F_mu(P,q)=U_mu((P+q)/2) tensor U_mu((P-q)/2), with
+U_mu(k)=exp(ikZ)C_mu. Its eigenvalues are exp(±i theta_j),
+cos(theta_j)=cos(k_j)/sqrt(1+mu²); their four pairwise products
+give (1) by multiplication. Thus no unstated dispersion polynomial
+is needed.
+
+Use the orthonormal Bell vectors
+
+    A=(++ - --)/sqrt(2),      S=(++ + --)/sqrt(2),
+    T=(+- + -+)/sqrt(2),      B=(+- - -+)/sqrt(2).
+
+Put d=(1-mu²)/(1+mu²), c=2mu/(1+mu²),
+b=1-d and ell=1+d. At P=0 the entire A channel of F_mu is the
+identity, and its complement in the order (S,T,B) is
+
+    F_b(q)=[[d, i c, 0],
+            [i c cos(q), d cos(q), i sin(q)],
+            [-c sin(q), i d sin(q), cos(q)]].
+
+Its characteristic polynomial is
+
+    det(lambda-F_b(q))
+      =(lambda-1)[lambda²+b lambda+1-ell lambda cos(q)]. (2)
+
+Consequently the full free spectrum at P=0 consists of 1 and
+exp(±i theta), 2atan(mu)<=theta<=pi. The vector
+chi0=delta_(r=0) A satisfies W_mu,g(0)chi0=z chi0, and z is
+strictly inside a free spectral gap.
+
+We verify simplicity, including the other coin channels. Let
+
+    G0=V0(z-F_b)^(-1)V0 restricted to (S,T,B),
+    I0=integral_0^(2pi) dq/(2pi D(q)),
+    D(q)=z²+bz+1-z ell cos(q),
+    s=sqrt[(cos(g)-d)/(cos(g)+1)].
+
+The hypotheses imply 0<s<1. Writing
+D(q)=z[2cos(g)+b-ell cos(q)] and substituting u=tan(q/2)
+in the real cosine integral gives
+
+    I0=1/[2z sqrt((cos(g)-d)(cos(g)+1))],
+    (z+1)² I0=1/s.                                      (3)
+
+The square root is positive before multiplication by z: explicitly
+the integral of 1/(c0-ell cos(q)) equals
+1/sqrt(c0²-ell²) for c0=2cos(g)+b>ell, since the substitution
+reduces it to the integral of 1/(1+u²). Define
+
+    x=[1+(z+1)(dz-1)I0]/(z ell),
+    y=[(z+1)(z-d)I0-1]/ell,
+    K=I3-(z-1)G0.
+
+Odd integrands separate B from (S,T). Inverting the displayed
+three-by-three matrix before integration gives
+
+    (z-1)(G0)_ST =
+      [[1-b(z+1)I0, i c x],
+       [i c y,     (z-d)x]],
+
+    det K_ST=b(1-s)/(z ell s),
+    K_BB=(z+1)(1-s)/(z ell).                            (4)
+
+These identities follow by multiplication of the displayed matrices,
+using c²=1-d² and (3); all denominators are nonzero. Both factors
+in (4) are nonzero. The A contact resolvent is 1/(z-1), and hence
+the complete contact secular matrix has a one-dimensional kernel
+spanned by A. A finite-rank perturbation of the free unitary has
+only isolated finite-multiplicity eigenvalues in this gap.
+Unitarity makes the isolated eigenvalue z algebraically simple.
+
+For completeness, the exact contact dispersion equation and its
+eigenvectors at general P are as follows. Define
+
+    G(P,lambda)=integral_0^(2pi)
+                 (lambda I4-F_mu(P,q))^(-1) dq/(2pi),
+    S(P,lambda)=I4-[lambda(z-1)/z]G(P,lambda).
+
+For lambda outside the free spectrum,
+
+    det S(P,lambda)=0                                   (5)
+
+is equivalent to being a contact eigenvalue. If a is a nonzero
+vector in its kernel, the eigenvector, before normalization, is
+
+    chi_hat(P,q)=[lambda(z-1)/z]
+                  (lambda I4-F_mu(P,q))^(-1) a.         (6)
+
+To see both implications, the contact eigenvalue equation is
+equivalent to
+(lambda-F_mu(P))chi=lambda(z-1)V0 chi/z.
+Taking V0 gives (5), and substituting back gives (6).
+Conversely the contact value of (6) is a by (5), so it satisfies
+the full eigenvalue equation. Equations (1), (5), (6) specify
+the branch exactly; no global polynomial formula for the contact
+dispersion is claimed.
+
+There is a real-analytic simple branch lambda(P)=exp[-i Omega(P)]
+for |P| sufficiently small, with Omega(0)=g. One explicit
+normalization is
+
+    Pi(P)=(1/(2pi i)) integral_C (w-W_mu,g(P))^(-1) dw,
+    chi_P=Pi(P)chi0/||Pi(P)chi0||,                       (7)
+
+where C is a sufficiently small positively oriented circle around
+z containing no other spectrum at P=0. A Neumann-series resolvent
+argument keeps C disjoint from the spectrum for small P. The
+projection has rank one by continuity, so (7) is well-defined and
+gives the stated branch. The resolvent matrix in (6) is rational
+in exp(iq) and has no pole on the unit circle. On a smaller closed
+P interval its poles stay uniformly outside a fixed annulus about
+that circle. Contour displacement of its Fourier coefficients
+therefore gives constants a_b,C_b>0 with
+
+    sum_(|r|>B) ||chi_P(r)||² <= C_b exp(-a_b B),          (8)
+
+uniformly on that interval. This is relative-coordinate binding;
+no center-coordinate localization under arbitrary time evolution
+is implied.
+
+The curvature has a closed radical value. Let
+Q=diag(1,0,0,-1) and let W_b be W_mu,g(0) on the orthogonal
+complement of the entire A channel. Then
+
+    W_mu,g(P)=exp(iP Q)W_mu,g(0),
+    Qchi0=delta0 S,             <chi0,Qchi0>=0,
+    h0=<delta0 S,(z-W_b)^(-1)delta0 S>.
+
+In a gauge with <chi0,chi'_0>=0, differentiating the eigenvalue
+equation once and twice gives
+
+    chi'_0=i z(z-W_b)^(-1)delta0 S,
+    lambda'(0)=0,
+    lambda''(0)=z-2z² h0,
+    Omega''(0)=i(1-2z h0).                              (9)
+
+For example, the second derivative is
+<chi0,-Q²W(0)chi0+2iQW(0)chi'_0>; replacing
+W_b(z-W_b)^(-1) by z(z-W_b)^(-1)-I gives (9).
+The contact resolvent identity, or the same equation used in
+(5), yields
+
+    z h0=[G0 K^(-1)]_SS=[(K^(-1))_SS-1]/(z-1).
+    (K^(-1))_SS=-d(z+1)/b
+                  +ell²z/[b(1-s)(z+1)].
+
+The two-by-two inverse in (4) gives the last identity. Inserting
+it and (3) simplifies to
+
+    1-2z h0=-(ell/b)s(z+1)/(z-1).
+    kappa_mu,g=Omega''(0)
+      =s cot(g/2)/mu²
+      =sqrt(mu²-tan²(g/2))/
+         [mu² sqrt(1+mu²) tan(g/2)] >0.                 (10)
+
+Here ell/b=1/mu² and (z+1)/(z-1)=i cot(g/2).
+Simultaneous reversal of r and both coin signs intertwines
+W(P) and W(-P); hence simplicity gives Omega(P)=Omega(-P).
+Thus Omega(P)=g+kappa_mu,g P²/2+O(P⁴).
+For the fixed mu=2, g=2pi/5 and phi=(1+sqrt(5))/2,
+
+    s²=(4phi-3)/5,        cot²(pi/5)=(4phi+3)/5,
+    kappa=Omega''(0)=sqrt(16phi+7)/20.                 (11)
+
+All roots in (10)--(11) are positive by the strict gap hypothesis.
+The compact state is exchange-symmetric. In the free sine-energy
+reading
+
+    H_mu(k)=[[-sin(k), -mu exp(ik)],
+             [-mu exp(-ik), sin(k)]],
+
+one has H_mu(k)²=(mu²+sin²(k))I and
+[H_mu(k) tensor I+I tensor H_mu(-k)]A=0.
+Thus at rest it belongs entirely to opposite free sine-energy
+sign sectors; it is not a pair of positive-energy massless
+one-copy states.
+
+We next prove the response for actual finite packets. The bounded
+one-tick center displacement is
+
+    D=W* R W-R=i W(P)* partial_P W(P)
+      =-M_mu* Q M_mu,              ||D||=1.            (12)
+
+The derivative identity holds on the position domain and the
+last bounded operator extends it to the whole Hilbert space.
+Contact and streaming commute with Q. Differentiating the simple
+eigenvalue gives <chi_P,Dchi_P>=Omega'(P). In contrast, a scalar
+kick of chi0 retains its coin/relative vector, so
+<chi0,Dchi0>=0 at the first tick, for every shifted momentum.
+
+Choose rho>0 small enough that (7)--(8) and a uniform spectral
+separation Delta>0 from the complementary spectrum hold for
+|P|<=2rho. Choose finite constants A_chi,A_Omega with
+
+    ||chi_p-chi_(p')||<=A_chi |p-p'|,
+    |Omega''(p)-kappa|<=A_Omega p²,                    (13)
+
+there, and an even smooth h with 0<=h<=1, h=1 on
+[-rho/2,rho/2] and h=0 outside (-rho,rho). These constants
+exist by analyticity and evenness; they are fixed independently
+of the packet size, kick and averaging time.
+
+For N>=1 set
+
+    b_N(R)=binom(2N,N+R) for |R|<=N, and 0 otherwise,
+    Z_N=binom(4N,2N),
+    psi_N(R,r)=b_N(R)delta_(r=0) A/sqrt(Z_N).
+
+This is the actual preparation, with finite support. Vandermonde's
+identity gives its norm one. In center momentum it is f_N(P)A,
+where
+
+    f_N(P)=4^N cos^(2N)(P/2)/sqrt(Z_N),
+    w_N(P)=|f_N(P)|²,              integral w_N dP/(2pi)=1.
+    integral sin²(P/2)w_N(P)dP/(2pi)=1/(4N+2),
+    m2_N=integral P²w_N(P)dP/(2pi)<=pi²/(4N+2).        (14)
+
+The sine moment follows by integrating cos^(4N) and
+cos^(4N+2) on a period, or by their elementary binomial
+coefficients; the final inequality uses |P|<=pi|sin(P/2)|
+on [-pi,pi].
+
+Only for comparison define the normalized band packet
+
+    t_N=||h f_N||,
+    phi_N(P)=t_N^(-1)h(P)f_N(P)chi_P.
+
+The estimates in (13)--(14) give
+
+    t_N²>=1-4m2_N/rho²,
+    epsilon_N=||psi_N-phi_N||<=2A sqrt(m2_N),
+    A=2/rho+A_chi.                                    (15)
+
+Indeed the omitted part h!=1 costs at most
+2sqrt(m2_N)/rho, replacing A by chi_P costs at most
+A_chi sqrt(m2_N), and normalizing costs at most the sum
+of these two errors. If 4m2_N/rho²<=1/2 then the second
+moment m2_phi of |t_N^(-1)hf_N|² is at most 2m2_N.
+The comparison state is not a new preparation or a postselection.
+Its distance from the actual state is preserved by every common
+unitary evolution. In particular (8) and the triangle inequality
+prove the uniform relative tail bound
+
+    ||1_(|r|>B) W^n psi_N||²
+       <=[sqrt(C_b)exp(-a_b B/2)+epsilon_N]²
+
+for every integer n, including arbitrarily long waiting times.
+
+Let V_eta=exp(i eta R), so the momentum shifts by eta. For positive
+integer T define the actual mean post-kick velocity
+
+    D_T=(1/T)sum_(n=0)^(T-1) W^(-n)D W^n,
+    v_T(psi,eta)=<V_eta psi,D_T V_eta psi>.
+
+Here ||D_T||<=1 and, on the position domain,
+D_T=(W^(-T) R W^T-R)/T.
+For |p|<=rho and |eta|<=rho, decompose
+chi_p=a chi_(p+eta)+e with e orthogonal to chi_(p+eta);
+(13) gives ||e||<=A_chi |eta|. On the complementary spectrum
+the finite geometric sum satisfies
+
+    ||(1/T)sum_(n=0)^(T-1)
+       [lambda(p+eta)^(-1)W_c(p+eta)]^n||
+          <=2/(T Delta).
+
+The two diagonal leakage terms in the current cost at most
+2||e||²; the two cross terms cost at most
+4||e||/(T Delta). Integrating over p therefore gives
+
+    |v_T(phi_N,eta)-integral w_phi(p)Omega'(p+eta)dp/(2pi)|
+       <=2A_chi² eta²+4A_chi |eta|/(T Delta).           (16)
+
+Both w_phi and Omega are even. The integral of Omega'(p)
+against w_phi is zero; integrate the second bound in (13)
+from p to p+eta. The p eta cross term vanishes by evenness,
+so the absolute error from kappa eta is at most
+A_Omega |eta|(m2_phi+eta²/3).
+Expectations of D_T in the two normalized preparations differ
+by at most 2epsilon_N. Combining with (16) gives
+
+    |v_T(psi_N,eta)/eta-kappa|
+       <=A_Omega(m2_phi+eta²/3)
+         +2A_chi²|eta|+4A_chi/(T Delta)
+         +2epsilon_N/|eta|.                            (17)
+
+This retains all coherent interband contributions and uses no
+pointwise dephasing assumption. The un-kicked actual mean is
+zero by simultaneous center/relative reflection and coin reversal.
+
+Take q=5^j, j>=1, and the exact rational phase
+
+    xi=(q+i)/(q-i)=(q²-1+2iq)/(q²+1),
+    eta=2atan(1/q),        N=q⁴,        T=q.
+
+Then exp(i eta)=xi, q^(-1)<=eta<=2q^(-1), and every phase
+xi^R on the finite support is in Q(i). For all sufficiently
+large q, (14)--(17) imply the explicit bound
+
+    |v_T(psi_N,eta)/eta-kappa|
+       <=[2A pi+4A_chi²+4A_chi/Delta]/q
+           +4A_Omega/(3q²)+A_Omega pi²/(2q⁴).           (18)
+
+In particular the actual mean displacement response tends to
+kappa. Every input and kick is finite at each j; the theorem
+concerns this stated limiting sequence.
+
+The kicked packet also stays internally bound to a controlled
+error. Replace chi_p by chi_(p+eta) in the kicked comparison
+packet; this costs at most A_chi|eta| and produces an exact
+band packet. Equations (8), (15) and unitarity then give
+
+    ||1_(|r|>B) W^n V_eta psi_N||²
+       <=[sqrt(C_b)exp(-a_b B/2)
+                         +epsilon_N+A_chi|eta|]²       (18a)
+
+for every integer n. Both errors tend to zero in the stated
+schedule, while the exponential relative localization scale is
+fixed independently of q.
+
+Even the use of principal angular momentum has a controlled
+error. Its actual change is
+
+    delta_p_N(eta)=eta-2pi integral_(pi-eta)^pi
+                                      w_N(p)dp/(2pi).
+
+For eta<=pi/2, the tail has sin²(p/2)>=1/2, so (14) gives
+
+    0<=1-delta_p_N(eta)/eta
+         <=8pi/[eta(4N+2)]<=2pi/q³.                    (19)
+
+The first inequality has harmless slack. Hence delta_p_N is
+positive for q>=5 and the same limit holds when eta is replaced
+by the actual principal-momentum change.
+
+Finally take two copies, with center coordinates R,Y and relative
+coordinates r,s, prepared in psi_N tensor psi_N, and use
+
+    W_pair=W tensor W,
+    H_pair=H tensor I+I tensor H,
+    H_S=H_pair+2alpha I,       0<=H_S<=4pi I,
+    V_eta=exp[i eta(R-Y)].
+
+Here H and alpha are the fixed reading and cut in
+CONTACT-W-SPECTRAL-READING. Use exactly the source construction
+of SELECTED-SPECTRAL-ENERGY-SOURCE with h=4pi, L=q:
+the battery space is L²([0,q+8pi]), its energy is multiplication
+by e, and its initial vector is
+
+    b_q(e)=sqrt(2/q)sin[pi(e-4pi)/q] for 4pi<=e<=4pi+q,
+           0 otherwise.
+
+Its capacity is q+8pi and mean energy q/2+4pi. In total-energy
+coordinates its unitary is V_eta on the complete system fibers
+4pi<=t<=q+8pi and the identity on the other fibers, exactly as
+defined and proved in that theorem. Thus it conserves
+H_pair+H_B and common translations of R and Y exactly.
+
+Let E_q be its reduced channel. The earlier theorem, with
+||V_eta*H_S V_eta-H_S||<=2C_H|eta| and spectral oscillation
+at most twice this norm, gives
+d_q=(1/2)||E_q-Ad_(V_eta)||_diamond=O(q^(-3)).
+For each of the two norm-one mean-current operators its
+expectation differs from the ideal-kick value by at most 2d_q.
+The target kick factorizes into opposite kicks, so (18) gives
+
+    v_(R,T)/eta -> kappa,
+    v_(Y,T)/eta -> -kappa,
+    (v_(R,T)-v_(Y,T))/eta -> 2kappa.                    (20)
+
+This holds for the actual reduced output of the conserving
+apparatus. For either copy, its probability of |r|>B (respectively
+|s|>B) after any number of free ticks is at most the right side
+of (18a) plus 2d_q: the tail projection is a norm-one bounded
+observable and trace distance contracts under free evolution.
+Thus the same internally bound packet estimate survives the
+actual apparatus. If displacement is measured starting before the
+apparatus acts, the additional center displacement is at most
+2pi C_H/q per copy by the position-domain estimate of
+SELECTED-SPECTRAL-ENERGY-SOURCE. After division by T eta it
+is O(q^(-1)) and vanishes, so (20) is unchanged.
+
+Every conditional unitary in the channel has the form
+exp(i tau H_pair)V_eta exp(-i tau H_pair); since H_pair is
+fiberwise in both momenta, each shifts their densities by
++eta,-eta exactly. Thus (19) and opposite mean-momentum changes
+hold for the actual apparatus as well. Conservation is of
+total circular quasimomentum; the local relative coordinate
+p=(P-Q)/2 is used only near rest, where it is conjugate to
+X=R-Y and the impulse is eta. In these specified units the
+single-copy inverse differential mobility and the reduced
+relative mass are respectively
+
+    m_response=1/kappa=20/sqrt(16phi+7),
+    mu_relative=1/(2kappa)=10/sqrt(16phi+7).
+
+The actual work is accounted by the source theorem as the
+change of the full selected H_pair, including off-band terms;
+it is not replaced by a band-energy difference. The protocol
+is one intervention followed by T free ticks. This theorem
+does not supply an intrinsic switch, a finite-dimensional source,
+a native-update derivation or an identification with a physical
+particle species.
+
+### HOMOGENEOUS-CAPTURE-CURRENT-RECORD [T]
+
+**Scope and connected statement.** The following specified one-pair,
+one-carrier, one-receiver model has a single local law, a normalized
+incoming scattering preparation, a complete physical-cut charge current,
+and a joint outgoing event of relative binding and coherent record write.
+For that preparation its joint asymptotic weight obeys
+
+$$
+p(Q_{\rm full})\ge p(Q_{\rm win})>2/10^{28}.
+$$
+
+The input carrier is a standing token; the selected output is a bound
+object pair and a right-moving pulse. The receiver can initially hold any
+state, including entanglement with a reference. Its old information moves
+coherently into the pulse label while the receiver acquires the label
+\(d_1\). The event accepts all old-memory output labels. A pre-existing
+\(d_1\) by itself is not a binding herald.
+
+This is an existence theorem for the declared occupation-space model and
+its Hilbert-space evolution. Its occupation coordinates, coherent
+amplitudes, contact law, synchronized schedule and spectral preparation
+are explicit construction data. The occupation intertwiner below is not
+an intertwiner from the original six-pentit checkpoint map \(U\), and
+does not derive these preparation or amplitude operations from that map.
+The model is also distinct from the funded receiver in
+COMMON-HISTORY-FUNDED-AREA-RECEIVER. Finite preparation, a selective
+finite-time joint detector, quantitative record retention and empirical
+occurrence are not consequences of the asymptotic weight.
+
+**Carrier, labels and ordered local law.** Use physical coordinates
+\(x_A=R+r\), \(x_B=R-r\), with \(R,r\in\mathbb Z\), so the object
+constituents have common parity. In the ordered coin basis
+\((++, +-, -+, --)\), let
+
+$$
+A=(e_1-e_4)/\sqrt2,\quad B=(e_2-e_3)/\sqrt2,\quad
+M_2=((I+2iX)/\sqrt5)\otimes((I+2iX)/\sqrt5),
+$$
+$$
+S(P,q)=\operatorname{diag}(e^{iP},e^{iq},e^{-iq},e^{-iP}),\quad
+\Gamma=I+(e^{-ig}-1)P_0,\quad g=2\pi/5,\quad W=\Gamma S M_2.
+$$
+
+Here \(P_0\) projects onto \(r=0\). Streaming changes \((R,r)\) by
+\((-1,0),(0,-1),(0,1),(1,0)\), respectively. Thus the physical
+constituent velocities are \((-1,-1),(-1,1),(1,-1),(1,1)\).
+The definitions and complete relative dispersion of this same \(W\)
+are those of CONTACT-W-SPECTRAL-READING and
+CONTACT-W-BOUND-PAIR-RESPONSE above.
+
+The carrier is either a token at \(y\), with label \(t_j\), or a pulse
+at \(x\), with two coin banks and label \(p_j\), where \(0\le j<26\).
+The receiver stands at \(z=100\) and has memory
+\(\mathcal D=\operatorname{span}\{d_0,\ldots,d_{25}\}\). The active
+space is
+
+$$
+\mathcal H_T=\ell^2(\mathbb Z_R\times\mathbb Z_r\times\mathbb Z_y)
+ \otimes\mathbb C^4\otimes\mathbb C^{26},\qquad
+\mathcal H_P=\ell^2(\mathbb Z_R\times\mathbb Z_r\times\mathbb Z_x)
+ \otimes\mathbb C^4\otimes\mathbb C^2\otimes\mathbb C^{26},
+$$
+$$
+\mathcal H_{\rm rec}=(\mathcal H_T\oplus\mathcal H_P)
+ \otimes|z=100\rangle\otimes\mathcal D\otimes\mathcal H_{\rm aux,ref}.
+$$
+
+For explicit occupation codes each site has coordinates
+\((h_1,\ldots,h_{38})\) and charge \(H_N=2\sum h_\alpha^2\).
+The four object code kets on the object subbank have vectors
+\((-1,0,0,-1),(0,-1,-1,0),(1,0,1,0),(0,1,0,1)\); each has charge
+four, with charge two at each constituent position. Enumerate signed
+two-occupied vectors in five coordinates by increasing pairs of indices
+and, for each pair, signs \((1,1),(1,-1),(-1,1),(-1,-1)\).
+If this list is \(v_0,v_1,\ldots\), set
+\(p_0=v_{25}\), \(p_j=v_{j-1}\) for \(1\le j\le25\).
+Embed a pulse code in \((h_7,\ldots,h_{11})\) or
+\((h_{12},\ldots,h_{16})\), with \(h_5=h_6=0\).
+For tokens enumerate vectors in \((h_5,\ldots,h_{16})\) with one
+occupied coordinate \(h_5\) and the other successively at
+\(h_6,\ldots,h_{16}\), in the same sign order, and apply the same
+label rotation. Thus \(t_1=e_5+e_6\), \(p_1=(1,1,0,0,0)\), and
+every token or pulse code has charge four. Tokens are disjoint from
+both pulse banks and contain at most one occupied coordinate in either
+bank, so the pulse coin and vacuum pulse edge leave them fixed.
+Set \(d_j=(-1)^j e_{1+\lfloor j/2\rfloor}\) on
+\((h_{25},\ldots,h_{37})\); every memory code has charge two.
+The coordinates \(h_{17},\ldots,h_{24},h_{38}\) are identity
+spectators. Their occupied charge is included once, separately from the
+active total \(4+4+2=10\).
+
+Write \(c=1/\sqrt5\), \(s=2/\sqrt5\). The pulse on-site and
+edge factors, in the Fourier convention \(|x\rangle\mapsto e^{-ikx}\),
+are
+
+$$
+Q=\begin{pmatrix}c&-s\\s&c\end{pmatrix},\qquad
+E(k)=\begin{pmatrix}c&-se^{ik}\\se^{-ik}&c\end{pmatrix},\qquad
+V(k)=E(k)Q.
+$$
+
+Thus \(\det V=1\), \(\cos\varepsilon(k)=(1-4\cos k)/5\), and
+\(0\le\varepsilon(k)\le a_p=2\arctan2<3\pi/4\).
+Let \(P_\pm(k)\) be its spectral projectors with eigenvalues
+\(e^{\mp i\varepsilon(k)}\). On \(-\pi<k<0\), the plus band has
+
+$$
+v(k)=\varepsilon'(k)=-4\sin k/(5\sin\varepsilon(k))>0,
+\qquad |u_{+,1}(k)|^2=(1-v(k))/2.
+$$
+
+Put \(\beta=4\pi/5\) and
+\(U_0=(e^{-i\beta}W\otimes I_{\rm tok})\oplus
+(W\otimes e^{-i\beta}V)\), with identity on labels.
+At each site \(s_0\in\mathbb Z\) and each label \(j\), define the
+orthonormal contact vectors
+
+$$
+\alpha_{s_0,j}=|R=s_0,r=0,iB;\ y=s_0,t_j\rangle,\qquad
+\gamma_{s_0,j}=|R=s_0,r=0,A;\ x=s_0,e_1,p_j\rangle.
+$$
+
+The contact \(C\) is the identity off their span and acts on every
+pair by \(\left(\begin{smallmatrix}3/5&-4/5\\4/5&3/5\end{smallmatrix}\right)\).
+The order is \(U=U_0C\), with the right factor first. All statements
+compare the same phase-zero slices of the declared autonomous schedule:
+one macrostep is two synchronized microticks. No asynchronous or
+arbitrary-occupation extension is inferred.
+
+Let \(\mathsf J\) exchange a carrier label with a memory label, and
+define the self-adjoint unitary half-line calibration
+
+$$
+\mathcal T=\mathcal T_1\oplus\mathcal T_2,\quad
+\mathcal T_1=1_{y<z}I+1_{y\ge z}\mathsf J_{T,\rm mem},\quad
+\mathcal T_2=1_{x<z}I+1_{x\ge z}\mathsf J_{p,\rm mem},\quad
+U_{\rm rec}=\mathcal T(U\otimes I)\mathcal T^*.
+$$
+
+At a contact \(y=x=R=s_0\), both arrangements lie on the same side
+of \(z\), and the identical contact matrix acts on all labels. Hence
+\(\lbrack \mathcal T,C\otimes I\rbrack =0\) at every site. Tokens do not hop, and
+on-site pulse coins preserve position. Conjugation changes only the
+pulse edge \((z-1,z)\), to
+
+$$
+D_{\rm rec}=\frac1{\sqrt5}
+ \begin{pmatrix}I&-2\mathsf J\\2\mathsf J&I\end{pmatrix},\qquad
+D_{\rm rec}^*D_{\rm rec}=I.
+$$
+
+On the complement of the coded memory space use the unchanged free
+edge. The law is local and conserves charge; the integer numerator of
+\(D_{\rm rec}\) has Gram matrix \(5I\), not \(I\).
+
+**Infinite-lattice channel scattering and its normalization.** Joint
+translation of object center and carrier gives conserved momentum
+\(K=P+k\pmod{2\pi}\). Fourier transforming the carrier position and
+using \(u=R-y\) or \(u=R-x\) gives measure \(dK/(2\pi)\).
+On each \(K\) fiber the token free operator is \(e^{-i\beta}W\),
+independent of \(K\); at object momentum \(P\), the pulse free
+operator is \(e^{-i\beta}W(P)\otimes V(K-P)\).
+Per label the contact differs from the identity on the two ports
+\(a_1=\delta_{u=r=0}iB\) and
+\(a_2=\delta_{u=r=0}A\otimes e_1\) only. Thus
+\(U(K)-U_0(K)\) is rank two per label, rank at most 52 altogether.
+The unitary trace-class scattering theorem gives complete fiber wave
+operators
+
+$$
+\Omega_\pm(K)=\operatorname{s-lim}_{n\to\pm\infty}
+ U(K)^{-n}U_0(K)^nP_{\rm ac}(U_0(K)).
+$$
+
+Their initial and final spaces are the fiber absolutely continuous
+spaces of \(U_0(K)\) and \(U(K)\). Define their direct integrals as
+\(\mathscr H_{{\rm ch},0}\), \(\mathscr H_{\rm ch}\), with
+projections \(P_{{\rm ch},0}\), \(P_{\rm ch}\). Measurability follows
+from the measurable finite-time operators, and their norms are at most
+one, so dominated convergence gives the direct-integral limits
+\(\Omega_\pm\), their intertwining, and the unitary scattering
+operator \(\mathcal S=\Omega_+^*\Omega_-\) on the channel space.
+These channel spaces are not identified with global absolutely
+continuous spaces of the decomposable operators.
+
+For the port injection \(J_p:\mathbb C^2\to\mathscr H(K)\), set
+
+$$
+K_C=\frac15\begin{pmatrix}-2&-4\\4&-2\end{pmatrix},\quad
+m=J_p^*(\zeta-U_0)^{-1}U_0J_p=\operatorname{diag}(m_1,m_2),
+\quad F_j=1+2m_j,\quad |\zeta|>1.
+$$
+
+Each \(F_j=\langle a_j,(\zeta+U_{0,j})(\zeta-U_{0,j})^{-1}a_j\rangle\)
+has positive real part and \(F_j(\infty)=1\); \(F_1\) is independent
+of \(K\). Resolvent factorization gives
+
+$$
+R-R_0=R_0U_0J_pT J_p^*R_0,\qquad
+T=K_C(I-mK_C)^{-1},\qquad
+\det(I-mK_C)=(4+F_1F_2)/5,
+$$
+$$
+T_{21}=-T_{12}=4/(4+F_1F_2).
+$$
+
+For boundary densities with respect to \(dE\),
+\(\operatorname{Re}F_j(E)=2\pi\rho_j(E)\) almost everywhere.
+The unitary stationary scattering formula therefore gives the
+transition kernel from the selected incoming contact direction to the
+bound-pair, right-moving pulse direction,
+
+$$
+\mathcal P(K,E)=
+ \frac{64\pi^2\rho_{1,\rm in}(E)\rho_{2,b,+}(K,E)}
+ {|4+F_1(E)F_2(K,E)|^2}.                                      \tag{H1}
+$$
+
+The normalization is explicit: the boundary matrix element is
+\(2\pi\sqrt{\rho_{2,b,+}}\,T_{21}\sqrt{\rho_{1,\rm in}}\), up to
+the convention-dependent unit phase. In the stationary formula with
+resolvent \((U_0-\zeta)^{-1}\), its compressed resolvent is \(-m\);
+\((I-K_Cm)^{-1}K_C=K_C(I-mK_C)^{-1}\). Reversing the incoming/outgoing
+wave-operator convention replaces the scattering operator by its
+adjoint and preserves the corresponding transition probability. This
+is the convention conversion for the unitary stationary scattering
+theorem of R. Tiedra de Aldecoa, *Stationary scattering theory for
+unitary operators with an application to quantum walks*,
+J. Funct. Anal. 279 (2020), 108704, Example 3.8 and Theorem 4.3
+([arXiv:1912.04960v2](https://arxiv.org/abs/1912.04960v2)). In
+particular neither a missing \(2\pi\) nor a restricted replacement
+for the full functions \(F_j\) is allowed in (H1).
+
+**A quantitative isolated branch.** Let \(z_g=e^{-ig}\) and
+\(\chi_0=\delta_0A\). The preceding
+CONTACT-W-BOUND-PAIR-RESPONSE supplies the full infinite-operator
+contact resolvent and the simple eigenvalue \(z_g\) of \(W(0)\).
+The following estimates make its neighborhood explicit. On the
+complement of the entire free \(A\) channel, write
+\(R_0=(z_g-F_b)^{-1}\), \(G_0=j^*R_0j\),
+\(K_0=I-(z_g-1)G_0\), where \(j\) inserts the remaining three
+coin directions at \(r=0\). The free spectral distance obeys
+\(\delta_f=(4\cos(\pi/5)-2\sin(\pi/5))/\sqrt5>68/75>9/10\),
+so \(\|R_0\|<10/9\). Unitarity gives
+
+$$
+R_0^*=z_gI-z_g^2R_0,\qquad K_0^*=z_gK_0,
+\qquad \widetilde K=e^{-ig/2}K_0=\widetilde K^*.
+$$
+
+Put \(c_0=(1+\sqrt5)/4\) and
+\(s_0'=\sqrt{(2\sqrt5-1)/5}\). Substituting the preceding
+three-channel resolvent formulas gives
+
+$$
+\widetilde K_{BB}=5c_0(1-s_0'),\quad
+(\widetilde K_{ST})_{11}=4/(5s_0'c_0),\quad
+\det\widetilde K_{ST}=4(1-s_0')/s_0',\quad
+\operatorname{tr}\widetilde K_{ST}=-3c_0+(1+3c_0^2)/(s_0'c_0).
+$$
+
+The rational brackets \(4/5<c_0<1\) and
+\(83/100<s_0'<5/6\) imply the first diagonal entries exceed
+\(1/2\), the determinant exceeds \(4/5\), and the trace is below
+\(829/415<2\). Indeed
+\(1/(sc)+3c(1/s-1)\) decreases on these two intervals, so its
+upper bound is its value at \((c,s)=(4/5,83/100)\).
+Consequently
+\(\det(\widetilde K_{ST}-I/2)>17/332>0\), and Sylvester's
+criterion gives \(\|K_0^{-1}\|<2\). Woodbury's identity then yields
+
+$$
+\|(z_g-W_b)^{-1}\|
+ <10/9+(6/5)(10/9)^2\,2=110/27,
+\quad\delta_0=27/110.
+$$
+
+The other \(A\)-channel eigenvalue is 1 at distance greater than one.
+Since \(W(P)=e^{iP\operatorname{diag}(1,0,0,-1)}W(0)\),
+\(\|W(P)-W(0)\|\le|P|\), \(\|W'(P)\|\le1\).
+The circle \(|w-z_g|=1/8\) has distance at least \(53/440\)
+from \(\sigma(W(0))\); its Neumann product on \(|P|\le1/12\)
+is \(110/159<1\). Its Riesz projection \(\Pi_b(P)\) therefore
+stays rank one. Normal spectral variation gives
+
+$$
+\operatorname{gap}(\Pi_b(P))\ge\delta_0-2|P|\ge13/165,
+\quad \|\Pi_b'(P)\|\le L=165/13,
+\quad |\Omega''(P)|\le2L,
+$$
+
+where \(W(P)\Pi_b(P)=e^{-i\Omega(P)}\Pi_b(P)\),
+\(\Omega(0)=g\), and \(\Omega'(0)=0\) by reflection symmetry.
+The derivative bound follows by differentiating the simple eigenvector
+in parallel gauge and applying the reduced resolvent. The second
+derivative bound follows by differentiating its expectation of the
+norm-one momentum generator. Thus
+\(|\Omega(P)-g|\le LP^2\), \(|\Omega'(P)|\le2L|P|\).
+All these are infinite-lattice estimates, not finite-box eigenvalues.
+
+**Exact incoming preparation and certified densities.** Fix
+
+$$
+p_{\rm in}=h=\delta_K=1/1000,\quad p_b=1/100,\quad
+I_E=\lbrack 8\pi/5-h,8\pi/5+h\rbrack ,\quad\ell_E=1/500,
+$$
+$$
+k_0=-\arccos((9-5\sqrt5)/16),\qquad
+I_K=\lbrack k_0-\delta_K,k_0+\delta_K\rbrack .
+$$
+
+For \(|P|\le p_{\rm in}\), \(\omega=E-\beta\), define
+
+$$
+D=\cos\omega-\cos P,\quad d=4\sin\omega/D,\quad
+x=\cos\omega-d\sin\omega,
+\quad X_0=\frac{\sin\omega+d(\cos\omega+x)}{\sqrt{1-x^2}},
+\quad\tau=\tan(\pi/5).
+$$
+
+Eliminating the stationary coin channels of \(S_PM_2\) gives the
+scalar moving-channel denominator \(\cos q-x\). On this rectangle
+\(D<0\), \(-1<x<1\), \(\partial_\omega x<0\), and \(X_0>0\).
+The outgoing root in the unit disk selects the boundary value
+\(F_{0,B}=X_0+id\). The contact phase gives the Möbius transform
+\(F_B=(F_{0,B}+i\tau)/(1+i\tau F_{0,B})\). Hence the actual
+contact density of \(W(P)\), with respect to \(d\omega\), is
+
+$$
+\rho_{B,W}(P,\omega)=
+ \frac{(1+\tau^2)X_0}
+ {2\pi\lbrack (1-\tau d)^2+\tau^2X_0^2\rbrack }>77/1000.                \tag{H2}
+$$
+
+The expression is finite and smooth on the rectangle, so this part
+of the spectral measure is absolutely continuous. The exact rational
+interval certificate specified below verifies all root, denominator,
+derivative and strict-margin conditions in this calculation, including
+\(\partial_\omega x=-\sin\omega\lbrack 1+8\cos\omega/D+
+4\sin^2\omega/D^2\rbrack <0\). Its incoming integral is
+
+$$
+\rho_{1,\rm in}(E)=\int_{-p_{\rm in}}^{p_{\rm in}}
+ \rho_{B,W}(P,E-\beta)\frac{dP}{2\pi}\ge a_{\rm in}>24/10^6.
+$$
+
+Let \(P_{\rm in}=1_{|P|\le p_{\rm in}}P_{\rm ac}(W(P))\)
+be the direct-integral relative-ac projector and
+\(a_0=\delta_{u=r=0}iB\). For \(H_1=H_W+\beta\), define
+
+$$
+\psi_{\rm in}=1_{I_E}(H_1)
+ \lbrack \ell_E\rho_{1,\rm in}(H_1)\rbrack ^{-1/2}P_{\rm in}a_0.
+$$
+
+Here \(H_W=i\operatorname{Log}_{3\pi/10}W\), with the cut already
+justified by CONTACT-W-SPECTRAL-READING. Functional calculus gives
+\(\|\psi_{\rm in}\|^2=\int_{I_E}dE/\ell_E=1\).
+Its relative-ac restriction is orthogonal to \(\Pi_b(P)\), so its
+free incoming bound weight is exactly zero. Place the token sharply at
+\(y=0\), with label \(t_1\). In the spectral representation,
+
+$$
+\Psi_{\rm loc}(K,E)=\ell_E^{-1/2}1_{I_E}(E)
+ \xi_{\rm in}(E)\otimes|t_1\rangle,\quad
+\xi_{\rm in}(E)=Z_{1,\rm in}(E)a_0/\sqrt{\rho_{1,\rm in}(E)}.
+$$
+
+Its fiber direction has unit norm. The input includes all
+\(K\in\lbrack -\pi,\pi)\), with measure \(dK/(2\pi)\); the small
+\(I_K\) is an output subevent, not a restriction of this preparation.
+For an arbitrary normalized memory/helper/reference state \(\sigma\),
+including mixed states and arbitrary memory-reference correlations,
+the free incoming state is
+\(\rho_{\rm in}=|\Psi_{\rm loc},z=100\rangle
+\langle\Psi_{\rm loc},z=100|\otimes\sigma\).
+The object/carrier marginal is this fixed pure state; correlations
+with a different object preparation are not included. The interacting
+preparation is \(\rho_{\rm phys}=\Omega_{{\rm rec},-}\rho_{\rm in}
+\Omega_{{\rm rec},-}^*\).
+
+For \((K,E)\in I_K\times I_E\), the outgoing energy equation is
+
+$$
+f_{K,E}(P)=\Omega(P)+\beta+\varepsilon(K-P)-E=0,
+\qquad |P|\le p_b.
+$$
+
+At \((K,E,P)=(k_0,8\pi/5,0)\) it vanishes, since
+\(\varepsilon(k_0)=g\). On \(|k-k_0|\le11/1000\), the same
+certificate supplies \(0<v_{\min}\le v(k)\le v_{\max}<1\) and
+
+$$
+v_{\min}-2Lp_b>0,\qquad
+v_{\min}(p_b-\delta_K)-Lp_b^2-h>0.
+$$
+
+The first makes \(f_{K,E}\) strictly decreasing; the second gives
+positive and negative values at \(-p_b\) and \(p_b\). There is a
+unique interior root \(P_*(K,E)\). The branch overlap is at least
+\(1-Lp_b\), the pulse bank weight is at least \((1-v_{\max})/2\),
+and the coarea Jacobian is at most \(v_{\max}+2Lp_b\). Therefore
+
+$$
+\rho_{2,b,+}(K,E)=
+ \frac{\langle b_0,\Pi_b(P_*)b_0\rangle
+ |u_{+,1}(K-P_*)|^2}{2\pi|\partial_Pf_{K,E}(P_*)|}
+ \ge b_{\rm hom}:=
+ \frac{(1-Lp_b)(1-v_{\max})/2}{2\pi(v_{\max}+2Lp_b)}>1/100,
+\quad b_0=\delta_0A.                                      \tag{H3}
+$$
+
+**Full-function denominator bound and positive joint weight.** For
+any \(0<\alpha<1\), positive real part gives
+\(\operatorname{Re}(F_j^\alpha)\ge
+|F_j|^\alpha\cos(\pi\alpha/2)\). The analytic branch equals one
+at infinity, so the mean-value property and Fatou's lemma imply
+
+$$
+\int_{-\pi}^{\pi}|F_j(K,E)|^\alpha dE
+ \le C_\alpha=2\pi\sec(\pi\alpha/2).
+$$
+
+Cauchy-Schwarz gives
+\(\int_{I_E}|F_1F_2|^{\alpha/2}dE\le C_\alpha\).
+Choose \(\alpha=9/10\) and
+
+$$
+M=\left\lbrack \frac{2\pi\sec(9\pi/20)}{(40/49)\ell_E}\right\rbrack ^{20/9}.
+$$
+
+Markov's inequality bounds the set \(|F_1F_2|>M\) by
+\((40/49)\ell_E\). Its complement thus has measure at least
+\((9/49)\ell_E\), and there \(|4+F_1F_2|\le4+M\).
+No channel is removed from \(F_1\) or \(F_2\), and no pointwise
+bound outside this good set is asserted. Integrating (H1), using
+(H2)--(H3), proves
+
+$$
+\int_{I_E}\mathcal P(K,E)\frac{dE}{\ell_E}
+ \ge B_{\rm hom}=64\pi^2a_{\rm in}b_{\rm hom}
+ \frac{9/49}{(4+M)^2}>8/10^{25}\quad(K\in I_K).             \tag{H4}
+$$
+
+Define, on the free outgoing pulse space and zero on tokens,
+
+$$
+Q_{\rm full}=1_{|P|\le1/100}
+ 1_{I_E}(\Omega(P)+\beta+\varepsilon(k))
+ \Pi_b(P)\otimes P_+(k)1_{\varepsilon'(k)>0}
+ \otimes I_{\rm pulse\ labels}\otimes|d_1\rangle\langle d_1|
+ \otimes I_{\rm aux,ref},\qquad
+Q_{\rm win}=1_{I_K}(K)Q_{\rm full}.                        \tag{H5}
+$$
+
+Let \(Q_{{\rm ch},\rm full}\) have the same object, momentum and
+pulse-band factors but select \(|p_1\rangle\langle p_1|\), before
+the receiver exchange; define its windowed version similarly. The
+receiver identities proved below give
+\(\mathcal T_+^*Q_{\rm full}\mathcal T_+
+=Q_{{\rm ch},\rm full}\otimes I_{\rm mem,aux,ref}\), and the same
+identity for the windowed event. Hence there is no memory-state
+penalty, and the physical lifts are
+
+$$
+P_{\rm out}^{\rm win/full}=\Omega_{{\rm rec},+}
+ Q_{\rm win/full}\Omega_{{\rm rec},+}^*,\qquad
+p(Q)=\operatorname{Tr}(\rho_{\rm phys}P_{\rm out})
+=\operatorname{Tr}(\rho_{\rm in}\mathcal S_{\rm rec}^*Q\mathcal S_{\rm rec}).
+$$
+
+Since \(\int_{I_K}dK/(2\pi)=\delta_K/\pi\), (H4) yields the
+announced bound
+\(p(Q_{\rm full})\ge p(Q_{\rm win})\ge
+(\delta_K/\pi)B_{\rm hom}>2/10^{28}\).
+Capture, current and record use this same outgoing projector and its
+same wave-operator lift; the windowed event is exactly the momentum
+restriction of the full event. The extra bound-branch factor in (H5)
+cannot be replaced by a pulse or by the memory value alone.
+
+**Exact certificate and its soundness.** The minimal reproduction is
+[C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N](../reproduce/C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N/README.md).
+It verifies exact matrix/Laurent identities and the strict enclosures
+used above, on complete declared rectangles. Its branch, packet,
+occupation, current, open-channel and finite-strip groups have
+24, 44, 28, 14, 16 and 18 checks, respectively. This finite audit does
+not replace the infinite-operator scattering argument.
+
+The scalar interval endpoints are exact rational numbers. Rounding
+to denominator \(10^{36}\) uses floor at the lower end and ceiling
+at the upper end, and asserts containment. Field operations use the
+four endpoint products and reject zero-containing denominators.
+Square-root endpoints \(l,u\ge0\) are certified by
+\(l^2\le a\le b\le u^2\). Alternating arctangent sums bracket
+\(\arctan(1/q)\) for \(q\ge2\); Machin's identity
+\(\pi/4=4\arctan(1/5)-\arctan(1/239)\) then encloses \(\pi\).
+Taylor sine/cosine sums carry their factorial remainder bounds. For
+an interval of radius \(r\le2\), angle addition with
+\(1-r^2/2\le\cos\delta\le1\), \(|\sin\delta|\le r\)
+encloses every point, not samples. Arccosine candidates in
+\(\lbrack 0,\pi\rbrack \) are checked by the reversed cosine inequalities.
+The \(20/9\) power is certified by positive endpoints satisfying
+\(l^9\le a^{20}\le b^{20}\le u^9\). Complex square roots use
+the positive real and imaginary components of the principal root
+in the upper half-plane. These properties inductively prove enclosure
+of the closed formulas and their derivatives. The reproduction
+checks all strict positivity margins, the outgoing root's straddling,
+the denominator threshold, and the rational bounds in (H2)--(H4),
+including wrong-root and sign controls. Its exact stdout is compared
+with its committed EXPECTED.txt on both required architectures.
+
+**Receiver asymptotics and preservation of old information.** Put
+\(U'_0=U_0\otimes I_{\rm mem,aux,ref}\). On tokens,
+\((U'_0)^{-n}\mathcal T(U'_0)^n=\mathcal T_1\). The token fiber
+operator and its channel projector are independent of total \(K\),
+so \(\mathcal T_1\) preserves that channel space although its
+half-line condition can mix \(K\) fibers. This channel projector
+is not the narrower relative-ac preparation projector.
+On pulses, define the two-band projectors
+\(\Pi_{v\gtrless0}(k)=\sum_{\sigma=\pm}P_\sigma(k)
+1_{\sigma\varepsilon'(k)\gtrless0}\). Fourier propagation of a
+packet on a band with velocity bounded away from zero carries it
+to the appropriate half-line. Smooth packets away from the finitely
+many zero-velocity points are dense, and the half-line projectors are
+bounded; the strong limits therefore extend to the whole pulse
+channel. Thus
+
+$$
+\mathcal T_+=\Pi_{v<0}\otimes I+\Pi_{v>0}\otimes\mathsf J,
+\qquad
+\mathcal T_-=\Pi_{v>0}\otimes I+\Pi_{v<0}\otimes\mathsf J
+$$
+
+on pulses, and both equal \(\mathcal T_1\) on tokens. They preserve
+the channel space and commute with \(U'_0\). Factoring the defining
+wave-operator limits proves
+
+$$
+\Omega_{{\rm rec},\pm}=\mathcal T(\Omega_\pm\otimes I)
+ \mathcal T_\pm^*,\qquad
+\mathcal S_{\rm rec}=\mathcal T_+(\mathcal S\otimes I)\mathcal T_-^*.
+$$
+
+The input has \(y=0<z\), so \(\mathcal T_-\) is the identity
+there. On a selected outgoing right-moving pulse, \(\mathcal T_+\)
+exchanges the labels exactly:
+
+$$
+|p_1\rangle\sum_j|d_j\rangle|\phi_j\rangle
+ \longmapsto\sum_j|p_j\rangle|d_1\rangle|\phi_j\rangle,
+\qquad\sum_j\|\phi_j\|^2=1.                              \tag{H6}
+$$
+
+This is an isometry on the entire old-memory/reference state. It
+proves the pullback of (H5), including mixed states by purification.
+For a normalized selected outgoing branch \(\Psi_+\), write
+\(\delta_n\to0\) for the free pulse's left-of-receiver tail,
+\(\widetilde\eta_n\to0\) for the norm difference between
+\(U_{\rm rec}^n\Omega_{{\rm rec},+}\Psi_+\) and
+\(\mathcal T(U'_0)^n\mathcal T_+^*\Psi_+\), and
+\(\eta_n\to0\) for its difference from \((U'_0)^n\Psi_+\).
+The calibrated surrogate has wrong-memory probability
+\(\delta_n^2(1-\|\phi_1\|^2)\le\delta_n^2\), whereas the latter
+free reference has none. The triangle inequality gives the physical
+bound
+
+$$
+\Pr(\text{wrong memory at }n\mid\Psi_+)
+ \le\min\{\eta_n^2,(\delta_n+\widetilde\eta_n)^2\}\longrightarrow0.
+$$
+
+No uniform finite waiting time or retention modulus follows from
+these strong limits.
+
+**Occupation intertwiner and complete physical-cut current.** Let
+\(\mathsf{Emb}\) map the declared basis to its occupation kets,
+\(D_2=\operatorname{diag}(1,i,i,-1)\), and
+\(M_{\rm nat}=Q\otimes Q=D_2^*M_2D_2\). The native occupation
+object gate order is \(F_{\rm nat}=S_{\rm nat}M_{\rm nat}\Gamma_{\rm nat}\),
+whereas the source order is \(W=\Gamma SM_2\). They are related by
+
+$$
+\mathcal I_0=\mathsf{Emb}\,\Gamma^{-1}D_2^*,\qquad
+(SM_{\rm nat}\Gamma)(\Gamma^{-1}D_2^*)
+ =(\Gamma^{-1}D_2^*)(\Gamma SM_2).
+$$
+
+Indeed \(M_{\rm nat}D_2^*=D_2^*M_2\), and the diagonal gauge
+commutes with streaming. At contact it sends \(iB\) to
+\((e_2-e_3)/\sqrt2\) and \(A\) to \((e_1+e_4)/\sqrt2\),
+with their common contact phase. Tensoring with the specified token,
+pulse and memory codes extends this to
+\(U_{\rm nat}\mathcal I=\mathcal I U_{\rm rec}\).
+Tensor further with the identity on arbitrary admitted occupied
+helpers and references. This retains their correlations, not just a
+chosen empty helper state.
+
+For \(\Theta_\ell(q)=1_{q>\ell}\), the full native right-half
+charge pulls back to
+
+$$
+\mathcal I_{\rm ext}^*H_{N,R,\ell}^{\rm full}\mathcal I_{\rm ext}
+ =N_{R,\ell}\otimes I_{\rm aux}+I\otimes Q_{R,\rm aux},\qquad
+N_{R,\ell}=2\Theta_\ell(x_A)+2\Theta_\ell(x_B)
+ +4\Theta_\ell(\text{carrier})+2\Theta_\ell(z).
+$$
+
+The diagonal gauge commutes with position. Helpers are stationary,
+so their charge cancels from the time difference. On the active
+sector \(N_L+N_R=10I\). Write the complete source step as
+\(U_{\rm rec}=e^{-i\beta}\Gamma S_{\rm obj}D_{\rm edge,rec}D_cC\),
+where \(D_c\) comprises the on-site object coin and the pulse coin
+on the pulse arrangement. Then at the beginning of the same
+synchronized macrostep,
+
+$$
+J_\ell=U_{\rm rec}^*N_{R,\ell}U_{\rm rec}-N_{R,\ell}
+ =N_{L,\ell}-U_{\rm rec}^*N_{L,\ell}U_{\rm rec}
+ =C^*D_c^*(j_{S,\ell}+j_{E,\ell})D_cC,                   \tag{H7}
+$$
+$$
+j_{S,\ell}=2\sum_{d=1}^4
+ \lbrack \Delta_\ell(x_A,v_{A,d})+\Delta_\ell(x_B,v_{B,d})\rbrack
+ |d\rangle\langle d|,
+\quad \Delta_\ell(q,1)=1_{q=\ell},\quad
+\Delta_\ell(q,-1)=-1_{q=\ell+1},
+$$
+$$
+j_{E,\ell}=\frac45
+ \begin{pmatrix}4I&2\mathsf S_\ell\\2\mathsf S_\ell&-4I\end{pmatrix},
+\quad \mathsf S_\ell=\begin{cases}\mathsf J,&\ell=z-1,\\I,&\ell\ne z-1.
+ \end{cases}
+$$
+
+The last matrix acts on pulse bank 1 at \(\ell\) and bank 2 at
+\(\ell+1\), and vanishes elsewhere. It includes the coherent
+cross term; it is not a difference of pulse populations alone.
+Its square is \((64/5)P_{\rm bond}\), so
+\(\|J_\ell\|\le4+8/\sqrt5\).
+To prove (H7), contact and on-site coins preserve charge at each
+physical site, and \(\Gamma\) is diagonal. Only object streaming
+and pulse edges transport charge, on commuting tensor factors.
+The receiver label swap leaves its charge two fixed while the pulse
+transports charge four. In particular \(\ell=99\) is the actual
+receiver cut, not a relative-coordinate cut. Left outflow and right
+inflow are the same operator, with both object constituents included.
+
+**Typed spectral energy and spatial limits.** Independently of
+\(H_N\), put \(H_E=\beta+i\operatorname{Log}_\pi V\) and
+
+$$
+H_0=(H_W+\beta)\otimes I_{\rm tok}
+ \ \oplus\ (H_W\otimes I+I\otimes H_E),\quad
+\sigma(H_0)\subset\lbrack \pi/2-a_p,5\pi/2+a_p\rbrack .
+$$
+
+The interval \(J_{\rm safe}=(5\pi/4,7\pi/4)\) contains \(I_E\)
+and no point in it has a \(2\pi\) translate in this enclosing
+spectrum, since \(a_p<3\pi/4\). On
+\(1_{J_{\rm safe}}(H_0)P_{{\rm ch},0}\), modular phase therefore
+determines this additive reference energy. Borel functional calculus
+and the wave/scattering intertwining prove its conservation on that
+window, also after receiver calibration. This does not produce a
+local current of spectral energy from the local charge current (H7).
+
+The one-carrier restriction is substantive. Let \(b_p=\pi-a_p\)
+and \(\alpha=3\pi/10\). Exterior plane-wave Weyl sequences of the
+relative walk give \(\lbrack -b_p,b_p\rbrack \cup\lbrack a_p,\pi+b_p\rbrack \subset\sigma(H_W)\).
+Two independent pulses add \(\lbrack 2\beta-2a_p,2\beta+2a_p\rbrack \), giving
+the inner spectral interval
+
+$$
+J_*=\lbrack 2\beta-2a_p-b_p,\ 2\beta+2a_p+\pi+b_p\rbrack ,
+\quad |J_*|=3\pi+2a_p>4\pi.
+$$
+
+The full two-pulse spectrum lies in
+\(\lbrack 2\beta-2a_p-\alpha,2\beta+2a_p+2\pi-\alpha\rbrack \).
+The two strips outside \(J_*\) have widths \(\alpha-b_p\) and
+\(a_p-\alpha\), both below \(2\pi\). A point in either strip
+has its inward \(2\pi\) translate in \(J_*\); a point in
+\(J_*\) has at least one such translate there as well. Thus this
+two-pulse spectrum has aliases at every energy. Neither arbitrary
+occupation nor many-carrier energy conservation at the stated
+unaliased scope follows from the one-carrier theorem.
+
+Relative binding also does not mean exact confinement in a finite
+strip. Here is the finite-strip argument. Write \(w=e^{iP}\),
+\(N=5\), \(\mu=2\), and use eigenvalue \(\lambda\in\mathbb T\).
+Eliminating the stationary channels away from \(r=0\) has denominator
+
+$$
+D=N\lambda^2-\lambda(w+w^{-1})+1-\mu^2,\quad
+p=(\lambda-w)(\lambda-w^{-1}),\quad
+q=\mu^2(1-\lambda^2),\quad p-q=D.
+$$
+
+The reduced moving matrix is
+\(D^{-1}\left(\begin{smallmatrix}p&q\\q&p\end{smallmatrix}\right)\).
+On the unit circle
+\(D/\lambda=2(\cos\theta-\cos P)+2i\mu^2\sin\theta\),
+so \(D=0\) only at \((\lambda,P)=(1,0),(-1,\pi)\).
+For all other \(P\), if \(p\ne0\), peeling the outermost occupied
+positive or negative site forces both moving channels, and then the
+stationary channels, to zero. A vector supported only at zero would
+force \(w=w^{-1}\), also excluded. If \(p=0\), then
+\(\lambda=w\) or \(w^{-1}\), \(q/D=-1\), and the exterior
+bond equations force support into \(\{-1,0,1\}\). The remaining
+center equation is \(z_gM_2\chi(0)=T_{\lambda,w}\chi(0)\), with
+
+$$
+T_{\lambda,w}=\begin{pmatrix}
+\lambda w^{-1}&0&0&0\\0&0&-\lambda^2&0\\
+0&-\lambda^2&0&0\\0&0&0&\lambda w
+\end{pmatrix}.
+$$
+
+For \(u=w^2\) or \(w^{-2}\), respectively, its determinant is
+
+$$
+\det(z_gM_2-T_\pm(u))
+ =\frac{(z_g-u)^2}{N}\lbrack z_g(Nz_g-1)-(N-z_g)u\rbrack .
+$$
+
+This identity and the elimination identities are checked over
+\(\mathbb Z\lbrack i\rbrack \) by the exact Laurent-polynomial certificate.
+Compact eigenvectors can therefore occur only for
+
+$$
+P\in\mathcal E=\{0,\pi\}\cup
+\{P:e^{2iP}\in\{z_g,u_*,\overline z_g,\overline u_*\}\},
+\quad u_*=z_g(Nz_g-1)/(N-z_g),\quad |\mathcal E|\le10.
+$$
+
+Outside this null set, a nonzero invariant subspace of a finite
+relative strip would be finite dimensional and contain such an
+eigenvector. Direct integration consequently gives
+\(\bigcap_{n\in\mathbb Z}W^{-n}\operatorname{Ran}1_{|r|\le B}
+=\{0\}\) for every finite \(B\). In particular, suppose a bounded
+operator \(C_{\rm loc}\) commutes with \(W\otimes V\) and
+\(\operatorname{Ran}(C_{\rm loc}-I)\subset
+\operatorname{Ran}1_{|r|\le B}\otimes\mathcal H_{\rm pulse}\).
+Commutation places this range in the same strip after every forward
+and backward iterate, hence in the zero intersection above tensored
+with \(\mathcal H_{\rm pulse}\). Therefore \(C_{\rm loc}=I\).
+
+Contact nevertheless decays for each fixed scattering state.
+On every \(K\) fiber, free ac evolution tends weakly to zero;
+the finite-rank contact converts that to norm decay. Dominated
+convergence and the wave-operator approximation give
+\(\|(C-I)U^n\phi\|\to0\) for every fixed
+\(\phi\in\mathscr H_{\rm ch}\). This is not uniform over the
+whole incoming spectral packet family. If \(D_{\rm in}f\) denotes
+the packet with energy amplitude \(f\in L^2(I_E)\), then
+\(U^n\Omega_-D_{\rm in}f=\Omega_-D_{\rm in}(e^{-inE}f)\), so
+
+$$
+\sup_{\|f\|=1}\|(C-I)U^n\Omega_-D_{\rm in}f\|
+ =\|(C-I)\Omega_-D_{\rm in}\|>0
+$$
+
+for every \(n\). If the final norm were zero, the whole family
+would evolve freely and have zero capture, contrary to (H4).
+
+**Remaining interpretation boundary.** The theorem supplies one
+connected asymptotic mechanism, with a strictly positive certified
+joint weight and the current and record on the same carrier. It does
+not supply a finite-resource preparation of the sharply selected
+incoming scattering state, a finite-time effect with controlled false
+positives for (H5), or a quantitative finite-interval or future-uniform
+retention bound. Those operations must use compatible preparations,
+physical times and joint effects before a stronger finite result can
+be asserted. The mathematical spectral weight is not a physical
+occurrence postulate; the physical apparatus obligation remains with
+QDD-INSTRUMENT-APPARATUS.
+
+The infinite carrier is retained. Full coherent input/output history,
+rather than pulse output alone, is the available causal reconstruction
+data: equal pulse histories can hide different physical-cut currents.
+No exact finite-dimensional time-independent linear realization on
+all histories is supplied by this theorem. The full-domain
+linear-memory exclusions do not exclude restricted preparations,
+finite horizons, approximation or other representations. Their
+separate reconstruction and no-go scope is recorded in the
+[public history/interface analysis, Section 6](../notes/C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N/PROOF_CURRENT_RECORD_INTERFACE.md);
+it is not an extra assumption of the quantitative packet bound.
+The [public analytical package](../notes/C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N/README.md)
+and the unchanged minimal reproduction expose the full source
+formulas and checks for audit. The argument above states the analytical
+core and its mathematical premises explicitly.
+
+### Specified finite apparatuses and complete resource accounts
+
+The specified homogeneous spatial rule admits a phase-sensitive source
+comparison at fixed complete spectral law. Finite preparation and readout
+are constructed in supplied apparatus models with explicit registers,
+controls, thermal boundary states and energy accounts. Separate results
+give finite coherent energy compensation, full-channel export of an
+occupied record and a finite local realization of two consumptive uses.
+These constructions establish conditional existence and quantitative
+bounds. They do not identify the different carriers or energy operators.
+
+A complete account includes the clock, fuel, helpers, discarded states
+and old memory, as well as every unsuccessful branch. Restoring the
+working machine is compatible with retaining a record because information
+and consumed resources remain in named output and waste carriers. Finite
+closed constructions have specified later returns; an isolated exported
+record has a different control contract.
+
+### ACTIVE-ISOSPECTRAL-RECORD [T]
+
+**Scope.** Conditional L1 under the construction premises stated below.
+
+#### Definitions and exact scope
+
+Fix the `HOMOGENEOUS-CAPTURE-CURRENT-RECORD` homogeneous unitary
+`U_rec`, its receiver at coordinate 100, the calibrated carrier/memory
+label exchange, and the active-contact definitions in [A, §0](../notes/C-FINITE-PHASE-OCCUPIED-RECORD-N/ACTIVE_EQUAL_SPECTRUM.md).
+These include contact angle `g=2pi/5`, scalar phase `beta=4pi/5`, contact
+rotation `[[3/5,-4/5],[4/5,3/5]]`, and the stated object and pulse steps.
+Keep their scalar phases also in controlled operations.
+
+The source seed is
+`chi_s=|R=97,r=0,iB; y=97,token,label=0>`, where
+`B=(e2-e3)/sqrt(2)`. For any normalized old-memory/reference vector `Xi`,
+put `chi=chi_s tensor Xi` and define
+
+```text
+D = U_rec^2-U_rec^(-2),
+Z = (39521+154 sqrt(5))/15625,
+psi_± = (I±D)chi/sqrt(Z).
+```
+
+The source preparation and equal-spectrum identity admit all 26 receiver
+labels and arbitrary passive references. The fresh-write conclusion
+below requires the old memory to lie in
+`K_mem=span(d1,...,d25)` and uses
+`P_W=I tensor |d0><d0|_mem tensor I_ref`.
+The exact finite-source identities and complete gate actions are those
+in [A, §§1–5](../notes/C-FINITE-PHASE-OCCUPIED-RECORD-N/ACTIVE_EQUAL_SPECTRUM.md) and [S, §§1–4](../notes/C-ORIGINAL-PORT-SOURCE-PREPARATION-N/SOURCE_CIRCUIT.md); they are the stated construction data
+and proofs for the stated construction premises.
+
+#### Statement
+
+For every such normalized input, both preparations have norm one,
+identical initial configuration probabilities, and exactly equal complete
+spectral measures of `U_rec`:
+
+```text
+dmu_psi+(z) = dmu_psi-(z)
+           = (3-z^4-z^(-4)) dmu_chi(z)/Z.
+```
+
+Consequently every fixed real Borel reading `f(U_rec)` has the same
+distribution in both states; all its existing moments agree. This
+includes a chosen bounded positive scalar logarithm but does not select
+that logarithm as the physical energy. Both states have an active contact
+already at their first forward step. For old memory in `K_mem`, their
+receiver is initially unwritten.
+After exactly three unchanged forward steps, for every input in `K_mem`
+and every reference correlation, the fresh-write probabilities satisfy
+
+```text
+Delta = ||P_W U_rec^3 psi_+||^2-||P_W U_rec^3 psi_-||^2
+      = 65536(48533-10985 sqrt(5))
+        /[5^9(39521+154 sqrt(5))] > 1/50.
+```
+
+The statements extend to mixed inputs by purification. Complete fixed
+preparation gates and a coherent two-setting selector act on the source
+and helpers without an oracle for the unknown memory state. The word
+`W_prep=-Aop R_in Aop* S_good Aop` in [S, §3](../notes/C-ORIGINAL-PORT-SOURCE-PREPARATION-N/SOURCE_CIRCUIT.md) prepares the plus source
+exactly and restores the helpers and old memory at its endpoint. The
+selector `|0><0| tensor I+|1><1| tensor (-F)` retains its relative phase
+on coherent setting inputs. This is a supplied-gate result; the six-pentit
+rule has not been shown to synthesize those gates.
+
+**Proof.** Skew-adjointness of `D` and
+`|1+d(z)|^2=|1-d(z)|^2` prove the spectral identity. The conserved exchange
+symmetry and the exact source return `12/25` show that `Dchi` vanishes
+on the two occupied seed ports, proving equal configuration populations.
+Finite propagation makes the three-step receiver difference the single
+cross term in [A, (A4)–(A5)](../notes/C-FINITE-PHASE-OCCUPIED-RECORD-N/ACTIVE_EQUAL_SPECTRUM.md). The complete contact-path decomposition
+gives (A8), while the four-step return gives (A8b); substitution proves
+(A10). The subspace identity `P Aop* Pi Aop P=P/4` proves the preparation
+word on the whole 26-dimensional memory input subspace.
+
+**Falsifiers and limit.** A missing controlled scalar phase, a missing
+contact history, a wrong normalization, or a memory-dependent source
+gate defeats the corresponding claim. Equal spectral law does not mean
+identical state or identical readout. This does not prove outcome
+occurrence, an incoming-unbound capture experiment, permanent retention,
+or the thermal preparation of the supplied gates.
+
+### THERMAL-ORIGINAL-PORT-APPARATUS [T]
+
+**Scope.** Conditional L1 under the construction premises stated below.
+
+#### Implementation premises and finite inventory
+
+Assume the complete energy-fiber gate lifts and routed finite occupation
+implementation of [L, §§1–3](../notes/C-ORIGINAL-PORT-SOURCE-PREPARATION-N/LOCAL_REALIZATION.md), the source word of [S](../notes/C-ORIGINAL-PORT-SOURCE-PREPARATION-N/SOURCE_CIRCUIT.md), and the
+explicit instantiation of [P, §§1–5](../notes/C-AUTONOMOUS-ORIGINAL-PORT-SOURCE-N/PROGRAM_RESOURCES.md). These are substantive supplied
+implementation premises. Their native origin is not inferred from
+`ACTIVE-ISOSPECTRAL-RECORD`. The fixed occupation intertwiner, including its gauge,
+is retained. Both completed programs return their payload to the original
+physical ports; future transport copies are restored without tracing them
+away. Reference systems need not have finite dimension.
+
+For every integer `k>=8` and fixed scales `epsilon,g>0`, use
+
+```text
+n=2208, M=2209, r=2(k+ceil(log2 M)+1),
+G_star=512 n^4 4^n,
+P1=M(2r^2-r)+G_star, P2=3G_star, P=P1+P2,
+S=7726+2Mr, G=17643 epsilon.
+```
+
+Program 1 resets the helpers and prepares the source, including the
+retained phase choice. Program 2 applies the three original forward steps.
+Each payload row has 1102 four-level occupation sites with energies
+`epsilon*(0,2,2,8)`, 4414 ladder sites with levels `0,...,26468`,
+2210 zero-gap qubits, and `2Mr` donor qubits of gap `G`.
+There are `P+1` payload rows. With outward route counts `r1,r2` and layout
+extent `Y0` fixed by [controller, §§1–4](../notes/C-AUTONOMOUS-ORIGINAL-PORT-SOURCE-N/STATIC_CONTROLLER.md), choose
+
+```text
+B>=max(r1+1,r2+1,8192,32(k+3),4Y0+4), K=12B.
+N_total=S(P+1)+K-r1-r2+3.
+```
+
+The last three sites are fuel and two flags; `K-r1-r2` is the physical
+cursor-site count, while `K` counts its nonvacuum levels. Shared qutrit
+colors are not independent qubits. The ladder dimension 26469 and its
+direct `0 <-> 17632` launch transition are counted local resources.
+
+All noninformation inputs are the stated independent Gibbs factors,
+including future rows, seed occupations, ladders and cursors. The old
+memory/reference and an optional coherent zero-gap setting are information
+inputs. The original `M` helpers initially have state `I/2`, not zero.
+Hot fuel and reset donors have `beta_h G=ln 2`. After fixing the complete
+inventory, set
+
+```text
+C_eff=3(1089+1102P)+2*4414(P+1)+Mr(1+2P)+K+2,
+beta_c epsilon=(k+1+ceil(log2 C_eff)) ln 2.
+```
+
+#### Statement
+
+For that fixed inventory there is one explicitly specified, positive,
+time-independent Hamiltonian `H=H0+H_prop` on the entire finite raw space,
+with `[H0,H_prop]=0`. Each displayed term has at most nine physical sites,
+Manhattan radius at most 1024, incidence at most 64, and norm at most
+`J=max(26468 epsilon,g)`, in the declared three-dimensional layout.
+These are termwise bounds, not a norm bound `||H||<=J`.
+
+`H0` includes every occupation, donor, ladder, fuel, flag and cursor
+energy. Launch conserves it by the exact identity `17643=8+17632+3`.
+The full raw-space terms, including multiple cursors and dirty helpers,
+are those of [controller, (S15)–(S21)](../notes/C-AUTONOMOUS-ORIGINAL-PORT-SOURCE-N/STATIC_CONTROLLER.md). All of `H0,H_prop,H` are conserved.
+The initial product commutes with `H0`, but generally not with `H`:
+the hot/cold population imbalance at launch is the explicit resource.
+Its full interaction energy is included, rather than discarded as a
+switching cost. Preparing this boundary state for an already interacting
+apparatus is itself a supplied initial-state contract.
+
+Let `D(rho,sigma)=||rho-sigma||_1/2`, `z=2^(-k-1)`,
+`T_h=pi hbar(K+1)/(3g)`, and
+`p(t)=sin^2(g t/[hbar(K+1)])`. Define the predetermined source window
+by `11/48<=p(t)<=13/48` on the first outward half-period. For every
+admitted setting/memory/reference input, the first physical flag has
+probability `>1/4` there, and the conditional source channel at the
+original ports differs from the ideal source isometry by `<6z`.
+For every `t in [T_h,2T_h]`, the separate final flag has probability
+`>1/4`, and its conditional source/receiver/setting/reference output
+differs from `Ad_(U_rec^3) o P_src` by `<6z`.
+At `k=40` the receiver contrast between the two separately supplied
+settings is `>1/100`, for old memory supported in `K_mem`.
+
+Both windows are cuts of the same unmeasured evolution. This statement
+does not assert the final bound after measuring the first flag. All
+dormant, unsuccessful-reset and cold-defect branches remain in the full
+state. The source-preparation channel admits all 26 memory labels; only
+recognition of a fresh write uses the 25-label restriction.
+
+The finite energy account includes exact initial means and variances.
+With the complete diagonal and hopping parts `H=M0-A` of [E, §5](../notes/C-AUTONOMOUS-ORIGINAL-PORT-SOURCE-N/ENERGY_ACCOUNT.md),
+
+```text
+<H>=<M0>, Var(H)=Var(M0)+Tr(rho_th A^2).
+```
+
+The full square keeps overlapping-edge cross terms. For any counted
+thermal bank with initial product `tau_D`, its unconditional output
+`sigma_D` obeys
+
+```text
+sum_(i in D) beta_i Delta<E_i>
+ = S(sigma_D)-sum_(i in D)S(tau_i)+D_rel(sigma_D||tau_D).
+```
+
+These are finite identities, not a report of enumerating the apparatus.
+The cold-ground comparison state returns exactly at `3T_h`; the actual
+thermal state returns within trace distance `<=z`. That return also
+undoes the source and new record. No retained-output renewal follows.
+
+**Proof.** Complete energy-fiber lifts and matched-spectrum whole-site
+SWAPs conserve `H0`. Two colored excursions restore arbitrary future-row
+states at both endpoints. Positive edge blocks and potentials establish
+full-space positivity. On the comparison history the generator is the
+spin-`K/2` tridiagonal matrix, hence has the binomial clock law. Cold
+defects cost `eta<=z`; the donor-inclusive helper reset costs `xi<z`.
+The two binomial tails and complete-instrument normalization yield
+[thermal channel, (T20)–(T26)](../notes/C-AUTONOMOUS-ORIGINAL-PORT-SOURCE-N/THERMAL_CHANNEL.md). Conservation and the finite Gibbs identity give
+the energy account; the same clock law proves the stated return. For the
+actual thermal return use the source's positive mixture
+`rho_th=(1-eta)rho_0+eta rho_bad`: the first component returns exactly,
+so the trace distance to the initial mixture is at most `eta<=z`.
+
+**Falsifiers and limit.** An uncounted donor, incorrect whole-site SWAP,
+incomplete positive edge, missing thermal color, or omitted conditioning
+denominator defeats the corresponding statement. The conserved energy
+is this apparatus's `H`, not `Q=E0 f(U_rec)`. Exact couplings, thermal
+banks and the declared geometry remain supplied. This is not a compact
+device, a derivation from six pentits, outcome selection or permanent
+storage. Improved accuracy increases inventory and time at fixed `g`.
+
+### COMPACT-ACTIVE-RECORD-APPARATUS [T]
+
+**Scope.** Conditional L1 under the construction premises stated below.
+
+Assume `ACTIVE-ISOSPECTRAL-RECORD`'s exact source and contrast identities, the complete
+source word, and its admitted-prefix period-15 agreement in [S, §7](../notes/C-ORIGINAL-PORT-SOURCE-PREPARATION-N/SOURCE_CIRCUIT.md).
+This agreement is not equality of infinite and finite spectral logarithms.
+Use the eleven data register dimensions
+`15,15,15,4,3,26,26,3,2,2,2`, respectively for
+`R,r,c,o,a,l,m,q,b,s,d`, of total dimension `657072000`.
+The pointer `d` starts at zero; old memory and its reference are arbitrary.
+Fresh-write contrast retains `K_mem`.
+
+#### Statement
+
+The eight complete factors in [M, §2](../notes/C-COMPACT-ENERGY-RECORD-N/COMPACT_MODEL.md) exactly implement the finite step:
+
+```text
+U_fin=P_beta Gamma S_R S_r E_rec Q_p M2 C.
+```
+
+Expanding all twelve controlled forward/inverse source calls gives
+`12*8+17+2+3*8+1=140` complete register gates. The last gate is
+`|d0><d0|_m tensor X_d+(I-|d0><d0|_m) tensor I_d`.
+The full word implements source preparation, coherent setting, three
+original steps and the pointer isometry, retaining both outcomes and
+all reference correlations. No controlled scalar phase is dropped.
+
+Pad to `K=560` edges and add one 561-level clock, initially at zero.
+For every fixed `g>0`, the history construction [M, (C5)](../notes/C-COMPACT-ENERGY-RECORD-N/COMPACT_MODEL.md) is positive
+on the full raw space. Put the twelve register sites at `0,...,11`.
+Each Hamiltonian term touches at most nine sites and has diameter at
+most 11, norm at most `g`; the clock has incidence 1121. These are
+register-site bounds in this declared placement, not nearest-neighbor
+occupation locality, twelve qubits or two-qubit gates.
+
+The total Hamiltonian spectrum is exactly
+`{g(2s+1)/561: s=0,...,560}`, with data multiplicity `657072000`.
+For the supplied zero clock and every data/reference input its full
+energy law has weights `binom(560,s)/2^560`, hence
+`<H>=g` and `Var(H)=560g^2/561^2`.
+
+For every `t in [T_h,2T_h]`, where `T_h=561pi hbar/(3g)`, the unfinished
+weight is `<epsilon_c=(3/16)^140<2^(-280)`. Conditional completion gives
+the exact full endpoint, including the pointer. Unconditioned reduced
+data are within trace distance `epsilon_c` of that endpoint. Since no
+earlier gate changes the zero pointer, its unconditioned two-setting
+contrast is `Pr(done)*Delta>1/100`, without clock postselection.
+The full unmeasured input density returns at `3T_h`, undoing the output.
+
+The strict contrast survives either sufficient error budget of [M, §6](../notes/C-COMPACT-ENERGY-RECORD-N/COMPACT_MODEL.md):
+initial joint trace-distance error `<=1/8000` and either complete unitary
+gate errors `<=1/1120000` per program gate with exact clock, or complete
+static generator error `<=3g/(64000*561)`. A final pointer-effect error
+`<=1/4000` is also allowed. These are sufficient mathematical tolerances,
+not achieved fabrication precision or per-term allowances in the second case.
+
+**Proof.** Receiver conjugation changes only the pulse edge factor,
+giving the eight-factor identity. The exact word count includes inverses,
+selector correction and pointer coupling. Prefix conjugation reduces the
+full history operator to `gI-(2g/561)S_x`, proving positivity, spectrum and
+the binomial law. The padded tail gives the uniform read window. Zero
+pointer weight before the final gate proves unconditioned contrast.
+Telescoping or Duhamel bounds control the two stated error budgets.
+
+**Falsifiers and limit.** A missing factor, extra required register,
+boundary crossing on an admitted prefix, or failure of full-space
+conjugation defeats the construction. Source, helpers, pointer and clock
+readiness are supplied here; `THERMAL-ORIGINAL-PORT-APPARATUS`'s thermal preparation and
+incidence-64 theorem do not transfer to this changed encoding. The new
+`H` is not an extension of `Q`, and `g` is not identified with `E0`.
+The final instrument, physical outcome and replenishment remain open.
+
+### FINITE-COHERENT-BATTERY-DRIFT [T]
+
+**Scope.** L1 for the bounded energy, complete spectral gates and supplied finite coherent battery below.
+
+Let Q be a bounded self-adjoint operator on a Hilbert space H, with
+`0 <= Q <= Delta I`, Delta>0. H need not be finite dimensional.
+Fix d>0, put `F=floor(Q/d)`, `Q_d=dF`, `m=ceil(Delta/d)`, and let
+`P_r=1_{r}(F)` for `0<=r<=m`, including any zero projections.
+For any integer N>=2m introduce a battery with levels `n=0,...,N`,
+`B=d sum_n n|n><n|`, and rounded total energy `K_d=Q_d+B`.
+
+For `m<=k<=N`, define `J_k psi=sum_r P_r psi tensor |k-r>` and
+`P_good=sum_{k=m}^N J_k J_k^*`. For every unitary U on H set
+
+```text
+Gamma(U)=sum_{k=m}^N J_k U J_k^*+(I-P_good).
+```
+
+Then Gamma(U) is unitary on the complete system/battery space,
+`[Gamma(U),K_d]=0`, and `Gamma(U)Gamma(V)=Gamma(UV)`.
+On every incomplete total-energy sector it is exactly the identity.
+No out-of-range battery shift or rejected sector is discarded.
+
+Put `L=N-2m+2` and prepare the normalized battery vector
+
+```text
+eta_n=sqrt(2/L) sin(pi(n-m+1)/L),   m<=n<=N-m,
+eta_n=0 otherwise.
+```
+
+For every normalized system/reference vector psi, and every unitary U,
+with identity action on the arbitrary passive reference,
+
+```text
+||Gamma(U)(psi tensor eta)-(U psi) tensor eta||
+  <= 2m sin(pi/(2L)) <= pi m/L.                       (R1.1)
+```
+
+The same upper bound, capped at one, holds in trace distance for every
+mixed system/reference input, retaining the battery and reference.
+For any finite word `U_s...U_1`, first use the representation identity;
+(R1.1) applies once to its complete product, with the same battery.
+No intermediate restoration or independent replacement of eta is assumed.
+
+Let `E=Q+B`. For every unitary Z commuting with K_d,
+
+```text
+-d I <= Z^* E Z-E <= d I.                             (R1.2)
+```
+
+In particular, if a specified autonomous Hamiltonian commutes with K_d,
+this bound holds at all times and between every two times, without a
+factor proportional to elapsed time or word length. It concerns the
+unconditioned state and does not transfer through successful-outcome
+conditioning without a further argument. It is not exact conservation of E.
+
+For any prescribed `0<epsilon<1`, choose
+`L=max(2,ceil(pi m/epsilon))` and `N=L+2m-2` before evolution.
+The battery has dimension `L+2m-1`, capacity dN and mean energy dN/2;
+(R1.1) is at most epsilon. This is finite battery size, not a claim that
+the original system has finite dimension or that the spectral gates are local.
+
+**Proof.** Complete total-charge sectors are orthogonal copies of H,
+which proves the full-space representation identities. Extend eta by
+zero on the integer line. Its one-step overlap is cos(pi/L), hence
+`||(T_1-I)eta||=2 sin(pi/(2L))`. Factor the compensating shift into
+m threshold-controlled one-step shifts. In their commutator expansion
+each term has norm at most this number because `||[Pi,U]||<=1` for an
+orthogonal projection Pi. The shift difference commutes through every
+other controlled shift, proving (R1.1), also with arbitrary references.
+Purification gives the mixed-state statement. Finally
+`E=K_d+D`, `0<=D=Q-Q_d<=dI`; both `Z^*DZ` and D belong to that interval,
+proving (R1.2). See [S1](../notes/C-SPECTRAL-ENERGY-FINITE-RECORD-N/FINITE_BATTERY.md), Sections 1-5, equations F1-F15.
+
+The pure coherent eta and the exact spectral couplings are supplied
+resources. Stationary additive-energy preparation cannot silently supply
+eta: [S1](../notes/C-SPECTRAL-ENERGY-FINITE-RECORD-N/FINITE_BATTERY.md), Section 7 proves the corresponding coherence obstructions.
+The finite-battery proof uses no TWIST-specific source theorem.
+
+### OCCUPIED-RECORD-EXPORT-REUSE [T]
+
+**Scope.** Conditional L1 for the supplied complete one-use channel, independent replacement hardware and occupied equal-spectrum output slots below.
+
+Fix a finite core `D=T tensor I`, with S qubits and fifteen specified
+information-input qubits I. Let Omega_T be its supplied hardware state,
+independent of the information and reference, and let U be its complete
+one-use unitary. In the frozen application [S2](../notes/C-SPECTRAL-ENERGY-FINITE-RECORD-N/REUSE_RESET.md), U is the propagator at
+the stated completion time of the core in [S3](../notes/C-SPECTRAL-ENERGY-FINITE-RECORD-N/THERMAL_RESOURCES.md). Its input code is the
+tensor product of the three fixed 26-label injections into five-qubit
+blocks for logical label, old memory and archive. "Admitted" means
+support in this `26^3`-dimensional code, with arbitrary correlations.
+The output B comprises
+seven specified physical sites, initially in T: five archive qubits,
+a pointer P and a completion latch L. Define the complete channel
+
+```text
+E(sigma_I)=Tr_(D\B)[U(Omega_T tensor sigma_I)U^*].
+```
+
+E includes dormant, rejected and defective components. It is not the
+normalized accepted branch. Physical input sites and physical output
+sites are distinct even when they carry the same logical data at
+different stages.
+
+For every integer N>=1, supply N full S-qubit cartridges F_j with
+identical corresponding spectra and fresh hardware Omega_T, and N
+seven-qubit equal-spectrum output slots O_j. Hardware in all N+1
+packages is independently supplied. The information inputs I_0,...,I_N
+may have any joint admitted valid-code density rho with a passive
+reference R; they need not be independent. Slots initially have arbitrary
+independent occupied states. They are destinations, not passive references.
+For each j, run U on D, SWAP B with O_j, then SWAP all of D with F_j,
+including after every rejected or dormant attempt.
+
+After the word, tracing only the spent cartridges and keeping the core,
+all outputs and R gives exactly
+
+```text
+rho_final = Omega_(T_D) tensor
+            (E^(tensor N) tensor id_(I_N,R))(rho),    (R2.1)
+```
+
+with I_N relabelled as the original physical I sites. Fresh hardware is
+independent of all retained systems, also after a positive-probability
+selection on the tape. The next information input can remain correlated
+with earlier outputs and R. Their displaced contents, old core states
+and all their correlations remain in the spent cartridges. The count is
+`(N+1)S+7N` stock qubits, including N+1 information inputs; a controller
+and any routing are additional resources. The final cartridge provides
+the final reset; omitting it changes the stated endpoint.
+
+**Proof.** A full SWAP transfers the joint B:R state to O:R without
+cloning. A subsequent full-core SWAP replaces only the independently
+prepared hardware factor and relabels the possibly correlated next input.
+Iterating this identity proves (R2.1), before and after any retained
+reference. It adds no error to the one-use channel. See [S2](../notes/C-SPECTRAL-ENERGY-FINITE-RECORD-N/REUSE_RESET.md), Sections
+1-4, U1-U12. A selected multi-use estimate must normalize its complete
+joint event, not multiply separately normalized marginal fidelities.
+
+**Storage and work contract.** With `E_O=d n_L` and accepted effect
+`Pi_O=n_L n_P`, exact maintained isolation preserves the accepted
+archive/reference density for arbitrarily long time, since E_O is dI
+on that accepted subspace. The entire output is retained up to its known
+free evolution. A driven realization uses equal-spectrum pair SWAP
+pulses `lambda sum_k(I-SWAP_k)` for duration `pi hbar/(2lambda)`.
+It retains their explicit free-energy factors, switching work and
+transport requirements. This does not assert permanence under the
+unchanged coupled writer. See [S2](../notes/C-SPECTRAL-ENERGY-FINITE-RECORD-N/REUSE_RESET.md), Section 6, U16-U22.
+
+`OCCUPIED-RECORD-EXPORT-REUSE` is an algebraic channel theorem for supplied U, Omega_T and slots.
+Interpreting E as the particular accepted source instrument additionally
+requires the frozen core premises listed below. Regenerating spent stock
+is a separate operation, not a consequence of restoration of T_D.
+
+### LOCAL-THERMAL-TWO-ATTEMPT [T]
+
+**Scope.** Conditional L1 for the fixed completed thermal core, source/filter and uniform channel premises below.
+
+Fix the exact S-qubit core H_D, its valid input code and its complete
+thermal channel E in [S3](../notes/C-SPECTRAL-ENERGY-FINITE-RECORD-N/THERMAL_RESOURCES.md) and [S4](../notes/C-LOCAL-TWO-ATTEMPT-REUSE-N/TWO_USE_CHANNEL.md), Section 1. Its three hardware packages
+use the actual two temperatures chosen for the successor; a colder
+choice is not equated with the earlier numerical hardware state.
+Let `E_*` be the largest physical core onsite gap, g_D its fixed
+propagation scale and d its energy-bin width. Fix
+`J_*=E_*+g_D+d` and `g_out=J_*/4` before enlarging the construction.
+
+There is one finite, positive, time-independent Hamiltonian H_local on
+qubits at distinct points of the three-dimensional integer lattice,
+specified in [S5](../notes/C-LOCAL-TWO-ATTEMPT-REUSE-N/LOCAL_CONTROLLER.md). Every displayed summand has support on at most nine
+sites, Manhattan radius at most 256, norm at most J_*, and each site
+belongs to at most 64 summands. Positivity and conservation hold on the
+full raw space, including invalid data and multiple-cursor sectors.
+No exact pure routing bank is supplied. The two temperatures apply to
+all specified hardware factors; unknown information is a separate input.
+
+This single H_local implements the complete endpoint word
+`R_2 X_2 V R_1 X_1 V`, where `V=exp(-i tau H_D/hbar)` at its frozen
+completion time, X_i exports the seven-site output and R_i replaces
+the whole core. It simulates these endpoints rather than retaining the
+old continuous H_D trajectory as an additional simultaneously running law.
+
+For every joint admitted input on I_0,I_1,I_2 and every passive R,
+define Xi by the right side of (R2.1) with N=2. The construction is
+fixed independently of that input. Let K_out be its finite outer path
+length and set `T_hold=pi hbar(K_out+1)/(3g_out)`. For every
+`t in [T_hold,2T_hold]`, condition on its physical final-completion
+latch F. The joint state of both fixed output blocks, hardware at the
+original D sites, next input and R satisfies
+
+```text
+D_tr(rho_actual|F=1(t), Xi) < 2^-96.                 (R3.1)
+```
+
+Completion probability is at least `p_out w(t)-eta`, where
+`p_out>=1/3`, `w(t)>=1-(3/4)^(K_out/2)` and eta is the explicitly
+counted outer cold-defect bound. After fixing the complete inventory,
+choose `beta_c d >= [120+ceil(log_2 C_new)] ln 2`, where C_new is the
+number of cold positive-gap sites in [S5](../notes/C-LOCAL-TWO-ATTEMPT-REUSE-N/LOCAL_CONTROLLER.md), L18. Then `eta<2^-120`.
+No high unconditional success
+probability is inferred from an active-history tail estimate.
+
+For a one-use output acceptance `Pi_acc=n_L n_P`, define `E_id` as the
+complete ideal-ready source-output channel: the same prescribed source
+word and dormant branch, with the nominated active readies exact. Both
+`E` and `E_id` retain their complete rejected branches. Put
+`A(.)=Pi_acc E(.) Pi_acc`, `A_id(.)=Pi_acc E_id(.) Pi_acc` and
+`D_tr(rho,sigma)=||rho-sigma||_1/2`. The explicit frozen channel premises
+are, uniformly for every admitted valid input sigma and arbitrary passive
+reference,
+
+```text
+D_tr((E tensor id)(sigma),(E_id tensor id)(sigma))
+  <=epsilon_in<2^-103,
+Tr[(A tensor id)(sigma)]>=p_min,
+Tr[(A_id tensor id)(sigma)]>=p_min,
+p_min=1/60000.
+```
+
+For output acceptances `Q_i=n_(O_i,L)n_(O_i,P)`, put
+`J_id=(A_id tensor A_id tensor id_(I_2,R))(rho)` and `q_id=Tr J_id`.
+These uniform premises give `q_id>=p_min^2=(1/60000)^2`, including
+correlated inputs. For the actual event `F Q_1 Q_2` at every t
+in the same window,
+
+```text
+Pr(F=1,Q_1=1,Q_2=1) > 1/12000000000,
+D_tr(rho_actual|F Q_1 Q_2,
+     Omega_T tensor J_id/q_id) < 2^-67.              (R3.2)
+```
+
+The ideal-ready target is the prescribed sharp-fiber source-output
+instrument, not a separately prepared coherent spatial source or a
+product of the two normalized output marginals. One shared outer
+activation appears once. No one-use unwanted-band estimate is imported
+after the stronger two-output selection.
+
+The first output has a positive-width availability interval before
+the first reset, and every subsequent forward instruction preserves
+its fixed physical sites. Its completed-export weight in the active
+comparison history exceeds `1-2^-128` throughout
+`[T_hold/2,2T_hold]`. The clean outer history returns at `3T_hold`
+and reverses export and reset as well. This is a finite retention
+statement, not permanent storage or an intervention-invariant recurrence.
+
+With P instruction layers, the physical inventory is exactly
+`(3S+14)(P+1)+K_out+3` qubits; the forty-five information qubits are
+included. Two cartridges, both occupied outputs, all transport copies,
+clock sites, thermal donors and cold defects are counted. Write `Q` for
+the summed rounded onsite energy, including the outer controller, and
+`C_all` for the sum of the old core occupation budget over all three banks
+in all `P+1` layers, with `R_payload` their summed residuals, as specified
+in [S5, (L14)-(L17)](../notes/C-LOCAL-TWO-ATTEMPT-REUSE-N/LOCAL_CONTROLLER.md).
+With `E_phys=Q+R_payload` and `U_t=exp(-it H_local/hbar)`, the construction obeys
+
+```text
+H_local=Q+H_hist >= 0,
+H_int=H_hist-R_payload,
+[H_local,Q]=[H_local,C_all]=0,
+0<=R_payload<=d C_all,
+-d C_all<=U_t^* E_phys U_t-E_phys<=d C_all.           (R3.3)
+```
+
+For its prepared input, `<C_all><1+2^-120`. This energy statement is
+unconditioned and retains every copied source/fuel residual. It is not
+an intertwining theorem for the original full spatial energy Q of a
+different model. Reset consumes stock; it renews neither the tape,
+cartridges, thermal banks nor the whole outer controller.
+
+**Proof.** [S6](../notes/C-LOCAL-TWO-ATTEMPT-REUSE-N/LOCAL_COMPILATION.md), Sections 1-4 gives the full-raw product formula,
+including onsite phases. After fixing an irrelevant overall phase of each
+complete use, its approximation satisfies `||V_tilde_i-V||<=delta_i<2^-120` for
+`i=1,2`; telescoping bounds the two-use word error by
+`delta_1+delta_2<2^-119`. Exact matched-spectrum SWAPs give `OCCUPIED-RECORD-EXPORT-REUSE`'s channel
+identity. [S5](../notes/C-LOCAL-TWO-ATTEMPT-REUSE-N/LOCAL_CONTROLLER.md), Sections 1-8 proves the distinct-site routing, separate
+transfer/program edges, full-space positivity, incidence bounds and
+thermal inventory; the working core and both cartridges return to their
+original sites. [S4](../notes/C-LOCAL-TWO-ATTEMPT-REUSE-N/TWO_USE_CHANNEL.md), Sections 5-8 uses the exact binomial history,
+the complete accepted-plus-rejected instrument inequality and its
+joint success denominator to prove (R3.1)-(R3.2). [S5](../notes/C-LOCAL-TWO-ATTEMPT-REUSE-N/LOCAL_CONTROLLER.md), Sections 6-10
+supplies (R3.3), the full energy moments and finite capacities.
+
+For the joint success bound, condition first on the first accepted
+instrument. The second input still has valid-code support, with the
+first record and all retained systems included in its reference. Applying
+the same uniform success premise to that conditional input proves
+`q_id>=p_min^2` without an independent-success assumption. Two complete
+channel comparisons and the outer input comparison give
+
+```text
+e=eta+delta_1+delta_2+2epsilon_in<2^-101.
+```
+
+The clean ideal comparison for the single event `F Q_1 Q_2` has weight
+`p_out w(t)q_id`. The accepted-plus-rejected instrument inequality and
+normalization therefore give
+
+```text
+p_both,actual(t)>=p_out w(t)q_id-e,
+D_tr(rho_both,actual(t),Omega_T tensor J_id/q_id)
+  <=e/[p_out w(t)q_id].
+```
+
+Since `p_out>=1/3`, `w(t)>99/100` and `q_id>=p_min^2`,
+`p_out w(t)q_id>11/120000000000>2^-34`. Hence the normalized error
+is `<2^-67`, while `e<1/120000000000` gives the probability
+`>1/12000000000` in (R3.2). The shared outer activation occurs once.
+
+**Complete construction sources.** The following source files fix the complete gates, raw spaces, input codes, thermal inventory and proofs used above.
+
+- [S1: FINITE_BATTERY.md](../notes/C-SPECTRAL-ENERGY-FINITE-RECORD-N/FINITE_BATTERY.md), Sections 1-7.
+- [S2: REUSE_RESET.md](../notes/C-SPECTRAL-ENERGY-FINITE-RECORD-N/REUSE_RESET.md), Sections 1-7.
+- [S3: THERMAL_RESOURCES.md](../notes/C-SPECTRAL-ENERGY-FINITE-RECORD-N/THERMAL_RESOURCES.md) and [THERMAL_CLOCK.md](../notes/C-SPECTRAL-ENERGY-FINITE-RECORD-N/THERMAL_CLOCK.md), the specified raw core, input-code, thermal and retained-output contracts.
+- [S4: TWO_USE_CHANNEL.md](../notes/C-LOCAL-TWO-ATTEMPT-REUSE-N/TWO_USE_CHANNEL.md), Sections 1-9, C1-C25.
+- [S5: LOCAL_CONTROLLER.md](../notes/C-LOCAL-TWO-ATTEMPT-REUSE-N/LOCAL_CONTROLLER.md), Sections 1-10, particularly L14-L17.
+- [S6: LOCAL_COMPILATION.md](../notes/C-LOCAL-TWO-ATTEMPT-REUSE-N/LOCAL_COMPILATION.md), Sections 1-4.
+
+**Explicit conditional premises of `LOCAL-THERMAL-TWO-ATTEMPT`.** The following frozen source/filter, history and thermal-resource contracts are assumptions of this particular core instantiation. The theorem proves the stated implication under these contracts, including the uniform one-use accepted-channel premise used in (R3.2); it does not establish the predecessor contracts themselves.
+
+| Dependency | Exact frozen input | Role |
+| --- | --- | --- |
+| #1746 | [01acc42b](https://github.com/mathorn1973/twist-j/tree/01acc42b78f75095587765e9a5b91ee70dc28f37) | Complete forward source/filter contract. |
+| #1761 | [32c17259](https://github.com/mathorn1973/twist-j/blob/32c17259c4baf40bb6d08b521adc642956b57e94/notes/C-THERMAL-REGISTER-PREPARATION-N/HAMILTONIAN.md), Sections 3-5 | Local history template; its adaptations are proved in the supplied finite-record thermal construction. |
+| #1764 | [6670ac27](https://github.com/mathorn1973/twist-j/tree/6670ac274888927be3429a463966da41ca8d2e8b) | Thermal work/clock predecessor. |
+| #1766 | [d978a455](https://github.com/mathorn1973/twist-j/tree/d978a455ef01506a9b8eb68c296e6ca89703710a) | Common-temperature endpoint and its supplied resource contract. |
+
+These theorems do not supply original-rule synthesis, material calibration,
+an autonomous detector of individual events, replenished unlimited use,
+or permanent closed finite memory.
+
+### DIRAC-CONTACT-COMPLETE-ACCOUNT [T]
+
+**Scope.** L1 on the explicitly supplied signed sine-energy model and sharp-source completion class below.
+
+#### Declared model
+
+Let $L$ be a positive multiple of four, $\mu>0$, $g\in\mathbb R$,
+and $k=2\pi j/L$. With Pauli matrices $X,Y,Z$, set
+
+$$
+r=\sqrt{1+\mu^2},\quad U_\mu(k)=e^{ikZ}(I+i\mu X)/r,
+\quad H(k)=\frac{r(U_\mu(k)^*-U_\mu(k))}{2i}
+=-\mu\cos k\,X+\sin k\,(\mu Y-Z).
+$$
+
+The carrier is the full tensor product of TWO distinguishable walks,
+each on $\ell^2(\mathbb Z/L\mathbb Z)\otimes\mathbb C^2$. Define
+
+$$
+H_0=H\otimes I+I\otimes H,\quad
+P=\sum_x|x,x\rangle\langle x,x|\otimes I_4,\quad
+K_g=e^{-igP},\quad V_g=K_g(U_\mu\otimes U_\mu).
+$$
+
+The normalized input is $a=|0,-x\rangle\otimes|\pi,+x\rangle$,
+where the coin labels are $X$-eigenstates. Write
+
+$$
+s=\sin^2(g/2),\quad b=e^{-ig}-1,\quad \phi_g=V_ga.
+$$
+
+There is no positive-band selection, outcome rejection or identical-particle
+restriction. $H_0$ is the specified signed sine-energy reading, not a
+uniquely selected physical Hamiltonian. At $L=4,\mu=2$, let $S$ denote
+the FULL invariant total-momentum-$\pi$ sector, of dimension 16, and let
+$\Pi_E$ be its complete $H_0$ spectral projectors.
+
+#### Complete energy law and sharp five-level completion
+For the model above the actual full-period output satisfies
+
+$$
+\langle H_0\rangle_{\phi_g}=2\mu(1-4s/L),\quad
+\Delta\langle H_0\rangle=-8\mu s/L,
+$$
+$$
+\langle H_0^2\rangle_{\phi_g}=4\mu^2+4(1-\mu^2)s/L,\quad
+\operatorname{Var}_{\phi_g}(H_0)
+=4(1+7\mu^2)s/L-64\mu^2s^2/L^2.
+$$
+
+At $L=4,\mu=2$ the complete output law, for every real $g$, is
+
+| Unshifted energy $E$ | Multiplicity in $S$ | $w_E=\Vert \Pi_E\phi_g\Vert ^2$ |
+| --- | ---: | ---: |
+| $4$ | 2 | $1-3s/4$ |
+| $-4$ | 2 | $s/4$ |
+| $2\sqrt5$ | 2 | $s/8$ |
+| $-2\sqrt5$ | 2 | $s/8$ |
+| $0$ | 8 | $s/4$ |
+
+Thus its mean and variance are $4(1-s)$ and $29s-16s^2$.
+At $g=2\pi/5$, $s=(5-\sqrt5)/8$, these become
+$(3+\sqrt5)/2$ and $(85-9\sqrt5)/8$, respectively.
+
+Set $H_S=H_0|_S+2\sqrt5 I_S$. There is an exactly unitary completion
+on the entire 80-dimensional carrier $S\otimes\mathbb C^5$, with
+nonnegative additive account $A_{\rm tot}=H_S\otimes I+I\otimes H_B$,
+that preserves this whole output law. An explicit construction is
+
+$$
+H_B|b_E\rangle=(2\sqrt5-E)|b_E\rangle,\quad
+T\psi=\sum_E\Pi_E\psi\otimes|b_E\rangle,\quad Q=TT^*,
+$$
+$$
+W_g=TV_g|_S T^*+(I-Q),\quad [W_g,A_{\rm tot}]=0,\quad
+W_g(a\otimes|b_4\rangle)=T\phi_g.
+$$
+
+The battery levels are $0,2\sqrt5-4,2\sqrt5,2\sqrt5+4,4\sqrt5$,
+with initial energy $2\sqrt5-4$. Its mean gain at $g=2\pi/5$ is
+$(5-\sqrt5)/2$. Tracing out the battery gives exactly
+
+$$
+\rho_{S,\mathrm{out}}=\sum_E\Pi_E|\phi_g\rangle\langle\phi_g|\Pi_E.
+$$
+
+This retains coherence within each energy block, but not between different
+energies in the reduced system. For $s>0$ it is not the original pure output.
+
+For $s>0$, both the five distinct battery levels and the initial-energy
+lower bound $2\sqrt5-4$ are minimal in this exact class: initial system
+energy 4, initially sharp battery energy, nonnegative battery spectrum,
+exact additive energy conservation, all five prescribed output weights,
+and no additional energy store. The minimum does not cover arbitrary
+non-sharp sources or a changed target distribution.
+
+**Proof.** $H$ contains only single-site shifts, so each summand of
+$H_0$ takes a coincident pair outside the coincidence subspace:
+$PH_0P=0$. Also $H_0a=2\mu a$, $(U_\mu\otimes U_\mu)a=-a$,
+and $\langle a,Pa\rangle=1/L$. Expanding $K_ga=a+bPa$, with
+$|b|^2=4s$ and $b+\bar b=-4s$, gives, for every spectral function $F$,
+
+$$
+\langle F(H_0)\rangle_{\phi_g}
+=F(2\mu)+4s\{\langle Pa,F(H_0)Pa\rangle-F(2\mu)/L\}.
+$$
+
+Writing $Pa=L^{-1}\sum_k|k,\pi-k\rangle\otimes|-x,+x\rangle$,
+put $v=|-x,+x\rangle$ and $A=\mu Y-Z$. Since
+$(-X_1+X_2)v=2v$ and $\langle v,(A_1+A_2)^2v\rangle=2(1+\mu^2)$,
+the squared norm $\Vert H_0(k,\pi-k)v\Vert^2$ is
+$4\mu^2\cos^2k+2(1+\mu^2)\sin^2k$. The discrete sine-square and
+cosine-square averages are both $1/2$, so Fourier orthogonality gives
+$\langle Pa,H_0^2Pa\rangle=(1+3\mu^2)/L$, proving the moments.
+At $L=4,\mu=2$, the original and reversed momentum pairs carry the
+given coin at energies 4 and -4. Each remaining pair divides its weight
+in proportions $1/4,1/2,1/4$ among $2\sqrt5,0,-2\sqrt5$.
+Their coefficients are $b/4$, while the original coefficient is
+$1+b/4$. This proves the table; the common minus in $\phi_g=-K_ga$
+does not affect probabilities.
+
+For the completion, $T^*T=I_S$ and $A_{\rm tot}T=4\sqrt5T$.
+The image of $T$ is exactly that full energy shell. $W_g$ is unitary
+there and the identity on its orthogonal complement, proving unitarity
+and conservation on the complete carrier. Orthogonality of the battery
+labels proves the reduced-state formula. Finally, if its initial energy
+is $b_0$, each occupied output energy $E$ requires battery energy
+$4+b_0-E$. For $s>0$ all five are distinct and nonnegativity at
+$E=2\sqrt5$ forces $b_0\ge2\sqrt5-4$. The construction attains both
+bounds. Evidence: [source proof](../notes/C-DIRAC-CONTACT-WORK-ACCOUNT-N/PROOF.md), sections 1-4, equations (1)-(22).
+
+### DIRAC-CONTACT-SOURCE-COHERENCE [T]
+
+**Scope.** L1 for the fixed contact target, initially independent complete source and strong additive conservation below.
+Retain $L=4,\mu=2$ and $s>0$. Let $B$ now denote any COMPLETE
+source, including its controller, clocks, references and energy-bearing
+auxiliaries. Assume the input is the product
+$|a\rangle\langle a|\otimes\rho_B$, the source is stationary under
+$e^{-itH_B}$, and a unitary $W$ commutes with
+$e^{-it(H_S\otimes I+I\otimes H_B)}$ for all real $t$.
+This group formulation also covers unbounded source Hamiltonians.
+
+Then the reduced system output $\rho$ is stationary under $H_S$,
+so it cannot equal $|\phi_g\rangle\langle\phi_g|$. Its squared fidelity
+and half trace distance obey
+
+$$
+\langle\phi_g,\rho\phi_g\rangle\le1-3s/4,\qquad
+\tfrac12\Vert \rho-|\phi_g\rangle\langle\phi_g|\Vert _1\ge3s/4.
+$$
+
+The fidelity ceiling is attained in the unrestricted stationary-output
+class by $|a\rangle\langle a|$. If the exact weights $w_E$ are also
+required, the sharp ceiling is instead
+
+$$
+\langle\phi_g,\rho\phi_g\rangle\le\sum_Ew_E^2
+=1-3s/2+23s^2/32,
+$$
+
+attained by the reduced state in `DIRAC-CONTACT-COMPLETE-ACCOUNT`. No sharpness is asserted
+for the trace-distance lower bound.
+
+Dropping stationarity but retaining initial independence and exact additive
+conservation, any source producing the exact pure target and having finite
+second energy moments must satisfy
+
+$$
+\operatorname{Var}(H_{B,\mathrm{in}})
+=29s-16s^2+\operatorname{Var}(H_{B,\mathrm{out}})\ge29s-16s^2.
+$$
+
+At $g=2\pi/5$, the two fidelity ceilings are
+$(17+3\sqrt5)/32$ and $(409+77\sqrt5)/1024$; the required variance
+is at least $(85-9\sqrt5)/8$. Variance is necessary, not sufficient:
+a stationary mixed source may have arbitrarily large variance.
+
+**Proof.** The initial joint state is invariant under total time translation;
+conservation preserves this invariance, and partial trace makes $\rho$
+stationary. The pure target has five nonzero distinct-energy components.
+Writing $\phi_E=\Pi_E\phi_g$ and $\rho_E=\Pi_E\rho\Pi_E$, positivity gives
+$\sum_E\langle\phi_E,\rho_E\phi_E\rangle
+\le\sum_Ew_E\operatorname{Tr}\rho_E\le\max_Ew_E$.
+Here $\Pi_4\phi_g=-(1+b/4)a$, proving sharpness by the unchanged input.
+Fixing $\operatorname{Tr}\rho_E=w_E$ gives the second ceiling; testing
+the pure-target projector gives the distance bound. For the variance
+statement, a pure final system marginal forces a product final joint
+state. Energy conservation and additivity of variance in both product
+states give the displayed identity, because the initial system energy is
+sharp. Evidence: [source proof](../notes/C-DIRAC-CONTACT-WORK-ACCOUNT-N/PROOF.md), section 5, equations (23)-(28).
+
+#### Energy-generator boundary
+
+The conserved account of `DIRAC-CONTACT-COMPLETE-ACCOUNT` is NOT its contact generator:
+$e^{-itA_{\rm tot}}T\psi=e^{-it4\sqrt5}T\psi$. It only gives a common
+phase on the active shell, whereas $W_g$ produces a nontrivial output
+for $s>0$. An interaction/control generator and its preparation need
+a further account. This does not prove impossibility of such a generator.
+Evidence: [source proof](../notes/C-DIRAC-CONTACT-WORK-ACCOUNT-N/PROOF.md), section 6.
+
+No spatially local battery compilation, native-U derivation, phase/sine
+energy selection, particle identity, physical mass, SI calibration,
+occurrence law or physical preparation follows from these theorems.
+
+<!-- END FINITE-APPARATUS-CONSOLIDATION -->
 
 ## 16. p = 5 and the wall
 
