@@ -23,31 +23,361 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.report = architecture.audit(ROOT)
 
+    def test_v106_exact_declared_dependency_extension(self) -> None:
+        # These are declared mathematical premises. A path in this graph
+        # does not supply preparation, a physical reading or an apparatus.
+        normative = architecture.read_tsv(
+            ROOT / "canon/NORMATIVE.tsv", architecture.NORMATIVE_FIELDS
+        )
+        dependencies = architecture.read_tsv(
+            ROOT / "canon/DEPENDENCIES.tsv", architecture.DEPENDENCY_FIELDS
+        )
+        requires = architecture.dependency_graph(
+            (row["item_id"] for row in normative), dependencies, "REQUIRES"
+        )
+        expected = {
+            "ACTIVE-ISOSPECTRAL-RECORD": {
+                "HOMOGENEOUS-CAPTURE-CURRENT-RECORD",
+            },
+            "COHERENT-W-LOCAL-NATIVE-NETWORK": {
+                "DEF-COHERENT-INTEGER-W",
+                "U-NATIVE-CHART-AND-QDD-READBACK",
+            },
+            "COHERENT-W-LOCALIZED-RING-CLOSURE": {
+                "DEF-COHERENT-INTEGER-W",
+                "GOLDEN-CLIFFORD-COIN-IDENTITY",
+            },
+            "COHERENT-W-NATIVE-FROBENIUS-PROPAGATION": {
+                "COHERENT-W-LOCAL-NATIVE-NETWORK",
+                "DEF-COHERENT-INTEGER-W",
+            },
+            "COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR": {
+                "COHERENT-W-LOCAL-NATIVE-NETWORK",
+                "COHERENT-W-LOCALIZED-RING-CLOSURE",
+                "DEF-COHERENT-INTEGER-W",
+                "GOLDEN-CLIFFORD-COIN-IDENTITY",
+            },
+            "COHERENT-W-SPATIAL-CLIFFORD-PROPAGATION": {
+                "DEF-COHERENT-INTEGER-W",
+                "GOLDEN-CLIFFORD-COIN-IDENTITY",
+            },
+            "COMPACT-ACTIVE-RECORD-APPARATUS": {
+                "ACTIVE-ISOSPECTRAL-RECORD",
+            },
+            "DEF-COHERENT-INTEGER-W": set(),
+            "DIRAC-CONTACT-COMPLETE-ACCOUNT": set(),
+            "DIRAC-CONTACT-SOURCE-COHERENCE": {
+                "DIRAC-CONTACT-COMPLETE-ACCOUNT",
+            },
+            "FINITE-COHERENT-BATTERY-DRIFT": set(),
+            "GOLDEN-CLIFFORD-COIN-IDENTITY": {
+                "DEF-COHERENT-INTEGER-W",
+            },
+            "INTEGER-W-SPECTRAL-ENERGY-PULLBACK": {
+                "COHERENT-W-LOCALIZED-RING-CLOSURE",
+                "COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR",
+                "CONTACT-W-SPECTRAL-READING",
+                "DEF-COHERENT-INTEGER-W",
+            },
+            "LOCAL-THERMAL-TWO-ATTEMPT": {
+                "OCCUPIED-RECORD-EXPORT-REUSE",
+            },
+            "OCCUPIED-RECORD-EXPORT-REUSE": set(),
+            "THERMAL-ORIGINAL-PORT-APPARATUS": {
+                "ACTIVE-ISOSPECTRAL-RECORD",
+            },
+            "U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS": {
+                "DEF-ARCHITECTURE",
+                "DEF-KERNEL-GENERATORS",
+                "TT-NATIVE-FOUR-WORD-LAW",
+            },
+        }
+        for item, parents in expected.items():
+            self.assertEqual(requires[item], parents)
+        self.assertEqual(
+            set(expected) & set(self.report.direct_architecture_requires),
+            {
+                "U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS",
+            },
+        )
+        self.assertEqual(
+            set(expected) & set(self.report.transitive_architecture_dependents),
+            {
+                "COHERENT-W-LOCAL-NATIVE-NETWORK",
+                "COHERENT-W-NATIVE-FROBENIUS-PROPAGATION",
+                "COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR",
+                "INTEGER-W-SPECTRAL-ENERGY-PULLBACK",
+                "U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS",
+            },
+        )
+        self.assertEqual(
+            set(expected) & set(self.report.dependency_terminals),
+            {
+                "DEF-COHERENT-INTEGER-W",
+                "DIRAC-CONTACT-COMPLETE-ACCOUNT",
+                "FINITE-COHERENT-BATTERY-DRIFT",
+                "OCCUPIED-RECORD-EXPORT-REUSE",
+            },
+        )
+
+    def test_v108_contact_scope_and_finite_apparatus_closure(self) -> None:
+        normative_rows = architecture.read_tsv(
+            ROOT / "canon/NORMATIVE.tsv", architecture.NORMATIVE_FIELDS
+        )
+        dependency_rows = architecture.read_tsv(
+            ROOT / "canon/DEPENDENCIES.tsv", architecture.DEPENDENCY_FIELDS
+        )
+        registry = {
+            row["claim_id"]: row
+            for row in architecture.read_tsv(
+                ROOT / "canon/REGISTRY.tsv", architecture.REGISTRY_FIELDS
+            )
+        }
+        evidence = {
+            row["claim_id"]: row
+            for row in architecture.read_tsv(
+                ROOT / "canon/EVIDENCE.tsv", architecture.EVIDENCE_FIELDS
+            )
+        }
+        normative = {row["item_id"]: row for row in normative_rows}
+        requires = architecture.dependency_graph(
+            normative, dependency_rows, "REQUIRES"
+        )
+        bounded_by = architecture.dependency_graph(
+            normative, dependency_rows, "BOUNDED_BY"
+        )
+        contact = "RELATIVE-CONTACT-INTEGRAL-LAW"
+        minimum = "RELATIVE-CONTACT-FOUR-SLOT-MINIMUM"
+        renewal = "RELATIVE-CONTACT-RETAINED-BANK-CAPACITY"
+        fixed_word = "RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY"
+        owner = "RELATIVE-CONTACT-COMMON-APPARATUS-OPEN"
+        expected = {
+            contact: {"J-UNIT"},
+            minimum: {contact},
+            renewal: {contact, minimum},
+            fixed_word: {contact},
+            owner: {contact},
+            "RELATIVE-CONTACT-RHYTHM-CLASSIFICATION": {contact},
+            "RELATIVE-CONTACT-RHYTHM-ACCOUNT-BOUNDS": {"RELATIVE-CONTACT-RHYTHM-CLASSIFICATION"},
+            "RELATIVE-CONTACT-RHYTHM-FIVEFOLD-PHASE": {"RELATIVE-CONTACT-RHYTHM-CLASSIFICATION"},
+            "RELATIVE-CONTACT-COEFFICIENT-READ-INJECTIVITY": {contact},
+            'RELATIVE-CONTACT-POSITIONAL-BANK-COPY': {'RELATIVE-CONTACT-INTEGRAL-LAW'},
+            'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION': {'RELATIVE-CONTACT-INTEGRAL-LAW'},
+            'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE': {'RELATIVE-CONTACT-COMMON-APPARATUS-OPEN', 'RELATIVE-CONTACT-INTEGRAL-LAW', 'RELATIVE-CONTACT-POSITIONAL-BANK-COPY'},
+        }
+        # These supplied contact premises do not derive a native-U operation.
+        # The optional Gram/archive notes have no new public claim rows.
+        self.assertEqual(
+            {item for item in normative if item.startswith("RELATIVE-CONTACT-")},
+            set(expected),
+        )
+        for item, parents in expected.items():
+            self.assertEqual(requires[item], parents)
+            self.assertEqual(normative[item]["layer"], "L1")
+            self.assertNotIn(item, self.report.direct_architecture_requires)
+            self.assertNotIn(item, self.report.transitive_architecture_dependents)
+            self.assertNotIn(item, self.report.dependency_terminals)
+            self.assertEqual(
+                registry[item]["status"], "T"
+            )
+            self.assertEqual(
+                normative[item]["status"], registry[item]["status"]
+            )
+        self.assertEqual(bounded_by[owner], {minimum, renewal, fixed_word})
+        self.assertEqual(normative[owner]["item_type"], "THEOREM")
+        self.assertEqual(normative[owner]["gate_ids"], "")
+        # This finite same-carrier witness closes only its exact L1 owner.
+        # The physical apparatus and native memory-contact owners stay open.
+        for unchanged_owner in (
+            "QDD-INSTRUMENT-APPARATUS",
+            "QUADRATIC-MEMORY-NATIVE-CONTACT",
+        ):
+            self.assertEqual(registry[unchanged_owner]["status"], "O")
+        expected_evidence = {
+            contact: ("INLINE_CANON", "none"),
+            minimum: ("PUBLIC_PROBE", "two-architecture"),
+            renewal: ("INLINE_CANON", "none"),
+            fixed_word: ("INLINE_CANON", "none"),
+            owner: ("PUBLIC_PROBE", "two-architecture"),
+            "RELATIVE-CONTACT-RHYTHM-CLASSIFICATION": ("INLINE_CANON", "none"),
+            "RELATIVE-CONTACT-RHYTHM-ACCOUNT-BOUNDS": ("INLINE_CANON", "none"),
+            "RELATIVE-CONTACT-RHYTHM-FIVEFOLD-PHASE": ("INLINE_CANON", "none"),
+            "RELATIVE-CONTACT-COEFFICIENT-READ-INJECTIVITY": ("INLINE_CANON", "none"),
+            'RELATIVE-CONTACT-POSITIONAL-BANK-COPY': ("INLINE_CANON", "none"),
+            'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION': ("INLINE_CANON", "none"),
+            'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE': ("INLINE_CANON", "none"),
+        }
+        for item, (kind, architecture_requirement) in expected_evidence.items():
+            self.assertEqual(evidence[item]["evidence_kind"], kind)
+            self.assertEqual(
+                evidence[item]["architecture_requirement"], architecture_requirement
+            )
+            # REGISTRY evidence is one path or exactly inline, never a
+            # semicolon-separated list of paths.
+            self.assertEqual(
+                registry[item]["evidence"],
+                "probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/RESULT.md"
+                if item == minimum else
+                "probes/P-RELATIVE-CONTACT-INDEPENDENT-RELOAD-1/RESULT.md"
+                if item == owner else "inline",
+            )
+
+
+    def test_v109_exact_declared_claims_and_evidence(self) -> None:
+        # Exact ledger boundaries: the graph is not a physical implementation.
+        normative_rows = architecture.read_tsv(
+            ROOT / "canon/NORMATIVE.tsv", architecture.NORMATIVE_FIELDS
+        )
+        dependency_rows = architecture.read_tsv(
+            ROOT / "canon/DEPENDENCIES.tsv", architecture.DEPENDENCY_FIELDS
+        )
+        registry = {row["claim_id"]: row for row in architecture.read_tsv(
+            ROOT / "canon/REGISTRY.tsv", architecture.REGISTRY_FIELDS
+        )}
+        evidence = {row["claim_id"]: row for row in architecture.read_tsv(
+            ROOT / "canon/EVIDENCE.tsv", architecture.EVIDENCE_FIELDS
+        )}
+        normative = {row["item_id"]: row for row in normative_rows}
+        requires = architecture.dependency_graph(normative, dependency_rows, "REQUIRES")
+        bounded_by = architecture.dependency_graph(normative, dependency_rows, "BOUNDED_BY")
+        expected = (
+        {'RELATIVE-CONTACT-POSITIONAL-BANK-COPY': {'status': 'T',
+                                                   'item_type': 'THEOREM',
+                                                   'requires': ('RELATIVE-CONTACT-INTEGRAL-LAW',),
+                                                   'bounded_by': (),
+                                                   'evidence_kind': 'INLINE_CANON',
+                                                   'location': 'inline',
+                                                   'hash_mode': 'registry-scope-sha256-v1',
+                                                   'sha256': '1c4b6d0b712cdcac1876ab8d05b7508ffab73ff9738747be0f5348ada8f815fb',
+                                                   'architecture_requirement': 'none'},
+         'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION': {'status': 'T',
+                                                          'item_type': 'THEOREM',
+                                                          'requires': ('RELATIVE-CONTACT-INTEGRAL-LAW',),
+                                                          'bounded_by': (),
+                                                          'evidence_kind': 'INLINE_CANON',
+                                                          'location': 'inline',
+                                                          'hash_mode': 'registry-scope-sha256-v1',
+                                                          'sha256': '1b9ffabfa4f016bbbc820a421e0240593a6a1e8cdb0b8a16e68e965efe1faf4c',
+                                                          'architecture_requirement': 'none'},
+         'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE': {'status': 'T',
+                                                    'item_type': 'THEOREM',
+                                                    'requires': ('RELATIVE-CONTACT-COMMON-APPARATUS-OPEN',
+                                                                 'RELATIVE-CONTACT-INTEGRAL-LAW',
+                                                                 'RELATIVE-CONTACT-POSITIONAL-BANK-COPY'),
+                                                    'bounded_by': ('RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY',
+                                                                   'RELATIVE-CONTACT-RETAINED-BANK-CAPACITY'),
+                                                    'evidence_kind': 'INLINE_CANON',
+                                                    'location': 'inline',
+                                                    'hash_mode': 'registry-scope-sha256-v1',
+                                                    'sha256': 'ef7f84cf9d59cbd9fccbf87de306b06be21194809c702a85e2e5d9c609c94d99',
+                                                    'architecture_requirement': 'none'},
+         'U-FIRST-TICK-AFFINE-TRACE-TRANSFER': {'status': 'T',
+                                                'item_type': 'THEOREM',
+                                                'requires': ('DEF-AUTONOMOUS-STATE',),
+                                                'bounded_by': (),
+                                                'evidence_kind': 'INLINE_CANON',
+                                                'location': 'inline',
+                                                'hash_mode': 'registry-scope-sha256-v1',
+                                                'sha256': 'bc1581785aba917af1ce3ca93aaec9960134f86663ce89cff08cdd2988a8892d',
+                                                'architecture_requirement': 'none'},
+         'J-MARKED-CARRY-MIRROR': {'status': 'T',
+                                   'item_type': 'THEOREM',
+                                   'requires': ('J-UNIT', 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER'),
+                                   'bounded_by': (),
+                                   'evidence_kind': 'INLINE_CANON',
+                                   'location': 'inline',
+                                   'hash_mode': 'registry-scope-sha256-v1',
+                                   'sha256': 'ea9d98706f941718a28af38c50060847d4d3694edee18f35f3ec1725e2312207',
+                                   'architecture_requirement': 'none'},
+         'J-FIXED-INPUT-CARRY-PRECISION': {'status': 'T',
+                                           'item_type': 'THEOREM',
+                                           'requires': ('J-UNIT',),
+                                           'bounded_by': (),
+                                           'evidence_kind': 'INLINE_CANON',
+                                           'location': 'inline',
+                                           'hash_mode': 'registry-scope-sha256-v1',
+                                           'sha256': '4fb162778ca28c8228c32bc7943c9babd06f209ad6a20c5767cc8ed72be16228',
+                                           'architecture_requirement': 'none'},
+         'U-CARRY-MIRROR-FINITE-CIRCUIT': {'status': 'C',
+                                           'item_type': 'COMPUTATION',
+                                           'requires': ('J-MARKED-CARRY-MIRROR',
+                                                        'U-FIRST-TICK-AFFINE-TRACE-TRANSFER'),
+                                           'bounded_by': (),
+                                           'evidence_kind': 'PUBLIC_PROBE',
+                                           'location': 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/RESULT.md',
+                                           'hash_mode': 'bundle-manifest-sha256-v1',
+                                           'sha256': '843e4a03c8765d732c09588f869bd70e6e2a9108c1576229055d7a4ddc326040',
+                                           'architecture_requirement': 'two-architecture'}}
+        )
+        expected_edges = (
+        [('J-FIXED-INPUT-CARRY-PRECISION', 'J-UNIT', 'REQUIRES'),
+         ('J-MARKED-CARRY-MIRROR', 'J-UNIT', 'REQUIRES'),
+         ('J-MARKED-CARRY-MIRROR', 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER', 'REQUIRES'),
+         ('RELATIVE-CONTACT-FINITE-WORKBANK-REUSE', 'RELATIVE-CONTACT-COMMON-APPARATUS-OPEN', 'REQUIRES'),
+         ('RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+          'RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY',
+          'BOUNDED_BY'),
+         ('RELATIVE-CONTACT-FINITE-WORKBANK-REUSE', 'RELATIVE-CONTACT-INTEGRAL-LAW', 'REQUIRES'),
+         ('RELATIVE-CONTACT-FINITE-WORKBANK-REUSE', 'RELATIVE-CONTACT-POSITIONAL-BANK-COPY', 'REQUIRES'),
+         ('RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+          'RELATIVE-CONTACT-RETAINED-BANK-CAPACITY',
+          'BOUNDED_BY'),
+         ('RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION', 'RELATIVE-CONTACT-INTEGRAL-LAW', 'REQUIRES'),
+         ('RELATIVE-CONTACT-POSITIONAL-BANK-COPY', 'RELATIVE-CONTACT-INTEGRAL-LAW', 'REQUIRES'),
+         ('U-CARRY-MIRROR-FINITE-CIRCUIT', 'J-MARKED-CARRY-MIRROR', 'REQUIRES'),
+         ('U-CARRY-MIRROR-FINITE-CIRCUIT', 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER', 'REQUIRES'),
+         ('U-FIRST-TICK-AFFINE-TRACE-TRANSFER', 'DEF-AUTONOMOUS-STATE', 'REQUIRES')]
+        )
+        self.assertEqual(sorted((row["item_id"], row["depends_on"], row["relation"])
+                                for row in dependency_rows if row["item_id"] in expected),
+                         expected_edges)
+        for claim, contract in expected.items():
+            self.assertEqual(registry[claim]["status"], contract["status"])
+            self.assertEqual(normative[claim]["status"], contract["status"])
+            self.assertEqual(normative[claim]["item_type"], contract["item_type"])
+            self.assertEqual(normative[claim]["layer"], "L1")
+            self.assertEqual(normative[claim]["gate_ids"], "")
+            self.assertEqual(requires[claim], set(contract["requires"]))
+            self.assertEqual(bounded_by[claim], set(contract["bounded_by"]))
+            self.assertEqual(registry[claim]["evidence"], contract["location"])
+            self.assertEqual(evidence[claim]["evidence_id"], "EV-" + claim)
+            for field in ("evidence_kind", "location", "hash_mode", "sha256", "architecture_requirement"):
+                self.assertEqual(evidence[claim][field], contract[field])
+        memberships = (
+        {'dependency_terminals': (),
+         'direct_architecture_requires': (),
+         'transitive_architecture_dependents': ()}
+        )
+        for field, exact in memberships.items():
+            self.assertEqual(set(expected) & set(getattr(self.report, field)), set(exact))
+        for owner in ("QUADRATIC-MEMORY-NATIVE-CONTACT", "QDD-INSTRUMENT-APPARATUS"):
+            self.assertEqual(registry[owner]["status"], "O")
+
     def test_current_counts_match_the_public_summary(self) -> None:
         # audit(ROOT) reads this checkout, not the historical v10 map note.
-        # v105 adds one connected L1 theorem with two-architecture evidence.
-        self.assertEqual(self.report.claims, 577)
+        # v109 adds six L1 theorems and one finite L1 computation; old statuses stay unchanged.
+        self.assertEqual(self.report.claims, 609)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 24, "T": 434},
+            {"C": 40, "D": 59, "F": 19, "H": 2, "O": 24, "T": 465},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 159,
+                "none": 188,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 378,
+                "two-architecture": 381,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 201)
+        self.assertEqual(len(self.report.direct_architecture_requires), 202)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 380
+            len(self.report.transitive_architecture_dependents), 385
         )
-        self.assertEqual(len(self.report.dependency_terminals), 80)
+        self.assertEqual(len(self.report.dependency_terminals), 84)
         # v95 adds ten inline theorems (architecture_requirement=none).
         # Their declared premise edges add four terminals and no path to
         # DEF-ARCHITECTURE; this is a graph fact, not physical independence.

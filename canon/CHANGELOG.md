@@ -1,11 +1,129 @@
 # Canon changelog (public series)
 
-## Public Canon v105
+## Public Canon v109
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
+Registry snapshot: 609 claims; 0 T-LOCK, 465 T, 59 D, 40 C, 2 H, 24 O, 19 F; 26 live H/O.
+Reproduction witnesses: 38.
+<!-- END GENERATED CURRENT COUNTS -->
+
+Add three L1 workbank theorems: the explicit 60-contact positional-bank
+copier, the four-place literal-copy obstruction, and complete restoration
+of the same work core for every prescribed finite number of inputs.
+The program uses two fresh permanent archives per input; it restores source,
+clock, controls and working banks while retaining every earlier input and
+record. The archive reader recovers all 10^k histories. Constant account is
+68+74k on 26+25k slots; the exhaustive three-input instance uses 101 slots,
+account 290 and six archives. Finite-k induction supplies the general proof.
+
+Add three separate native/carry theorems: the actual first-tick affine
+transfer with its current-trace obstruction, exact marked integral carry
+pairing with the occupied four-register involution, and the next carry
+coefficient distinguishing two specified multipliers. Add the 62-register,
+500-input primitive realization as a finite C result. Its inverse multiplier
+is the literal reversed forward word; its native updates are not globally
+inverted. Character relations share the fact chi(2)=-1; agreement of signed
+readers is a declared convention. The extra carry coefficient is not an
+output of the two-digit circuit.
+
+All 602 prior claims retain their exact scopes and statuses. No gate or
+live H/O owner closes. The contact and native carriers keep separate laws
+and interfaces. Autonomous next-input choice, regeneration of retained
+archives, unlimited finite-carrier operation and physical interpretation
+remain outside these results. The reproduction inventory remains 38, and
+the structural audit preserves all 208 preceding guards and their exact
+historical inputs. The two scientific probe sources remain unchanged.
+
+## Public Canon v108
+
+Registry snapshot: 602 claims; 0 T-LOCK, 459 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
+Reproduction witnesses: 38.
+
+Close the existing common-apparatus owner O -> T with one complete finite L1
+construction on 56 slots. One fixed contact/permutation program processes
+all 100 ordered pairs from the ten-input prepared family through the same
+read core. Four current archive banks distinguish both inputs; the first
+records keep their original addresses throughout reload and the second
+experiment. All changing sources, controls and memory remain in the account.
+The auxiliary preparation is 128 and the complete trace account 156. This
+is funded reuse for two experiments, with supplied prepared inputs and five
+whole-slot transpositions. Exact reversal removes the records.
+
+Adopt four independently reviewed general arithmetic theorems: complete
+three-slot rhythm classification, sharp relative-account bounds, an unresolved
+fivefold phase with explicit indistinguishable restricted readings, and a
+sufficient injectivity bound for coefficient readings. The proofs are inline;
+finite shell censuses and numerical minimum-modulus searches are not promoted.
+
+The stable common-apparatus identifier is retained after its positive decision.
+The other 597 prior claims and all other live owners retain their statuses and
+scopes. No layer gate is added or closed. QDD-INSTRUMENT-APPARATUS and
+QUADRATIC-MEMORY-NATIVE-CONTACT remain open. The reproduction inventory stays
+38; the status-separation audit reconstructs every earlier snapshot exactly.
+Source probes, accepted reviews and their evidence bytes are unchanged.
+
+## Public Canon v107
+
+Registry snapshot: 598 claims; 0 T-LOCK, 454 T, 59 D, 39 C, 2 H, 25 O, 19 F; 27 live H/O.
+Reproduction witnesses: 38.
+
+Adopt four reviewed conditional L1 theorems about the supplied integral
+relative contact: its total conservative law, sharp known-input preparation
+minima with exactly four auxiliary slots, retained-output bank and capacity
+bounds, and the fixed-program residue-distance restriction. The signed
+minimum is 12 and the positive minimum is 27 on the complete 26-slot carrier.
+Both are initial trace accounts; conservation does not preserve a ready bank.
+
+The minimum theorem uses a proved finite domain and complete two-architecture
+public-probe exclusion of every cheaper positive endpoint pair. Both exact
+witnesses include the complete final auxiliary and inverse. The contact has
+an inline universal proof and the supplementary relative-contact reproduction.
+No historical shortest-word inventory or larger-bank positive minimum is
+adopted. The Gram and finite-window archive proposals remain non-canonical.
+
+Add the explicit L1 common varied-input apparatus obligation with compatible
+carrier, preparation, response, record and funded renewal requirements.
+It cannot be closed by placing separate constructions side by side or by
+requiring a target already excluded by the accepted residue invariants.
+All 593 prior claims, their statuses and scopes, and all 26 prior live H/O
+owners and decision conditions remain unchanged. No native implementation,
+physical energy identification, occurrence law or layer transfer is added.
+
+## Public Canon v106
+
+Registry snapshot: 593 claims; 0 T-LOCK, 450 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
+Reproduction witnesses: 37.
+
+Adopt sixteen exact analytical L1 theorems. Seven describe the specified
+coherent integer walk, its localized coefficient carrier, spatial propagation,
+native residue factor and normalized spectral-energy pullback. Eight give
+phase-sensitive equal-spectrum sources, distinct finite apparatuses,
+coherent energy compensation, occupied-record export and counted reuse,
+and the complete signed energy and source-coherence account of a fixed
+two-walk contact. One classifies unchanged native whole-sheet return
+windows, including exact dyadic counts and the distinct densities 1/4
+for a separately supplied X1 sheet and 1/3 for the actually occupied sheet.
+
+The apparatus results retain every supplied gate, preparation, complete
+channel and uniform success premise. The local two-attempt implication
+does not independently establish its conditional predecessor contracts.
+The different carriers, spectral energies, resource accounts and time
+generators are not silently identified. Native window counts are not
+independent contact counts or physical outcome probabilities. The raw,
+localized-amplitude and characteristic-five carriers remain distinct.
+
+All 577 prior claims, all 26 live H/O owners and their decision conditions
+retain their scopes and statuses. The registry has 593 claims, including
+450 T. All sixteen additions have analytical inline evidence. Their exact
+accepted source bundles are retained, and the historical status audit
+preserves all previous predicates. The minimal reproduction inventory
+remains 37. Unaccepted extensions and the conditional original-energy
+local-error-floor nomination remain outside this release.
+
+## Public Canon v105
+
 Registry snapshot: 577 claims; 0 T-LOCK, 434 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
 Reproduction witnesses: 37.
-<!-- END GENERATED CURRENT COUNTS -->
 
 Connect capture, complete physical-cut charge current and coherent receiver
 recording in one specified homogeneous L1 model. The single new theorem fixes
