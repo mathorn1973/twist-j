@@ -1,0 +1,5 @@
+PASS classification exact stdout and generated-data digests
+PASS shell exact stdout and generated-data digests
+PASS phase exact stdout and generated-data digests
+PASS classifier versus all 2895 shell states and 2319 complete cycles
+RESULT PASS: three exposed-source audits; NON-CANONICAL L1

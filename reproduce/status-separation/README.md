@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred eighty-four checks cover the current
+and emits deterministic text. Its 192 checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 184/184 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 192/192 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -934,3 +934,129 @@ a run receipt, a fresh scientific campaign or an evidence-class promotion.
 This maintenance changes only the existing structural release audit. Actual
 execution and cross-architecture acceptance belong to the subsequently
 frozen complete successor candidate; no earlier frozen tree is rewritten.
+
+
+## Public Canon v106 boundary
+
+Eight structural guards extend the existing release-accounting chain to v106. All thirteen complete current Canon inputs are pinned by byte count and SHA-256. Only explicit inverse line edits reconstruct exact public v105 at `892a0b11089d34e241e1eb76d2c03247022d18e6`; every reconstructed file must match its complete prior hash. The original v105 input reader and inventory reader consume that validated view. All 184 prior predicates, constants and PASS descriptions remain unchanged.
+
+The new guards bind 16 inline L1 theorem rows, 1 explicit definition, 29 exact reviewed source files, complete proof blocks, scope hashes, declarations and dependency additions. All 577 earlier claims and all 26 live H/O owners retain their exact rows. Gates, Frontier programs, Frontier text and the 37-directory reproduction inventory are unchanged. The individual supplied models retain their own premises and do not acquire native preparation, physical occurrence or a complete physical apparatus through consolidation.
+
+The 192-check EXPECTED transcript was authored from all 184 unchanged earlier PASS lines and eight specified new guard descriptions before execution. It is not captured output or a run receipt. This structural audit executes no scientific verifier. Replay and cross-architecture acceptance belong to the subsequently frozen complete release candidate.
+
+
+## Public Canon v107 boundary
+
+Eight structural guards extend the audit to the independently reviewed narrow
+contact/preparation fold. The complete thirteen current Canon inputs are bound
+by byte count and SHA-256; explicit inverse line edits reconstruct exact public
+v106 at a193e389fb1ddb0bdc89165b015c95a17eb1e425. Every reconstructed file must
+match its complete prior hash. Only the v106 current-input and reproduction-
+inventory readers consume this validated view. All 192 earlier predicates,
+constants and PASS descriptions remain unchanged. No old-byte fallback exists.
+
+The new guards bind four conditional L1 theorems and one open common-apparatus
+owner, their exact append-only ledgers, proofs, evidence, dependencies and
+resource boundaries. All 593 earlier claims and all 26 earlier live H/O owners
+retain their exact scopes. The new L1 owner is explicitly STOP and introduces
+no physical closure or layer gate. The new totals are 598 claims:
+T454/D59/C39/H2/O25/F19, with 27 live H/O owners.
+
+All 43 accepted source files from
+95454af39bfaa932963939d613c584415b56a653 retain exact byte counts, SHA-256 and Git
+blob identities. The complete seven-file minimum probe retains its bundle hash
+and two-architecture evidence. The contact, retained-bank and fixed-word
+theorems are proof-carried inline statements; the common-apparatus owner also
+uses an inline scope identity. Their evidence is not relabelled as finite
+computation. The independent review's declared scope, known-input preparation
+with exactly four auxiliary slots, conserved initial trace accounts, retained-
+output limits and unproved same-carrier composition remain explicit.
+
+The unchanged accepted contact verifier and expected transcript are installed
+in the new three-file relative-contact reproduction. Its exact bundle extends
+the actual reproduction inventory from 37 to 38. The outer adapter removes
+only that named directory when exposing the v106 inventory. This structural
+audit imports and executes no scientific verifier; ordinary repository CI
+separately replays the contact audit on both architectures.
+
+The 200-check EXPECTED transcript is authored before execution from the 192
+unchanged PASS lines and eight specified new descriptions. It is not captured
+output or a run receipt. Formal replay starts only after the complete content
+candidate has been frozen and publicly pushed. No earlier frozen tree is
+rewritten.
+
+
+## Public Canon v108 boundary
+
+Eight current structural guards extend the exact inverse chain to v108. All
+thirteen complete current Canon inputs are pinned by byte count and SHA-256.
+Explicit inverse line edits reconstruct public v107 at
+0c33e2b281e39127c269ef5dd7f5b529a62e9e65 before the unchanged historical
+predicates run. Only the v107 input and reproduction-inventory readers consume
+that validated view. All 200 prior predicates, module constants and PASS
+descriptions remain unchanged; there is no old-byte fallback.
+
+Four proof-carried rhythm theorems are added at L1. The stable
+RELATIVE-CONTACT-COMMON-APPARATUS-OPEN identifier changes from O to T only for
+the independently reviewed finite two-input, 56-slot contact-and-permutation
+construction. Its complete prepared input family, 46 designated auxiliary
+slots, accounts 128/156, four retained record banks and finite stock-funded
+reuse remain explicit. Ten input slots are allocated; only eight vary.
+Prepared inputs and the five supplied whole-slot swaps are premises. The
+result does not supply native U, arbitrary post-start external loading,
+regeneration of spent memory or a physical energy/time calibration.
+
+The owner keeps its complete two-architecture public-probe evidence. The
+four general rhythm theorems use inline scope-hashed proofs; the exposed
+one-architecture rhythm census and reported extra review computation are not
+promoted. All 42 accepted source files from the probe, independent review
+and rhythm package retain exact bytes, SHA-256 and Git blob identities.
+
+All 597 other prior claim rows and all 26 remaining live H/O owners are
+unchanged. No gate is added, removed or relabelled; the separate native
+memory-contact and physical-apparatus owners remain open. Only the closed
+owner leaves the Frontier program. The resulting partition is 602 claims:
+T459/D59/C39/H2/O24/F19. The reproduction inventory remains exactly 38.
+
+EXPECTED.txt is authored before execution by retaining the 200 historical
+PASS lines and appending eight specified structural descriptions. It is not
+a captured run receipt. This audit imports and executes no scientific
+verifier. The first replay of the complete successor candidate occurs only
+after its public immutable pin and readback.
+
+
+## Public Canon v109 boundary
+
+Eight current structural guards extend the exact inverse chain to v109.
+All thirteen complete current Canon inputs are pinned by byte count and
+SHA-256. Explicit inverse line edits reconstruct public v108 at
+17de90b58f814238e151aac77badde6654b52627 before the 208 unchanged historical
+predicates run. Only the v108 current-input and reproduction-inventory
+readers consume that validated view. All prior module constants and PASS
+descriptions remain unchanged. There is no old-byte fallback.
+
+Six L1 theorems cover the positional bank copier, its four-place obstruction,
+finite funded workbank reuse, the first-tick affine trace transfer, the marked
+carry mirror and fixed-input carry precision. One separate L1 computation
+records the finite carry circuit. Their exact statements and proof blocks
+are byte-pinned in the Canon. The contact construction and native receiver
+construction retain their own laws and supplied interfaces. The fold adds
+neither a native memory-contact bridge nor physical apparatus closure.
+
+The six theorems use inline scope-hashed evidence. The finite computation
+uses the complete two-architecture public probe probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1.
+All 48 files in 6 accepted source/review directories retain exact
+bytes, SHA-256 and Git blob identities. Source review is distinguished from
+the authoring session's structural audit; this adapter is not an independent
+mathematical acceptance or a scientific reproduction of those packages.
+
+All 602 prior claims, all 26 live H/O owners, every gate and the Frontier
+remain unchanged. Two Core selections refer to funded workbank reuse and
+the finite carry circuit. The registry partition is 609 claims:
+T465/D59/C40/H2/O24/F19. The reproduction inventory remains exactly 38.
+
+EXPECTED.txt is authored before execution by retaining all 208 historical
+PASS lines and appending eight specified structural descriptions. It is
+not a captured run receipt. This audit imports and executes no scientific
+verifier. The successor candidate is replayed only after its immutable
+public content pin and readback under the release procedure.
