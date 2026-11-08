@@ -64,6 +64,13 @@ ADMITTED_CONTEXT_PATHS = {
         'canon/REGISTRY.tsv',
         'canon/CHANGELOG.md',
     }),
+    'P-INTEGER-POSITIVE-KINETIC-JOINT-1': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
     'P-INTEGER-LOCAL-AUXILIARY-NOETHER-1': frozenset({
         'canon/CANON.md',
         'canon/CORE.md',
@@ -155,6 +162,9 @@ ADMITTED_BUNDLE_PATHS = {
     }),
     'P-INTEGER-LOCAL-NOETHER-OBSTRUCTION-1': frozenset({
         'probes/P-INTEGER-LOCAL-NOETHER-OBSTRUCTION-1/breaker.py',
+    }),
+    'P-INTEGER-POSITIVE-KINETIC-JOINT-1': frozenset({
+        'probes/P-INTEGER-POSITIVE-KINETIC-JOINT-1/breaker.py',
     }),
     'P-INTEGER-LOCAL-AUXILIARY-NOETHER-1': frozenset({
         'probes/P-INTEGER-LOCAL-AUXILIARY-NOETHER-1/breaker.py',
