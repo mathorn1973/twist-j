@@ -1,0 +1,18 @@
+C-JM-ORIENTED-QUADRATIC-READING-N exact audit
+predecessor C determinant = 41; intertwining and Smith = PASS
+trace Gram determinants S/R = 288000 484128000
+trace Gram ranks modulo 41 S/R = 8 6
+trace Gram leading minors R = [8, 95, 2318, 67357, 2004716, 63484320, 477240000, 484128000]
+rank-one normalization, update and Cauchy audit = PASS sample 38
+residue pairs exhausted = 1681; square fibers = 841; seam sign classes = 21
+membership via ell Q ell^T; scalar norm loss; scale-erasure witness = PASS
+q(1,-1), q(41,-41) = 8 13448
+tensor Smith = 1^49,41^14,1681; index = 41^16
+symmetric-kernel Smith = 1^28,41^7,1681; index = 41^9
+nilpotent intrinsic vector = [28, 32, 33, 34, 27, 6, 12, 1]
+nilpotent square: ring multiplication zero, tensor nonzero, split reduction zero = PASS
+nilpotent q divisible by 41^2 = PASS
+exact quadratic mod41 orders split/glued = 20/820
+rank(quadratic_glued^20-I) mod41 = 8
+explicit added-reference normalized reconstruction = PASS
+ALL EXACT LOCAL CHECKS PASS; candidate-C audit only

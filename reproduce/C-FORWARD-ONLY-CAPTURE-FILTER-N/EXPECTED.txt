@@ -1,0 +1,11 @@
+C-FORWARD-ONLY-CAPTURE-FILTER-N exact audit
+status NON-CANONICAL L1 candidate-T; design-exposed; independent acceptance pending
+checks 788
+native_front_T1_T2 all declared label examples PASS
+complete_five_state_block_and_grouped_histories PASS
+pass_effect > 99/100; stop_effect < 1/536870912
+prepared_T2_weight > 1/8000; marked_basis_T2_weight > 1/20000
+conditional_outside_selected_bound_band < 1/1000000
+filter_five_state_registers 327680; forward_W_calls 65536; forward_center_calls 262144
+native_admission energy_account occurrence reset UNRESOLVED
+PASS

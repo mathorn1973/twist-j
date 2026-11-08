@@ -1,0 +1,762 @@
+{
+  "status": "PASS",
+  "implementation": "new absolute three-slot implementation; cyclic five-coefficient rho multiplication; no old-code imports",
+  "coefficient_bound": {
+    "proved_identity": "4Q(a)-5a_i^2=sum_{j!=i}(2a_j-a_i)^2+2sum_{j<k,j,k!=i}(a_j-a_k)^2",
+    "consequence": "Q<=32 implies all four coefficients in [-5,5]",
+    "single_vectors_Q_at_most_32": 1811,
+    "single_vector_Q_histogram": {
+      "0": 1,
+      "2": 10,
+      "3": 20,
+      "5": 20,
+      "7": 60,
+      "8": 50,
+      "10": 30,
+      "12": 60,
+      "13": 120,
+      "15": 60,
+      "17": 160,
+      "18": 70,
+      "20": 60,
+      "22": 120,
+      "23": 220,
+      "25": 120,
+      "27": 200,
+      "28": 180,
+      "30": 40,
+      "32": 210
+    },
+    "ordered_a_b_pairs_with_Qsum_at_most_32": 581921,
+    "third_slot": "c=4-a-b; retain iff Q(c)=32-Q(a)-Q(b)"
+  },
+  "shell": {
+    "E": 32,
+    "S": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "M": 64,
+    "states": 2895,
+    "cycles": 2319,
+    "cycle_count_by_period": {
+      "1": 2218,
+      "5": 72,
+      "9": 26,
+      "21": 2,
+      "41": 1
+    }
+  },
+  "marker": {
+    "definition": "sorted(Q(a),Q(b),Q(c))=[0,0,32]",
+    "marked_states": [
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    ],
+    "marked_state_count": 3,
+    "marked_cycle_periods": [
+      21,
+      21,
+      41
+    ],
+    "one_mark_each_marked_cycle": true,
+    "forever_unmarked_states": 2812
+  },
+  "binary_reading": {
+    "infinite_classes": 63,
+    "class_size_histogram": {
+      "1": 41,
+      "2": 21,
+      "2812": 1
+    },
+    "sample_origin": "n=0 included; L samples are n=0,...,L-1",
+    "minimum_separating_samples": 42,
+    "latest_needed_sample_index": 41,
+    "prefix_class_counts_from_L0": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42,
+      44,
+      46,
+      48,
+      50,
+      52,
+      54,
+      56,
+      58,
+      60,
+      62,
+      63
+    ],
+    "sharpness_collision_at_L41": {
+      "first_state": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          -2,
+          0
+        ],
+        [
+          2,
+          0,
+          2,
+          0
+        ]
+      ],
+      "second_state": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          -2,
+          0
+        ]
+      ],
+      "first_infinite_word": "000000000000000000001",
+      "second_infinite_word": "00000000000000000000100000000000000000000",
+      "common_41_sample_prefix": "00000000000000000000100000000000000000000"
+    }
+  },
+  "modular_reading": {
+    "minimum_k_absolute": 3,
+    "minimum_k_differences": 3,
+    "minimum_power_of_two_modulus": 8,
+    "results": [
+      {
+        "k": 0,
+        "modulus": 1,
+        "absolute_residue_classes": 1,
+        "difference_residue_classes": 1,
+        "absolute_injective": false,
+        "differences_injective": false,
+        "same_partition_at_fixed_sum": true,
+        "collision_witness": [
+          [
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              -1,
+              -3,
+              -2,
+              -2
+            ],
+            [
+              2,
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "k": 1,
+        "modulus": 2,
+        "absolute_residue_classes": 136,
+        "difference_residue_classes": 136,
+        "absolute_injective": false,
+        "differences_injective": false,
+        "same_partition_at_fixed_sum": true,
+        "collision_witness": [
+          [
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              -2,
+              -2,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              -1
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "k": 2,
+        "modulus": 4,
+        "absolute_residue_classes": 2791,
+        "difference_residue_classes": 2791,
+        "absolute_injective": false,
+        "differences_injective": false,
+        "same_partition_at_fixed_sum": true,
+        "collision_witness": [
+          [
+            [
+              -1,
+              -2,
+              -2,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              4,
+              2,
+              2,
+              2
+            ]
+          ],
+          [
+            [
+              3,
+              2,
+              2,
+              3
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              0,
+              -2,
+              -2,
+              -2
+            ]
+          ]
+        ]
+      },
+      {
+        "k": 3,
+        "modulus": 8,
+        "absolute_residue_classes": 2895,
+        "difference_residue_classes": 2895,
+        "absolute_injective": true,
+        "differences_injective": true,
+        "same_partition_at_fixed_sum": true,
+        "collision_witness": null
+      },
+      {
+        "k": 4,
+        "modulus": 16,
+        "absolute_residue_classes": 2895,
+        "difference_residue_classes": 2895,
+        "absolute_injective": true,
+        "differences_injective": true,
+        "same_partition_at_fixed_sum": true,
+        "collision_witness": null
+      }
+    ],
+    "rational_integer_moduli_2_through_8": [
+      {
+        "modulus": 2,
+        "absolute_residue_classes": 136,
+        "difference_residue_classes": 136,
+        "absolute_injective": false,
+        "differences_injective": false,
+        "absolute_collision_witness": [
+          [
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              -2,
+              -2,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              -1
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ]
+          ]
+        ],
+        "difference_collision_witness": [
+          [
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              -2,
+              -2,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              -1
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "modulus": 3,
+        "absolute_residue_classes": 1935,
+        "difference_residue_classes": 81,
+        "absolute_injective": false,
+        "differences_injective": false,
+        "absolute_collision_witness": [
+          [
+            [
+              -1,
+              -2,
+              -2,
+              -1
+            ],
+            [
+              2,
+              1,
+              2,
+              0
+            ],
+            [
+              3,
+              1,
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              2,
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              -1,
+              0
+            ],
+            [
+              0,
+              -2,
+              0,
+              -2
+            ]
+          ]
+        ],
+        "difference_collision_witness": [
+          [
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              -2,
+              -1,
+              -1
+            ],
+            [
+              2,
+              1,
+              -1,
+              -1
+            ],
+            [
+              2,
+              1,
+              2,
+              2
+            ]
+          ]
+        ]
+      },
+      {
+        "modulus": 4,
+        "absolute_residue_classes": 2791,
+        "difference_residue_classes": 2791,
+        "absolute_injective": false,
+        "differences_injective": false,
+        "absolute_collision_witness": [
+          [
+            [
+              -1,
+              -2,
+              -2,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              4,
+              2,
+              2,
+              2
+            ]
+          ],
+          [
+            [
+              3,
+              2,
+              2,
+              3
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              0,
+              -2,
+              -2,
+              -2
+            ]
+          ]
+        ],
+        "difference_collision_witness": [
+          [
+            [
+              -1,
+              -2,
+              -2,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              4,
+              2,
+              2,
+              2
+            ]
+          ],
+          [
+            [
+              3,
+              2,
+              2,
+              3
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              0,
+              -2,
+              -2,
+              -2
+            ]
+          ]
+        ]
+      },
+      {
+        "modulus": 5,
+        "absolute_residue_classes": 2895,
+        "difference_residue_classes": 2895,
+        "absolute_injective": true,
+        "differences_injective": true,
+        "absolute_collision_witness": null,
+        "difference_collision_witness": null
+      },
+      {
+        "modulus": 6,
+        "absolute_residue_classes": 2895,
+        "difference_residue_classes": 2895,
+        "absolute_injective": true,
+        "differences_injective": true,
+        "absolute_collision_witness": null,
+        "difference_collision_witness": null
+      },
+      {
+        "modulus": 7,
+        "absolute_residue_classes": 2895,
+        "difference_residue_classes": 2895,
+        "absolute_injective": true,
+        "differences_injective": true,
+        "absolute_collision_witness": null,
+        "difference_collision_witness": null
+      },
+      {
+        "modulus": 8,
+        "absolute_residue_classes": 2895,
+        "difference_residue_classes": 2895,
+        "absolute_injective": true,
+        "differences_injective": true,
+        "absolute_collision_witness": null,
+        "difference_collision_witness": null
+      }
+    ],
+    "modulo_5_is_coefficient_reduction": "O/5O, size 625 per slot; not O/(1-j), size 5",
+    "modulo_5_absolute_and_differences_injective": true,
+    "named_modulo_4_collision": [
+      [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    ],
+    "general_sufficient_bound": "fixed M and S: absolute reduction modulo m is injective if 3m^2>M; differences also if gcd(3,m)=1"
+  }
+}

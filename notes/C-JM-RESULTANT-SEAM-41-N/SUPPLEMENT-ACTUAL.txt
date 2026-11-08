@@ -1,0 +1,11 @@
+Phi40 = x**16 - x**12 + x**8 - x**4 + 1
+N_K40(J-M) = 41
+common roots Phi40 and J-M mod41 = [6]
+faithful residue root orders = 5 8
+E1 to R power-basis determinant = 1
+E1 companion equivalence = PASS
+Ext representative residue orbit = [1, 19, 33, 12, 23, 27, 21, 30, 37, 6, 32, 34, 31, 15, 39, 3, 16, 17, 36, 28, 40, 22, 8, 29, 18, 14, 20, 11, 4, 35, 9, 7, 10, 26, 2, 38, 25, 24, 5, 13]
+mod41 exact order split 40
+mod41 exact order glued 1640
+reduction inclusion cokernel exponent = 41
+new physical claims = NONE

@@ -1,0 +1,10 @@
+NON-CANONICAL / L1 / bounded source-exposed local audit / candidate-C
+K5 PASS: 12 declared rays; 144 exact pair checks; 7 overlap values.
+K5 multiplicities: 0:12, 1:12, 1/2:40, each remaining value:20.
+K5 PASS: cycle HIGH,LOW,HIGH,LOW; three-context reconstruction.
+PASS: trace-one idempotents, frame sum, Lagrange identity and binary complements.
+K8 PASS: 10 declared rays; 100 exact pair checks; 5 overlap values.
+K8 multiplicities: 0:10, 1:10, 1/2:48, each remaining value:16.
+K8 PASS: cycle HIGH,LOW,LOW,HIGH; proposed bridge breaks orthogonality.
+PASS: trace-one idempotents, frame sum, Lagrange identity and binary complements.
+No height-exhaustiveness, Born derivation, physical bridge or sampling conclusion.

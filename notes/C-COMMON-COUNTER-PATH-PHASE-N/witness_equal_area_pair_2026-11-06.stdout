@@ -1,0 +1,4 @@
+P27 returns to I_1: True {'attempts': 35, 'changed': 27, 'diagonal': 0, 'refused': 8, 'A': 55, 'B': 20, 'S': 130}
+P35 returns to I_1: True {'attempts': 35, 'changed': 35, 'diagonal': 0, 'refused': 0, 'A': 55, 'B': 20, 'S': 130}
+same attempts, same area 55+20 phi, same account sum 130, counts 27 and 35 (difference 2 mod 5): True
+RESULT PASS

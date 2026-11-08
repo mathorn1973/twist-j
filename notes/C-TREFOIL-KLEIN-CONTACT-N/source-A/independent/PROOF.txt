@@ -1,0 +1,304 @@
+NEZÁVISLÝ OPONENTSKÝ REPORT — TWIST-J, marked Klein coordinate bridge
+Datum: 2026-10-17
+Status: NON-CANONICAL analytická poznámka s pomocnou lokální přesnou kontrolou.
+
+VERDIKT
+
+Všech 94 kontrol uchovaného deterministického běhu prošlo. Žádný zmrazený
+matematický cíl F1–F6 nevyvrácen. Vlastní implementační kontroly rovněž prošly.
+Výsledek se vztahuje k jedinému níže uvedenému preregu; nejde o veřejnou P sondu,
+změnu Canonu ani o dvě architektury. Nebyl čten autorův kód ani jeho výsledky,
+neproběhla komunikace s autorem ani žádný GitHub zápis. Z autorovy nové složky
+byl čten pouze PREREG.md. Údaje o veřejném vlastnictví a commitech v jeho §1
+jsou vstupní kontext, zde nebyly samostatně auditovány.
+
+1. VSTUP, IMPLEMENTACE A UCHOVANÝ BĚH
+
+Prereg:
+  /tmp/twistj-trefoil-coordinate-20261017/PREREG.md
+  SHA-256 d64ab46179bfe2acfaae3f61cbfdc9adc3c3c6a9e1048a92987d0e5bf7218053
+
+Uchovaný nezávislý zdroj:
+  /tmp/twistj-trefoil-coordinate-breaker-20261017/check.py
+  SHA-256 0e75951089d8ee86ed81c6c66babbc72d6750117127ea17f6aaecfdae9c4273b
+  17039 bytes
+
+Deterministický report:
+  report.json, 53594 bytes
+  SHA-256 54afe0e79087137a4f5008fcd65c25a154ed4611fe119563599966342999f8ab
+
+Výstupy:
+  stdout.txt, 291 bytes
+  SHA-256 e3c3a1e8b6bac3a6c02489ac6627349644aa23ad8ad1ae05ac46395bce30e43a
+  stderr.txt, 0 bytes
+  SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  exit status 0
+
+Metadata opakovaných deterministických běhů:
+  execution.json, 591 bytes
+  SHA-256 eec7d45015ff1a3147334635772ae0c1f8c88dda5e7100c4e9b3d9d6a5efdbd4
+Oba běhy mají bitově shodný report i stdout a prázdné stderr. Po jejich
+uchování se verifier již neupravoval a další volitelné ověřovací běhy nebyly
+provedeny.
+
+Prostředí: CPython 3.12.14 (main, Aug 25 2026, 14:00:49), Clang 22.1.3;
+Linux-6.18.55-x86_64-with-glibc2.39; architektura x86_64.
+
+Skutečný argv uchovaných běhů:
+  ["python3", "/tmp/twistj-trefoil-coordinate-breaker-20261017/check.py"]
+Voláno přes subprocess.run(text=True, capture_output=True); zachycené streamy
+byly beze změny zapsány do stdout.txt a stderr.txt. Přímý reprodukční příkaz:
+
+  python3 /tmp/twistj-trefoil-coordinate-breaker-20261017/check.py > /tmp/twistj-trefoil-coordinate-breaker-20261017/stdout.txt 2> /tmp/twistj-trefoil-coordinate-breaker-20261017/stderr.txt
+
+Verifier nemá parametr pro cesty. PREREG a OUT jsou pevné absolutní cesty
+uvedené výše. Pro reprodukci z přeneseného balíčku vytvořte obě složky,
+umístěte zmrazený PREREG.md do první a check.py do druhé; zdroj neupravujte.
+Pracovní adresář není podstatný. Potřebný je pouze Python 3 se standardní
+knihovnou. Příkaz přepisuje report.json ve vlastním OUT; při potřebě uchovat
+předchozí výstup jej nejprve odděleně archivujte. Vzorové spuštění přímo
+nevytváří execution.json, který zaznamenává dvě již uskutečněná spuštění.
+
+Matematická aritmetika: fractions.Fraction v bázi (1,z,z^2,z^3), redukce
+z^4=−1−z−z^2−z^3. Inverze je racionální Gaussova eliminace 4×4 matice
+násobení. Polynomy jsou řídké slovníky dvojic exponentů. Invariance znamená
+p(A00*u+A01*v, A10*u+A11*v)=p(u,v), tedy výhradně sloupcovou konvenci.
+Valuace je ord_5 přesného determinantu matice násobení (normy). Čtrnáct
+implementačních kontrol zahrnuje minimální polynom, z^5, inverze, involuci
+konjugace a souhlas determinantové normy se součinem čtyř vnoření.
+
+Audit prvního pomocného běhu: první úspěšný běh měl 94 PASS, exit 0,
+prázdné stderr a elapsed_seconds=1.815. Následně bylo pouze odstraněno
+elapsed_seconds z reportu a stdout, aby byly deterministické; výstupy pod
+původními názvy se přepsaly před doručením požadavku na uchování prvního
+běhu. Prereg, cíle, aritmetika a kontrolní logika se nezměnily. První zdroj
+byl přesně obnoven zpětnou aplikací zaznamenaného reportingového patche:
+
+  recovered/check-first-run.py
+  SHA-256 f40cee52c84433139f86b766220139b5ee04b9096306359d2355e24c09bbf689
+
+Je výslovně označen jako RECOVERED, nikoli jako nepřerušeně uchovaný soubor.
+Jeho otisk souhlasí s otiskem zachyceným při prvním běhu v tool logu. Původní
+stdout ani report se nevydávají za zachované soubory a nebyly rekonstruovány.
+K dodání slouží skutečně uchovaný současný deterministický report a jeho
+skutečný zdrojový hash. Podrobnost původu je také v recovered/README.txt.
+
+2. PŘESNÉ VÝSLEDKY A ROZLIŠENÍ CHYB
+
+Kategorie kontrol: 1 vstupní otisk; 14 aritmetických sebekontrol; 26 F1;
+24 F2; 10 F3; 5 F4; 10 F5; 4 F6. Celkem 94, všechny PASS.
+
+Chyby zmrazených matematických tvrzení: žádná nalezena.
+Chyby matematické implementace: žádná nalezena; žádný neúspěšný matematický
+test se neopravoval změnou cíle ani implementace. Reportingová závada první
+verze: proměnný čas v reportu bránil jeho bitové determinističnosti; odstraněn
+pouze tento údaj. Omezení evidence: původní výstupní soubory byly přepsány,
+jak je výslovně zaznamenáno výše. Následující závěry mají zachovaný současný
+přesný výstup a reprodukovatelný zdroj.
+
+Všech šest forem fhat,Hhat,What,F,H,W je v Z[z][u,v] a invariantní pod S i T.
+Valuace koeficientů (minimum přes nenulové koeficienty):
+
+  fhat 10; Hhat 20; What 25; F 0; H 0; W 0.
+  fK −2; HK 0; WK −5.
+
+Redukce v F_5[u,v]:
+
+  F = 2u^10v^2 + u^6v^6 + 2u^2v^10 = 2E6^2,
+  H = 4(u^20+u^16v^4+u^12v^8+u^8v^12+u^4v^16+v^20) = 4D20,
+  W = 4u^25v^5 + u^5v^25 = 4E6^5.
+
+Každý z uvedených standardních, označených a normalizovaných polynomických
+vztahů má přesně nulový zbytek. Bod v0 a všechny uvedené metrické identity
+rovněž souhlasí. report.json obsahuje úplné koeficienty devíti pojmenovaných
+forem v bázi (1,z,z^2,z^3), všechna jednotlivá porovnání a koeficientové
+valuace šesti integrálních forem.
+
+3. STRUČNÝ ÚPLNÝ ALGEBRAICKÝ DŮKAZ
+
+3.1 Těleso, valuace a změna báze
+
+Pracujeme v K=Q[z]/Phi_5(z), O=Z[z], lambda=1−z. Dosazení z=1 identifikuje
+O/(lambda) s F_5. Polynomu Phi_5(1+t)=t^4+5t^3+10t^2+10t+5 je
+Eisensteinův při 5, takže 5 má jediný prvoideál nad sebou, ramifikaci 4
+a reziduální stupeň 1. Proto v_lambda(q)=ord_5(Norm(q)) a hodnotová grupa
+K^* je Z. Současně s=z^2 lambda, tedy v_lambda(s)=1 a v_lambda(5)=4.
+
+Z Phi_5(z)=0 plyne a=z+z^4, a^2+a=1, s^2=a−2, s^4=5a^2,
+r=s/a, a^2+s^2=−1, conjugate(a)=a, conjugate(s)=−s. Číslo a je jednotka,
+neboť a(a+1)=1. Přímé násobení pak dává
+
+  P^−1=[[1,a/s],[0,1/s]], B=sP^−1,
+  P^−1 T P=D, P^−1 S P=E=(1/s)[[a,1],[1,−a]],
+  BT=DB, BS=EB, det P=det B=s,
+  det D=det E=1, E^2=−I, D^dagger D=E^dagger E=I.
+
+P je invertibilní nad K i O[1/lambda]; nad O_(lambda) invertibilní není,
+protože jeho determinant má valuaci 1. Silnější nutná překážka se týká
+každé případné C v GL_2(O_(lambda)): pokud by C^−1 T C=D, po redukci
+by platilo Cbar^−1 [[1,1],[0,1]] Cbar=I. Násobení invertibilní Cbar by
+vynutilo [[1,1],[0,1]]=I, což je spor v F_5. Žádná integrální invertibilní
+diagonalizující báze tedy neexistuje. Toto není závěr o numerické kondici.
+
+3.2 Standardní formy a invariance
+
+Každý monom f0 má exponent x roven 1,6,11, a tudíž faktor při D roven
+z^(2i−12)=1. Pro E stačí přímá binomická identita v Q[a]/(a^2+a−1):
+
+  f0(a*x+y, x−a*y)=(625−1000a) f0(x,y)=(a−2)^6 f0(x,y).
+
+V levé straně jsou po redukci nenulové právě koeficienty x^11y, x^6y^6,
+xy^11: (625−1000a), 11(625−1000a), −(625−1000a).
+Protože s^12=(a−2)^6, je f0(E(x,y))=f0(x,y).
+
+Přímé diferenciace uvedeného f0 dávají det Hess(f0)=121H0 a
+Jac(f0,H0)=20W0, se znaménkem Jac(p,q)=p_x q_y−p_y q_x. Pro A v SL_2(K)
+platí kovariance Hessianového determinantu a Jacobianu, takže invariance
+f0 pod D,E přenáší invarianci na H0,W0. Přesný celočíselný rozvoj dává
+W0^2+H0^3=1728f0^5; lze jej ověřit jako identitu stupně 12 v X=x^5,Y=y^5:
+
+  [X^6+Y^6+522X^5Y−522XY^5−10005X^4Y^2−10005X^2Y^4]^2
+  +[−X^4−Y^4+228X^3Y−228XY^3−494X^2Y^2]^3
+  =1728XY(X^2+11XY−Y^2)^5.
+
+Takto jde o třináct přesných celočíselných koeficientových rovností.
+Rovnosti BT=DB, BS=EB nyní dokazují invarianci všech tří pullbacků pod
+sloupcovými S,T. Dělení nenulovou konstantou invarianci zachovává.
+
+3.3 Integrální koeficienty, primitivita a redukce
+
+Pro p(x,y)=sum b_m x^m y^(n−m) je koeficient u^k v^(n−k) jeho
+normalizovaného pullbacku p(su+av,v)/s^e přesně
+
+  c_k = s^(k−e) sum_{m>=k} b_m binom(m,k) a^(m−k).
+
+Redukce tímto vzorcem a a^2=1−a dává následující úplnou kompaktní tabulku.
+Neuvedená dolní polovina je určena c_(n−k)=(−1)^k c_k; tato rovnost již
+plyne z dokázané S-invariance. Pro F je n=12,e=10, pro H n=e=20 a pro
+W n=30,e=25. Každý tabulkový výraz leží v Z[a,s], podokruhu O.
+
+F:
+  k=12: 0
+  k=11: s
+  k=10: 11a
+  k= 9: (−22+11a)s
+  k= 8: 33−99a
+  k= 7: (66−66a)s
+  k= 6: −88+187a
+
+H:
+  k=20: −1
+  k=19: (4+8a)s
+  k=18: 76−38a
+  k=17: −228as
+  k=16: −969+969a
+  k=15: (−684+1824a)s
+  k=14: 4104−6612a
+  k=13: (5016−5244a)s
+  k=12: −5928+19266a
+  k=11: (−12844+6916a)s
+  k=10: 4940−27170a
+
+W:
+  k=30: (5−5a)s
+  k=29: −150+300a
+  k=28: (−1305+1740a)s
+  k=27: 16240−28420a
+  k=26: (54810−82215a)s
+  k=25: −426996+712530a
+  k=24: (−833895+1301085a)s
+  k=23: 4416120−7297560a
+  k=22: (5852925−9124560a)s
+  k=21: −21570780+35877930a
+  k=20: (−20520255+31525755a)s
+  k=19: 52306140−87883920a
+  k=18: (34787385−52656315a)s
+  k=17: −55887930+94667310a
+  k=16: (−19389690+29084535a)s
+  k=15: 0
+
+Integrality je tedy globální v O, nikoli jen lokální při lambda. Redukce
+a -> 2, s -> 0, Z -> F_5 dává přesně tři polynomy v §2. Všechny jsou
+nenulové, takže F,H,W mají valuaci 0. Násobení s^10,s^20,s^25 dává přesně
+valuace 10,20,25 pro fhat,Hhat,What; stejné násobení také zachovává
+integralitu. Tabulka je ručně auditovatelný certifikát divisibility, není
+potřeba usuzovat na dělitelnost z numerické blízkosti nule.
+
+3.4 Relace, Jacobian a normalizace
+
+Dosazení B do standardní relace dává What^2+Hhat^3=1728fhat^5. Po vydělení
+s^50 dostaneme W^2+s^10H^3=1728F^5. Řetězové pravidlo dává
+
+  Jac(fhat,Hhat)=det(B)*20What=20sWhat,
+  Jac(F,H)=20s^−4W=(4/a^2)W,
+
+tedy W=(a^2/4)Jac(F,H). Integralita W byla nezávisle doložena tabulkou.
+
+Protože B=sP^−1 a stupně jsou 12,20,30, přesně platí
+
+  f0(P^−1 v)=F/s^2, H0(P^−1 v)=H, W0(P^−1 v)=W/s^5.
+
+To jsou fK,HK,WK; mají valuace −2,0,−5 a z původní relace ihned splňují
+WK^2+HK^3=1728fK^5.
+
+Pro úplnost byly dimenze invariantních prostorů ověřeny bez enumerace
+grupy. D-invariance v sudém stupni n dovolí právě exponenty i s
+2i−n=0 modulo 5. Pro n=12,20,30 jich je 3,5,7. Matice podmínek E-invariance
+má nad K hodnosti 2,4,6, tedy jádra dimenze 1. Její (k,i) prvek je přesně
+
+  s^−n sum_l binom(i,l) binom(n−i,k−l) a^(i−l)(−a)^(k−l)
+  − delta_(i,n−k),
+
+s obvyklou nulou pro nepřípustné binomické indexy; tento vzorec též dává
+samostatně reprodukovatelný konečný lineárně algebraický důkaz. Nenulové
+f0,H0,W0 již nalezené v příslušných jádrech je tedy generují. Konjugace P
+přenáší tento závěr do označených souřadnic.
+
+Nutnou nezávislost členů relace lze doložit bez rankové domněnky: pro
+H0^3 a W0^2 mají vyhodnocení v (1,0) hodnoty −1 a 1. V (1,1) je
+f0=11, H0=−496, W0=−20008. Determinant dvou vyhodnocovacích řádků je
+−278296128=−1728*11^5, tedy nenulový. Členy jsou lineárně nezávislé nad K;
+invertibilní pullback a nenulové skaláry tuto vlastnost zachovávají pro
+H^3,W^2.
+
+Předpokládejme nyní přesně standardní koeficienty relace pro
+(f,h,t)=(cF,dH,eW), kde c,d,e patří do K^*. Srovnáním dvou nezávislých
+členů dostaneme e^2=c^5 a d^3=e^2s^10. Primitivní f a t nutí
+v_lambda(c)=v_lambda(e)=0. Druhá rovnost pak dává
+
+  3v_lambda(d)=10,
+
+což odporuje v_lambda(K^*)=Z. Tím je dokázána požadovaná nemožnost při
+koeficientech 1,1,1728. Není použito žádné rozšíření tělesa ani změna akce;
+samotnou primitivitu h tento spor ani nepotřebuje.
+
+3.5 J-bod a pozitivní invariantní Hermitova metrika
+
+J=1+z^2=az, v0=(−a,z^2). Dosazením s=z^2−z^3 dostaneme
+Bv0=(az^3,z^2)=z^2(J,1). Dále a^5=5a−3 a a^10=34−55a, tedy
+
+  f0(J,1)=J(J^10+11J^5−1)=J(a^10+11a^5−1)=0.
+
+Homogenita a s != 0 dávají F(v0)=0.
+
+Přímý součin M=(P^−1)^dagger P^−1 je [[1,a/s],[−a/s,1]]. Je Hermitův,
+trace(M)=2 a det(M)=(s^2+a^2)/s^2=−1/s^2. Unitarita D,E a konjugace
+P dávají S^dagger M S=M i T^dagger M T=M. Souřadnice
+P^−1v0=(z^2/s)(J,1) navíc poskytují
+
+  v0^dagger M v0=(−1/s^2)(1+a^2)=1.
+
+V obou archimedeovských místech má a jednu z reálných hodnot
+(−1+sqrt(5))/2, (−1−sqrt(5))/2. Obě jsou menší než 2, takže s^2=a−2<0;
+s je nenulové a čistě imaginární. Proto det(M)=−1/s^2>0 a trace(M)=2>0.
+Obě reálná vlastní čísla Hermitovy matice jsou kladná. To také přímo plyne
+z tvaru (P^−1)^dagger P^−1. Jde o explicitní pozitivní normalizaci,
+ne o nové tvrzení o obecné existenci invariantní metriky.
+
+4. HRANICE VÝSLEDKU
+
+Výsledek je algebraická souřadnicová věta a důkaz dvou ramifikačních
+překážek s pomocným přesným strojovým certifikátem na jedné architektuře.
+Neprokazuje nativní-U realizaci, výběr skalární akce mikrodynamikou,
+fyzikální trojlístek, stabilitu B=1, protonovou interpretaci ani hmotnost.
+V tomto reportu nebyl změněn ani ověřován veřejný Canon.
