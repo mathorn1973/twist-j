@@ -1,0 +1,12 @@
+C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N exact finite audit
+STATUS=NON-CANONICAL/L1/candidate-C; universal proof separate
+F1 PASS residues=16 zero_norms=1 nonzero_scalar_trace_zeros=5
+F2 PASS pairs=6561 admitted=625
+F3 PASS controls=5 exact_values=PASS
+F4 PASS fibres=3 initial_clocks=14 paired_boundaries=630
+F5 PASS cases=1280 boundaries=19200 zero_VALID_records=3
+F6 PASS cases=256 boundaries=3840
+F7 PASS initial_clocks=14 complete_cycles=14 bidirectional_steps=196
+PAIR_SHA256=813ea392db9eb4e42e6c2cc205f56b224699e37673d7a8c8fdef155513e3947b
+PROGRAM_SHA256=ee8cdbe56ab01b745092d8fd700739f546120c35c3369b696b215101788f30e7
+RESULT=PASS groups=7; no physical or public-status promotion

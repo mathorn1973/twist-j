@@ -1,0 +1,20 @@
+{
+  "source_pin": "8199bb6297178ebeb001820d51b1a3882796ba29",
+  "target_head": "26731e2bd7f1394b4d274528525e6d78cbe6bbf9",
+  "command": [
+    "python3",
+    "-u",
+    "review_1871/review.py",
+    "--dump-data",
+    "review_1871/review-dump.json"
+  ],
+  "started_utc": "2026-11-03T07:28:05.229947+00:00",
+  "platform": "Linux",
+  "architecture": "x86_64",
+  "python": "3.12.14",
+  "elapsed_seconds_engineering": 2.108806592000292,
+  "exit_code": 0,
+  "stdout_bytes": 1906,
+  "stdout_sha256": "f98d6735fd07808fe3446fa7ca33ded877fa928537fb44bf672a3b3a6b443cb0",
+  "stderr_bytes": 0
+}
