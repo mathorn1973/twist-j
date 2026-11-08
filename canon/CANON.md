@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v109
+# TWIST-J Public Canon v110
 
-**Release identity.** Public Canon v109. Normative authority and activation
+**Release identity.** Public Canon v110. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -15164,6 +15164,393 @@ finite carrier, synthesize the admitted inputs, choose a schedule
 autonomously, compile the supplied swaps into contacts, or realize native U
 or a physical apparatus. The relative-contact and native receiver/carry
 carriers retain their separate contracts.
+
+### A finite height input compiled to a retained clock phase
+
+**RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER [T].** at L1 on the supplied integral contact carrier O^15, O=Z[j], rho=j^2, lambda=1-j, B=1-rho and J=1+rho, one explicit fixed 95-contact word with seven common stock coordinates Z takes (G_t,J,-J,Z) to (G_t,rho^(t+2)J,-rho^(t+2)J,Z) for every t in {-2,-1,0,1,2}, where G_t=(lambda+tB,lambda-tB,0,0,1+j-2j^3,2); every non-clock coordinate returns exactly, the common stock has Q=80, Hermitian account 33+14phi and sum (-4,-10,-6,-10), and the literal 380-contact inverse restores the entire initial state; all primitive sum, Hermitian, positive half-trace and labelled-residue invariants hold; the preparation, seven stock values and schedule are supplied, no word or stock minimum or classification of success at other individual integers is asserted, and no autonomous control, native-U realization or physical interpretation follows
+
+Use the total contact of RELATIVE-CONTACT-INTEGRAL-LAW on marked slots.
+To distinguish the height coordinate from the earlier contact notation,
+write
+
+```text
+lambda=1-j, B=1-rho, J=1+rho, X=1+j-2j^3, rho=j^2,
+phi=-j^2-j^3, phi^2=phi+1.
+```
+
+Here the earlier read core's u and w are B and J respectively. For
+h(z)=z conjugate(z)=a+b phi, the positive half-trace is Q(z)=2a+b.
+Coordinates below use the basis (1,j,j^2,j^3). All word products are
+chronological, acting left to right; addresses are zero based.
+
+The complete input before adding stock is
+
+```text
+I_t=(lambda+tB,lambda-tB,0,0,X,2,J,-J),
+t in {-2,-1,0,1,2}.
+```
+
+Slots 0..5 form G_t, and 6,7 are the common clock seed. Define the fixed
+stock in slots 8..14 by
+
+```text
+a_1=lambda, a_2=lambda-JB, a_3=lambda-B,
+x_-2=lambda-JB, x_-1=lambda-B, x_0=lambda,
+x_1=lambda+rho B, x_2=lambda+rho JB,
+d_s=-B x_s/J, s=-1,0,1,2,
+Z=(a_1,a_2,a_3,d_-1,d_0,d_1,d_2).
+```
+
+All references are integral: J^-1=-rho-rho^3, since multiplying by
+1+rho and using Phi_5(rho)=0 gives one. There is no choice of a reference
+or a contact edge after learning the actual height.
+
+#### The full stock and three parity separators
+
+| Slot | Value | Hermitian square | Q |
+| --- | --- | --- | ---: |
+| 8 | (1,-1,0,0) | 3-phi | 5 |
+| 9 | (-1,-2,-1,-1) | 2+phi | 5 |
+| 10 | (0,-1,1,0) | 3-phi | 5 |
+| 11 | (-2,-3,-3,-2) | 5+5phi | 15 |
+| 12 | (1,1,0,-2) | 5+5phi | 15 |
+| 13 | (-2,-2,0,-1) | 5 | 10 |
+| 14 | (-1,-2,-3,-4) | 10+5phi | 25 |
+
+Indeed -B/J=1+2j+2j^2 gives the last four coordinates directly.
+The identities h(B/J)=3+4phi,
+h(x_-1)=h(x_0)=3-phi, h(x_1)=7-4phi and
+h(x_2)=10-5phi give their Hermitian squares. In particular
+x_2=(1-j)^2. Summing the seven entries proves
+
+```text
+Q(Z)=80, H(Z)=33+14phi, Sigma(Z)=(-4,-10,-6,-10).
+```
+
+Modulo 2O the ring is F16: Phi_5 has no F2 root and is not divisible by
+the only irreducible quadratic T^2+T+1. The image of rho has order five,
+so B and J are nonzero units. Apply
+
+```text
+P=C(0,8) C(0,9) C(0,10).
+```
+
+Initially x=lambda+tB at slot 0 has parity lambda for even t and
+lambda+B for odd t. C(0,8), with reference lambda, admits exactly the
+even heights and gives x=lambda+(t/2)JB. C(0,9), with reference
+lambda-JB, admits exactly t=-2,2. It fixes x_-2 and sends the positive
+height to lambda-JB+J^2B=lambda+rho JB. Finally C(0,10), with reference
+lambda-B, admits exactly t=-1,1. It fixes x_-1 and sends the positive
+height to lambda-B+JB=lambda+rho B.
+
+The five resulting values are exactly the displayed x_t, with parities
+
+```text
+t=-2: 1+j^2+j^3
+t=-1: j+j^2
+t= 0: 1+j
+t= 1: j^3
+t= 2: 1+j^2.
+```
+
+They are distinct and nonzero. Before the second contact the two extreme
+even heights share 1+j^2+j^3, distinct from the zero and odd classes.
+Before the third contact the two odd heights still share j+j^2, distinct
+from all completed even classes. These identities prove every guard in P.
+The three reference slots may change with t during preprocessing; their
+actual states are kept and later reversed, not reset.
+
+#### A marker for exactly one member of the finite family
+
+Let g be original slot 5, initially 2. Reference d_s occupies slot 12+s.
+Define
+
+```text
+M_s=C(0,12+s) C(12+s,5), s=-1,0,1,2.
+```
+
+Since B=J modulo 2O, d_s has the same nonzero parity as x_s.
+For t different from s the first contact refuses, and the second also
+refuses because d_s is odd and g=2 is even. For t=s the second output
+of the first contact is
+
+```text
+(B x_s+J d_s)/2=0.
+```
+
+The first output is x_s+d_s. The next contact takes (0,2) at (d_s,g)
+to (B,J). Thus g is J precisely for the selected member, and remains 2
+on the other four. If a subsequent word leaves x,d_s unchanged and
+restores g, the exact inverse
+M_s^-1=C(12+s,5)^4 C(0,12+s)^4 restores all marker coordinates.
+
+#### A controlled writer preserving every inactive clock phase
+
+Put E=C(5,7), T=C(6,7), and, for p=1,2,3,4, set
+
+```text
+V_p=E T^(5-p) E^4 T^p.
+```
+
+This has ten contacts. If g=J and the clock is (J,-J), E produces
+(g,clock_minus)=(rho J,-rho J), while clock_plus remains J.
+T then refuses, since its clock difference is J+rho J=J^2, nonzero
+modulo 2O. All 5-p attempts refuse. E^4 restores g=J and the phase-zero
+clock, then T^p writes (rho^p J,-rho^p J).
+
+If g=2 and the clock is (rho^r J,-rho^r J) for any r, E refuses.
+After T^(5-p), E^4 still refuses because every clock phase is nonzero
+modulo 2O. The final T^p completes five rotations and restores that
+entire clock pair. The gate remains 2. The inactive action therefore
+preserves already written phases, not just the initial seed.
+
+#### One word, complete endpoint, and inverse
+
+The common compiler is
+
+```text
+A=P [product_(s=-1,0,1,2) M_s V_(s+2) M_s^-1] P^-1.
+```
+
+At each marker boundary x retains its preprocessed value, g=2 and the
+marker references retain their preparation. For actual t=s, all earlier
+markers were inactive, so the clock is still at phase zero. The active
+writer's hypothesis is therefore satisfied; it writes s+2, restores g,
+and permits marker uncomputation. Every later marker is inactive and
+preserves the written phase. Height -2 is never selected and retains
+phase zero. Finally P^-1 restores the actual four-slot preprocessing
+state; it has no clock support. This proves the complete identity
+
+```text
+A(G_t,J,-J,Z)=(G_t,rho^(t+2)J,-rho^(t+2)J,Z).
+```
+
+P and its unreduced inverse contribute 3+12 contacts, and each marker,
+writer and inverse contributes 2+10+8. Hence |A|=95 and its unreduced
+literal inverse has 380 contacts. The full initial account is
+119+10t^2 and its Hermitian account is
+52+15phi+(4+2phi)t^2. Every primitive preserves all complete invariants.
+Restoring a reference does not remove its supplied initial account.
+
+The construction concerns these five prepared heights and supplied
+constants. It asserts neither shortest length nor least stock, nor
+success or failure at each other individual integer. It derives no
+physical preparation mechanism, clock calibration or autonomous schedule.
+
+### A finite apparatus accepting prepared height inputs
+
+**RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS [T].** at L1 for every k>=1 fixed before choosing inputs, one supplied contact/SWAP program on 39+25k slots processes all 10^k sequences (n_i,t_i) in ({0,1} times {-2,-1,0,1,2})^k, with independently supplied Y_(n_i) and prepared height pairs, through the same source, translated clock and read core; each A U_i A^-1 cycle restores the complete translator and work core, keeps two fresh-target archive records and parks every earlier raw input through five fixed reload swaps; the 2k current archive banks alone decode the ordered input tuple and every completed archive is untouched during the remaining forward program; common auxiliaries number 39+20k with account 177+60k, the total account is 177+78k+10 sum_i t_i^2, H=70+37phi+k(30+18phi)+(4+2phi)sum_i t_i^2 and sum=(1+4k,-9-2k,-6,-12); forward counts are 27345k contacts and 5(k-1) swaps, and the unreduced inverse has 109380k contacts and the same swaps and restores all initial coordinates while removing the records; the result is finite-k induction with supplied prepared inputs and growing archives, not input synthesis, arbitrary post-start loading, occupied-archive regeneration, unlimited history on one finite carrier, autonomous scheduling, contact-only swap compilation, native-U realization or physical interpretation
+
+Use the compiler just proved and the complete cycle of
+RELATIVE-CONTACT-FINITE-WORKBANK-REUSE. Retain its contact notation and
+bank code, with the explicit translations u=B and w=J. Write
+b=1+rho^2, M_empty=(-b,b)^5, and M[p] for the bank whose p-th pair is
+(-rho b,rho b) and whose other four pairs are fresh. Define
+
+```text
+Y_0=(0,2,0), Y_1=(B,J,0),
+X_r=(rho^r J,-rho^r J),
+I(n,r)=(Y_n,X_r,0,B,0,0,J,0,M_empty,M_empty).
+```
+
+The established 26870-contact cycle U(a,d) has the exact identity
+
+```text
+U(a,d)(I(n,r),M_empty,M_empty)
+  =(I(n,r),M[-r],M[-r-Delta_n]),
+Delta_0=1, Delta_1=8,
+```
+
+with its two archive banks based at a,d. It writes with the canonical
+535-contact block-defined step, copies both actual records, then reverses
+the read word. It restores all 31 core coordinates and touches no other
+coordinates. Its exact proof therefore applies with any retained occupied
+translator state, older archives and queued inputs as an untouched
+complement. Equality of two labels or two scalar accounts would not suffice.
+
+#### Complete preparation and address layout
+
+Fix k>=1 before choosing values (n_i,t_i). Every n_i is independently
+chosen in {0,1}, and every t_i in {-2,-1,0,1,2}; this is a Cartesian
+domain with no statistical-independence assertion. All inputs are present
+at initialization. Allocate
+
+```text
+old core:            0..30, initially I(n_0,0);
+current G_t:         31..36, initially G_(t_0);
+shared stock Z:      37..43;
+archive A_i:         base 44+20i, i=0..k-1;
+archive B_i:         base 54+20i, i=0..k-1;
+queued input i:      base 44+20k+5(i-1), i=1..k-1.
+```
+
+Each queue compartment contains the three source coordinates Y_(n_i)
+and two raw height coordinates (lambda+t_i B,lambda-t_i B). All archives
+are M_empty. The four constant G-tail coordinates, the stock Z, clock
+seed, old controls and work banks have one common initial state for all
+10^k inputs.
+
+Embed the compiler's fifteen local addresses, in order, as
+
+```text
+(31,32,33,34,35,36,3,4,37,38,39,40,41,42,43).
+```
+
+It has no source, work-bank or archive support. Put
+U_i=U(44+20i,54+20i), and let the complete stage be
+L_i=A U_i A^-1. Between stages i-1 and i, the five fixed transpositions
+Pi_i exchange (0,1,2,31,32), in that order, with queued input i.
+The common chronological program is
+
+```text
+P_k=L_0 Pi_1 L_1 Pi_2 L_2 ... Pi_(k-1) L_(k-1).
+```
+
+Its address schedule depends only on k and never on any input value.
+
+#### Exact cycle and occupied-state induction
+
+A prepares X_(t_i+2), restoring G_(t_i) and Z. The old core is thus
+exactly I(n_i,t_i+2). U_i receives this core and two fresh archive
+targets, writes their two records and restores the complete core.
+The input to A^-1 is exactly A's full output on all fifteen addressed
+coordinates, including the translated clock. A^-1 restores the common
+clock seed, current G_(t_i), and Z. The archives lie outside its support.
+
+Inductively, just after L_i the full state consists of:
+
+- core I(n_i,0), with fresh work banks and ready controls;
+- current G_(t_i) at 31..36 and the original stock Z at 37..43;
+- archives A_j,B_j equal to M[-r_j],M[-r_j-Delta_(n_j)] for j<=i,
+  where r_j=t_j+2;
+- fresh archives for j>i;
+- queue compartment j, 1<=j<=i, containing the actual restored input
+  (Y_(n_(j-1)),lambda+t_(j-1)B,lambda-t_(j-1)B);
+- untouched initial queued inputs for j>i.
+
+The cycle identity proves the base case. Pi_(i+1) exchanges only the
+current source and raw height pair with the next input, keeping the
+common G-tail, clock seed, stock, controls, work banks and all archives
+unchanged. The next cycle therefore meets the same proved hypotheses on
+its actual occupied carrier. This proves the induction for every finite
+k and every admitted input tuple.
+
+Once an archive's own copy word completes, no later primitive addresses
+it during the forward program. This is exact preservation of its current
+coordinates and original addresses. Work banks are uncomputed; retained
+archive banks are not made fresh. Reversing the entire mixed word,
+replacing each C by C^4 and each SWAP by itself, restores every initial
+coordinate and removes the archives. Forward retention is not claimed
+during that inverse.
+
+#### Full accounts and archive-only decoding
+
+There are 44+20k+5(k-1)=39+25k slots. The designated 5k input slots
+contribute, per input,
+
+```text
+Q=18+10t_i^2,
+H=10-2phi+(4+2phi)t_i^2,
+Sigma=2+2lambda.
+```
+
+The common old auxiliaries, clock seed, G-tail and Z have Q=177,
+H=70+37phi, and sum (1,-9,-6,-12). Every pair of archive banks
+contributes Q=60, H=20+20phi and sum zero. Thus
+
+```text
+common auxiliary slots =39+20k,
+common auxiliary Q=177+60k,
+Q_total=177+78k+10 sum_i t_i^2,
+H_total=70+37phi+k(30+18phi)+(4+2phi)sum_i t_i^2,
+Sigma_total=(1+4k,-9-2k,-6,-12).
+```
+
+The auxiliary state is common even though different input tuples can
+have different total account. All source, parked input, work, stock and
+archive coordinates remain included. Contacts preserve the full
+invariants. Each reload exchanges corresponding source residues
+(0,2,0) and height residues (0,0), so even these supplied swaps preserve
+the labelled residue vector on the admitted family.
+
+Each L_i has 95+26870+380=27345 contacts. P_k therefore has
+27345k contacts and 5(k-1) swaps. Its unreduced inverse has 109380k
+contacts and the same swaps. These are lengths of the displayed words,
+not minima or physical time units.
+
+A reader uses only the current 2k archive banks. It rejects any bank
+not equal to one of the five M[p], including an empty bank. For one pair
+of labels (a,a'), set d=a-a' modulo five and decode
+
+```text
+n=0 if d=1; n=1 if d=3; otherwise INVALID,
+r=(-a mod 5) in {0,1,2,3,4},
+t=r-2 in {-2,-1,0,1,2}.
+```
+
+This recovers every ordered input pair without consulting the initial
+labels, current core, parked inputs, execution counter or trajectory.
+The archive map is injective on all 10^k preparations. The universal
+statement follows from the exact local identities and occupied-state
+induction; finite replay cases audit only their declared finite instances.
+
+The inputs Y_n and G_t are already prepared. No raw-input or thermal
+bootstrap, input stream arriving after initialization, regeneration of
+retained occupied archives, indefinite operation with unbounded history
+on one finite carrier, autonomous program source, contact-only reload
+compiler, native-U realization or physical event law is supplied.
+
+### The all-integer boundary of a finite phase compiler
+
+**RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION [T].** at L1, for every finite m, affine all-integer preparation A+tD in O^m with arbitrary finite common stock included, and finite fixed word of total integral contacts and whole-slot SWAPs, the integer domain admits a finite partition into dyadic cylinders on each of which the full output is affine in its integer parameter; any designated output coordinate whose positive half-trace account is bounded for all t is constant on each cylinder and hence dyadic-periodic; therefore no such word produces the exact output rho^(t+c)J for every integer t, for any fixed integer c, even with unrestricted retained remainder coordinates; this excludes the stated all-integer finite-word class only and neither obstructs the five-height compiler nor classifies its success at other individual integers, nonlinear input preparation or unbounded programs
+
+The successful finite compiler does not extend the same target equation
+to the entire affine integer line. Let the complete preparation be
+A+tD in O^m for every t in Z, with m finite. This includes any finite
+common stock by assigning zero slope to its coordinates. Allow any finite
+fixed word of the total contacts and whole-slot SWAPs. Remainder
+coordinates are unrestricted and retained.
+
+For a cylinder t=r+2^e n, suppose the current state is affine in n with
+integral constant and slope. A contact difference has form a+n b.
+Modulo 2O its admission depends only on the parity of n. Either both
+parities admit, both refuse, or exactly one admits. In the last case
+replace the cylinder by the disjoint children n=2q and n=2q+1. After
+this substitution each child is uniform. On an admitted child the
+constant and slope of both sum and difference numerators are even, so
+the accepted formula remains an integral affine map. Refusal is the
+identity; SWAP is linear and creates no split.
+
+Induction on a word with L contacts gives a finite exact partition of Z
+into cylinders t=r+2^e n with e<=L, on each of which every output is
+affine in n. The statement is mathematical and does not depend on
+actually enumerating the partition.
+
+For a designated coordinate a+n b, the positive half-trace has form
+
+```text
+Q(a+n b)=Q(a)+2n g(a,b)+n^2 Q(b),
+```
+
+where g is the rational polarization of Q. If this account is bounded
+for all integers n, the quadratic coefficient vanishes. Positive
+definiteness forces b=0, so the output is constant on that cylinder.
+Choosing the maximum exponent K among the finitely many cylinders
+shows that every globally bounded output is periodic with period 2^K:
+adding 2^K stays in the same cylinder.
+
+For the proposed output rho^(t+c)J the account is constantly Q(J)=3.
+But on every cylinder the step 2^e is invertible modulo five, so t+c
+visits all five residues and the five values rho^a J are distinct.
+This contradicts constancy on that cylinder. Equivalently a
+nonconstant five-periodic output cannot also have power-of-two period.
+
+This excludes precisely the all-integer affine-input finite-word class,
+with arbitrary finite common stock and arbitrary retained outputs.
+It does not exclude a finite five-input converter, nonlinear input
+encoding, unbounded iteration, or an externally selected program. It
+also does not assert that the displayed finite compiler fails at every
+individual integer outside its declared five-input domain.
 
 ### First-tick transfer and the current trace boundary
 

@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v109. Normative authority and activation
+**Release identity:** Public Canon v110. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v109 also declares a discrete architecture. It does not
+Public Canon v110 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -76,6 +76,20 @@ It uses 26+25k slots, conserved account 68+74k and 2k fresh archive banks.
 One fixed program handles all 10^k prepared input tuples. The archives alone
 decode the history; exact reversal removes it. Working-bank restoration
 therefore coexists with finite retained-storage consumption.
+
+RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER [T] translates five supplied integer
+heights into the exact clock phases with one 95-contact word, returning all
+seven stock coordinates. RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS
+[T] joins that translator to the restored read core for every fixed finite
+horizon k. It accepts independently supplied source messages and heights,
+uses 39+25k slots and two fresh archive banks per input, and decodes the
+ordered history from the retained archives alone. The total positive account
+is 177+78k+10 sum_i t_i^2. RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION
+[T] excludes extension to all integer heights by any finite fixed
+contact/SWAP word on an affine input family with finite common stock.
+Preparation, scheduling and fresh retained storage remain supplied; these
+results do not identify the contact carrier with the native update or close
+physical preparation and autonomous operation.
 
 The separate U-CARRY-MIRROR-FINITE-CIRCUIT [C] uses the actual native first
 receiver, a supplied affine transfer and reversible carry routing on 62 F5
@@ -523,6 +537,9 @@ The stable orientation claims are generated from the registry:
 - RELATIVE-CONTACT-RHYTHM-CLASSIFICATION [T]: at L1 on O^3, O=Z[j], rho=j^2, with the supplied total integral relative contact and fixed tick F(x)=C23(C12(x)) acting left first, every trajectory is a cycle; doubling has first even return time 1+4r and changes least period/refusal totals by (P,R)->(P+4R,4R); the simultaneous-parity section is reached within at most eight ticks unless the complete primitive one- or five-cycle is recognized, and eight is sharp; with finite maximal common difference depth d and A_d=(4^(d+1)-1)/3, every nondiagonal cycle has exactly one primitive type with (P,R)=(A_d,4^d),(2A_d-1,2*4^d),or(5A_d,5*4^d), all attained; the fully diagonal case has (P,R,M)=(1,0,0) and infinite depth; the schedule and arithmetic carrier are supplied
 - RELATIVE-CONTACT-FINITE-WORKBANK-REUSE [T]: at L1, for every k>=1 fixed in advance, one supplied contact/SWAP word P_k on 26+25k slots accepts all 10^k tuples from ({0,1} times Z/5)^k with one common preparation of the 26+20k auxiliary slots; each cycle writes two records, copies them to fresh archive banks and reverses the complete 31-slot work core, restoring the same work-bank addresses and the current prepared source and clock; fixed swaps load prequeued inputs and retain all actual earlier inputs, the 2k archive banks alone decode the ordered input tuple, and each completed archive is untouched through the remainder of the forward P_k; total account is 68+74k, auxiliary account 68+60k and ring sum 2(k+1); P_k has 26870k contacts and 5(k-1) swaps, and its unreduced inverse has 107480k contacts and 5(k-1) swaps and restores every initial coordinate while removing the records; B five-valued marked banks alone require 5^B>=10^k, so 2k is a construction upper bound and not a storage minimum; no one finite carrier retaining unlimited history, occupied-archive regeneration, post-start external loading, autonomous schedule, contact-only swap compilation, native-U realization or physical interpretation follows
 - U-CARRY-MIRROR-FINITE-CIRCUIT [C]: At L1 the hash-bound discrete compiler witness in P-NATIVE-RECEIVER-CARRY-MIRROR-1 expands into 40348 SUM/EQ/MUL/SHIFT/REFLECT/SCALE primitives on 50 compiler cells, including 48 clean work cells; its literal reversed and primitive-inverted word realizes I on every two-digit input. The finite audit checks all 25 inputs in each direction, an untouched archive sentinel and five marked mirrors with complete undo. On the declared 62-cell carrier, only four primary pistons vary and 58 other initial cells are common; all 500 admitted s!=0 preparations execute the actual primary origin tick, live receiver shear, forward word, secondary SUM and origin tick, carry/archive swap, literal inverse word and inverse shear. Complete endpoints restore the primary post-tick checkpoint, retain high=s and archive=3s and the full secondary output at a=2s, and restore all 48 work cells at both multiplier boundaries. Each input uses 80705 primitives and two supplied native ticks, with four boundary classes of 125. The 62 count excludes the supplied origins and program control; no pulse execution, circuit minimum, extra carry coefficient, native global inverse, autonomous controller, contact-bank bridge or archive regeneration is established.
+- RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER [T]: at L1 on the supplied integral contact carrier O^15, O=Z[j], rho=j^2, lambda=1-j, B=1-rho and J=1+rho, one explicit fixed 95-contact word with seven common stock coordinates Z takes (G_t,J,-J,Z) to (G_t,rho^(t+2)J,-rho^(t+2)J,Z) for every t in {-2,-1,0,1,2}, where G_t=(lambda+tB,lambda-tB,0,0,1+j-2j^3,2); every non-clock coordinate returns exactly, the common stock has Q=80, Hermitian account 33+14phi and sum (-4,-10,-6,-10), and the literal 380-contact inverse restores the entire initial state; all primitive sum, Hermitian, positive half-trace and labelled-residue invariants hold; the preparation, seven stock values and schedule are supplied, no word or stock minimum or classification of success at other individual integers is asserted, and no autonomous control, native-U realization or physical interpretation follows
+- RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS [T]: at L1 for every k>=1 fixed before choosing inputs, one supplied contact/SWAP program on 39+25k slots processes all 10^k sequences (n_i,t_i) in ({0,1} times {-2,-1,0,1,2})^k, with independently supplied Y_(n_i) and prepared height pairs, through the same source, translated clock and read core; each A U_i A^-1 cycle restores the complete translator and work core, keeps two fresh-target archive records and parks every earlier raw input through five fixed reload swaps; the 2k current archive banks alone decode the ordered input tuple and every completed archive is untouched during the remaining forward program; common auxiliaries number 39+20k with account 177+60k, the total account is 177+78k+10 sum_i t_i^2, H=70+37phi+k(30+18phi)+(4+2phi)sum_i t_i^2 and sum=(1+4k,-9-2k,-6,-12); forward counts are 27345k contacts and 5(k-1) swaps, and the unreduced inverse has 109380k contacts and the same swaps and restores all initial coordinates while removing the records; the result is finite-k induction with supplied prepared inputs and growing archives, not input synthesis, arbitrary post-start loading, occupied-archive regeneration, unlimited history on one finite carrier, autonomous scheduling, contact-only swap compilation, native-U realization or physical interpretation
+- RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION [T]: at L1, for every finite m, affine all-integer preparation A+tD in O^m with arbitrary finite common stock included, and finite fixed word of total integral contacts and whole-slot SWAPs, the integer domain admits a finite partition into dyadic cylinders on each of which the full output is affine in its integer parameter; any designated output coordinate whose positive half-trace account is bounded for all t is constant on each cylinder and hence dyadic-periodic; therefore no such word produces the exact output rho^(t+c)J for every integer t, for any fixed integer c, even with unrestricted retained remainder coordinates; this excludes the stated all-integer finite-word class only and neither obstructs the five-height compiler nor classifies its success at other individual integers, nonlinear input preparation or unbounded programs
 
 <!-- END GENERATED CORE CLAIMS -->
 Time is a counter. Space is read through commutators. The modulus and
