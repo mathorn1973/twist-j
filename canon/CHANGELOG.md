@@ -1,11 +1,71 @@
 # Canon changelog (public series)
 
-## Public Canon v107
+## Public Canon v109
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 598 claims; 0 T-LOCK, 454 T, 59 D, 39 C, 2 H, 25 O, 19 F; 27 live H/O.
+Registry snapshot: 609 claims; 0 T-LOCK, 465 T, 59 D, 40 C, 2 H, 24 O, 19 F; 26 live H/O.
 Reproduction witnesses: 38.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Add three L1 workbank theorems: the explicit 60-contact positional-bank
+copier, the four-place literal-copy obstruction, and complete restoration
+of the same work core for every prescribed finite number of inputs.
+The program uses two fresh permanent archives per input; it restores source,
+clock, controls and working banks while retaining every earlier input and
+record. The archive reader recovers all 10^k histories. Constant account is
+68+74k on 26+25k slots; the exhaustive three-input instance uses 101 slots,
+account 290 and six archives. Finite-k induction supplies the general proof.
+
+Add three separate native/carry theorems: the actual first-tick affine
+transfer with its current-trace obstruction, exact marked integral carry
+pairing with the occupied four-register involution, and the next carry
+coefficient distinguishing two specified multipliers. Add the 62-register,
+500-input primitive realization as a finite C result. Its inverse multiplier
+is the literal reversed forward word; its native updates are not globally
+inverted. Character relations share the fact chi(2)=-1; agreement of signed
+readers is a declared convention. The extra carry coefficient is not an
+output of the two-digit circuit.
+
+All 602 prior claims retain their exact scopes and statuses. No gate or
+live H/O owner closes. The contact and native carriers keep separate laws
+and interfaces. Autonomous next-input choice, regeneration of retained
+archives, unlimited finite-carrier operation and physical interpretation
+remain outside these results. The reproduction inventory remains 38, and
+the structural audit preserves all 208 preceding guards and their exact
+historical inputs. The two scientific probe sources remain unchanged.
+
+## Public Canon v108
+
+Registry snapshot: 602 claims; 0 T-LOCK, 459 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
+Reproduction witnesses: 38.
+
+Close the existing common-apparatus owner O -> T with one complete finite L1
+construction on 56 slots. One fixed contact/permutation program processes
+all 100 ordered pairs from the ten-input prepared family through the same
+read core. Four current archive banks distinguish both inputs; the first
+records keep their original addresses throughout reload and the second
+experiment. All changing sources, controls and memory remain in the account.
+The auxiliary preparation is 128 and the complete trace account 156. This
+is funded reuse for two experiments, with supplied prepared inputs and five
+whole-slot transpositions. Exact reversal removes the records.
+
+Adopt four independently reviewed general arithmetic theorems: complete
+three-slot rhythm classification, sharp relative-account bounds, an unresolved
+fivefold phase with explicit indistinguishable restricted readings, and a
+sufficient injectivity bound for coefficient readings. The proofs are inline;
+finite shell censuses and numerical minimum-modulus searches are not promoted.
+
+The stable common-apparatus identifier is retained after its positive decision.
+The other 597 prior claims and all other live owners retain their statuses and
+scopes. No layer gate is added or closed. QDD-INSTRUMENT-APPARATUS and
+QUADRATIC-MEMORY-NATIVE-CONTACT remain open. The reproduction inventory stays
+38; the status-separation audit reconstructs every earlier snapshot exactly.
+Source probes, accepted reviews and their evidence bytes are unchanged.
+
+## Public Canon v107
+
+Registry snapshot: 598 claims; 0 T-LOCK, 454 T, 59 D, 39 C, 2 H, 25 O, 19 F; 27 live H/O.
+Reproduction witnesses: 38.
 
 Adopt four reviewed conditional L1 theorems about the supplied integral
 relative contact: its total conservative law, sharp known-input preparation
