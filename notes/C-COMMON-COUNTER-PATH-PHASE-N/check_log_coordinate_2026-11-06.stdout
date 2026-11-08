@@ -1,0 +1,4 @@
+PASS sigma_a(l) = a*l in O/5 for a = 1..4
+PASS 1, l, l^2, l^3 is a basis of O/5
+PASS coefficient formula; d*conj(d) = d0^2 + (2 d0 d2 - d1^2) l^2 modulo 5
+PASS d0^2, d1^2 and d0*d2 are combinations of coefficients of d^2 and d*sigma_2(d)

@@ -1,0 +1,211 @@
+{
+  "status": "PASS",
+  "arithmetic": "integer only",
+  "fully_enumerated_orbits": 1347,
+  "fully_enumerated_states": 23359,
+  "observed_periods": [
+    1,
+    5,
+    9,
+    21,
+    25,
+    41,
+    85,
+    105,
+    169,
+    341,
+    425,
+    681,
+    1365,
+    1705,
+    2729,
+    6825
+  ],
+  "maximum_verified_period": 6825,
+  "maximum_descent_phase_search": 8,
+  "base_types": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      5,
+      5
+    ]
+  ],
+  "relative_descent_matches_centered_descent": true,
+  "class_specific_M_bounds_and_global_period_bound_checked": 1338,
+  "sharp_minimum_cases_checked": 18
+}
+{
+  "kind": "five_cycle",
+  "depth": 1,
+  "P": 25,
+  "R": 20,
+  "base_P": 5,
+  "base_R": 5,
+  "base_start": [
+    [
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      -3,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "deep_states": 5,
+  "deep_gap": 5,
+  "descent_ticks": [
+    0,
+    5
+  ],
+  "start": [
+    [
+      4,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0
+    ]
+  ],
+  "E": 40,
+  "S": [
+    6,
+    0,
+    0,
+    0
+  ],
+  "deep_indicator_word": "1000010000100001000010000",
+  "deep_states_full": [
+    [
+      [
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        2,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        -2,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        -2,
+        -2,
+        -2
+      ],
+      [
+        4,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        2,
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        -2,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        0,
+        -2
+      ],
+      [
+        2,
+        0,
+        0,
+        0
+      ]
+    ]
+  ]
+}

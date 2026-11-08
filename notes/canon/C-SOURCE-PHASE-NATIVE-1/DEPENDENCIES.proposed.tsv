@@ -1,0 +1,18 @@
+item_id	depends_on	relation	basis
+GOLDEN-CLIFFORD-COIN-IDENTITY	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+COHERENT-W-SPATIAL-CLIFFORD-PROPAGATION	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+COHERENT-W-LOCALIZED-RING-CLOSURE	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+COHERENT-W-LOCAL-NATIVE-NETWORK	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+COHERENT-W-NATIVE-FROBENIUS-PROPAGATION	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+INTEGER-W-SPECTRAL-ENERGY-PULLBACK	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+COHERENT-W-SPATIAL-CLIFFORD-PROPAGATION	GOLDEN-CLIFFORD-COIN-IDENTITY	REQUIRES	The exact normalized coin and ordered matrix identities are used.
+COHERENT-W-LOCALIZED-RING-CLOSURE	GOLDEN-CLIFFORD-COIN-IDENTITY	REQUIRES	The numerator has Hermitian Gram matrix 5I.
+COHERENT-W-LOCAL-NATIVE-NETWORK	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	The unchanged native U has the displayed synchronized chart and chart transport; explicit initial antecedents are included in the new proof.
+COHERENT-W-NATIVE-FROBENIUS-PROPAGATION	COHERENT-W-LOCAL-NATIVE-NETWORK	REQUIRES	The exact residual rule B=4Adj, preparation and microscopic clock are the inputs.
+COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR	GOLDEN-CLIFFORD-COIN-IDENTITY	REQUIRES	The full stationary scattering phase is c=(1+2i)/sqrt(5).
+COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR	COHERENT-W-LOCALIZED-RING-CLOSURE	REQUIRES	The localized module and two-sided contact-walk identities are fixed.
+COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR	COHERENT-W-LOCAL-NATIVE-NETWORK	REQUIRES	The same clock-tagged target network and native-chart preparation are used with rho_3.
+INTEGER-W-SPECTRAL-ENERGY-PULLBACK	COHERENT-W-LOCALIZED-RING-CLOSURE	REQUIRES	The raw-to-unitary identity A=5W and nonzero invariant domain are fixed.
+INTEGER-W-SPECTRAL-ENERGY-PULLBACK	COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR	REQUIRES	The retained-phase extension uses A_LC=25c^2W.
+INTEGER-W-SPECTRAL-ENERGY-PULLBACK	CONTACT-W-SPECTRAL-READING	REQUIRES	The specified bounded self-adjoint logarithm H and 0<=H+alpha I<=2pi I are the exact public spectral premise.
