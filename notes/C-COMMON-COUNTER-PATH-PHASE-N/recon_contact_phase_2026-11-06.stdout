@@ -1,0 +1,35 @@
+PASS K1 WORD.txt custody
+RUN w     t=-2 adm=137 ref=185 chg=135 dia=2 N6=40 S=1330 sumA=530 sumB=270  mod5: chg=0 adm=2 N6=0 S=0 A=0 B=0
+RUN w     t=-1 adm=177 ref=145 chg=170 dia=7 N6=65 S=655 sumA=275 sumB=105  mod5: chg=0 adm=2 N6=0 S=0 A=0 B=0
+RUN w     t=+0 adm=112 ref=210 chg=100 dia=12 N6=40 S=380 sumA=160 sumB=60  mod5: chg=0 adm=2 N6=0 S=0 A=0 B=0
+RUN w     t=+1 adm=177 ref=145 chg=170 dia=7 N6=65 S=655 sumA=275 sumB=105  mod5: chg=0 adm=2 N6=0 S=0 A=0 B=0
+RUN w     t=+2 adm=123 ref=199 chg=123 dia=0 N6=40 S=1155 sumA=460 sumB=235  mod5: chg=3 adm=3 N6=0 S=0 A=0 B=0
+RUN sigma t=-2 adm=123 ref=199 chg=123 dia=0 N6=40 S=1155 sumA=460 sumB=235  mod5: chg=3 adm=3 N6=0 S=0 A=0 B=0
+RUN sigma t=-1 adm=177 ref=145 chg=170 dia=7 N6=65 S=655 sumA=275 sumB=105  mod5: chg=0 adm=2 N6=0 S=0 A=0 B=0
+RUN sigma t=+0 adm=112 ref=210 chg=100 dia=12 N6=40 S=380 sumA=160 sumB=60  mod5: chg=0 adm=2 N6=0 S=0 A=0 B=0
+RUN sigma t=+1 adm=177 ref=145 chg=170 dia=7 N6=65 S=655 sumA=275 sumB=105  mod5: chg=0 adm=2 N6=0 S=0 A=0 B=0
+RUN sigma t=+2 adm=137 ref=185 chg=135 dia=2 N6=40 S=1330 sumA=530 sumB=270  mod5: chg=0 adm=2 N6=0 S=0 A=0 B=0
+PASS K1 all ten runs end at the complete target G_t
+PASS K1 counts (admitted, refused, changed, diagonal) equal the public table; sigma at t equals w at -t
+PASS K2 on the ten runs: Q(d) = psi(after) - psi(before) mod 5 at every admitted contact admitted contacts=1452
+PASS K3 N6 = 0 mod 5 in each of the ten runs N6=[40, 65, 40, 65, 40, 40, 65, 40, 65, 40]
+PASS K3 S = sum Q(d) = 0 mod 5 in each of the ten runs S=[1330, 655, 380, 655, 1155, 1155, 655, 380, 655, 1330]
+PASS K3 every admitted contact inside slots 1..5 has Q(d) = 0 mod 5
+PASS K4 count difference w minus sigma at common start, end and 322 contacts dN={-2: 12, -1: 0, 0: 0, 1: 0, 2: -12} mod5={-2: 2, -1: 0, 0: 0, 1: 0, 2: 3}
+PASS K2 box audit [-2,2]^4 x [-2,2]^4 ordered pairs=390625 admitted=28561
+PASS K2 seeded random six-slot audit trials=200000 admitted=143795
+LOOP w*sigma^-1 at I_-2: integer differences dNchg=12 dNadm=14 dS=175 dA=70 dB=35 ; mod 5 (n,a,b)=(2, 0, 0) ; 2a+b=0
+PASS K5(i) loop vector lies on V (2a+b=0)
+K5(i) OUTCOME: count holonomy 2 with zero area vector mod 5 -> H_AREA FIRED on this loop
+ORBIT six-slot I_0 states=2060 (complete) admitted_edges=6440 distinct_defects=1 | primary dim H=0 basis(n,a,b)=[] on V(2a+b=0)=True -> EXACT (no holonomy) | secondary(all admitted) dim=1 basis=[[1, 0, 0]] -> COUNT HOLONOMY WITH ZERO AREA (H_AREA fired)
+ORBIT six-slot I_1 states=20400 (complete) admitted_edges=48480 distinct_defects=5 | primary dim H=1 basis(n,a,b)=[[1, 0, 0]] on V(2a+b=0)=True -> COUNT HOLONOMY WITH ZERO AREA (H_AREA fired) | secondary(all admitted) dim=1 basis=[[1, 0, 0]] -> COUNT HOLONOMY WITH ZERO AREA (H_AREA fired)
+ORBIT six-slot I_-2 states=200000 (CAPPED, 98710 edges skipped) admitted_edges=517780 distinct_defects=5 | primary dim H=1 basis(n,a,b)=[[1, 0, 0]] on V(2a+b=0)=True -> COUNT HOLONOMY WITH ZERO AREA (H_AREA fired) | secondary(all admitted) dim=1 basis=[[1, 0, 0]] -> COUNT HOLONOMY WITH ZERO AREA (H_AREA fired)
+NOTE six-slot orbit sizes under all fifteen single contacts: I_0=2060 complete=True, I_1=20400 complete=True
+PASS K5 all six-slot defects lie on V (2a+b=0)
+THREE-SLOT 343 triples: orbit sizes min=1 max=13 capped=0
+THREE-SLOT primary   343  EXACT (no holonomy)   e.g. ('0', '0', '0') states=1 basis=[]
+THREE-SLOT secondary  145  COUNT HOLONOMY WITH ZERO AREA (H_AREA fired)
+THREE-SLOT secondary  198  EXACT (no holonomy)
+PASS K5 all three-slot defects lie on V (2a+b=0)
+K5 VERDICT: H_AREA FIRED (count phase is not a function of the area vector) ; kinds with a law: []
+RESULT PASS fails=0

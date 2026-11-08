@@ -1,0 +1,22 @@
+LAW box pairs=6561 admitted=625 diagonal_fixed=81 F16_facts=PASS
+GUARD opposite-sign (-rho^P b, rho^Q b): admitted iff P=Q, both +1: PASS (25 cases, both orders)
+LOCAL W6 ring=phase-model on all 625 phase states: PASS
+LOCAL rows (0,0,0,0)->(0,0,0,0) 10A, (1,0,0,0)->(1,0,1,1) 6A, (0,1,0,0)->(0,1,0,0) 5A: PASS
+LOCAL occupied target (0,0,1,1)->(2,1,1,2) source not restored: PASS
+LOCAL fresh-target inputs with source restored: 17 of 25 (P,Q) -> 00:00 01:00 02:00 03:00 10:11 12:00 13:00 14:00 21:00 23:00 24:00 31:00 32:00 34:00 41:00 42:00 43:00
+COPY K(M[r],M_empty)=(M[r],M[r]) all r x 5 global rotations=25 cases, 41/60 admitted, source restored at 5 module boundaries, 240-contact inverse: PASS
+COPY boundary: K.K != id on (M[2],M_empty); occupied targets (M[r],M[p]) with source not restored: 25 of 25 (outside contract, informational)
+OBSTRUCTION algebraic proof checked; BFS sanity: no word with F(E)=E and F(A)=T, although T is separately reachable from A; F(T)=rho F(E) on every reached word; b=1+rho^2:words-orbit=1800 single-orbit=45 b=1:words-orbit=1800 single-orbit=45 b=u:words-orbit=1800 single-orbit=45: PASS
+WORD S rebuilt from block equations: lengths 10,80,10,105,105,9,23,261,535; equals WORD535 fixture (sha256 ca6bdd7a...916b) contact by contact: PASS
+SOURCE F nine-cycle, Y_n=F^n(0,2,0), F^-1, clock T five-cycle: PASS
+READ W=S^10 on all 10 inputs: 20 R boundaries each, events match mod-9 table s=0:(0,first),(1,second),(9,first) s=1:(0,second),(8,first),(9,second); endpoint (Y_(s+10),X_r,controls,M[-r],M[-r-Delta_s]); literal W^-1 restores: PASS
+SUPPORT k=1..6: forward 26870k contacts/5(k-1) swaps, literal inverse 107480k/5(k-1), segment supports exact, every archive bank last touched by its own copier: PASS
+EXHAUSTIVE k=1 tuples=10 slots=51 E=142 aux_E=128 (46 addr) sum=(4, 0, 0, 0) H=(52, 0, -38, -38) varying_coords=4 checkpoints=40 copy_pairs_82_admitted=10 contacts=1343500 swaps=0 decoded_distinct=10 inverse_restores=10: PASS
+EXHAUSTIVE k=2 tuples=100 slots=76 E=216 aux_E=188 (66 addr) sum=(6, 0, 0, 0) H=(80, 0, -56, -56) varying_coords=8 checkpoints=900 copy_pairs_82_admitted=200 contacts=26870000 swaps=1000 decoded_distinct=100 inverse_restores=100: PASS
+EXHAUSTIVE k=3 tuples=1000 slots=101 E=290 aux_E=248 (86 addr) sum=(8, 0, 0, 0) H=(108, 0, -74, -74) varying_coords=12 checkpoints=14000 copy_pairs_82_admitted=3000 contacts=403050000 swaps=20000 decoded_distinct=1000 inverse_restores=1000: PASS
+SAMPLE(not proof) k=4 tuples=30 slots=126 E=364 aux_E=308 (106 addr) sum=(10, 0, 0, 0) H=(136, 0, -92, -92) varying_coords=16 checkpoints=570 copy_pairs_82_admitted=120 contacts=16122000 swaps=900 decoded_distinct=30 inverse_restores=30: PASS
+SAMPLE(not proof) k=5 tuples=30 slots=151 E=438 aux_E=368 (126 addr) sum=(12, 0, 0, 0) H=(164, 0, -110, -110) varying_coords=20 checkpoints=720 copy_pairs_82_admitted=150 contacts=20152500 swaps=1200 decoded_distinct=30 inverse_restores=30: PASS
+RESOURCES slots 26+25k, E 68+74k, aux 68+60k on 26+20k addr, sum 2(k+1), k=3 H=108-74j^2-74j^3; counting bound 5^B>=10^k k=1:min2/built2 k=2:min3/built4 k=3:min5/built6 k=4:min6/built8 k=5:min8/built10 k=6:min9/built12: PASS
+CACHE distinct contact entries certified=6629 interned values=271
+REVIEW-OUTPUT-SHA256 59b8a88692ccd6f4fdf471f333d094cbf9579f6541a43777238aea88cda16318
+ALL REVIEW CHECKS PASS
