@@ -1,0 +1,9 @@
+G1 PASS: J*phi=j, ramified images (j,J,phi)=(1,2,3)
+G2 PASS: omega(Tu,Tv)=j*omega(u,v); five-step return; 64 basis pairs
+G3 PASS: diag(2,3) preserves 625 finite ordered areas
+G4 PASS: D covariance, 25 Weyl transports, 625 commutator pairs
+G5 PASS: reduction erases j; four distinct invariant phase characters
+G6 PASS: 25 D-invariant diagonal costs, 5 joint scalar costs
+G6 WITNESS: invariant nonnegative gaps 1 and 2 (not selected)
+BOUNDARY: conditional L1 algebra only; no native contact, action, hbar or SI
+AUDIT PASS

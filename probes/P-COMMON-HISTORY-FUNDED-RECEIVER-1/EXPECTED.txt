@@ -1,0 +1,9 @@
+NATIVE chart=500 continuation=1000 occupied_prefix=25 PASS
+LOW_SHELL E=2 payloads=143 phase_identity_slice cases=7150 PASS
+DIRTY_GRID cases=109350 moved=77620 bounced=31730 PASS
+WEYL all_labels=125 left_multiplications=1250 PASS
+TENSOR_HISTORY trajectories=6 basis_comparisons=73500 PASS
+DELIVERY trajectories=350 core_ticks=22300 L1_L2 sharp_bank=52L PASS
+FUNDING budgets=110 dirty_reference_failures=2 occupied_scratch=10 PASS
+R2_CORRECTIONS false_open_path_lemma=COUNTEREXAMPLE literal_prereg_A4=COUNTEREXAMPLE PASS
+VERDICT DECLARED_CHAIN_VERIFIED; ORIGINAL_U_ADMISSION=OPEN; DIAG_J_PHI_BRIDGE=OPEN

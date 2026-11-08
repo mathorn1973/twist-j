@@ -352,7 +352,7 @@ draft. Attach the successful tag-job `activation-manifest.json` and the tagged
 Never substitute a manifest generated from a local checkout.
 
 The sole workflow has read-only permissions, immutable action pins, no
-persisted checkout credential, a 45-minute architecture limit, a 40-minute
+persisted checkout credential, a 60-minute architecture limit, a 60-minute
 publication limit, and a 5-minute aggregate limit. Its pull-request gate uses
 one x86_64 and one
 aarch64 standard GitHub-hosted runner. Its tag trigger covers `canon-v*`, but
@@ -360,6 +360,59 @@ the activation and release validators require the triggering event tag to equal
 the positive whole-number tag declared by the current `STATUS.md`; a broader,
 decimal, or foreign tag therefore triggers a failing readback, never
 publication.
+
+
+The same workflow permits one input-free manual postpublication readback for
+the existing immutable `canon-v107` release, not a new publication path. The
+controller must be reviewed at its exact public SHA, pass both complete
+architecture checks and the aggregate, and be dispatched from a stable branch
+ref at that SHA. It asserts matching controller/workflow revisions and accepts
+only `refs/heads/` controller refs. The scientific checkout is fixed to
+activation `03f010760d85c62795b74b3fa8fde79c2c36be7f`; the annotated tag object
+must remain `81c57853b7b5126fa2d8ec465b8ad903e2402c04`. Its content is
+`f5615ed4dcdfc672dc2e468399284a1dc03ce805`. The token has only `contents: read`
+and `actions: read`; the latter reads original run/job/artifact metadata.
+
+The manual lane runs the unchanged tagged policy, unit, Canon, ledger and gate
+checks, then the complete tagged `check_verifier.py` and `check_reproduce.py`
+in separate mandatory unbuffered steps without `--base`. It then runs the
+unchanged static post-activation checker, without `--manifest-out`. Its honest
+`full=False` output is complemented by the preceding successful whole-inventory
+steps. No scientific limit, expected byte, preregistration, threshold, or failure
+condition changes. No controller file is overlaid on the scientific checkout.
+Ordinary tag/release events retain their existing `--full` activation command.
+
+This lane accepts only published immutable release `430574383`, published at
+`2026-11-01T12:38:30Z`, with exactly its two original assets. Their fixed sizes
+and SHA-256 values are enforced. It verifies original successful tag run
+`41301206166`, attempt `2`, publication job `124841413548` and all mandatory
+tag steps, and original unexpired artifact `13084185131`. The downloaded ZIP
+must be 246070 bytes with SHA-256
+`9d1392f72ca4bab4edf014408e12b3b19f7da14e047cd46ed0e2de5482b46536`
+and contain exactly one `activation-manifest.json`. That manifest must be
+956369 bytes with SHA-256
+`9ab61f8638f87d0f5b3d7ca13ebca2e2584b7af33be4747205abe816eee4ef33`.
+The published manifest must equal those original artifact bytes. The published
+`SHA256SUMS` must be 415 bytes with SHA-256
+`21e8c6fe8eac20e5645625c3531960ada37914b7f87674becabc4edb05cb240b`
+and equal the tagged checksum file. The unchanged tagged release-manifest
+validator must pass. Missing/expired artifacts or any API/readback error fail.
+
+Manual recovery neither generates nor uploads a manifest or provenance file,
+creates/replaces an asset, edits/publishes a release, nor moves/recreates a tag.
+It has no prepublication fallback and no first-manifest exception. The ordinary
+successful-tag-job asset-origin rule remains unchanged. The original release
+keeps exactly its two assets. Acceptance requires external GitHub readback of
+the approved controller SHA and exact successful recovery run/attempt, including
+all mandatory steps. A printed marker or an earlier review is insufficient.
+Preserve all earlier cancellations as cancellations.
+
+The revised 60-minute architecture/publication budgets address observed whole-job
+cancellations at the former 45/40-minute limits, including completed scientific
+replay interrupted during final cleanup. They do not retroactively change the
+workflow or conclusions of earlier immutable attempts. Sixty minutes is an
+execution allowance, not a mathematical runtime guarantee. All individual
+verifier limits and complete-inventory requirements remain unchanged.
 
 These are whole-job execution budgets for the complete replay inventory.
 They do not change any verifier's time limit, exact-output requirement,
