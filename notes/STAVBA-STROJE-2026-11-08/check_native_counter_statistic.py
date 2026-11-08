@@ -18,6 +18,19 @@ chromatic number of this conflict graph on the distinct signatures. The script
 computes the distinct signatures and that chromatic number exactly on
 3 <= n < 2^16 and reports whether the 20-valued summary is minimal there.
 
+Why the finite answer holds for every n >= 3. The Canon's inverse formula
+(qhat, rhat) = (1 + sigma_n (q_n - z_n) + N_n, sigma_n r_n - N_n) mod 5
+equals (q_3, r_3) for every admitted source and every n >= 3; for fixed n
+it is an affine bijection of F_5^2 because sigma_n = +-1 is invertible
+modulo 5, so (q_n, r_n) is a function of T_n^read and (q_3, r_3); and
+(q_3, r_3) depends on the source P only through kappa (table C3 of the
+proof, U-NATIVE-APPARATUS-HISTORY-FACTOR). Hence the receiver signature at
+counter n is a function of T_n^read, the conflict relation between two
+counters depends only on their T values, and since all 20 values occur
+before n = 64 the conflict graph below is the conflict graph for all n.
+As the Canon says of T_n^read, neither it nor the five-class table defines
+an autonomous clock; both are functions of the counter.
+
 Validation against registered facts before the question is asked: the full
 six-coordinate update reproduces the (z, q, r) quotient table of the Canon
 proof; the common-receiver table C1, C2, C3 of the proof is reproduced; all

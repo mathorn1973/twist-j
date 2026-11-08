@@ -7,9 +7,18 @@ Revision: `DEF-FINITE-APPARATUS-ASSEMBLY-CONTRACT-v0`, 2026-11-08.
 Basis: Public Canon v109, tag `canon-v109`, content commit
 `2b0f94ec1e0874bff9141259e0b7da80e6681ea6`, `canon/CANON.md` SHA-256
 `035408ec79219cc72a7d3613cf1568154cca185137d2a2daa43b896aae0c6383`,
-1464066 bytes. Public `main` was `3c857642` when this revision was written;
-`STATUS.md` alone declares authority.
+1464066 bytes. Public `main` was `a8482d06` (merge of PR #1673) when this
+revision was written; `STATUS.md` alone declares authority.
 Companion map: `notes/STAVBA-STROJE-2026-11-08/`.
+
+Two earlier definition surfaces are related but distinct:
+`notes/canon/DEF-TYPED-APPARATUS-RECORD-CONTRACT.md` types one apparatus
+profile at the L4 to L5 boundary (manifest fields, carriers, equalities) and
+`notes/canon/C-V106-APPARATUS-SYNTHESIS-N/` proposed the v106 apparatus
+theorems with their admission obligations. This note types the cycle that
+joins such profiles end to end; it does not replace either. The v109 fold
+audit `notes/canon/V109-SYNTHESIS/README.md` states the separation of the
+contact and native carriers that section 4 takes as its fixed input.
 
 This note proposes one typed manifest for the object the apparatus program
 has been assembling piece by piece since Public Canon v100: a complete finite
@@ -116,17 +125,22 @@ Stage coverage at v109, in the status vocabulary of the sources:
 
 ```text
          S0   S1   S2   S3   S4   S5   S6   S7   S8
-K1 native -    -    -    -    T    T    T    -    -      records: receiver, carry mirror [C]
-K2 contact -   -    T    cand T    T    T    T    T      S3 = 322-contact loader (NON-CANONICAL)
-K3 register -  -    -    -    C    C    C    C    -      the 62-register two-pass circuit
+K1 native -    -    T    -    T    T    T    -    -      prepared heads retained; receiver records; carry mirror [C]
+K2 contact -   -    T  T+cand T    T    T    T    T      S3: supplied swaps load prequeued inputs [T]; the 322-contact loader is NON-CANONICAL and in another input dialect
+K3 register -  -    -    -   T+C   C    C    C    -      three carry theorems [T]; the 62-register two-pass circuit [C]
 K4 field  -    -    T    -    T    T    T    T    -      return of the original receiver, not full reset
-K5 walk   -    -    -    -    T    T    T    -    -      capture asymptotic; finite-time proposals open
-K6 thermal cand cand T+cand cand T  T    T    T    T      S0 to S3 analytical candidates, no verifier
+K5 walk   -    -   cand  -    T    T    T    -    -      forward-only filter (NON-CANONICAL); capture asymptotic
+K6 thermal cand cand T+cand cand T  T    T    T    T      S0, S1, S3 analytical candidates, no verifier; S2 has one [T]
 ```
 
 `T`, `C` are registry statuses; `cand` means a merged NON-CANONICAL
-candidate; `-` means `EMPTY`. The table is the reading of the map at the
-date above and is not a registry object.
+candidate; `-` means `EMPTY`. K6 groups the finite register apparatuses
+under one positive static Hamiltonian; the 140-gate compact device
+(`COMPACT-ACTIVE-RECORD-APPARATUS [T]`) is a distinct supplied
+implementation whose locality and energy operator the Canon does not
+identify with the thermal port apparatus, and the map lists it on K6 only
+as a second implementation of the same stages. The table is the reading of
+the map at the date above and is not a registry object.
 
 ## 4. Bridge obligations
 
@@ -245,12 +259,17 @@ Two restricted targets are already close to their hypotheses and would be
 stated first:
 
 - `CC-CONTACT`: the cycle on K2 alone, with S0 and S1 declared `EMPTY` and
-  S2 to S8 taken from the v108 and v109 theorems and the 322-contact loader.
-  What is missing is a proved S3 whose output type is the active input of
-  the variable-arrival apparatus; today the loader prepares a pole height on
-  a six-slot carrier and the apparatus reads a source orbit and a clock pair,
-  which are different input dialects of the same contact law.
-- `CC-THERMAL`: the cycle on K6 with K5 as its active sector, with S0 to S2
+  S2 to S8 taken from the v107 to v109 theorems (preparation minima and bank
+  capacity at v107, the common apparatus at v108, the workbank reuse at
+  v109) and the 322-contact loader. The supplied whole-slot swaps that load
+  prequeued inputs are a proved S3 for inputs prepared in the apparatus
+  dialect; what is missing is a proved S3 from stock whose output type is
+  the active input of the variable-arrival apparatus. Today the loader
+  prepares a pole height on a six-slot carrier and the apparatus reads a
+  source orbit and a clock pair, which are different input dialects of the
+  same contact law; the companion map records this as an `UNMATCHED`
+  stage pair.
+- `CC-THERMAL`: the cycle on K6 with K5 as its active sector, with S0 to S3
   taken from the bootstrap notes after independent acceptance and S4 to S8
   from the original-port and two-attempt theorems. What is missing is a
   reader S6 from archives alone and the agreement of accounts of B4.
@@ -276,6 +295,15 @@ not_asserted: the fixed list of section 5, verbatim
 A profile with any `EMPTY` or `UNMATCHED` stage is `STOP-DEFINITION`.
 Shared syntax creates no shared scientific edge: a conforming profile on K2
 does not close a profile on K6.
+
+The companion map records every adjacent stage pair with one of four edge
+kinds. `proved-composition`: a registered theorem or a merged note composes
+the two stages on one carrier. `same-carrier-composable`: same carrier and
+law, literal concatenation is meaningful, no composition theorem.
+`declared-not-identified`: the Canon states that the two objects are not
+identified. `missing-bridge`: no object connects them; on one carrier this
+is the `UNMATCHED` case of section 2, across carriers it is a bridge of
+section 4 that does not exist.
 
 ## 7. What this note does not do
 

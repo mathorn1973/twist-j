@@ -48,15 +48,15 @@ tabulka níže je jejich souhrn.
 | K19 | kniha: věta o pěti úkolech a pět nejbližších kroků | WEAK / WEAK | věta o pěti úkolech je v pododdílu „Od nativní přípravy k homogennímu záchytu a přijímači“ (řádek 1014), pět kroků v pododdílu „Obraz fyziky…“ (řádek 1271); opraveno v §2 |
 | K20 | konsolidace 7. 11.: věta o definiční práci; počty STOP/BLOCKED/READY | WEAK / WEAK | věta je v SYNTHESIS.md oddíl 7; počty jsou v oddílu 6 téhož souboru, ne v README; mapa cituje jen větu |
 | K21 | PR #1950: obě hypotézy sestupu vystřelily, 16/8, candidate-T/C, nesloučeno | CONFIRMED / CONFIRMED | |
-| K22 | oba skripty reprodukují uložený stdout; statusy citovaných řádků souhlasí | WEAK / WEAK | rozhodčí ověřili aktuální čísla 42 slotů, 46 hran, 73 řádků (56 T) a všech 73 statusů; starší čísla v zadání tvrzení pocházela z dřívější verze tabulek |
+| K22 | všechny tři skripty reprodukují uložený stdout; statusy citovaných řádků souhlasí | WEAK / WEAK | rozhodčí ověřili tehdejší čísla 42 slotů, 46 hran, 73 řádků (56 T) a všech 73 statusů; starší čísla v zadání tvrzení pocházela z dřívější verze tabulek; po zapracování kritika má tabulka 43 řádků, 48 hran a 92 citovaných řádků a `check_assembly.py` opět hlásí `ASSEMBLY PASS` |
 | K23 | CORE o polním řetězci: N - 1, N, N + 1, ukazatel C5, „not a reset“, odvození z U otevřené; tři FIELD-* T | CONFIRMED / CONFIRMED | |
 | K24 | CHANGELOG v106 (sedm plus osm plus jedna věta) a v105 (p > 2/10^28, asymptoticky, otevřené body) | CONFIRMED / CONFIRMED | |
 
 ## Mechanické kontroly
 
-- `check_assembly.py`: 42 slotů, 46 hran, 73 odlišných citovaných řádků
-  registru (56 T, 7 D, 1 C, 7 O, 2 F), všechny statusy souhlasí,
-  `ASSEMBLY PASS`.
+- `check_assembly.py`: 43 řádků (40 stupeň/nosič a tři mimo cyklus),
+  48 hran, 92 odlišných citovaných řádků registru (74 T, 7 D, 1 C, 8 O,
+  2 F), všechny statusy souhlasí, `ASSEMBLY PASS`.
 - `check_loader_interface.py`: 390625 párů na krabici `[-2, 2]^4`, zbytky,
   součet účtů i kruhový součet zachovány; zavaděč `(0, 0)`, hodiny `(2, 3)`,
   zdroj `(0, 2, 0)` s periodou 9; `LOADER-INTERFACE RESIDUE AUDIT PASS`.
@@ -85,6 +85,35 @@ tabulka níže je jejich souhrn.
    typová, bez přenosu stavu: zapracováno jako hrana S4/K4 -> S4/K2 a v §6.
 6. Čtenář měření: zákon výskytu je přijatý slovník, žádná věta o nemožnosti
    vzorkování neexistuje: zapracováno v §7 a §8 (bod 7) a ve smlouvě.
+
+## Kritik úplnosti
+
+Po dokončení čtenářů a rozhodčích prošel celý adresář a smlouvu jeden
+nezávislý kritik úplnosti (jen čtení). Vrátil 35 nálezů: 2 nutné opravy,
+23 doporučené, 10 poznámek; žádný nález nezpochybnil status nebo rozsah
+registrovaného tvrzení. Nutné opravy: matice ve smlouvě měla u K1 prázdné
+S2 proti tabulce (opraveno na `T`); věta o `U_rec` byla v mapě uvedena jako
+citát Canonu, který v Canonu není (nahrazena skutečným zněním o
+semikonjugaci). Doporučené opravy zapracované: sjednocení hlavy `main`
+(a8482d06) a časového okna sloučení (00:07 až 00:49 UTC); S3 na K2 jako
+`T+cand`; K6 jako šest `T` a tři kandidáti; počty řádků a hran; doplnění
+tří registrovaných vět zrcadla přenosu, dvou vět Diracova kontaktu, tří
+vět procházky, dvou vět rytmu, hranic nativního čtení a `SQRT-PHI-TIME-GRAVITY`
+do tabulek (73 -> 92 citovaných řádků); přesun dopředného filtru z K6 na
+K5; označení položek z otevřených větví, z GitHubu a z jiného repozitáře;
+oprava účtu polního řetězce (zdroj 23 -> 21, dvě jednotky v posledním
+kanálu); citace konsolidační poznámky jako poznámky, ne jako hlasu
+programu; český originál citátu o hodinovém unitáru; slovník statusů bez
+nepoužitých slov; definice čtyř druhů hran; zmírnění vět, které stanovovaly
+priority vlastníka; a dvoukrokové zdůvodnění závěru pro všechna `n` u
+nejmenšího souhrnu čítače (afinní bijekce inverzního vzorce a závislost
+`(q_3, r_3)` jen na `kappa`) spolu s poznámkou, že souhrn nedefinuje
+autonomní hodiny. Nezapracováno a ponecháno jako poznámka: patnáct
+prázdných polí matice nemá vlastní řádek v `ASSEMBLY.tsv` (pravidlo
+vynechání je v mapě uvedeno); `COMPACT-ACTIVE-RECORD-APPARATUS` zůstává
+veden na K6 jako druhá implementace týchž stupňů s výslovnou poznámkou
+o neztotožnění; druh hrany `same-carrier-composable` zůstává definován a
+nepoužit.
 
 ## Co záznam nedělá
 

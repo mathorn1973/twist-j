@@ -17,14 +17,14 @@ S4/K2	S5/K2	proved-composition	RELATIVE-CONTACT-COMMON-APPARATUS-OPEN[T]	ctyri a
 S5/K2	S6/K2	proved-composition	RELATIVE-CONTACT-FINITE-WORKBANK-REUSE[T]	2k archivu samo dekoduje usporadanou k-tici vstupu
 S6/K2	S7/K2	proved-composition	RELATIVE-CONTACT-FINITE-WORKBANK-REUSE[T]	doslovna inverze prace obnovi 31-mistne jadro
 S7/K2	S8/K2	proved-composition	RELATIVE-CONTACT-FINITE-WORKBANK-REUSE[T]	indukce pres konecne nosice pro kazde k
-S4/K2	S4/K1	declared-not-identified	RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY[T];RELATIVE-CONTACT-FINITE-WORKBANK-REUSE[T]	stin kontaktniho slova modulo 1-j je permutace mist; z generatoru a..e je permutaci souradnic jen a (most B1)
+S4/K2	S4/K1	declared-not-identified	RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY[T];U-CONTACT-SOURCE-NONINTERFERENCE[T]	stin kontaktniho slova modulo 1-j je permutace mist; z generatoru a..e je permutaci souradnic jen a (most B1)
 S4/K2	S4/K5	declared-not-identified	COHERENT-W-LOCALIZED-RING-CLOSURE[T];C-COMMON-COUNTER-PATH-PHASE-N	zadna unitalni mapa O[1/5] -> F_5; pocet proti polostope, normalizace amplitudy chybi (most B3)
 S4/K5	S4/K1	declared-not-identified	COHERENT-W-LOCAL-NATIVE-NETWORK[T];HOMOGENEOUS-CAPTURE-CURRENT-RECORD[T]	F_5 stin surove W je semikonjugovany na U_net = bunkove nativni U plus dodatecna vazba kazdy treti tik; vazba neni odvozena z U; U_rec neni intertwiner puvodniho U
 S2/K1	S4/K1	proved-composition	U-NATIVE-COMMON-READY-SOURCE-RETENTION[T];U-NATIVE-RAW-RESIDUE-READOUT[T]	spolecna pripravenost (0,1) a prenos zbytkoveho souctu
 S4/K1	S5/K1	proved-composition	U-NATIVE-INVARIANT-AND-NOWRITE[T];U-CARRY-MIRROR-FINITE-CIRCUIT[C]	synchronizovany zakaz zapisu; zaznam prenosu jen pres registrovy obvod
 S5/K1	S6/K1	proved-composition	U-NATIVE-RAW-RESIDUE-READOUT[T];U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO[T]	presny odecet z prijimace a citace; samotny prijimac nestaci
 S6/K1	S7/K1	missing-bridge	U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS[T]	navratova okna nejsou reset ani obnova
-S4/K1	S4/K3	proved-composition	U-CARRY-MIRROR-FINITE-CIRCUIT[C]	skutecny nativni tik prvniho prijimace proveden na 62 registrech; konecne C, dodane puvody (most B2)
+S4/K1	S4/K3	proved-composition	U-FIRST-TICK-AFFINE-TRACE-TRANSFER[T];J-MARKED-CARRY-MIRROR[T];U-CARRY-MIRROR-FINITE-CIRCUIT[C]	skutecny nativni tik prvniho prijimace proveden na 62 registrech; konecne C, dodane puvody (most B2)
 S4/K3	S5/K3	proved-composition	U-CARRY-MIRROR-FINITE-CIRCUIT[C]	prenosy a archiv zachovany pro vsech 500 vstupu
 S5/K3	S6/K3	proved-composition	U-CARRY-MIRROR-FINITE-CIRCUIT[C];P-CARRY-MOMENT-DEPTH-1	cteni prenosu; momenty prenosu
 S6/K3	S7/K3	proved-composition	U-CARRY-MIRROR-FINITE-CIRCUIT[C]	obnova 48 pracovnich bunek
@@ -43,5 +43,7 @@ X2	X3	declared-not-identified	GRAVITY-BRIDGE-LAW[D];METRO-EDGE-SCALE[O];SCHEME-D
 S4/K1	X3	declared-not-identified	READING-SPLIT[D];MEASURE-BORN-VERB[D]	dekoder cte legy slovnikem, ne vetou o uplnosti
 S0/K2	S0/K6	missing-bridge	RELATIVE-CONTACT-INTEGRAL-LAW[T]	kontaktni nosic nema prostredi; ucet Q je priprava, ne teplota
 S0/K1	S1/K1	missing-bridge	U-NATIVE-CHART-AND-QDD-READBACK[T]	nativni citac nema zdroj ani bootstrap
-S1/K2	S3/K1	missing-bridge	RELATIVE-CONTACT-FOUR-SLOT-MINIMUM[T]	zadny bootstrap uctu na kontaktnim nosici; zadny nativni zavadec
+S1/K2	S2/K2	missing-bridge	RELATIVE-CONTACT-FOUR-SLOT-MINIMUM[T]	zadny bootstrap uctu na kontaktnim nosici; priprava je dodana
+S2/K1	S3/K1	missing-bridge	U-NATIVE-COMMON-READY-SOURCE-RETENTION[T]	zadny nativni zavadec; pripravy jsou pocatecni stavy
+S2/K5	S4/K5	proved-composition	C-FORWARD-ONLY-CAPTURE-FILTER-N;HOMOGENEOUS-CAPTURE-CURRENT-RECORD[T]	filtr po konecnem zachytu navazuje na zachytovy zakon; candidate
 S7/K1	S8/K1	missing-bridge	U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS[T]	bez obnovy neni opakovani

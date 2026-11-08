@@ -10,9 +10,10 @@ oddělit, co je dokázané, co spočítané, co přijaté a co otevřené; pojme
 rozhraní mezi částmi; a vybrat nejmenší další rozhodnutelné kroky.
 
 Tato mapa není Canon, preregistrace, evidence ani návrh na změnu statusu.
-Navazuje na `notes/PRACOVNI-MAPA-V81-2026-09-08/` (větev PR #907) a na
-konsolidaci `notes/CONSOLIDATION-2026-11-07/` (větev PR #1952), kterou
-nenahrazuje: konsolidace shrnuje celý Canon podle témat, tato mapa jen jednu
+Navazuje na `notes/PRACOVNI-MAPA-V81-2026-09-08/` (jen na větvi PR #907,
+v tomto stromu není; kopie v `twistj-handoff`) a na konsolidaci
+`notes/CONSOLIDATION-2026-11-07/` (jen na větvi PR #1952, v tomto stromu
+není), kterou nenahrazuje: konsolidace shrnuje celý Canon podle témat, tato mapa jen jednu
 věc, stroj. Každé číslo níže je buď z registru, nebo z pojmenovaného souboru.
 
 ```text
@@ -23,9 +24,9 @@ CONTENT COMMIT:    2b0f94ec1e0874bff9141259e0b7da80e6681ea6
 CANON SHA-256:     035408ec79219cc72a7d3613cf1568154cca185137d2a2daa43b896aae0c6383
 CANON BYTES:       1464066
 REGISTR:           609 tvrzení; 465 T, 59 D, 40 C, 2 H, 24 O, 19 F; 26 živých H/O
-MAIN PŘI ČTENÍ:    3c857642 (8. 11. 2026, po sloučení PR #1636 až #1638, #1746,
-                   #1761, #1764, #1766, #1819, #1821, #1857, #1908, #1912, #1915);
-                   main se během noci dál hýbal (uzavírání ABANDONED záznamů)
+MAIN PŘI ČTENÍ:    a8482d06 (8. 11. 2026, po sloučení PR #1746, #1761, #1764,
+                   #1766, #1819, #1821, #1857, #1908, #1912, #1915 a šesti
+                   záznamů ABANDONED #1636 až #1638, #1656, #1672, #1673)
 BASELINE:          mapa připravenosti v105 z 23. 10. 2026 (twistj-handoff)
 FORMAL RUN:        NONE
 PROBE/PREREG:      NONE
@@ -35,11 +36,13 @@ CANON/REGISTRY:    BEZE ZMĚNY
 ## 1. Výsledek na jednu stránku
 
 Stroj dnes existuje jako **šest strojů na šesti nosičích**. Každý z nich je
-uvnitř postaven přesně, s dodanými přípravami a spočítanými účty. Mezi sebou
-je nespojuje žádná registrovaná věta kromě jediného konečného výpočtu
-(zrcadlo přenosu, `U-CARRY-MIRROR-FINITE-CIRCUIT [C]`), a Canon jejich
-neztotožnění říká výslovně: „The contact and native carriers keep separate
-laws and interfaces“ (`canon/CHANGELOG.md`, v109).
+uvnitř postaven přesně, s dodanými přípravami a spočítanými účty. Žádná
+registrovaná věta je neztotožňuje; registrované hrany mezi nosiči jsou
+srovnávací (semikonjugace, okruhová shoda, slepý port) a jediný dokázaný
+přenos stavu mezi nosiči je konečný výpočet (zrcadlo přenosu,
+`U-CARRY-MIRROR-FINITE-CIRCUIT [C]`). Canon neztotožnění říká výslovně:
+„The contact and native carriers keep separate laws and interfaces“
+(`canon/CHANGELOG.md`, v109).
 
 - **Kontaktní nosič** (`O^m`, `O = Z[j]`) je nejúplnější: příprava, běh,
   záznam, čtení z archivů, obnova pracovního jádra a opakování pro libovolný
@@ -60,14 +63,18 @@ laws and interfaces“ (`canon/CHANGELOG.md`, v109).
 - **Nativní `U`** umí přenést jeden zbytek do společného přijímače, přesně ho
   přečíst z přijímače a čítače a jednou zapsat; dokázáno je, že samotný
   přijímač nestačí, že synchronizovaný zápis z BLANK do WRITTEN neexistuje a
-  že žádný konečný autonomní kontext bez dodaného Thueova–Morseova bitu
-  neobnoví čtení. Nemá obnovu ani opakování. Jediný výstup ven je zrcadlo
-  přenosu na 62 registrech `F_5`, a to jen jako `[C]`.
+  že žádný konečný autonomní kontext bez dodaného Thueova-Morseova bitu
+  neobnoví čtení. Nemá obnovu ani opakování. Jediný dokázaný přenos stavu
+  ven je zrcadlo přenosu na 62 registrech `F_5`, a to jen jako `[C]`; ostatní
+  registrované hrany (slepý port do racionálního kontaktu, semikonjugace
+  stínu procházky, zbytková brána) jsou srovnání, ne přenosy.
 - **Mimo cyklus** zůstává to, co z konstrukce dělá fyziku: zákon výskytu
   jednoho výsledku (přijatý na `[D]` v ETH-QDD-1/2, neodvozený), fyzikální
   realizace přístroje (čtyři vlastníci `[O]`, všichni na `STOP`) a převod
-  jednotek. Program sám říká, že další konstrukce téhož druhu tyto vlastníky
-  nepohnou; pohne jimi definiční práce.
+  jednotek. Frontier je drží na `STOP`, tedy před definiční prací, a
+  konsolidační poznámka ze 7. 11. (`SYNTHESIS.md`, oddíl 7, větev PR #1952,
+  v tomto stromu není) to formuluje slovy, že další konstrukce téhož druhu
+  tyto vlastníky nepohnou a pohne jimi definiční práce.
 
 Co se našlo a vyloučilo za posledních osm dní, v jedné větě na položku:
 zavaděč pro všech pět vstupů existuje a má přesně pět úspěchů nad celými
@@ -80,7 +87,7 @@ ani doslovně okopírovat banku na čtyřech místech.
 
 Co přidává tato noc: typovanou smlouvu stroje
 (`notes/canon/DEF-FINITE-APPARATUS-ASSEMBLY-CONTRACT.md`), tabulku slotů a
-rozhraní ověřenou mechanicky proti registru (`check_assembly.py`, 73 citovaných
+rozhraní ověřenou mechanicky proti registru (`check_assembly.py`, 92 citovaných
 řádků, všechny statusy souhlasí) a jeden přesný audit rozhraní: výstupní pár
 zavaděče má zbytky `(0, 0)` modulo `1 - j`, hodinový pár stopek `(2, 3)` a
 zdrojová trojice `(0, 2, 0)`, takže žádné kontaktní slovo nepřevede jedno
@@ -95,11 +102,12 @@ přesně říci, co z každé části chybí a co by muselo platit, aby se spoji
 
 ## 2. Co se zde rozumí strojem
 
-Vlastník stroj popisuje v knižním kompendiu (větev `main` repozitáře knihy,
+Vlastník stroj popisuje v knižním kompendiu (externí zdroj: repozitář
+`kniha-realny-pruvodce-imaginarnim-vesmirem`, větev `main`,
 `web/Konstrukce_ke_kapitolam.md`, kapitola 38, pododdíl „Od nativní
 přípravy k homogennímu záchytu a přijímači“, řádek 1014; pět nejbližších
-kroků programu je v pododdílu „Obraz fyziky podle TWIST-J na ubrousku a co
-ještě chybí“) a jmenuje pět úkolů, které čekají „na uzavření hry do fyziky“: přístroj z původního kroku, zákon výskytu jednoho výsledku
+kroků programu je tamtéž v pododdílu „Obraz fyziky podle TWIST-J na
+ubrousku a co ještě chybí“, řádek 1271) a jmenuje pět úkolů, které čekají „na uzavření hry do fyziky“: přístroj z původního kroku, zákon výskytu jednoho výsledku
 místo deklarovaného Bornova čtení, společný nosič a sjednocení zachovávaných
 účtů, převod jednotek a praktický konečnočasový režim záchytu pro obecné
 přípravy. Tato mapa je rozepisuje do devíti stupňů jednoho uzavřeného cyklu:
@@ -114,11 +122,14 @@ registry, B3 celočíselné nosiče a koherentní procházka, B4 tepelný nosič
 koherentní procházka). Přesné typy stupňů, nosičů a mostů jsou ve smlouvě
 `notes/canon/DEF-FINITE-APPARATUS-ASSEMBLY-CONTRACT.md`. Pět úkolů vlastníka
 leží takto: první je most B1 a vlastník `QUADRATIC-MEMORY-NATIVE-CONTACT [O]`;
-druhý je mimo cyklus (oddíl 7); třetí jsou mosty B3 a B4; čtvrtý je
-`METRO-EDGE-SCALE [O]` a `SCHEME-DICTIONARY [O]`; pátý je stupeň S4 na nosiči
-K5 (konečný čas záchytu).
+druhý je mimo cyklus (slot X1, oddíl 8, bod 7); třetí jsou mosty B3 a B4;
+čtvrtý je `METRO-EDGE-SCALE [O]`, `SCHEME-DICTIONARY [O]` a
+`SQRT-PHI-TIME-GRAVITY [O]`; pátý je stupeň S4 na nosiči K5 (konečný čas
+záchytu).
 
-Tentýž autor to říká v kapitole 38 rukopisu Thornovými ústy (řádek 320):
+Tentýž autor to říká v kapitole 38 rukopisu Thornovými ústy (externí
+zdroj: týž repozitář knihy,
+`38_Hospoda_12_Slozeny_obraz_Jaky_vesmir_dava_Twist.md`, řádek 320):
 „Co stroj nedává, je port ven: který účet přístroj v přírodě zapíše, který
 výsledek a jak často, jak se znormuje společná akce a propojí s bezrozměrnou
 vazbou α a co je modelová jednotka délky a času. A rozvrh, podle kterého
@@ -131,26 +142,30 @@ věta o světě; to je zásada programu a tato mapa ji nikde neobchází.
 
 ## 3. Kotva a metoda
 
-Čteno bylo veřejné `main` po sloučeních z 8. 11. 2026 (00:07 až 00:33 UTC),
+Čteno bylo veřejné `main` po sloučeních z 8. 11. 2026 (00:07 až 00:49 UTC),
 `STATUS.md`, `canon/CORE.md`, `canon/FRONTIER.md`, `canon/REGISTRY.tsv`,
 `canon/GATES.tsv`, příslušné oddíly `canon/CANON.md`, sondy a poznámky
 posledních čtrnácti dnů, otevřené PR a větve (`git ls-remote`), konsolidace
 z 7. 11. (větev PR #1952) a autorské podklady v `twistj-handoff` a v knize.
+Co je citováno z otevřených větví, z GitHubu nebo z jiného repozitáře, je
+tak označeno a v tomto stromu není; mechanicky kontrolovány jsou jen
+soubory tohoto stromu.
 Lokálně prošly `tools/check_policy.py` (POLICY PASS) a `tools/check_ledger.py`
 (LEDGER PASS, 609 claims, 26 gates). Osm nezávislých čtenářů po shlucích,
 jedna syntéza a ověření klíčových tvrzení dvěma rozhodčími jsou zaznamenány
 ve `VERIFICATION.md`. Statusy jsou výhradně slova programu: `T`, `D`, `C`,
-`H`, `O`, `F` z registru; `candidate-T`, `candidate-C`, `PASS`, `UNRUN`,
-`draft`, `NON-CANONICAL` ze souborů mimo registr.
+`H`, `O`, `F` z registru; `candidate-T`, `candidate-C`, `PASS`, `fired`,
+`ABANDONED`, `STOP`, `NON-CANONICAL` ze souborů mimo registr; v tabulkách
+této mapy navíc `cand` (sloučený kandidát) a `EMPTY` (prázdný stupeň).
 
 ## 4. Co se postavilo od mapy připravenosti v105 (23. 10.) do dneška
 
 | Verze | Datum | Co přibylo pro stroj | Registr |
 |---|---|---|---|
 | v105 | 24. 10. | `HOMOGENEOUS-CAPTURE-CURRENT-RECORD [T]`: záchyt, úplný prostorový proud a koherentní zápis přijímače v jednom zákonu, `p > 2/10^28`, asymptoticky | 577 |
-| v106 | 27. 10. | sedm vět o koherentní procházce `W`, osm vět o konečných přístrojích (`THERMAL-ORIGINAL-PORT-APPARATUS`, `COMPACT-ACTIVE-RECORD-APPARATUS`, `LOCAL-THERMAL-TWO-ATTEMPT`, `OCCUPIED-RECORD-EXPORT-REUSE`, baterie, Diracův kontakt), návratová okna `U` | 593 |
+| v106 | 27. 10. | sedm vět o koherentní procházce `W`, osm vět o konečných přístrojích (`ACTIVE-ISOSPECTRAL-RECORD`, `THERMAL-ORIGINAL-PORT-APPARATUS`, `COMPACT-ACTIVE-RECORD-APPARATUS`, `FINITE-COHERENT-BATTERY-DRIFT`, `OCCUPIED-RECORD-EXPORT-REUSE`, `LOCAL-THERMAL-TWO-ATTEMPT`, dvě věty Diracova kontaktu), návratová okna `U` | 593 |
 | v107 | 1. 11. | integrální relativní kontakt: zákon, ostrá minima 12 a 27, kapacita bank `12N`, zbytková hranice pevného slova; otevřený vlastník společného přístroje | 598 |
-| v108 | 3. 11. | společný přístroj pro dva experimenty na 56 místech uzavřen `O -> T`; čtyři věty o rytmu tří míst | 602 |
+| v108 | 3. 11. | společný přístroj pro dva experimenty na 56 místech uzavřen `O -> T`; tři věty o rytmu tří míst a injektivita čtení koeficientů | 602 |
 | v109 | 3. 11. | obnova týchž pracovních bank pro každé `k` (`26+25k` míst, účet `68+74k`, `2k` archivů); kopírka banky a překážka doslovné kopie; první tik, zrcadlo prenosu a 62-registrový obvod `[C]` | 609 |
 
 Od v109 se registr nezměnil. Na `main` ale přibylo 1. až 8. 11. toto
@@ -160,47 +175,63 @@ Od v109 se registr nezměnil. Na `main` ale přibylo 1. až 8. 11. toto
 |---|---|---|---|
 | 6. 11. | PR #1923, `notes/C-COMMON-COUNTER-PATH-PHASE-N` | nativní fáze vlákna je funkce čítače (žádná informace o cestě při společném čítači); na kontaktu nese cestu počet měnících kontaktů, nezávislý na hermitovském součtu `H` v `5 Z[phi]` (Theorem L, nalezen až po prvním běhu); hypotéza „počet mod 5 je lineární v H“ vystřelila | candidate-T, candidate-C, fired; bez dvouarchitekturního běhu |
 | 8. 11. | PR #1908, `P-POLE-HEIGHT-FIVE-INPUT-REPLAY-1` | jedno pevné slovo o 322 kontaktech nabije pólovou výšku `t` pro všech pět `t` v `{-2..2}`, pomocníci se vrátí, inverze 1288 kontaktů | PASS, candidate-C, obě architektury |
-| 8. 11. | PR #1912, `P-POLE-HEIGHT-INTEGER-DOMAIN-1` | totéž slovo uspěje nad celými čísly právě pro těch pět `t` (55 dyadických válců, prázdná hranice) | COMPLETE, candidate-C |
+| 8. 11. | PR #1912, `P-POLE-HEIGHT-INTEGER-DOMAIN-1` | totéž slovo uspěje nad celými čísly právě pro těch pět `t` (55 dyadických válců, prázdná hranice) | candidate-C (úplná klasifikace) |
 | 8. 11. | PR #1915, `P-U-PAIR-PHASE-WORK-1` | nativní vlákno páruje tiky s přírůstky `+-e_k`, kapacita vyrovnání `2s`; žádný omezený koncový potenciál nedává nenulový lineární účet práce tik/zdvih | candidate-T, candidate-C |
 | 8. 11. | PR #1857, `P-RELATIVE-CONTACT-VARIABLE-ARRIVAL-1` | stopky s deseti vstupy a dvěma razítky potvrzeny (100 hranic kroků, 200 konců čtení, 10 inverzí) | PASS, candidate-C |
 | 8. 11. | PR #1819, #1821, `P-J-LAMBDA-CARRY-ARITHMETIC-1`, `P-CARRY-MOMENT-DEPTH-1` | vratný násobič `J` pro všechna `N` z malých sčítaček přenosu; přesné momenty přenosu se zpožděným mícháním zbytků; zdroje kompilátoru zrcadla | candidate-C s důkazy |
 | 8. 11. | PR #1746, `notes/C-FORWARD-ONLY-CAPTURE-FILTER-N` + `reproduce/` | dopředný koherentní filtr po konečném nativním záchytu | NON-CANONICAL s reprodukcí |
 | 8. 11. | PR #1761, #1764, #1766, tři tepelné poznámky | prostředí a téměř čisté registry; nabitý pracovní zásobník a hlavní hodiny z Gibbsových faktorů při třech teplotách (`D = 2^84`, `1 - q < 2^-82`); teplotní kontrast z jedné teploty a jednoho invertovaného palivového qubitu | candidate-T, analytické, bez verifieru |
-| 8. 11. | PR #1636 až #1638, #1656, #1672, #1673 | uzavření šesti opuštěných pinů (K1 scaled bridge, Noether closure, Maurer–Cartan) jako ABANDONED | záznamy, ne věda |
+| 8. 11. | PR #1636 až #1638, #1656, #1672, #1673 | uzavření šesti opuštěných pinů (K1 scaled bridge, Noether closure, Maurer-Cartan) jako ABANDONED | záznamy, ne věda |
 
-Vyloučeno nebo vystřeleno ve stejném období: nabití pólové výšky `t = ±1`
-čistě z neutrálních prvků s jedinou nabitou oporou (větve PR #1896, #1898,
-candidate-T), zásoba `2u` (PR #1900), 131 ze 171 neutrálních zásob s
-`Q <= 20` (PR #1902, #1904), hypotéza o úměře počtu a `H` (PR #1923),
-sestup Gramových čteček přes nativní krok (PR #1950, obě hypotézy vystřelily)
-a tři piny `P-INTEGER-K1-SCALED-BRIDGE-1..3` (vada součtu stavů, ABANDONED).
-Rukopis ze 4. 11. ještě říká „tři vstupy z pěti umíme naložit jedním
-společným slovem; všech pět zatím ne“; od 8. 11. platí všech pět.
+Vyloučeno nebo vystřeleno ve stejném období (položky z otevřených větví
+jsou označeny, v tomto stromu nejsou): nabití pólové výšky `t = ±1` čistě
+z neutrálních prvků s jedinou nabitou oporou (větve PR #1896, #1898,
+candidate-T), zásoba `2u` (větev PR #1900), 131 ze 171 neutrálních zásob
+s `Q <= 20` (větve PR #1902, #1904), hypotéza o úměře počtu a `H` (sloučený
+PR #1923), sestup Gramových čteček přes nativní krok (větev PR #1950, obě
+hypotézy vystřelily) a tři piny `P-INTEGER-K1-SCALED-BRIDGE-1..3` (vada
+součtu stavů, ABANDONED, sloučeno).
+Rukopis ze 4. 11. (externí zdroj, kapitola 38, řádek 320) ještě říká „tři
+vstupy z pěti umíme naložit jedním společným slovem; všech pět zatím ne“;
+od 8. 11. platí všech pět.
 Z knižního kroku „uzavřít pětivstupový zavaděč“ je tím splněna
 existenční část; zbylých 31 nevysvětlených neúspěchů z censu zásob a
 „propojit zavaděč s fázovou západkou a modální akcí“ zůstávají otevřené.
 
 ## 5. Stroj po částech
 
-Tabulka `ASSEMBLY.tsv` má 42 řádků „stupeň/nosič“, každý s identifikátory
-tvrzení, slovem statusu, cestou k evidenci a tím, co na místě chybí.
-`check_assembly.py` ověřuje, že každé citované tvrzení existuje v registru se
-stejným statusem, že každá poznámka a sonda existuje a že každý slot má
-rozhraní. Výstup z 8. 11.: 73 odlišných citovaných řádků registru
-(56 T, 7 D, 1 C, 7 O, 2 F), `ASSEMBLY PASS`.
+Tabulka `ASSEMBLY.tsv` má 40 řádků „stupeň/nosič“ a tři řádky mimo cyklus
+(X1 výskyt, X2 fyzikální realizace, X3 fyzikální odečet), každý
+s identifikátory tvrzení, slovem statusu, cestou k evidenci a tím, co na
+místě chybí. Prázdné stupně jsou uvedeny jako řádky jen tam, kde je
+prázdnota věcí k zapamatování (K1, K2 a prostředí); ostatních patnáct
+prázdných polí matice níže řádek nemá. `check_assembly.py` ověřuje, že
+každé citované tvrzení existuje v registru se stejným statusem, že každá
+poznámka a sonda existuje a že každý slot má rozhraní. Výstup z 8. 11.:
+92 odlišných citovaných řádků registru (74 T, 7 D, 1 C, 8 O, 2 F),
+`ASSEMBLY PASS`.
 
 Zhuštěně, `T`/`C` jsou statusy registru, `cand` sloučený NON-CANONICAL
 kandidát, `-` prázdno:
 
 ```text
-             S0    S1    S2    S3    S4    S5    S6    S7    S8
-K1 nativní   -     -     T     -     T     T     T     -     -
-K2 kontakt   -     -     T     cand  T     T     T     T     T
-K3 registry  -     -     -     -     C     C     C     C     -
-K4 pole      -     -     T     -     T     T     T     T     -
-K5 procházka -     -     -     -     T     T     T     -     -
-K6 tepelný   cand  cand  T+cand cand T     T     T     T     T
+             S0    S1    S2    S3     S4    S5    S6    S7    S8
+K1 nativní   -     -     T     -      T     T     T     -     -
+K2 kontakt   -     -     T     T+cand T     T     T     T     T
+K3 registry  -     -     -     -      T+C   C     C     C     -
+K4 pole      -     -     T     -      T     T     T     T     -
+K5 procházka -     -     cand  -      T     T     T     -     -
+K6 tepelný   cand  cand  T+cand cand  T     T     T     T     T
 ```
+
+Na K2 je S3 `T` pro vstupy připravené v dialektu přístroje (pět dodaných
+výměn nakládá předem zařazené vstupy, `RELATIVE-CONTACT-FINITE-WORKBANK-REUSE`)
+a `cand` pro zavaděč ze zásoby (322 kontaktů, jiný dialekt). Na K3 jsou
+tři věty `T` (první tik, zrcadlo přenosu, další koeficient přenosu) a
+obvod `C`. K6 sdružuje konečné registrové přístroje pod jedním kladným
+statickým hamiltoniánem; kompaktní přístroj o 140 hradlech je oddělená
+dodaná implementace týchž stupňů, jejíž lokalitu a energii Canon
+s portovým přístrojem neztotožňuje.
 
 Účet na jeden cyklus, tam kde je cyklus dokázán, s přesnými čísly z Canonu;
 žádný nosič nepočítá vlastní prostředí a žádný neobnoví spotřebovanou zásobu:
@@ -209,7 +240,7 @@ K6 tepelný   cand  cand  T+cand cand T     T     T     T     T
 |---|---|---|---|---|
 | K2 kontakt | `U(a,d) = W K K W^-1`, 26870 kontaktů; `P_k` na `26+25k` místech, účet `68+74k` | dva čerstvé archivy na vstup, zbývající zásoba `2(k-j-1)` | celé 31místné jádro včetně bank, zdroje, hodin a voliče | `2k` archivů, které samy dekódují historii |
 | K3 registry | 80705 primitiv a dva nativní tiky na vstup | jedna archivní buňka a jeden horní registr na uchované přenosy | 48 pracovních buněk a primární kontrolní bod po tiku | `high = s`, `archive = 3s`, druhý nativní výstup |
-| K4 pole | řetězec `32N-1` souřadnic, celková energie 42 | žádná čerstvá banka; zdroj si ponechá 5 jednotek a druhý puls nevydá | 31souřadnicový přijímač v čase `N+1`, ukazatel `p = 1` | dvě jednotky v `q_(N-2)`; není to reset celého přístroje |
+| K4 pole | řetězec `32N-1` souřadnic, celková energie 42 (`23+18+1`) | žádná čerstvá banka; zdroj vydá dvě jednotky z 23 a zůstane na 21 | 31souřadnicový přijímač v čase `N+1`, ukazatel `p = 1` | dvě jednotky v posledním kanálu `q_(N-2)`; není to reset celého přístroje |
 | K6 tepelný | dva pokusy pod jedním `H_local`; export záznamu `N` kol | `(N+1)S + 7N` zásobních qubitů; pásky, kazety, lázně a řadič se neobnoví | pracovní jádro výměnou, vnější historie v `3T_hold` | první výstup na pevných místech, exportované záznamy |
 | K1 nativní | žádný cyklus | | | virtuální archiv v úplném stavu a čítači |
 
@@ -225,10 +256,10 @@ K6 tepelný   cand  cand  T+cand cand T     T     T     T     T
   je `(-b, b)^5`, „záznam“ otočení jednoho páru o `rho`, „financování“
   znamená spotřebu čerstvosti předem umístěných bank při zachovaném účtu.
   Co Canon výslovně nedodává (`canon/CANON.md`, závěr oddílu o obnově
-  pracovního jádra): syntézu surových vstupů, nakládání za běhu, autonomní
-  rozvrh, regeneraci obsazených archivů, neomezenou historii na jednom
-  konečném nosiči, kompilaci výměn do kontaktů, realizaci nativního `U`,
-  fyzikální přístroj.
+  pracovního jádra): syntézu surových vstupů, autonomní rozvrh, regeneraci
+  obsazených archivů, neomezenou historii na jednom konečném nosiči,
+  kompilaci výměn do kontaktů, realizaci nativního `U`, fyzikální přístroj;
+  `canon/CORE.md` k tomu přidává „no later independent loading“.
 - **K6 tepelný.** `THERMAL-ORIGINAL-PORT-APPARATUS [T]`: pro `k >= 8` jeden
   kladný statický hamiltonián připraví zdroj a provede tři kroky `U_rec`,
   pravděpodobnost návěští `> 1/4`, všechno palivo, kopie a tepelné vady
@@ -240,7 +271,7 @@ K6 tepelný   cand  cand  T+cand cand T     T     T     T     T
   říká, co zůstává dodané (nestacionarita, součinová hranice, vazby) a že
   neproběhl žádný výpočet ani verifier.
 - **K1 nativní.** Deklarované `U` na `Omega = N_0 x F_5^6`, pět afinních
-  involucí `a..e`, Thueův–Morseův volič. Umí: společnou připravenost a
+  involucí `a..e`, Thueův-Morseův volič. Umí: společnou připravenost a
   obnovu zdroje z úplného stavu a čítače (`U-NATIVE-COMMON-READY-SOURCE-RETENTION`),
   přenos zbytkového součtu a jeho přesné čtení z `(n, q_n, r_n)` s nejvýše
   dvacetihodnotovým souhrnem čítače (`U-NATIVE-RAW-RESIDUE-READOUT`), jeden
@@ -269,19 +300,26 @@ K6 tepelný   cand  cand  T+cand cand T     T     T     T     T
   vratný lokální ukazatel `C5`; financované zdroje a obsazené záznamy;
   rezidualní krok s vlastním záznamem. Návrat přijímače „is not a reset of
   the complete apparatus“ a odvození z `U` nebo `J` zůstává otevřené.
-- **K5 procházka.** Spektrální čtení energie `H = i Log W`, baterie se
-  přesným zachováním, vázaný pár, homogenní záchyt se zápisem. Záchyt je
-  asymptotický; konečný čas pro obecné přípravy je otevřený (větve PR #1813,
-  #1815, #1817, #1823 čekají na posudek).
+- **K5 procházka.** Spektrální čtení energie `H = i Log_alpha(W)`, baterie
+  se přesným zachováním, vázaný pár, homogenní záchyt se zápisem; Diracův
+  dvouprocházkový kontakt je oddělená podrodina s vlastním znaménkovým
+  účtem (`DIRAC-CONTACT-COMPLETE-ACCOUNT`, `DIRAC-CONTACT-SOURCE-COHERENCE`).
+  Záchyt je asymptotický; konečný čas pro obecné přípravy je otevřený
+  (větve PR #1813, #1815, #1817, #1823 čekají na posudek).
 
 ## 6. Jak do sebe části zapadají
 
-`INTERFACES.tsv` má 46 hran. Uvnitř nosičů jsou hrany většinou
-`proved-composition`: na K2 celý řetězec S2 až S8 jednou větou, na K6
-řetězec S0 až S8 (S0 až S3 jako kandidáti), na K1 S2 až S6, na K4 S2 až S7,
-na K3 S4 až S7 jako `C`. Mezi nosiči jsou hrany buď
-`declared-not-identified` (Canon sám říká, že to nejsou tytéž objekty), nebo
-`missing-bridge`. Jediná dokázaná hrana mezi nosiči je B2 na úrovni `C`.
+`INTERFACES.tsv` má 48 hran čtyř druhů: `proved-composition` (věta nebo
+sloučená poznámka skládá dva stupně na jednom nosiči),
+`same-carrier-composable` (týž nosič a zákon, doslovné zřetězení má smysl,
+věta o skladbě chybí; v tabulce zatím nepoužito), `declared-not-identified`
+(Canon sám říká, že to nejsou tytéž objekty) a `missing-bridge` (nic je
+nespojuje; na jednom nosiči jde o neshodu typů, kterou smlouva nazývá
+`UNMATCHED`, mezi nosiči o neexistující most). Uvnitř nosičů jsou hrany
+většinou `proved-composition`: na K2 řetězec S3 až S8 jednou větou a S2 -> S4
+přímo (S2 -> S3 ze zásoby chybí), na K6 řetězec S0 až S8 (S0 až S3 jako
+kandidáti), na K1 S2 až S6, na K4 S2 až S7, na K3 S4 až S7 jako `C`. Jediný
+dokázaný přenos stavu mezi nosiči je B2 na úrovni `C`.
 
 Čtyři mosty a co o nich dnes víme:
 
@@ -316,8 +354,9 @@ na K3 S4 až S7 jako `C`. Mezi nosiči jsou hrany buď
   `U` je `COHERENT-W-LOCAL-NATIVE-NETWORK [T]`: stín surové `W` modulo pět
   je semikonjugovaný na `U_net`, tedy na buňkové nativní `U` s dodatečnou
   vazbou každý třetí tik, a Canon dodává, že tato vazba není odvozena
-  z původního kroku; záznamový krok `U_rec` „is not an intertwiner“
-  původního `U`.
+  z původního kroku („The factor is not a derivation of that extra coupling
+  from the original checkpoint update“); o záznamovém kroku `U_rec` Canon
+  mluví jen takto, žádný intertwiner s původním `U` neuvádí.
 - **B4 tepelný nosič a procházka.** Existuje na úrovni původního portového
   zařízení s vlastní energií; rovnost účtů není dokázána a bootstrap
   nestacionaritu dodává.
@@ -335,9 +374,10 @@ je celé číslo `t` v `B_t = t(1 - j^2)`.
 
 Kde se aparátová linka vůbec dotýká fyzikálního žebříku, říká
 `canon/DEPENDENCIES.tsv`: do vlastníka `QDD-INSTRUMENT-APPARATUS` vede
-66 hran `BOUNDED_BY`, z toho 12 z aparátových řádků (osm nativních čtení a
-hranic, `HOMOGENEOUS-CAPTURE-CURRENT-RECORD`, `FIELD-RETAINED-CONTACT-ARCHIVE`,
-`SIGNED-PORT-OCCUPIED-REVERSIBILITY`, `FUNDED-CONTACT-INVOLUTION`); všech
+66 hran `BOUNDED_BY`, z toho 12 ze slotových řádků S0 až S8 této mapy (osm
+nativních čtení a hranic, `HOMOGENEOUS-CAPTURE-CURRENT-RECORD`,
+`FIELD-RETAINED-CONTACT-ARCHIVE`, `SIGNED-PORT-OCCUPIED-REVERSIBILITY`,
+`FUNDED-CONTACT-INVOLUTION`) a dalších pět z řádku X1 a z tohoto oddílu; všech
 dvanáct řádků `RELATIVE-CONTACT-*` a čtyři řádky zrcadla přenosu mají hrany
 jen mezi sebou, k `J-UNIT` a k definicím, a žádnou ke slovníku, metrologii,
 fotonu, barvě ani kosmologii. Stroj se tedy k fyzice váže výhradně jako
@@ -354,7 +394,8 @@ generator“ (`canon/CORE.md`).
 
 ## 7. Co je vyloučeno
 
-Hranice, které stavbu stroje omezují a jsou registrované nebo sloučené:
+Hranice, které stavbu stroje omezují; registrované nebo sloučené, pokud
+není uvedena větev:
 
 - uchování `N` výsledků vyžaduje alespoň `4N` měnících se pomocných míst a
   účet `12N`; čistá obnova banky při uchovaném výsledku neexistuje
@@ -381,7 +422,8 @@ Hranice, které stavbu stroje omezují a jsou registrované nebo sloučené:
 
 ## 8. Co chybí, seřazeno podle toho, co by posunulo celý stroj
 
-Pořadí je podle přínosu pro uzavřený cyklus, ne podle snadnosti.
+Pořadí: podle počtu stupňů a mostů cyklu, které by uzavření položky
+doplnilo; snadnost do pořadí nevstupuje.
 
 1. **Společný nosič a sjednocení účtů (B3, B4).** Bez něj zůstane prostředí
    a bootstrap na tepelném nosiči a obnova s archivy na kontaktním, a žádná
@@ -394,8 +436,8 @@ Pořadí je podle přínosu pro uzavřený cyklus, ne podle snadnosti.
    připuštěnou `C` a globální permutaci s přesnou inverzí a certifikátem všech
    dosažitelných stavů; „missing interface, failed search, subclass no-go or
    failure of one C is STOP, not negative closure“ (`canon/FRONTIER.md`).
-   Krok: nejdřív zmrazit přípustnou nativní třídu, teprve potom hledat.
-   Proveditelnost: otevřený výzkum.
+   Krok podle této podmínky: zmrazení přípustné nativní třídy; hledání bez
+   něj je `STOP`. Proveditelnost: otevřený výzkum.
 3. **Uzavřený cyklus na kontaktním nosiči (`CC-CONTACT` ve smlouvě).** Chybí
    dokázané S3 ve vstupním dialektu stopek. Krok: ohraničené hledání pevného
    slova, které z výstupu zavaděče a vypůjčené zásoby se zbytky 2 a 3 vyrobí
@@ -413,7 +455,8 @@ Pořadí je podle přínosu pro uzavřený cyklus, ne podle snadnosti.
    k 62 registrům a zapsat celý osmikrokový rozvrh včetně obou nativních
    tiků jako jednu pevnou permutaci 70 buněk, aby rozvrh přestal být
    dodaným řízením (sekce 8 `notes/C-J-LAMBDA-CARRY-N/THEOREMS.md` už
-   definuje hodinový unitár `V_N`, „not self-stopping“). Proveditelnost: dny.
+   definuje hodinový unitár `V_N`: „Není to samočinné zastavení ani záruka
+   nového čistého archivu“). Proveditelnost: dny.
 6. **Nejmenší postačující statistika čítače pro nativní čtení.** Rozhodnuto
    touto nocí (`check_native_counter_statistic.py`): mapa `kappa -> (q_n, r_n)`
    je pro každé `n >= 3` funkcí souhrnu `T_n^read` (to je obsah inverzního
@@ -421,10 +464,17 @@ Pořadí je podle přínosu pro uzavřený cyklus, ne podle snadnosti.
    kolizí mezi 20 podpisy má 90 hran a chromatické číslo 5. Souhrn
    `(sigma_n, N_n mod 5)` o deseti hodnotách stačí (`z_n` je nadbytečné),
    `N_n mod 5` samo nestačí a žádný postačující souhrn nemá méně než pět
-   tříd; explicitní pětitřídní tabulka je ve výstupu skriptu. Je to důsledek
-   registrované věty a konečného výpočtu, NON-CANONICAL; mění jen hranici
-   S6/K1, ne stroj. Zbývá nezávislé přečtení a případně hezčí tvar tabulky
-   (žádný afinní vzorec v `N`, `sigma`, `z` z 500 zkoušených nevyhovuje).
+   tříd; explicitní pětitřídní tabulka je ve výstupu skriptu. Dva kroky,
+   na nichž závěr pro všechna `n` stojí: pro pevné `n` je inverzní vzorec
+   `(qhat, rhat)` afinní bijekce `F_5^2` (`sigma_n = ±1` je invertibilní
+   modulo 5), takže `(q_n, r_n)` je funkce `T_n^read` a `(q_3, r_3)`; a
+   `(q_3, r_3)` závisí na `P` jen přes `kappa` (tabulka C3,
+   `U-NATIVE-APPARATUS-HISTORY-FACTOR`). Souhrn ani pětitřídní tabulka
+   nedefinují autonomní hodiny, jak Canon u `T_n^read` výslovně říká. Je to
+   důsledek registrované věty a konečného výpočtu, NON-CANONICAL; mění jen
+   hranici S6/K1, ne stroj. Zbývá nezávislé přečtení a případně hezčí tvar
+   tabulky (žádný afinní vzorec v `N`, `sigma`, `z` z 500 zkoušených
+   nevyhovuje).
 7. **Zákon výskytu.** Přijatý na `D`; po vlastní dohodě programu není slotem,
    který by konstrukce zaplnila (oddíl 9). Vlastníci
    `QDD-TERMINAL-EVENT-SEMANTICS [O]`, `QDD-INSTRUMENT-APPARATUS [O]`.
@@ -442,25 +492,29 @@ Procesní dluh, který stavbu brzdí, zaznamenala konsolidace z 7. 11.
 (`UNMERGED-WORK.md`, větev PR #1952); její README zapisuje, že 8. 11. po
 souhlasu vlastníka bylo šestnáct PR sloučeno (deset s obsahem, šest
 záznamů ABANDONED) a patnáct překonaných PR zavřeno s ponechanými větvemi.
-Otevřených PR je k ránu 8. 11. 189. Pro stroj z toho zbývá: rozhodnout šest
-větví pólové výšky #1896 až #1906 (úplné záznamy, pro existenci překonané
-slovem W322), posoudit #1910, #1917, #1930 s #1942, #1950 a #1953, #1956,
-#1957 jedním posudkem na dvojici, a především custody: nároky v issues
+Otevřených PR je k ránu 8. 11. podle GitHubu 189 (stav mimo strom). Pro
+stroj z toho zbývá: rozhodnout šest větví pólové výšky #1896 až #1906
+(úplné záznamy, pro existenci překonané slovem o 322 kontaktech), posoudit
+#1910, #1917, #1930 s #1942, #1950 a #1953, #1956, #1957 jedním posudkem na
+dvojici, rozhodnout o sondách konečného času záchytu #1813, #1815, #1817 a
+návrhu #1823, a custody: nároky v issues
 #1920 až #1947 (čtení komutátoru kontaktu, společné hodiny, nativní
 přenos číslic, statická Gaussova fáze, modální mezera, archiv absorpční
 fáze a další) hlásí dokončené první běhy v samostatných git bundlech, které
 „nejsou předkem veřejného main“ a nemají vzdálenou větev, přitom je #1930,
 #1953 a #1957 už citují. Dokud nejsou na veřejné větvi, nejsou pro stroj
-evidencí. Samostatně: PR #1952 má po sloučeních červené CI jen proto, že
+evidencí. Samostatně: PR #1952 má po sloučeních červené CI, protože
 `check_verifier.py` vidí v merge commitu šestnáct nových adresářů sond;
-spraví to merge `main` do jeho větve.
+jeho vlastní diff proti `main` žádnou sondu nemění.
 
 ## 9. Poctivý odhad, jak daleko stavba je
 
 Měřeno stupni cyklu: na kontaktním nosiči je sedm z devíti stupňů
-registrováno jako `T` (S2, S4 až S8) a osmý (S3) je sloučený kandidát;
-na tepelném nosiči je dotčeno všech devět, z toho pět jako `T` a čtyři jako
-kandidáti bez verifieru; na nativním nosiči čtyři z devíti. Měřeno mosty:
+registrováno jako `T` (S2 až S8, přičemž S3 je `T` jen pro vstupy připravené
+v dialektu přístroje a zavaděč ze zásoby je sloučený kandidát); na tepelném
+nosiči je dotčeno všech devět, z toho šest jako `T` (S2, S4 až S8; S2 spolu
+s kandidátem) a tři jako čistí kandidáti bez verifieru (S0, S1, S3); na
+nativním nosiči čtyři z devíti. Měřeno mosty:
 jeden ze čtyř, a ten jako `C`. Měřeno tím, co dělá stroj fyzikou: nula ze tří
 (výskyt, realizace, jednotky), přičemž první z nich je podle textu programu
 přijatá volba, ne nevyplněný slot.
@@ -482,9 +536,9 @@ samy nedodávají.
 Tempo posledních dnů (pět aktivací od 24. 10. do 3. 11., deset vědeckých
 sloučení a šest uzavřených opuštěných pinů během jedné noci 8. 11.) šlo do
 oplocení a do kompozice uvnitř K2 a K6. To je v souladu s metodou
-programu, ale je třeba to říci nahlas: bez rozhodnutí vlastníka o mostech B1
-a B3 (jaký nosič je „ten“ nosič) povede další tempo k sedmému stroji, ne
-k jednomu.
+programu. Rozhodnutí o mostech B1 a B3, tedy o tom, který nosič je nosičem
+celého cyklu, žádná z těchto konstrukcí nenahrazuje; dokud chybí, přibývají
+nosiče vedle sebe.
 
 ## 10. Nejmenší další rozhodnutelné kroky
 
@@ -498,14 +552,17 @@ Proveditelné bez nové premisy, v pořadí podle oddílu 8:
    kandidátem a Theorem L bez přijetí.
 3. Dořešit šest větví pólové výšky a #1950 jako záznamy (sloučit nebo
    uzavřít, větve nechat).
-4. Spočítat nejmenší postačující statistiku čítače (oddíl 8, bod 6) a
-   nejmenší energetické reprezentanty po hranicích `n <= 64` pro
-   `U-NATIVE-UNIT-LIFT-OBSTRUCTION`; obojí je jednodenní přesný výpočet.
-5. Teprve potom se vracet k B1 a B3, a to zmrazením tříd, ne hledáním.
+4. Nezávisle přečíst výsledek `check_native_counter_statistic.py` (oddíl 8,
+   bod 6) a spočítat nejmenší energetické reprezentanty po hranicích
+   `n <= 64` pro `U-NATIVE-UNIT-LIFT-OBSTRUCTION`; přesný konečný výpočet.
+5. Mosty B1 a B3 mají podle rozhodovacích podmínek ve `canon/FRONTIER.md`
+   nejprve zmrazení přípustných tříd; hledání před zmrazením je podle týchž
+   podmínek `STOP`, ne záporné uzavření.
 
 Co udělala tato noc: smlouvu (`notes/canon/DEF-FINITE-APPARATUS-ASSEMBLY-CONTRACT.md`),
 tabulky a jejich kontrolu (`ASSEMBLY.tsv`, `INTERFACES.tsv`,
-`check_assembly.py`), audit rozhraní zavaděče (`check_loader_interface.py`)
+`check_assembly.py`), audit rozhraní zavaděče (`check_loader_interface.py`),
+výpočet nejmenšího souhrnu čítače (`check_native_counter_statistic.py`)
 a tuto mapu s ověřením (`VERIFICATION.md`). Nic z toho nemění registr.
 
 ## 11. Co tato mapa nedělá
@@ -518,9 +575,9 @@ registr.
 ## 12. Soubory
 
 - `README.md`: tato mapa.
-- `ASSEMBLY.tsv`: 42 slotů stupeň/nosič s tvrzeními, statusy, evidencí a tím,
-  co chybí.
-- `INTERFACES.tsv`: 46 hran s druhem rozhraní a evidencí.
+- `ASSEMBLY.tsv`: 40 slotů stupeň/nosič a tři řádky mimo cyklus
+  s tvrzeními, statusy, evidencí a tím, co chybí.
+- `INTERFACES.tsv`: 48 hran s druhem rozhraní a evidencí.
 - `check_assembly.py`, `check_assembly.stdout`: mechanická kontrola obou
   tabulek proti `canon/REGISTRY.tsv` a stromu; `ASSEMBLY PASS`.
 - `check_loader_interface.py`, `check_loader_interface.stdout`: audit
