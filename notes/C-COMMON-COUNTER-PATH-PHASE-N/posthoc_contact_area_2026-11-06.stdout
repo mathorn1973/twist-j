@@ -1,0 +1,22 @@
+PASS AB(v) equals v*conj(v) = A + B*phi computed by ring multiplication
+PASS P1 identity: Delta[x g(x) + y g(y)] = 2 (rho g(rho) - 1) d g(d) for g = sigma_1..sigma_4 contacts=20000
+   rho*g(rho)-1 in the power basis: {1: (-2, -1, -1, -1), 2: (-1, 1, 0, 0), 3: (-1, 0, 0, 1), 4: (0, 0, 0, 0)}
+PASS P1 the factor vanishes exactly for complex conjugation only
+PASS P1 interpolated coefficient vectors reproduce d*g(d) and (A,B)
+P1 rank over Q: exact forms d^2, d*s2(d), d*s3(d): 8 ; with A and B added: 10 (of 10 monomials)
+P1 rank over F5 of the exact forms: 6 ; A in span: True ; B in span: True
+PASS P1 over Q the Hermitian forms A,B are independent of the exact forms (loop area can be nonzero)
+PASS P1 CERTIFICATE: A mod 5 and B mod 5 lie in the F5 span of exact forms, so the Hermitian area of every closed contact loop is in 5 Z[phi]
+P2 orbit I_0 states=2060 (complete) nonzero integer defects=1000 ; lattice basis rows (Nchg, S=sumQ, A, B): [[5, 10, 5, 0], [0, 15, 5, 5]]
+PASS P2 I_0 every loop has S, A, B divisible by 5
+   count not divisible by 5 on some loop: False
+P2 orbit I_1 states=20400 (complete) nonzero integer defects=10472 ; lattice basis rows (Nchg, S=sumQ, A, B): [[1, -75, -30, -15], [0, 5, 5, -5], [0, 0, 5, -10]]
+PASS P2 I_1 every loop has S, A, B divisible by 5
+   count not divisible by 5 on some loop: True
+P2 orbit I_-2 states=200000 (CAPPED) nonzero integer defects=73904 ; lattice basis rows (Nchg, S=sumQ, A, B): [[1, 25, 10, 5], [0, 5, 10, -15], [0, 0, 5, -10]]
+PASS P2 I_-2 every loop has S, A, B divisible by 5
+   count not divisible by 5 on some loop: True
+PASS P3 loop w then literal inverse of sigma(w): midpoint is G_-2 and the state returns to I_-2 attempted contacts=1610
+P3 loop totals: changed=627 admitted=629 S=5950 A=2370 B=1210 ; mod 5: changed=2 admitted=4 S=0 A=0 B=0
+PASS P3 loop: count holonomy 2 mod 5 with S, A, B all 0 mod 5
+RESULT PASS fails=0
