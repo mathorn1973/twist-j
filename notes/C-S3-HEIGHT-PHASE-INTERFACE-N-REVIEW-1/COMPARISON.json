@@ -1,0 +1,128 @@
+{
+  "review": "phase-2 comparison of frozen review.py (commit df5b02081a46b7dcfb3bef942d7811285ecc49bb) vs PR #1961 search.py, CONSTRUCTIVE-3/verify.py, audit.py, assembly.py at head 73f3cb4946b05f5d63aba1c279642f77c699caef",
+  "decision": "PASS S POZNAMKOU",
+  "diff_real_count": 0,
+  "quantities": [
+    {
+      "quantity": "frozen_phase1_blobs",
+      "mine": {
+        "PREREG.md": "2fa530c3fc223f55e119b7e08e6de224e99c92bb 16875 B sha256 266a80bb99fb2d4f3349ee50077bc6e9bd80abfddfd1fbd2c8d26afed9f1b245",
+        "README.md": "451974c5d74646b28c06b0f3e6cae0dc05584ef6 4970 B sha256 91431ffa4268fa739e8637c8bfb23af2861cf34f403be666d86bfd16a6274a00",
+        "review.py": "ed52007ba55667302ae3aa13197d7cc1e35daea3 34395 B sha256 c196e23ef7fb969b1b3704f9de4e5f195df321d82af694748d7e10ee407b9cbf"
+      },
+      "author": {
+        "github_readback_at_commit": "df5b02081a46b7dcfb3bef942d7811285ecc49bb",
+        "PREREG.md": "2fa530c3fc223f55e119b7e08e6de224e99c92bb 16875 B",
+        "README.md": "451974c5d74646b28c06b0f3e6cae0dc05584ef6 4970 B",
+        "review.py": "ed52007ba55667302ae3aa13197d7cc1e35daea3 34395 B"
+      },
+      "verdict": "MATCH",
+      "note": "GitHub contents API blob ids and sizes equal local git hash-object before any phase-2 run; PREREG.md alone was committed as 4f729be8eb372053d931ce1eb4a044f70fb8c3d6 before the first checker execution and before any author executable or output was opened"
+    },
+    {
+      "quantity": "review_second_run_result",
+      "mine": "RESULT PASS, exit 0, stderr 0 B, stdout 2328 B sha256 5e246b69c69bb3ef643873ec90ff499c110a323d50417164abdef8301f930237",
+      "author": "phase-1 second run identical byte for byte",
+      "verdict": "MATCH",
+      "note": "RUN-REVIEW.txt, RUN-REVIEW-STDERR.txt"
+    },
+    {
+      "quantity": "author_programs_replayed_unchanged",
+      "mine": "Linux x86_64, CPython 3.13.18, clean checkout of 73f3cb49: verify.py exit 0 / 0 B stderr / 4165 B == EXPECTED.txt; audit.py RUN-VERIFY.txt exit 0 / 0 B / 3707 B == AUDIT_EXPECTED.txt; assembly.py exit 0 / 0 B / 2906 B == ASSEMBLY_EXPECTED.txt; search.py exit 0 / 0 B / 449 B == root EXPECTED.txt; worktree unchanged after the runs",
+      "author": "RUN.md (both): Windows 11, x86_64, CPython 3.12.10, same four outputs with sha256 7243…c2203, 1633…2e9db, fcc7…ae74f, b7dc…4378a",
+      "verdict": "MATCH",
+      "note": "raw byte identity (cmp) for all four; the author writes LF bytes through stdout.buffer, so no Windows newline issue arises"
+    },
+    {
+      "quantity": "sha256sums_and_pins",
+      "mine": "sha256sum -c: root 10/10 OK, CONSTRUCTIVE-3 12/12 OK; the six files frozen at 5a925abb and the six files frozen at 7406c146 are blob-identical at the head; results were added only in 4f84c75b and 73f3cb49; author and committer A. M. Thorn on all four commits; root REVIEW.md was added with the results as the PREREG allows",
+      "author": "RUN.md: public pins read back before execution; no frozen file changed",
+      "verdict": "MATCH",
+      "note": "commit timestamps (pin 11:40:18Z, run 11:41:06Z, result 11:47:50Z) are consistent with pin-before-run but are author-set metadata, not an external witness"
+    },
+    {
+      "quantity": "compiler_word",
+      "mine": "95 contacts built literally from PROOF §2-§5, M_s = C(x,d_s) C(d_s,g)",
+      "author": "95 contacts, 20 marker contacts written with the gate first (C(g,d_s)), word_json_sha256 a2a86bf3…f8c8",
+      "verdict": "DIFF-CONVENTION",
+      "note": "all 95 unordered pairs equal in order; the 20 raw differences are pure orientation flips, and review.py R02 proves the contact map is orientation-free; the author's REVIEW.md records the canonicalization a<b before freezing; after normalizing orientation my word gives the author's exact JSON sha256"
+    },
+    {
+      "quantity": "compiler_endpoints_traces_stock",
+      "mine": {"endpoints": "five 15-slot states", "traces": "five A/R strings", "admitted_per_t": [30, 36, 37, 38, 44], "stock": "7 values, Q=80, H=33+14phi, Sigma=(-4,-10,-6,-10)", "x_t": "5 values", "initial_Q": "119+10t^2"},
+      "author": {"endpoints": "complete_final_states", "traces": "forward_admission_traces", "stock": "stock_four_coefficients, stock_q 80, stock_h (33,14), stock_sum", "x_t": "transformed_x_four_coefficients", "initial_Q": [159, 129, 119, 129, 159]},
+      "verdict": "MATCH",
+      "note": "compared state by state and character by character in compare_after_run.py; my FP_TRACES and FP_ENDPOINTS recomputed from the author's data give my phase-1 values"
+    },
+    {
+      "quantity": "marker_and_writer_cases",
+      "mine": "20 marker pairs (RR off-sample, AA on-sample with reference 0 then (B,J)); 24 writer cases with exact traces A R^(5-p) A^4 A^p and R A^(5-p) R^4 A^p",
+      "author": "marker_checks 20 with the same AA/RR pattern; writer_checks 24 with the same trace strings; audit.py uses the alternative identity x_s+d_s = 2 rho x_s / J",
+      "verdict": "MATCH",
+      "note": "audit.py's marker formula is a genuinely different derivation of the same value"
+    },
+    {
+      "quantity": "cut_counts",
+      "mine": "compiler 2375 cuts per PREREG R07; separator, marker and writer checks counted in my own units",
+      "author": "verify.py 3790 = 15 + 200 + 1200 + 2375; audit.py 4075 = 2375 + 500 + 1200",
+      "verdict": "DIFF-CONVENTION",
+      "note": "the shared quantity 2375 (95 forward + 380 inverse per input, five inputs) matches; the rest is bookkeeping of auxiliary checks"
+    },
+    {
+      "quantity": "stopwatch_word_S",
+      "mine": "S composed from the WORKBANK PROOF §5 blocks equals WORD535.txt contact by contact (535); |W|=5350, |W^-1|=21400, |K|=60, |U|=26870; FP_S 12f7a12e… equals the independent review #1879's Fingerprint[S]",
+      "author": "assembly.py parses WORD535.txt literally (535 contacts, sha256 ca6bdd7a…c916b) and does not recompose it from blocks",
+      "verdict": "MATCH",
+      "note": "two different routes to the same word: block composition (mine) versus fixture parsing (author)"
+    },
+    {
+      "quantity": "assembly_cases_and_final_states",
+      "mine": "14 cases, 19 cycles, boundaries 147 (start, 6 per stage, swaps, after inverse), per-case final states, archives untouched after completion, archive-only decode == input, literal inverse restores",
+      "author": "14 cases in the same order, 114 boundary checks, 442510 archive address guards, per-case final_state_sha256",
+      "verdict": "MATCH",
+      "note": "all 14 author digests reproduced from my states in the author's JSON format; boundary counting differs (I count start and post-inverse boundaries, the author counts compare() calls); the author additionally guards every primitive's addresses against completed archives, which I check only at boundaries"
+    },
+    {
+      "quantity": "assembly_counts",
+      "mine": {"contacts": 2597775, "admitted": 864540, "refused": 1733235, "swaps": 50},
+      "author": {"contact_cuts": 2597775, "accepted": 864540, "refused": 1733235, "swap_cuts": 50},
+      "verdict": "MATCH",
+      "note": "my admitted/refused split computed in compare_after_run.py over the assembly part only"
+    },
+    {
+      "quantity": "assembly_resources",
+      "mine": "from built states: N=39+25k, E=177+78k+10 sum t^2, H=(70+30k+4 sum t^2, 37+18k+2 sum t^2), Sigma=(1+4k,-9-2k,-6,-12), common aux 39+20k slots with account 177+60k, archives 60 per pair, word 27345k contacts and 5(k-1) swaps, inverse 109380k",
+      "author": "same formulas asserted in assembly.py (lines 125-127, 136-138, 187) and per-case Q/H/slots rows",
+      "verdict": "MATCH",
+      "note": "per-case Q, H and slots rows compared directly"
+    },
+    {
+      "quantity": "stopwatch_closed_form_and_copier",
+      "mine": "W I(n,r) == (Y_(n+10 mod 9), X_r, controls, M[-r], M[-r-Delta_n]) for all 10 cores; W^-1 restores; K copies M[r] to a fresh bank with 41/60 admitted for all r",
+      "author": "assembly.py checks the same W endpoint inside each cycle (after_run) and the copies; no separate K-on-all-r check",
+      "verdict": "MATCH",
+      "note": "my R09/R10 re-audit the sealed predecessors' identities that the note uses as premises"
+    },
+    {
+      "quantity": "bfs_predecessor",
+      "mine": {"status": "INCONCLUSIVE", "reason": "depth cap", "visited": 12853, "max_depth": 6, "generated": 92120, "unchanged": 66022, "duplicate": 13246, "fully_expanded": 3290, "visited_order_sha256": "0158b2b9e1ba6398b1ea19f6c6e54233854d9436fac55395c5ea5d943c6be3a1"},
+      "author": {"status": "INCONCLUSIVE", "reason": "DEPTH_CAP", "visited": 12853, "max_visited_depth": 6, "generated": 92120, "unchanged": 66022, "duplicate": 13246, "fully_expanded_nodes": 3290, "visited_states_sha256": "0158b2b9e1ba6398b1ea19f6c6e54233854d9436fac55395c5ea5d943c6be3a1"},
+      "verdict": "MATCH",
+      "note": "my own BFS under the frozen K7 semantics reproduces the author's visited order digest exactly; the author's stronger reading that no common word of length <= 6 exists in the eight-slot contact-only class follows from the complete depth-five expansion and goal tests on every inserted depth-six node"
+    },
+    {
+      "quantity": "independence_of_author_programs",
+      "mine": "review.py: separate design (own carrier, own words from the texts, two multiplications, h from the product, own BFS), blind to the author's code until phase 2",
+      "author": "verify.py and audit.py share the case lists and structure but use different representations and a different marker identity; assembly.py imports verify.py's scalar routines (declared); all three are same-session",
+      "verdict": "DIFF-CONVENTION",
+      "note": "the author's RESULT.md and PREREG.md state this honestly; this review is the first structurally separate implementation"
+    },
+    {
+      "quantity": "ci_replay_of_notes",
+      "mine": "job 128721432764 of run 42477317656: VERIFY NOT APPLICABLE, REPRODUCE NOT APPLICABLE; check_policy, check_canon (v109, 609), check_ledger, check_gate_contract pass on the PR tree locally",
+      "author": "PR body: repository CI is separate from scientific execution of these notes",
+      "verdict": "MATCH",
+      "note": "CI green is not a two-architecture gate for this note"
+    }
+  ]
+}

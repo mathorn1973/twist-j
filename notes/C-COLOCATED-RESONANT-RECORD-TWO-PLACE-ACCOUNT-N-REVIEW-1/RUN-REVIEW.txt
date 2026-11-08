@@ -1,0 +1,17 @@
+C-COLOCATED-RESONANT-RECORD-TWO-PLACE-ACCOUNT-N-REVIEW-1 review.py
+R01 PASS ring identities, J_inverse=0,-1,-1,0, det(J)=+-1, det(1-rho)=5, mul_A==mul_B pairs=9686
+R02 PASS h==S-forms, 2Q==Tr_K(v conj v), N(h)==det, Q>0 on grid=625
+R03 PASS h(1-j^2)=2+phi h(1-j^4)=3-phi h(J)=2-phi h(3+rho)=10-3phi (2+phi)(3-phi)=5 h(i)=(2+phi)h(d)
+R04 PASS theorem1.3 grid=625 B0_count=49 counterexample 15!=10 E2(c=1) 5!=10 FP_B0=c60ce0b9db823a7cc537b88fd27f89600a36414e8ce13dfa390e9a850b97ae78
+R05 PASS contact law pairs=6561 refusal==odd difference, identity on refusal, C^5=id, invariants
+R06 PASS theorem2 pairs=6480 cuts=64800 resonant=38 grid_seeds=624 FP_RESONANT=9e1f6899511d1071c1b3ff928793fd17fd031b1f5bb9fe4327d363a186918e29
+R07 PASS Phi_5 irreducible over F_2, classes=16, nonzero products=225 all nonzero mod 2O
+R08 PASS theorem3 seeds=162 phases=5 cuts=40500 odd_onehot_pass=81 even_onehot_fail=81 even_witness_m1_k0=81 FP_BANK=b56d71dcec5d2d215f5dda43612788ee47fe3ae71ca8bc225b006ca57936e5ab
+R09 PASS c#=-1,-2,-2,0 h=3+4phi Q=10 helper 55->20 quantum=35 area=6+8phi port P27=(0, 35) P35=(35, 0)
+R10 PASS theorem4 seeds=81 profiles=12 channel_checks=4860 shares==count shares (rational and Z[phi])
+R11 PASS theorem5 lock cases=405 backreaction cases=405 x'=(1+rho^2)c rho^m z'=(1-rho^2)c rho^m
+R12 PASS theorem5.3 modes=(5,4),(7,6) n=1..25 P_n odd, gcd(P_n,2b^n)=1, Chebyshev agreement, 4 primitive polarizations
+R13 PASS errata E1 (1,2,2,1): h=2+3phi Q=7 quantum=25; E3 352A+16B on grid, 200!=352 at c=1; E4 sign identity
+R14 PASS mutant_current_sign_detected=True mutant_J_inverse_detected=True
+CHECKS=14 FAILED=0
+RESULT PASS
