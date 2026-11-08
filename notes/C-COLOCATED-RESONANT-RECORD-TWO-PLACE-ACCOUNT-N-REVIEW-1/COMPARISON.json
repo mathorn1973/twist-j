@@ -1,0 +1,128 @@
+{
+  "review": "phase-2 comparison of frozen review.py (commit 1d5c58675145d9799aff4b4b0a84f4ac73c49a58) vs PR #1959 verify.py and break.py at head 2dd5c7acaea30a9b6d39529044d05f85c2ce99ab",
+  "decision": "PASS S POZNAMKOU",
+  "diff_real_count": 0,
+  "quantities": [
+    {
+      "quantity": "frozen_phase1_blobs",
+      "mine": {
+        "PREREG.md": "9aec74cdb5aff31928032b338a4f6f9aa020d504 14713 B sha256 c0406d6ce6b3fbf2d4378658c6a0ca501521c44df15d0ff9304a83c74408684f",
+        "README.md": "dbe586f89a441f84db2ee376693ee61c72006cf0 4094 B sha256 0c5520e2fcdef00644d0c325437106593bf3c8358ae3e09b507529cb1256aa5a",
+        "review.py": "7455d3f6b53ca3ef026c8a23633cea53c2492837 26611 B sha256 a84df55b72d49c47390668df22d1abfd3cc30da86fd223662efee6f963014f1c"
+      },
+      "author": {
+        "github_readback_at_commit": "1d5c58675145d9799aff4b4b0a84f4ac73c49a58",
+        "PREREG.md": "9aec74cdb5aff31928032b338a4f6f9aa020d504 14713 B",
+        "README.md": "dbe586f89a441f84db2ee376693ee61c72006cf0 4094 B",
+        "review.py": "7455d3f6b53ca3ef026c8a23633cea53c2492837 26611 B"
+      },
+      "verdict": "MATCH",
+      "note": "GitHub contents API blob ids and sizes equal local git hash-object before any phase-2 run; PREREG.md was committed alone as f2e0e0dfdc2a7c594cc438f7e3258e1afa5a2c93 before the first checker execution"
+    },
+    {
+      "quantity": "review_second_run_result",
+      "mine": "RESULT PASS, exit 0, stderr 0 B, stdout 1628 B sha256 13a2271fd12cc4cc2fbfc1744ada8360914aa3f31b17bc8513497ca9e32a85d8",
+      "author": "phase-1 run identical byte for byte (same sha256)",
+      "verdict": "MATCH",
+      "note": "RUN-REVIEW.txt, RUN-REVIEW-STDERR.txt"
+    },
+    {
+      "quantity": "author_verify_exit_and_cmp",
+      "mine": "not applicable (author program run by me, Linux x86_64, CPython 3.13.18)",
+      "author": "verify.py exit 0, stderr 0 B, stdout 576 B sha256 a9e13f041b866a4dcae3b17754e01d5c2f6184835b02b1b26d7e3e8bb204c1f4, cmp vs EXPECTED.txt IDENTICAL",
+      "verdict": "MATCH",
+      "note": "raw byte identity without any newline normalization; the author's RUN.md records a CRLF/LF direct-comparison failure on Windows only"
+    },
+    {
+      "quantity": "author_break_exit_and_cmp",
+      "mine": "not applicable (author program run by me, Linux x86_64, CPython 3.13.18)",
+      "author": "break.py exit 0, stderr 0 B, stdout 576 B sha256 a9e13f041b866a4dcae3b17754e01d5c2f6184835b02b1b26d7e3e8bb204c1f4, cmp vs BREAK_EXPECTED.txt IDENTICAL, cmp vs RUN-VERIFY.txt IDENTICAL",
+      "verdict": "MATCH",
+      "note": "RUN-BREAK.txt, RUN-BREAK-STDERR.txt"
+    },
+    {
+      "quantity": "author_sha256sums_and_publication_table",
+      "mine": "sha256sum -c SHA256SUMS: 13 files OK; PUBLICATION.md intake column: 11 rows, bytes and SHA-256 equal to the files, identical/edited relation consistent; PREREG.md pins of PROOF.md, verify.py, break.py equal the files, its README.md/SOURCES.md pins describe the original pre-edit bytes as PUBLICATION.md states",
+      "author": "same claims in PUBLICATION.md and RUN.md",
+      "verdict": "MATCH",
+      "note": "administrative, not scientific"
+    },
+    {
+      "quantity": "b0_count_grid625",
+      "mine": 49,
+      "author": 49,
+      "verdict": "MATCH",
+      "note": "verify.py b0_count counter (line 273); mine R04 counter"
+    },
+    {
+      "quantity": "theorem2_pairs_cuts_resonant",
+      "mine": {"pairs": 6480, "cuts": 64800, "resonant_grid1": 38, "grid2_seeds": 624},
+      "author": {"pairs": 6480, "cuts": 64800, "resonant_grid1": 38, "grid2_seeds": 624},
+      "verdict": "MATCH",
+      "note": "author's CUTS and RESONANT_GRID1 are counters (lines 310, 362); PAIRS=6480 and RESONANT_GRID2=624 are printed literals backed by the loops (lines 311-312, 385-387); mine are counters. Author's iff criterion adm2 and x2==a and F2==F0 (line 354) plus the 3-slot-sum iff (line 317); mine four equivalent statements"
+    },
+    {
+      "quantity": "theorem3_bank",
+      "mine": {"seeds": 162, "cuts": 40500, "odd_onehot_pass": 81, "even_onehot_fail": 81, "even_witness_m1_k0": 81, "admitted_per_odd_run": 2},
+      "author": {"seeds": 162, "cuts": 40500, "odd_onehot_pass": 81, "even_onehot_fail": 81, "even_witness_m1_k0": "asserted per even seed (line 530)", "admitted_per_odd_run": "implied by one-hot flags (lines 505, 512-513)"},
+      "verdict": "MATCH",
+      "note": "slot ordering differs (author appends the signal companion last, line 454; mine puts it first, K4) and the literal 40-contact inverse is the same reversed C^4 word; E_full == 4Q(Jc)+20Q((3+rho)c) == 352A+16B is checked only by me (author checks conservation of E_full, not its closed form)"
+    },
+    {
+      "quantity": "a4_values_and_port",
+      "mine": {"c": "(-1,-2,-2,0)", "h": "3+4phi", "Q": 10, "Q_a": 5, "Q_h0": 55, "Q_h1": 20, "w0": 35, "area": "6+8phi", "P27": "(0,35)", "P35": "(35,0)"},
+      "author": {"c": "(-1,-2,-2,0)", "h": "(3,4)", "Q": 10, "Q_a": 5, "Q_h0": 55, "Q_h1": 20, "w0": 35, "area": "(6,8)", "P27": "(0,35)", "P35": "(35,0)"},
+      "verdict": "MATCH",
+      "note": "author labels P27 = input (1-rho)rho^4, P35 = input 1-rho (lines 601-611), same as my K8; author asserts the port pairs (line 632) and prints them as literals (line 795); same seven-slot port and word (0,1,3,4)"
+    },
+    {
+      "quantity": "theorem4_shares",
+      "mine": {"seeds": 81, "profiles": 12, "channel_checks": 4860, "mechanism": "each event is a literal fresh five-channel bank run (6075 bank runs); W_k and H_k accumulated; cross-multiplied equalities in Z and Z[phi]"},
+      "author": {"seeds": 81, "profiles": 12, "channel_checks": 4860, "mechanism": "one single-channel arrival per phase (lines 667-678), W_k = N_k * quantum as an algebraic multiple (line 688), Fraction equalities per component (lines 698-707)"},
+      "verdict": "DIFF-CONVENTION",
+      "note": "different profiles (mine K6; author's lines 645-658) and different mechanism; identical conclusion. The author's RESULT.md already says the A5 profiles are algebraic aggregates, not a simulated detector"
+    },
+    {
+      "quantity": "theorem5_lock_backreaction",
+      "mine": {"lock": 405, "backreaction": 405},
+      "author": {"lock": 405, "backreaction": 405},
+      "verdict": "MATCH",
+      "note": "same expected states (1+rho^2)c rho^m and (1-rho^2)c rho^m; I additionally assert d2 = -rho^(m+1) c and the E6 negative form"
+    },
+    {
+      "quantity": "theorem5_3_denominators",
+      "mine": {"modes": "(5,4),(7,6)", "n_max": 25, "polarizations": "(1,0,0,0),(1,1,0,0),(0,1,-1,0),(1,2,2,0)", "cross_check": "Chebyshev Fraction recurrence"},
+      "author": {"modes": "(5,4),(7,6)", "n_max": 25, "polarizations": "(1,0,0,0),(0,1,0,0),(1,0,-1,0),(-1,-2,-2,0)", "cross_check": "Fraction reduction of P_n/(2b^n) (lines 762-767)"},
+      "verdict": "DIFF-CONVENTION",
+      "note": "different polarization fixtures and cross-check, same conclusion; neither side proves the all-n statement by machine"
+    },
+    {
+      "quantity": "errata_E1_E3_E4",
+      "mine": "E1 (1,2,2,1): h=2+3phi Q=7 quantum 25; E3 352A+16B on 625 seeds; E4 sign identity on 625 d2",
+      "author": "not tested at runtime by either program (ERRATA.md is prose)",
+      "verdict": "DIFF-CONVENTION",
+      "note": "my R13 has no author runtime counterpart; verified only by me and by reading"
+    },
+    {
+      "quantity": "assertion_totals",
+      "mine": "not counted in the author's unit (14 checks, each an aggregate of thousands of equalities)",
+      "author": "TOTAL_ASSERTIONS=676464 (per-block counters incremented by fixed increments plus 6 per cut)",
+      "verdict": "DIFF-CONVENTION",
+      "note": "unit differs; no common quantity to compare"
+    },
+    {
+      "quantity": "independence_of_break_py",
+      "mine": "my review.py: separate design, own fixtures, own slot order, own profiles, two multiplications, determinants, Chebyshev, mutants",
+      "author": "break.py mirrors verify.py block by block: same fixtures, same profiles, same slot order, same assertion increments and identical output strings; it differs in representation (5-cyclic ring modulo the diagonal, unreduced displacement (2v-x+F)/4, 4x4 matrix trace/determinant) only",
+      "verdict": "DIFF-CONVENTION",
+      "note": "not a defect; the PR's PREREG.md describes break.py as an independent representation, and REVIEW.md claims no separate review. Both author programs share one control flow, so their byte-identical stdout is a representational cross-check, not a second audit"
+    },
+    {
+      "quantity": "ci_replay_of_notes",
+      "mine": "job logs of run 42468892459 (x86_64 job 128694755971): VERIFY NOT APPLICABLE, REPRODUCE NOT APPLICABLE; check_verifier selects only probes/ and reproduce/",
+      "author": "PR body: repository CI is separate from scientific replay of these notes",
+      "verdict": "MATCH",
+      "note": "CI green means policy/unit/Canon/ledger/gate checks only; it is not a two-architecture gate for this note"
+    }
+  ]
+}
