@@ -1,0 +1,9 @@
+C-PRIME-FOURIER-SUPPORT-UNCERTAINTY-N verify
+arithmetic exact Z[x]/(Phi_N); no floating point
+Phi_5 coefficients low-to-high 1,1,1,1,1
+GATE G1_P5_ALL_MINORS_NONZERO PASS minors=251 by_size=25,100,100,25,1 zero_F=0 zero_conjF=0
+GATE G2_P5_SUPPORT_BOUND_6 PASS (S,T)_pairs_with_|S|+|T|<=5=606 blocked=606
+GATE G3_P5_SHARP_ALL_SPLITS PASS splits=1+5,2+4,3+3,4+2,5+1
+GATE G4_PRIMES_2_3_7_ALL_MINORS_NONZERO PASS p=2:minors=5:zero=0 p=3:minors=19:zero=0 p=7:minors=3431:zero=0
+GATE G5_COMPOSITE_4_6_BOUND_FAILS PASS N=4:minors=69:zero=4:subgroup_split=2+2 N=6:minors=923:zero=120:subgroup_split=2+3
+VERDICT 5/5 PASS

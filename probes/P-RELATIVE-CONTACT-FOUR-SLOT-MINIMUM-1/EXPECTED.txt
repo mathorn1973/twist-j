@@ -1,0 +1,9 @@
+P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1 exact reconstruction
+ALGEBRA pair_power_cases=26244 inverse_order_accounts=PASS
+POSITIVE contacts=16 auxiliary_account=27 forward_inverse=PASS
+SIGNED contacts=14 auxiliary_account=12 forward_inverse=PASS
+SCALARS q<=22 count=841 sha256=71bec97c9b2ff42c4ba2eb1f308a8ed3d09b1a8f9626b552eb8b174fdf032e72
+{"closed_sizes":{},"counts":{"account_sources":0},"energy":12,"exclusion_sha256":"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945","final_banks":1830,"final_sha256":"3b3ae6fd61bb81af0f89597cc4cf2ede0595fe2ae0ba2a2618bb028475c3db83","initial_banks":715,"initial_sha256":"6c6a78129f2cfed47ea96c2d399615e213563a0398d3d686ed6e76e40de3ff96"}
+{"closed_sizes":{"target_1":108},"counts":{"account_pairs":1692,"account_sources":320,"parity_excluded":1584,"target_closed":108},"energy":17,"exclusion_sha256":"c3abbb94f9fabfa52c4d67a19b4b086597ce1d846b9e0fae62c28fc706ddcfea","final_banks":18880,"final_sha256":"a1e8244c10ad1c098994c643bcfc66add83dbb66199ed0b058743f851c282f49","initial_banks":5500,"initial_sha256":"7f32ab5b3c02b40eb172e36180ed0a1d846dd8c11d303bacef5303f17ec86361"}
+{"closed_sizes":{"source_5":112,"target_1":2908,"target_13":700,"target_25":100,"target_33":132,"target_5":3592,"target_57":132},"counts":{"account_pairs":70664,"account_sources":5284,"parity_excluded":62988,"source_closed":112,"target_closed":7564},"energy":22,"exclusion_sha256":"70620fab20c8fe98d4f472ca31e7f4a88b796b9dc3a7267a6474b1a06830f94a","final_banks":114985,"final_sha256":"1d4f8c800292e6feae98108d0841d4ea26894f01857f9c9a8e584e30dd5eff51","initial_banks":31075,"initial_sha256":"0ae0a0362ab6716b192a5cf15ed892b402d2800f510b695e009a41cd987f3a9d"}
+PASS positive_minimum_27 signed_minimum_12 supplied_contact_L1_only

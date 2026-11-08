@@ -1,0 +1,441 @@
+{
+  "account": 82,
+  "boundary_sha256": "f93a5460597ad2a02fc91fdd693e75cb99270dee6ddb631ddb9d7ff6f70b8ae5",
+  "common_auxiliary_slots": 26,
+  "complete_inverses": 10,
+  "contacts_per_step": 535,
+  "distinct_five_coefficient_pair_checks": 58,
+  "distinct_four_coefficient_pair_checks": 58,
+  "endpoint_sha256": "a10212635f9c3a5079952aa7a46a24352f62c6506fcb43cc4c10295ea4d347e4",
+  "events": 30,
+  "first_record_count": 5,
+  "full_boundaries": 100,
+  "full_read_checkpoints": 200,
+  "initial_and_final_residue_vector_count": 1,
+  "input_states": 10,
+  "labelled_residue_vector": [
+    0,
+    2,
+    0,
+    2,
+    3,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2
+  ],
+  "macro_intervals": [
+    1,
+    8
+  ],
+  "paired_arithmetic_contact_applications": 267500,
+  "primitive_intervals": [
+    804,
+    4011
+  ],
+  "read_checkpoint_sha256": "5bf8b7777e46eab10acd850d373efaa4078913bad1c82d74a9f15517dc2b118b",
+  "record_pairs": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      3
+    ]
+  ],
+  "records": [
+    {
+      "codes": [
+        0,
+        4
+      ],
+      "events": [
+        {
+          "completion_contact": 261,
+          "onset_contact": 1,
+          "read": 1,
+          "selector_before": 0,
+          "tick": 0
+        },
+        {
+          "completion_contact": 1065,
+          "onset_contact": 805,
+          "read": 2,
+          "selector_before": 1,
+          "tick": 1
+        },
+        {
+          "completion_contact": 5076,
+          "onset_contact": 4816,
+          "read": 1,
+          "selector_before": 2,
+          "tick": 9
+        }
+      ],
+      "input": [
+        0,
+        0
+      ]
+    },
+    {
+      "codes": [
+        4,
+        3
+      ],
+      "events": [
+        {
+          "completion_contact": 261,
+          "onset_contact": 1,
+          "read": 1,
+          "selector_before": 0,
+          "tick": 0
+        },
+        {
+          "completion_contact": 1065,
+          "onset_contact": 805,
+          "read": 2,
+          "selector_before": 1,
+          "tick": 1
+        },
+        {
+          "completion_contact": 5076,
+          "onset_contact": 4816,
+          "read": 1,
+          "selector_before": 2,
+          "tick": 9
+        }
+      ],
+      "input": [
+        0,
+        1
+      ]
+    },
+    {
+      "codes": [
+        3,
+        2
+      ],
+      "events": [
+        {
+          "completion_contact": 261,
+          "onset_contact": 1,
+          "read": 1,
+          "selector_before": 0,
+          "tick": 0
+        },
+        {
+          "completion_contact": 1065,
+          "onset_contact": 805,
+          "read": 2,
+          "selector_before": 1,
+          "tick": 1
+        },
+        {
+          "completion_contact": 5076,
+          "onset_contact": 4816,
+          "read": 1,
+          "selector_before": 2,
+          "tick": 9
+        }
+      ],
+      "input": [
+        0,
+        2
+      ]
+    },
+    {
+      "codes": [
+        2,
+        1
+      ],
+      "events": [
+        {
+          "completion_contact": 261,
+          "onset_contact": 1,
+          "read": 1,
+          "selector_before": 0,
+          "tick": 0
+        },
+        {
+          "completion_contact": 1065,
+          "onset_contact": 805,
+          "read": 2,
+          "selector_before": 1,
+          "tick": 1
+        },
+        {
+          "completion_contact": 5076,
+          "onset_contact": 4816,
+          "read": 1,
+          "selector_before": 2,
+          "tick": 9
+        }
+      ],
+      "input": [
+        0,
+        3
+      ]
+    },
+    {
+      "codes": [
+        1,
+        0
+      ],
+      "events": [
+        {
+          "completion_contact": 261,
+          "onset_contact": 1,
+          "read": 1,
+          "selector_before": 0,
+          "tick": 0
+        },
+        {
+          "completion_contact": 1065,
+          "onset_contact": 805,
+          "read": 2,
+          "selector_before": 1,
+          "tick": 1
+        },
+        {
+          "completion_contact": 5076,
+          "onset_contact": 4816,
+          "read": 1,
+          "selector_before": 2,
+          "tick": 9
+        }
+      ],
+      "input": [
+        0,
+        4
+      ]
+    },
+    {
+      "codes": [
+        0,
+        2
+      ],
+      "events": [
+        {
+          "completion_contact": 530,
+          "onset_contact": 270,
+          "read": 2,
+          "selector_before": 0,
+          "tick": 0
+        },
+        {
+          "completion_contact": 4541,
+          "onset_contact": 4281,
+          "read": 1,
+          "selector_before": 1,
+          "tick": 8
+        },
+        {
+          "completion_contact": 5345,
+          "onset_contact": 5085,
+          "read": 2,
+          "selector_before": 2,
+          "tick": 9
+        }
+      ],
+      "input": [
+        1,
+        0
+      ]
+    },
+    {
+      "codes": [
+        4,
+        1
+      ],
+      "events": [
+        {
+          "completion_contact": 530,
+          "onset_contact": 270,
+          "read": 2,
+          "selector_before": 0,
+          "tick": 0
+        },
+        {
+          "completion_contact": 4541,
+          "onset_contact": 4281,
+          "read": 1,
+          "selector_before": 1,
+          "tick": 8
+        },
+        {
+          "completion_contact": 5345,
+          "onset_contact": 5085,
+          "read": 2,
+          "selector_before": 2,
+          "tick": 9
+        }
+      ],
+      "input": [
+        1,
+        1
+      ]
+    },
+    {
+      "codes": [
+        3,
+        0
+      ],
+      "events": [
+        {
+          "completion_contact": 530,
+          "onset_contact": 270,
+          "read": 2,
+          "selector_before": 0,
+          "tick": 0
+        },
+        {
+          "completion_contact": 4541,
+          "onset_contact": 4281,
+          "read": 1,
+          "selector_before": 1,
+          "tick": 8
+        },
+        {
+          "completion_contact": 5345,
+          "onset_contact": 5085,
+          "read": 2,
+          "selector_before": 2,
+          "tick": 9
+        }
+      ],
+      "input": [
+        1,
+        2
+      ]
+    },
+    {
+      "codes": [
+        2,
+        4
+      ],
+      "events": [
+        {
+          "completion_contact": 530,
+          "onset_contact": 270,
+          "read": 2,
+          "selector_before": 0,
+          "tick": 0
+        },
+        {
+          "completion_contact": 4541,
+          "onset_contact": 4281,
+          "read": 1,
+          "selector_before": 1,
+          "tick": 8
+        },
+        {
+          "completion_contact": 5345,
+          "onset_contact": 5085,
+          "read": 2,
+          "selector_before": 2,
+          "tick": 9
+        }
+      ],
+      "input": [
+        1,
+        3
+      ]
+    },
+    {
+      "codes": [
+        1,
+        3
+      ],
+      "events": [
+        {
+          "completion_contact": 530,
+          "onset_contact": 270,
+          "read": 2,
+          "selector_before": 0,
+          "tick": 0
+        },
+        {
+          "completion_contact": 4541,
+          "onset_contact": 4281,
+          "read": 1,
+          "selector_before": 1,
+          "tick": 8
+        },
+        {
+          "completion_contact": 5345,
+          "onset_contact": 5085,
+          "read": 2,
+          "selector_before": 2,
+          "tick": 9
+        }
+      ],
+      "input": [
+        1,
+        4
+      ]
+    }
+  ],
+  "scope": "NON-CANONICAL / L1 / candidate-C",
+  "second_alternatives_per_first": 2,
+  "second_record_count": 5,
+  "slots": 31,
+  "status": "PASS",
+  "steps_each": 10,
+  "study": "result-exposed confirmation; ten-input finite contract",
+  "word_sha256": "ca6bdd7a9b43e329cbc3630f26e32125b1d16a9872b9563e57733f5c408c916b"
+}

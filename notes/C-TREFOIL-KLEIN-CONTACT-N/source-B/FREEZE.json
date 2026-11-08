@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-17T17:40:31.337548+00:00",
+  "files": {
+    "PREREG.md": "5061341dd53c3814ef87293b4a5d361600b123f53ac1892bd25005bb46b5640f",
+    "contact/CONTRACTS.md": "a59c01fae3fda515c430156b3c35700158dc01b72106bdb4fad5822e7939a7e7",
+    "contact/PROOF.md": "fe33a9e87ed500feb7ece6d6ef6cb49ef950fb98d2633116e730b582059ab3cf",
+    "geometry/PREREG_CONTRACT_DRAFT.md": "2677add0d957bddb190e73362afddbcab73aaf2d5f80a52b69d48d38a5d42dde",
+    "geometry/PROOF.md": "a52eadca5c21565224b77493b496554ed7d79387daa02b76b952cc163f67e4de"
+  },
+  "kind": "NON-CANONICAL local auxiliary preregistration",
+  "new_scientific_runs_before_freeze": 0
+}

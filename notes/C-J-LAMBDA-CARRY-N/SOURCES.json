@@ -1,0 +1,43 @@
+{
+  "authority": {
+    "canon_bytes": 1370107,
+    "canon_sha256": "52302c640033dd15d4a7a075cad16fa48b1473b7396d1f7413536a9ec45422e7",
+    "content_commit": "9242db4f040d67d9417eacd06612230b74248cff",
+    "main_commit": "a193e389fb1ddb0bdc89165b015c95a17eb1e425",
+    "repository": "mathorn1973/twist-j",
+    "tag": "canon-v106"
+  },
+  "boundary": "Conditional L1 circuit; enlarged addressed apparatus and preparation supplied. No native U realization, occurred outcome law or L1-to-L6 promotion.",
+  "date": "2026-10-29",
+  "origin": {
+    "date": "2026-10-28",
+    "description": "Author-owned same-conversation general carry construction, locally frozen before its two original exact audits; this publication is not retroactive public preregistration.",
+    "license": "Apache-2.0",
+    "original_bundle_bytes": 89336,
+    "original_bundle_sha256": "2f5021b670cafc4158b2da4a79a3bb097758c97fee0faf46750459abd1a83fa2"
+  },
+  "public_dependencies": [
+    "C20-TEICHMULLER-SPLIT",
+    "QDD-AFFINE-CONTROL-REALIZATION"
+  ],
+  "reservation": 1818,
+  "selected_source_files": {
+    "THEOREMS.md": {
+      "bytes": 15583,
+      "sha256": "19f05a4365ac131b9c2e4deaa6cb2e19cfcccc5ec2b5ec90fe07f42417fdf84f"
+    },
+    "check_independent.py": {
+      "bytes": 27436,
+      "sha256": "7d6bad0dc8ee8a5c534cbce4888ff8464e33009a9b74bdc6b78eb16a21d9482c"
+    },
+    "compiler.py": {
+      "bytes": 13621,
+      "sha256": "6568abd79d31ae69ac34e163a55da4d34269da97ef1bdfeaf7a890df2fda23e3"
+    },
+    "verify_general.py": {
+      "bytes": 12945,
+      "sha256": "6543587aee0c561d7080a99ca191082658ae569ee994cc256e932fff43239245"
+    }
+  },
+  "status": "NON-CANONICAL"
+}
