@@ -232,7 +232,11 @@ K6 tepelný   cand  cand  T+cand cand T     T     T     T     T
   `F_5`, 500 vstupů, 40348 primitiv, inverze je doslova obrácené slovo
   s invertovanými primitivy, 48 čistých pracovních buněk obnoveno. Je `[C]`, protože zapojení, rozvrh
   a druhý povolený nativní původ jsou dodané a nativní kroky nejsou globálně
-  invertovány. Násobič `J` a momenty přenosu jsou sondy téhož kompilátoru.
+  invertovány. Řádek `C` je doslova instance `N = 2` téhož kompilátoru
+  (`layout(n)` má `14n + 22` buněk), jehož všeobecný vratný násobič `J`
+  pro každé `N` (`136917 N` párových pulzů, `|c_j| <= 35` pro každý
+  dosažitelný přenos) a momenty přenosu zůstávají NON-CANONICAL sondami
+  sloučenými 8. 11.
 - **K4 pole a buňkové zdroje.** Úplný konzervativní řetězec pro každé `N`,
   první příchod `N - 1`, práce `N`, návrat původního přijímače `N + 1`,
   vratný lokální ukazatel `C5`; financované zdroje a obsazené záznamy;
@@ -361,7 +365,11 @@ Pořadí je podle přínosu pro uzavřený cyklus, ne podle snadnosti.
 5. **Povýšení B2 z `C`.** Krok: vratné slovo, které po uchování `h = s`,
    `k = 3s` vrátí oba registry na prázdno kopií do dvou čerstvých buněk, a
    spočítané čerstvé buňky na běh, srovnané se dvěma archivy na vstup u
-   pracovních bank. Proveditelnost: dny.
+   pracovních bank. Druhý krok: připojit `8` pětihodnotových buněk čítače
+   k 62 registrům a zapsat celý osmikrokový rozvrh včetně obou nativních
+   tiků jako jednu pevnou permutaci 70 buněk, aby rozvrh přestal být
+   dodaným řízením (sekce 8 `notes/C-J-LAMBDA-CARRY-N/THEOREMS.md` už
+   definuje hodinový unitár `V_N`, „not self-stopping“). Proveditelnost: dny.
 6. **Nejmenší postačující statistika čítače pro nativní čtení.** Rozhodnuto
    touto nocí (`check_native_counter_statistic.py`): mapa `kappa -> (q_n, r_n)`
    je pro každé `n >= 3` funkcí souhrnu `T_n^read` (to je obsah inverzního
