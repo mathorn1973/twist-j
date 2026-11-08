@@ -65,6 +65,36 @@ In sibling draft pull requests:
 - `twistjdotcom` #18: refreshed stale `dateModified` and sitemap dates, dropped
   foreign `.gitignore` rules.
 
+## Executed on 2026-11-08 after owner approval
+
+The owner approved decisions 1 (in part), 3, 5 and the handoff tags of
+decision 8, and declined decision 6.
+
+- **Merged into `main`** with merge commits, each after the PR branch was
+  brought up to date with `main` and both architecture jobs and `check`
+  passed on the updated head. Every head was first replayed on the current
+  `main` tree. 16 pull requests in all:
+  - custody: #1908, #1915, #1912, #1857, #1819, #1821, #1746, #1761, #1764,
+    #1766. `notes/C-THERMAL-REGISTER-PREPARATION-N/HAMILTONIAN.md`, which
+    `canon/CANON.md` cites, is now on `main`;
+  - abandoned-pin records: #1636, #1637, #1638, #1656, #1672, #1673.
+- **Held, not merged:**
+  - #1643 and #1657 (completed FAIL records) and #1646 and #1648 (V104 M):
+    their verifiers freeze the v103 authority context and print
+    `FALSIFIER=AUTHORITY` against the current Canon. They need a reviewed
+    registration in `tools/probe_replay_contexts.json` and
+    `tools/probe_replay_context.py` first, as was done for their merged
+    siblings in `00c089de`;
+  - #1639, #1644 and #1658: the V104 release review (row E) requires explicit
+    errata before merge.
+- **Closed without merge, branches kept:** the 15 superseded pull requests
+  of decision 3.
+- **Not done, blocked by this session's git policy:** deleting the 19 MERGED
+  branches and pushing the three handoff provenance tags. The regenerated
+  ledger matched the recorded 19 exactly and every one was re-verified as an
+  ancestor of `main`. The owner can run the guarded procedure from
+  `notes/BRANCH-LEDGER-2026-08-24/README.md` locally.
+
 ## Owner decisions, in order of value
 
 1. **Close open obligations by merge.** ABANDONED #1636, #1637, #1638, #1656,
