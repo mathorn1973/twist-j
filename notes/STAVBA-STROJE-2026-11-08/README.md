@@ -118,6 +118,14 @@ druhý je mimo cyklus (oddíl 7); třetí jsou mosty B3 a B4; čtvrtý je
 `METRO-EDGE-SCALE [O]` a `SCHEME-DICTIONARY [O]`; pátý je stupeň S4 na nosiči
 K5 (konečný čas záchytu).
 
+Tentýž autor to říká v kapitole 38 rukopisu Thornovými ústy (řádek 320):
+„Co stroj nedává, je port ven: který účet přístroj v přírodě zapíše, který
+výsledek a jak často, jak se znormuje společná akce a propojí s bezrozměrnou
+vazbou α a co je modelová jednotka délky a času. A rozvrh, podle kterého
+čte, mu zatím dodáváme zvenku. Dokud to chybí, jsou všechna čísla nahoře
+o stroji. O přírodě začnou mluvit až s portem.“ Tato mapa měří přesně tu
+větu: co stroj dává uvnitř, a kde je port.
+
 Slovo stroj zde znamená matematický objekt na hladině L1. Věta o něm není
 věta o světě; to je zásada programu a tato mapa ji nikde neobchází.
 
@@ -166,7 +174,9 @@ candidate-T), zásoba `2u` (PR #1900), 131 ze 171 neutrálních zásob s
 `Q <= 20` (PR #1902, #1904), hypotéza o úměře počtu a `H` (PR #1923),
 sestup Gramových čteček přes nativní krok (PR #1950, obě hypotézy vystřelily)
 a tři piny `P-INTEGER-K1-SCALED-BRIDGE-1..3` (vada součtu stavů, ABANDONED).
-Z knižního kroku ze 4. 11. „uzavřít pětivstupový zavaděč“ je tím splněna
+Rukopis ze 4. 11. ještě říká „tři vstupy z pěti umíme naložit jedním
+společným slovem; všech pět zatím ne“; od 8. 11. platí všech pět.
+Z knižního kroku „uzavřít pětivstupový zavaděč“ je tím splněna
 existenční část; zbylých 31 nevysvětlených neúspěchů z censu zásob a
 „propojit zavaděč s fázovou západkou a modální akcí“ zůstávají otevřené.
 
@@ -191,6 +201,17 @@ K4 pole      -     -     T     -     T     T     T     T     -
 K5 procházka -     -     -     -     T     T     T     -     -
 K6 tepelný   cand  cand  T+cand cand T     T     T     T     T
 ```
+
+Účet na jeden cyklus, tam kde je cyklus dokázán, s přesnými čísly z Canonu;
+žádný nosič nepočítá vlastní prostředí a žádný neobnoví spotřebovanou zásobu:
+
+| Nosič | Jeden cyklus | Spotřeba čerstvé zásoby | Co se vrátí | Co zůstane |
+|---|---|---|---|---|
+| K2 kontakt | `U(a,d) = W K K W^-1`, 26870 kontaktů; `P_k` na `26+25k` místech, účet `68+74k` | dva čerstvé archivy na vstup, zbývající zásoba `2(k-j-1)` | celé 31místné jádro včetně bank, zdroje, hodin a voliče | `2k` archivů, které samy dekódují historii |
+| K3 registry | 80705 primitiv a dva nativní tiky na vstup | jedna archivní buňka a jeden horní registr na uchované přenosy | 48 pracovních buněk a primární kontrolní bod po tiku | `high = s`, `archive = 3s`, druhý nativní výstup |
+| K4 pole | řetězec `32N-1` souřadnic, celková energie 42 | žádná čerstvá banka; zdroj si ponechá 5 jednotek a druhý puls nevydá | 31souřadnicový přijímač v čase `N+1`, ukazatel `p = 1` | dvě jednotky v `q_(N-2)`; není to reset celého přístroje |
+| K6 tepelný | dva pokusy pod jedním `H_local`; export záznamu `N` kol | `(N+1)S + 7N` zásobních qubitů; pásky, kazety, lázně a řadič se neobnoví | pracovní jádro výměnou, vnější historie v `3T_hold` | první výstup na pevných místech, exportované záznamy |
+| K1 nativní | žádný cyklus | | | virtuální archiv v úplném stavu a čítači |
 
 Čtení řádků:
 
@@ -312,6 +333,17 @@ zavaděče a stopek je přeznačení se zásobou, ne transformace páru. Výraz
 „pólová výška“ není v žádném připnutém souboru definován; nabíjené množství
 je celé číslo `t` v `B_t = t(1 - j^2)`.
 
+Kde se aparátová linka vůbec dotýká fyzikálního žebříku, říká
+`canon/DEPENDENCIES.tsv`: do vlastníka `QDD-INSTRUMENT-APPARATUS` vede
+66 hran `BOUNDED_BY`, z toho 12 z aparátových řádků (osm nativních čtení a
+hranic, `HOMOGENEOUS-CAPTURE-CURRENT-RECORD`, `FIELD-RETAINED-CONTACT-ARCHIVE`,
+`SIGNED-PORT-OCCUPIED-REVERSIBILITY`, `FUNDED-CONTACT-INVOLUTION`); všech
+dvanáct řádků `RELATIVE-CONTACT-*` a čtyři řádky zrcadla přenosu mají hrany
+jen mezi sebou, k `J-UNIT` a k definicím, a žádnou ke slovníku, metrologii,
+fotonu, barvě ani kosmologii. Stroj se tedy k fyzice váže výhradně jako
+mez (bound), ne jako splátka (discharge), a kontaktní jádro se k ní neváže
+vůbec.
+
 Účtů je nejméně šest a jsou to různé veličiny: nativní zachované štítky,
 kontaktní polostopa `Q`, vratnost registrů, celočíselná energie buněk,
 spektrální energie `W` a holá energie `H_0` tepelných přístrojů (vedle nich
@@ -396,15 +428,32 @@ Pořadí je podle přínosu pro uzavřený cyklus, ne podle snadnosti.
 7. **Zákon výskytu.** Přijatý na `D`; po vlastní dohodě programu není slotem,
    který by konstrukce zaplnila (oddíl 9). Vlastníci
    `QDD-TERMINAL-EVENT-SEMANTICS [O]`, `QDD-INSTRUMENT-APPARATUS [O]`.
+   Manifest přístroje v Canonu má 26 polí, z nich 24 `UNRESOLVED`
+   (`projector_target_ids` jsou jen algebraické cíle,
+   `l6_measure_boundary = REQUIRES_SEPARATE_GATE`). Jediný rozhodnutelný
+   krok je tabulka pokrytí: pro nejlepší existující konstrukci (56místný
+   společný přístroj nebo homogenní záchyt) zapsat ke každému z 26 polí,
+   zda je pro ni definováno a kým; to nic nezavře, ale ukáže, kolik polí
+   je definiční práce a kolik fyzika.
 8. **Převod jednotek.** `METRO-EDGE-SCALE [O]`, `SCHEME-DICTIONARY [O]`;
    stroj k nim dnes nic nepřidává.
 
 Procesní dluh, který stavbu brzdí, zaznamenala konsolidace z 7. 11.
-(`UNMERGED-WORK.md`): sloučit záznamy, na nichž `main` už závisí (z nich
-#1746, #1761, #1764, #1766, #1819, #1821, #1857, #1908, #1912, #1915 jsou
-od noci 8. 11. sloučeny), rozhodnout šest větví pólové výšky #1896 až #1906
-(všechny mají úplné záznamy a jsou pro existenci překonány slovem W322) a
-posoudit #1910, #1917, #1930 s #1942, #1950 a #1956, #1957.
+(`UNMERGED-WORK.md`, větev PR #1952); její README zapisuje, že 8. 11. po
+souhlasu vlastníka bylo šestnáct PR sloučeno (deset s obsahem, šest
+záznamů ABANDONED) a patnáct překonaných PR zavřeno s ponechanými větvemi.
+Otevřených PR je k ránu 8. 11. 189. Pro stroj z toho zbývá: rozhodnout šest
+větví pólové výšky #1896 až #1906 (úplné záznamy, pro existenci překonané
+slovem W322), posoudit #1910, #1917, #1930 s #1942, #1950 a #1953, #1956,
+#1957 jedním posudkem na dvojici, a především custody: nároky v issues
+#1920 až #1947 (čtení komutátoru kontaktu, společné hodiny, nativní
+přenos číslic, statická Gaussova fáze, modální mezera, archiv absorpční
+fáze a další) hlásí dokončené první běhy v samostatných git bundlech, které
+„nejsou předkem veřejného main“ a nemají vzdálenou větev, přitom je #1930,
+#1953 a #1957 už citují. Dokud nejsou na veřejné větvi, nejsou pro stroj
+evidencí. Samostatně: PR #1952 má po sloučeních červené CI jen proto, že
+`check_verifier.py` vidí v merge commitu šestnáct nových adresářů sond;
+spraví to merge `main` do jeho větve.
 
 ## 9. Poctivý odhad, jak daleko stavba je
 
