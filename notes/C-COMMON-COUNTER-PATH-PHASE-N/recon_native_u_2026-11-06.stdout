@@ -1,0 +1,18 @@
+PASS U1 letter, new trace and fibre kick depend on (z,t) only states=15625 bits=2
+PASS U2 image sizes after ticks 1,2,3 sizes=[15625, 6250, 6250, 3125, 3125]
+PASS U2 for 3<=n<=64 the reachable set is the full sheet z_n=4+2theta_(n-1)
+PASS U2 tick is a bijection E_n -> E_(n+1) for 3<=n<64
+PASS U3 one letter per tick on E_n, 3<=n<64 (letters b,d,e only) word(3..18)=bbbebdbebbbdbbbe
+PASS U3 the tick on E_n is one affine map with linear part -P (b) or -I (d,e)
+PASS U3 lifted shift rt_n1-(-1)^(n1-n0) rt_n0 is one integer on all 15625 trajectories windows=1891 (3<=n0<n1<=64)
+PASS U3 fibre difference of any two trajectories only changes sign, n>=3
+PASS U4 pistons at n+1 are a bijective function of pistons at n alone, 3<=n<64
+PASS U5 every y in E_3 has exactly five origin preimages, one per trace sheet
+PASS U5 r_3 = r_0+1 (z0=0), 1-r_0 (z0=1,2), 2-r_0 (z0=3,4) first-three-tick words by z0: {0: ['ace'], 1: ['bbd'], 2: ['cce'], 3: ['dbd'], 4: ['ebd']}
+PASS U6 closed form of the even-window shift, all states for n0>=3
+PASS U6 closed form of the even-window shift, X1 union X4 for n0>=1 even windows=992
+PASS U6 PR #1915 windows 1->11, 11->21, 21->31 give +4,+2,+4; 1->31 and 2->32 give +10,-10 values=(4, 2, 4, 10, -10)
+CENSUS ten-tick shift over odd n0<4096 with marks (n0 mod 5,theta_(n0-1),theta_n0)=(1,0,1): {2: 24, 3: 102, 4: 104}
+CENSUS ten-tick shift over all odd n0<4096: {2: 171, 3: 1025, 4: 852}
+PASS U7 equal finite marks do not fix the shift (more than one value occurs)
+RESULT PASS fails=0

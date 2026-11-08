@@ -1,0 +1,6 @@
+SECOND AUDIT: scalar first/second moments and optimal effect PASS
+SECOND AUDIT: exact block-bound cuts for Q=8..20000 PASS
+SECOND AUDIT: root-polynomial coefficients and zero set PASS
+SECOND AUDIT: entire degree-two line interpolation PASS
+SECOND AUDIT: nonorthogonal-copy and perfect-discrimination controls PASS
+SECOND AUDIT PASS; not blind or additional architecture

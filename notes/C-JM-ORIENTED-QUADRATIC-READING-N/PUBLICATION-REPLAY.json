@@ -1,0 +1,31 @@
+{
+  "kind": "publication reproduction only; not independent confirmation or a formal architecture gate",
+  "platform": "Linux",
+  "architecture": "x86_64",
+  "python": "3.13.5",
+  "runs": [
+    {
+      "command": "python verify.py",
+      "verifier_sha256": "39fd1ce7295dee64c10eb99681d19df4a618b7176e7dca39c6267a3c4da96444",
+      "exit_code": 0,
+      "stdout_bytes": 1011,
+      "stdout_sha256": "f87b21e161ec65e26652a98b6e82b9864c64659219b3b6f5370da95a051e1d46",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "comparison_file": "ACTUAL.txt",
+      "byte_identity": true
+    },
+    {
+      "command": "python breaker.py",
+      "verifier_sha256": "948f34cabfde8cbbce5c8c60cf06ddc35381f48661cfff7008341bd8366061f6",
+      "exit_code": 0,
+      "stdout_bytes": 387,
+      "stdout_sha256": "0b60e2b2048b1785a96a34e107384cf7bc40620c69bdf3627613c619d6b1ba40",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "comparison_file": "BREAKER-ACTUAL.txt",
+      "byte_identity": true
+    }
+  ],
+  "sympy": "1.14.0"
+}
