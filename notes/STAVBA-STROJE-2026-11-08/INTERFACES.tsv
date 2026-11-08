@@ -34,6 +34,7 @@ S4/K4	S5/K4	proved-composition	FIELD-CONSERVATIVE-CHAIN-LAW[T];FIELD-LOCAL-WORK-
 S5/K4	S6/K4	proved-composition	JM-POSITIVE-REFERENCED-READING[T];INTEGER-PRIMITIVE-SOURCED-METRIC[T]	cteni s afinni referenci; metricka ctecka
 S6/K4	S7/K4	proved-composition	FIELD-CHAIN-FIRST-WORK[T]	navrat puvodniho prijimace v N+1; neni reset celeho pristroje
 S4/K4	S4/K1	declared-not-identified	FIELD-CONSERVATIVE-CHAIN-LAW[T];U-FIELD-RESIDUE-GATE[T]	odvozeni z nativniho U zustava otevrene; zbytkova brana spojuje jen nulovy predikat se shellem
+S4/K4	S4/K2	declared-not-identified	SOURCE-WORK-SHARP-SIX-DIGIT-REPRESENTATION[T];JM-RESULTANT-TRACE-SEAM[T]	okruhova shoda: zdrojova souradnice retezce se ztotoznuje s O = Z[j] pres iota, A_f je nasobeni j; JM faktor A = Z[J] = O s Gramovym blokem 2q; zadna veta neprenasi stav ani zaznam
 S8/K2	X1	missing-bridge	QDD-SELECTED-BORN[D];U-FINITE-READER-INDEPENDENCE-OBSTRUCTION[T]	vyskyt je prijat na D, nikoli odvozen; pevna ctecka s konecnou pameti nedava nezavisle hody
 S8/K6	X1	missing-bridge	QDD-SELECTED-BORN[D];THERMAL-ORIGINAL-PORT-APPARATUS[T]	ctecí okno je nemerene; vyber jedineho vysledku neni dodan
 S6/K1	X1	missing-bridge	U-POINT-SOURCE-SHARP-READOUT-NOGO[T];ENTROPY-LAYER-BRIDGE[F];TM-SYM2-MEASURE[F]	nativni vzorkovaci mechanismus neni poskytnut; tri trasy vystrelily

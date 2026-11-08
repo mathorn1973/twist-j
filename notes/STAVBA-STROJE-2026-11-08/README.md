@@ -80,7 +80,7 @@ ani doslovně okopírovat banku na čtyřech místech.
 
 Co přidává tato noc: typovanou smlouvu stroje
 (`notes/canon/DEF-FINITE-APPARATUS-ASSEMBLY-CONTRACT.md`), tabulku slotů a
-rozhraní ověřenou mechanicky proti registru (`check_assembly.py`, 68 citovaných
+rozhraní ověřenou mechanicky proti registru (`check_assembly.py`, 73 citovaných
 řádků, všechny statusy souhlasí) a jeden přesný audit rozhraní: výstupní pár
 zavaděče má zbytky `(0, 0)` modulo `1 - j`, hodinový pár stopek `(2, 3)` a
 zdrojová trojice `(0, 2, 0)`, takže žádné kontaktní slovo nepřevede jedno
@@ -96,9 +96,10 @@ přesně říci, co z každé části chybí a co by muselo platit, aby se spoji
 ## 2. Co se zde rozumí strojem
 
 Vlastník stroj popisuje v knižním kompendiu (větev `main` repozitáře knihy,
-`web/Konstrukce_ke_kapitolam.md`, oddíl „Obraz fyziky podle TWIST-J na
-ubrousku a co ještě chybí“) a jmenuje pět úkolů, které čekají „na uzavření
-hry do fyziky“: přístroj z původního kroku, zákon výskytu jednoho výsledku
+`web/Konstrukce_ke_kapitolam.md`, kapitola 38, pododdíl „Od nativní
+přípravy k homogennímu záchytu a přijímači“, řádek 1014; pět nejbližších
+kroků programu je v pododdílu „Obraz fyziky podle TWIST-J na ubrousku a co
+ještě chybí“) a jmenuje pět úkolů, které čekají „na uzavření hry do fyziky“: přístroj z původního kroku, zákon výskytu jednoho výsledku
 místo deklarovaného Bornova čtení, společný nosič a sjednocení zachovávaných
 účtů, převod jednotek a praktický konečnočasový režim záchytu pro obecné
 přípravy. Tato mapa je rozepisuje do devíti stupňů jednoho uzavřeného cyklu:
@@ -149,7 +150,7 @@ Od v109 se registr nezměnil. Na `main` ale přibylo 1. až 8. 11. toto
 
 | Datum | Artefakt | Co to pro stroj znamená | Stav |
 |---|---|---|---|
-| 6. 11. | PR #1923, `notes/C-COMMON-COUNTER-PATH-PHASE-N` | nativní fáze vlákna je funkce čítače (žádná informace o cestě při společném čítači); na kontaktu nese cestu počet měnících kontaktů, nezávislý na hermitovském součtu `H` v `5 Z[phi]`; hypotéza „počet mod 5 je lineární v H“ vystřelila | candidate-T, candidate-C, fired |
+| 6. 11. | PR #1923, `notes/C-COMMON-COUNTER-PATH-PHASE-N` | nativní fáze vlákna je funkce čítače (žádná informace o cestě při společném čítači); na kontaktu nese cestu počet měnících kontaktů, nezávislý na hermitovském součtu `H` v `5 Z[phi]` (Theorem L, nalezen až po prvním běhu); hypotéza „počet mod 5 je lineární v H“ vystřelila | candidate-T, candidate-C, fired; bez dvouarchitekturního běhu |
 | 8. 11. | PR #1908, `P-POLE-HEIGHT-FIVE-INPUT-REPLAY-1` | jedno pevné slovo o 322 kontaktech nabije pólovou výšku `t` pro všech pět `t` v `{-2..2}`, pomocníci se vrátí, inverze 1288 kontaktů | PASS, candidate-C, obě architektury |
 | 8. 11. | PR #1912, `P-POLE-HEIGHT-INTEGER-DOMAIN-1` | totéž slovo uspěje nad celými čísly právě pro těch pět `t` (55 dyadických válců, prázdná hranice) | COMPLETE, candidate-C |
 | 8. 11. | PR #1915, `P-U-PAIR-PHASE-WORK-1` | nativní vlákno páruje tiky s přírůstky `+-e_k`, kapacita vyrovnání `2s`; žádný omezený koncový potenciál nedává nenulový lineární účet práce tik/zdvih | candidate-T, candidate-C |
@@ -157,7 +158,7 @@ Od v109 se registr nezměnil. Na `main` ale přibylo 1. až 8. 11. toto
 | 8. 11. | PR #1819, #1821, `P-J-LAMBDA-CARRY-ARITHMETIC-1`, `P-CARRY-MOMENT-DEPTH-1` | vratný násobič `J` pro všechna `N` z malých sčítaček přenosu; přesné momenty přenosu se zpožděným mícháním zbytků; zdroje kompilátoru zrcadla | candidate-C s důkazy |
 | 8. 11. | PR #1746, `notes/C-FORWARD-ONLY-CAPTURE-FILTER-N` + `reproduce/` | dopředný koherentní filtr po konečném nativním záchytu | NON-CANONICAL s reprodukcí |
 | 8. 11. | PR #1761, #1764, #1766, tři tepelné poznámky | prostředí a téměř čisté registry; nabitý pracovní zásobník a hlavní hodiny z Gibbsových faktorů při třech teplotách (`D = 2^84`, `1 - q < 2^-82`); teplotní kontrast z jedné teploty a jednoho invertovaného palivového qubitu | candidate-T, analytické, bez verifieru |
-| 8. 11. | PR #1636 až #1638, #1672, #1673 | uzavření opuštěných pinů K1 a Maurer–Cartan jako ABANDONED | záznamy, ne věda |
+| 8. 11. | PR #1636 až #1638, #1656, #1672, #1673 | uzavření šesti opuštěných pinů (K1 scaled bridge, Noether closure, Maurer–Cartan) jako ABANDONED | záznamy, ne věda |
 
 Vyloučeno nebo vystřeleno ve stejném období: nabití pólové výšky `t = ±1`
 čistě z neutrálních prvků s jedinou nabitou oporou (větve PR #1896, #1898,
@@ -175,8 +176,8 @@ Tabulka `ASSEMBLY.tsv` má 42 řádků „stupeň/nosič“, každý s identifik
 tvrzení, slovem statusu, cestou k evidenci a tím, co na místě chybí.
 `check_assembly.py` ověřuje, že každé citované tvrzení existuje v registru se
 stejným statusem, že každá poznámka a sonda existuje a že každý slot má
-rozhraní. Výstup z 8. 11.: 68 odlišných citovaných řádků registru
-(51 T, 7 D, 1 C, 7 O, 2 F), `ASSEMBLY PASS`.
+rozhraní. Výstup z 8. 11.: 73 odlišných citovaných řádků registru
+(56 T, 7 D, 1 C, 7 O, 2 F), `ASSEMBLY PASS`.
 
 Zhuštěně, `T`/`C` jsou statusy registru, `cand` sloučený NON-CANONICAL
 kandidát, `-` prázdno:
@@ -209,8 +210,9 @@ K6 tepelný   cand  cand  T+cand cand T     T     T     T     T
   fyzikální přístroj.
 - **K6 tepelný.** `THERMAL-ORIGINAL-PORT-APPARATUS [T]`: pro `k >= 8` jeden
   kladný statický hamiltonián připraví zdroj a provede tři kroky `U_rec`,
-  pravděpodobnost návěští `> 1/4`, vlastní zachovaná energie, „no equality
-  with original Q“. `LOCAL-THERMAL-TWO-ATTEMPT [T]`: dva spotřební pokusy a
+  pravděpodobnost návěští `> 1/4`, všechno palivo, kopie a tepelné vady
+  započteny, vlastní zachovaná energie, „no equality with original Q or
+  measured-intervention closure“. `LOCAL-THERMAL-TWO-ATTEMPT [T]`: dva spotřební pokusy a
   výměna celého pracovního jádra, podmíněná chyba `< 2^-96`. Tři nové
   poznámky posouvají hranici přípravy: zásobník, hodiny a kurzor vznikají
   z Gibbsových faktorů, kontrast teplot z jedné teploty a paliva; každá sama
@@ -228,6 +230,10 @@ K6 tepelný   cand  cand  T+cand cand T     T     T     T     T
   druhý přenos do čerstvého cíle v téže rodině
   (`U-NATIVE-RECORD-CONTINUATION-BOUNDARY`). Archiv je jen virtuální:
   „regenerating a history is not material recording“ (`canon/CORE.md`).
+  Financované záznamy na doslovných nativních buňkách existují
+  (`FIVE-PHASE-THREE-REFERENCE-RETAINED-RECORD`,
+  `COMMON-HISTORY-FUNDED-AREA-RECEIVER`), ale jejich 182listový prefix je
+  adresován zvenčí a jeho příprava a energie nejsou součástí účtu.
 - **K3 registry.** Zrcadlo přenosu: skutečný první tik na 62 registrech
   `F_5`, 500 vstupů, 40348 primitiv, inverze je doslova obrácené slovo
   s invertovanými primitivy, 48 čistých pracovních buněk obnoveno. Je `[C]`, protože zapojení, rozvrh
@@ -249,7 +255,7 @@ K6 tepelný   cand  cand  T+cand cand T     T     T     T     T
 
 ## 6. Jak do sebe části zapadají
 
-`INTERFACES.tsv` má 45 hran. Uvnitř nosičů jsou hrany většinou
+`INTERFACES.tsv` má 46 hran. Uvnitř nosičů jsou hrany většinou
 `proved-composition`: na K2 celý řetězec S2 až S8 jednou větou, na K6
 řetězec S0 až S8 (S0 až S3 jako kandidáti), na K1 S2 až S6, na K4 S2 až S7,
 na K3 S4 až S7 jako `C`. Mezi nosiči jsou hrany buď
@@ -269,6 +275,12 @@ na K3 S4 až S7 jako `C`. Mezi nosiči jsou hrany buď
   být nemůže. Jediná brána z nativního do kontaktního světa je
   `(q, r) -> eta(q, r)` a ta je dokázaně slepá napříč rodinami zpráv
   (`U-CONTACT-SOURCE-NONINTERFERENCE [T]`).
+- **K4 a K2, okruhová shoda bez přenosu.** Zdrojová souřadnice polního
+  řetězce se ztotožňuje s `O = Z[j]` (`SOURCE-WORK-SHARP-SIX-DIGIT-REPRESENTATION [T]`,
+  `A_f` je násobení `j`) a faktor `A = Z[J]` zdrojů JM je týž okruh
+  s Gramovým blokem rovným dvojnásobku kontaktního účtu `q`
+  (`JM-RESULTANT-TRACE-SEAM [T]`). Okruh je společný; žádná věta však
+  nepřenáší připravený stav ani záznam z polní buňky na `O^m` nebo zpět.
 - **B2 nativní `U` a registry.** Existuje jako konečný výpočet
   (`U-CARRY-MIRROR-FINITE-CIRCUIT [C]`). Povýšení by chtělo nativní tik na
   celé deklarované připravené množině bez dodaného původu a s inverzí, která
@@ -419,7 +431,7 @@ they ask for does.“ Tato mapa a smlouva jsou kus té definiční práce; věty
 samy nedodávají.
 
 Tempo posledních dnů (pět aktivací od 24. 10. do 3. 11., deset vědeckých
-sloučení a pět uzavřených opuštěných pinů během jedné noci 8. 11.) šlo do
+sloučení a šest uzavřených opuštěných pinů během jedné noci 8. 11.) šlo do
 oplocení a do kompozice uvnitř K2 a K6. To je v souladu s metodou
 programu, ale je třeba to říci nahlas: bez rozhodnutí vlastníka o mostech B1
 a B3 (jaký nosič je „ten“ nosič) povede další tempo k sedmému stroji, ne
@@ -459,7 +471,7 @@ registr.
 - `README.md`: tato mapa.
 - `ASSEMBLY.tsv`: 42 slotů stupeň/nosič s tvrzeními, statusy, evidencí a tím,
   co chybí.
-- `INTERFACES.tsv`: 45 hran s druhem rozhraní a evidencí.
+- `INTERFACES.tsv`: 46 hran s druhem rozhraní a evidencí.
 - `check_assembly.py`, `check_assembly.stdout`: mechanická kontrola obou
   tabulek proti `canon/REGISTRY.tsv` a stromu; `ASSEMBLY PASS`.
 - `check_loader_interface.py`, `check_loader_interface.stdout`: audit
