@@ -47,6 +47,977 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+V110_PRIOR_COMMIT = 'e6dfc3de9659139d654000954733c084b8a6b86b'
+
+V110_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '0f9d03185ae0885af59359d06e5e84997779cae5fcf0ee474bdedf67c5c32e20',
+                  'current_bytes': 595503,
+                  'prior_sha256': '3563bd31edcbf22d0bf04ac7cd08b6687c040e8e8ae88ce9e2ca5238810d7bde',
+                  'prior_bytes': 591272,
+                  'restore': [(610, 613, '')]},
+ 'NORMATIVE.tsv': {'current_sha256': '28c8b486a9d2c7ca2930e883617479cf05519da8a07b6feaf5d6109539af91ed',
+                   'current_bytes': 78967,
+                   'prior_sha256': 'e22ec0f61c03a07861ec485bcfc3d92acf6d0ea8351e3507328c8aa4af67af6e',
+                   'prior_bytes': 78472,
+                   'restore': [(675, 678, '')]},
+ 'DEPENDENCIES.tsv': {'current_sha256': '508284fafb6299a7524e5de3e464c8497917534ac1bcad755f115f6fe90a4bb1',
+                      'current_bytes': 202823,
+                      'prior_sha256': '23e7d199bacc93194103c622d118972d7b8e90d1b070a8ae3cef8c7c1ba7b248',
+                      'prior_bytes': 200739,
+                      'restore': [(1212, 1222, '')]},
+ 'EVIDENCE.tsv': {'current_sha256': 'd9f364841fc13642c2ca4903e5ef261319f0210756d2ba3031602bf51dd0f24c',
+                  'current_bytes': 122746,
+                  'prior_sha256': '9a9aba09e832e43743be5ddf5624a5896d2ed6a0a0788afd54f35bf0b8e7a02a',
+                  'prior_bytes': 122122,
+                  'restore': [(610, 613, '')]},
+ 'HISTORY.tsv': {'current_sha256': '9b70607eda399cd4a45d903679693e5ab7bc34155aff3bf0616db091b382a42b',
+                 'current_bytes': 534051,
+                 'prior_sha256': '29a707a3e6f4a19787d46185391cce8d2bcd722bc09f69d432a5ea246c4eea8e',
+                 'prior_bytes': 532368,
+                 'restore': [(1158, 1161, '')]},
+ 'GATES.tsv': {'current_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'current_bytes': 13324,
+               'prior_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'prior_bytes': 13324,
+               'restore': []},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'current_bytes': 1502,
+                           'prior_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'prior_bytes': 1502,
+                           'restore': []},
+ 'CORE_SELECTION.tsv': {'current_sha256': '63abc00f5fe61484f3fc3eb168c094cab9b06c8ef4a10c13fdca706e756105e0',
+                        'current_bytes': 1566,
+                        'prior_sha256': '23e89cace7b70f98f6bc5ae747135654958db2e5f43579d2d2edf7a8de355002',
+                        'prior_bytes': 1422,
+                        'restore': [(53, 56, '')]},
+ 'CANON.md': {'current_sha256': '38ea0291af871a084a65fe1e4017fa7b0de2546a4430c489190c7baf6dd6a578',
+              'current_bytes': 1482168,
+              'prior_sha256': '035408ec79219cc72a7d3613cf1568154cca185137d2a2daa43b896aae0c6383',
+              'prior_bytes': 1464066,
+              'restore': [(0, 1, '# TWIST-J Public Canon v109\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v109. Normative authority and '
+                           'activation\n'),
+                          (15166, 15553, '')]},
+ 'CORE.md': {'current_sha256': 'a95d55ff497e2001d2c7d3d1de6a80131765264914fce67ecf6d613b1813a6c9',
+             'current_bytes': 55281,
+             'prior_sha256': '0fc8b996b5b900aaad7a4166faf33fab8df6d79d12ba6cb26b8fb8d2b85fc186',
+             'prior_bytes': 51239,
+             'restore': [(2,
+                          3,
+                          '**Release identity:** Public Canon v109. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v109 also declares a discrete architecture. It does not\n'),
+                         (78, 92, ''),
+                         (539, 542, '')]},
+ 'FRONTIER.md': {'current_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'current_bytes': 27382,
+                 'prior_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'prior_bytes': 27382,
+                 'restore': []},
+ 'CHANGELOG.md': {'current_sha256': '1aae5fbc7e0010ac068715d891a58ff42722fbfa2d33db3a0de40a095da88a91',
+                  'current_bytes': 220080,
+                  'prior_sha256': '9048c6cf2e7a1d217e7524b04ff7b2890713192ff2be6973901dd6e43c2c6313',
+                  'prior_bytes': 218003,
+                  'restore': [(1, 39, ''),
+                              (42, 42, '<!-- BEGIN GENERATED CURRENT COUNTS -->\n'),
+                              (44, 44, '<!-- END GENERATED CURRENT COUNTS -->\n')]},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '4cc4f2836dd334028542ddd880eb4759a6e9b8caaa1e909c4eb0c4e25a7c049c',
+                       'current_bytes': 244,
+                       'prior_sha256': '50728b2f38ab2354e41000933ea40938b76cd1b2d58d2f72fffb253910acf31b',
+                       'prior_bytes': 244,
+                       'restore': [(1, 2, 'claims\t609\n'),
+                                   (3, 4, 'status_T\t465\n'),
+                                   (10, 12, 'reproductions\t38\nevidence_none\t188\n')]}}
+
+V110_CLAIM_ROWS = {'RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION': {'claim_id': 'RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION',
+                                                    'status': 'T',
+                                                    'scope': 'at L1, for every finite m, affine '
+                                                             'all-integer preparation A+tD in O^m '
+                                                             'with arbitrary finite common stock '
+                                                             'included, and finite fixed word of '
+                                                             'total integral contacts and '
+                                                             'whole-slot SWAPs, the integer domain '
+                                                             'admits a finite partition into '
+                                                             'dyadic cylinders on each of which '
+                                                             'the full output is affine in its '
+                                                             'integer parameter; any designated '
+                                                             'output coordinate whose positive '
+                                                             'half-trace account is bounded for '
+                                                             'all t is constant on each cylinder '
+                                                             'and hence dyadic-periodic; therefore '
+                                                             'no such word produces the exact '
+                                                             'output rho^(t+c)J for every integer '
+                                                             't, for any fixed integer c, even '
+                                                             'with unrestricted retained remainder '
+                                                             'coordinates; this excludes the '
+                                                             'stated all-integer finite-word class '
+                                                             'only and neither obstructs the '
+                                                             'five-height compiler nor classifies '
+                                                             'its success at other individual '
+                                                             'integers, nonlinear input '
+                                                             'preparation or unbounded programs',
+                                                    'canon_section': '2. Time, space, and the '
+                                                                     'decoder',
+                                                    'evidence': 'inline',
+                                                    'falsifier': 'fires on failure of the finite '
+                                                                 'dyadic affine partition for an '
+                                                                 'admitted finite word or on an '
+                                                                 'exact all-integer five-periodic '
+                                                                 'nonconstant clock output in the '
+                                                                 'stated affine-input class; a '
+                                                                 'finite-height witness or failure '
+                                                                 'of a bounded search does not '
+                                                                 'falsify or prove the all-integer '
+                                                                 'statement'},
+ 'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER': {'claim_id': 'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER',
+                                           'status': 'T',
+                                           'scope': 'at L1 on the supplied integral contact '
+                                                    'carrier O^15, O=Z[j], rho=j^2, lambda=1-j, '
+                                                    'B=1-rho and J=1+rho, one explicit fixed '
+                                                    '95-contact word with seven common stock '
+                                                    'coordinates Z takes (G_t,J,-J,Z) to '
+                                                    '(G_t,rho^(t+2)J,-rho^(t+2)J,Z) for every t in '
+                                                    '{-2,-1,0,1,2}, where '
+                                                    'G_t=(lambda+tB,lambda-tB,0,0,1+j-2j^3,2); '
+                                                    'every non-clock coordinate returns exactly, '
+                                                    'the common stock has Q=80, Hermitian account '
+                                                    '33+14phi and sum (-4,-10,-6,-10), and the '
+                                                    'literal 380-contact inverse restores the '
+                                                    'entire initial state; all primitive sum, '
+                                                    'Hermitian, positive half-trace and '
+                                                    'labelled-residue invariants hold; the '
+                                                    'preparation, seven stock values and schedule '
+                                                    'are supplied, no word or stock minimum or '
+                                                    'classification of success at other individual '
+                                                    'integers is asserted, and no autonomous '
+                                                    'control, native-U realization or physical '
+                                                    'interpretation follows',
+                                           'canon_section': '2. Time, space, and the decoder',
+                                           'evidence': 'inline',
+                                           'falsifier': 'fires on any of the five admitted heights '
+                                                        'violating the displayed full endpoint, '
+                                                        'common stock, exact stock accounts, '
+                                                        'complete inverse or a primitive '
+                                                        'invariant, or on failure of a separator, '
+                                                        'singleton-marker or controlled-writer '
+                                                        'identity used in the proof; other '
+                                                        'individual heights, minimum resources, '
+                                                        'autonomous execution and physical '
+                                                        'preparation are outside scope'},
+ 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS': {'claim_id': 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS',
+                                                       'status': 'T',
+                                                       'scope': 'at L1 for every k>=1 fixed before '
+                                                                'choosing inputs, one supplied '
+                                                                'contact/SWAP program on 39+25k '
+                                                                'slots processes all 10^k '
+                                                                'sequences (n_i,t_i) in ({0,1} '
+                                                                'times {-2,-1,0,1,2})^k, with '
+                                                                'independently supplied Y_(n_i) '
+                                                                'and prepared height pairs, '
+                                                                'through the same source, '
+                                                                'translated clock and read core; '
+                                                                'each A U_i A^-1 cycle restores '
+                                                                'the complete translator and work '
+                                                                'core, keeps two fresh-target '
+                                                                'archive records and parks every '
+                                                                'earlier raw input through five '
+                                                                'fixed reload swaps; the 2k '
+                                                                'current archive banks alone '
+                                                                'decode the ordered input tuple '
+                                                                'and every completed archive is '
+                                                                'untouched during the remaining '
+                                                                'forward program; common '
+                                                                'auxiliaries number 39+20k with '
+                                                                'account 177+60k, the total '
+                                                                'account is 177+78k+10 sum_i '
+                                                                't_i^2, '
+                                                                'H=70+37phi+k(30+18phi)+(4+2phi)sum_i '
+                                                                't_i^2 and '
+                                                                'sum=(1+4k,-9-2k,-6,-12); forward '
+                                                                'counts are 27345k contacts and '
+                                                                '5(k-1) swaps, and the unreduced '
+                                                                'inverse has 109380k contacts and '
+                                                                'the same swaps and restores all '
+                                                                'initial coordinates while '
+                                                                'removing the records; the result '
+                                                                'is finite-k induction with '
+                                                                'supplied prepared inputs and '
+                                                                'growing archives, not input '
+                                                                'synthesis, arbitrary post-start '
+                                                                'loading, occupied-archive '
+                                                                'regeneration, unlimited history '
+                                                                'on one finite carrier, autonomous '
+                                                                'scheduling, contact-only swap '
+                                                                'compilation, native-U realization '
+                                                                'or physical interpretation',
+                                                       'canon_section': '2. Time, space, and the '
+                                                                        'decoder',
+                                                       'evidence': 'inline',
+                                                       'falsifier': 'fires on an admitted finite '
+                                                                    'input sequence violating the '
+                                                                    'complete cycle or endpoint, '
+                                                                    'common auxiliary preparation, '
+                                                                    'actual raw-input parking, '
+                                                                    'restored-core and '
+                                                                    'fresh-archive induction '
+                                                                    'premises, archive-only '
+                                                                    'decoding or forward '
+                                                                    'retention, resource formulas '
+                                                                    'or complete literal inverse; '
+                                                                    'finite executed cases audit '
+                                                                    'their declared instances and '
+                                                                    'are not the all-k proof'}}
+
+V110_NORMATIVE_ROWS = {'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER': {'item_id': 'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER',
+                                           'item_type': 'THEOREM',
+                                           'claim_id': 'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER',
+                                           'status': 'T',
+                                           'layer': 'L1',
+                                           'gate_ids': '',
+                                           'statement_source': 'canon/CANON.md::RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER'},
+ 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS': {'item_id': 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS',
+                                                       'item_type': 'THEOREM',
+                                                       'claim_id': 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS',
+                                                       'status': 'T',
+                                                       'layer': 'L1',
+                                                       'gate_ids': '',
+                                                       'statement_source': 'canon/CANON.md::RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS'},
+ 'RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION': {'item_id': 'RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION',
+                                                    'item_type': 'THEOREM',
+                                                    'claim_id': 'RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION',
+                                                    'status': 'T',
+                                                    'layer': 'L1',
+                                                    'gate_ids': '',
+                                                    'statement_source': 'canon/CANON.md::RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION'}}
+
+V110_EVIDENCE_ROWS = {'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER': {'claim_id': 'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER',
+                                           'evidence_id': 'EV-RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER',
+                                           'evidence_kind': 'INLINE_CANON',
+                                           'location': 'inline',
+                                           'sha256': 'b182c9b012681c7272a0163a89bcfee8aa9e1f59f773840f4bd8ea1d99bb95f3',
+                                           'hash_mode': 'registry-scope-sha256-v1',
+                                           'architecture_requirement': 'none'},
+ 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS': {'claim_id': 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS',
+                                                       'evidence_id': 'EV-RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS',
+                                                       'evidence_kind': 'INLINE_CANON',
+                                                       'location': 'inline',
+                                                       'sha256': '3d7960514a661146501cc24699ad6b3f3eaca0c183db832e01c8a4eb7405e13d',
+                                                       'hash_mode': 'registry-scope-sha256-v1',
+                                                       'architecture_requirement': 'none'},
+ 'RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION': {'claim_id': 'RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION',
+                                                    'evidence_id': 'EV-RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION',
+                                                    'evidence_kind': 'INLINE_CANON',
+                                                    'location': 'inline',
+                                                    'sha256': '22edb5224c2ee5090a49afe6d129efc9b62dbb43849529a58534878406c6e810',
+                                                    'hash_mode': 'registry-scope-sha256-v1',
+                                                    'architecture_requirement': 'none'}}
+
+V110_HISTORY_EVENTS = [{'event_id': 'CANON110-DECLARE-RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER',
+  'event_sequence': '1',
+  'event_date': '2026-11-08',
+  'release': 'canon-v110',
+  'claim_id': 'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': 'b182c9b012681c7272a0163a89bcfee8aa9e1f59f773840f4bd8ea1d99bb95f3',
+  'evidence_id': 'EV-RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER',
+  'evidence_location': 'inline',
+  'evidence_sha256': 'b182c9b012681c7272a0163a89bcfee8aa9e1f59f773840f4bd8ea1d99bb95f3',
+  'rationale': 'Adopt the independently reviewed exact L1 proof, retaining the supplied '
+               'preparation and operations, finite-domain and finite-resource premises, and the '
+               'stated all-integer boundary; supplementary execution is not the universal proof.'},
+ {'event_id': 'CANON110-DECLARE-RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS',
+  'event_sequence': '1',
+  'event_date': '2026-11-08',
+  'release': 'canon-v110',
+  'claim_id': 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': '3d7960514a661146501cc24699ad6b3f3eaca0c183db832e01c8a4eb7405e13d',
+  'evidence_id': 'EV-RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS',
+  'evidence_location': 'inline',
+  'evidence_sha256': '3d7960514a661146501cc24699ad6b3f3eaca0c183db832e01c8a4eb7405e13d',
+  'rationale': 'Adopt the independently reviewed exact L1 proof, retaining the supplied '
+               'preparation and operations, finite-domain and finite-resource premises, and the '
+               'stated all-integer boundary; supplementary execution is not the universal proof.'},
+ {'event_id': 'CANON110-DECLARE-RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION',
+  'event_sequence': '1',
+  'event_date': '2026-11-08',
+  'release': 'canon-v110',
+  'claim_id': 'RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': '22edb5224c2ee5090a49afe6d129efc9b62dbb43849529a58534878406c6e810',
+  'evidence_id': 'EV-RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION',
+  'evidence_location': 'inline',
+  'evidence_sha256': '22edb5224c2ee5090a49afe6d129efc9b62dbb43849529a58534878406c6e810',
+  'rationale': 'Adopt the independently reviewed exact L1 proof, retaining the supplied '
+               'preparation and operations, finite-domain and finite-resource premises, and the '
+               'stated all-integer boundary; supplementary execution is not the universal proof.'}]
+
+V110_DEPENDENCY_ROWS = [{'item_id': 'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER',
+  'depends_on': 'RELATIVE-CONTACT-INTEGRAL-LAW',
+  'relation': 'REQUIRES',
+  'basis': 'The total contact, parity guard, inverse and complete arithmetic invariants define '
+           'every primitive of the fixed compiler'},
+ {'item_id': 'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER',
+  'depends_on': 'J-UNIT',
+  'relation': 'REQUIRES',
+  'basis': 'The integral inverse of J makes all four common singleton-marker references elements '
+           'of O'},
+ {'item_id': 'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER',
+  'depends_on': 'RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION',
+  'relation': 'BOUNDED_BY',
+  'basis': 'The finite five-height interface does not extend to a five-periodic clock on the '
+           'entire affine integer family'},
+ {'item_id': 'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER',
+  'depends_on': 'RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY',
+  'relation': 'BOUNDED_BY',
+  'basis': 'The designated clock seed supplies its required residues and every fixed contact '
+           'preserves the full labelled residue vector'},
+ {'item_id': 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS',
+  'depends_on': 'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER',
+  'relation': 'REQUIRES',
+  'basis': 'The common height compiler reaches the exact prepared clock and its inverse restores '
+           'the actual translator state after the read core returns'},
+ {'item_id': 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS',
+  'depends_on': 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+  'relation': 'REQUIRES',
+  'basis': 'The registered write-copy-uncompute cycle restores the complete read core while '
+           'copying its two actual records to fresh retained archives'},
+ {'item_id': 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS',
+  'depends_on': 'RELATIVE-CONTACT-INTEGRAL-LAW',
+  'relation': 'REQUIRES',
+  'basis': 'Every occupied forward and inverse checkpoint obeys the same total contact law and '
+           'complete invariants'},
+ {'item_id': 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS',
+  'depends_on': 'RELATIVE-CONTACT-RETAINED-BANK-CAPACITY',
+  'relation': 'BOUNDED_BY',
+  'basis': 'Restoring the reusable core requires separately prepared fresh archives and does not '
+           'regenerate retained occupied records'},
+ {'item_id': 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS',
+  'depends_on': 'RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY',
+  'relation': 'BOUNDED_BY',
+  'basis': 'The entire schedule is input independent and every reload swaps corresponding '
+           'equal-residue inputs'},
+ {'item_id': 'RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION',
+  'depends_on': 'RELATIVE-CONTACT-INTEGRAL-LAW',
+  'relation': 'REQUIRES',
+  'basis': 'The exact parity admission rule and positive definite arithmetic account imply finite '
+           'dyadic affine branches and constant bounded outputs'}]
+
+V110_CORE_ADDITIONS = [{'rank': '53', 'claim_id': 'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER'},
+ {'rank': '54', 'claim_id': 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS'},
+ {'rank': '55', 'claim_id': 'RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION'}]
+
+V110_STATUS_PARTITION = {'C': 40, 'D': 59, 'F': 19, 'H': 2, 'O': 24, 'T': 468}
+
+V110_METRICS = {'claims': '612',
+ 'status_T-LOCK': '0',
+ 'status_T': '468',
+ 'status_D': '59',
+ 'status_C': '40',
+ 'status_H': '2',
+ 'status_O': '24',
+ 'status_F': '19',
+ 'live_H_O': '26',
+ 'reproductions': '40',
+ 'evidence_none': '191',
+ 'evidence_one-architecture': '9',
+ 'evidence_recorded-audit': '31',
+ 'evidence_two-architecture': '381'}
+
+V110_REPRODUCTIONS = ('C-FIELD-J-CONTENT-TRANSPORT-N',
+ 'C-FIELD-J-CONTENT-TRANSPORT-REVIEW-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-REVIEW-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-REVIEW-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-REVIEW-N',
+ 'C-FORWARD-ONLY-CAPTURE-FILTER-N',
+ 'C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N',
+ 'PHOTON-Z5-EXACT-HEATBATH-KERNEL',
+ 'alpha-exact-lemma',
+ 'alpha-value',
+ 'born-faces',
+ 'born-quartet',
+ 'census',
+ 'color-ladder',
+ 'cosmology-register',
+ 'coupling-metrology',
+ 'dirac-ladder',
+ 'force-born-dictionary',
+ 'foundations-places',
+ 'gravity-chain',
+ 'hyperplane-codec',
+ 'kernel',
+ 'kernel-connectivity',
+ 'mass-ladder',
+ 'maxwell',
+ 'native-quadratic-obstructions',
+ 'observer-boost',
+ 'pentit-p5-closure',
+ 'photon-electron',
+ 'qdd-route-a',
+ 'quadratic-memory-l5',
+ 'relative-contact',
+ 's3-height-phase',
+ 'scalar-hermitian-norm',
+ 'status-separation',
+ 'u_raw_residue_port',
+ 'weinberg')
+
+V110_SOURCE_COMMITS = {'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/COMPARE-OUTPUT.txt': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/COMPARISON.json': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/PREREG.md': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/README.md': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RESULT.md': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-ASSEMBLY-STDERR.txt': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-ASSEMBLY.txt': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-AUDIT-STDERR.txt': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-AUDIT.txt': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-REVIEW-STDERR.txt': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-REVIEW.txt': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-SEARCH-STDERR.txt': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-SEARCH.txt': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-VERIFY-STDERR.txt': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-VERIFY.txt': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/SHA256SUMS': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/compare_after_run.py': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/review.py': 'c6134c0dff24b04e2597cb1d660bf375add5222c',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/FOLD-PLAN.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/PREREG.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/RESULT.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/RUN-AARCH64.json': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/RUN-X86_64.json': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/SHA256SUMS': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/SOURCES.json': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/replay.py': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/ASSEMBLY_EXPECTED.txt': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/AUDIT_EXPECTED.txt': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/EXPECTED.txt': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/PREREG.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/PROOF.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/README.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/RESULT.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/REVIEW.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/RUN.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/SHA256SUMS': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/assembly.py': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/audit.py': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/verify.py': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONTRACT.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/EXPECTED.txt': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/PREREG.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/PROOF.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/README.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/RESULT.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/REVIEW.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/RUN.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/SHA256SUMS': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/SOURCES.md': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/search.py': 'cd219d9cd61e73d623d5a8c7c8b548719edac621',
+ 'probes/P-RELATIVE-CONTACT-VARIABLE-ARRIVAL-1/WORD535.txt': 'e6dfc3de9659139d654000954733c084b8a6b86b',
+ 'reproduce/C-FORWARD-ONLY-CAPTURE-FILTER-N/EXPECTED.txt': '68c57f1e5d1dbd17abeec941ef1d9e01bd9f8d4d',
+ 'reproduce/C-FORWARD-ONLY-CAPTURE-FILTER-N/README.md': '68c57f1e5d1dbd17abeec941ef1d9e01bd9f8d4d',
+ 'reproduce/C-FORWARD-ONLY-CAPTURE-FILTER-N/RUN.md': '68c57f1e5d1dbd17abeec941ef1d9e01bd9f8d4d',
+ 'reproduce/C-FORWARD-ONLY-CAPTURE-FILTER-N/verify.py': '68c57f1e5d1dbd17abeec941ef1d9e01bd9f8d4d'}
+
+V110_SOURCE_FILES = {'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/COMPARE-OUTPUT.txt': {'bytes': 1625,
+                                                                     'sha256': 'c2e9fe2de2e44341b9ba30e7af9fd302337a9043e3e739b67f50386db2dee25d',
+                                                                     'git_blob': '9751db61468e99fa3623d7485f0ab4aff2ed08d4'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/COMPARISON.json': {'bytes': 10250,
+                                                                  'sha256': '540da19da75c68951114f6257c4ee20d1fc097f31a38e6a8526e22ae4bf56c47',
+                                                                  'git_blob': '5f37dc8037c962303eb95b144fae8ff0c9b03b91'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/PREREG.md': {'bytes': 16875,
+                                                            'sha256': '266a80bb99fb2d4f3349ee50077bc6e9bd80abfddfd1fbd2c8d26afed9f1b245',
+                                                            'git_blob': '2fa530c3fc223f55e119b7e08e6de224e99c92bb'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/README.md': {'bytes': 4970,
+                                                            'sha256': '91431ffa4268fa739e8637c8bfb23af2861cf34f403be666d86bfd16a6274a00',
+                                                            'git_blob': '451974c5d74646b28c06b0f3e6cae0dc05584ef6'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RESULT.md': {'bytes': 8975,
+                                                            'sha256': '71387e4bfbc14040a8478f0a1c2f231e28638c93ec2cfa13ccab1c7c93efab1a',
+                                                            'git_blob': '18258046ed2fac745634b258e7ea81c564e8d281'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-ASSEMBLY-STDERR.txt': {'bytes': 0,
+                                                                          'sha256': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+                                                                          'git_blob': 'e69de29bb2d1d6434b8b29ae775ad8c2e48c5391'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-ASSEMBLY.txt': {'bytes': 2906,
+                                                                   'sha256': 'fcc72a214caf784942ffdc5a0ed1c05b48c69c8a1558148d6987382c7b9ae74f',
+                                                                   'git_blob': '0dc1ca9b882ec173e301bd9549132ae69e57fb2e'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-AUDIT-STDERR.txt': {'bytes': 0,
+                                                                       'sha256': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+                                                                       'git_blob': 'e69de29bb2d1d6434b8b29ae775ad8c2e48c5391'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-AUDIT.txt': {'bytes': 3707,
+                                                                'sha256': '163342bdcd442a962d2281fd9406cb50dc946ebf0fa7e8d0e526b23446a2e9db',
+                                                                'git_blob': '39f988003f79ac9464c9fc1769ab80e0e510d142'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-REVIEW-STDERR.txt': {'bytes': 0,
+                                                                        'sha256': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+                                                                        'git_blob': 'e69de29bb2d1d6434b8b29ae775ad8c2e48c5391'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-REVIEW.txt': {'bytes': 2328,
+                                                                 'sha256': '5e246b69c69bb3ef643873ec90ff499c110a323d50417164abdef8301f930237',
+                                                                 'git_blob': '42f7009794679c494ca2ebb31a0c781c1e76f36b'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-SEARCH-STDERR.txt': {'bytes': 0,
+                                                                        'sha256': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+                                                                        'git_blob': 'e69de29bb2d1d6434b8b29ae775ad8c2e48c5391'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-SEARCH.txt': {'bytes': 449,
+                                                                 'sha256': 'b7dcf988c9a6bbcdc900e0fd60f6f8c8c7e8f3720316e118441d276d91c4378a',
+                                                                 'git_blob': '58feb8ff1ce7570f1f2f9bc7d24aded28f744842'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-VERIFY-STDERR.txt': {'bytes': 0,
+                                                                        'sha256': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+                                                                        'git_blob': 'e69de29bb2d1d6434b8b29ae775ad8c2e48c5391'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-VERIFY.txt': {'bytes': 4165,
+                                                                 'sha256': '724329795a84ff5f00a908a72ab31ab9ccf8be486def5e58c43a09fcc64c2203',
+                                                                 'git_blob': 'c3c9fcaea600770c34124faf832fd77e814bcbb2'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/SHA256SUMS': {'bytes': 1405,
+                                                             'sha256': 'c10cb15e38e7fdf0a71400681b4ce21903a9ef21795d1ae82587f7b3f2763d07',
+                                                             'git_blob': '2dc879f4223e2feebd3c8fb3dcf54e86c9cc6646'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/compare_after_run.py': {'bytes': 8541,
+                                                                       'sha256': '4c8ae2f46f3eba109880c8262beb500eb072088ac2014706f6e740f35488db2d',
+                                                                       'git_blob': '291848d4a150eb005203ca7046beaaaa203583d6'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/review.py': {'bytes': 34395,
+                                                            'sha256': 'c196e23ef7fb969b1b3704f9de4e5f195df321d82af694748d7e10ee407b9cbf',
+                                                            'git_blob': 'ed52007ba55667302ae3aa13197d7cc1e35daea3'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/FOLD-PLAN.md': {'bytes': 4057,
+                                                                            'sha256': '0f796bf849959a5c4db4096a5b8cdb293dd83378047836602acf78e0aeab4132',
+                                                                            'git_blob': '617e811138378e0d48fa37d1200a74cb065b8af0'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/PREREG.md': {'bytes': 4493,
+                                                                         'sha256': '39eb09f9d33a027d2142be3910719e098915057c2947727c89ab03e20a7c70b9',
+                                                                         'git_blob': 'a7dd00f2182fe3c2f5526317abc0c6d2c1f0e071'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/RESULT.md': {'bytes': 4073,
+                                                                         'sha256': 'fd072bd9a8fb1c6a33486c88a950bc40504b98428818451ce75d46f35452b8da',
+                                                                         'git_blob': 'd88a0d5472b72d938c9d4aac26a0b78a0f4630f7'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/RUN-AARCH64.json': {'bytes': 2643,
+                                                                                'sha256': 'e130b5581162ba7df8aec69c36dd32edbaf788f3752cfaadd24e89516f2377d2',
+                                                                                'git_blob': '24cb6fbe3c0b94dc3dbdc4b3588b2c652fb0cbee'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/RUN-X86_64.json': {'bytes': 2613,
+                                                                               'sha256': '2ddc43859bac201a67288159af92cfe86bb2cf05c9fa9e639c1b578574545bb5',
+                                                                               'git_blob': 'e57f2b7ca5d4dd93117a7a3844f3f27fe9da3342'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/SHA256SUMS': {'bytes': 551,
+                                                                          'sha256': 'd5e87a82cc189bdb96e10570b296ec241121b13f1e1915d7e3e11b47593ac587',
+                                                                          'git_blob': '6db8f782e9ab954951242c393e80563d891e5c90'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/SOURCES.json': {'bytes': 6263,
+                                                                            'sha256': '405a12d47365211154916eda5ccb46477cd28af07ac83aa1c9a63b780b7492b6',
+                                                                            'git_blob': 'db4718555f8d69453c19051b9237b89411b173dd'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/replay.py': {'bytes': 5997,
+                                                                         'sha256': 'b6877295108fe908f534298a2e619bedf256be8c2a45c72a4f56b6ca23465f90',
+                                                                         'git_blob': '6d6548d2ed9e7a51d887173372484d16eb95cce1'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/ASSEMBLY_EXPECTED.txt': {'bytes': 2906,
+                                                                              'sha256': 'fcc72a214caf784942ffdc5a0ed1c05b48c69c8a1558148d6987382c7b9ae74f',
+                                                                              'git_blob': '0dc1ca9b882ec173e301bd9549132ae69e57fb2e'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/AUDIT_EXPECTED.txt': {'bytes': 3707,
+                                                                           'sha256': '163342bdcd442a962d2281fd9406cb50dc946ebf0fa7e8d0e526b23446a2e9db',
+                                                                           'git_blob': '39f988003f79ac9464c9fc1769ab80e0e510d142'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/EXPECTED.txt': {'bytes': 4165,
+                                                                     'sha256': '724329795a84ff5f00a908a72ab31ab9ccf8be486def5e58c43a09fcc64c2203',
+                                                                     'git_blob': 'c3c9fcaea600770c34124faf832fd77e814bcbb2'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/PREREG.md': {'bytes': 6450,
+                                                                  'sha256': 'e8b942f8ee946790c67afbddca4e199b6a483574a9e70f92065cce29ba5bb711',
+                                                                  'git_blob': 'e3b9ab5ad731101241fe5f85215dc6927e8e4984'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/PROOF.md': {'bytes': 11271,
+                                                                 'sha256': 'fd420815dc1d23ae991aa15b929ffcc24067987be7600f09dc32b18e900fa864',
+                                                                 'git_blob': '0bab7fde55c14d60b01debe8db0ad01b8000604b'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/README.md': {'bytes': 2022,
+                                                                  'sha256': 'd8de1936969f47dc1cf5850c4e821f2917ff77e149cdd5cb55ddf3e2521a759e',
+                                                                  'git_blob': '6ea0465512cc1f2ee2c44aadfb3084229413ab28'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/RESULT.md': {'bytes': 3667,
+                                                                  'sha256': '96137dae337194484a5c08bc0db64fb906da6f18c27bf4ee73981925382d6e7c',
+                                                                  'git_blob': '7dbd216e9f098443b914c9913221db88da7645fd'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/REVIEW.md': {'bytes': 3175,
+                                                                  'sha256': '52fbeb70a7088abb62a6570c1ee34fbc60252bf4a557c1fdff69648035996890',
+                                                                  'git_blob': '6b07aa0d695c0128bf237f75b8e20c0555e9e2b1'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/RUN.md': {'bytes': 3001,
+                                                               'sha256': 'daefc52c93a49a86377e1dad6237481a9be9b2410ad6eced10e0d49269f5a648',
+                                                               'git_blob': 'f23c04230a4bc6292a96c3edb618470e5b8790c2'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/SHA256SUMS': {'bytes': 933,
+                                                                   'sha256': '8b6a802fbdf3fd6edf04d3f71e67f975cdc098bf3bee7a632d7711d3637f564d',
+                                                                   'git_blob': '2a1b5f8c4ff499559ccafb2ddc174c97a6a41639'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/assembly.py': {'bytes': 8898,
+                                                                    'sha256': '0d0743ec8ffba6e0a122beb812492cfa43521c5790d3691d2e80e45e94d192a1',
+                                                                    'git_blob': 'aca53351519176565e169f81fdbfb467e7238d37'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/audit.py': {'bytes': 10404,
+                                                                 'sha256': 'b362fb0e6094ca67a02469bb53b8508ea966484352f511eb98c01ca2795d5fc9',
+                                                                 'git_blob': 'ebfeb5c48dbd875fce749a4c0482505e085563df'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/verify.py': {'bytes': 8725,
+                                                                  'sha256': '356e0c8320fab781b1587f763e759a5356b66630d4a370e152cb92f92ec4345c',
+                                                                  'git_blob': '0da8abad93fbc8fc2dc8f173c7cbe945c9b96f5e'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONTRACT.md': {'bytes': 6190,
+                                                     'sha256': '30fcaeda5aec220da17bc940536e145fd50e158d81fe1061e7f5793afc644b8e',
+                                                     'git_blob': '43429381a70529830175e069c91100704106ec9f'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/EXPECTED.txt': {'bytes': 449,
+                                                      'sha256': 'b7dcf988c9a6bbcdc900e0fd60f6f8c8c7e8f3720316e118441d276d91c4378a',
+                                                      'git_blob': '58feb8ff1ce7570f1f2f9bc7d24aded28f744842'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/PREREG.md': {'bytes': 4824,
+                                                   'sha256': 'be03155bee10df6d4ba61e2a2980a8ac21cb6e6b3e40b2eb8f43ee6c42ac464a',
+                                                   'git_blob': 'a955a3d76541a2703990daf081a1dad9a09b861c'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/PROOF.md': {'bytes': 7715,
+                                                  'sha256': '6e73a7a90af0df9cb633c9656a48471a3423445d5f3ceae59a1fa0b07a6090ae',
+                                                  'git_blob': '6df1114074dc9e81b72d70973ebdb51efd4d2224'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/README.md': {'bytes': 1132,
+                                                   'sha256': 'ddded85c2a4ddb8a2bc3d4af85d93b2f84435273b978e4cf5955c6fc2649330f',
+                                                   'git_blob': '1adeb14c2e0c89eaec5ac76072c0a3356cd4423e'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/RESULT.md': {'bytes': 2738,
+                                                   'sha256': '760980e6d72a92e5f8b3230baa50b10865456b302148d11e754455b951fb6363',
+                                                   'git_blob': '56e6b9c3306451635057fc898651ec1f702cd1ff'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/REVIEW.md': {'bytes': 1836,
+                                                   'sha256': '992a02fff4f746e9bee02b9b1981d09ab4a556215c3960e4e58a09e9cee0a377',
+                                                   'git_blob': 'e452578eb05fab91efb4427032c6478bf425d813'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/RUN.md': {'bytes': 2345,
+                                                'sha256': '57de4e8e9d460b9d46e9c56613bf3041051368144ad97de4bdc22e58bdd127c7',
+                                                'git_blob': '31f95f7a65dbb126326e7e520bd6210f84ca8db8'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/SHA256SUMS': {'bytes': 762,
+                                                    'sha256': 'a143bfd65ce5703f582dac1772dcb95a1a66c536e456fd7d3656067c249beffc',
+                                                    'git_blob': '5689b0916e76df4cfc497d6b35beb977d7d76af3'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/SOURCES.md': {'bytes': 1763,
+                                                    'sha256': 'c13e16d3d5c6e6ca9a27421bb01fe40673021eab364deeb1e52f461f5551a763',
+                                                    'git_blob': 'f888949dfe84352399b6a63c5615dddd8e20e8dc'},
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/search.py': {'bytes': 7110,
+                                                   'sha256': '04a1cc8a90a5f5cc18c6c80bcf71b475b01e9a734ef455cd0574bdcb77638f4c',
+                                                   'git_blob': '8c9739a497ca09ff24bac86b45205f6e9708c115'},
+ 'probes/P-RELATIVE-CONTACT-VARIABLE-ARRIVAL-1/WORD535.txt': {'bytes': 4877,
+                                                              'sha256': 'ca6bdd7a9b43e329cbc3630f26e32125b1d16a9872b9563e57733f5c408c916b',
+                                                              'git_blob': '444d45f28b41fa40f8e4246989ce191d8a937692'},
+ 'reproduce/C-FORWARD-ONLY-CAPTURE-FILTER-N/EXPECTED.txt': {'bytes': 558,
+                                                            'sha256': '97b92dc97a91c3227e2ab8851530fd071c39f0059e5eef217c60c7e0009b7969',
+                                                            'git_blob': 'ba7c37cbac56ebf787e245474a2e631f9a8ec2eb'},
+ 'reproduce/C-FORWARD-ONLY-CAPTURE-FILTER-N/README.md': {'bytes': 752,
+                                                         'sha256': 'f7bd62fd916723f254da1c87cf5367bf51849b36f9049e9c2ceed2cdeca9ae55',
+                                                         'git_blob': '19fbed489b057a9de8b94755c889290d86567c1b'},
+ 'reproduce/C-FORWARD-ONLY-CAPTURE-FILTER-N/RUN.md': {'bytes': 1097,
+                                                      'sha256': '64ab6943ba0c06d1c1105ee24d6ffb6377dab230c7832d976baea04ba49b2996',
+                                                      'git_blob': 'b08fd12b71195d57d8811c2c3a8b1e8201e509d7'},
+ 'reproduce/C-FORWARD-ONLY-CAPTURE-FILTER-N/verify.py': {'bytes': 10764,
+                                                         'sha256': 'd37bd5ecfac85fd05329ef83f745775c72764536f20661ed481511d45ac18617',
+                                                         'git_blob': 'f1d9bcedfaab1719b99a8377f55ff859410a48ec'},
+ 'notes/canon/V110-SYNTHESIS/README.md': {'bytes': 5361,
+                                          'sha256': '43d5f0bf49e6527fd5314173b4b7feffcc23804eda59ef0fc7ef8e1d02ac04d7',
+                                          'git_blob': 'bc38fc79896abbd3637aec6fc76361ea4bd5da5d'},
+ 'notes/canon/V110-SYNTHESIS/REVIEW_DISPOSITION.md': {'bytes': 4916,
+                                                      'sha256': '7572677c5aab69299695e9ba564203019c5af1ce73bd815289ec57c0c9eb6e8e',
+                                                      'git_blob': 'f172a946f823528601a63250dc3599b8665c2742'},
+ 'notes/canon/V110-SYNTHESIS/SOURCES.tsv': {'bytes': 11635,
+                                            'sha256': '594fd0ef0ac08d321f0cc46aee0b4bcc5e37e2f6df2e7a3b3048966918d113db',
+                                            'git_blob': 'd4d54a0df5c9300c3bc154b2820593c5a1a2a6eb'},
+ 'reproduce/s3-height-phase/EXPECTED.txt': {'bytes': 256,
+                                            'sha256': 'f0441b7af0985fa211f9ef65f8e3b7c590fa6892fe57994963bd7e4467ea4563',
+                                            'git_blob': 'd8d890c5592685aa6ff2d7d55bd15a2941868d9f'},
+ 'reproduce/s3-height-phase/README.md': {'bytes': 6968,
+                                         'sha256': '8bdbe1018cfd976901d12eaa70f5ba7a522cb093ee4f8a2fcc51e390ca79d250',
+                                         'git_blob': '3809385522ad30736e3609e3f71f60998904ca1d'},
+ 'reproduce/s3-height-phase/verify.py': {'bytes': 4448,
+                                         'sha256': 'edfd5d8fba19efbe3ae9b46b3b893187925055f8cd66abfa0e3a4d5f7e1cb182',
+                                         'git_blob': 'e28e7418ee077fdf1405f6fc9973d015ba4eb407'}}
+
+V110_SOURCE_INVENTORIES = {'notes/C-S3-HEIGHT-PHASE-INTERFACE-N': ('notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/FOLD-PLAN.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/PREREG.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/RESULT.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/RUN-AARCH64.json',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/RUN-X86_64.json',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/SHA256SUMS',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/SOURCES.json',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/ARCHITECTURE-REPLAY-4/replay.py',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/ASSEMBLY_EXPECTED.txt',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/AUDIT_EXPECTED.txt',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/EXPECTED.txt',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/PREREG.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/PROOF.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/README.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/RESULT.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/REVIEW.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/RUN.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/SHA256SUMS',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/assembly.py',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/audit.py',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/verify.py',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONTRACT.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/EXPECTED.txt',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/PREREG.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/PROOF.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/README.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/RESULT.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/REVIEW.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/RUN.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/SHA256SUMS',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/SOURCES.md',
+                                         'notes/C-S3-HEIGHT-PHASE-INTERFACE-N/search.py'),
+ 'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1': ('notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/COMPARE-OUTPUT.txt',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/COMPARISON.json',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/PREREG.md',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/README.md',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RESULT.md',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-ASSEMBLY-STDERR.txt',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-ASSEMBLY.txt',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-AUDIT-STDERR.txt',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-AUDIT.txt',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-REVIEW-STDERR.txt',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-REVIEW.txt',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-SEARCH-STDERR.txt',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-SEARCH.txt',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-VERIFY-STDERR.txt',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/RUN-VERIFY.txt',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/SHA256SUMS',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/compare_after_run.py',
+                                                  'notes/C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1/review.py'),
+ 'notes/canon/V110-SYNTHESIS': ('notes/canon/V110-SYNTHESIS/README.md',
+                                'notes/canon/V110-SYNTHESIS/REVIEW_DISPOSITION.md',
+                                'notes/canon/V110-SYNTHESIS/SOURCES.tsv'),
+ 'reproduce/s3-height-phase': ('reproduce/s3-height-phase/EXPECTED.txt',
+                               'reproduce/s3-height-phase/README.md',
+                               'reproduce/s3-height-phase/verify.py')}
+
+V110_PROOF_CONTRACTS = {'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER': {'begin': '### A finite height input compiled to a '
+                                                    'retained clock phase\n',
+                                           'characters': 6896,
+                                           'bytes': 6896,
+                                           'sha256': 'a0e2109ec5497e649b64ab277f345bef45456a1df98858eff00b4ea983eb42e9',
+                                           'claim_marker': '**RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER '
+                                                           '[T].**'},
+ 'RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS': {'begin': '### A finite apparatus accepting '
+                                                                'prepared height inputs\n',
+                                                       'characters': 7779,
+                                                       'bytes': 7779,
+                                                       'sha256': 'e614d6dfec43d92c3f524f527e364c8f1c11b7db5652c97f296317221a225dde',
+                                                       'claim_marker': '**RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS '
+                                                                       '[T].**'},
+ 'RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION': {'begin': '### The all-integer boundary of a '
+                                                             'finite phase compiler\n',
+                                                    'characters': 3427,
+                                                    'bytes': 3427,
+                                                    'sha256': 'f505933ca91b92f02b550d13e065d308f563bcd1f9e8b438a475c797cf1fd420',
+                                                    'claim_marker': '**RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION '
+                                                                    '[T].**'}}
+
+V110_CHECKS = [['V110-PRIOR-BYTES',
+  'thirteen exact v110 inputs reconstruct public v109 before all 216 unchanged historical guards'],
+ ['V110-CLAIM-LEDGERS',
+  'three L1 theorems have exact declarations while all 609 prior claim rows and their scopes '
+  'remain unchanged'],
+ ['V110-DEPENDENCIES',
+  'only the three new claims add exact premise edges; no theorem requires an open or computational '
+  'premise'],
+ ['V110-OPEN-BOUNDARY',
+  'all 26 live owners, every gate and the Frontier retain their exact boundaries; the registry has '
+  '612 claims'],
+ ['V110-PROOF-SCOPE',
+  'byte-pinned height-to-phase, finite funded composition and dyadic obstruction proofs retain '
+  'their prepared-input and fixed-program hypotheses'],
+ ['V110-EVIDENCE',
+  'the three theorems use inline scope-hashed proofs; finite audit outputs do not replace the '
+  'all-finite-horizon or all-integer arguments'],
+ ['V110-SOURCE-CUSTODY',
+  'the admitted source and review files retain exact bytes and disclosed provenance; authoring '
+  'checks are not an additional independent review'],
+ ['V110-REPRO-INVENTORY',
+  'the 40-directory inventory binds the existing forward-filter and new s3-height-phase '
+  'supplements without claim promotion; this structural audit executes no scientific verifier']]
+
+# Exact current custody and reversible v109 input reconstruction.
+# This adapter reads bytes only and never imports or executes a scientific verifier.
+
+@lru_cache(maxsize=1)
+def v110_current_snapshot():
+    data, sources = {}, {}
+    try:
+        for name, contract in V110_INPUT_PATCH.items():
+            path = ROOT / 'canon' / name
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            if (len(content) != contract['current_bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
+                return None
+            data[name] = content
+        if any(path.is_symlink() for path in REPRODUCE.iterdir()):
+            return None
+        inventory = frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+        if inventory != frozenset(V110_REPRODUCTIONS):
+            return None
+        for relative, contract in V110_SOURCE_FILES.items():
+            path = ROOT / relative
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            blob = hashlib.sha1(b'blob ' + str(len(content)).encode('ascii')
+                               + b'\0' + content).hexdigest()
+            if (len(content) != contract['bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['sha256']
+                    or blob != contract['git_blob']):
+                return None
+            sources[relative] = content
+        for directory, expected in V110_SOURCE_INVENTORIES.items():
+            base = ROOT / directory
+            if not base.is_dir() or base.is_symlink():
+                return None
+            actual = set()
+            for path in base.rglob('*'):
+                if path.is_symlink():
+                    return None
+                if path.is_file() and '__pycache__' not in path.parts and path.suffix != '.pyc':
+                    actual.add(path.relative_to(ROOT).as_posix())
+            if actual != set(expected):
+                return None
+    except OSError:
+        return None
+    return {'canon': data, 'reproductions': inventory, 'sources': sources}
+
+
+@lru_cache(maxsize=13)
+def v110_previous_bytes(path):
+    """Reconstruct exact public v109 only from validated current v110 bytes."""
+    if path.parent != ROOT / 'canon' or path.name not in V110_INPUT_PATCH:
+        return None
+    snapshot = v110_current_snapshot()
+    if snapshot is None:
+        return None
+    contract = V110_INPUT_PATCH[path.name]
+    lines = snapshot['canon'][path.name].decode('utf-8').splitlines(keepends=True)
+    for first, last, original in reversed(contract['restore']):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = ''.join(lines).encode('utf-8')
+    if (len(previous) != contract['prior_bytes']
+            or hashlib.sha256(previous).hexdigest() != contract['prior_sha256']):
+        return None
+    return previous
+
+
+def v110_previous_reproduction_dirs():
+    snapshot = v110_current_snapshot()
+    return (set(snapshot['reproductions']) - {'C-FORWARD-ONLY-CAPTURE-FILTER-N', 's3-height-phase'}
+            if snapshot is not None else set())
+
+
+def v110_current_checks():
+    failed = [(tag, description, False) for tag, description in V110_CHECKS]
+    snapshot = v110_current_snapshot()
+    if snapshot is None:
+        return failed
+    prior_bytes = {name: v110_previous_bytes(ROOT / 'canon' / name)
+                   for name in V110_INPUT_PATCH}
+    if any(value is None for value in prior_bytes.values()):
+        return failed
+    try:
+        names = tuple(name for name in V110_INPUT_PATCH if name.endswith('.tsv'))
+        prior = {name: v87_table_bytes(prior_bytes[name]) for name in names}
+        current = {name: v87_table_bytes(snapshot['canon'][name]) for name in names}
+        old_index = {row['claim_id']: row for row in prior['REGISTRY.tsv']}
+        index = {row['claim_id']: row for row in current['REGISTRY.tsv']}
+        normative = {row['item_id']: row for row in current['NORMATIVE.tsv']}
+        evidence = {row['claim_id']: row for row in current['EVIDENCE.tsv']}
+        new_ids = set(V110_CLAIM_ROWS)
+        exact_prior = (
+            len(prior_bytes) == 13 and set(prior_bytes) == set(V109_INPUT_PATCH)
+            and all(len(prior_bytes[name]) == contract['prior_bytes']
+                    and hashlib.sha256(prior_bytes[name]).hexdigest() == contract['prior_sha256']
+                    for name, contract in V110_INPUT_PATCH.items())
+            and all(contract['prior_bytes'] == V109_INPUT_PATCH[name]['current_bytes']
+                    and contract['prior_sha256'] == V109_INPUT_PATCH[name]['current_sha256']
+                    for name, contract in V110_INPUT_PATCH.items()))
+        exact_claims = (
+            len(prior['REGISTRY.tsv']) == len(old_index) == 609
+            and len(current['REGISTRY.tsv']) == len(index) == 612 and len(new_ids) == 3
+            and set(index) == set(old_index) | new_ids
+            and all(index.get(claim) == row for claim, row in old_index.items())
+            and all(index.get(claim) == row for claim, row in V110_CLAIM_ROWS.items())
+            and all(normative.get(claim) == row for claim, row in V110_NORMATIVE_ROWS.items())
+            and all(index[claim]['status'] == normative[claim]['status'] == 'T'
+                    and normative[claim]['item_type'] == 'THEOREM'
+                    and normative[claim]['layer'] == 'L1'
+                    and normative[claim]['gate_ids'] == '' for claim in new_ids))
+        for filename, key in (('REGISTRY.tsv', 'claim_id'), ('NORMATIVE.tsv', 'item_id'),
+                              ('EVIDENCE.tsv', 'claim_id')):
+            exact_claims = exact_claims and (
+                [row for row in current[filename] if row[key] not in new_ids] == prior[filename]
+                and len(current[filename]) == len(prior[filename]) + 3)
+        history = current['HISTORY.tsv'][len(prior['HISTORY.tsv']):]
+        exact_history = (
+            current['HISTORY.tsv'][:len(prior['HISTORY.tsv'])] == prior['HISTORY.tsv']
+            and history == V110_HISTORY_EVENTS and len(history) == 3
+            and {row['claim_id'] for row in history} == new_ids
+            and all(row['event_sequence'] == '1' and row['event_type'] == 'DECLARE'
+                    and row['previous_status'] == '-' and row['new_status'] == 'T'
+                    and row['release'] == 'canon-v110'
+                    and row['scope_sha256'] == hashlib.sha256(
+                        index[row['claim_id']]['scope'].encode('utf-8')).hexdigest()
+                    and row['evidence_id'] == evidence[row['claim_id']]['evidence_id']
+                    and row['evidence_location'] == evidence[row['claim_id']]['location']
+                    and row['evidence_sha256'] == evidence[row['claim_id']]['sha256']
+                    for row in history))
+        added = current['DEPENDENCIES.tsv'][len(prior['DEPENDENCIES.tsv']):]
+        exact_dependencies = (
+            current['DEPENDENCIES.tsv'][:len(prior['DEPENDENCIES.tsv'])] == prior['DEPENDENCIES.tsv']
+            and added == V110_DEPENDENCY_ROWS
+            and all(row['item_id'] in new_ids and row['depends_on'] in normative
+                    and (row['relation'] != 'REQUIRES'
+                         or normative[row['depends_on']]['status'] in {'T', 'T-LOCK'}
+                         or normative[row['depends_on']]['item_type'] in {'AXIOM', 'DEFINITION'})
+                    for row in added))
+        old_live = {claim: row for claim, row in old_index.items() if row['status'] in {'H', 'O'}}
+        live = {claim: row for claim, row in index.items() if row['status'] in {'H', 'O'}}
+        counts = {status: sum(row['status'] == status for row in index.values())
+                  for status in {row['status'] for row in index.values()}}
+        metrics = {row['metric']: row['value'] for row in current['STATUS_COUNTS.tsv']}
+        exact_boundary = (
+            len(live) == 26 and live == old_live
+            and snapshot['canon']['GATES.tsv'] == prior_bytes['GATES.tsv']
+            and snapshot['canon']['FRONTIER_PROGRAMS.tsv'] == prior_bytes['FRONTIER_PROGRAMS.tsv']
+            and snapshot['canon']['FRONTIER.md'] == prior_bytes['FRONTIER.md']
+            and current['CORE_SELECTION.tsv'] == prior['CORE_SELECTION.tsv'] + V110_CORE_ADDITIONS
+            and counts == V110_STATUS_PARTITION and metrics == V110_METRICS
+            and normative['QUADRATIC-MEMORY-NATIVE-CONTACT']['status'] == 'O'
+            and normative['QDD-INSTRUMENT-APPARATUS']['status'] == 'O')
+        canon = snapshot['canon']['CANON.md'].decode('utf-8')
+        exact_proofs = set(V110_PROOF_CONTRACTS) == new_ids
+        for claim, contract in V110_PROOF_CONTRACTS.items():
+            first = canon.find(contract['begin'])
+            if first < 0 or canon.count(contract['begin']) != 1:
+                exact_proofs = False
+                continue
+            block = canon[first:first + contract['characters']]
+            exact_proofs = exact_proofs and (
+                len(block.encode('utf-8')) == contract['bytes']
+                and hashlib.sha256(block.encode('utf-8')).hexdigest() == contract['sha256']
+                and block.count(contract['claim_marker']) == 1)
+        exact_evidence = (
+            all(evidence.get(claim) == row for claim, row in V110_EVIDENCE_ROWS.items())
+            and all(evidence[claim]['evidence_kind'] == 'INLINE_CANON'
+                    and evidence[claim]['location'] == 'inline'
+                    and evidence[claim]['architecture_requirement'] == 'none'
+                    and evidence[claim]['hash_mode'] == 'registry-scope-sha256-v1'
+                    and evidence[claim]['sha256'] == hashlib.sha256(
+                        index[claim]['scope'].encode('utf-8')).hexdigest()
+                    for claim in new_ids))
+        exact_sources = (
+            len(snapshot['sources']) == len(V110_SOURCE_FILES)
+            and set(snapshot['sources']) == set(V110_SOURCE_FILES)
+            and all(len(commit) == 40 and set(commit) <= set('0123456789abcdef')
+                    for commit in V110_SOURCE_COMMITS.values())
+            and all(relative in snapshot['sources'] for relative in V110_SOURCE_COMMITS))
+        wrapper_prefix = 'reproduce/s3-height-phase/'
+        wrapper_paths = {wrapper_prefix + name for name in ('verify.py', 'EXPECTED.txt', 'README.md')}
+        exact_inventory = (
+            len(snapshot['reproductions']) == 40
+            and snapshot['reproductions'] == frozenset(V109_REPRODUCTIONS) | {'C-FORWARD-ONLY-CAPTURE-FILTER-N', 's3-height-phase'}
+            and frozenset(v110_previous_reproduction_dirs()) == frozenset(V109_REPRODUCTIONS)
+            and wrapper_paths <= set(snapshot['sources'])
+            and set(V110_SOURCE_INVENTORIES['reproduce/s3-height-phase']) == wrapper_paths
+            and len(V110_SOURCE_INVENTORIES['reproduce/C-FORWARD-ONLY-CAPTURE-FILTER-N']) == 4
+            and all(path in snapshot['sources'] for path in
+                    V110_SOURCE_INVENTORIES['reproduce/C-FORWARD-ONLY-CAPTURE-FILTER-N']))
+    except (KeyError, TypeError, ValueError, IndexError):
+        return failed
+    outcomes = (exact_prior, exact_claims and exact_history, exact_dependencies,
+                exact_boundary, exact_proofs, exact_evidence, exact_sources, exact_inventory)
+    return [(tag, description, bool(ok)) for (tag, description), ok in zip(V110_CHECKS, outcomes)]
+
+
 V109_PRIOR_COMMIT = '17de90b58f814238e151aac77badde6654b52627'
 
 V109_NEW_STATUSES = {'RELATIVE-CONTACT-POSITIONAL-BANK-COPY': 'T',
@@ -964,14 +1935,14 @@ def v109_current_snapshot():
             path = ROOT / 'canon' / name
             if not path.is_file() or path.is_symlink():
                 return None
-            content = path.read_bytes()
-            if (len(content) != contract['current_bytes']
+            content = v110_previous_bytes(path)
+            if (content is None or len(content) != contract['current_bytes']
                     or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
                 return None
             data[name] = content
         if any(path.is_symlink() for path in REPRODUCE.iterdir()):
             return None
-        inventory = frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+        inventory = frozenset(v110_previous_reproduction_dirs())
         if inventory != frozenset(V109_REPRODUCTIONS):
             return None
         for relative, contract in V109_SOURCE_FILES.items():
@@ -25103,9 +26074,10 @@ def run():
     checks.extend(v107_current_checks())
     checks.extend(v108_current_checks())
     checks.extend(v109_current_checks())
+    checks.extend(v110_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v109")
+    print("historical guards: exact reconstructed v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v110")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

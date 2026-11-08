@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v109
+historical guards: exact reconstructed v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v110
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -218,5 +218,13 @@ PASS 213 V109-PROOF-SCOPE byte-pinned copy, finite funded workbank reuse and nat
 PASS 214 V109-EVIDENCE six theorems retain inline scope-hashed evidence and the finite carry circuit uses its complete two-architecture public probe
 PASS 215 V109-SOURCE-CUSTODY the accepted source and review inventories retain exact bytes, SHA-256 and Git blob identities at their declared immutable commits
 PASS 216 V109-REPRO-INVENTORY the validated 38-directory reproduction inventory is unchanged; this structural audit executes no scientific verifier
+PASS 217 V110-PRIOR-BYTES thirteen exact v110 inputs reconstruct public v109 before all 216 unchanged historical guards
+PASS 218 V110-CLAIM-LEDGERS three L1 theorems have exact declarations while all 609 prior claim rows and their scopes remain unchanged
+PASS 219 V110-DEPENDENCIES only the three new claims add exact premise edges; no theorem requires an open or computational premise
+PASS 220 V110-OPEN-BOUNDARY all 26 live owners, every gate and the Frontier retain their exact boundaries; the registry has 612 claims
+PASS 221 V110-PROOF-SCOPE byte-pinned height-to-phase, finite funded composition and dyadic obstruction proofs retain their prepared-input and fixed-program hypotheses
+PASS 222 V110-EVIDENCE the three theorems use inline scope-hashed proofs; finite audit outputs do not replace the all-finite-horizon or all-integer arguments
+PASS 223 V110-SOURCE-CUSTODY the admitted source and review files retain exact bytes and disclosed provenance; authoring checks are not an additional independent review
+PASS 224 V110-REPRO-INVENTORY the 40-directory inventory binds the existing forward-filter and new s3-height-phase supplements without claim promotion; this structural audit executes no scientific verifier
 
-RESULT 216/216 ALL PASS
+RESULT 224/224 ALL PASS

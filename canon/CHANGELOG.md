@@ -1,11 +1,47 @@
 # Canon changelog (public series)
 
-## Public Canon v109
+## Public Canon v110
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
+Registry snapshot: 612 claims; 0 T-LOCK, 468 T, 59 D, 40 C, 2 H, 24 O, 19 F; 26 live H/O.
+Reproduction witnesses: 40.
+<!-- END GENERATED CURRENT COUNTS -->
+
+Add three exact L1 theorems. One fixed 95-contact compiler translates the
+five prepared integer heights into the five clock phases, restores every
+non-clock coordinate and accounts for seven common stock values with
+positive trace account 80. Its complete literal inverse restores the input.
+A finite apparatus composes that compiler with the restored work core for
+every prescribed horizon k. One supplied program processes all 10^k
+prepared source/height tuples on 39+25k slots; 2k fresh archives retain and
+decode the ordered history. Its total account is 177+78k+10 sum_i t_i^2,
+with 27345k contacts and 5(k-1) supplied whole-slot swaps. The complete
+inverse removes the records and restores every initial coordinate.
+
+The third theorem proves the matching all-integer boundary. A finite
+contact/SWAP word on an affine integer input family has finitely many
+dyadic affine branches. A bounded output is constant on each branch and
+cannot give a nonconstant five-periodic phase on every integer height.
+This is an exact obstruction in the stated class, independent of bounded
+search outcomes; it does not obstruct the admitted five-height compiler.
+
+All 609 previous claims retain their exact scopes and statuses. The 26 live
+H/O owners, gates and frontier remain unchanged. The new results are proved
+in the Canon. The reproduction inventory is 40: relative to v109's 38,
+it also includes the pre-existing post-v109 non-canonical forward-only
+capture-filter audit and the supplementary s3-height-phase witness. The
+former is counted as an inventory entry only; its claim status is unchanged.
+Source messages, prepared heights, common stock, scheduling and growing
+archives remain explicit premises.
+No input synthesis, arbitrary post-start loading, retained-archive
+regeneration, unlimited finite-carrier history, autonomous scheduling,
+contact-only swap compilation, native-U identification or physical
+interpretation is promoted.
+
+## Public Canon v109
+
 Registry snapshot: 609 claims; 0 T-LOCK, 465 T, 59 D, 40 C, 2 H, 24 O, 19 F; 26 live H/O.
 Reproduction witnesses: 38.
-<!-- END GENERATED CURRENT COUNTS -->
 
 Add three L1 workbank theorems: the explicit 60-contact positional-bank
 copier, the four-place literal-copy obstruction, and complete restoration

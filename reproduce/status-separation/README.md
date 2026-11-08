@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its 192 checks cover the current
+and emits deterministic text. Its 224 checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -1060,3 +1060,54 @@ PASS lines and appending eight specified structural descriptions. It is
 not a captured run receipt. This audit imports and executes no scientific
 verifier. The successor candidate is replayed only after its immutable
 public content pin and readback under the release procedure.
+
+
+## Public Canon v110 boundary
+
+Eight current structural guards extend the exact inverse chain to v110.
+All thirteen complete current Canon inputs are pinned by byte count and
+SHA-256. Explicit inverse line edits reconstruct public v109 at
+e6dfc3de9659139d654000954733c084b8a6b86b before all 216 unchanged historical
+predicates run. Only the v109 current-input and reproduction-inventory
+readers consume that validated view. All prior module constants, predicates
+and PASS descriptions remain unchanged. There is no old-byte fallback.
+
+Three L1 theorem proofs cover the five-height compiler, prepared-height
+finite apparatus and all-integer affine phase obstruction. Their exact
+scope rows, declarations, dependencies, history, proof blocks and inline
+scope-hashed evidence are pinned. All 609 prior claim rows and scopes, all
+26 live H/O owners, every gate and the Frontier are preserved. The partition
+is 612 claims: T468/D59/C40/H2/O24/F19. Supplied prepared inputs, fixed program
+order, finite fresh archives and the stated affine all-integer hypotheses
+remain explicit; no autonomous preparation, physical interpretation or
+native-U bridge is inferred.
+
+The accepted source inventory contains 55 files, bound to their exact public
+commits, bytes, Git blobs and SHA-256 values. The three synthesis audit files
+and the three supplementary S3 reproduction files are also bound, giving
+61 checked source and integration files. The review's disclosed exposure,
+pre-freeze implementation repairs and missing initial failed-run artifacts
+remain part of that fixed disposition. This authoring-session structural
+adapter is not another independent scientific review.
+
+The actual inventory is exactly 40 directories: the historical 38 plus the
+already accepted post-v109 C-FORWARD-ONLY-CAPTURE-FILTER-N supplement and the
+new s3-height-phase supplement. The four forward-filter files remain pinned
+at 68c57f1e5d1dbd17abeec941ef1d9e01bd9f8d4d; no forward-filter claim enters
+this fold. Only after validating both exact supplemental inventories and
+the complete 40-directory set does the adapter remove those two names from
+the historical inventory view. It does not bypass an unrecognized directory.
+
+The new S3 wrapper separately executes the unchanged finite compiler and
+assembly audits through the ordinary full reproduction jobs. Its bytes are
+checked here, but this structural adapter imports and executes no scientific
+verifier. The three T rows use INLINE_CANON evidence with architecture
+requirement none; no new REPRODUCTION evidence row or formal RUNS obligation
+is introduced.
+
+EXPECTED.txt is authored before execution by preserving all 216 historical
+PASS descriptions and appending eight specified structural descriptions.
+It is not a captured run receipt. The first execution of this complete
+successor candidate occurs only after its immutable public content pin and
+byte readback. Direct-run stdout, stderr and failures are retained outside
+the repository; full CI separately executes both required architectures.
