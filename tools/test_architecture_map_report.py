@@ -120,7 +120,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
             },
         )
 
-    def test_v108_contact_scope_and_finite_apparatus_closure(self) -> None:
+    def test_v110_contact_scope_and_finite_apparatus_closure(self) -> None:
         normative_rows = architecture.read_tsv(
             ROOT / "canon/NORMATIVE.tsv", architecture.NORMATIVE_FIELDS
         )
@@ -151,6 +151,9 @@ class ArchitectureMapReportTests(unittest.TestCase):
         renewal = "RELATIVE-CONTACT-RETAINED-BANK-CAPACITY"
         fixed_word = "RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY"
         owner = "RELATIVE-CONTACT-COMMON-APPARATUS-OPEN"
+        compiler = "RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER"
+        apparatus = "RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS"
+        obstruction = "RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION"
         expected = {
             contact: {"J-UNIT"},
             minimum: {contact},
@@ -164,6 +167,9 @@ class ArchitectureMapReportTests(unittest.TestCase):
             'RELATIVE-CONTACT-POSITIONAL-BANK-COPY': {'RELATIVE-CONTACT-INTEGRAL-LAW'},
             'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION': {'RELATIVE-CONTACT-INTEGRAL-LAW'},
             'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE': {'RELATIVE-CONTACT-COMMON-APPARATUS-OPEN', 'RELATIVE-CONTACT-INTEGRAL-LAW', 'RELATIVE-CONTACT-POSITIONAL-BANK-COPY'},
+            compiler: {contact, "J-UNIT"},
+            apparatus: {contact, compiler, "RELATIVE-CONTACT-FINITE-WORKBANK-REUSE"},
+            obstruction: {contact},
         }
         # These supplied contact premises do not derive a native-U operation.
         # The optional Gram/archive notes have no new public claim rows.
@@ -184,6 +190,17 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 normative[item]["status"], registry[item]["status"]
             )
         self.assertEqual(bounded_by[owner], {minimum, renewal, fixed_word})
+        self.assertEqual(bounded_by[compiler], {obstruction, fixed_word})
+        self.assertEqual(bounded_by[apparatus], {renewal, fixed_word})
+        self.assertEqual(bounded_by[obstruction], set())
+        for claim in (compiler, apparatus, obstruction):
+            self.assertEqual(normative[claim]["item_type"], "THEOREM")
+            self.assertEqual(normative[claim]["gate_ids"], "")
+            self.assertEqual(evidence[claim]["evidence_id"], "EV-" + claim)
+            self.assertEqual(evidence[claim]["location"], "inline")
+            self.assertEqual(
+                evidence[claim]["hash_mode"], "registry-scope-sha256-v1"
+            )
         self.assertEqual(normative[owner]["item_type"], "THEOREM")
         self.assertEqual(normative[owner]["gate_ids"], "")
         # This finite same-carrier witness closes only its exact L1 owner.
@@ -206,6 +223,9 @@ class ArchitectureMapReportTests(unittest.TestCase):
             'RELATIVE-CONTACT-POSITIONAL-BANK-COPY': ("INLINE_CANON", "none"),
             'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION': ("INLINE_CANON", "none"),
             'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE': ("INLINE_CANON", "none"),
+            compiler: ("INLINE_CANON", "none"),
+            apparatus: ("INLINE_CANON", "none"),
+            obstruction: ("INLINE_CANON", "none"),
         }
         for item, (kind, architecture_requirement) in expected_evidence.items():
             self.assertEqual(evidence[item]["evidence_kind"], kind)
@@ -355,16 +375,16 @@ class ArchitectureMapReportTests(unittest.TestCase):
 
     def test_current_counts_match_the_public_summary(self) -> None:
         # audit(ROOT) reads this checkout, not the historical v10 map note.
-        # v109 adds six L1 theorems and one finite L1 computation; old statuses stay unchanged.
-        self.assertEqual(self.report.claims, 609)
+        # v110 adds three inline L1 theorems; all prior statuses stay unchanged.
+        self.assertEqual(self.report.claims, 612)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 40, "D": 59, "F": 19, "H": 2, "O": 24, "T": 465},
+            {"C": 40, "D": 59, "F": 19, "H": 2, "O": 24, "T": 468},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 188,
+                "none": 191,
                 "one-architecture": 9,
                 "recorded-audit": 31,
                 "two-architecture": 381,
