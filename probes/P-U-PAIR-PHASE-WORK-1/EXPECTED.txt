@@ -1,0 +1,8 @@
+P-U-PAIR-PHASE-WORK-1 NON-CANONICAL L1 EXACT
+PASS NATIVE preparations=6250 ticks=32 paired_checks=187500
+PASS MATCHED starts=1,11 ticks=10,10 lifted_shifts=4,2 marked_clock_equal=True
+PASS RETURNS intervals=1:31,2:32 lifted_shifts=10,-10 full_checkpoint=True
+PASS PISTONS fixed=1,3,4,2 all_ticks=32
+PASS DISCREPANCY M=0..4096 base=4 digit_weights=0,1,-1,0
+PASS BALANCE full_ranges_s=1..6 extreme_witnesses_s=1..64 min_capacity=2s
+RESULT PASS; universal bounded-work statement in PROOF.md

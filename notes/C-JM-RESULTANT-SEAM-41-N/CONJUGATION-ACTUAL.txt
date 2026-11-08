@@ -1,0 +1,16 @@
+integral product embedding determinant = 123
+bar alpha R-power coordinates = [89/123, -197/123, 54/41, -45/41, 33/41, -101/123, 44/123, -10/123]
+denominator lcm = 123
+123 bar alpha R-power coordinates = [89, -197, 162, -135, 99, -101, 44, -10]
+R + Z bar alpha HNF = [[1, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1]]
+R + Z bar alpha index in maximal product = 1
+alpha bar alpha power coordinates = [10/123, 29/123, 1/41, -76/41, 135/41, -361/123, 139/123, -26/123]
+independent Sylvester determinant = 41
+J residue 19 barJ residue 17 M residue 19 barM residue 7
+common norm residues J,M = 36 10
+19 powers at exponents 8,20,40 = [37, 40, 1]
+16 split primes in compositum: roots Phi40 mod41 = [6, 7, 11, 12, 13, 15, 17, 19, 22, 24, 26, 28, 29, 30, 34, 35]
+separate idempotent power coordinates = [-23/41, 85/41, -134/41, -66/41, 237/41, -207/41, 78/41, -14/41]
+separate idempotent power coordinates = [64/41, -85/41, 134/41, 66/41, -237/41, 207/41, -78/41, 14/41]
+index star-stable intersection in maximal product = 15129
+seam primes (j,m) = (10, 27) conjugate = (37, 38)
