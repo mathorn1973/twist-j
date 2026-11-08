@@ -7,13 +7,15 @@ on:
   pull_request:
   release:
     types: [published]
+  workflow_dispatch:
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
   architecture:
-    if: github.ref_type != 'tag' && github.event_name != 'release'
+    if: github.ref_type != 'tag' && github.event_name != 'release' && github.event_name != 'workflow_dispatch'
     name: architecture-${{ matrix.architecture }}
     strategy:
       fail-fast: false
@@ -24,7 +26,7 @@ jobs:
           - architecture: aarch64
             runner: ubuntu-24.04-arm
     runs-on: ${{ matrix.runner }}
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
@@ -48,7 +50,7 @@ jobs:
         run: python tools/check_reproduce.py --base "$BASE_SHA"
 
   check:
-    if: always() && github.ref_type != 'tag' && github.event_name != 'release'
+    if: always() && github.ref_type != 'tag' && github.event_name != 'release' && github.event_name != 'workflow_dispatch'
     needs: architecture
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -61,23 +63,55 @@ jobs:
       - run: echo "TWO-ARCHITECTURE CHECK PASS"
 
   publication:
-    if: github.ref_type == 'tag' || github.event_name == 'release'
+    if: github.ref_type == 'tag' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && '03f010760d85c62795b74b3fa8fde79c2c36be7f' || github.sha }}
           fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.12"
+      - name: Pin manual postpublication readback to immutable v107
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          test "$GITHUB_REPOSITORY" = "mathorn1973/twist-j"
+          test "$GITHUB_SHA" = "$GITHUB_WORKFLOW_SHA"
+          case "$GITHUB_REF" in refs/heads/?*) ;; *) echo "recovery controller requires a branch ref" >&2; exit 1 ;; esac
+          test "$(git rev-parse HEAD)" = "03f010760d85c62795b74b3fa8fde79c2c36be7f"
+          test "$(git cat-file -t refs/tags/canon-v107)" = "tag"
+          test "$(git rev-parse refs/tags/canon-v107)" = "81c57853b7b5126fa2d8ec465b8ad903e2402c04"
+          test "$(git rev-parse 'refs/tags/canon-v107^{commit}')" = "03f010760d85c62795b74b3fa8fde79c2c36be7f"
+          test "$(git status --porcelain)" = ""
+          echo "RECOVERY CONTROLLER $GITHUB_SHA"
+          echo "RECOVERY RUN $GITHUB_RUN_ID ATTEMPT $GITHUB_RUN_ATTEMPT"
       - run: python tools/check_policy.py
       - run: python -m unittest discover -s tools -p 'test_*.py'
       - run: python tools/check_canon.py
       - run: python tools/check_ledger.py
       - run: python tools/check_gate_contract.py
+      - name: Replay every frozen public probe for v107 postpublication readback
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -u tools/check_verifier.py
+      - name: Replay every frozen minimal reproduction for v107 postpublication readback
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -u tools/check_reproduce.py
+      - name: Validate static v107 activation after complete replay
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          test "$(git status --porcelain)" = ""
+          python -u tools/check_activation.py --post-activation --expected-tag canon-v107
       - name: Run activation readback on immutable publication events
+        if: github.event_name != 'workflow_dispatch'
         env:
           PUBLICATION_TAG: ${{ github.event.release.tag_name || github.ref_name }}
         run: |
@@ -85,7 +119,7 @@ jobs:
             --expected-tag "$PUBLICATION_TAG" \
             --manifest-out activation-manifest.json
       - name: Preserve tag readback manifest
-        if: github.ref_type == 'tag'
+        if: github.ref_type == 'tag' && github.event_name != 'workflow_dispatch'
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: ${{ github.ref_name }}-activation-manifest
@@ -106,3 +140,157 @@ jobs:
             /tmp/twistj-release/activation-manifest.json \
             --expected-tag "$RELEASE_TAG"
           cmp canon/SHA256SUMS /tmp/twistj-release/SHA256SUMS
+      - name: Verify original v107 tag artifact and immutable published assets
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          python - <<'PY'
+          # BEGIN PINNED V107 POSTPUBLICATION READBACK
+          import hashlib
+          import io
+          import json
+          import os
+          from pathlib import Path
+          import re
+          import subprocess
+          import sys
+          import zipfile
+
+          REPOSITORY = 'mathorn1973/twist-j'
+          TAG = 'canon-v107'
+          ACTIVATION = '03f010760d85c62795b74b3fa8fde79c2c36be7f'
+          CONTENT = 'f5615ed4dcdfc672dc2e468399284a1dc03ce805'
+          TAG_OBJECT = '81c57853b7b5126fa2d8ec465b8ad903e2402c04'
+          RELEASE_ID = 430574383
+          TAG_RUN_ID = 41301206166
+          TAG_RUN_ATTEMPT = 2
+          TAG_JOB_ID = 124841413548
+          ARTIFACT_ID = 13084185131
+          ZIP_BYTES = 246070
+          ZIP_SHA256 = '9d1392f72ca4bab4edf014408e12b3b19f7da14e047cd46ed0e2de5482b46536'
+          MANIFEST_BYTES = 956369
+          MANIFEST_SHA256 = '9ab61f8638f87d0f5b3d7ca13ebca2e2584b7af33be4747205abe816eee4ef33'
+          CHECKSUM_BYTES = 415
+          CHECKSUM_SHA256 = '21e8c6fe8eac20e5645625c3531960ada37914b7f87674becabc4edb05cb240b'
+          REQUIRED_TAG_STEPS = (
+              'Set up job',
+              'Run actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5',
+              'Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065',
+              'Run python tools/check_policy.py',
+              "Run python -m unittest discover -s tools -p 'test_*.py'",
+              'Run python tools/check_canon.py',
+              'Run python tools/check_ledger.py',
+              'Run python tools/check_gate_contract.py',
+              'Run activation readback on immutable publication events',
+              'Preserve tag readback manifest',
+          )
+
+          def require(condition, message):
+              if not condition:
+                  raise ValueError(message)
+
+          def controller_identity(environment):
+              require(environment['GITHUB_REPOSITORY'] == REPOSITORY, 'controller repository mismatch')
+              require(environment['GITHUB_EVENT_NAME'] == 'workflow_dispatch', 'controller event mismatch')
+              ref = environment['GITHUB_REF']
+              require(ref.startswith('refs/heads/') and bool(ref[len('refs/heads/'):]), 'controller requires a branch ref')
+              sha = environment['GITHUB_SHA']
+              require(bool(re.fullmatch('[0-9a-f]{40}', sha)) and sha == environment['GITHUB_WORKFLOW_SHA'], 'controller/workflow SHA mismatch')
+              require(environment['GITHUB_WORKFLOW_REF'] == REPOSITORY + '/.github/workflows/policy.yml@' + ref, 'workflow source mismatch')
+              for field in ('GITHUB_RUN_ID', 'GITHUB_RUN_ATTEMPT'):
+                  require(bool(re.fullmatch('[1-9][0-9]*', environment[field])), 'invalid controller run identity')
+              return sha, environment['GITHUB_RUN_ID'], environment['GITHUB_RUN_ATTEMPT']
+
+          def exact_fields(actual, expected, label):
+              require(isinstance(actual, dict) and all(actual.get(k) == v and type(actual.get(k)) is type(v) for k,v in expected.items()), label + ' mismatch')
+
+          def validate_metadata(release, run, job, artifact):
+              exact_fields(release, {'id': RELEASE_ID, 'tag_name': TAG, 'target_commitish': ACTIVATION,
+                                    'draft': False, 'immutable': True, 'prerelease': False,
+                                    'published_at': '2026-11-01T12:38:30Z'}, 'immutable release')
+              assets = release.get('assets')
+              require(isinstance(assets, list) and len(assets) == 2, 'release must have exactly two original assets')
+              expected_assets = {
+                  'activation-manifest.json': (698301343, MANIFEST_BYTES, MANIFEST_SHA256),
+                  'SHA256SUMS': (698301342, CHECKSUM_BYTES, CHECKSUM_SHA256),
+              }
+              require({asset.get('name') for asset in assets} == set(expected_assets), 'release asset names mismatch')
+              for asset in assets:
+                  identity,size,digest = expected_assets[asset['name']]
+                  exact_fields(asset, {'id': identity, 'size': size, 'digest': 'sha256:' + digest, 'state': 'uploaded'}, 'release asset')
+              exact_fields(run, {'id': TAG_RUN_ID, 'run_attempt': TAG_RUN_ATTEMPT, 'head_sha': ACTIVATION,
+                                'head_branch': TAG, 'event': 'push', 'status': 'completed', 'conclusion': 'success',
+                                'path': '.github/workflows/policy.yml'}, 'original tag run')
+              exact_fields(run.get('repository'), {'full_name': REPOSITORY}, 'original run repository')
+              exact_fields(job, {'id': TAG_JOB_ID, 'run_id': TAG_RUN_ID, 'name': 'publication',
+                                'status': 'completed', 'conclusion': 'success'}, 'original publication job')
+              steps = job.get('steps')
+              require(isinstance(steps, list), 'original tag steps missing')
+              for name in REQUIRED_TAG_STEPS:
+                  selected = [step for step in steps if step.get('name') == name]
+                  require(len(selected) == 1, 'original tag step missing or duplicated: ' + name)
+                  exact_fields(selected[0], {'status': 'completed', 'conclusion': 'success'}, 'original tag step ' + name)
+              for step in steps:
+                  require(step.get('status') == 'completed' and (step.get('conclusion') == 'success' or
+                          (step.get('name') == 'Verify published release assets' and step.get('conclusion') == 'skipped')),
+                          'unaccepted original tag step disposition')
+              exact_fields(artifact, {'id': ARTIFACT_ID, 'name': 'canon-v107-activation-manifest',
+                                     'size_in_bytes': ZIP_BYTES, 'digest': 'sha256:' + ZIP_SHA256,
+                                     'expired': False}, 'original tag artifact')
+              exact_fields(artifact.get('workflow_run'), {'id': TAG_RUN_ID, 'head_sha': ACTIVATION,
+                                                         'head_branch': TAG}, 'original artifact run')
+
+          def bound_bytes(data, size, digest, label):
+              require(len(data) == size and hashlib.sha256(data).hexdigest() == digest, label + ' bytes/hash mismatch')
+
+          def original_manifest(archive):
+              bound_bytes(archive, ZIP_BYTES, ZIP_SHA256, 'original artifact ZIP')
+              with zipfile.ZipFile(io.BytesIO(archive)) as bundle:
+                  require(bundle.namelist() == ['activation-manifest.json'], 'tag artifact must contain exactly its original manifest')
+                  data = bundle.read('activation-manifest.json')
+              bound_bytes(data, MANIFEST_BYTES, MANIFEST_SHA256, 'original tag manifest')
+              return data
+
+          def api(path, runner):
+              return runner(['gh', 'api', 'repos/' + REPOSITORY + '/' + path], check=True, stdout=subprocess.PIPE).stdout
+
+          def audit_assets(root, temporary, runner=subprocess.run):
+              release = json.loads(api('releases/' + str(RELEASE_ID), runner))
+              run = json.loads(api('actions/runs/' + str(TAG_RUN_ID) + '/attempts/' + str(TAG_RUN_ATTEMPT), runner))
+              job = json.loads(api('actions/jobs/' + str(TAG_JOB_ID), runner))
+              artifact = json.loads(api('actions/artifacts/' + str(ARTIFACT_ID), runner))
+              validate_metadata(release, run, job, artifact)
+              manifest = original_manifest(api('actions/artifacts/' + str(ARTIFACT_ID) + '/zip', runner))
+              destination = temporary / 'v107-original-published-assets'
+              destination.mkdir()
+              runner(['gh', 'release', 'download', TAG, '--repo', REPOSITORY,
+                      '--pattern', 'activation-manifest.json', '--pattern', 'SHA256SUMS',
+                      '--dir', str(destination)], check=True)
+              files = list(destination.iterdir())
+              require({p.name for p in files} == {'activation-manifest.json','SHA256SUMS'} and
+                      all(p.is_file() and not p.is_symlink() for p in files), 'download must contain exactly two regular original assets')
+              published_manifest = (destination / 'activation-manifest.json').read_bytes()
+              checksum = (destination / 'SHA256SUMS').read_bytes()
+              require(published_manifest == manifest, 'published manifest differs from original successful tag artifact')
+              bound_bytes(checksum, CHECKSUM_BYTES, CHECKSUM_SHA256, 'published checksum')
+              require(checksum == (root / 'canon/SHA256SUMS').read_bytes(), 'published checksum differs from immutable checkout')
+              runner([sys.executable, '-B', 'tools/check_release_manifest.py',
+                      str(destination / 'activation-manifest.json'), '--expected-tag', TAG], check=True)
+              print('ORIGINAL V107 TAG ARTIFACT AND BOTH IMMUTABLE RELEASE ASSETS PASS')
+
+          def main():
+              controller, run_id, attempt = controller_identity(os.environ)
+              audit_assets(Path.cwd(), Path(os.environ['RUNNER_TEMP']))
+              print('RECOVERY CONTROLLER ' + controller)
+              print('RECOVERY RUN ' + run_id + ' ATTEMPT ' + attempt)
+              print('ORIGINAL TAG RUN 41301206166 ATTEMPT 2 JOB 124841413548 ARTIFACT 13084185131')
+
+          if __name__ == '__main__':
+              main()
+          # END PINNED V107 POSTPUBLICATION READBACK
+          PY
+      - name: Complete pinned v107 postpublication readback
+        if: github.event_name == 'workflow_dispatch'
+        run: echo "PINNED V107 POSTPUBLICATION PASS - complete replay, activation and original immutable assets"
