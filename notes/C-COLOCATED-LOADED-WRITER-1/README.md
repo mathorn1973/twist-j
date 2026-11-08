@@ -17,14 +17,14 @@ changes by actual edge current. Complete account and Gauss hold at every cut.
 | Three-pair writer | 150 | 24 | (r,s,s) becomes (r,r,s) |
 
 These are different carriers/preparations, not an account minimum comparison.
-Literal inverses have8 and600 attempts and erase the respective records.
+Literal inverses have 8 and 600 attempts and erase the respective records.
 The proof is in [PROOF.md](PROOF.md), the frozen test in [PREREG.md](PREREG.md).
 Execution status and source pins belong in RESULT.md and RUN.md when present.
 
 The three-pair word composes the credited 25-contact P of #1930. It records
 a prepared source phase without phase-dependent calendar selection. It does
 not yet record the determinant of P27/P35, produce a completion flag for an
-unchanged blank, append a paid reader, or embed the full27-site field. The
+unchanged blank, append a paid reader, or embed the full 27-site field. The
 co-located topology, zero references and fixed calendar are supplied.
 
 This construction lies outside #1953's distinct-single-charge/uncharged-memory

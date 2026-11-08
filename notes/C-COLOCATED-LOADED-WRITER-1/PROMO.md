@@ -11,9 +11,9 @@ realization and two retained-memory constructions in PROOF.md. No formal
 public status, Canon fold, merge or release is requested by this package.
 
 The source/reference endpoint and fixed common memory preparation matter:
-the150-contact word writes (r,s,s)->(r,r,s) on all25 prepared inputs.
+the 150-contact word writes (r,s,s)->(r,r,s) on all 25 prepared inputs.
 Its universal claimed domain is only the finite phase family, with the
-complete125-triple phase matrix separately specified. All inverse states
+complete 125-triple phase matrix separately specified. All inverse states
 and every elementary cut remain subject to the same account and Gauss laws.
 
 The topology explicitly supplies several charged coordinates per vertex.
