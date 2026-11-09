@@ -61,12 +61,14 @@ byte copy of that first stdout, not regenerated expected output.
 
 At the first run's recording, the two-architecture repository gate and
 external independent mathematical review were pending. The subsequent CI
-receipt is recorded below. A subsequent
-[external review](../../notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/REVIEW.md)
-was performed and found conditional text-level consistency; unconditional
-mathematical acceptance remains open. The two arithmetic paths and the
-proof-derived oracle remain author-side checks. This later status does not
-change the first execution or its recorded evidence.
+receipt is recorded below. The first external review found conditional
+text-level consistency. The
+[renewed external manual review](../../notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/REVIEW.md)
+subsequently accepted the frozen proof and pinned addendum within their
+declared mathematical premises; requests R1/R2 are resolved and nonblocking.
+This is text-level acceptance, not formal certification. The two arithmetic
+paths and proof-derived oracle remain author-side checks. These later review
+results do not change the first execution or its recorded evidence.
 
 ## Recorded two-architecture CI
 

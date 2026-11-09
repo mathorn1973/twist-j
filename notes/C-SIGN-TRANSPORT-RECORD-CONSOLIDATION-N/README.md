@@ -1,8 +1,9 @@
 # A funded local sign channel with a remote finite record
 
 NON-CANONICAL / L1. The supplied architecture and reader are candidate-D;
-the all-parameter proof remains candidate-T. External review found conditional
-text-level consistency; unconditional mathematical acceptance remains open.
+the all-parameter proof remains candidate-T. Renewed external manual review
+accepted the frozen proof and analytical addendum within the declared
+mathematical premises. This is text-level acceptance, not formal certification.
 The frozen finite audit is candidate-C and has passed on x86_64 and aarch64.
 The governing public basis remains main
 629a9d4058501f938dc91a690c3eb59a914493d1, Public Canon v110.
@@ -67,14 +68,16 @@ and supplies a local, counted eligibility mark to the fixed reader.
 
 ## Files and next decision
 
-- [CONSTRUCTION.md](CONSTRUCTION.md): pointer to the sole current construction
-  in the frozen proof, with immutable links to its analytical predecessor.
+- [CONSTRUCTION.md](CONSTRUCTION.md): pointer to the frozen core construction,
+  with immutable links to its analytical predecessor and expansion.
+- [PROOF-ADDENDUM.md](https://github.com/mathorn1973/twist-j/blob/5d1460645f44c200047909127a78e7a429c562ec/notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/PROOF-ADDENDUM.md): analytical expansion of the frozen proof;
+  accepted with the frozen proof within the declared premises in renewed review.
 - [PROGRAM.md](PROGRAM.md): conceptual and repository consolidation proposal.
 - [SOURCES.tsv](SOURCES.tsv): immutable source references and evidence scope.
-- [REVIEW.md](REVIEW.md): historical author review, external conditional review
-  and the remaining analytical acceptance boundary.
+- [REVIEW.md](REVIEW.md): historical author and conditional external reviews,
+  followed by renewed acceptance within the declared mathematical premises.
 - [NEXT-VALIDATION.md](NEXT-VALIDATION.md): frozen validation contract, evidence
-  and pending acceptance, with a link to the original prospective plan.
+  and scoped review, with a link to the original prospective plan.
 
 The joint probe [P-J-SIGN-REMOTE-HOLD-1](https://github.com/mathorn1973/twist-j/tree/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1)
 freezes the complete construction, proof and exact verifier. Its
@@ -82,11 +85,12 @@ freezes the complete construction, proof and exact verifier. Its
 records the x86_64 PASS for d,h=1..8, both signs, three complete periods and
 every layer boundary. [CI run 42580693180](https://github.com/mathorn1973/twist-j/actions/runs/42580693180),
 at that result commit, subsequently passed x86_64, aarch64 and the aggregate
-gate with identical verifier and stdout hashes. [PR #1973](https://github.com/mathorn1973/twist-j/pull/1973)
-remains a draft. [External review was performed](REVIEW.md), with a
-CONDITIONAL verdict of text-level consistency, not unconditional proof
-acceptance. The remaining analytical acceptance obligation is open. No Canon
-or registry status changes.
+gate with identical verifier and stdout hashes. For
+[PR #1973](https://github.com/mathorn1973/twist-j/pull/1973), the
+[renewed external review](REVIEW.md) accepted the frozen proof and pinned
+addendum within their declared mathematical premises. The first conditional
+verdict is preserved as history; requests R1/R2 are resolved and nonblocking.
+Manual text-level acceptance does not change Canon or registry status.
 
 The next research question is active capture: an arriving word must change a
 localized stationary memory, remain available there, and eventually undergo

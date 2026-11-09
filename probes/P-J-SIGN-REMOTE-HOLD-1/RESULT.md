@@ -3,9 +3,10 @@
 NON-CANONICAL / L1. The frozen finite audit passed locally on x86_64 and was
 reproduced byte for byte by the required x86_64 and aarch64 CI jobs. The selected
 architecture and reader remain candidate-D, the all-parameter analytical
-statements remain candidate-T after conditional external review, and the
-executed finite inventory is candidate-C. Unconditional analytical acceptance
-remains open. No Canon or registry status changes.
+statements remain candidate-T, accepted within their declared mathematical
+premises by renewed external manual review. The executed finite inventory is
+candidate-C. This is text-level review, not formal certification. No Canon or
+registry status changes.
 
 ## Frozen question and outcome
 
@@ -98,7 +99,7 @@ messages, native-U realization, or a physical detector/energy/time theorem.
 Recurrence reuses the same original sign. Geometry, layer order, initial
 stock and semantic reader remain declared construction choices.
 
-## Evidence and remaining acceptance
+## Evidence and scoped review
 
 RUN.md records the first clean source-pinned execution: exit zero, empty
 stderr, 1351 stdout bytes and one LF line. EXPECTED.txt preserves those
@@ -117,12 +118,12 @@ GitHub replayed the PR merge containing those exact probe bytes, not a changed
 scientific source set. This establishes the two-architecture finite
 computation gate without enlarging the audited parameter range.
 
-[External mathematical review was performed](../../notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/REVIEW.md).
-Its verdict is CONDITIONAL text-level consistency, not unconditional
-acceptance of the all-parameter proof. The review record retains the requests
-for explicit coefficient conjugation and stepwise H/E reasoning alongside
-Thorn's assessment that the cited per-B proof covers those obligations.
-Unconditional analytical acceptance remains open and PR #1973 remains a
-draft. The author-side arithmetic comparison, state oracle and static reviews
-remain separate evidence. There is no claim of merge, Canon promotion or
-release.
+The [review record](../../notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/REVIEW.md)
+preserves the first conditional verdict and the renewed external manual
+review of the full frozen proof and pinned analytical addendum. The renewed
+verdict is ACCEPTED within the declared mathematical premises; requests R1/R2
+for explicit coefficient conjugation and stepwise H/E reasoning are resolved
+and nonblocking. This conditional, text-level acceptance is not formal
+certification. The author-side arithmetic comparison, state oracle and static
+reviews remain separate evidence. There is no claim of merge, Canon promotion
+or release.

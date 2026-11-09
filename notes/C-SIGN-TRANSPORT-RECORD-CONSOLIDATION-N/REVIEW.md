@@ -1,120 +1,101 @@
-# External review and author response
+# Renewed external review: requests resolved
 
-NON-CANONICAL / L1. Date: 2026-11-09. Overall disposition:
-**Conditional / text-level consistent.** The all-parameter claims remain
-candidate-T; this review does not supply unconditional analytical acceptance.
+NON-CANONICAL / L1. Date: 2026-11-09. Renewed disposition:
+**Accepted within the declared mathematical assumptions; conditional,
+text-level candidate-T.** Requests R1 and R2 are resolved and nonblocking.
+This is manual mathematical review, not formal certification or Canon promotion.
 
-This is a coordinator-written English record of the external AI-assisted review reported
-through A. M. Thorn, including Emmy's assessment, Thorn's subsequent assessment
-and the author response. It is not a byte copy of an original Emmy report or
-an independently signed source-hash attestation. The
-[earlier same-session review](https://github.com/mathorn1973/twist-j/blob/33a393e3af8344b31c1e6bedc8e5638be6aa8b26/notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/REVIEW.md)
-is preserved separately at its original commit.
+This is a coordinator-written English record of the external AI-assisted
+review reported through A. M. Thorn. It records Emmy's renewed assessment and
+her subsequent clarification as relayed by Thorn. It is not a byte copy of an
+original Emmy report; the coordinator did not inspect a separate full report.
+The scope and method below delimit the acceptance actually reported.
 
-## Reviewed source and method
+## Reviewed sources and method
 
-Emmy manually reviewed the
-[analytical construction at 33a393e3](https://github.com/mathorn1973/twist-j/blob/33a393e3af8344b31c1e6bedc8e5638be6aa8b26/notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/CONSTRUCTION.md).
-The review was textual and mathematical. It did not run the scientific
-verifier, formalize the argument in Lean, or independently compare source
-hashes. An auxiliary numerical check attempted during the review produced
-no usable result and supplies no evidence here.
+The renewed review read both complete texts:
 
-Emmy was not a coauthor of this new construction. Her role, if any, in the
-predecessor primitive and network probes is not established by this record.
-This scope is distinct from the author-side static reviews and from the
-separately recorded two-architecture finite audit.
+- The [frozen PROOF.md at 015c6b6f](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md).
+- The full 220-line [PROOF-ADDENDUM.md at 5d146064](https://github.com/mathorn1973/twist-j/blob/5d1460645f44c200047909127a78e7a429c562ec/notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/PROOF-ADDENDUM.md).
 
-The reported checks covered:
+The method was manual algebra and textual checking. The renewed review used
+no code execution, numerical test or formal proof checker, and did not
+recompute source hashes. Emmy was not a coauthor of this construction. Her
+role, if any, in the predecessor work in PRs #1970 and #1971 is not
+established by this record. This external review is separate from same-session author-side
+checking and from the two-architecture finite computational audit.
 
-- The total B involution, its admitted branches and refusal behavior.
-- The common-preparation encoder and emissions {1,3} versus {2,3}.
-- The positive and negative return tables and their common return period.
-- The whole-data-rail alias that defeats an unqualified instantaneous reader.
-- The counted clock, local receiver windows and intermediate-layer boundaries.
-- The stated complete resource totals and supplied architecture's scope.
+The reported acceptance covers composition of the declared funded primitive,
+common-preparation sign encoder, complete data and clock return tables,
+whole-data-rail alias, clock-qualified remote reader and prescribed hold,
+including the intermediate-layer windows and complete resource account.
+It applies under the supplied carrier, geometry, schedule, initial stock,
+clock preparation and reader definitions. It does not derive those premises.
 
-## Conditional verdict and retained requests
+## Resolution of the two presentation requests
 
-Emmy's reported final verdict was **Conditional / text-level consistent**.
-She retained two requests for the presentation:
+| Request from the first review | Renewed disposition |
+|---|---|
+| R1: explicit coefficient conjugation and exact guard evaluation | RESOLVED; nonblocking |
+| R2: explicit per-cell, per-gate and stepwise H/E accounting | RESOLVED; nonblocking |
 
-1. Make coefficient conjugation and exact evaluation of the gate guards explicit.
-2. Display the stepwise H/E account, beyond its initial and final totals.
+For R1, the addendum supplies the coefficient conjugation and multiplication
+rules, h and half-trace formulas, and exact parity and balance comparisons.
+For R2, it expands the nonzero-center cross terms, both funded branches,
+individual cell transfers, all first-three-tick layer boundaries, and the
+source/data/clock subtotals. Its general per-gate argument covers arbitrary
+occupied states and all subsequent layers, not just prepared endpoints.
+The reviewer accepted these expansions as resolving both requests while
+retaining the conditional, text-level candidate-T scope.
 
-After receiving the author's source citations and algebraic expansions,
-Thorn accepted the coefficient-conjugation formula and the per-gate
-Delta H=0 argument. His assessment is that these are exposition requests,
-not missing mathematical conservation proofs. He nevertheless retained the
-overall conditional candidate-T disposition.
+## Withdrawn conveyor-shift finding
 
-These positions are recorded separately. Thorn's assessment is not treated
-as Emmy withdrawing either request or granting unconditional acceptance.
-The following response makes the existing definitions and conservation
-argument explicit without changing the frozen construction.
+During the renewed review a conveyor-shift concern was raised. Emmy
+subsequently explicitly withdrew it through Thorn: she had misread the
+existing even/odd statement in
+[frozen PROOF.md, lines 136-138](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md#L136).
+For an occupation set M on the canonical rail code, the full conveyor sends
 
-## Author response: exact conjugation and guards
+    M -> (M_even + 2) union (M_odd - 2), modulo m.
 
-[Frozen PROOF.md, line 61](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md#L61)
-defines h(z)=z conjugate(z). In O=Z[j], complex conjugation sends j to
-j^(-1)=j^4. For z=c0+c1*j+c2*j^2+c3*j^3 it is therefore
+Thus M={0,1} gives {2,m-1}, exactly as the frozen parity-split rule states.
+The reviewer confirmed the text. This finding is closed as a reviewer
+misreading, not a source defect or a remaining warning. No scientific source
+change was requested or made on its account.
 
-    conjugate(z) = (c0-c1) - c1*j + (c3-c1)*j^2 + (c2-c1)*j^3.
+## Review history and source custody
 
-The [frozen verifier, lines 74-81](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/verify.py#L74)
-contains this coefficient map followed by exact multiplication for h.
-Multiplication reduces modulo 1+j+j^2+j^3+j^4; equality is equality of the
-four integer coefficients. The parity guard checks that all coefficients
-of both pair differences are even. On that domain, the balance guards
-compare h(v) with g*h(u), or h(u) with g*h(v), exactly, with the stated
-nonzero conditions. The clarified factor is g=J conjugate(J)=2-phi,
-and g^(-1)=1+phi. No approximate norm test is substituted.
+On 2026-11-09 the
+[first external review and author response](https://github.com/mathorn1973/twist-j/blob/d8f831dc2487985c4794b594b6a674c060fb6d1b/notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/REVIEW.md)
+recorded a conditional, text-level-consistent verdict with R1 and R2 still
+retained. That earlier disposition is preserved; it is not retroactively
+rewritten as acceptance. The original
+[same-session analytical review](https://github.com/mathorn1973/twist-j/blob/33a393e3af8344b31c1e6bedc8e5638be6aa8b26/notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/REVIEW.md)
+also remains available. An auxiliary numerical attempt in the first external
+review produced no usable result and supplies no evidence.
 
-## Author response: every gate and layer conserves the account
+Later on 2026-11-09, after the full addendum was published and reviewed
+alongside the full frozen proof, the renewed review resolved R1 and R2.
+The subsequent explicit withdrawal closed the separate shift concern as
+recorded above. These are distinct review stages.
 
-[Frozen PROOF.md, lines 92-95](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md#L92)
-already states the local argument: the accepted branch exchanges h(u) and
-h(v), while the centers c,d remain fixed. In expanded form,
-
-    H_four = 2*h(c)+2*h(d)+2*h(u)+2*h(v).
-
-On the forward branch h(v)=g*h(u), so
-
-    Delta H = 2*((g-1)*h(u)+(g^(-1)-1)*h(v)) = 0.
-
-On the reverse branch h(u)=g*h(v), so
-
-    Delta H = 2*((g^(-1)-1)*h(u)+(g-1)*h(v)) = 0.
-
-All refusal branches are identity. Each marked pair sum is fixed, so S is
-preserved; E=Tr(H)/2 is preserved by linearity. This is a full-carrier
-per-gate proof, not merely an equality between prepared endpoints.
-
-All source, interface and conveyor gates are this same B. The clock adds
-only disjoint B blocks in the joint conveyor layers. Unchanged cells retain
-their accounts; summing disjoint blocks and composing layers preserves S,H,E
-after every gate and layer. The frozen proof states this explicitly at
-[line 486](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md#L486).
-The displayed total accounts evaluate that invariant on the preparation.
-
-## Author-side source custody and limits
-
-The coordinator compared the original construction with the
-[frozen PROOF.md at 015c6b6f](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md).
-Their mathematical bodies, from the section 1 heading up to the section 11
-heading, are byte identical: 21,029 bytes, SHA-256
-`4fb14655a213c75ce6b69978b7fe064c7f4d461e4ec99464a56b66203579edb8`.
-The original complete construction is 23,394 bytes, SHA-256
-`0c4631607466abec0a9c66535cc1e47702454321598e2c2fc17012d4afaf608c`;
-the complete frozen proof is 24,103 bytes, SHA-256
+The coordinator's public readback of the addendum completed at
+2026-11-09T08:17:14Z. The reviewed addendum is 10,567 bytes, SHA-256
+`2e32f6e6f40b43e88a266f1ad59b6c0af265bf79e399f08c50b24cf49683cd1f`.
+The frozen proof is 24,103 bytes, SHA-256
 `d7ffeaf4b9e2a9f528fcaaecfc945cd9f7eea30ac8f868734dbf406f9f5a0f39`.
-This is author-side custody evidence, not a comparison attested by Emmy.
+These are coordinator custody records, not hashes independently attested by
+the reviewer. PREREG.md, PROOF.md and verify.py remain unchanged at the
+frozen source pin; EXPECTED.txt retains the original first-run bytes.
 
-PREREG.md, PROOF.md and verify.py remain unchanged at the frozen source pin.
-The clarifications above change no gate, preparation, schedule, reader,
-account, theorem scope, finite audit inventory or expected output. They do
-not retroactively make the review unconditional. The finite audit remains
-candidate-C evidence; the supplied architecture and reader remain candidate-D.
-The remote record is occupied-region delay memory, not a stationary point
-latch or a physical detector theorem. PR #1973 remains a draft; no Canon,
-registry or release promotion is asserted by this record.
+## Acceptance boundary
+
+The renewed review accepts the stated composition under its declared
+mathematical assumptions at the manual text-review level. It does not claim
+machine-checked formalization, an independent numerical reproduction,
+empirical physics, or promotion to Canon. The supplied architecture and
+reader remain candidate-D, the all-parameter claims candidate-T, and the
+finite executed inventory candidate-C. The record is occupied-region delay
+memory with a counted phase reference; it is not a stationary point latch.
+No broader law, physical detector, gravity result or fresh-message renewal
+is established by this acceptance.
