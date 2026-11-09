@@ -1,9 +1,10 @@
 # One conservative sign-to-record apparatus
 
-NON-CANONICAL / L1. This is a consolidation proposal and an analytical
-construction note, not a Canon fold or a completed formal probe. The new
-construction is authored in this working session; it has not been executed
-or independently accepted. Existing evidence retains its own scope.
+NON-CANONICAL / L1. The supplied architecture and reader remain candidate-D;
+the all-parameter theorem remains candidate-T pending independent acceptance.
+The frozen finite audit is candidate-C and has passed on x86_64 and aarch64.
+This consolidation changes no Canon or registry status. Existing evidence
+retains its own scope.
 
 ## The single program question
 
@@ -39,7 +40,7 @@ identified here with measured physical energy.
 | Funded B contact | Four-cell reciprocal J exchange on exact balance surfaces; total involution with all refusal branches | An unrestricted boost, free acceleration, or compilation in the old rho alphabet |
 | Fixed-pair B conveyor | Exact transport of high/low relative-account occupations on an occupied code | Export of an unknown local sign or phase with the constituent pairs fixed |
 | Changing-pair four-cell writer | Sign-dependent recurring local record from one common payer | A remote channel or arbitrary hold time by itself |
-| Joint sign channel | A proposed common preparation and continuing composition using B, with a spatial code and finite read window | A stationary point archive, unlimited independent renewal, physical time, or native-U admission |
+| Joint sign channel | A frozen common preparation and continuing composition using B, with a spatial code and finite read window; finite audit passed on both architectures | A stationary point archive, unlimited independent renewal, physical time, or native-U admission |
 
 The distinction between rho and B is a mathematical boundary. In the funded
 primitive proof, the displayed transition changes the raw-slot residue
@@ -80,7 +81,7 @@ The all-time version also includes a common finite B clock. Put
 
     L=2d+h+3,  P=2L+4,  tau=d+2.
 
-The proposed exact data periods are P for the positive input and P/2 for
+The analytical data return periods are P for the positive input and P/2 for
 the negative input. The clock has period P and is prepared identically for
 both signs. Its local corridor qualifies the fixed data reader only during
 
@@ -97,11 +98,12 @@ The joint construction has
     E = 24L+50,
     S = 2a.
 
-For d=4 and h=8 this gives L=19, P=42, 248 raw cells and E=506. The proposed
+For d=4 and h=8 this gives L=19, P=42, 248 raw cells and E=506. The fixed
 reader returns the sign at full boundaries 6 through 13 modulo 42 and
 BLANK at all other full boundaries. The construction also specifies its
-intermediate-layer contract. All quantities here are analytical predictions;
-none is a newly executed audit result.
+intermediate-layer contract. This instance is included in the executed
+finite audit. Its three-period check supports that bounded inventory;
+the all-time and all-parameter assertions have their separate proof.
 
 The clock qualification matters: later unqualified returning patterns can
 imitate the wrong sign. The longer complete cycle is part of the proof, not
@@ -124,10 +126,11 @@ patterns. Here the counted clock and the exact data recurrence support the
 fourth requirement analytically. Permanent storage and fresh renewal are
 not claimed. Later good windows carry the original sign again.
 
-## Common acceptance contract
+## Frozen joint contract
 
-A future formal probe should freeze the actual apparatus, not test its
-components separately and infer compatibility afterwards.
+The [preregistration](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/PREREG.md)
+freezes the complete apparatus and the joint checks below. Component audits
+alone would not establish their compatibility.
 
 - Freeze d, h, the entire raw carrier and common initial preparation, and
   the one local coordinate that contains a. Both input signs must have the
@@ -167,19 +170,25 @@ self-contained verifiers should not be refactored into a mutable common
 runtime during consolidation. New work may restate the necessary gate
 definition with attribution and immutable source references.
 
-The next executable investigation needs a new named probe, its own
-reservation, a frozen common-apparatus contract and an accepted exact
-verifier published and read back before execution. The predecessor pins
-are not reused. A meaningful audit compares complete states, accounts,
-inverse recovery and reader tags against separately derived formulas for
-both signs; it does not merely check an expected sign after selecting the
-successful preparation.
+The new named probe is [P-J-SIGN-REMOTE-HOLD-1](https://github.com/mathorn1973/twist-j/tree/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1).
+Its complete source set was published and read back before the first
+execution. The predecessor pins were not reused. The audit compares complete
+states, accounts, inverse recovery and reader tags with separately derived
+formulas for both signs. All three frozen scientific source files remain
+unchanged; the first stdout and run/result records are appended evidence.
 
-Review the new analytical composition first. Then run the prospective
-probe under the unchanged two-architecture policy. A later independent
-mathematical review may accept the scoped theorem. Any Canon proposal is a
-separate operation after those results, not a consequence of organizing
-these files.
+The required two-architecture CI has passed at the first-result commit.
+External independent mathematical acceptance is still pending. Any Canon
+proposal is a separate operation after the applicable acceptance gates,
+not a consequence of organizing these files. Further scientific changes
+require their own prospective contract and source pin.
+
+The next substantive extension is active capture into a localized stationary
+memory. Arrival must change the memory state, its retained value must survive
+the declared hold, and release or overwrite must fit the same conservative
+continuation. This separates storing a state at a place from keeping a moving
+word inside an occupied delay region. Its account, clock or other phase
+reference, and occupied future must all be included from the start.
 
 ## Evidence inspected for this proposal
 
@@ -200,8 +209,26 @@ e671a759481588e29bdc4b869d42254f39113694. Both report successful x86_64,
 aarch64 and aggregate jobs. This inspection did not reread the full job logs
 or rerun either scientific verifier. It is not independent proof authorship.
 
-The new apparatus has analytical work only in this note. No new scientific
-verifier, formal run, measurement, statistical test or physical realization
-is claimed. Same-session reviews contribute to authoring and are not
-independent scientific acceptance. See SOURCES.tsv for immutable public
-source locations.
+The initial version of this note and its same-session review preceded any
+execution of the new apparatus. The subsequent joint probe was frozen at
+[source pin 015c6b6f68cb](https://github.com/mathorn1973/twist-j/commit/015c6b6f68cb8e005f0833f8a1f6f71b051215a1).
+The [first-result record](https://github.com/mathorn1973/twist-j/blob/1595a0986453eea93acd5bb00e10a99b5bdc54ed/probes/P-J-SIGN-REMOTE-HOLD-1/RESULT.md)
+reports PASS on x86_64 for d,h=1..8, both signs, three complete periods and
+all five layer boundaries. This is finite candidate-C evidence, not a
+computational proof for all integers.
+
+[CI run 42580693180, attempt 1](https://github.com/mathorn1973/twist-j/actions/runs/42580693180)
+then passed at result commit 1595a0986453eea93acd5bb00e10a99b5bdc54ed:
+x86_64 job 129038414804, aarch64 job 129038415139 and aggregate job
+129038827797. Both architecture logs report the unchanged verifier SHA-256
+c554f070f254fdfc177f3c81ec1ff071258b61266a9a23ac2764d2cb1beed18e
+and identical expected stdout SHA-256
+86671fa7c21d5b5e3a696bf977636fd2c5f57e515bd1920b59455df249252b56.
+The first-run record is preserved as the record of that earlier execution;
+this later CI evidence does not rewrite it.
+
+[PR #1973](https://github.com/mathorn1973/twist-j/pull/1973) is a draft. External independent mathematical
+acceptance remains pending. Same-session reviews contribute to authoring
+and are not that acceptance. No physical realization, calibrated energy,
+gravity or detector result follows from the audit. See SOURCES.tsv for
+immutable public source locations.

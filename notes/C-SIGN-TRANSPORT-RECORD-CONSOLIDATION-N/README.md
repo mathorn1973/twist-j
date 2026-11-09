@@ -1,8 +1,10 @@
 # A funded local sign channel with a remote finite record
 
-NON-CANONICAL / L1 / analytical construction proposal. No new scientific
-execution or independent acceptance is claimed. The governing public basis
-is main 629a9d4058501f938dc91a690c3eb59a914493d1, Public Canon v110.
+NON-CANONICAL / L1. The supplied architecture and reader are candidate-D;
+the all-parameter proof is candidate-T pending independent acceptance. The
+frozen finite audit is candidate-C and has passed on x86_64 and aarch64.
+The governing public basis remains main
+629a9d4058501f938dc91a690c3eb59a914493d1, Public Canon v110.
 
 One continuing five-layer law made only from the funded four-slot primitive B
 can encode an unknown local sign, transmit the resulting pulse pattern, and
@@ -20,7 +22,8 @@ with a moving internal code, not a stationary single-cell latch.
 For integers d>=1 and h>=1, set L=2d+h+3 and P=2(L+2). Only source raw cell0
 is message-dependent, with value 2a for unknown a in {-1,+1}. All stock,
 rail preparation, clock phase, geometry, and reader are common. With the
-fixed receiver-only decoder of CONSTRUCTION.md,
+fixed receiver-only decoder in the
+[frozen proof](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md),
 
     R(F^t z_a) = VALUE(a) if t mod P is in {d+2,...,d+h+1},
                 BLANK otherwise, for every integer t>=0.
@@ -32,14 +35,15 @@ it is not a new independently supplied experiment or a growing archive.
 The complete apparatus has 12L+20 raw integral cells and conserved positive
 half-trace account E=24L+50. Its full Hermitian account is
 H=12L+28-6phi, and S=2a. Both messages have the same H and E. The units and
-trace normalization are specified in CONSTRUCTION.md; E is not identified
-with measured physical energy.
+trace normalization are specified in that proof; E is not identified with
+measured physical energy.
 
 Example: d=4, h=8 gives L=19, P=42, 248 raw cells, E=506. The fixed receiver
 reports the unknown sign at complete ticks 6 through 13 modulo 42 and BLANK
-at every other complete tick. This is an analytical instance, not a run report.
-The enlarged ring makes d control graph separation as well as flight time; physical metric distance is not
-identified with d.
+at every other complete tick. This instance lies inside the executed d,h=1..8
+audit; the all-parameter statement remains a separate analytical claim.
+The enlarged ring makes d control graph separation as well as flight time;
+physical metric distance is not identified with d.
 
 ## Why the interface works
 
@@ -62,14 +66,27 @@ and supplies a local, counted eligibility mark to the fixed reader.
 
 ## Files and next decision
 
-- [CONSTRUCTION.md](CONSTRUCTION.md): self-contained map, encoder transitions,
-  transport, receiver, recurrence and accounted clock completion.
+- [CONSTRUCTION.md](CONSTRUCTION.md): pointer to the sole current construction
+  in the frozen proof, with immutable links to its analytical predecessor.
 - [PROGRAM.md](PROGRAM.md): conceptual and repository consolidation proposal.
 - [SOURCES.tsv](SOURCES.tsv): immutable source references and evidence scope.
-- [REVIEW.md](REVIEW.md): same-session analytical review and its limits.
-- [NEXT-VALIDATION.md](NEXT-VALIDATION.md): prospective execution and review plan.
+- [REVIEW.md](REVIEW.md): historical pre-freeze same-session review and its limits.
+- [NEXT-VALIDATION.md](NEXT-VALIDATION.md): frozen validation contract, evidence
+  and pending acceptance, with a link to the original prospective plan.
 
-The new claim is an author-side analytical candidate. A new prospective probe
-must freeze the complete construction and an accepted exact verifier before
-execution. Existing source probes and their records stay unchanged. A later
-reviewed fold, not this note, can change scientific authority.
+The joint probe [P-J-SIGN-REMOTE-HOLD-1](https://github.com/mathorn1973/twist-j/tree/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1)
+freezes the complete construction, proof and exact verifier. Its
+[first result](https://github.com/mathorn1973/twist-j/blob/1595a0986453eea93acd5bb00e10a99b5bdc54ed/probes/P-J-SIGN-REMOTE-HOLD-1/RESULT.md)
+records the x86_64 PASS for d,h=1..8, both signs, three complete periods and
+every layer boundary. [CI run 42580693180](https://github.com/mathorn1973/twist-j/actions/runs/42580693180),
+at that result commit, subsequently passed x86_64, aarch64 and the aggregate
+gate with identical verifier and stdout hashes. [PR #1973](https://github.com/mathorn1973/twist-j/pull/1973)
+is a draft; external independent mathematical acceptance is still pending.
+Same-session analytical reviews do not supply that acceptance. No Canon or
+registry status changes.
+
+The next research question is active capture: an arriving word must change a
+localized stationary memory, remain available there, and eventually undergo
+an accounted release or overwrite. The present result supplies a moving code
+inside a bounded receiver region. The physical interpretation and admission
+of B into the original machine remain separate questions.

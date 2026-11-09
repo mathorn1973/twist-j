@@ -59,7 +59,39 @@ scientific source change occurred. The process wrote one compact sorted-key
 JSON report followed by one LF, and no stderr. EXPECTED.txt is a verbatim
 byte copy of that first stdout, not regenerated expected output.
 
-At this record's creation, the two-architecture repository gate and external
-independent mathematical review were pending. The two arithmetic paths and
-the proof-derived oracle are author-side checks; they do not constitute a
-second architecture or independent proof review.
+At the first run's recording, the two-architecture repository gate and
+external independent mathematical review were pending. The subsequent CI
+receipt is recorded below. External independent mathematical review remains
+pending. The two arithmetic paths and the proof-derived oracle are author-side
+checks; they do not constitute independent proof review.
+
+## Recorded two-architecture CI
+
+The required architecture jobs and aggregate passed in
+[run 42580693180, attempt 1](https://github.com/mathorn1973/twist-j/actions/runs/42580693180/attempts/1).
+The reviewed PR head was
+[1595a0986453eea93acd5bb00e10a99b5bdc54ed](https://github.com/mathorn1973/twist-j/commit/1595a0986453eea93acd5bb00e10a99b5bdc54ed),
+with base 629a9d4058501f938dc91a690c3eb59a914493d1. GitHub checked the PR's
+synthetic merge with that base. Its probe contained the same three frozen
+scientific sources and original EXPECTED.txt; the CI merge is not a new
+scientific source pin.
+
+| Architecture | Actual job | Runner platform | Python | Measured verifier replay | Outcome |
+|---|---|---|---|---:|---|
+| x86_64 | [129038414804](https://github.com/mathorn1973/twist-j/actions/runs/42580693180/job/129038414804) | Ubuntu 26.04.1 | 3.12.16 | 11.070 seconds | PASS |
+| aarch64 | [129038415139](https://github.com/mathorn1973/twist-j/actions/runs/42580693180/job/129038415139) | Ubuntu 24.04.5 ARM | 3.12.16 | 17.789 seconds | PASS |
+
+The actual logs for both architecture jobs were read. Both contain the
+architecture marker and successful verifier replay with verifier SHA-256
+c554f070f254fdfc177f3c81ec1ff071258b61266a9a23ac2764d2cb1beed18e and stdout
+SHA-256 86671fa7c21d5b5e3a696bf977636fd2c5f57e515bd1920b59455df249252b56,
+matching the original 1351-byte expected report exactly. Both pass all
+219 repository unit tests and the required policy, Canon, ledger and gate
+checks. The [aggregate job 129038827797](https://github.com/mathorn1973/twist-j/actions/runs/42580693180/job/129038827797)
+also passed.
+
+These are actual x86_64 and aarch64 byte-identical computation receipts.
+They satisfy the two-architecture computation gate for this frozen finite
+audit. They do not replace external independent review of the all-parameter
+proof and do not themselves authorize a Canon promotion or release. The
+flat fields above continue to describe the original first local execution.

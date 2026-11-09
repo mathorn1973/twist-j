@@ -1,6 +1,7 @@
 # Result: one funded sign-to-remote-record apparatus
 
-NON-CANONICAL / L1. The frozen finite audit passed on x86_64. The selected
+NON-CANONICAL / L1. The frozen finite audit passed locally on x86_64 and was
+reproduced byte for byte by the required x86_64 and aarch64 CI jobs. The selected
 architecture and reader remain candidate-D, the all-parameter analytical
 statements remain candidate-T pending independent acceptance, and the
 executed finite inventory is candidate-C. No Canon or registry status changes.
@@ -105,7 +106,17 @@ exact first-run bytes. The complete source pin is
 RESULT.md are appended after execution. All frozen scientific sources remain
 unchanged.
 
-At this handoff the required two-architecture CI receipts and external
-independent mathematical review are pending. The author-side arithmetic
-comparison, state oracle and static reviews do not replace either gate.
-There is no claim of merge, Canon promotion or release.
+The required two-architecture computation gate passed in
+[run 42580693180, attempt 1](https://github.com/mathorn1973/twist-j/actions/runs/42580693180/attempts/1)
+for PR head 1595a0986453eea93acd5bb00e10a99b5bdc54ed. The actual x86_64 and
+aarch64 logs were read and show the same frozen verifier hash and the original
+1351-byte stdout hash. Both architecture jobs and their aggregate passed;
+RUN.md records the [individual job receipts](RUN.md#recorded-two-architecture-ci).
+GitHub replayed the PR merge containing those exact probe bytes, not a changed
+scientific source set. This establishes the two-architecture finite
+computation gate without enlarging the audited parameter range.
+
+External independent mathematical review of the all-parameter proof remains
+pending. The author-side arithmetic comparison, state oracle and static
+reviews do not replace that review. There is no claim of merge, Canon promotion
+or release.
