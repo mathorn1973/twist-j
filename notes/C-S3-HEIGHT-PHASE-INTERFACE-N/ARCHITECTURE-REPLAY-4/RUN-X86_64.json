@@ -1,0 +1,67 @@
+{
+  "architecture": "x86_64",
+  "experiment": "S3-ARCHITECTURE-REPLAY-4",
+  "manifest_sha256": "405a12d47365211154916eda5ccb46477cd28af07ac83aa1c9a63b780b7492b6",
+  "programs": [
+    {
+      "elapsed_seconds": 0.09400000001187436,
+      "exit_code": 0,
+      "expected_match": true,
+      "program": "notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/verify.py",
+      "started_utc": "2026-11-08T16:40:19.393339+00:00",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 4165,
+      "stdout_sha256": "724329795a84ff5f00a908a72ab31ab9ccf8be486def5e58c43a09fcc64c2203",
+      "timed_out": false,
+      "timeout_seconds": 120
+    },
+    {
+      "elapsed_seconds": 0.062000000005355105,
+      "exit_code": 0,
+      "expected_match": true,
+      "program": "notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/audit.py",
+      "started_utc": "2026-11-08T16:40:19.483342+00:00",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 3707,
+      "stdout_sha256": "163342bdcd442a962d2281fd9406cb50dc946ebf0fa7e8d0e526b23446a2e9db",
+      "timed_out": false,
+      "timeout_seconds": 120
+    },
+    {
+      "elapsed_seconds": 0.75,
+      "exit_code": 0,
+      "expected_match": true,
+      "program": "notes/C-S3-HEIGHT-PHASE-INTERFACE-N/CONSTRUCTIVE-3/assembly.py",
+      "started_utc": "2026-11-08T16:40:19.556380+00:00",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 2906,
+      "stdout_sha256": "fcc72a214caf784942ffdc5a0ed1c05b48c69c8a1558148d6987382c7b9ae74f",
+      "timed_out": false,
+      "timeout_seconds": 600
+    },
+    {
+      "elapsed_seconds": 0.625,
+      "exit_code": 0,
+      "expected_match": true,
+      "program": "notes/C-S3-HEIGHT-PHASE-INTERFACE-N/search.py",
+      "started_utc": "2026-11-08T16:40:20.302833+00:00",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 449,
+      "stdout_sha256": "b7dcf988c9a6bbcdc900e0fd60f6f8c8c7e8f3720316e118441d276d91c4378a",
+      "timed_out": false,
+      "timeout_seconds": 120
+    }
+  ],
+  "python": "3.12.10",
+  "release": "11",
+  "result": "PASS",
+  "runner_sha256": "b6877295108fe908f534298a2e619bedf256be8c2a45c72a4f56b6ca23465f90",
+  "source_commit": "73f3cb4946b05f5d63aba1c279642f77c699caef",
+  "source_unchanged": true,
+  "started_utc": "2026-11-08T16:40:19.393339+00:00",
+  "system": "Windows"
+}

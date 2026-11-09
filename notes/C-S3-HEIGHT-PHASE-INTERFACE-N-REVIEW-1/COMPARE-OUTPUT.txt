@@ -1,0 +1,20 @@
+word_one_based_raw DIFF-CONVENTION positions_with_reversed_orientation=20 (mine follows PROOF §3 literally, C(d_s,g); author canonicalizes a<b); my_raw_json_sha=9d944d0b25050c1d35afcf3a46c1c4d184018cbc7891a5207b030a9c33c87aaf
+word_one_based_orientation_free MATCH 95 unordered pairs equal in order; every raw difference is a pure orientation flip (contact map is orientation-free, review.py R02)
+word_json_sha256 MATCH author format recomputed from my orientation-normalized word: a2a86bf3984fad630876d225928d71cf4f6662f11b6fd43d650a8ecd9790f8c8
+stock_four_coefficients MATCH seven values
+transformed_x MATCH x_t values
+stock_accounts MATCH Q=80 H=33+14phi Sigma
+complete_final_states MATCH five 15-slot endpoints equal state by state
+forward_admission_traces MATCH five traces equal; admitted per t=[30, 36, 37, 38, 44]
+complete_initial_q MATCH 119+10t^2
+FP_TRACES_from_author_data MATCH 075ca8281d2cb629f800e5e2ea3e9e49452159db915bbe2c76c09ffcae71863a
+FP_ENDPOINTS_from_author_data MATCH 46b86040ef87c325d1417beb27546494c80b5d5706cb3e0e09c56bf7f023e549
+assembly_case_order MATCH 14 cases in the same order
+assembly_final_state_sha256 MATCH 14 digests equal in the author's JSON format
+assembly_counts MATCH contacts=2597775 admitted=864540 refused=1733235 swaps=50
+assembly_per_case_Q_H MATCH Q, H, slots per case
+bfs_visited MATCH visited=12853
+bfs_counters MATCH generated=92120 unchanged=66022 duplicate=13246 expanded=3290
+bfs_visited_states_sha256 MATCH 0158b2b9e1ba6398b1ea19f6c6e54233854d9436fac55395c5ea5d943c6be3a1
+bfs_status MATCH author INCONCLUSIVE / DEPTH_CAP; mine INCONCLUSIVE / depth cap
+COMPARE ALL MATCH
