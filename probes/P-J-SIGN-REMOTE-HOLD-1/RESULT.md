@@ -3,8 +3,9 @@
 NON-CANONICAL / L1. The frozen finite audit passed locally on x86_64 and was
 reproduced byte for byte by the required x86_64 and aarch64 CI jobs. The selected
 architecture and reader remain candidate-D, the all-parameter analytical
-statements remain candidate-T pending independent acceptance, and the
-executed finite inventory is candidate-C. No Canon or registry status changes.
+statements remain candidate-T after conditional external review, and the
+executed finite inventory is candidate-C. Unconditional analytical acceptance
+remains open. No Canon or registry status changes.
 
 ## Frozen question and outcome
 
@@ -116,7 +117,12 @@ GitHub replayed the PR merge containing those exact probe bytes, not a changed
 scientific source set. This establishes the two-architecture finite
 computation gate without enlarging the audited parameter range.
 
-External independent mathematical review of the all-parameter proof remains
-pending. The author-side arithmetic comparison, state oracle and static
-reviews do not replace that review. There is no claim of merge, Canon promotion
-or release.
+[External mathematical review was performed](../../notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/REVIEW.md).
+Its verdict is CONDITIONAL text-level consistency, not unconditional
+acceptance of the all-parameter proof. The review record retains the requests
+for explicit coefficient conjugation and stepwise H/E reasoning alongside
+Thorn's assessment that the cited per-B proof covers those obligations.
+Unconditional analytical acceptance remains open and PR #1973 remains a
+draft. The author-side arithmetic comparison, state oracle and static reviews
+remain separate evidence. There is no claim of merge, Canon promotion or
+release.

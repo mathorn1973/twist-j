@@ -1,8 +1,9 @@
 # A funded local sign channel with a remote finite record
 
 NON-CANONICAL / L1. The supplied architecture and reader are candidate-D;
-the all-parameter proof is candidate-T pending independent acceptance. The
-frozen finite audit is candidate-C and has passed on x86_64 and aarch64.
+the all-parameter proof remains candidate-T. External review found conditional
+text-level consistency; unconditional mathematical acceptance remains open.
+The frozen finite audit is candidate-C and has passed on x86_64 and aarch64.
 The governing public basis remains main
 629a9d4058501f938dc91a690c3eb59a914493d1, Public Canon v110.
 
@@ -70,7 +71,8 @@ and supplies a local, counted eligibility mark to the fixed reader.
   in the frozen proof, with immutable links to its analytical predecessor.
 - [PROGRAM.md](PROGRAM.md): conceptual and repository consolidation proposal.
 - [SOURCES.tsv](SOURCES.tsv): immutable source references and evidence scope.
-- [REVIEW.md](REVIEW.md): historical pre-freeze same-session review and its limits.
+- [REVIEW.md](REVIEW.md): historical author review, external conditional review
+  and the remaining analytical acceptance boundary.
 - [NEXT-VALIDATION.md](NEXT-VALIDATION.md): frozen validation contract, evidence
   and pending acceptance, with a link to the original prospective plan.
 
@@ -81,9 +83,10 @@ records the x86_64 PASS for d,h=1..8, both signs, three complete periods and
 every layer boundary. [CI run 42580693180](https://github.com/mathorn1973/twist-j/actions/runs/42580693180),
 at that result commit, subsequently passed x86_64, aarch64 and the aggregate
 gate with identical verifier and stdout hashes. [PR #1973](https://github.com/mathorn1973/twist-j/pull/1973)
-is a draft; external independent mathematical acceptance is still pending.
-Same-session analytical reviews do not supply that acceptance. No Canon or
-registry status changes.
+remains a draft. [External review was performed](REVIEW.md), with a
+CONDITIONAL verdict of text-level consistency, not unconditional proof
+acceptance. The remaining analytical acceptance obligation is open. No Canon
+or registry status changes.
 
 The next research question is active capture: an arriving word must change a
 localized stationary memory, remain available there, and eventually undergo

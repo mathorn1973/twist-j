@@ -1,98 +1,120 @@
-# Analytical author-side review
+# External review and author response
 
-NON-CANONICAL / L1. Date: 2026-11-09.
+NON-CANONICAL / L1. Date: 2026-11-09. Overall disposition:
+**Conditional / text-level consistent.** The all-parameter claims remain
+candidate-T; this review does not supply unconditional analytical acceptance.
 
-This is a review within the authoring session. It is neither independent
-scientific acceptance nor an independent reproduction. The reviewer read the
-supplied network proof and the complete final `CONSTRUCTION.md`, followed the
-algebraic branches by hand, and checked the symbolic resource formulas.
-No scientific executable, verifier import, simulation or numerical search ran.
+This is a coordinator-written English record of the external AI-assisted review reported
+through A. M. Thorn, including Emmy's assessment, Thorn's subsequent assessment
+and the author response. It is not a byte copy of an original Emmy report or
+an independently signed source-hash attestation. The
+[earlier same-session review](https://github.com/mathorn1973/twist-j/blob/33a393e3af8344b31c1e6bedc8e5638be6aa8b26/notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/REVIEW.md)
+is preserved separately at its original commit.
 
-Reviewed `CONSTRUCTION.md` SHA-256:
-`0c4631607466abec0a9c66535cc1e47702454321598e2c2fc17012d4afaf608c`.
-The result is an analytically supported candidate requiring a new prospective
-verification and independent review before promotion.
+## Reviewed source and method
 
-## Checks and findings
+Emmy manually reviewed the
+[analytical construction at 33a393e3](https://github.com/mathorn1973/twist-j/blob/33a393e3af8344b31c1e6bedc8e5638be6aa8b26/notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/CONSTRUCTION.md).
+The review was textual and mathematical. It did not run the scientific
+verifier, formalize the argument in Lean, or independently compare source
+hashes. An auxiliary numerical check attempted during the review produced
+no usable result and supplies no evidence here.
 
-1. **A real unknown-sign interface.** Both preparations use the same high
-   launch pair. At the first tick, the positive writer's payer `(W,0)` has
-   odd difference and rejects the interface; the negative payer
-   `(rho,-rho)` accepts it. The exact relative updates are
-   `(rho,J)->(W,1)` and `(W,1)->(rho,J)`. The resulting emission times
-   `{1,3}` and `{2,3}` follow from the stated source-state table. No
-   message-dependent rail preparation is substituted for the local sign.
+Emmy was not a coauthor of this new construction. Her role, if any, in the
+predecessor primitive and network probes is not established by this record.
+This scope is distinct from the author-side static reviews and from the
+separately recorded two-architecture finite audit.
 
-2. **Occupied continuation.** The states `D_a` and `Z_a` are fixed by the
-   isolated four-cell writer for the stated equal-account and parity reasons.
-   Coupling them to the launch site gives the complete finite transition table
-   in section 8. In particular returned pulses cannot be ignored or treated as
-   fresh blank input.
+The reported checks covered:
 
-3. **Exact return certificates.** The positive data array returns to its
-   initial state at `2L+4`, and the negative array at `L+2`. In the positive
-   case the essential events are `A_+` with rail `{L-1}` at `L+1`, `B_+`
-   with `{0}` at `L+2`, `Z_+` with an empty rail at `L+3`, `C_+` with `{1}`
-   at `L+4`, and `D_+` with `{2,1}` at `L+5`. The next return yields
-   `A_+` with `{0}` at `2L+4`. In the negative case `D_-` with
-   `{0,L-1}` at `L+1` yields `A_-` with `{0}` at `L+2`.
-   These are sufficient common-period certificates; no minimal-period claim
-   is needed.
+- The total B involution, its admitted branches and refusal behavior.
+- The common-preparation encoder and emissions {1,3} versus {2,3}.
+- The positive and negative return tables and their common return period.
+- The whole-data-rail alias that defeats an unqualified instantaneous reader.
+- The counted clock, local receiver windows and intermediate-layer boundaries.
+- The stated complete resource totals and supplied architecture's scope.
 
-4. **A substantive failed first design is preserved.** The entire positive
-   data rail at `L+5` equals the negative data rail at `3`. Their shifted
-   first-window receiver states consequently alias. Every instantaneous
-   fixed rail-only reader that accepts the negative first window must give
-   that same negative answer on the later positive passage. This is stronger
-   than a defect of one particular gap formula. It requires an additional
-   phase-distinguishing resource for this architecture and stronger contract;
-   it is not a universal lower bound requiring a clock for every conceivable
-   apparatus.
+## Conditional verdict and retained requests
 
-5. **The paid phase reference repairs that alias.** A separate B-only rail
-   with `2P` sites and one high marker has period `P=2L+4`. Its local
-   canonical-code corridor is enabled exactly at the specified first-window
-   phases. The whole data state recurs at this same period for either sign.
-   Therefore each enabled window repeats the proved first window, while the
-   later aliased passage occurs half a period away and is suppressed. The
-   clock does not switch the data law or supply uncounted input.
+Emmy's reported final verdict was **Conditional / text-level consistent**.
+She retained two requests for the presentation:
 
-6. **The finite hold includes layer boundaries.** Reading a contiguous data
-   corridor admits the odd anchor after `K0`, as well as the even anchors at
-   full ticks. Running the clock and data conveyor layers in parallel and
-   reading the contiguous clock corridor
-   `[2tau,2(tau+h)-1]` prevents intermediate clock holes. The first arrival is
-   after `K1` at `tau`; the reader remains correct through the intermediate
-   layers before expiry and becomes BLANK at the common expiry `K1` boundary.
-   This is a discrete boundary statement, not a claim about physical evolution
-   inside an unspecified realization of a layer.
+1. Make coefficient conjugation and exact evaluation of the gate guards explicit.
+2. Display the stepwise H/E account, beyond its initial and final totals.
 
-7. **Remoteness and full resources.** The final choice `L=2d+h+3` makes the
-   entire data receiver at least `2d` ring bonds from launch in either
-   direction. The earlier smaller-ring choice would have provided an
-   arbitrarily long delay without arbitrary shortest-path remoteness; the
-   final geometry removes that ambiguity. Data and clock receiving corridors
-   are explicitly co-located in the supplied layout. They comprise
-   `8h+8` raw receiving cells. The complete apparatus has
-   `12L+20=24d+12h+56` raw cells,
-   `H=12L+28-6phi`, and `E=24L+50=48d+24h+122`.
-   All five full-carrier involutive layers preserve `S,H,E`; reversing their
-   order gives the stated full inverse. These are construction costs, not
-   optimality or physical-energy claims.
+After receiving the author's source citations and algebraic expansions,
+Thorn accepted the coefficient-conjugation formula and the per-gate
+Delta H=0 argument. His assessment is that these are exposition requests,
+not missing mathematical conservation proofs. He nevertheless retained the
+overall conditional candidate-T disposition.
 
-## Remaining scope
+These positions are recorded separately. Thorn's assessment is not treated
+as Emmy withdrawing either request or granting unconditional acceptance.
+The following response makes the existing definitions and conservation
+argument explicit without changing the frozen construction.
 
-The record is a moving two-pulse word retained inside a bounded occupied
-receiver region, qualified by a counted local phase reference. It is not a
-stationary one-cell latch. The common clock phase, geometry, five-layer order,
-initial stock and semantic reader are supplied structure. Recurrent readings
-reuse the same original sign and do not constitute independent new messages.
-The existing fixed-pair no-export theorem remains intact: changing the source
-pairing enables the encoder, after which the fixed-pair rail transports the
-new account word.
+## Author response: exact conjugation and guards
 
-A fresh prospective verifier must test both arithmetic implementations,
-complete raw states, all five intermediate boundaries, inverse and full
-accounts, both explicit return tables, common-period reader truth, local
-receiver access, and the mandatory ungated false-passage control. No such
-computational gate or independent acceptance is asserted by this review.
+[Frozen PROOF.md, line 61](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md#L61)
+defines h(z)=z conjugate(z). In O=Z[j], complex conjugation sends j to
+j^(-1)=j^4. For z=c0+c1*j+c2*j^2+c3*j^3 it is therefore
+
+    conjugate(z) = (c0-c1) - c1*j + (c3-c1)*j^2 + (c2-c1)*j^3.
+
+The [frozen verifier, lines 74-81](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/verify.py#L74)
+contains this coefficient map followed by exact multiplication for h.
+Multiplication reduces modulo 1+j+j^2+j^3+j^4; equality is equality of the
+four integer coefficients. The parity guard checks that all coefficients
+of both pair differences are even. On that domain, the balance guards
+compare h(v) with g*h(u), or h(u) with g*h(v), exactly, with the stated
+nonzero conditions. The clarified factor is g=J conjugate(J)=2-phi,
+and g^(-1)=1+phi. No approximate norm test is substituted.
+
+## Author response: every gate and layer conserves the account
+
+[Frozen PROOF.md, lines 92-95](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md#L92)
+already states the local argument: the accepted branch exchanges h(u) and
+h(v), while the centers c,d remain fixed. In expanded form,
+
+    H_four = 2*h(c)+2*h(d)+2*h(u)+2*h(v).
+
+On the forward branch h(v)=g*h(u), so
+
+    Delta H = 2*((g-1)*h(u)+(g^(-1)-1)*h(v)) = 0.
+
+On the reverse branch h(u)=g*h(v), so
+
+    Delta H = 2*((g^(-1)-1)*h(u)+(g-1)*h(v)) = 0.
+
+All refusal branches are identity. Each marked pair sum is fixed, so S is
+preserved; E=Tr(H)/2 is preserved by linearity. This is a full-carrier
+per-gate proof, not merely an equality between prepared endpoints.
+
+All source, interface and conveyor gates are this same B. The clock adds
+only disjoint B blocks in the joint conveyor layers. Unchanged cells retain
+their accounts; summing disjoint blocks and composing layers preserves S,H,E
+after every gate and layer. The frozen proof states this explicitly at
+[line 486](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md#L486).
+The displayed total accounts evaluate that invariant on the preparation.
+
+## Author-side source custody and limits
+
+The coordinator compared the original construction with the
+[frozen PROOF.md at 015c6b6f](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md).
+Their mathematical bodies, from the section 1 heading up to the section 11
+heading, are byte identical: 21,029 bytes, SHA-256
+`4fb14655a213c75ce6b69978b7fe064c7f4d461e4ec99464a56b66203579edb8`.
+The original complete construction is 23,394 bytes, SHA-256
+`0c4631607466abec0a9c66535cc1e47702454321598e2c2fc17012d4afaf608c`;
+the complete frozen proof is 24,103 bytes, SHA-256
+`d7ffeaf4b9e2a9f528fcaaecfc945cd9f7eea30ac8f868734dbf406f9f5a0f39`.
+This is author-side custody evidence, not a comparison attested by Emmy.
+
+PREREG.md, PROOF.md and verify.py remain unchanged at the frozen source pin.
+The clarifications above change no gate, preparation, schedule, reader,
+account, theorem scope, finite audit inventory or expected output. They do
+not retroactively make the review unconditional. The finite audit remains
+candidate-C evidence; the supplied architecture and reader remain candidate-D.
+The remote record is occupied-region delay memory, not a stationary point
+latch or a physical detector theorem. PR #1973 remains a draft; no Canon,
+registry or release promotion is asserted by this record.

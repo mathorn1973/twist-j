@@ -13,9 +13,16 @@ records the x86_64 PASS. Subsequent
 passed x86_64, aarch64 and the aggregate gate at that exact result commit,
 with unchanged scientific sources and identical expected stdout.
 
-External independent mathematical acceptance remains pending. The supplied
-architecture is candidate-D, the all-parameter proof candidate-T pending
-acceptance, and the executed finite inventory candidate-C. The finite audit
-does not by itself establish the all-parameter theorem. The historical plan
-and same-session reviews do not replace external acceptance or authorize a
-change to the frozen probe. No Canon or registry status changes.
+[External review was performed](REVIEW.md), with a CONDITIONAL verdict of
+text-level consistency. Emmy retains requests for explicit coefficient
+conjugation and stepwise H/E preservation. Thorn considers the cited per-B
+proof sufficient and those additions expository; the overall verdict remains
+conditional. The central review record preserves both positions and the
+author response. Unconditional analytical acceptance remains open, so
+PR #1973 remains a draft.
+
+The supplied architecture remains candidate-D, the all-parameter proof
+candidate-T, and the executed finite inventory candidate-C. The finite audit
+does not by itself establish the all-parameter theorem. Neither the external
+review nor the author response changes the frozen probe or advances Canon
+or registry status.

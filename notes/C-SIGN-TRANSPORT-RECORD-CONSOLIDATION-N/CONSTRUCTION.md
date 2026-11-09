@@ -1,8 +1,10 @@
 # Construction source
 
 NON-CANONICAL / L1. The supplied architecture and reader are candidate-D;
-the conditional all-parameter theorem is candidate-T pending independent
-mathematical acceptance. Current finite evidence is summarized in README.md.
+the conditional all-parameter theorem remains candidate-T.
+[External review](REVIEW.md) found conditional text-level consistency;
+unconditional mathematical acceptance remains open. Current finite evidence
+is summarized in README.md.
 
 The sole current construction text is the
 [frozen PROOF.md](https://github.com/mathorn1973/twist-j/blob/015c6b6f68cb8e005f0833f8a1f6f71b051215a1/probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md)

@@ -61,9 +61,12 @@ byte copy of that first stdout, not regenerated expected output.
 
 At the first run's recording, the two-architecture repository gate and
 external independent mathematical review were pending. The subsequent CI
-receipt is recorded below. External independent mathematical review remains
-pending. The two arithmetic paths and the proof-derived oracle are author-side
-checks; they do not constitute independent proof review.
+receipt is recorded below. A subsequent
+[external review](../../notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/REVIEW.md)
+was performed and found conditional text-level consistency; unconditional
+mathematical acceptance remains open. The two arithmetic paths and the
+proof-derived oracle remain author-side checks. This later status does not
+change the first execution or its recorded evidence.
 
 ## Recorded two-architecture CI
 

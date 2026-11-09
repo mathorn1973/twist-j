@@ -1,7 +1,8 @@
 # One conservative sign-to-record apparatus
 
 NON-CANONICAL / L1. The supplied architecture and reader remain candidate-D;
-the all-parameter theorem remains candidate-T pending independent acceptance.
+the all-parameter theorem remains candidate-T after conditional external
+review; unconditional mathematical acceptance remains open.
 The frozen finite audit is candidate-C and has passed on x86_64 and aarch64.
 This consolidation changes no Canon or registry status. Existing evidence
 retains its own scope.
@@ -178,7 +179,8 @@ formulas for both signs. All three frozen scientific source files remain
 unchanged; the first stdout and run/result records are appended evidence.
 
 The required two-architecture CI has passed at the first-result commit.
-External independent mathematical acceptance is still pending. Any Canon
+[External review was performed](REVIEW.md) and found conditional text-level
+consistency; unconditional mathematical acceptance remains open. Any Canon
 proposal is a separate operation after the applicable acceptance gates,
 not a consequence of organizing these files. Further scientific changes
 require their own prospective contract and source pin.
@@ -227,8 +229,9 @@ and identical expected stdout SHA-256
 The first-run record is preserved as the record of that earlier execution;
 this later CI evidence does not rewrite it.
 
-[PR #1973](https://github.com/mathorn1973/twist-j/pull/1973) is a draft. External independent mathematical
-acceptance remains pending. Same-session reviews contribute to authoring
-and are not that acceptance. No physical realization, calibrated energy,
+[PR #1973](https://github.com/mathorn1973/twist-j/pull/1973) remains a draft.
+The [external review and author response](REVIEW.md) record a CONDITIONAL
+verdict, not unconditional acceptance of the all-parameter proof.
+Same-session reviews remain authoring evidence. No physical realization, calibrated energy,
 gravity or detector result follows from the audit. See SOURCES.tsv for
 immutable public source locations.
