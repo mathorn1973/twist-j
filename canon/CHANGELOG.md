@@ -1,11 +1,39 @@
 # Canon changelog (public series)
 
-## Public Canon v110
+## Public Canon v111
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
+Registry snapshot: 621 claims; 0 T-LOCK, 475 T, 59 D, 42 C, 2 H, 24 O, 19 F; 26 live H/O.
+Reproduction witnesses: 41.
+<!-- END GENERATED CURRENT COUNTS -->
+
+Add seven exact L1 theorems and two C statements. The reciprocal four-slot
+contact has a complete balance guard and full-account involution, a sharp
+common payer within its specified forward family, an obstruction to its
+implementation by the old conservative contact alphabet with restored
+auxiliaries, and an explicit finite-stock ladder. A unitary counterexample
+shows why identity refusal needs its own invariant-domain check. The funded
+remote-hold construction includes complete encoder, return, guard and account
+proofs and charges its clock; its regional record recurs for the same input.
+
+For the separate plenum law, the generic aligned escape implication is T.
+The complete three-history and 34-row certificate is C. Its prepared permanent
+site 560 consequence remains C with explicit computed premises and analytical
+extension to starts 2^18 h+1 and every boundary after the stated cut. The
+novelty is transfer of a persistent pointer distinction into a distant fine
+value. Input equality covers S,H,Q only; the reduced colour word and outgoing
+sign distinguish complete fields. Receiver/site selection was result-exposed.
+
+All 612 previous claim scopes and statuses and all 26 live H/O obligations and
+gates are unchanged. The complete public plenum reproduction and two neutral
+architecture records are admitted before this fold. No full-U realization,
+active later read, apparatus formation/reuse, physical calibration or
+occurrence law is inferred. No old threshold or expected output changes.
+
+## Public Canon v110
+
 Registry snapshot: 612 claims; 0 T-LOCK, 468 T, 59 D, 40 C, 2 H, 24 O, 19 F; 26 live H/O.
 Reproduction witnesses: 40.
-<!-- END GENERATED CURRENT COUNTS -->
 
 Add three exact L1 theorems. One fixed 95-contact compiler translates the
 five prepared integer heights into the five clock phases, restores every

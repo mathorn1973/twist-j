@@ -1,0 +1,7 @@
+path	sha256	bytes	origin
+reproduce/plenum-full-chain-record/certificate.json	80a21b34b74b8c0bc5bf9e1c92782f8a4fdc2bc41c289029184d2ce33be2182c	34315	exposed mathematical certificate extraction
+reproduce/plenum-full-chain-record/EXPECTED.txt	5fb4c907ac3a372a2d9c943a61009891a4d507872cd4619fb3af350948bd5986	328	predicted transcript from exposed fixture; not an execution record
+reproduce/plenum-full-chain-record/PROOF.md	c38aa05112b772d33d210ef70a3a57654beee79d18a309a28fc64747321b89eb	12958	new exposed replay implementation or exposition
+reproduce/plenum-full-chain-record/PROVENANCE.md	b716da1576380f2976a0586472183939f68b6dde29433833b92825cc6f7710e7	4436	new exposed replay implementation or exposition
+reproduce/plenum-full-chain-record/README.md	5b4d514bfe0ed4cae0a349a8c4f5bad413b87492306f739b0c3eb188e2f2de76	7057	new exposed replay implementation or exposition
+reproduce/plenum-full-chain-record/verify.py	6d96fb462a869f832948083810272f5ec3e10adcc46cfc4233cf8b5d26992dcd	9924	new exposed replay implementation or exposition

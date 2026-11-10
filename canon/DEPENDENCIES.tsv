@@ -1220,3 +1220,16 @@ RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS	RELATIVE-CONTACT-INTEGRAL-LAW	
 RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS	RELATIVE-CONTACT-RETAINED-BANK-CAPACITY	BOUNDED_BY	Restoring the reusable core requires separately prepared fresh archives and does not regenerate retained occupied records
 RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS	RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY	BOUNDED_BY	The entire schedule is input independent and every reload swaps corresponding equal-residue inputs
 RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION	RELATIVE-CONTACT-INTEGRAL-LAW	REQUIRES	The exact parity admission rule and positive definite arithmetic account imply finite dyadic affine branches and constant bounded outputs
+RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT	RELATIVE-CONTACT-INTEGRAL-LAW	REQUIRES	The stated proof uses the declared complete integral contact and accounts
+RECIPROCAL-J-COMMON-PAYER-BOUND	RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT	REQUIRES	The stated construction uses this exact accepted prerequisite at L1
+RECIPROCAL-J-RHO-WORD-OBSTRUCTION	RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT	REQUIRES	The stated construction uses this exact accepted prerequisite at L1
+RECIPROCAL-J-RHO-WORD-OBSTRUCTION	RELATIVE-CONTACT-INTEGRAL-LAW	REQUIRES	The stated proof uses the declared complete integral contact and accounts
+RECIPROCAL-J-FINITE-STOCK-LADDER	RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT	REQUIRES	The stated construction uses this exact accepted prerequisite at L1
+HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION	RELATIVE-CONTACT-INTEGRAL-LAW	REQUIRES	The stated proof uses the declared complete integral contact and accounts
+PLENUM-ALIGNED-ESCAPE-CRITERION	RELATIVE-CONTACT-INTEGRAL-LAW	REQUIRES	The stated proof uses the declared complete integral contact and accounts
+PLENUM-FULL-CHAIN-FINITE-CERTIFICATE	RELATIVE-CONTACT-INTEGRAL-LAW	REQUIRES	The stated proof uses the declared complete integral contact and accounts
+PLENUM-PREPARED-PERMANENT-RECORD	PLENUM-ALIGNED-ESCAPE-CRITERION	REQUIRES	The exact aligned escape implication extends the accepted finite configuration to all future boundaries
+PLENUM-PREPARED-PERMANENT-RECORD	PLENUM-FULL-CHAIN-FINITE-CERTIFICATE	REQUIRES	The specific C consequence depends on the complete computed finite histories and all-intermediate closure premises
+RECIPROCAL-J-SIGN-REMOTE-HOLD	RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT	REQUIRES	The stated construction uses this exact accepted prerequisite at L1
+PLENUM-PREPARED-PERMANENT-RECORD	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	The supplied L1 record does not provide the target-independent complete physical apparatus, active event mechanism or occurrence law owned by this separate obligation
+RECIPROCAL-J-SIGN-REMOTE-HOLD	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	The supplied L1 record does not provide the target-independent complete physical apparatus, active event mechanism or occurrence law owned by this separate obligation

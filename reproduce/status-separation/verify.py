@@ -47,6 +47,1168 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+V111_PRIOR_COMMIT = 'd52f741fe45c8d0d66f9d375ab13325215a3c9af'
+
+V111_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': 'e3d97bfa91f7ad7e935f5582b73f05f06999abe582e4ee4d7d9bff612e40124a',
+                  'current_bytes': 601962,
+                  'prior_sha256': '0f9d03185ae0885af59359d06e5e84997779cae5fcf0ee474bdedf67c5c32e20',
+                  'prior_bytes': 595503,
+                  'restore': [(613, 622, '')]},
+ 'NORMATIVE.tsv': {'current_sha256': '17351797694e41e17629f6186fb23de62b5bd541bf12a97c59bf3f35abfd3f96',
+                   'current_bytes': 80175,
+                   'prior_sha256': '28c8b486a9d2c7ca2930e883617479cf05519da8a07b6feaf5d6109539af91ed',
+                   'prior_bytes': 78967,
+                   'restore': [(678, 687, '')]},
+ 'DEPENDENCIES.tsv': {'current_sha256': '0d9f865a5cd086b0257acf81316a8c4e28a3e10e6f6c0225487db1332b2680ae',
+                      'current_bytes': 204996,
+                      'prior_sha256': '508284fafb6299a7524e5de3e464c8497917534ac1bcad755f115f6fe90a4bb1',
+                      'prior_bytes': 202823,
+                      'restore': [(1222, 1235, '')]},
+ 'EVIDENCE.tsv': {'current_sha256': 'e6cef26b9fcecf5124da70922a180c143495f39fad785dfe0b312449fb70a82c',
+                  'current_bytes': 124510,
+                  'prior_sha256': 'd9f364841fc13642c2ca4903e5ef261319f0210756d2ba3031602bf51dd0f24c',
+                  'prior_bytes': 122746,
+                  'restore': [(613, 622, '')]},
+ 'HISTORY.tsv': {'current_sha256': 'fbb9d930bd744dc681bb0491a8568a827a67d2faf08a1ff6de5bee3fb115e9dc',
+                 'current_bytes': 538239,
+                 'prior_sha256': '9b70607eda399cd4a45d903679693e5ab7bc34155aff3bf0616db091b382a42b',
+                 'prior_bytes': 534051,
+                 'restore': [(1161, 1170, '')]},
+ 'GATES.tsv': {'current_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'current_bytes': 13324,
+               'prior_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'prior_bytes': 13324,
+               'restore': []},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'current_bytes': 1502,
+                           'prior_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'prior_bytes': 1502,
+                           'restore': []},
+ 'CORE_SELECTION.tsv': {'current_sha256': '63abc00f5fe61484f3fc3eb168c094cab9b06c8ef4a10c13fdca706e756105e0',
+                        'current_bytes': 1566,
+                        'prior_sha256': '63abc00f5fe61484f3fc3eb168c094cab9b06c8ef4a10c13fdca706e756105e0',
+                        'prior_bytes': 1566,
+                        'restore': []},
+ 'CANON.md': {'current_sha256': '9a9f80571f4fbfe50dbfda1bf0e8d7e46e3fa1827bc989621eb8fd875aff75e6',
+              'current_bytes': 1532230,
+              'prior_sha256': '38ea0291af871a084a65fe1e4017fa7b0de2546a4430c489190c7baf6dd6a578',
+              'prior_bytes': 1482168,
+              'restore': [(0, 1, '# TWIST-J Public Canon v110\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v110. Normative authority and '
+                           'activation\n'),
+                          (14, 24, ''),
+                          (13653, 14755, '')]},
+ 'CORE.md': {'current_sha256': 'dbac1e8dd649eae1cc6cbe9e3b7a53bc4ccd0db3ca65ace833dda5dfbf93c28c',
+             'current_bytes': 55694,
+             'prior_sha256': 'a95d55ff497e2001d2c7d3d1de6a80131765264914fce67ecf6d613b1813a6c9',
+             'prior_bytes': 55281,
+             'restore': [(2,
+                          3,
+                          '**Release identity:** Public Canon v110. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v110 also declares a discrete architecture. It does not\n'),
+                         (42, 49, '')]},
+ 'FRONTIER.md': {'current_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'current_bytes': 27382,
+                 'prior_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'prior_bytes': 27382,
+                 'restore': []},
+ 'CHANGELOG.md': {'current_sha256': 'e5e05a17ba56203b58de9370d83e3d58d505f025ee05761d57dede13798a6898',
+                  'current_bytes': 221732,
+                  'prior_sha256': '1aae5fbc7e0010ac068715d891a58ff42722fbfa2d33db3a0de40a095da88a91',
+                  'prior_bytes': 220080,
+                  'restore': [(1, 31, ''),
+                              (34, 34, '<!-- BEGIN GENERATED CURRENT COUNTS -->\n'),
+                              (36, 36, '<!-- END GENERATED CURRENT COUNTS -->\n')]},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '8fe3bd0d3f074ecf60323d44318af1a2319de073ccdceabf2c041dcb0ec8e0e0',
+                       'current_bytes': 244,
+                       'prior_sha256': '4cc4f2836dd334028542ddd880eb4759a6e9b8caaa1e909c4eb0c4e25a7c049c',
+                       'prior_bytes': 244,
+                       'restore': [(1, 2, 'claims\t612\n'),
+                                   (3, 4, 'status_T\t468\n'),
+                                   (5, 6, 'status_C\t40\n'),
+                                   (10, 12, 'reproductions\t40\nevidence_none\t191\n'),
+                                   (14, 15, 'evidence_two-architecture\t381\n')]}}
+
+V111_TOOL_PATCH = {'tools/test_architecture_map_report.py': {'current_sha256': '811bfcab77fdc0f376b55508533cb4e40ba567853deb00f2589f46fd9967cb17',
+                                           'current_bytes': 54537,
+                                           'prior_sha256': '898158fe628a9d36ba5d4c135672feecfa186b94fb11cc6845da85a06b4c738a',
+                                           'prior_bytes': 54489,
+                                           'restore': [(377,
+                                                        380,
+                                                        '        # v110 adds three inline L1 '
+                                                        'theorems; all prior statuses stay '
+                                                        'unchanged.\n'
+                                                        '        '
+                                                        'self.assertEqual(self.report.claims, '
+                                                        '612)\n'),
+                                                       (382,
+                                                        383,
+                                                        '            {"C": 40, "D": 59, "F": 19, '
+                                                        '"H": 2, "O": 24, "T": 468},\n'),
+                                                       (387, 388, '                "none": 191,\n'),
+                                                       (390,
+                                                        391,
+                                                        '                "two-architecture": '
+                                                        '381,\n')]}}
+
+V111_NEW_STATUSES = {'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT': 'T',
+ 'RECIPROCAL-J-COMMON-PAYER-BOUND': 'T',
+ 'RECIPROCAL-J-RHO-WORD-OBSTRUCTION': 'T',
+ 'RECIPROCAL-J-FINITE-STOCK-LADDER': 'T',
+ 'HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION': 'T',
+ 'PLENUM-ALIGNED-ESCAPE-CRITERION': 'T',
+ 'PLENUM-FULL-CHAIN-FINITE-CERTIFICATE': 'C',
+ 'PLENUM-PREPARED-PERMANENT-RECORD': 'C',
+ 'RECIPROCAL-J-SIGN-REMOTE-HOLD': 'T'}
+
+V111_CLAIM_ROWS = {'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT': {'claim_id': 'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT',
+                                          'status': 'T',
+                                          'scope': 'at L1 on all O^4 with the declared marked '
+                                                   'pairs, the total reciprocal J/Jinv '
+                                                   'balance-guarded contact B is an integral '
+                                                   'involution preserving each pair sum, full H '
+                                                   'and positive half-trace E; its nonzero '
+                                                   'branches exchange relative Hermitian accounts, '
+                                                   'while forward full-H conservation is '
+                                                   'equivalent to h(f)=h(J)h(d) for that specified '
+                                                   'reciprocal proposal; the four-slot primitive '
+                                                   'is supplied, not derived from native U',
+                                          'canon_section': '2. Time, space, and the decoder',
+                                          'evidence': 'inline',
+                                          'falsifier': 'fires on wrong admitted balance '
+                                                       'equivalence, nonintegral output, domain '
+                                                       'failure, B^2 != I or account change under '
+                                                       'the exact stated premises; omitted '
+                                                       'physical interpretations are outside '
+                                                       'scope'},
+ 'RECIPROCAL-J-COMMON-PAYER-BOUND': {'claim_id': 'RECIPROCAL-J-COMMON-PAYER-BOUND',
+                                     'status': 'T',
+                                     'scope': 'at L1 for target (2a,0), a in {-1,+1}, one '
+                                              'sign-independent payer (rho J,-rho J) yields the '
+                                              'stated complete B output, pair-Q accounts '
+                                              '(8,6)->(10,4) and total 14; initial payer Q=6 is '
+                                              'sharp only among parity-admitted payers on the '
+                                              'forward reciprocal-J full-H balance surface for '
+                                              'this target, with transfer 2; no minimum over '
+                                              'arbitrary funding laws or physical work is asserted',
+                                     'canon_section': '2. Time, space, and the decoder',
+                                     'evidence': 'inline',
+                                     'falsifier': 'fires on a lower admitted payer, failed witness '
+                                                  'or incorrect full accounts under the exact '
+                                                  'stated premises; omitted physical '
+                                                  'interpretations are outside scope'},
+ 'RECIPROCAL-J-RHO-WORD-OBSTRUCTION': {'claim_id': 'RECIPROCAL-J-RHO-WORD-OBSTRUCTION',
+                                       'status': 'T',
+                                       'scope': 'at L1 no finite word in the declared old two-slot '
+                                                'C_rho contacts, whole-slot permutations and '
+                                                'auxiliary slots all restored exactly realizes B '
+                                                'on all O^4, because the complete residue '
+                                                'histogram modulo 1-j differs on a displayed B '
+                                                'transition; enlarged alphabets or changed '
+                                                'auxiliaries are outside this obstruction',
+                                       'canon_section': '2. Time, space, and the decoder',
+                                       'evidence': 'inline',
+                                       'falsifier': 'fires on an implementation within that exact '
+                                                    'alphabet realizing the mismatching full '
+                                                    'transition under the exact stated premises; '
+                                                    'omitted physical interpretations are outside '
+                                                    'scope'},
+ 'RECIPROCAL-J-FINITE-STOCK-LADDER': {'claim_id': 'RECIPROCAL-J-FINITE-STOCK-LADDER',
+                                      'status': 'T',
+                                      'scope': 'at L1 for every fixed K>=1 and a in {-1,+1}, the '
+                                               'supplied K-payer word sends target (a,-a) to '
+                                               '(aJ^K,-aJ^K), payer i to (rho^i J^(i-1),-rho^i '
+                                               'J^(i-1)), and its reverse restores all 2+2K slots; '
+                                               'initial E=2+2L_(2K+1), with Lucas L0=2,L1=1, so no '
+                                               'fixed finite nonnegative conserved E permits the '
+                                               'same unbounded target trajectory for all K; '
+                                               'preparation and schedule are supplied',
+                                      'canon_section': '2. Time, space, and the decoder',
+                                      'evidence': 'inline',
+                                      'falsifier': 'fires on failed step/balance/inverse, wrong '
+                                                   'Lucas sum or indefinite unbounded target in '
+                                                   'conserved finite E under the exact stated '
+                                                   'premises; omitted physical interpretations are '
+                                                   'outside scope'},
+ 'HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION': {'claim_id': 'HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION',
+                                               'status': 'T',
+                                               'scope': 'at L1 there exists a 2-by-2 matrix over '
+                                                        '(1/2)O unitary at both Hermitian places '
+                                                        'whose completion by identity outside its '
+                                                        'full integral-output domain is '
+                                                        'noninjective: W=diag(j,1)C_rho sends '
+                                                        'admitted (1,1) and refused (j,1) to '
+                                                        '(j,1); independent row/column phase '
+                                                        'classification need not classify total '
+                                                        'refusal completions; no quantitative '
+                                                        'census, pair-sum claim or broad '
+                                                        'uniqueness theorem follows',
+                                               'canon_section': '2. Time, space, and the decoder',
+                                               'evidence': 'inline',
+                                               'falsifier': 'fires if the displayed W fails '
+                                                            'unitarity at either place, its '
+                                                            'integral-output domain differs from '
+                                                            'the stated domain, or the two stated '
+                                                            'images are unequal; no assertion of '
+                                                            'pair-sum conservation is made'},
+ 'PLENUM-ALIGNED-ESCAPE-CRITERION': {'claim_id': 'PLENUM-ALIGNED-ESCAPE-CRITERION',
+                                     'status': 'T',
+                                     'scope': 'at L1 in the specified alternating-background C_rho '
+                                              'field, a stationary finite component and at most '
+                                              'one outgoing finite component on each side remain '
+                                              'separated forever from an aligned cut when nonempty '
+                                              'normalized finite state sets close under both '
+                                              'length 2^r substitution blocks, translations are '
+                                              'even and strictly outward, and every intermediate '
+                                              'support obeys the stated one-background-site gap; '
+                                              'exact certificate hypotheses imply all-future '
+                                              'isolation for any sequence of those blocks',
+                                     'canon_section': '2. Time, space, and the decoder',
+                                     'evidence': 'inline',
+                                     'falsifier': 'fires on a field satisfying every exact '
+                                                  'hypothesis with a subsequent intercomponent '
+                                                  'contact or changed stationary component under '
+                                                  'the exact stated premises; omitted physical '
+                                                  'interpretations are outside scope'},
+ 'PLENUM-FULL-CHAIN-FINITE-CERTIFICATE': {'claim_id': 'PLENUM-FULL-CHAIN-FINITE-CERTIFICATE',
+                                          'status': 'C',
+                                          'scope': 'at L1 the three declared WRITE,FAR,ABSENT '
+                                                   'preparations at boundary 1 have the stated '
+                                                   'complete endpoints and excess S,H,Q after '
+                                                   '196607 raw clock updates through boundary '
+                                                   '196608; six stationary matching checks and 34 '
+                                                   'complete length 8192 outgoing transitions '
+                                                   'close on the stated normalized state sets with '
+                                                   'exact shifts and all-intermediate extrema, '
+                                                   'state limit 16, per-tick span limit 1024 and '
+                                                   'observed maximum span 1; this is a selected '
+                                                   'result-exposed finite certificate, not '
+                                                   'all-time simulation or an all-phase search',
+                                          'canon_section': '2. Time, space, and the decoder',
+                                          'evidence': 'reproduce/plenum-full-chain-record',
+                                          'falsifier': 'fires on any exact endpoint, account, '
+                                                       'closure or all-intermediate extremum '
+                                                       'mismatch under the exact stated premises; '
+                                                       'omitted physical interpretations are '
+                                                       'outside scope'},
+ 'PLENUM-PREPARED-PERMANENT-RECORD': {'claim_id': 'PLENUM-PREPARED-PERMANENT-RECORD',
+                                      'status': 'C',
+                                      'scope': 'at L1 using the accepted computed finite '
+                                               'certificate and generic escape implication, every '
+                                               'integer h>=0 and the specified WRITE/FAR '
+                                               'preparations at n0=2^18 h+1 give fixed site 560 '
+                                               'values m_plus/m_minus at every n>=2^18 h+196608 '
+                                               'with both original writers retained; the phase and '
+                                               'all-future extension are analytical but the '
+                                               'specific claim remains C because of its '
+                                               'computational premise; primary input equality is '
+                                               'only S,H,Q, and receiver-only invariant equality '
+                                               'does not imply whole-field indistinguishability; '
+                                               'receiver and site are supplied after exposure, '
+                                               'with no later active-read or reuse claim',
+                                      'canon_section': '2. Time, space, and the decoder',
+                                      'evidence': 'reproduce/plenum-full-chain-record',
+                                      'falsifier': 'fires on failure of phase identity or later '
+                                                   'fixed-site output under the exact stated '
+                                                   'premises; omitted physical interpretations are '
+                                                   'outside scope'},
+ 'RECIPROCAL-J-SIGN-REMOTE-HOLD': {'claim_id': 'RECIPROCAL-J-SIGN-REMOTE-HOLD',
+                                   'status': 'T',
+                                   'scope': 'at L1 for every d,h>=1, the specified five-layer '
+                                            'reciprocal-B apparatus with L=2d+h+3, P=2L+4, common '
+                                            'stock and a counted clock admits a fixed passive '
+                                            'reader of the declared receiver arcs that returns the '
+                                            'unknown source sign a exactly for n mod P '
+                                            'in{d+2,...,d+h+1} and BLANK otherwise, remaining '
+                                            'correct at every intervening layer boundary inside '
+                                            'each hold; F^P restores each complete prepared state, '
+                                            'on 12L+20 raw cells with H=12L+28-6phi,E=24L+50,S=2a; '
+                                            'the unclocked positive later passage aliases the '
+                                            'negative first passage, and recurrence is not '
+                                            'fresh-input renewal or permanent one-cell storage',
+                                   'canon_section': '2. Time, space, and the decoder',
+                                   'evidence': 'inline',
+                                   'falsifier': 'fires on wrong admitted value, non-BLANK excluded '
+                                                'output, layer-window failure, wrong '
+                                                'return/inverse or whole account under the exact '
+                                                'stated premises; omitted physical interpretations '
+                                                'are outside scope'}}
+
+V111_NORMATIVE_ROWS = {'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT': {'item_id': 'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT',
+                                          'item_type': 'THEOREM',
+                                          'claim_id': 'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT',
+                                          'status': 'T',
+                                          'layer': 'L1',
+                                          'gate_ids': '',
+                                          'statement_source': 'canon/CANON.md::RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT'},
+ 'RECIPROCAL-J-COMMON-PAYER-BOUND': {'item_id': 'RECIPROCAL-J-COMMON-PAYER-BOUND',
+                                     'item_type': 'THEOREM',
+                                     'claim_id': 'RECIPROCAL-J-COMMON-PAYER-BOUND',
+                                     'status': 'T',
+                                     'layer': 'L1',
+                                     'gate_ids': '',
+                                     'statement_source': 'canon/CANON.md::RECIPROCAL-J-COMMON-PAYER-BOUND'},
+ 'RECIPROCAL-J-RHO-WORD-OBSTRUCTION': {'item_id': 'RECIPROCAL-J-RHO-WORD-OBSTRUCTION',
+                                       'item_type': 'THEOREM',
+                                       'claim_id': 'RECIPROCAL-J-RHO-WORD-OBSTRUCTION',
+                                       'status': 'T',
+                                       'layer': 'L1',
+                                       'gate_ids': '',
+                                       'statement_source': 'canon/CANON.md::RECIPROCAL-J-RHO-WORD-OBSTRUCTION'},
+ 'RECIPROCAL-J-FINITE-STOCK-LADDER': {'item_id': 'RECIPROCAL-J-FINITE-STOCK-LADDER',
+                                      'item_type': 'THEOREM',
+                                      'claim_id': 'RECIPROCAL-J-FINITE-STOCK-LADDER',
+                                      'status': 'T',
+                                      'layer': 'L1',
+                                      'gate_ids': '',
+                                      'statement_source': 'canon/CANON.md::RECIPROCAL-J-FINITE-STOCK-LADDER'},
+ 'HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION': {'item_id': 'HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION',
+                                               'item_type': 'THEOREM',
+                                               'claim_id': 'HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION',
+                                               'status': 'T',
+                                               'layer': 'L1',
+                                               'gate_ids': '',
+                                               'statement_source': 'canon/CANON.md::HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION'},
+ 'PLENUM-ALIGNED-ESCAPE-CRITERION': {'item_id': 'PLENUM-ALIGNED-ESCAPE-CRITERION',
+                                     'item_type': 'THEOREM',
+                                     'claim_id': 'PLENUM-ALIGNED-ESCAPE-CRITERION',
+                                     'status': 'T',
+                                     'layer': 'L1',
+                                     'gate_ids': '',
+                                     'statement_source': 'canon/CANON.md::PLENUM-ALIGNED-ESCAPE-CRITERION'},
+ 'PLENUM-FULL-CHAIN-FINITE-CERTIFICATE': {'item_id': 'PLENUM-FULL-CHAIN-FINITE-CERTIFICATE',
+                                          'item_type': 'COMPUTATION',
+                                          'claim_id': 'PLENUM-FULL-CHAIN-FINITE-CERTIFICATE',
+                                          'status': 'C',
+                                          'layer': 'L1',
+                                          'gate_ids': '',
+                                          'statement_source': 'canon/CANON.md::PLENUM-FULL-CHAIN-FINITE-CERTIFICATE'},
+ 'PLENUM-PREPARED-PERMANENT-RECORD': {'item_id': 'PLENUM-PREPARED-PERMANENT-RECORD',
+                                      'item_type': 'COMPUTATION',
+                                      'claim_id': 'PLENUM-PREPARED-PERMANENT-RECORD',
+                                      'status': 'C',
+                                      'layer': 'L1',
+                                      'gate_ids': '',
+                                      'statement_source': 'canon/CANON.md::PLENUM-PREPARED-PERMANENT-RECORD'},
+ 'RECIPROCAL-J-SIGN-REMOTE-HOLD': {'item_id': 'RECIPROCAL-J-SIGN-REMOTE-HOLD',
+                                   'item_type': 'THEOREM',
+                                   'claim_id': 'RECIPROCAL-J-SIGN-REMOTE-HOLD',
+                                   'status': 'T',
+                                   'layer': 'L1',
+                                   'gate_ids': '',
+                                   'statement_source': 'canon/CANON.md::RECIPROCAL-J-SIGN-REMOTE-HOLD'}}
+
+V111_EVIDENCE_ROWS = {'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT': {'claim_id': 'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT',
+                                          'evidence_id': 'EV-RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT',
+                                          'evidence_kind': 'INLINE_CANON',
+                                          'location': 'inline',
+                                          'sha256': 'c88046db33ae3a74f0a18e85559a59ebe19624cdb4b06af9c768deed5535d089',
+                                          'hash_mode': 'registry-scope-sha256-v1',
+                                          'architecture_requirement': 'none'},
+ 'RECIPROCAL-J-COMMON-PAYER-BOUND': {'claim_id': 'RECIPROCAL-J-COMMON-PAYER-BOUND',
+                                     'evidence_id': 'EV-RECIPROCAL-J-COMMON-PAYER-BOUND',
+                                     'evidence_kind': 'INLINE_CANON',
+                                     'location': 'inline',
+                                     'sha256': '3d6aa37ba7d64a4f7440e372e4d9d19d2ead3be6c41f91003088b8e9c1af5d04',
+                                     'hash_mode': 'registry-scope-sha256-v1',
+                                     'architecture_requirement': 'none'},
+ 'RECIPROCAL-J-RHO-WORD-OBSTRUCTION': {'claim_id': 'RECIPROCAL-J-RHO-WORD-OBSTRUCTION',
+                                       'evidence_id': 'EV-RECIPROCAL-J-RHO-WORD-OBSTRUCTION',
+                                       'evidence_kind': 'INLINE_CANON',
+                                       'location': 'inline',
+                                       'sha256': '796426b1a24a4c8342b649bc66cd27d86aa86b35d71a9cb2a0dc0b5287175fbc',
+                                       'hash_mode': 'registry-scope-sha256-v1',
+                                       'architecture_requirement': 'none'},
+ 'RECIPROCAL-J-FINITE-STOCK-LADDER': {'claim_id': 'RECIPROCAL-J-FINITE-STOCK-LADDER',
+                                      'evidence_id': 'EV-RECIPROCAL-J-FINITE-STOCK-LADDER',
+                                      'evidence_kind': 'INLINE_CANON',
+                                      'location': 'inline',
+                                      'sha256': '013a952e0e41ac1fe83a4352cb46cc7549559d97fa3d6725d41849bae9b20c53',
+                                      'hash_mode': 'registry-scope-sha256-v1',
+                                      'architecture_requirement': 'none'},
+ 'HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION': {'claim_id': 'HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION',
+                                               'evidence_id': 'EV-HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION',
+                                               'evidence_kind': 'INLINE_CANON',
+                                               'location': 'inline',
+                                               'sha256': '311f47e8c91261a6150eb10c134176cbc4a4768bcbfc28dc28538672f9f92181',
+                                               'hash_mode': 'registry-scope-sha256-v1',
+                                               'architecture_requirement': 'none'},
+ 'PLENUM-ALIGNED-ESCAPE-CRITERION': {'claim_id': 'PLENUM-ALIGNED-ESCAPE-CRITERION',
+                                     'evidence_id': 'EV-PLENUM-ALIGNED-ESCAPE-CRITERION',
+                                     'evidence_kind': 'INLINE_CANON',
+                                     'location': 'inline',
+                                     'sha256': '92fb684fab3f383d006366a8b1fb852d73952a557b1a9cde5930c88bd8ef3caf',
+                                     'hash_mode': 'registry-scope-sha256-v1',
+                                     'architecture_requirement': 'none'},
+ 'PLENUM-FULL-CHAIN-FINITE-CERTIFICATE': {'claim_id': 'PLENUM-FULL-CHAIN-FINITE-CERTIFICATE',
+                                          'evidence_id': 'EV-PLENUM-FULL-CHAIN-FINITE-CERTIFICATE',
+                                          'evidence_kind': 'REPRODUCTION',
+                                          'location': 'reproduce/plenum-full-chain-record',
+                                          'sha256': '96fbe16e144ee4be37c5477879f84f3588ac8898ee79a9bcde4b428cb73d9772',
+                                          'hash_mode': 'bundle-manifest-sha256-v1',
+                                          'architecture_requirement': 'two-architecture'},
+ 'PLENUM-PREPARED-PERMANENT-RECORD': {'claim_id': 'PLENUM-PREPARED-PERMANENT-RECORD',
+                                      'evidence_id': 'EV-PLENUM-PREPARED-PERMANENT-RECORD',
+                                      'evidence_kind': 'REPRODUCTION',
+                                      'location': 'reproduce/plenum-full-chain-record',
+                                      'sha256': '96fbe16e144ee4be37c5477879f84f3588ac8898ee79a9bcde4b428cb73d9772',
+                                      'hash_mode': 'bundle-manifest-sha256-v1',
+                                      'architecture_requirement': 'two-architecture'},
+ 'RECIPROCAL-J-SIGN-REMOTE-HOLD': {'claim_id': 'RECIPROCAL-J-SIGN-REMOTE-HOLD',
+                                   'evidence_id': 'EV-RECIPROCAL-J-SIGN-REMOTE-HOLD',
+                                   'evidence_kind': 'INLINE_CANON',
+                                   'location': 'inline',
+                                   'sha256': '312556d4a2064856d087df6b7bed9b3208318f214e0fc2d69c9e3b81322c9c29',
+                                   'hash_mode': 'registry-scope-sha256-v1',
+                                   'architecture_requirement': 'none'}}
+
+V111_HISTORY_EVENTS = [{'event_id': 'CANON111-DECLARE-RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT',
+  'event_sequence': '1',
+  'event_date': '2026-11-10',
+  'release': 'canon-v111',
+  'claim_id': 'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': 'c88046db33ae3a74f0a18e85559a59ebe19624cdb4b06af9c768deed5535d089',
+  'evidence_id': 'EV-RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT',
+  'evidence_location': 'inline',
+  'evidence_sha256': 'c88046db33ae3a74f0a18e85559a59ebe19624cdb4b06af9c768deed5535d089',
+  'rationale': 'Adopt the internally reviewed complete exact L1 proof at its declared carrier, '
+               'preparation and equality; finite audit and physical interpretation remain '
+               'separate.'},
+ {'event_id': 'CANON111-DECLARE-RECIPROCAL-J-COMMON-PAYER-BOUND',
+  'event_sequence': '1',
+  'event_date': '2026-11-10',
+  'release': 'canon-v111',
+  'claim_id': 'RECIPROCAL-J-COMMON-PAYER-BOUND',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': '3d6aa37ba7d64a4f7440e372e4d9d19d2ead3be6c41f91003088b8e9c1af5d04',
+  'evidence_id': 'EV-RECIPROCAL-J-COMMON-PAYER-BOUND',
+  'evidence_location': 'inline',
+  'evidence_sha256': '3d6aa37ba7d64a4f7440e372e4d9d19d2ead3be6c41f91003088b8e9c1af5d04',
+  'rationale': 'Adopt the internally reviewed complete exact L1 proof at its declared carrier, '
+               'preparation and equality; finite audit and physical interpretation remain '
+               'separate.'},
+ {'event_id': 'CANON111-DECLARE-RECIPROCAL-J-RHO-WORD-OBSTRUCTION',
+  'event_sequence': '1',
+  'event_date': '2026-11-10',
+  'release': 'canon-v111',
+  'claim_id': 'RECIPROCAL-J-RHO-WORD-OBSTRUCTION',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': '796426b1a24a4c8342b649bc66cd27d86aa86b35d71a9cb2a0dc0b5287175fbc',
+  'evidence_id': 'EV-RECIPROCAL-J-RHO-WORD-OBSTRUCTION',
+  'evidence_location': 'inline',
+  'evidence_sha256': '796426b1a24a4c8342b649bc66cd27d86aa86b35d71a9cb2a0dc0b5287175fbc',
+  'rationale': 'Adopt the internally reviewed complete exact L1 proof at its declared carrier, '
+               'preparation and equality; finite audit and physical interpretation remain '
+               'separate.'},
+ {'event_id': 'CANON111-DECLARE-RECIPROCAL-J-FINITE-STOCK-LADDER',
+  'event_sequence': '1',
+  'event_date': '2026-11-10',
+  'release': 'canon-v111',
+  'claim_id': 'RECIPROCAL-J-FINITE-STOCK-LADDER',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': '013a952e0e41ac1fe83a4352cb46cc7549559d97fa3d6725d41849bae9b20c53',
+  'evidence_id': 'EV-RECIPROCAL-J-FINITE-STOCK-LADDER',
+  'evidence_location': 'inline',
+  'evidence_sha256': '013a952e0e41ac1fe83a4352cb46cc7549559d97fa3d6725d41849bae9b20c53',
+  'rationale': 'Adopt the internally reviewed complete exact L1 proof at its declared carrier, '
+               'preparation and equality; finite audit and physical interpretation remain '
+               'separate.'},
+ {'event_id': 'CANON111-DECLARE-HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION',
+  'event_sequence': '1',
+  'event_date': '2026-11-10',
+  'release': 'canon-v111',
+  'claim_id': 'HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': '311f47e8c91261a6150eb10c134176cbc4a4768bcbfc28dc28538672f9f92181',
+  'evidence_id': 'EV-HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION',
+  'evidence_location': 'inline',
+  'evidence_sha256': '311f47e8c91261a6150eb10c134176cbc4a4768bcbfc28dc28538672f9f92181',
+  'rationale': 'Adopt the internally reviewed complete exact L1 proof at its declared carrier, '
+               'preparation and equality; finite audit and physical interpretation remain '
+               'separate.'},
+ {'event_id': 'CANON111-DECLARE-PLENUM-ALIGNED-ESCAPE-CRITERION',
+  'event_sequence': '1',
+  'event_date': '2026-11-10',
+  'release': 'canon-v111',
+  'claim_id': 'PLENUM-ALIGNED-ESCAPE-CRITERION',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': '92fb684fab3f383d006366a8b1fb852d73952a557b1a9cde5930c88bd8ef3caf',
+  'evidence_id': 'EV-PLENUM-ALIGNED-ESCAPE-CRITERION',
+  'evidence_location': 'inline',
+  'evidence_sha256': '92fb684fab3f383d006366a8b1fb852d73952a557b1a9cde5930c88bd8ef3caf',
+  'rationale': 'Adopt the internally reviewed complete exact L1 proof at its declared carrier, '
+               'preparation and equality; finite audit and physical interpretation remain '
+               'separate.'},
+ {'event_id': 'CANON111-DECLARE-PLENUM-FULL-CHAIN-FINITE-CERTIFICATE',
+  'event_sequence': '1',
+  'event_date': '2026-11-10',
+  'release': 'canon-v111',
+  'claim_id': 'PLENUM-FULL-CHAIN-FINITE-CERTIFICATE',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'C',
+  'scope_sha256': '8ad075b19f9ae9be46964697cb7aac7ce4f9f52bbbbb26a79754542627eb965f',
+  'evidence_id': 'EV-PLENUM-FULL-CHAIN-FINITE-CERTIFICATE',
+  'evidence_location': 'reproduce/plenum-full-chain-record',
+  'evidence_sha256': '96fbe16e144ee4be37c5477879f84f3588ac8898ee79a9bcde4b428cb73d9772',
+  'rationale': 'Retain the exact publicly reproduced finite premise as C with explicit '
+               'computational dependence; analytical phase and escape implications do not promote '
+               'it to T.'},
+ {'event_id': 'CANON111-DECLARE-PLENUM-PREPARED-PERMANENT-RECORD',
+  'event_sequence': '1',
+  'event_date': '2026-11-10',
+  'release': 'canon-v111',
+  'claim_id': 'PLENUM-PREPARED-PERMANENT-RECORD',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'C',
+  'scope_sha256': '2ad7f94fc853b9224544c4fcbe82ca7e1c87ca1d782a01119c30add717c2927c',
+  'evidence_id': 'EV-PLENUM-PREPARED-PERMANENT-RECORD',
+  'evidence_location': 'reproduce/plenum-full-chain-record',
+  'evidence_sha256': '96fbe16e144ee4be37c5477879f84f3588ac8898ee79a9bcde4b428cb73d9772',
+  'rationale': 'Retain the exact publicly reproduced finite premise as C with explicit '
+               'computational dependence; analytical phase and escape implications do not promote '
+               'it to T.'},
+ {'event_id': 'CANON111-DECLARE-RECIPROCAL-J-SIGN-REMOTE-HOLD',
+  'event_sequence': '1',
+  'event_date': '2026-11-10',
+  'release': 'canon-v111',
+  'claim_id': 'RECIPROCAL-J-SIGN-REMOTE-HOLD',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': '312556d4a2064856d087df6b7bed9b3208318f214e0fc2d69c9e3b81322c9c29',
+  'evidence_id': 'EV-RECIPROCAL-J-SIGN-REMOTE-HOLD',
+  'evidence_location': 'inline',
+  'evidence_sha256': '312556d4a2064856d087df6b7bed9b3208318f214e0fc2d69c9e3b81322c9c29',
+  'rationale': 'Adopt the internally reviewed complete exact L1 proof at its declared carrier, '
+               'preparation and equality; finite audit and physical interpretation remain '
+               'separate.'}]
+
+V111_DEPENDENCY_ROWS = [{'item_id': 'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT',
+  'depends_on': 'RELATIVE-CONTACT-INTEGRAL-LAW',
+  'relation': 'REQUIRES',
+  'basis': 'The stated proof uses the declared complete integral contact and accounts'},
+ {'item_id': 'RECIPROCAL-J-COMMON-PAYER-BOUND',
+  'depends_on': 'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT',
+  'relation': 'REQUIRES',
+  'basis': 'The stated construction uses this exact accepted prerequisite at L1'},
+ {'item_id': 'RECIPROCAL-J-RHO-WORD-OBSTRUCTION',
+  'depends_on': 'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT',
+  'relation': 'REQUIRES',
+  'basis': 'The stated construction uses this exact accepted prerequisite at L1'},
+ {'item_id': 'RECIPROCAL-J-RHO-WORD-OBSTRUCTION',
+  'depends_on': 'RELATIVE-CONTACT-INTEGRAL-LAW',
+  'relation': 'REQUIRES',
+  'basis': 'The stated proof uses the declared complete integral contact and accounts'},
+ {'item_id': 'RECIPROCAL-J-FINITE-STOCK-LADDER',
+  'depends_on': 'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT',
+  'relation': 'REQUIRES',
+  'basis': 'The stated construction uses this exact accepted prerequisite at L1'},
+ {'item_id': 'HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION',
+  'depends_on': 'RELATIVE-CONTACT-INTEGRAL-LAW',
+  'relation': 'REQUIRES',
+  'basis': 'The stated proof uses the declared complete integral contact and accounts'},
+ {'item_id': 'PLENUM-ALIGNED-ESCAPE-CRITERION',
+  'depends_on': 'RELATIVE-CONTACT-INTEGRAL-LAW',
+  'relation': 'REQUIRES',
+  'basis': 'The stated proof uses the declared complete integral contact and accounts'},
+ {'item_id': 'PLENUM-FULL-CHAIN-FINITE-CERTIFICATE',
+  'depends_on': 'RELATIVE-CONTACT-INTEGRAL-LAW',
+  'relation': 'REQUIRES',
+  'basis': 'The stated proof uses the declared complete integral contact and accounts'},
+ {'item_id': 'PLENUM-PREPARED-PERMANENT-RECORD',
+  'depends_on': 'PLENUM-ALIGNED-ESCAPE-CRITERION',
+  'relation': 'REQUIRES',
+  'basis': 'The exact aligned escape implication extends the accepted finite configuration to all '
+           'future boundaries'},
+ {'item_id': 'PLENUM-PREPARED-PERMANENT-RECORD',
+  'depends_on': 'PLENUM-FULL-CHAIN-FINITE-CERTIFICATE',
+  'relation': 'REQUIRES',
+  'basis': 'The specific C consequence depends on the complete computed finite histories and '
+           'all-intermediate closure premises'},
+ {'item_id': 'RECIPROCAL-J-SIGN-REMOTE-HOLD',
+  'depends_on': 'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT',
+  'relation': 'REQUIRES',
+  'basis': 'The stated construction uses this exact accepted prerequisite at L1'},
+ {'item_id': 'PLENUM-PREPARED-PERMANENT-RECORD',
+  'depends_on': 'QDD-INSTRUMENT-APPARATUS',
+  'relation': 'BOUNDED_BY',
+  'basis': 'The supplied L1 record does not provide the target-independent complete physical '
+           'apparatus, active event mechanism or occurrence law owned by this separate obligation'},
+ {'item_id': 'RECIPROCAL-J-SIGN-REMOTE-HOLD',
+  'depends_on': 'QDD-INSTRUMENT-APPARATUS',
+  'relation': 'BOUNDED_BY',
+  'basis': 'The supplied L1 record does not provide the target-independent complete physical '
+           'apparatus, active event mechanism or occurrence law owned by this separate obligation'}]
+
+V111_CORE_ADDITIONS = []
+
+V111_STATUS_PARTITION = {'C': 42, 'D': 59, 'F': 19, 'H': 2, 'O': 24, 'T': 475}
+
+V111_METRICS = {'claims': '621',
+ 'status_T-LOCK': '0',
+ 'status_T': '475',
+ 'status_D': '59',
+ 'status_C': '42',
+ 'status_H': '2',
+ 'status_O': '24',
+ 'status_F': '19',
+ 'live_H_O': '26',
+ 'reproductions': '41',
+ 'evidence_none': '198',
+ 'evidence_one-architecture': '9',
+ 'evidence_recorded-audit': '31',
+ 'evidence_two-architecture': '383'}
+
+V111_REPRODUCTIONS = ('C-FIELD-J-CONTENT-TRANSPORT-N',
+ 'C-FIELD-J-CONTENT-TRANSPORT-REVIEW-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-REVIEW-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-REVIEW-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-REVIEW-N',
+ 'C-FORWARD-ONLY-CAPTURE-FILTER-N',
+ 'C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N',
+ 'PHOTON-Z5-EXACT-HEATBATH-KERNEL',
+ 'alpha-exact-lemma',
+ 'alpha-value',
+ 'born-faces',
+ 'born-quartet',
+ 'census',
+ 'color-ladder',
+ 'cosmology-register',
+ 'coupling-metrology',
+ 'dirac-ladder',
+ 'force-born-dictionary',
+ 'foundations-places',
+ 'gravity-chain',
+ 'hyperplane-codec',
+ 'kernel',
+ 'kernel-connectivity',
+ 'mass-ladder',
+ 'maxwell',
+ 'native-quadratic-obstructions',
+ 'observer-boost',
+ 'pentit-p5-closure',
+ 'photon-electron',
+ 'plenum-full-chain-record',
+ 'qdd-route-a',
+ 'quadratic-memory-l5',
+ 'relative-contact',
+ 's3-height-phase',
+ 'scalar-hermitian-norm',
+ 'status-separation',
+ 'u_raw_residue_port',
+ 'weinberg')
+
+V111_SOURCE_COMMITS = {'probes/P-J-PAIRED-FUNDED-CONTACT-1': '0acd5234a0c7a8cd6f13f30e4e06760e1fc94f7b',
+ 'probes/P-J-FUNDED-PAIR-NETWORK-1': '4fcd9f6ccfb533d06c510e16ae370d41e28f5a76',
+ 'probes/P-J-SIGN-REMOTE-HOLD-1': '326971736a0993a10249cae3fbb3fae3f9858680',
+ 'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N': '326971736a0993a10249cae3fbb3fae3f9858680',
+ 'legacy/plenum-full-chain-record-intake': 'f7ec90fa68d3de2d83aed966afa33ac9bacdb35d',
+ 'reproduce/plenum-full-chain-record': 'f7ec90fa68d3de2d83aed966afa33ac9bacdb35d'}
+
+V111_SOURCE_FILES = {'probes/P-J-PAIRED-FUNDED-CONTACT-1/EXPECTED.txt': {'bytes': 1638,
+                                                     'sha256': 'a69c115b8a54cdf69137484d956888aa8bc3feed566a07ff83c90b0380ed6e16',
+                                                     'git_blob': '65da9680e9926011ad52bb9d0a169fe0598a7a86'},
+ 'probes/P-J-PAIRED-FUNDED-CONTACT-1/PREREG.md': {'bytes': 8882,
+                                                  'sha256': 'dc3b7b59305fe5557b3380958eaf9efe0027ce6b71a61d634308f7069f59229e',
+                                                  'git_blob': '0d4550e5f4a3618bb7b65ce1d01f16080e45b1d3'},
+ 'probes/P-J-PAIRED-FUNDED-CONTACT-1/PROOF.md': {'bytes': 10095,
+                                                 'sha256': '9d85120a2aaa91dc928c66069b4ac21da6b2af11dce2b710a213cc0e88efc172',
+                                                 'git_blob': 'e34061149062402e022e754a81ac5bd5656d0453'},
+ 'probes/P-J-PAIRED-FUNDED-CONTACT-1/RESULT.md': {'bytes': 7087,
+                                                  'sha256': 'bf9d044c461514fbde13bc44da4382b2a63f7c09b77042becc283ce89b965d5e',
+                                                  'git_blob': '680a5eed6ef0f82446f86060b6b9f84122cc579e'},
+ 'probes/P-J-PAIRED-FUNDED-CONTACT-1/RUN.md': {'bytes': 2928,
+                                               'sha256': 'eeea293a0e9766c22ccdaae8c2e8e7d0aa8a82fea1f977e16ccacaf44dddf73f',
+                                               'git_blob': 'c5ee21ed6a45c19873610069cf916042af224bed'},
+ 'probes/P-J-PAIRED-FUNDED-CONTACT-1/verify.py': {'bytes': 12612,
+                                                  'sha256': '04eb70e322348d74266b02936c2aa10e82344ae0798bdf2636007d807afe3e71',
+                                                  'git_blob': '7e8bb76d9d21720428d0b6b061136b59cabc42fe'},
+ 'probes/P-J-FUNDED-PAIR-NETWORK-1/EXPECTED.txt': {'bytes': 781,
+                                                   'sha256': 'b2975a7d25474ba4019fddb51951842bc977e68e97b1f8f162be31ed05dfd569',
+                                                   'git_blob': '44f86e3a684de7d2991e190578c92e768359c95a'},
+ 'probes/P-J-FUNDED-PAIR-NETWORK-1/PREREG.md': {'bytes': 8004,
+                                                'sha256': 'e857aa76a43fd8835b896fd29a42ff556cbad31ba734d2fc05c1b48fec2a85dc',
+                                                'git_blob': '18572ac005ee7df1fc4ab4b97a4c032b190995ad'},
+ 'probes/P-J-FUNDED-PAIR-NETWORK-1/PROOF.md': {'bytes': 11784,
+                                               'sha256': 'f106138801d0017927a067e430f1835b76197cae87af379297f34423db5a20d0',
+                                               'git_blob': 'b4fc40d3f180dc45a0b623ea95394a2ece706294'},
+ 'probes/P-J-FUNDED-PAIR-NETWORK-1/RESULT.md': {'bytes': 7059,
+                                                'sha256': 'aaf4433125d88c15864ec86e7614b309fcd35bdcf357d37e193e11e2792d478c',
+                                                'git_blob': 'af7e3d9a5c31773cc3ea15f32ac977b20d4b4488'},
+ 'probes/P-J-FUNDED-PAIR-NETWORK-1/RUN.md': {'bytes': 3215,
+                                             'sha256': 'a7e1e16978b81dbf766eb6a2691def3d74f4757d316c7eb63e86b6da9b6e8ace',
+                                             'git_blob': 'c922d5f418d56cc24deb621a04614137654a6e90'},
+ 'probes/P-J-FUNDED-PAIR-NETWORK-1/verify.py': {'bytes': 11985,
+                                                'sha256': '77a243645ffdabe503a1f567ae3d0f02c876b3eb0becb9f5fb98471a276a13b0',
+                                                'git_blob': 'c9f0273ef6432f93cf2d47349ecee16b0694118a'},
+ 'probes/P-J-SIGN-REMOTE-HOLD-1/EXPECTED.txt': {'bytes': 1351,
+                                                'sha256': '86671fa7c21d5b5e3a696bf977636fd2c5f57e515bd1920b59455df249252b56',
+                                                'git_blob': '16b15a5db7f5d63d84b3b43569fa10d3595f1df6'},
+ 'probes/P-J-SIGN-REMOTE-HOLD-1/PREREG.md': {'bytes': 17128,
+                                             'sha256': 'f8dea6b82ebad491662b166e386a9383270762d43efef25b6ec8b23dde4dbe29',
+                                             'git_blob': 'ad33e18e7240cf38bfc81f22fd7504940d021ab7'},
+ 'probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md': {'bytes': 24103,
+                                            'sha256': 'd7ffeaf4b9e2a9f528fcaaecfc945cd9f7eea30ac8f868734dbf406f9f5a0f39',
+                                            'git_blob': '03ca43b9a86521b483c955d7357608f3ed4f2f4a'},
+ 'probes/P-J-SIGN-REMOTE-HOLD-1/RESULT.md': {'bytes': 6973,
+                                             'sha256': '21b4b16fa8bbb555bc361cce2e5dd42cf1f53f7dd1a570a084da2c1881cb47f5',
+                                             'git_blob': '7e51f0bcdea339ce7ca1a54d632f06b2af1d1b9d'},
+ 'probes/P-J-SIGN-REMOTE-HOLD-1/RUN.md': {'bytes': 5226,
+                                          'sha256': 'a8e88ef0319bc12a871fcb75b9cd8a0cd2965bcaa4086424252a3417b26a137c',
+                                          'git_blob': 'a92c3e2af408fe10ec7c9078b7bb9cab2a277119'},
+ 'probes/P-J-SIGN-REMOTE-HOLD-1/verify.py': {'bytes': 22516,
+                                             'sha256': 'c554f070f254fdfc177f3c81ec1ff071258b61266a9a23ac2764d2cb1beed18e',
+                                             'git_blob': '01eb1c12ce8987a3ca4e044f35a016a7fdbcb93a'},
+ 'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/CONSTRUCTION.md': {'bytes': 2423,
+                                                                   'sha256': '25948a68c29d198cc862b37db602414f5eb2341d381af799770cc05495720873',
+                                                                   'git_blob': '73c77b045b6f7fd14c452c195d81f294c72641f0'},
+ 'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/NEXT-VALIDATION.md': {'bytes': 2489,
+                                                                      'sha256': '7f06d14f0a3cba20c3a23c84a0400922eedd4b9b90c74cd249d78d4e94918214',
+                                                                      'git_blob': '6dbe9647a8d9eb46e7c6e2ba398560d3bd128051'},
+ 'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/PROGRAM.md': {'bytes': 13865,
+                                                              'sha256': 'd7922c6afef27cca7152d26e361b40a13db0d941477f4e3cb3daf6e5043f1af7',
+                                                              'git_blob': '0a08fc5361d575540007d4827de0d9efba91e3ae'},
+ 'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/PROOF-ADDENDUM.md': {'bytes': 10567,
+                                                                     'sha256': '2e32f6e6f40b43e88a266f1ad59b6c0af265bf79e399f08c50b24cf49683cd1f',
+                                                                     'git_blob': 'eb9956756468e1bf412f0114b44ae3c32c4b76f2'},
+ 'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/README.md': {'bytes': 6033,
+                                                             'sha256': '0592279c6ba38fdfa58503a236be579db5c3f92b595956bae3471cdc7835696f',
+                                                             'git_blob': 'affb8169a9482f0e2d65595347c8993c92979c99'},
+ 'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/REVIEW.md': {'bytes': 5871,
+                                                             'sha256': 'f84ede47641803f94ecbe51b0af4f7d26b9bd6741c6e7b10af54ac6c33557976',
+                                                             'git_blob': 'bbc3a6c1ec998ad4c86d7c5753a953a137edd6a7'},
+ 'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/SOURCES.tsv': {'bytes': 7060,
+                                                               'sha256': '31c9d965caf9254f96224a1f914cf5560eb70e191c461798d34ee9a08ebe07c7',
+                                                               'git_blob': 'dd255f31fb69dab7caf9d9b3bb8e94194f70801c'},
+ 'legacy/plenum-full-chain-record-intake/MANIFEST.tsv': {'bytes': 1032,
+                                                         'sha256': '60ef183d2e61e8d8d636f0afa8e0a60819f0d4bd310693b5e43296567ee032be',
+                                                         'git_blob': 'b81bb28a41a47f336c1cca401bd2b5a3e6a1b5b7'},
+ 'legacy/plenum-full-chain-record-intake/RECONCILIATION.md': {'bytes': 4308,
+                                                              'sha256': 'a57a68329571619a0c4987d6aece5cb293c1ac61c35c8be2739e9bb91c4d2e66',
+                                                              'git_blob': 'f0c3c9ede62426595f96176db674c1a819c28624'},
+ 'reproduce/plenum-full-chain-record/EXPECTED.txt': {'bytes': 328,
+                                                     'sha256': '5fb4c907ac3a372a2d9c943a61009891a4d507872cd4619fb3af350948bd5986',
+                                                     'git_blob': '538359ccf109ce5b952de1a33aae6e7d177c7b17'},
+ 'reproduce/plenum-full-chain-record/PROOF.md': {'bytes': 12958,
+                                                 'sha256': 'c38aa05112b772d33d210ef70a3a57654beee79d18a309a28fc64747321b89eb',
+                                                 'git_blob': 'e4be012a1c2bcf869662e5ee378cedc818625d43'},
+ 'reproduce/plenum-full-chain-record/PROVENANCE.md': {'bytes': 4436,
+                                                      'sha256': 'b716da1576380f2976a0586472183939f68b6dde29433833b92825cc6f7710e7',
+                                                      'git_blob': 'd7444e065bf6163c0de1e9c12d6358951b6946d1'},
+ 'reproduce/plenum-full-chain-record/README.md': {'bytes': 7057,
+                                                  'sha256': '5b4d514bfe0ed4cae0a349a8c4f5bad413b87492306f739b0c3eb188e2f2de76',
+                                                  'git_blob': 'b46b24947d751ca289bdcc78a5b1df824bf99349'},
+ 'reproduce/plenum-full-chain-record/RESULT.md': {'bytes': 1813,
+                                                  'sha256': 'be8a76e514599d676e3f8f707a7a6f8c081cde193dff68ff0502efc7880b46f6',
+                                                  'git_blob': '18c316c79a253641c1bc42d8a7e9b8a32d0f2abf'},
+ 'reproduce/plenum-full-chain-record/RUN.md': {'bytes': 1857,
+                                               'sha256': 'dc0b9dfad0a05c0d6c1f195890dc30b75c1567fa9f4cb05924acb15347c32bd0',
+                                               'git_blob': '17160c303882d5011893aab7e68780cbe94bc103'},
+ 'reproduce/plenum-full-chain-record/RUNS/aarch64.md': {'bytes': 716,
+                                                        'sha256': '11313e21885197b2d4b1af1a73c6cf3a4459abf29e178765ddc785ad04fcb7fb',
+                                                        'git_blob': '9424e3984f738e36947a57fb4539eb3db0919511'},
+ 'reproduce/plenum-full-chain-record/RUNS/x86_64.md': {'bytes': 719,
+                                                       'sha256': '315d4b4ccce1f09e7d4667a8b4e17942dd8718b200fd37df8b41a70ccae17c06',
+                                                       'git_blob': 'ef15e3c1fb38e5eb33ace7ffe3cfb528a912e967'},
+ 'reproduce/plenum-full-chain-record/certificate.json': {'bytes': 34315,
+                                                         'sha256': '80a21b34b74b8c0bc5bf9e1c92782f8a4fdc2bc41c289029184d2ce33be2182c',
+                                                         'git_blob': 'f0cda4359cc2f1fd0f8fe38468f3989caedaf73d'},
+ 'reproduce/plenum-full-chain-record/verify.py': {'bytes': 9924,
+                                                  'sha256': '6d96fb462a869f832948083810272f5ec3e10adcc46cfc4233cf8b5d26992dcd',
+                                                  'git_blob': 'bea7b4aba4623d5970db49abeceabebed70e77ed'}}
+
+V111_SOURCE_INVENTORIES = {'probes/P-J-PAIRED-FUNDED-CONTACT-1': ('probes/P-J-PAIRED-FUNDED-CONTACT-1/EXPECTED.txt',
+                                        'probes/P-J-PAIRED-FUNDED-CONTACT-1/PREREG.md',
+                                        'probes/P-J-PAIRED-FUNDED-CONTACT-1/PROOF.md',
+                                        'probes/P-J-PAIRED-FUNDED-CONTACT-1/RESULT.md',
+                                        'probes/P-J-PAIRED-FUNDED-CONTACT-1/RUN.md',
+                                        'probes/P-J-PAIRED-FUNDED-CONTACT-1/verify.py'),
+ 'probes/P-J-FUNDED-PAIR-NETWORK-1': ('probes/P-J-FUNDED-PAIR-NETWORK-1/EXPECTED.txt',
+                                      'probes/P-J-FUNDED-PAIR-NETWORK-1/PREREG.md',
+                                      'probes/P-J-FUNDED-PAIR-NETWORK-1/PROOF.md',
+                                      'probes/P-J-FUNDED-PAIR-NETWORK-1/RESULT.md',
+                                      'probes/P-J-FUNDED-PAIR-NETWORK-1/RUN.md',
+                                      'probes/P-J-FUNDED-PAIR-NETWORK-1/verify.py'),
+ 'probes/P-J-SIGN-REMOTE-HOLD-1': ('probes/P-J-SIGN-REMOTE-HOLD-1/EXPECTED.txt',
+                                   'probes/P-J-SIGN-REMOTE-HOLD-1/PREREG.md',
+                                   'probes/P-J-SIGN-REMOTE-HOLD-1/PROOF.md',
+                                   'probes/P-J-SIGN-REMOTE-HOLD-1/RESULT.md',
+                                   'probes/P-J-SIGN-REMOTE-HOLD-1/RUN.md',
+                                   'probes/P-J-SIGN-REMOTE-HOLD-1/verify.py'),
+ 'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N': ('notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/CONSTRUCTION.md',
+                                                   'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/NEXT-VALIDATION.md',
+                                                   'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/PROGRAM.md',
+                                                   'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/PROOF-ADDENDUM.md',
+                                                   'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/README.md',
+                                                   'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/REVIEW.md',
+                                                   'notes/C-SIGN-TRANSPORT-RECORD-CONSOLIDATION-N/SOURCES.tsv'),
+ 'legacy/plenum-full-chain-record-intake': ('legacy/plenum-full-chain-record-intake/MANIFEST.tsv',
+                                            'legacy/plenum-full-chain-record-intake/RECONCILIATION.md'),
+ 'reproduce/plenum-full-chain-record': ('reproduce/plenum-full-chain-record/EXPECTED.txt',
+                                        'reproduce/plenum-full-chain-record/PROOF.md',
+                                        'reproduce/plenum-full-chain-record/PROVENANCE.md',
+                                        'reproduce/plenum-full-chain-record/README.md',
+                                        'reproduce/plenum-full-chain-record/RESULT.md',
+                                        'reproduce/plenum-full-chain-record/RUN.md',
+                                        'reproduce/plenum-full-chain-record/RUNS/aarch64.md',
+                                        'reproduce/plenum-full-chain-record/RUNS/x86_64.md',
+                                        'reproduce/plenum-full-chain-record/certificate.json',
+                                        'reproduce/plenum-full-chain-record/verify.py')}
+
+V111_PROOF_CONTRACTS = {'RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT': {'begin': '### Reciprocal relative contact with '
+                                                   'full-account funding\n',
+                                          'characters': 6047,
+                                          'bytes': 6047,
+                                          'sha256': '55246eadd74a6e23c0ebe1d80a17f4dba4d242b7a16a14ca05f2719be57284d6',
+                                          'claim_marker': '**RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT '
+                                                          '[T].**'},
+ 'RECIPROCAL-J-COMMON-PAYER-BOUND': {'begin': '### Reciprocal relative contact with full-account '
+                                              'funding\n',
+                                     'characters': 6047,
+                                     'bytes': 6047,
+                                     'sha256': '55246eadd74a6e23c0ebe1d80a17f4dba4d242b7a16a14ca05f2719be57284d6',
+                                     'claim_marker': '**RECIPROCAL-J-COMMON-PAYER-BOUND [T].**'},
+ 'RECIPROCAL-J-RHO-WORD-OBSTRUCTION': {'begin': '### Reciprocal relative contact with full-account '
+                                                'funding\n',
+                                       'characters': 6047,
+                                       'bytes': 6047,
+                                       'sha256': '55246eadd74a6e23c0ebe1d80a17f4dba4d242b7a16a14ca05f2719be57284d6',
+                                       'claim_marker': '**RECIPROCAL-J-RHO-WORD-OBSTRUCTION '
+                                                       '[T].**'},
+ 'RECIPROCAL-J-FINITE-STOCK-LADDER': {'begin': '### Reciprocal relative contact with full-account '
+                                               'funding\n',
+                                      'characters': 6047,
+                                      'bytes': 6047,
+                                      'sha256': '55246eadd74a6e23c0ebe1d80a17f4dba4d242b7a16a14ca05f2719be57284d6',
+                                      'claim_marker': '**RECIPROCAL-J-FINITE-STOCK-LADDER [T].**'},
+ 'HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION': {'begin': '### Unitary matrices and total identity '
+                                                        'refusal\n',
+                                               'characters': 1283,
+                                               'bytes': 1283,
+                                               'sha256': '89f6b20fa2a6881d1b4d05d8bfde733f6ed34ff1f3aa88e602c24a12bb42f340',
+                                               'claim_marker': '**HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION '
+                                                               '[T].**'},
+ 'PLENUM-ALIGNED-ESCAPE-CRITERION': {'begin': '### A prepared permanent fine-value record in the '
+                                              'contact field\n',
+                                     'characters': 11853,
+                                     'bytes': 11853,
+                                     'sha256': 'c9ac119fafa03699bc3a73d84a504fa8d1c2f3cb13ff3a9e62a29014b17f501f',
+                                     'claim_marker': '**PLENUM-ALIGNED-ESCAPE-CRITERION [T].**'},
+ 'PLENUM-FULL-CHAIN-FINITE-CERTIFICATE': {'begin': '### A prepared permanent fine-value record in '
+                                                   'the contact field\n',
+                                          'characters': 11853,
+                                          'bytes': 11853,
+                                          'sha256': 'c9ac119fafa03699bc3a73d84a504fa8d1c2f3cb13ff3a9e62a29014b17f501f',
+                                          'claim_marker': '**PLENUM-FULL-CHAIN-FINITE-CERTIFICATE '
+                                                          '[C].**'},
+ 'PLENUM-PREPARED-PERMANENT-RECORD': {'begin': '### A prepared permanent fine-value record in the '
+                                               'contact field\n',
+                                      'characters': 11853,
+                                      'bytes': 11853,
+                                      'sha256': 'c9ac119fafa03699bc3a73d84a504fa8d1c2f3cb13ff3a9e62a29014b17f501f',
+                                      'claim_marker': '**PLENUM-PREPARED-PERMANENT-RECORD [C].**'},
+ 'RECIPROCAL-J-SIGN-REMOTE-HOLD': {'begin': '### Funded sign transport and a clock-qualified '
+                                            'remote hold\n',
+                                   'characters': 30231,
+                                   'bytes': 30231,
+                                   'sha256': 'd6544b2ff19bb51905f6ef9054074fb4c896d40bec3fdded42adac80830a8471',
+                                   'claim_marker': '**RECIPROCAL-J-SIGN-REMOTE-HOLD [T].**'}}
+
+V111_CHECKS = [['V111-PRIOR-BYTES',
+  'thirteen exact v111 Canon inputs and one metadata-test inverse reconstruct public v110 before '
+  'all 224 unchanged historical guards'],
+ ['V111-CLAIM-LEDGERS',
+  'seven L1 theorems and two L1 computations have exact declarations while all 612 prior claim '
+  'rows and scopes remain unchanged'],
+ ['V111-DEPENDENCIES',
+  'only nine new claims add exact premise and boundary edges; no theorem consumes a computational '
+  'or open premise'],
+ ['V111-OPEN-BOUNDARY',
+  'all 26 live owners, every gate and the Frontier retain exact boundaries; the registry has 621 '
+  'claims'],
+ ['V111-PROOF-SCOPE',
+  'byte-pinned complete contact, finite-stock, refusal, escape, prepared-record and '
+  'clock-qualified remote-hold statements retain their distinct supplied laws and physical limits'],
+ ['V111-EVIDENCE',
+  'seven theorems use inline scope hashes; both plenum computations bind the exact eight-file '
+  'reproduction bundle and require two architectures'],
+ ['V111-SOURCE-CUSTODY',
+  'all 37 accepted source and neutral run-record files retain exact bytes, SHA-256 and Git blob '
+  'identities; structural checking is not independent scientific review'],
+ ['V111-REPRO-INVENTORY',
+  'the exact 41-directory inventory adds only the accepted plenum reproduction to the validated '
+  'historical 40; no scientific verifier is imported or executed']]
+
+# Exact current custody and reversible v110 input reconstruction.
+# This structural adapter reads bytes only and executes no scientific verifier.
+
+@lru_cache(maxsize=1)
+def v111_current_snapshot():
+    data, sources, tooling = {}, {}, {}
+    try:
+        for name, contract in V111_INPUT_PATCH.items():
+            path = ROOT / 'canon' / name
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            if (len(content) != contract['current_bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
+                return None
+            data[name] = content
+        for relative, contract in V111_TOOL_PATCH.items():
+            path = ROOT / relative
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            if (len(content) != contract['current_bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
+                return None
+            tooling[relative] = content
+        if any(path.is_symlink() for path in REPRODUCE.iterdir()):
+            return None
+        inventory = frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+        if inventory != frozenset(V111_REPRODUCTIONS):
+            return None
+        for relative, contract in V111_SOURCE_FILES.items():
+            path = ROOT / relative
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            blob = hashlib.sha1(b'blob ' + str(len(content)).encode('ascii')
+                               + b'\0' + content).hexdigest()
+            if (len(content) != contract['bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['sha256']
+                    or blob != contract['git_blob']):
+                return None
+            sources[relative] = content
+        for directory, expected in V111_SOURCE_INVENTORIES.items():
+            base = ROOT / directory
+            if not base.is_dir() or base.is_symlink():
+                return None
+            actual = set()
+            for path in base.rglob('*'):
+                if path.is_symlink():
+                    return None
+                if path.is_file() and '__pycache__' not in path.parts and path.suffix != '.pyc':
+                    actual.add(path.relative_to(ROOT).as_posix())
+            if actual != set(expected):
+                return None
+    except OSError:
+        return None
+    return {'canon': data, 'reproductions': inventory, 'sources': sources, 'tooling': tooling}
+
+
+def v111_restore_bytes(content, contract):
+    lines = content.decode('utf-8').splitlines(keepends=True)
+    for first, last, original in reversed(contract['restore']):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = ''.join(lines).encode('utf-8')
+    if (len(previous) != contract['prior_bytes']
+            or hashlib.sha256(previous).hexdigest() != contract['prior_sha256']):
+        return None
+    return previous
+
+
+@lru_cache(maxsize=13)
+def v111_previous_bytes(path):
+    """Reconstruct v110 only from the complete validated v111 snapshot."""
+    if path.parent != ROOT / 'canon' or path.name not in V111_INPUT_PATCH:
+        return None
+    snapshot = v111_current_snapshot()
+    if snapshot is None:
+        return None
+    return v111_restore_bytes(snapshot['canon'][path.name], V111_INPUT_PATCH[path.name])
+
+
+def v111_previous_source_bytes(relative):
+    """Project only the named metadata test; other historical sources stay literal."""
+    if relative in V111_TOOL_PATCH:
+        snapshot = v111_current_snapshot()
+        if snapshot is None:
+            return None
+        return v111_restore_bytes(snapshot['tooling'][relative], V111_TOOL_PATCH[relative])
+    path = ROOT / relative
+    if not path.is_file() or path.is_symlink():
+        return None
+    return path.read_bytes()
+
+
+def v111_previous_reproduction_dirs():
+    snapshot = v111_current_snapshot()
+    return (set(snapshot['reproductions']) - {'plenum-full-chain-record'}
+            if snapshot is not None else set())
+
+
+def v111_current_checks():
+    failed = [(tag, description, False) for tag, description in V111_CHECKS]
+    snapshot = v111_current_snapshot()
+    if snapshot is None:
+        return failed
+    prior_bytes = {name: v111_previous_bytes(ROOT / 'canon' / name)
+                   for name in V111_INPUT_PATCH}
+    if any(value is None for value in prior_bytes.values()):
+        return failed
+    try:
+        names = tuple(name for name in V111_INPUT_PATCH if name.endswith('.tsv'))
+        prior = {name: v87_table_bytes(prior_bytes[name]) for name in names}
+        current = {name: v87_table_bytes(snapshot['canon'][name]) for name in names}
+        old_index = {row['claim_id']: row for row in prior['REGISTRY.tsv']}
+        index = {row['claim_id']: row for row in current['REGISTRY.tsv']}
+        normative = {row['item_id']: row for row in current['NORMATIVE.tsv']}
+        evidence = {row['claim_id']: row for row in current['EVIDENCE.tsv']}
+        new_ids = set(V111_NEW_STATUSES)
+        exact_prior = (
+            len(prior_bytes) == 13 and set(prior_bytes) == set(V111_INPUT_PATCH)
+            and all(len(prior_bytes[name]) == contract['prior_bytes']
+                    and hashlib.sha256(prior_bytes[name]).hexdigest() == contract['prior_sha256']
+                    for name, contract in V111_INPUT_PATCH.items())
+            and all(contract['prior_bytes'] == V110_INPUT_PATCH[name]['current_bytes']
+                    and contract['prior_sha256'] == V110_INPUT_PATCH[name]['current_sha256']
+                    for name, contract in V111_INPUT_PATCH.items())
+            and v111_previous_source_bytes('tools/test_architecture_map_report.py') is not None)
+        exact_claims = (
+            len(prior['REGISTRY.tsv']) == len(old_index) == 612
+            and len(current['REGISTRY.tsv']) == len(index) == 621 and len(new_ids) == 9
+            and set(index) == set(old_index) | new_ids
+            and all(index.get(claim) == row for claim, row in old_index.items())
+            and all(index.get(claim) == row for claim, row in V111_CLAIM_ROWS.items())
+            and all(normative.get(claim) == row for claim, row in V111_NORMATIVE_ROWS.items())
+            and all(index[claim]['status'] == status
+                    and normative[claim]['item_type'] == ('THEOREM' if status == 'T' else 'COMPUTATION')
+                    and normative[claim]['status'] == status
+                    and normative[claim]['layer'] == 'L1'
+                    and normative[claim]['gate_ids'] == ''
+                    for claim, status in V111_NEW_STATUSES.items()))
+        for filename, key in (('REGISTRY.tsv', 'claim_id'), ('NORMATIVE.tsv', 'item_id'),
+                              ('EVIDENCE.tsv', 'claim_id')):
+            exact_claims = exact_claims and (
+                [row for row in current[filename] if row[key] not in new_ids] == prior[filename]
+                and len(current[filename]) == len(prior[filename]) + 9)
+        history = current['HISTORY.tsv'][len(prior['HISTORY.tsv']):]
+        exact_history = (
+            current['HISTORY.tsv'][:len(prior['HISTORY.tsv'])] == prior['HISTORY.tsv']
+            and history == V111_HISTORY_EVENTS and len(history) == 9
+            and {row['claim_id'] for row in history} == new_ids
+            and all(row['event_sequence'] == '1' and row['event_type'] == 'DECLARE'
+                    and row['previous_status'] == '-'
+                    and row['new_status'] == V111_NEW_STATUSES[row['claim_id']]
+                    and row['release'] == 'canon-v111'
+                    and row['scope_sha256'] == hashlib.sha256(
+                        index[row['claim_id']]['scope'].encode('utf-8')).hexdigest()
+                    and row['evidence_id'] == evidence[row['claim_id']]['evidence_id']
+                    and row['evidence_location'] == evidence[row['claim_id']]['location']
+                    and row['evidence_sha256'] == evidence[row['claim_id']]['sha256']
+                    for row in history))
+        added = current['DEPENDENCIES.tsv'][len(prior['DEPENDENCIES.tsv']):]
+        exact_dependencies = (
+            current['DEPENDENCIES.tsv'][:len(prior['DEPENDENCIES.tsv'])] == prior['DEPENDENCIES.tsv']
+            and added == V111_DEPENDENCY_ROWS
+            and all(row['item_id'] in new_ids and row['depends_on'] in normative
+                    and (row['relation'] != 'REQUIRES'
+                         or V111_NEW_STATUSES[row['item_id']] != 'T'
+                         or normative[row['depends_on']]['status'] in {'T', 'T-LOCK'}
+                         or normative[row['depends_on']]['item_type'] in {'AXIOM', 'DEFINITION'})
+                    for row in added))
+        old_live = {claim: row for claim, row in old_index.items() if row['status'] in {'H', 'O'}}
+        live = {claim: row for claim, row in index.items() if row['status'] in {'H', 'O'}}
+        counts = {status: sum(row['status'] == status for row in index.values())
+                  for status in {row['status'] for row in index.values()}}
+        metrics = {row['metric']: row['value'] for row in current['STATUS_COUNTS.tsv']}
+        exact_boundary = (
+            len(live) == 26 and live == old_live
+            and snapshot['canon']['GATES.tsv'] == prior_bytes['GATES.tsv']
+            and snapshot['canon']['FRONTIER_PROGRAMS.tsv'] == prior_bytes['FRONTIER_PROGRAMS.tsv']
+            and snapshot['canon']['FRONTIER.md'] == prior_bytes['FRONTIER.md']
+            and current['CORE_SELECTION.tsv'] == prior['CORE_SELECTION.tsv'] + V111_CORE_ADDITIONS
+            and counts == V111_STATUS_PARTITION and metrics == V111_METRICS
+            and normative['QUADRATIC-MEMORY-NATIVE-CONTACT']['status'] == 'O'
+            and normative['QDD-INSTRUMENT-APPARATUS']['status'] == 'O')
+        canon = snapshot['canon']['CANON.md'].decode('utf-8')
+        exact_proofs = set(V111_PROOF_CONTRACTS) == new_ids
+        for claim, contract in V111_PROOF_CONTRACTS.items():
+            first = canon.find(contract['begin'])
+            if first < 0 or canon.count(contract['begin']) != 1:
+                exact_proofs = False
+                continue
+            block = canon[first:first + contract['characters']]
+            exact_proofs = exact_proofs and (
+                len(block.encode('utf-8')) == contract['bytes']
+                and hashlib.sha256(block.encode('utf-8')).hexdigest() == contract['sha256']
+                and block.count(contract['claim_marker']) == 1)
+        directory = 'reproduce/plenum-full-chain-record'
+        prefix = directory + '/'
+        bundle_paths = sorted(path for path in snapshot['sources']
+                              if path.startswith(prefix)
+                              and 'RUNS' not in path.split('/')
+                              and '__pycache__' not in path.split('/')
+                              and not path.endswith('.pyc'))
+        manifest = ''.join(hashlib.sha256(snapshot['sources'][path]).hexdigest()
+                           + '  ' + path + '\n' for path in bundle_paths)
+        bundle_hash = hashlib.sha256(manifest.encode('utf-8')).hexdigest()
+        computations = {claim for claim, status in V111_NEW_STATUSES.items() if status == 'C'}
+        exact_evidence = (
+            len(bundle_paths) == 8 and len(computations) == 2
+            and set(bundle_paths) == {prefix + name for name in (
+                'EXPECTED.txt', 'PROOF.md', 'PROVENANCE.md', 'README.md',
+                'RESULT.md', 'RUN.md', 'certificate.json', 'verify.py')}
+            and all(evidence.get(claim) == row for claim, row in V111_EVIDENCE_ROWS.items())
+            and all(evidence[claim]['evidence_kind'] == 'REPRODUCTION'
+                    and evidence[claim]['location'] == directory
+                    and evidence[claim]['architecture_requirement'] == 'two-architecture'
+                    and evidence[claim]['hash_mode'] == 'bundle-manifest-sha256-v1'
+                    and evidence[claim]['sha256'] == bundle_hash for claim in computations)
+            and all(evidence[claim]['evidence_kind'] == 'INLINE_CANON'
+                    and evidence[claim]['location'] == 'inline'
+                    and evidence[claim]['architecture_requirement'] == 'none'
+                    and evidence[claim]['hash_mode'] == 'registry-scope-sha256-v1'
+                    and evidence[claim]['sha256'] == hashlib.sha256(
+                        index[claim]['scope'].encode('utf-8')).hexdigest()
+                    for claim, status in V111_NEW_STATUSES.items() if status == 'T'))
+        exact_sources = (
+            len(snapshot['sources']) == len(V111_SOURCE_FILES) == 37
+            and set(snapshot['sources']) == set(V111_SOURCE_FILES)
+            and set(V111_SOURCE_COMMITS) == set(V111_SOURCE_INVENTORIES)
+            and set(snapshot['sources']) == set().union(*(
+                set(paths) for paths in V111_SOURCE_INVENTORIES.values()))
+            and all(len(commit) == 40 and set(commit) <= set('0123456789abcdef')
+                    for commit in V111_SOURCE_COMMITS.values()))
+        exact_inventory = (
+            len(snapshot['reproductions']) == 41
+            and snapshot['reproductions'] == frozenset(V110_REPRODUCTIONS) | {'plenum-full-chain-record'}
+            and frozenset(v111_previous_reproduction_dirs()) == frozenset(V110_REPRODUCTIONS)
+            and set(V111_SOURCE_INVENTORIES[directory]) == set(bundle_paths) | {
+                prefix + 'RUNS/aarch64.md', prefix + 'RUNS/x86_64.md'})
+    except (KeyError, TypeError, ValueError, IndexError):
+        return failed
+    outcomes = (exact_prior, exact_claims and exact_history, exact_dependencies,
+                exact_boundary, exact_proofs, exact_evidence, exact_sources, exact_inventory)
+    return [(tag, description, bool(ok)) for (tag, description), ok in zip(V111_CHECKS, outcomes)]
+
 V110_PRIOR_COMMIT = 'e6dfc3de9659139d654000954733c084b8a6b86b'
 
 V110_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '0f9d03185ae0885af59359d06e5e84997779cae5fcf0ee474bdedf67c5c32e20',
@@ -843,21 +2005,23 @@ def v110_current_snapshot():
             path = ROOT / 'canon' / name
             if not path.is_file() or path.is_symlink():
                 return None
-            content = path.read_bytes()
-            if (len(content) != contract['current_bytes']
+            content = v111_previous_bytes(path)
+            if (content is None or len(content) != contract['current_bytes']
                     or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
                 return None
             data[name] = content
         if any(path.is_symlink() for path in REPRODUCE.iterdir()):
             return None
-        inventory = frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+        inventory = frozenset(v111_previous_reproduction_dirs())
         if inventory != frozenset(V110_REPRODUCTIONS):
             return None
         for relative, contract in V110_SOURCE_FILES.items():
             path = ROOT / relative
             if not path.is_file() or path.is_symlink():
                 return None
-            content = path.read_bytes()
+            content = v111_previous_source_bytes(relative)
+            if content is None:
+                return None
             blob = hashlib.sha1(b'blob ' + str(len(content)).encode('ascii')
                                + b'\0' + content).hexdigest()
             if (len(content) != contract['bytes']
@@ -26090,9 +27254,10 @@ def run():
     checks.extend(v108_current_checks())
     checks.extend(v109_current_checks())
     checks.extend(v110_current_checks())
+    checks.extend(v111_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v110")
+    print("historical guards: exact reconstructed v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v111")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

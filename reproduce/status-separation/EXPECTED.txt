@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v110
+historical guards: exact reconstructed v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v111
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -226,5 +226,13 @@ PASS 221 V110-PROOF-SCOPE byte-pinned height-to-phase, finite funded composition
 PASS 222 V110-EVIDENCE the three theorems use inline scope-hashed proofs; finite audit outputs do not replace the all-finite-horizon or all-integer arguments
 PASS 223 V110-SOURCE-CUSTODY the admitted source and review files retain exact bytes and disclosed provenance; authoring checks are not an additional independent review
 PASS 224 V110-REPRO-INVENTORY the 40-directory inventory binds the existing forward-filter and new s3-height-phase supplements without claim promotion; this structural audit executes no scientific verifier
+PASS 225 V111-PRIOR-BYTES thirteen exact v111 Canon inputs and one metadata-test inverse reconstruct public v110 before all 224 unchanged historical guards
+PASS 226 V111-CLAIM-LEDGERS seven L1 theorems and two L1 computations have exact declarations while all 612 prior claim rows and scopes remain unchanged
+PASS 227 V111-DEPENDENCIES only nine new claims add exact premise and boundary edges; no theorem consumes a computational or open premise
+PASS 228 V111-OPEN-BOUNDARY all 26 live owners, every gate and the Frontier retain exact boundaries; the registry has 621 claims
+PASS 229 V111-PROOF-SCOPE byte-pinned complete contact, finite-stock, refusal, escape, prepared-record and clock-qualified remote-hold statements retain their distinct supplied laws and physical limits
+PASS 230 V111-EVIDENCE seven theorems use inline scope hashes; both plenum computations bind the exact eight-file reproduction bundle and require two architectures
+PASS 231 V111-SOURCE-CUSTODY all 37 accepted source and neutral run-record files retain exact bytes, SHA-256 and Git blob identities; structural checking is not independent scientific review
+PASS 232 V111-REPRO-INVENTORY the exact 41-directory inventory adds only the accepted plenum reproduction to the validated historical 40; no scientific verifier is imported or executed
 
-RESULT 224/224 ALL PASS
+RESULT 232/232 ALL PASS

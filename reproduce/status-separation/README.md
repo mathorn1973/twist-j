@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its 224 checks cover the current
+and emits deterministic text. Its 232 checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -1131,3 +1131,69 @@ It is not a captured run receipt. The first execution of this complete
 successor candidate occurs only after its immutable public content pin and
 byte readback. Direct-run stdout, stderr and failures are retained outside
 the repository; full CI separately executes both required architectures.
+
+
+## Public Canon v111 boundary
+
+Eight structural guards extend the exact inverse chain to v111. Thirteen
+complete current Canon inputs are bound by byte count and SHA-256. Explicit
+inverse line edits reconstruct public v110 at
+d52f741fe45c8d0d66f9d375ab13325215a3c9af before all 224 historical guards run.
+The existing current-summary tooling test also has a separately bound exact
+inverse, because v110 source custody includes that file. Only the v110
+snapshot reads these validated prior views. Every historical predicate,
+constant, PASS description and ordering is retained. There is no old-byte
+fallback and no historical source is fetched at runtime.
+
+The fold adds seven L1 theorems and two L1 computations. All nine scope,
+normative, evidence and declaration rows and all added dependencies are exact.
+Every previous 612 claim row and scope is unchanged. All 26 H/O owners,
+gates, Frontier programs, Frontier text and Core selections are unchanged.
+The partition is T475/D59/C42/H2/O24/F19, totalling 621 claims. The generic
+escape implication is T; the finite plenum certificate and prepared record
+consequence are C. A T claim cannot require a C or open premise. The C record
+may require its C certificate and keeps its analytical future extension.
+
+Complete proof sections retain the distinct conservative and funded laws,
+the restricted common-payer family, finite stock, identity-refusal boundary,
+supplied plenum preparation, specified phase family and counted passive
+clock. Equality of the two preparations is S,H,Q only; their reduced colour
+words differ. The new record transfers an existing persistent distinction.
+Receiver-only account equality does not hide the outgoing packet sign or
+other whole-field differences. Receiver/site discovery was result-exposed.
+Active full-chain reading, formation, reuse, native full U, occurrence and
+physical calibration remain outside these results.
+
+All 37 files in the six accepted source directories are bound to their exact
+public source pins, bytes, SHA-256 and Git blob identities. This includes
+both neutral architecture receipts. Both C evidence rows bind the eight
+non-RUNS files of reproduce/plenum-full-chain-record, including RUN.md and
+RESULT.md, with the ordinary bundle serialization and two-architecture
+requirement. The earlier six-file intake manifest does not replace that
+complete evidence bundle. Seven T rows retain inline scope-hashed evidence.
+This structural check is neither an independent mathematical review nor an
+execution of the scientific verifiers. The preparation session's separately
+tasked internal reviews and the supplied limited independent endpoint review
+retain their disclosed scopes.
+
+The actual reproduction inventory is exactly 41 directories. Only after
+validating that set and every plenum source file does the adapter remove
+plenum-full-chain-record from the historical 40-directory view. It rejects
+an unknown directory or changed admitted file. The status-separation verifier
+does not hash itself or its own directory bundle.
+
+The frozen first v111 candidate in PR #1977 failed the tooling test's old
+current-summary counts before scientific replay. The second in PR #1978
+preserved the same Canon bytes and passed all 294 completed public probes
+on both required architectures, but failed this unchanged v110 structural
+witness when it encountered the new registry. Both frozen attempts and their
+failed workflow results are retained. This successor extends the structural
+witness; it changes no prior scientific verifier, threshold or expected
+scientific result, and all Canon bytes remain identical to those candidates.
+
+EXPECTED.txt is authored before execution by preserving PASS lines 1 through
+224 verbatim and appending eight specified structural descriptions. The new
+232 count is a contract, not an observed success. No scientific verifier is
+imported or executed by this adapter. The first execution of this complete
+successor follows its immutable public content pin and byte readback. Both
+complete architecture jobs and the exact-head activation gate must then pass.
