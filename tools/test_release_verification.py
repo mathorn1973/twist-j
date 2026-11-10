@@ -306,6 +306,11 @@ class VerificationTests(unittest.TestCase):
         self.assertEqual(rv.git(self.root, "rev-parse", "HEAD"), self.head)
         self.assertEqual(context["workflow_commit"], self.synthetic)
 
+    def test_real_os_environment_mapping_is_accepted_by_cli_context(self):
+        with patch.dict(os.environ, self.environment("pull_request")):
+            kind, _, ref, revision = rv.github_context(self.root, os.environ)
+        self.assertEqual((kind, ref, revision), ("pull_request", "refs/pull/12/merge", self.synthetic))
+
     def test_stale_candidate_or_foreign_workflow_context_fails(self):
         environment = self.environment("pull_request")
         self.write("other.txt", "different tested merge\n"); self.commit("stale")

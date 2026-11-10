@@ -172,7 +172,7 @@ def full_scope(root, base):
 
 
 def github_context(root, environment):
-    exact(environment, {"GITHUB_ACTIONS": "true", "GITHUB_SERVER_URL": "https://github.com",
+    exact(dict(environment), {"GITHUB_ACTIONS": "true", "GITHUB_SERVER_URL": "https://github.com",
           "GITHUB_REPOSITORY": REPOSITORY, "GITHUB_REPOSITORY_ID": str(REPOSITORY_ID)}, "CI context")
     event = decode(Path(environment["GITHUB_EVENT_PATH"]).read_bytes())
     event_name = environment["GITHUB_EVENT_NAME"]
