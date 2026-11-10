@@ -1,0 +1,1 @@
+{"closure_rows":34,"closure_ticks":278528,"computed_reference_sha256":"6c8b7aee1a9f955d7bb9b5edf4c37034079957cb674355bbf185e983837de69c","fixture_sha256":"80a21b34b74b8c0bc5bf9e1c92782f8a4fdc2bc41c289029184d2ce33be2182c","full_ticks":589821,"max_closure_span":1,"reference_histories":3,"result":"PASS","stationary_matchings":6}
