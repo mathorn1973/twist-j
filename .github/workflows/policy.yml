@@ -12,6 +12,7 @@ on:
 permissions:
   contents: read
   actions: read
+  pull-requests: read
 
 jobs:
   architecture:
@@ -40,14 +41,19 @@ jobs:
       - run: python tools/check_canon.py
       - run: python tools/check_ledger.py
       - run: python tools/check_gate_contract.py
-      - name: Reproduce changed public probes
+      - name: Replay or reuse verified evidence
+        id: verification
         env:
+          GH_TOKEN: ${{ github.event_name == 'push' && github.token || '' }}
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
-        run: python tools/check_verifier.py --base "$BASE_SHA"
-      - name: Reproduce changed minimal reproductions
-        env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
-        run: python tools/check_reproduce.py --base "$BASE_SHA"
+        run: python tools/release_verification.py architecture --base "$BASE_SHA" --receipt-out "$RUNNER_TEMP/architecture-verification.json"
+      - name: Preserve complete architecture verification
+        if: steps.verification.outputs.complete == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: complete-verification-${{ matrix.architecture }}-attempt-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/architecture-verification.json
+          if-no-files-found: error
 
   check:
     if: always() && github.ref_type != 'tag' && github.event_name != 'release' && github.event_name != 'workflow_dispatch'
@@ -60,7 +66,8 @@ jobs:
         run: |
           echo "architecture result: ${{ needs.architecture.result }}"
           exit 1
-      - run: echo "TWO-ARCHITECTURE CHECK PASS"
+      - name: Complete required architecture checks
+        run: echo "TWO-ARCHITECTURE CHECK PASS"
 
   publication:
     if: github.ref_type == 'tag' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
@@ -113,33 +120,25 @@ jobs:
       - name: Run activation readback on immutable publication events
         if: github.event_name != 'workflow_dispatch'
         env:
+          GH_TOKEN: ${{ github.token }}
           PUBLICATION_TAG: ${{ github.event.release.tag_name || github.ref_name }}
         run: |
-          python tools/check_activation.py --full --post-activation \
+          python tools/release_verification.py publication \
             --expected-tag "$PUBLICATION_TAG" \
-            --manifest-out activation-manifest.json
+            --manifest-out "$RUNNER_TEMP/activation-manifest.json"
       - name: Preserve tag readback manifest
-        if: github.ref_type == 'tag' && github.event_name != 'workflow_dispatch'
+        if: github.event_name == 'push' && github.ref_type == 'tag'
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: ${{ github.ref_name }}-activation-manifest
-          path: activation-manifest.json
+          name: ${{ github.ref_name }}-activation-manifest-attempt-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/activation-manifest.json
           if-no-files-found: error
       - name: Verify published release assets
         if: github.event_name == 'release'
         env:
           GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: ${{ github.event.release.tag_name }}
-        run: |
-          mkdir -p /tmp/twistj-release
-          gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY"
-          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \
-            --pattern activation-manifest.json --pattern SHA256SUMS \
-            --dir /tmp/twistj-release
-          python tools/check_release_manifest.py \
-            /tmp/twistj-release/activation-manifest.json \
-            --expected-tag "$RELEASE_TAG"
-          cmp canon/SHA256SUMS /tmp/twistj-release/SHA256SUMS
+        run: python tools/release_verification.py assets --expected-tag "$RELEASE_TAG"
       - name: Verify original v107 tag artifact and immutable published assets
         if: github.event_name == 'workflow_dispatch'
         env:

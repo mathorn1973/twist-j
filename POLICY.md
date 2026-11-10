@@ -313,8 +313,8 @@ Apache-2.0 applies unless a file states an approved compatible license.
 After cutover, the release-form activation readback is not a general content
 gate. Pull requests and ordinary `main` pushes run the two architecture jobs
 and their aggregate `check`. Immutable tag pushes and release publication run
-a separate single x86_64 publication job. This prevents duplicate artifact
-uploads and release races while preserving full publication readback.
+a separate single x86_64 publication job. Complete scientific execution and
+publication readback have distinct receipts; reuse never claims another run.
 
 A pull request that changes any file under `canon/` widens both changed-path
 checks to every public probe and every minimal reproduction, in every
@@ -323,11 +323,42 @@ directory is untouched, and a changed-path check cannot see that. The
 one-probe-per-pull-request rule is unaffected: it still counts only the probe
 directories the diff names.
 
-A change to `.github/workflows/policy.yml` also widens both changed-path checks
-to every public probe and every minimal reproduction. Workflow maintenance,
-including execution-budget changes, must be tested against the complete replay
-inventory on both architectures rather than passing with no selected verifiers.
-The same rule applies to the subsequent `main` push.
+A change to `.github/workflows/policy.yml` also requires every public probe and
+every minimal reproduction on both architectures. The operational controller
+`tools/release_verification.py` applies the same requirement to its listed
+release-control files. Workflow maintenance, including execution-budget
+changes, cannot pass with no selected verifiers. All scientific runners,
+individual limits, exact expected bytes and abandoned-probe rules are unchanged.
+
+For post-cutover releases, one complete successful x86_64/aarch64 pair at the
+frozen pull-request head is sufficient. There is no additional mandatory local
+full sweep. The base must be an ancestor of that head, and the checkout used by
+the workflow must have exactly the head's tree. Complete scientific execution
+then checks out that immutable head, not a synthetic merge commit. A stale
+candidate must be refreshed before freezing; scientific pin rules still apply.
+The existing one-probe-per-pull-request check precedes any full-sweep override.
+
+Each complete architecture job uploads a receipt only after both unchanged
+replay runners succeed and the checkout remains clean and unchanged. It binds
+the source commit and tree, SHA-256 of the complete tracked-file inventory and
+workflow, Linux/CPython 3.12 runtime, architecture, run and attempt, and every
+probe/reproduction disposition with exact verifier and expected-output hashes.
+Partial execution and evidence reuse never mint an execution receipt.
+
+The subsequent `main` push may reuse that pair only for a normal two-parent
+merge of the same reviewed, same-repository PR into `main`, with the candidate
+as second parent, its base as first parent, and an identical tree and inventory.
+Read-only GitHub API checks must establish the fixed repository/workflow
+identity, the executing workflow commit and its tree/parents, both successful
+standard hosted architecture jobs and every mandatory step, the successful
+aggregate, and both original unexpired artifacts from one successful attempt.
+Artifact names include the attempt; a partial rerun cannot mix attempts.
+ZIP sizes, SHA-256 digests, entry sets, receipt contents and complete scientific
+inventories are checked. A green summary, local JSON file or historical job
+without these receipts is insufficient. Missing or mismatched evidence on
+`main` runs the normal selected/full replay; it never authorizes a skip. An
+actually executed complete `main` pair can be used only at that exact commit.
+Every merge still reruns policy, unit, Canon, ledger and gate-contract checks.
 
 A sealed probe that explicitly froze its complete runtime authority context
 may be registered in `tools/probe_replay_contexts.json` for historical replay.
@@ -341,17 +372,33 @@ Canon, ledger, gate and activation checks still run against the current tree.
 Changes to the context registration or runner also replay the registered probes.
 
 The publication job reruns policy, unit, Canon, ledger and explicit gate
-contract checks, then performs the activation readback. Tag and release events
-skip changed-path checks because those events do not supply a valid comparison
-base; their full activation readback already reproduces every public probe and
-minimal reproduction.
+contract checks, then the unchanged static post-activation readback. Tag and
+release events never use changed-path selection. The tag must equal the current
+whole-number release identity and be annotated at the exact checkout commit.
+The tag controller verifies the complete architecture pair through the API
+before writing a manifest. A missing pair fails publication; it is not treated
+as a successful or partial replay. The manifest retains its complete tracked
+file inventory and adds the original pair's run/attempt, jobs, artifacts and
+receipts, plus the tag run/attempt and tag-object identity. Its static checker
+honestly reports `full=False`; the separately verified pair supplies complete
+scientific coverage. No scientific execution is attributed to the tag job.
 
 When release immutability is enabled, a release is always assembled as a
-draft. Attach the successful tag-job `activation-manifest.json` and the tagged
-`canon/SHA256SUMS`, validate both downloads, and only then publish the draft.
-Never substitute a manifest generated from a local checkout.
+draft. Attach `activation-manifest.json` from the successful tag-job artifact
+`canon-vN-activation-manifest-attempt-K` and the tagged `canon/SHA256SUMS`.
+Run `tools/release_verification.py assets --expected-tag canon-vN --draft`
+against that exact tag checkout, validate both downloads, and only then publish
+the draft. `--release-id` may identify the draft explicitly. Never substitute a
+manifest generated from a local checkout. The release event generates or uploads
+no replacement manifest. It downloads exactly the two immutable public assets,
+revalidates the original frozen tag attempt/artifact and complete pair, checks
+byte identity with the original manifest and tagged checksums, and applies the
+existing complete-inventory release-manifest validator. A later rerun does not
+replace the original attempt. Missing, expired or altered origin evidence fails
+readback. Retain original artifacts through release acceptance.
 
-The sole workflow has read-only permissions, immutable action pins, no
+The sole workflow has read-only contents, actions and pull-request permissions
+(the latter reads merge provenance), immutable action pins, no
 persisted checkout credential, a 60-minute architecture limit, a 60-minute
 publication limit, and a 5-minute aggregate limit. Its pull-request gate uses
 one x86_64 and one
@@ -370,8 +417,10 @@ ref at that SHA. It asserts matching controller/workflow revisions and accepts
 only `refs/heads/` controller refs. The scientific checkout is fixed to
 activation `03f010760d85c62795b74b3fa8fde79c2c36be7f`; the annotated tag object
 must remain `81c57853b7b5126fa2d8ec465b8ad903e2402c04`. Its content is
-`f5615ed4dcdfc672dc2e468399284a1dc03ce805`. The token has only `contents: read`
-and `actions: read`; the latter reads original run/job/artifact metadata.
+`f5615ed4dcdfc672dc2e468399284a1dc03ce805`. The manual lane uses only the
+workflow token's `contents: read` and `actions: read` capabilities; the latter
+reads original run/job/artifact metadata. The ordinary reuse lane additionally
+reads pull-request metadata. No write permission is granted.
 
 The manual lane runs the unchanged tagged policy, unit, Canon, ledger and gate
 checks, then the complete tagged `check_verifier.py` and `check_reproduce.py`
@@ -380,7 +429,8 @@ unchanged static post-activation checker, without `--manifest-out`. Its honest
 `full=False` output is complemented by the preceding successful whole-inventory
 steps. No scientific limit, expected byte, preregistration, threshold, or failure
 condition changes. No controller file is overlaid on the scientific checkout.
-Ordinary tag/release events retain their existing `--full` activation command.
+Ordinary tag/release events follow the complete-pair reuse protocol above. This
+does not change any earlier immutable tag or the fixed v107 recovery lane.
 
 This lane accepts only published immutable release `430574383`, published at
 `2026-11-01T12:38:30Z`, with exactly its two original assets. Their fixed sizes

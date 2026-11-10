@@ -132,12 +132,12 @@ if workflow_files != {"policy.yml"}:
 workflow = (workflows / "policy.yml").read_text(encoding="utf-8")
 for invariant in (
     '  workflow_dispatch:\n\npermissions:',
-    'permissions:\n  contents: read\n  actions: read',
+    'permissions:\n  contents: read\n  actions: read\n  pull-requests: read',
     "ref: ${{ github.event_name == 'workflow_dispatch' && '03f010760d85c62795b74b3fa8fde79c2c36be7f' || github.sha }}",
     '      - name: Pin manual postpublication readback to immutable v107\n        if: github.event_name == \'workflow_dispatch\'\n        run: |\n          test "$GITHUB_REPOSITORY" = "mathorn1973/twist-j"\n          test "$GITHUB_SHA" = "$GITHUB_WORKFLOW_SHA"\n          case "$GITHUB_REF" in refs/heads/?*) ;; *) echo "recovery controller requires a branch ref" >&2; exit 1 ;; esac\n          test "$(git rev-parse HEAD)" = "03f010760d85c62795b74b3fa8fde79c2c36be7f"\n          test "$(git cat-file -t refs/tags/canon-v107)" = "tag"\n          test "$(git rev-parse refs/tags/canon-v107)" = "81c57853b7b5126fa2d8ec465b8ad903e2402c04"\n          test "$(git rev-parse \'refs/tags/canon-v107^{commit}\')" = "03f010760d85c62795b74b3fa8fde79c2c36be7f"\n          test "$(git status --porcelain)" = ""\n          echo "RECOVERY CONTROLLER $GITHUB_SHA"\n          echo "RECOVERY RUN $GITHUB_RUN_ID ATTEMPT $GITHUB_RUN_ATTEMPT"',
     '      - name: Replay every frozen public probe for v107 postpublication readback\n        if: github.event_name == \'workflow_dispatch\'\n        env:\n          PYTHONDONTWRITEBYTECODE: "1"\n        run: python -u tools/check_verifier.py\n      - name: Replay every frozen minimal reproduction for v107 postpublication readback\n        if: github.event_name == \'workflow_dispatch\'\n        env:\n          PYTHONDONTWRITEBYTECODE: "1"\n        run: python -u tools/check_reproduce.py\n      - name: Validate static v107 activation after complete replay\n        if: github.event_name == \'workflow_dispatch\'\n        env:\n          PYTHONDONTWRITEBYTECODE: "1"\n        run: |\n          test "$(git status --porcelain)" = ""\n          python -u tools/check_activation.py --post-activation --expected-tag canon-v107',
     "      - name: Run activation readback on immutable publication events\n        if: github.event_name != 'workflow_dispatch'",
-    "if: github.ref_type == 'tag' && github.event_name != 'workflow_dispatch'",
+    "      - name: Preserve tag readback manifest\n        if: github.event_name == 'push' && github.ref_type == 'tag'",
     "      - name: Verify original v107 tag artifact and immutable published assets\n        if: github.event_name == 'workflow_dispatch'",
     'PINNED V107 POSTPUBLICATION PASS - complete replay, activation and original immutable assets',
     "permissions:\n  contents: read",
@@ -159,9 +159,13 @@ for invariant in (
     "python tools/check_policy.py",
     "python tools/check_canon.py",
     "python tools/check_ledger.py",
-    "python tools/check_verifier.py --base \"$BASE_SHA\"",
-    "python tools/check_reproduce.py --base \"$BASE_SHA\"",
-    "python tools/check_activation.py --full --post-activation",
+    "      - name: Replay or reuse verified evidence\n        id: verification\n        env:\n          GH_TOKEN: ${{ github.event_name == 'push' && github.token || '' }}\n          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}\n        run: python tools/release_verification.py architecture --base \"$BASE_SHA\" --receipt-out \"$RUNNER_TEMP/architecture-verification.json\"",
+    "      - name: Preserve complete architecture verification\n        if: steps.verification.outputs.complete == 'true'",
+    "name: complete-verification-${{ matrix.architecture }}-attempt-${{ github.run_attempt }}\n          path: ${{ runner.temp }}/architecture-verification.json\n          if-no-files-found: error",
+    "name: ${{ github.ref_name }}-activation-manifest-attempt-${{ github.run_attempt }}\n          path: ${{ runner.temp }}/activation-manifest.json\n          if-no-files-found: error",
+    "python tools/release_verification.py publication \\\n            --expected-tag \"$PUBLICATION_TAG\" \\\n            --manifest-out \"$RUNNER_TEMP/activation-manifest.json\"",
+    'python tools/release_verification.py assets --expected-tag "$RELEASE_TAG"',
+    "      - name: Complete required architecture checks",
     "echo \"TWO-ARCHITECTURE CHECK PASS\"",
 ):
     if invariant not in workflow:
@@ -170,12 +174,15 @@ if workflow.count("runner: ubuntu-latest") != 1:
     fail("workflow must declare exactly one x86_64 matrix runner")
 if workflow.count("runner: ubuntu-24.04-arm") != 1:
     fail("workflow must declare exactly one aarch64 matrix runner")
-if workflow.count("actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a") != 1:
-    fail("workflow must upload the activation manifest exactly once")
+upload_token = "actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a"
+if workflow.count(upload_token) != 2:
+    fail("workflow must have one architecture receipt and one tag manifest upload step")
 publication_at = workflow.find("\n  publication:")
-upload_at = workflow.find("actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a")
-if publication_at < 0 or upload_at < publication_at:
-    fail("activation artifact upload must live only in the publication job")
+architecture = workflow[workflow.index("\n  architecture:"):workflow.index("\n  check:")]
+if architecture.count(upload_token) != 1 or workflow[publication_at:].count(upload_token) != 1:
+    fail("receipt and activation manifest uploads must remain in their respective jobs")
+if '--full' in workflow:
+    fail("ordinary publication reuses a complete pair; manual v107 has its own fixed replay steps")
 if "pull_request_target:" in workflow:
     fail("pull_request_target is forbidden")
 
@@ -187,7 +194,7 @@ end = workflow.index(end_marker, begin) + len(end_marker)
 source = ''.join(line[10:] if line.startswith('          ') else line for line in workflow[begin:end].splitlines(keepends=True))
 if hashlib.sha256(source.encode()).hexdigest() != 'b9c96884ad2c72d09f725f733adf9c8eacffd2c8c858d36049d2a73a4ae49997':
     fail('postpublication readback differs from its reviewed contract')
-for forbidden in ('continue-on-error:', 'workflow_call:', '  inputs:', 'contents: write', 'actions: write'):
+for forbidden in ('continue-on-error:', 'workflow_call:', '  inputs:', 'contents: write', 'actions: write', 'pull-requests: write'):
     if forbidden in workflow:
         fail('forbidden recovery capability: ' + forbidden)
 publication = workflow[publication_at:]

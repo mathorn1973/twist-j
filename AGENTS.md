@@ -425,9 +425,45 @@ review.
    After v1 activation, one reviewed release branch may carry exactly two
    frozen commits: first the complete content fold, then a release-form
    commit changing exactly `STATUS.md`, `README.md`, and `CITATION.cff` and
-   naming the content commit. The pull-request head must pass the active
-   release gate. Merge without squash or rebase, tag the merge only after
-   public readback, and publish assets only after tag readback passes.
+   naming the content commit. The final frozen pull-request head must pass one
+   complete x86_64/aarch64 workflow pair and aggregate `check`. Do not duplicate
+   this with another mandatory local full sweep. Policy, unit, Canon, ledger,
+   gate-contract and static activation checks remain mandatory. The candidate
+   must include its current base and have the same tree as the tested PR merge;
+   complete execution runs at the immutable head. Do not amend a frozen pin to
+   repair a stale candidate.
+10. Review that exact tree and merge without squash or rebase. Read back public
+    `main`, both parents and the identical candidate tree. The main workflow
+    rechecks static gates and authenticates both original complete receipts,
+    including source workflow, runtime contract, inventory, run/attempt, jobs
+    and artifact digests. Require its actual successful reuse readback. Missing
+    proof falls back to execution; never describe fallback as reuse. A partial
+    rerun cannot supply a pair from different attempts. Rerun all architecture
+    jobs together if a new complete attempt is required.
+11. Tag the exact merged commit only after public readback. The successful tag
+    job runs static post-activation validation and verifies the original full
+    pair before producing `canon-vN-activation-manifest-attempt-K`. Its manifest
+    contains the complete file inventory, source evidence and original tag
+    attempt. Preserve this artifact; do not regenerate the manifest locally.
+12. Create a draft with exactly that artifact's `activation-manifest.json` and
+    the tagged `canon/SHA256SUMS`. From a clean exact-tag checkout, run:
+
+    ```text
+    python tools/release_verification.py assets --expected-tag canon-vN --draft --release-id RELEASE_ID
+    ```
+
+    This read-only check downloads both assets and verifies their original
+    successful tag attempt/artifact, complete architecture evidence and exact
+    inventories. Publish only after it passes. Then require the release event's
+    static activation and original-asset readback to pass; it creates no new
+    manifest and reruns no science. Preserve the actual source execution IDs
+    when reporting coverage. Missing or expired origin evidence blocks the
+    dependent publication/readback rather than turning into an assumed pass.
+
+These post-cutover steps supersede duplicate full activation sweeps in the
+historical v1 staging procedure. They do not alter earlier releases, scientific
+pinning or the specifically pinned v107 manual recovery procedure. Workflow
+changes themselves still require a complete two-architecture candidate replay.
 
 The sole post-cutover raw-transcript exception is an exact repository path in
 the public-policy allowlist. It is available only for deterministic printable

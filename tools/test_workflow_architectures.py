@@ -61,15 +61,20 @@ class WorkflowArchitectureTests(unittest.TestCase):
         self.assertIn(block, self.text)
         publication_at = self.text.index("\n  publication:")
         upload_token = "actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a"
-        self.assertEqual(self.text.count(upload_token), 1)
-        self.assertGreater(self.text.index(upload_token), publication_at)
+        self.assertEqual(self.text.count(upload_token), 2)
+        self.assertEqual(self.text[publication_at:].count(upload_token), 1)
+        self.assertIn("if: github.event_name == 'push' && github.ref_type == 'tag'", self.text[publication_at:])
+        self.assertIn('name: ${{ github.ref_name }}-activation-manifest-attempt-${{ github.run_attempt }}', self.text)
 
     def test_both_architectures_run_reproduction_checks(self) -> None:
         architecture_at = self.text.index("\n  architecture:")
         aggregate_at = self.text.index("\n  check:")
         architecture_block = self.text[architecture_at:aggregate_at]
-        self.assertIn('python tools/check_verifier.py --base "$BASE_SHA"', architecture_block)
-        self.assertIn('python tools/check_reproduce.py --base "$BASE_SHA"', architecture_block)
+        self.assertIn('python tools/release_verification.py architecture --base "$BASE_SHA"', architecture_block)
+        self.assertIn("GH_TOKEN: ${{ github.event_name == 'push' && github.token || '' }}", architecture_block)
+        self.assertIn("if: steps.verification.outputs.complete == 'true'", architecture_block)
+        self.assertIn('name: complete-verification-${{ matrix.architecture }}-attempt-${{ github.run_attempt }}', architecture_block)
+        self.assertIn('path: ${{ runner.temp }}/architecture-verification.json', architecture_block)
 
     def test_publication_does_not_run_changed_path_checks(self) -> None:
         publication_at = self.text.index("\n  publication:")
@@ -77,7 +82,9 @@ class WorkflowArchitectureTests(unittest.TestCase):
         self.assertNotIn("--base", publication_block)
         self.assertIn("python -u tools/check_verifier.py", publication_block)
         self.assertIn("python -u tools/check_reproduce.py", publication_block)
-        self.assertIn("check_activation.py --full --post-activation", publication_block)
+        self.assertIn("python tools/release_verification.py publication", publication_block)
+        self.assertIn('python tools/release_verification.py assets --expected-tag "$RELEASE_TAG"', publication_block)
+        self.assertNotIn('--full', publication_block)
 
     def test_forbidden_trigger_absent(self) -> None:
         self.assertNotIn("pull_request_target:", self.text)
@@ -136,7 +143,7 @@ class V107PostpublicationTests(unittest.TestCase):
         self.assertNotIn('  inputs:',self.text)
         self.assertNotIn('continue-on-error:',self.text)
         self.assertEqual(self.text.count('--manifest-out'),1)
-        self.assertIn("if: github.ref_type == 'tag' && github.event_name != 'workflow_dispatch'",self.text)
+        self.assertIn("if: github.event_name == 'push' && github.ref_type == 'tag'",self.text)
         self.assertIn("if: github.event_name != 'workflow_dispatch'",self.text)
         start=self.text.index('      - name: Validate static v107 activation after complete replay')
         end=self.text.index('      - name: Run activation readback on immutable publication events',start)
