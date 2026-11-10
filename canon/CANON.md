@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v110
+# TWIST-J Public Canon v111
 
-**Release identity.** Public Canon v110. Normative authority and activation
+**Release identity.** Public Canon v111. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -12,6 +12,16 @@ to be forced by J alone, or to be derived from the original map U. A claim
 about one stated model is assessed on that model and its complete proof.
 Relations between distinct models, and identifications with measured physical
 quantities, are separate claims when they are made.
+
+**Reciprocal funding and prepared records.** The conservative two-slot
+contact and the reciprocal four-slot funded contact have different guards
+and invariant constraints. Exact theorems state the latter's full account,
+sharp scoped payer cost, finite-stock limitation and clock-qualified remote
+hold. In a separately specified infinite plenum, a complete finite
+certificate plus an aligned escape proof transfers a persistent pointer
+distinction into a permanently fixed receiver value. That specific result
+retains C status and the phase family 2^18 h+1; it supplies no later active
+reader, physical occurrence law or full native-U realization.
 
 **Conservative known-input preparation.** The declared integral relative
 contact has sharp initial auxiliary trace accounts 12 for the signed target
@@ -13641,6 +13651,1108 @@ failure of the displayed full-state account or residue identities.
 The proof is analytical. The exact supplementary audit is
 [relative-contact](../reproduce/relative-contact/README.md); its finite
 cases audit these identities without replacing the universal argument.
+
+### Reciprocal relative contact with full-account funding
+
+Let O=Z[j], Phi_5(j)=0, conjugation j->j^4, rho=j^2,
+J=1+j^2, J^{-1}=-j-j^2 and phi=-j^2-j^3. Put h(z)=z conjugate(z) and
+Q(z)=Tr_{Q(j)/Q}(h(z))/2. For z=sum_{i=0}^3 z_i j^i,
+
+    Q(z)=(5 sum z_i^2-(sum z_i)^2)/2.
+
+Thus Q is a nonnegative integer, vanishes only at zero and has finite
+bounded sublevel sets. Write t=h(J)=2-phi; then t^{-1}=1+phi and
+t+t^{-1}=3. The use of O^4, marked pairs and these exact guards is a model
+premise. The account is not identified with physical energy.
+
+For (x,y,u,v) require x-y,u-v in 2O before computing
+c=(x+y)/2, e=(u+v)/2, d=(x-y)/2 and f=(u-v)/2.
+Define B on all O^4 by:
+
+- identity if either parity test fails;
+- identity when d=f=0;
+- (c+Jd,c-Jd,e+J^{-1}f,e-J^{-1}f) when d,f are nonzero and h(f)=t h(d);
+- (c+J^{-1}d,c-J^{-1}d,e+Jf,e-Jf) when d,f are nonzero and h(d)=t h(f);
+- identity otherwise.
+
+**RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT [T].**
+
+B is a total involution of O^4. It preserves each of the two pair sums
+separately, the complete H=h(x)+h(y)+h(u)+h(v), and its positive half-trace
+E. On an active branch it exchanges the two relative Hermitian accounts.
+No separate direction register is required.
+
+For the specified forward reciprocal proposal with fixed c,e and
+(d,f)->(Jd,J^{-1}f), preservation of H is equivalent to h(f)=t h(d).
+This is a necessary-and-sufficient balance surface for that proposal,
+not a classification of every possible funding mechanism.
+
+#### Proof
+
+The parity-admitted centers and half-differences are integral; J and J^{-1}
+are units, so every proposed output is integral and parity-admitted.
+The account is H=2h(c)+2h(e)+2h(d)+2h(f). Its forward difference is
+
+    2[(t-1)h(d)+(t^{-1}-1)h(f)]
+      =2(t-1)[h(d)-t^{-1}h(f)].
+
+Since the real field is a domain and t!=1, it vanishes exactly on the stated
+surface. The reverse proposal has the reciprocal condition.
+
+The two surfaces meet only when d=f=0: their conjunction gives
+h(d)=t^2 h(d), and t^2!=1. Since h(z)=0 iff z=0, a point on either
+nonzero surface has both half-differences nonzero.
+
+On the forward surface the resulting accounts are
+h(d')=t h(d)=h(f) and h(f')=t^{-1}h(f)=h(d), hence the image lies on
+the reverse surface. The reverse proposal restores it exactly. The same
+argument in reverse proves the other composition. Fixed states remain in
+the fixed complement. This proves the total involution, all refusals and
+the full account identities, before taking any trace.
+
+Forward denotes multiplication of the first relative coordinate by J.
+Its pair-Q increment is 2(Q(f)-Q(d)), which need not be positive for every
+admitted state. No universal heating statement is made.
+
+
+**Falsifier.** Wrong admitted balance equivalence, nonintegral output, domain failure, B^2 != I or account change.
+
+**RECIPROCAL-J-COMMON-PAYER-BOUND [T].**
+
+For a in {1,-1}, the common payer (rho J,-rho J), independent of a, gives
+
+    B(2a,0,rho J,-rho J)
+       =(a(1+J),a(1-J),rho,-rho).
+
+The target/payer Q accounts change (8,6)->(10,4), with total 14.
+Within the forward balance family of this reciprocal/full-H model, 6 is the sharp initial payer
+account for this target. The transferred Q is 2.
+
+#### Proof
+
+Here c=a,d=a,e=0,f=rho J and h(f)=t h(d).
+Any parity-admitted payer on the forward balance surface must satisfy
+h(f)=t and hence Q(f)=3. Its account is 2Q(e)+2Q(f)>=6,
+with equality at the displayed e=0 payer. Direct substitution proves
+the output and accounts. A second application restores all four slots.
+This one-block witness is not retained memory. No minimum over different
+laws, additional carriers or a physical work dictionary is asserted.
+
+
+**Falsifier.** A lower admitted payer, failed witness or incorrect full accounts.
+
+**RECIPROCAL-J-RHO-WORD-OBSTRUCTION [T].**
+
+No finite word in C_rho contacts, whole-slot permutations and auxiliary
+slots all restored exactly implements B on all O^4.
+
+#### Proof
+
+C_rho fixes each marked residue in O/(1-j)=F_5; permutations preserve the
+complete residue histogram. At a=1 the preceding input has residues
+(2,0,2,3), whereas the output has (3,4,1,4). Their histograms differ.
+Exactly restored auxiliaries contribute the same initial and final
+histograms and cancel. This single witness excludes a realization of B
+on all inputs by that alphabet. It does not exclude another enlarged
+alphabet or auxiliaries left changed.
+
+
+**Falsifier.** An implementation within that exact alphabet realizing the mismatching full transition.
+
+**RECIPROCAL-J-FINITE-STOCK-LADDER [T].**
+
+For every fixed K>=1 and a in {1,-1}, prepare target (a,-a) and payer i
+(rho^i J^i,-rho^i J^i), 1<=i<=K. Apply B to the target and successive
+payer i in increasing order. The target ends at (aJ^K,-aJ^K); payer i
+ends at (rho^i J^{i-1},-rho^i J^{i-1}). There are 2+2K slots and initial
+E=2+2L_{2K+1}, where L_0=2, L_1=1 and L_{n+2}=L_{n+1}+L_n.
+The reverse word restores
+every slot. No fixed finite stock with conserved proper E supports that
+unchanged target trajectory for all K.
+
+#### Proof
+
+Immediately before step i, d=aJ^{i-1}, f=rho^i J^i; the balance equality
+holds. The forward branch gives the stated new target and payer. Induction
+and involutivity prove the complete endpoints and inverse word.
+The two real conjugates of h(J) are t and t^{-1}, so
+Q(J^m)=t^m+t^{-m}=L_{2m}. Hence
+E=4+2 sum_{i=1}^K L_{2i}=2+2L_{2K+1}.
+The sum telescopes using L_{2i}=L_{2i+1}-L_{2i-1}.
+The required target account 2L_{2K} is unbounded. Nonnegative conserved
+total E therefore excludes indefinite continuation with one fixed finite
+stock. Payer preparation and the successive-payer schedule are supplied.
+
+
+**Falsifier.** Failed step/balance/inverse, wrong Lucas sum or indefinite unbounded target in conserved finite E.
+
+#### Algebraic reading
+
+Multiplication by J sends h=A+Bphi to (2A-B)+(B-A)phi and preserves
+A^2+AB-B^2. This is a specialization of the existing boost algebra, not
+a new physical relativity claim. Unit calibration, a full-system Lorentz
+law and realization by the full native U remain outside the propositions.
+
+### Unitary matrices and total identity refusal
+
+**HALF-INTEGRAL-UNITARY-REFUSAL-OBSTRUCTION [T].**
+
+There is a two-by-two matrix W over (1/2)O, unitary at both conjugate
+Hermitian places, such that the map equal to W on
+D_W={z in O^2: Wz in O^2} and equal to the identity elsewhere is not injective.
+Consequently classification of matrices up to independent row and column
+unit phases need not classify their total identity-refusal completions.
+
+#### Proof
+
+Let C be the rational matrix of the already registered C_rho on admitted
+pairs, and set W=diag(j,1) C. Both factors are unitary at both places:
+h(rho)=h(j)=1. Multiplication by diag(j,1) is an integral automorphism,
+so D_W equals the integral domain of C, namely x-y in 2O.
+
+In particular (1,1) is admitted and W(1,1)=(j,1).
+But j-1 is not in 2O, as seen in the integral basis 1,j,j^2,j^3.
+Thus (j,1) is refused and its completed image is also (j,1).
+The two distinct inputs have the same image.
+
+This counterexample does not assert that W preserves the pair sum.
+It addresses norm-unitarity plus identity refusal. C_rho itself remains
+a total conservative bijection because its own admissible domain is invariant.
+
+**Falsifier.** The displayed W is not unitary, its integral domain differs, or the two images are unequal.
+
+### Funded sign transport and a clock-qualified remote hold
+
+**RECIPROCAL-J-SIGN-REMOTE-HOLD [T].**
+
+For every d,h>=1 let L=2d+h+3 and P=2L+4. On the supplied finite graph
+below there is one fixed five-layer bijection F, built only from reciprocal
+B, and one fixed passive reader confined to the declared receiver arcs,
+with a counted clock corridor, such that
+the two preparations differ only at the source cell 2a, a in {-1,+1}.
+The reader at full boundary n>=0 is VALUE(a) exactly when
+
+    n mod P in {d+2,...,d+h+1},
+
+and is BLANK otherwise. Within each admitted hold it is correct at every
+intervening layer boundary. F^P restores each complete prepared raw field.
+This is recurrence of the same input, not renewal with a fresh input.
+
+The full apparatus has 12L+20 raw cells,
+H=12L+28-6phi, E=24L+50 and S=2a. The two signs have the same H/E.
+These are construction budgets, not minima or physical energy values.
+
+#### Remote proof part 2. Exact primitive and accounts
+
+Let O=Z[j], with 1+j+j^2+j^3+j^4=0. Put
+
+    rho = j^2, J = 1+rho, Jinv = -j-j^2,
+    phi = -j^2-j^3, g = J conjugate(J) = 2-phi,
+    W = J rho.
+
+Here J Jinv=1, g^(-1)=1+phi, g is positive at both real embeddings, and g!=1.
+Write h(z)=z conjugate(z). For a raw array z set
+
+    S(z) = sum_i z_i,
+    H(z) = sum_i h(z_i),
+    E(z) = Tr_(Q(j)/Q)(H(z))/2.
+
+In particular E(z)=2A+B if H(z)=A+B phi. For a single cell represented by
+integer coefficients c0,...,c3,
+
+    q(c) = [5 sum_i c_i^2 - (sum_i c_i)^2]/2,
+    E(z) = sum_i q(z_i).
+
+The quadratic form is integral, positive definite, and obeys
+q(c)>=sum_i c_i^2/2. Thus fixed finite arrays have finite bounded-E sets.
+
+The four-cell gate B takes ordered cells (x,y,p,r). It is identity unless
+both x-y and p-r belong to 2O. On that admitted domain define
+
+    c=(x+y)/2, d=(p+r)/2, u=(x-y)/2, v=(p-r)/2.
+
+Keep c,d fixed. Apply precisely one of:
+
+1. If u!=0 and h(v)=g h(u), use (u,v)->(Ju,Jinv v).
+2. If v!=0 and h(u)=g h(v), use (u,v)->(Jinv u,Jv).
+3. Otherwise use identity.
+
+Reassemble (c+u,c-u,d+v,d-v). The two nonzero branches are disjoint: their
+intersection would imply (g^2-1)h(u)=0 and therefore u=0. Each branch maps
+into the opposite branch. Both parity-admitted pair differences remain even.
+The complement is fixed, so B^2=I on the entire O^4 carrier.
+
+The gate preserves each of its two marked pair sums, and hence S. On an
+accepted branch it exchanges h(u),h(v). Since the four-cell account equals
+2h(c)+2h(d)+2h(u)+2h(v), it preserves full H and E. No separate positive
+or negative-energy reservoir is omitted.
+
+#### Remote proof part 3. Geometry, law and common preparation
+
+Use four source cells x=(x0,x1,x2,x3), and m fixed rail sites
+P_i=(p_i^+,p_i^-), i modulo m, where
+
+    L=2d+h+3, m=2L.
+
+All named gates below are the SAME B from remote proof part 2.
+
+- B0 acts on source cells in order (0,1,2,3).
+- B1 acts on source cells in order (1,2,3,0).
+- I acts on (x2,x3,p_0^+,p_0^-).
+- K0 applies B simultaneously to rail-site pairs (0,1),(2,3),... .
+- K1 applies B simultaneously to rail-site pairs (1,2),(3,4),...,(m-1,0).
+
+One full tick, with the rightmost factor acting first, is
+
+    F = K1 K0 I B1 B0.
+
+Thus every tick first operates the four-cell writer, then its interface to
+the launch site, then the two conveyor layers. The graph, constituent pairs
+within each layer, layer order and source location are supplied parts of
+one fixed law. The source is a local inhomogeneity; no spatially homogeneous
+or native-U derivation is asserted. All layers have finite support radius
+on this supplied graph, independent of d and h.
+
+The two initial arrays are
+
+    x=A_a=(2a,0,W,-W), a in {-1,+1};
+    P_0=(J,-J);
+    P_i=(1,-1) for every i!=0.
+
+The rail preparation is COMMON, including the initially high launch pair.
+There is no selection of a rail preparation after learning a. Receiver pairs
+are occupied low pairs, not literal zero cells.
+
+For the rail code define low=(1,-1), high=(J,-J). A B contact swaps the two
+occupations: low/high becomes high/low, high/low becomes low/high, and equal
+occupations stay fixed. On this canonical code the local phases do not change.
+K1 K0 moves any occupation at an even site two sites forward per full tick;
+one at an odd site moves two sites backward. The construction launches only
+on the even forward lane.
+
+#### Remote proof part 4. Three-tick sign encoder
+
+Define the following source states:
+
+    A_a=(2a,0,W,-W),
+    C_+=(1+J,1-J,rho,-rho),
+    C_-=(-1-J,J-1,rho,-rho),
+    B_+=(2,-W,W,0),
+    Z_-=(-1-J,J-1,W,-W),
+    D_a=(2a,0,rho,-rho).
+
+The four-cell writer T4=B1 B0 satisfies
+
+    A_+ -> B_+ -> C_+ -> A_+,
+    A_- -> C_- -> A_-.
+
+For completeness, B0 exchanges A_a and C_a by its balance condition. B1
+rejects A_a by parity. On C_+ its two half-differences are -rho and -J,
+so it takes the forward branch and gives B_+; on B_+ it takes the inverse
+branch and gives C_+, while B0 rejects B_+ by parity. On C_- the B1
+half-differences are 0 and 1, so it rejects by balance.
+
+The additional states needed for the connection also have exact simple
+behavior. T4 fixes Z_-: B0 sees two relative accounts g and g, and B1
+rejects because its first difference is rho-W=-rho^2, which is not in 2O.
+T4 fixes either D_a: B0 sees two relative accounts 1 and 1, and B1 rejects
+the difference -rho by parity. Both rho and rho^2 are units modulo 2.
+
+Before tick 1 the launch site is high. Before ticks 2 and 3 it is low,
+because the conveyor has removed the preceding launch value and no pulse
+has yet circled the rail. The table records the source immediately after
+T4, the subsequent I action, and the launch value entering the conveyor.
+
+| Tick | Input sign | After T4 | Interface I | Source after I | Launch |
+|---|---|---|---|---|---|
+| 1 | + | B_+ | parity refusal | B_+ | high |
+| 1 | - | C_- | forward | Z_- | low |
+| 2 | + | C_+ | equal low accounts | C_+ | low |
+| 2 | - | Z_- | inverse | C_- | high |
+| 3 | + | A_+ | inverse | D_+ | high |
+| 3 | - | A_- | inverse | D_- | high |
+
+The nontrivial interface identities are simply
+
+    (rho,J) -> (W,1),
+    (W,1) -> (rho,J)
+
+for the relative values of payer and launch pair. At the positive first
+tick the payer pair is (W,0), whose difference is odd, so I refuses.
+At the negative first tick the payer is (rho,-rho), which accepts the
+common high launch pair. This is the exact local-sign-to-account interface:
+the source-dependent parity created by re-pairing decides when the common
+launch stock leaves.
+
+Consequently the positive input emits highs at ticks {1,3}; the negative
+input emits highs at ticks {2,3}. The second pulse is common and supplies
+a marker. The original source sign remains in D_a; it is not erased or
+silently substituted by a different input convention.
+
+After tick 3, D_a is fixed by T4 and by I whenever the incoming launch
+pair is low. All other rail pairs stay in the canonical binary code.
+The first possible full-boundary return to launch is tick L for the
+positive leading pulse. Thus the launch is low at the START of every tick
+2 through L, apart from any locally generated high during I. This proves
+the claimed encoder continuation through the first read window without
+assuming that the source or interface is disconnected afterward.
+
+#### Remote proof part 5. Closed-form transport before return
+
+At full tick 1 the positive rail has its sole high at site 2; the negative
+rail has no high. At full tick 2 the positive rail has its sole high at
+site 4; the negative rail has its sole high at site 2.
+
+For 3<=n<L, all indices in the following formula lie in the unwrapped
+range and the exact high sets are
+
+    positive: {2n-4, 2n},
+    negative: {2n-4, 2n-2}.
+
+Every other rail site is low. The trailing high is the common tick-3
+marker. The bit is the distance from that marker to the leading high:
+four sites for +, two for -. This is a phase-to-temporal-word conversion,
+followed by exact account transport. It is not phase transport by the
+fixed-pair conveyor itself.
+
+During the subsequent K0 layer each of these even high positions increases
+by one, leaving its separation unchanged. K1 then increases both by a
+further one. The source-only layers B0,B1 and interface I do not touch the
+remote receiver. This observation will give a reader that remains correct
+also at the intermediate layer boundaries.
+
+#### Remote proof part 6. Fixed remote reader and the common hold interval
+
+Let r=2d. The receiver consists of ALL rail sites in the contiguous region
+
+    R={r,r+1,...,r+2h+3}.
+
+Its largest index is 2d+2h+3, strictly below m. It neither wraps nor
+contains the launch site. Along the data ring its closest site is at least
+2d bonds from launch in either direction: the reverse distance to its far
+end is 2L-(2d+2h+3)=2d+3. Thus d controls actual graph remoteness, not
+merely a longer trip to a receiver close by the reverse ring arc.
+The region contains 2h+4 rail pairs, all initially low and already counted
+in the full apparatus.
+
+Define a total reader on arbitrary raw states. First require every site in
+R to be exactly low or high as defined in remote proof part 3. If this fails, return
+BLANK. Require exactly two highs in R; otherwise return BLANK. If those
+highs have ordered positions s<t, return
+
+    VALUE(+1) if r<=s<=r+2h-1 and t-s=4;
+    VALUE(-1) if r<=s<=r+2h-1 and t-s=2;
+    BLANK otherwise.
+
+The tagged BLANK is not the numeric value zero. The reader accesses only
+this fixed remote region and never reads a tick counter, source, payer,
+launch site, or any external clock. Its spatial anchor mask is part of
+the declared reader, not a feedback condition in F.
+
+Put tau=d+2. Before tau the common trailing marker has not entered R:
+its position 2n-4 is less than r. At most one leading pulse can be in R,
+so the reader is BLANK. This also covers ticks 0,1,2 directly from the
+preparations and the one-pulse cases above.
+
+At n=tau+j with 0<=j<=h-1, the trailing marker is at s=r+2j. The positive
+leading high is at s+4 and the negative one at s+2. Both lie in R, all
+remaining sites in R are low, and the allowed anchor condition holds.
+Thus both inputs are read correctly for exactly the h declared consecutive
+full boundaries.
+
+At the intervening K0 boundary the anchor is r+2j+1. It remains within
+[r,r+2h-1], and the positive leading high is at most r+2h+3. The same reader
+therefore remains correct there. B0,B1,I leave R unchanged. Each K1 boundary
+except the final expiry boundary is the next admitted full boundary.
+This proves correctness at every declared layer boundary between the arrival
+boundary tau and the expiry boundary tau+h, with expiry excluded. It does
+not assert behavior during an unspecified physical interpolation of a layer.
+
+At n=tau+h the anchor has moved to r+2h, outside the permitted anchor mask.
+The positive leading pulse has also exited R. The positive reader is BLANK
+because at most one high remains; the negative reader is BLANK because the
+anchor is no longer permitted, although both highs can still be inside R.
+There is no sign-dependent extension of the read window.
+
+Crucially,
+
+    tau+h = d+h+2 < L=2d+h+3.
+
+Every step in this proof therefore precedes the first rail return. There is
+no unproved boundary switch or source-interface assumption inside the read
+interval. The raw word resides entirely in the counted receiver region
+during the whole admitted hold interval while its decoded value is stable.
+
+#### Remote proof part 7. Whole apparatus inverse and budget
+
+Each layer is a full-carrier bijection. B0,B1 and I are involutions, as are
+the disjoint parallel layers K0,K1. Consequently
+
+    F^(-1) = B0 B1 I K0 K1.
+
+This inverse is defined on the entire integer raw carrier, not only the
+binary preparations. Every layer preserves S,H,E. Initially
+
+    S=2a,
+    H=(4+2g)+(2m-2+2g)=2m+2+4g,
+    E=14+(4m+2)=4m+16.
+
+For the DATA apparatus, m=2L and L=2d+h+3 give
+
+    raw cell count = 4L+4 = 8d+4h+16,
+    H=4L+2+4g = 8d+4h+22-4phi,
+    E=8L+16 = 16d+8h+40.
+
+These are data-only budgets. remote proof part 10 includes the clock required by the
+final all-time truthful reader.
+
+The source costs 14 initially and 12 after the third tick. The common
+initial high launch pair supplies two excess units; the payer supplies
+the other two. The final pre-return rail has exactly two highs, costing
+4m+4. Therefore 12+(4m+4)=4m+16, with full H conservation already proved
+independently at every gate. There is no unexplained energetic payment
+for the transmitted sign distinction.
+
+Distance, hold capacity, occupied background, source and initial marker
+stock are all explicit. These formulas are construction budgets, not
+minimum-resource theorems or identifications with measured physical energy.
+
+#### Remote proof part 8. Complete data recurrence and the ungated reader's false passage
+
+The returning data word must not be ignored. To analyze it exactly, define
+
+    Z_a=(a(1+J),a(1-J),W,-W).
+
+As for Z_- above, T4 fixes Z_+: B0 sees equal relative accounts g, while
+B1 sees first difference -rho(1+J), which is odd. Thus both Z_a are fixed
+by T4. In even-lane coordinates q=i/2 modulo L, every rail step shifts a
+high by one. The source and launch interface have the following relevant
+rules, where b is the incoming launch occupation and b' its outgoing value:
+
+| Source before tick | b | Source after T4 and I | b' |
+|---|---:|---|---:|
+| A_+ | 0 or 1 | B_+ | b |
+| B_+ | 0 | C_+ | 0 |
+| B_+ | 1 | Z_+ | 0 |
+| A_- | 0 | C_- | 0 |
+| A_- | 1 | Z_- | 0 |
+| C_a | 0 | D_a | 1 |
+| C_a | 1 | A_a | 1 |
+| D_a | 0 | D_a | 0 |
+| D_a | 1 | A_a | 0 |
+| Z_a | 0 | C_a | 1 |
+| Z_a | 1 | Z_a | 1 |
+
+This finite transition table follows directly from the balance identities,
+T4 identities and parity refusals proved above. Combining it with the
+one-site shift gives the following complete return certificates. Between
+listed events the source is D_a, the launch input is low, and the two highs
+translate by one; the first three events have the behavior already proved.
+
+| Full tick | Positive source | Positive rail high q values |
+|---:|---|---|
+| 0 | A_+ | {0} |
+| 1 | B_+ | {1} |
+| 2 | C_+ | {2} |
+| 3 | D_+ | {3,1} |
+| L+1 | A_+ | {L-1} |
+| L+2 | B_+ | {0} |
+| L+3 | Z_+ | empty |
+| L+4 | C_+ | {1} |
+| L+5 | D_+ | {2,1} |
+| 2L+3 | D_+ | {0,L-1} |
+| 2L+4 | A_+ | {0} |
+
+| Full tick | Negative source | Negative rail high q values |
+|---:|---|---|
+| 0 | A_- | {0} |
+| 1 | Z_- | empty |
+| 2 | C_- | {1} |
+| 3 | D_- | {2,1} |
+| L+1 | D_- | {0,L-1} |
+| L+2 | A_- | {0} |
+
+Because L>=6, the stated events do not alias. The full raw data array,
+including the source, launch and every low pair, is restored at 2L+4 for
+positive input and L+2 for negative input. Hence
+
+    F_data^P z_a = z_a, P=2L+4,
+
+for both preparations. A minimal-period assertion is unnecessary here.
+Bijectivity and the explicit return make this an all-time analytical
+continuation, not a simulation ending before return.
+
+The table also exposes a real failure of the ungated data reader. The
+positive source emits its second pair of highs at L+4 and L+5, so their
+separation is now TWO raw rail sites rather than four. At full ticks
+
+    L+d+4, ..., L+d+h+3
+
+that word crosses the same receiver with the permitted anchors. The
+remote proof part 6 reader consequently returns VALUE(-1) for the original positive
+input. This is an explicit counterexample to extending the first-window
+reader to an all-time decoder. It is retained as a negative result.
+
+This is also an exact alias obstruction to ANY fixed instantaneous reader
+of the data rail alone, even one allowed to inspect the whole data rail.
+At positive tick L+5 the source is D_+ and the complete rail high set is
+{2,1}; at negative tick 3 the source is D_- and the entire rail is identical.
+Their subsequent rails remain identical after the same number of shifts
+until feedback, while their source signs differ. In particular the negative
+first read window and the positive later window separated by L+2 ticks have
+identical complete data-rail states. Any such reader that correctly reads
+-1 in the former must give the false -1 in the latter. A different fixed
+rail-only formula cannot cure this alias. Additional retained state or a
+phase reference is required for the stronger all-time contract; remote proof part 9
+supplies the latter explicitly and charges for it.
+
+#### Remote proof part 9. Counted local phase qualification by the same gate
+
+Complete the apparatus by adding a disjoint clock rail with 2P fixed pair
+sites, P=2L+4. Initialize clock site 0 to high=(J,-J), every other clock
+site to low=(1,-1), identically for both source signs. Apply its even and
+odd conveyor layers in parallel with the DATA K0 and K1, respectively.
+There is still one fixed five-layer law and still only the primitive B:
+
+    F_full = K1_joint K0_joint I B1 B0.
+
+The clock does not control, reset or switch any data gate. It is a finite,
+explicitly funded local phase reference used by the reader. At full tick n
+its sole high is at clock site 2n modulo 2P; at the intervening K0 boundary
+it is at 2n+1. The complete clock array returns after P full ticks.
+
+The receiver has a second local component on the clock rail:
+
+    R_clock={2tau,2tau+1,...,2(tau+h)-1}, tau=d+2.
+
+This is a corridor of 2h clock sites. Supply a layout with this short arc
+and the data receiver arc co-located in the receiver region. They need no
+interaction edge. The reader accesses only these two local arcs, not the
+whole clock ring, the source, or a global time label. The two cycles and
+their layout are declared apparatus geometry, not a derived spacetime.
+
+Define ENABLE to mean that every pair in R_clock is canonical low/high
+and exactly one of them is high. The final total reader is
+
+    R_full = R_data when ENABLE, otherwise BLANK.
+
+At full boundaries on the declared preparations,
+
+    ENABLE iff n modulo P belongs to {tau,...,tau+h-1}.
+
+During the K0 layer between n and n+1 the same condition holds, because the
+clock corridor includes both 2n and 2n+1 for every admitted n. During B0,B1,I
+neither receiver component changes. Thus the phase qualification has no
+intermediate-layer holes within the hold interval and switches off at the
+same final K1 boundary as the prescribed expiry.
+
+The data array has period dividing P on each input, and the clock array
+has period P. Therefore every enabled window is an exact recurrence of the
+proved first data window, including its intermediate layer boundaries.
+At all other boundaries the final reader is BLANK regardless of the data
+word. In particular the wrong positive second passage from remote proof part 8 occurs
+a half-period L+2 after the admitted passage and is suppressed.
+
+The final all-time contract at full ticks is exactly
+
+    R_full(F_full^n z_a) = VALUE(a)
+        when n mod P is in {d+2,...,d+h+1},
+    R_full(F_full^n z_a) = BLANK otherwise.
+
+Within each admitted hold the same correct value is returned at every
+intervening layer boundary. This supplies a truthful finite retained record
+with explicit continued erasure and recurrence. It does not create a fresh
+independent input whenever the record recurs.
+
+The phase mechanism is materially part of the apparatus. Removing it really
+breaks the stronger contract, as the exhibited false passage proves. It
+cannot be omitted from the resource account or relabeled as a free external
+observation time.
+
+#### Remote proof part 10. Full inverse and complete resource account
+
+The joint K0,K1 layers remain involutions because their blocks are disjoint
+within each rail and the rails are disjoint. Thus
+
+    F_full^(-1) = B0 B1 I K0_joint K1_joint
+
+on the whole raw integer carrier. All five layers preserve S,H,E. The clock
+costs 4P raw cells and has H_clock=4P-2+2g and E_clock=8P+2. Adding the data
+apparatus of remote proof part 7 gives
+
+    total raw cells = (4L+4)+4P = 12L+20,
+    H_total = (4L+2+4g)+(4P-2+2g)
+            = 12L+16+6g = 12L+28-6phi,
+    E_total = (8L+16)+(8P+2) = 24L+50,
+    S_total = 2a,
+    L = 2d+h+3, P = 2L+4.
+
+Every stock and clock cell is prepared before the unknown sign is processed.
+All non-source coordinates are identical in the two preparations, and full
+H/E are identical. There is no uncharged timer, reset, output-controlled
+switch or post-start replenishment. The source sum differs, as it must for
+these particular raw inputs, and is preserved exactly.
+
+For example d=4,h=8 gives L=19, P=42, 248 raw cells, E=506 and
+H=256-6phi. The first read window is full ticks 6 through 13, inclusive,
+with the same eight-tick readable window recurring every 42 ticks. These
+numbers are direct substitutions in the analytical formulas, not a resource
+optimum.
+
+#### Account proof part 1. Coefficients determine conjugation and every account exactly
+
+Work in O=Z[j], Phi5(j)=1+j+j^2+j^3+j^4=0, with basis 1,j,j^2,j^3.
+Conjugation sends j to j^4, j^2 to j^3 and j^3 to j^2. Substituting
+j^4=-1-j-j^2-j^3 gives, for z=c0+c1*j+c2*j^2+c3*j^3,
+
+    conjugate(z)=(c0-c1)-c1*j+(c3-c1)*j^2+(c2-c1)*j^3.
+
+A complete multiplication rule is as follows. Set a4=b4=0 and
+p_k=sum_(0<=i,l<=3, i+l=k mod5) a_i*b_l for k=0,...,4. Then the product's
+four coefficients are (p0-p4,p1-p4,p2-p4,p3-p4): first use j^5=1, then
+eliminate j^4. Equivalently, degree reduction forms the degree-six convolution and, for degrees 6,5,4 in that order,
+subtracts the current degree-d coefficient from degrees d-4,...,d-1.
+
+Put phi=-j^2-j^3, so phi^2=phi+1 and j+j^4=phi-1. Define
+
+    s0=c0^2+c1^2+c2^2+c3^2,
+    s1=c0*c1+c1*c2+c2*c3,
+    s2=c0*c2+c0*c3+c1*c3.
+
+Expanding z*conjugate(z) groups the six off-diagonal products into
+s1*(j+j^4)+s2*(j^2+j^3). Therefore
+
+    h(z)=z*conjugate(z)=(s0-s1)+(s1-s2)*phi.
+
+In particular h(z)=A+B*phi has canonical four coefficients (A,0,-B,-B).
+For any real w=A+B*phi define ell(w)=Tr_(Q(j)/Q)(w)/2=2A+B. The cell account is
+
+    q(z)=ell(h(z))=2s0-s1-s2
+        =[5*sum c_i^2-(sum c_i)^2]/2.
+
+It is integral and q(z)>=sum c_i^2/2 by Cauchy-Schwarz, with q(z)=0 iff z=0.
+Conjugation, h, ell and equality thus require only integer operations.
+Equivalently ell is the degree-two real-field trace; do not halve that trace
+again. A low cell 1 has q=2, not 1.
+
+#### Account proof part 2. Parity and balance guards without an implicit norm test
+
+For J=1+j^2, Jinv=-j-j^2, rho=j^2 and W=J*rho, direct reduction gives
+
+    J*Jinv=-(j+j^2+j^3+j^4)=1,
+    g=h(J)=2+j^2+j^3=2-phi,
+    g^(-1)=1+phi,  (2-phi)*(1+phi)=1,
+    W=-1-j-j^3.
+
+Both real embeddings of g are positive; g!=1 and g^2!=1. If h(u)=A+B*phi,
+
+    g*h(u)=(2A-B)+(B-A)*phi,
+    g^(-1)*h(u)=(A+B)+(A+2B)*phi.
+
+Thus balance is equality of two explicit integer coefficient pairs. Since
+1,j,j^2,j^3 is an integral basis of O, x-y belongs to 2O exactly when all
+four coefficients of x-y are even; the same applies to p-r. Only then set
+c=(x+y)/2, d=(p+r)/2, u=(x-y)/2, v=(p-r)/2, all in O.
+
+The total gate uses precisely: forward if u!=0 and h(v)=g*h(u); reverse if v!=0 and
+h(u)=g*h(v); identity otherwise, including parity rejection. The nonzero
+branches cannot overlap: overlap gives (g^2-1)h(u)=0, hence u=0. Each
+accepted branch enters the opposite branch. The new differences remain
+2Ju,2Jinv*v, or their reverse, so parity admission is preserved.
+No approximate modulus, sign choice, square root or fitted tolerance enters.
+
+#### Account proof part 3. Every individual cell and every marked pair
+
+For a fixed center c define the real cross term
+
+    K_c(w)=c*conjugate(w)+conjugate(c)*w.
+
+If the relative value changes u -> lambda*u, where lambda is J or Jinv,
+write a_lambda=h(lambda)-1 and w_lambda=(lambda-1)*u. Expansion gives
+
+    Delta h(c+u)=a_lambda*h(u)+K_c(w_lambda),
+    Delta h(c-u)=a_lambda*h(u)-K_c(w_lambda).
+
+Their exact Delta q values are ell of the respective right-hand sides.
+For h(u)=A+B*phi, the common per-cell term has ell=A-2B for lambda=J,
+and ell=A+3B for lambda=Jinv; the cross contributions are respectively
++ell(K_c(w_lambda)) and -ell(K_c(w_lambda)). Apply the identical formulas
+to d,v and the other multiplier. These include occupied, nonzero centers;
+no interference term is dropped or assigned to an uncounted reservoir.
+
+Let U=h(u), V=h(v). The complete local balance table is:
+
+| Branch | Multipliers on (u,v) | Delta H of (x,y) | Delta H of (p,r) | Guard |
+|---|---|---|---|---|
+| Forward | (J,Jinv) | 2(g-1)U | 2(g^(-1)-1)V = -2(g-1)U | V=gU |
+| Reverse | (Jinv,J) | 2(g^(-1)-1)U | 2(g-1)V = -2(g^(-1)-1)U | U=gV |
+| Any refusal | (1,1) | 0 | 0 | Identity |
+
+If U=A+B*phi, the first marked pair's Delta H/Delta E are explicitly
+
+    forward: 2[(A-B)-A*phi],       2A-4B;
+    reverse: 2[B+(A+B)*phi],      2A+6B.
+
+The second pair has their negatives by the guard. Cross terms cancel
+WITHIN each pair, so the full four-cell Delta H and Delta E are zero.
+Every refusal has zero change in each individual cell. Each pair sum 2c
+or 2d is fixed; hence the additive source sum S is also conserved.
+
+#### Account proof part 4. Explicit source cells and local transfers in the encoder
+
+For a=+/-1 use the states
+
+    A_a=(2a,0,W,-W), C_a=(a(1+J),a(1-J),rho,-rho),
+    B_+=(2,-W,W,0), Z_a=(a(1+J),a(1-J),W,-W),
+    D_a=(2a,0,rho,-rho).
+
+In particular 1-J=-rho and h(1+J)=h(2+rho)=1+2g=5-2phi. The per-cell
+accounts in source-cell order are therefore:
+
+| Source state | Four h values | Four q values | Source H | Source E |
+|---|---|---|---|---:|
+| A_a | (4,0,g,g) | (8,0,3,3) | 8-2phi | 14 |
+| B_+ | (4,g,g,0) | (8,3,3,0) | 8-2phi | 14 |
+| C_a | (1+2g,1,1,1) | (8,2,2,2) | 8-2phi | 14 |
+| Z_a | (1+2g,1,g,g) | (8,2,3,3) | 10-4phi | 16 |
+| D_a | (4,0,1,1) | (8,0,2,2) | 6 | 12 |
+
+The elementary source transitions have these exact per-cell changes.
+B0/B1 rows use fixed source order (0,1,2,3), including the cyclic B1 gate:
+
+| Transition, in the four affected cells | Delta h vector | Delta q vector |
+|---|---|---|
+| B0: A_a -> C_a | (2g-3,1,1-g,1-g) | (0,2,-1,-1) |
+| B1: C_+ -> B_+ | (3-2g,g-1,g-1,-1) | (0,1,1,-2) |
+| I: payer low, launch high -> payer high, launch low | (g-1,g-1,1-g,1-g) | (1,1,-1,-1) |
+
+Reverse transitions negate the relevant row; refusals give four zeros.
+For I the cell order is (x2,x3,p0+,p0-). The third row funds C_- -> Z_-
+at tick 1; its inverse funds Z_- -> C_- at tick 2 and A_a -> D_a at tick 3.
+A conveyor low/high swap has the SAME third row in its own four-cell order.
+Its reverse has the negative row. This applies to data AND clock contacts.
+
+#### Account proof part 5. All first-three-tick layer boundaries, with both rails counted
+
+Let d,h>=1, L=2d+h+3, m=2L and P=2L+4. Then L>=6, so none of the
+displayed rail indices wraps. Here h is the integer hold parameter;
+h(z) above remains the Hermitian account function. A rail low pair costs
+(H,E)=(2,4), a high pair (2g,6). HIGH/LOW name the trace costs, not
+an ordering of h at one real embedding. The complete data subtotals are
+
+| Number k of high data sites | H_data | E_data |
+|---:|---|---:|
+| 0 | 4L | 8L |
+| 1 | 4L+2-2phi | 8L+2 |
+| 2 | 4L+4-4phi | 8L+4 |
+
+At EVERY layer the clock contains one high and 2P-1 lows, giving
+H_clock=4P+2-2phi and E_clock=8P+2. Its occupied background is never removed.
+The following table gives every prefix; listed sets are high DATA SITE
+indices, so they determine k and the preceding exact subtotals. The final
+column is the high CLOCK SITE index. Source accounts are the explicit table
+in account proof part 4. No B0, B1, interface or conveyor boundary is omitted.
+
+| Prefix | Source + | Data highs + | Source - | Data highs - | Clock high |
+|---|---|---|---|---|---:|
+| Initial | A_+ | {0} | A_- | {0} | 0 |
+| Tick 1, B0 | C_+ | {0} | C_- | {0} | 0 |
+| Tick 1, B1 | B_+ | {0} | C_- | {0} | 0 |
+| Tick 1, I | B_+ | {0} | Z_- | {} | 0 |
+| Tick 1, K0 | B_+ | {1} | Z_- | {} | 1 |
+| Tick 1, K1 | B_+ | {2} | Z_- | {} | 2 |
+| Tick 2, B0 | B_+ | {2} | Z_- | {} | 2 |
+| Tick 2, B1 | C_+ | {2} | Z_- | {} | 2 |
+| Tick 2, I | C_+ | {2} | C_- | {0} | 2 |
+| Tick 2, K0 | C_+ | {3} | C_- | {1} | 3 |
+| Tick 2, K1 | C_+ | {4} | C_- | {2} | 4 |
+| Tick 3, B0 | A_+ | {4} | A_- | {2} | 4 |
+| Tick 3, B1 | A_+ | {4} | A_- | {2} | 4 |
+| Tick 3, I | D_+ | {0,4} | D_- | {0,2} | 4 |
+| Tick 3, K0 | D_+ | {1,5} | D_- | {1,3} | 5 |
+| Tick 3, K1 | D_+ | {2,6} | D_- | {2,4} | 6 |
+
+For clarity, the full-tick subtotals, before adding the SAME clock subtotal,
+are explicitly (H_source,H_data; E_source,E_data):
+
+    Initial, both: (8-2phi, 4L+2-2phi; 14, 8L+2).
+    Tick 1, +:    (8-2phi, 4L+2-2phi; 14, 8L+2).
+    Tick 1, -:    (10-4phi,4L;        16, 8L).
+    Tick 2, both: (8-2phi, 4L+2-2phi; 14, 8L+2).
+    Tick 3, both: (6,      4L+4-4phi; 12, 8L+4).
+
+Every prefix in the table has total H=12L+28-6phi, E=24L+50 and S=2a.
+The tick-1 negative interface borrows two E units from the launch pair;
+tick 2 returns them. At tick 3 both sources pay two units to the data rail.
+Every movement of either rail's high site is itself a balanced local swap.
+
+#### Account proof part 6. Universal continuation, not endpoint inference
+
+For any raw integer state let z^(r) denote its state after layer r of
+F=K1_joint K0_joint I B1 B0. account proof part 3 gives Delta H=Delta E=Delta S=0
+for EACH B, including every occupied-state or rejected branch. Unchanged
+cells contribute zero; disjoint blocks add to zero inside each K layer.
+Consequently sum_(r=1..5) (H(z^(r))-H(z^(r-1)))=0, with every summand zero;
+the same holds for E and S. The clock's B blocks participate in these sums.
+Induction applies to every subsequent tick, including returning signals,
+source reactivation and complete recurrence. It does not depend on the
+initial code, the first three ticks, finite test counts or endpoint matching.
+
+This algebra supplies conservation at every layer and every later tick.
+It does not identify the accounts with measured physical energy, derive
+native-U dynamics or turn regional delay memory into a stationary latch.
+The supplied geometry, stock, clock and reader remain premises.
+
+**Falsifier.** A wrong admitted reading, non-BLANK excluded reading,
+incorrect intermediate-layer hold, failed complete return/inverse or wrong
+whole account under the specified law. A moving two-pulse code in the counted
+receiver region is distinct from permanent one-cell storage. Arbitrary-phase
+transport, a plenum interface, full-U compilation, active physical detection,
+renewal with a fresh input and an occurrence law are outside this claim.
+
+### A prepared permanent fine-value record in the contact field
+
+The construction transfers a persistent pointer distinction to a distant
+receiver at fixed colour. The supplied receiver and the distinction already
+present in the complete field are explicit premises. The finite certificate
+and its analytical extension have separate registered statements.
+
+#### Explicit field and clock
+
+Let O=Z[j], Phi_5(j)=0, rho=j^2, J=1+j^2 and phi=-j^2-j^3.
+Conjugation sends j to j^4; h(z)=z conjugate(z) and
+Q(z)=(5 sum z_i^2-(sum z_i)^2)/2 in the basis 1,j,j^2,j^3.
+Use only the registered two-slot C_rho: on x-y in 2O, put d=(x-y)/2
+and send (x,y) to (x+(rho-1)d,y-(rho-1)d); otherwise fix it.
+This is not the reciprocal four-slot B. Let lambda=1-j,
+delta=j^4 and beta_i=0 for even i, beta_i=delta for odd i, on the entire
+integer line. At letter a in {0,1}, simultaneously apply C_rho to all
+adjacent pairs (i,i+1) with i congruent to a modulo 2.
+
+The clock is p(n)=1 when v_2(n) is even and 0 otherwise, n>=1.
+A field initialized at boundary n0 is subsequently updated with
+p(n0+1),p(n0+2),... . This supplied clock-driven contact field is not
+identified with the full native U.
+
+A listed value replaces beta, rather than being added to it. All unlisted
+sites equal beta. Since delta is nonzero modulo 2, every background pair
+refuses; each finite-time deviation has finite support. For such a field
+define only the finite excess accounts
+
+    S=sum_i(z_i-beta_i),
+    H=sum_i(h(z_i)-h(beta_i)).
+
+Their conservation follows from the two-slot sum and full-H identities
+and finite propagation. The unrenormalized background H is infinite;
+half-trace(H) is not the total energy of a finite apparatus.
+
+**PLENUM-ALIGNED-ESCAPE-CRITERION [T].**
+
+Let r,N be nonnegative integers with N divisible by 2^r. Consider this
+explicit contact field at boundary N.
+Suppose it is a union of a stationary finite component F and at most one
+outgoing finite component on each side, all interpreted relative to beta.
+
+Assume:
+
+1. F is fixed under both individual matchings; its support is in [A,B].
+2. For each outgoing component, normalized states are represented relative
+   to the even floor of their leftmost support site. The initial state is
+   in a finite set of nonempty normalized states, with an exact transition
+   row for every state under each word tau^r(0) and tau^r(1). Every output
+   is in that same set, where tau(0)=11 and tau(1)=10.
+3. Every transition records its complete normalized output, an even anchor
+   displacement and the min/max defect coordinates over every intermediate
+   tick, including start and end.
+4. Every left displacement is strictly negative and every right displacement
+   strictly positive. At the initial left anchor l, every left row has
+   l+max<=A-2; at the initial right anchor u, every right row has u+min>=B+2.
+
+Then the complete future contact field remains the disjoint union of F
+and the separately evolving outgoing components for any sequence of these
+two blocks. In particular the stationary component is retained forever
+under the native-clock suffix after N.
+
+##### Proof
+
+From the valuation definition,
+
+    p(2n-1)=1, p(2n)=1-p(n).
+
+Thus consecutive letters at indices 2n-1,2n are tau(p(n)).
+Iteration proves that every aligned length-2^r block is tau^r(b) for
+some b in {0,1}; the claim includes the actual suffix at N.
+
+Even translation preserves beta and both marked matchings. Hence each
+normalized transition table gives the corresponding raw transition at
+every even anchor. After a left transition its new anchor is smaller,
+so every future upper support bound is at least as safe as the initial
+one. The analogous lower bound improves on the right. F is unchanged
+at each individual tick. At every tick a contact pair can meet at most
+one of the component supports; the stated gaps prevent a contact joining
+different components. All other background contacts refuse.
+
+For each matched pair its joint input therefore equals the input in the
+isolated evolution of the sole component it meets, or the fixed background
+input if it meets none. Locality identifies the joint evolution with the
+union of separate evolutions throughout the block; no linear superposition
+is assumed. Transition closure gives
+the same hypotheses at the next aligned boundary. Induction proves the
+claim for arbitrarily many blocks and all intermediate tick boundaries.
+
+This theorem is an implication from exact certificate hypotheses.
+It neither generates a certificate nor proves that a proposed numerical
+table is correct.
+
+#### Frozen input family
+
+Define X_sigma(k)=-sigma J(1+rho^k) and
+Y_sigma(k)=-sigma J(1-rho^k), with sigma=1 for positive and sigma=j for
+negative packets. Set
+
+    q=j^3,
+    m_minus=(-8,-2,-4,-6),
+    m_plus =(-6,-4,-2,-8),
+
+in the basis 1,j,j^2,j^3. Both primary inputs have q at -23,
+X_j(0) at 49 and m_minus at 562. WRITE has X_1(0) at 1;
+FAR has the same X_1(0) at -131073. ABSENT omits that positive packet
+and is a secondary control, not an equal-account primary input.
+
+Direct cyclotomic arithmetic gives
+
+    m_plus-m_minus=2Jlambda,
+    h(m_minus)=h(m_plus)=72-44phi,
+    Q(m_minus)=Q(m_plus)=100.
+
+WRITE and FAR both have S=-7-j-3j^2-4j^3 and H=86-52phi,
+with half-trace 120. This equality is only of the displayed S, H and
+half-trace accounts. It does not include the reduced colour word: WRITE
+places the positive writer to the right of q, FAR to its left, so the
+ordered colour invariant differs already in the inputs. ABSENT instead has
+S=-6-2j-2j^2-5j^3 and H=79-48phi.
+
+The primary encoded distinction is writer position, not an arbitrary
+unknown sign. The receiver is prepared at 562 and is certified to remain
+stationary at 560 from the proved cut onward; the cut is not asserted to
+be its first settling time.
+
+The receiver value pair and initial site were selected after exposure to
+earlier results. The public [provenance record](../reproduce/plenum-full-chain-record/PROVENANCE.md)
+discloses that reconnaissance. The selected certificate is a result-exposed
+reproduction, not a preregistered success probability or an all-site result.
+
+**PLENUM-FULL-CHAIN-FINITE-CERTIFICATE [C].**
+
+For the three stated inputs initialized at n0=1, 196607 applications of
+the exact raw rule give the following complete endpoint at boundary 196608.
+No other deviations from beta are present.
+
+| Input | Left writer | q | Receiver | Right reader |
+|---|---|---:|---|---|
+| WRITE | Y_1(4) at -1706; X_1(4) at -1705 | -21 | m_plus at 560 | Y_1(1) at 1282; X_1(1) at 1283 |
+| FAR | Y_1(4) at -132822; X_1(4) at -132821 | -23 | m_minus at 560 | X_j(1) at 1873; Y_j(1) at 1874 |
+| ABSENT | none | -23 | m_minus at 560 | X_j(1) at 1873; Y_j(1) at 1874 |
+
+The stationary q/receiver component is fixed under each matching.
+The exact outgoing closure tables under tau^13(0),tau^13(1) have:
+
+| Component | States | Rows | Initial even anchor | Shift set | Global nearest bound |
+|---|---:|---:|---:|---|---|
+| WRITE left | 3 | 6 | -1706 | -122,-120,-58,-56 | max<=-1684 |
+| WRITE right | 5 | 10 | 1282 | 40,50,52 | min>=1273 |
+| FAR left | 3 | 6 | -132822 | -122,-120,-58,-56 | max<=-132800 |
+| FAR right | 3 | 6 | 1872 | 56,58,120 | min>=1853 |
+| ABSENT right | 3 | 6 | 1872 | 56,58,120 | min>=1853 |
+
+All row extrema include every intermediate tick, not just endpoints.
+[certificate.json](../reproduce/plenum-full-chain-record/certificate.json)
+contains the complete normalized start/end fields,
+shifts and extrema for all 34 rows, and the exact reference-phase raw
+endpoints and accounts. It is an extracted evidence fixture, not a verifier.
+Its exact LF bytes have SHA-256
+80a21b34b74b8c0bc5bf9e1c92782f8a4fdc2bc41c289029184d2ce33be2182c.
+The public [raw-field reproduction](../reproduce/plenum-full-chain-record/README.md)
+recomputes the complete histories and closure from the stated preparations;
+the fixture supplies the comparison target, not transition dynamics.
+
+##### Finite scope and falsifier
+
+This C statement asserts only the stated finite evaluations: the three
+histories, stationary checks, and 34 complete transition rows at length
+8192, with state limit 16 and span limit 1024. It does not infer permanence
+from a finite horizon. Any wrong endpoint, omitted defect, account discrepancy,
+wrong row, failed closure or incorrect intermediate extremum falsifies the
+corresponding finite assertion. An integrity mismatch stops acceptance;
+it is not by itself a scientific negation.
+
+**PLENUM-PREPARED-PERMANENT-RECORD [C].**
+
+Using the exact finite certificate just stated for the given
+raw rule and inputs, for every integer h>=0 initialize at
+n0=2^18 h+1. Then for every n>=2^18 h+196608,
+
+    z_WRITE(560,n)=m_plus,
+    z_FAR(560,n)=m_minus.
+
+The complete original writers are retained in both preparations.
+
+The C status retains the computational dependency. The all-phase-
+family and all-future quantifiers below are proved analytically from the
+finite certificate; they are not inferred from a long run. No theorem-status
+promotion of that computed premise is made.
+
+##### Proof
+
+For 2<=k<=196608<2^18, writing k=2^v w with w odd gives
+2^18 h+k=2^v(2^{18-v}h+w) and hence
+v_2(2^18 h+k)=v_2(k). Every letter in the initial 196607-tick
+history agrees with h=0. Determinism transfers its complete finite
+history and endpoint to every h, not just its final reading.
+
+The cut is divisible by 8192. In WRITE take A=-21,B=560; in FAR
+A=-23,B=560. The table's left/right bounds are strictly beyond the
+required one-background-site gaps. All displacements are even and
+strictly outward, and the stationary component is fixed under both
+letters. PLENUM-ALIGNED-ESCAPE-CRITERION therefore applies to the
+complete field, including the retained left writers, at every start in
+the declared phase progression.
+It gives the displayed fixed-cell values for all future boundaries.
+
+The infinite phase progression is proved by the valuation identity.
+The public verifier replays the three h=0 histories.
+The result does not classify every phase or assign a physical success
+probability.
+
+#### Reading and physical boundary
+
+The passive map R(m_minus)=0, R(m_plus)=1 distinguishes these two terminal
+values. It is not a later active reading interaction. Both values have
+the same full Hermitian account, Q, colour modulo 2 and residue modulo
+lambda. A reader that depends only on those invariants of the receiver
+cell cannot distinguish them. The complete fields are distinguishable:
+q is at -21 or -23, and the outgoing reader has positive sign in WRITE
+and negative sign in FAR. The outgoing packet excess sums are respectively
+-Jlambda and +Jlambda. Thus the receiver increase by 2Jlambda is balanced
+by the packet decrease by 2Jlambda; the sign already carries a distinction.
+
+A later active interaction that reads or exchanges this distinction has not
+been composed with the complete retained-writer chain. The actual writing
+path is a sequence of contacts; a closed description of its switch mechanism
+and its relation to the reciprocal four-slot B remain separate work. No copy,
+reset or reusable reader follows from the passive value predicate.
+
+No claim here proves formation from plenum, least writing cost, an active
+native reader, reset/reuse, unlimited independent inputs, full-U realization,
+Born occurrence, physical energy or unit calibration. Q=100 is the account
+of this particular supplied receiver, not a proved minimum. Local retention
+with escaping components does not assert settling of the complete field.
+
+**Falsifier for the permanent-record consequence.** A failure of the stated
+valuation identity or a later change of either certified site-560 value under
+all of the declared preparation, clock and certificate premises. The generic
+criterion is falsified by a field satisfying all of its exact hypotheses
+whose components subsequently interact or whose stationary part changes.
 
 ### Four-slot known-input minima
 

@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v110. Normative authority and activation
+**Release identity:** Public Canon v111. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v110 also declares a discrete architecture. It does not
+Public Canon v111 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -40,6 +40,13 @@ give the selected coherent reading and a funded integer pair source.
 CONTACT-W-BOUND-PAIR-RESPONSE supplies finite prepared packets with a
 proved limiting inertial response under the conserving spectral source.
 The full definitions and proofs distinguish these carriers and operations.
+
+The reciprocal four-slot contact has exact full-account funding and a
+clock-qualified regional record. A separate field uses the conservative
+two-slot contact to retain a prepared fixed-cell value permanently. The latter
+retains C status and depends on an exact finite certificate plus an all-future
+separation proof. Physical occurrence, active reading, calibration and full
+native realization remain separate.
 
 HOMOGENEOUS-CAPTURE-CURRENT-RECORD joins capture, complete physical-cut
 charge current and coherent receiver recording in one specified homogeneous
