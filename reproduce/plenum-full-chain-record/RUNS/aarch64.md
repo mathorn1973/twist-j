@@ -1,0 +1,18 @@
+# Synthesis staging run (non-canonical)
+
+candidate_commit: 8c607cf732547efe42092a23985b60e44ed20fa4
+run_base_commit: 8c607cf732547efe42092a23985b60e44ed20fa4
+reproduction: plenum-full-chain-record
+verifier_sha256: 6d96fb462a869f832948083810272f5ec3e10adcc46cfc4233cf8b5d26992dcd
+expected_sha256: 5fb4c907ac3a372a2d9c943a61009891a4d507872cd4619fb3af350948bd5986
+command: python3 reproduce/plenum-full-chain-record/verify.py
+platform: Debian 12
+architecture: aarch64
+python: 3.11.2
+exit_code: 0
+stdout_sha256: 5fb4c907ac3a372a2d9c943a61009891a4d507872cd4619fb3af350948bd5986
+stdout_bytes: 328
+stdout_lines: 1
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS
