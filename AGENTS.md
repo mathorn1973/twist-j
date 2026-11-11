@@ -3,6 +3,16 @@
 `POLICY.md` is binding. `STATUS.md` decides authority. This file defines the
 Public Canon v1 synthesis and daily operating procedure.
 
+## Session startup context
+
+At the start of each session, read the current `main` version of the private
+[agent operating instructions](https://github.com/mathorn1973/twistj-handoff/blob/main/AGENTS.md)
+and the files they require, using authorized access. Keep any private checkout
+outside this public repository. If unavailable, report it and continue only
+work independent of that context. Never copy private operational details into
+public files or discussions. Existing coordination and scientific authority
+gates still apply.
+
 ## 1. Authority gate
 
 Read `STATUS.md` before any scientific work.
