@@ -43,3 +43,15 @@ proposed change is wrong or requires the procedure in `AGENTS.md`.
   documentation fixes must not claim a new Canon version.
 - Keep commits small and single-purpose; reference claim IDs
   (see `canon/REGISTRY.tsv`) where applicable.
+
+## Working style
+
+- The author prefers a coordinator style: delegate computations and simpler
+  tasks to helper subagents, several per task where useful, and check their
+  key findings against the source before reporting them. Helpers of the same
+  session are not independent reviewers.
+- Private operating notes for agents (helper settings, the author's machines
+  and their connectors, the agent queue rules) live in `CLAUDE.md` of the
+  private repository `mathorn1973/twistj-handoff`. Attach that repository when
+  a task needs them. Never copy machine names, hostnames or other private
+  details from there into this public repository.
