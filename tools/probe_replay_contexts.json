@@ -525,6 +525,53 @@
         }
       }
     },
+    "P-INTEGER-RECIPROCAL-SOURCE-ACTION-2": {
+      "pin_commit": "3ae3ea66e1e3c633c048ece10e3baf43f144d8c7",
+      "verifier": {
+        "git_blob": "16c16fef2761c6ed406cd93ffcb46953e9c2bf93",
+        "sha256": "be41170c18795ec68de7ceaaa7be7c5181aea0e6e0a456db32a97f4ba2e3153e",
+        "bytes": 32578
+      },
+      "prereg": {
+        "git_blob": "cfa4c72400bfc53a906b4104e0cc766f5cb4d5c5",
+        "sha256": "f73255e855e8c0c284791294357461f6f63028b08a96419e58f51fa2776bba63",
+        "bytes": 21852
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-INTEGER-RECIPROCAL-SOURCE-ACTION-2/breaker.py": {
+          "git_blob": "7bb1d0b6476034de16ab29fde0fd3e2cec13735b",
+          "sha256": "6cd89a8624867659603ff3431ada649bbfd6e4bbd8ec765876ad4984faddcc63",
+          "bytes": 40328
+        }
+      }
+    },
     "P-RELATIONAL-MASS-JOINT-ACTION-1": {
       "pin_commit": "f19fa98dc1634ce1e17b9dec402c51920d2bea8d",
       "verifier": {
