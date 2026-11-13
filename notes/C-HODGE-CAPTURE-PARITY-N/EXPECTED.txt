@@ -1,0 +1,11 @@
+C-HODGE-CAPTURE-PARITY-N | exact finite audit | NON-CANONICAL L1
+PASS source: exact full one-step moment -(2/5)*exp(i*(K-g-beta))
+PASS elimination: exact quadratic, <=16 values, 17 fixed momenta, 136 factors
+PASS scattering/current: 225 fixtures; 450 full congruence polynomials
+PASS source forms: 406 nonparabolic projectors; 446 nonzero-A charts
+PASS negative controls: factorized receiver, one-sign error, partial densities rejected
+PASS retained labels: 676 pairs; parity dimensions 351/325; fixed form weights
+PASS conditional arithmetic: original beta scale, two real places, primes 2 and 13
+ANALYTIC ONLY: full cross-parity classification, boundary uniqueness, measure-zero theorem
+NOT CLAIMED: center boundary enclosure, separation margin, spatial-cut or integral-lattice identification
+PASS all frozen finite audit families
