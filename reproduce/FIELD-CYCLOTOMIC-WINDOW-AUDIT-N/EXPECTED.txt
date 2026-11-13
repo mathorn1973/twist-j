@@ -1,0 +1,5 @@
+IMPLEMENTATION primary
+PRIMARY PASS: exact field, lattice, L5 and 625 image residues; 25 admitted, 600 rejected
+IMPLEMENTATION challenger
+CHALLENGER PASS: independent exact audit, scope controls and both predecessor regressions
+AUDIT PASS: exposed targets; NON-CANONICAL L1; proof required for universal claims
