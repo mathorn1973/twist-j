@@ -427,6 +427,7 @@ class ReviewedRegistrationTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         names = {
             "P-INTEGER-NONLINEAR-CONSTRAINT-PROPAGATION-1",
+            "P-INTEGER-RECIPROCAL-SOURCE-ACTION-1",
             "P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3",
             "P-INTEGER-PRIMITIVE-SOURCE-METRIC-1",
             "P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1",
@@ -514,6 +515,7 @@ class ReviewedRegistrationTests(unittest.TestCase):
         expected = [root / "probes" / name for name in sorted(context.registrations(root))]
         self.assertEqual({path.name for path in expected}, {
             "P-INTEGER-NONLINEAR-CONSTRAINT-PROPAGATION-1",
+            "P-INTEGER-RECIPROCAL-SOURCE-ACTION-1",
             "P-FRW-INHOM-K1-BACKREACTION-3",
             "P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3",
             "P-INTEGER-PRIMITIVE-SOURCE-METRIC-1",
