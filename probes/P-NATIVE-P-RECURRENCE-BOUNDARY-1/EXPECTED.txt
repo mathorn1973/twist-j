@@ -1,0 +1,19 @@
+PASS CUSTODY pinned specification author breaker proof and sources
+PASS RAW 15625 states five involutions tau and both selector tables
+PASS CLOCK k=1..256 explicit late same-bit certificates full 6x6 linear parts
+PASS CLASS 775 triples exactly 5 singleton schemes and 2 maximal pairs
+PASS CORRECTED 2 bits x 6250 full occupied states inverse and sheet retention
+PASS MICRO 125000 full-slice cases all four boundary bit pairs 25000 block equalities
+PASS RECEIVER only q differs common occupied R fixed present read +1/-1 for both bits
+PASS REFERENCE 250 exposed pair/label cases both bank bounds zero and endpoints; no full-shell realization
+BREAKER exposure=result-exposed method-separate same-session
+BREAKER raw involutions=78125 selector=31250 tau=15625
+BREAKER correction triples examined=775 accepted=7
+BREAKER recurrence sync_cases=5120 affine_stencils=1504 certificates=276
+BREAKER compound full_states=12500
+BREAKER microphases forward=125000 reverse=125000 blocks=25000 boundary_types=4
+BREAKER paired acquisition=PASS source=q receiver=p4,p4p
+BREAKER reference cycle_edges=1000 refusal_points=1000 zero_points=1500
+BREAKER verdict=A-E_FINITE_AUDIT_SURVIVES extension=NEW_DECLARED P_admission=OPEN
+PASS INDEPENDENT separately authored pinned breaker executed; same-session result-exposed
+RESULT PASS NO_REALIZATION_IN_FROZEN_CLASS / DECLARED_EXTENSION_ONLY
