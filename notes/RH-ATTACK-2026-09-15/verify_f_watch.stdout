@@ -1,0 +1,35 @@
+F-WATCH DATE: 2026-09-15
+BASIS: Public Canon v86, tag canon-v86
+SOURCES CHECKED (rows are attempts; bracketed text is repair annotation):
+  [search] reachable   NONE         2026 nontrivial zero of Riemann zeta function off the critical line counterexample
+  [search] reachable   T-DIRECTION  2026 proof of Riemann hypothesis Lean formalization machine-checked
+  [search] reachable   NONE         Riemann hypothesis verified height zeros Platt Trudgian 3e12 new record 2025 2026
+  [search] reachable   NONE         arXiv September 2026 Riemann hypothesis proof [proof-direction claims surfaced; NONE per step 4]
+  [search] reachable   CLAIM-ONLY   Riemann hypothesis false disproof 2026 zero found critical line announcement [Liu 2404.06306 disproof claim, no zero exhibited; STOP]
+  [search] reachable   NONE         Hatem A. Fayed A Simple Proof of the Riemann Hypothesis arXiv 2209.01890 submitted date [proof claim; NONE per step 4]
+  [search] reachable   NONE         rigorous verification zeros of zeta up to height 10^13 interval arithmetic 2026 extension Platt Trudgian [query as typed; 10^13 is a zero count, not a height, see section 2]
+  [search] reachable   T-DIRECTION  Alpoge Furman 2609.02882 67.25 percent zeros critical line Lean formalization Riemann [query as typed; 2609.02882 is by Lamzouri, see section 2]
+  [search] reachable   NONE         Riemann hypothesis Lean 4 mathlib formal proof complete 2026 announcement off the critical line OR counterexample [unreachable ResearchGate proof claim; NONE per step 4]
+  [fetch] unreachable BLOCKED      arxiv.org (author listing platt_d_1)
+  [fetch] unreachable BLOCKED      export.arxiv.org (API query Riemann hypothesis, newest 40)
+  [fetch] unreachable BLOCKED      ar5iv.labs.arxiv.org (2609.02882)
+  [fetch] unreachable BLOCKED      research-information.bris.ac.uk (Platt-Trudgian record page)
+  [fetch] unreachable BLOCKED      www.mathlumen.com (2026 status report)
+  [fetch] unreachable BLOCKED      www.lmfdb.org (zeta zeros table)
+  [fetch] unreachable BLOCKED      www.alphaxiv.org (2609.02882)
+  [fetch] unreachable BLOCKED      www.cambridge.org (Engage preprint 697821239a5b4152c69c4c62)
+  [fetch] unreachable BLOCKED      www.jtpmath.com (review of Liu 2404.06306)
+  [fetch] unreachable BLOCKED      www.researchgate.net (396900027 Machine-Checked Proof of RH in Lean 4)
+  [fetch] reachable   T-DIRECTION  github.com/vstaln/riemann (README)
+  [fetch] reachable   NONE         github.com/GoldenPhysicsProject/GPPVerify (README) [conditional Lean development, True := trivial stubs and one axiom; proof direction; NONE per step 4]
+  [fetch] reachable   T-DIRECTION  github.com/dbsanfte/RiemannGaussian (README)
+  [curl] unreachable BLOCKED      export.arxiv.org via HTTPS proxy (CONNECT answered 403)
+PASS finding vocabulary closed
+PASS unreachable sources carry no finding
+PASS attempt counts total=23 reachable=12 unreachable=11; distinct unreachable hosts=10 (arXiv hosts 3, other 7)
+PASS no RECORD finding among reachable sources
+PASS CLAIM-ONLY rows equal the STOP-filed list (disproof claims only): 1
+PASS arXiv unreachable is recorded explicitly
+PASS item-2 box shape: trivial-zero box rejected, line-straddling box rejected, strip box shape admitted
+CHECKS: 7 of 7 PASS
+F-WATCH: no record of an off-critical zero found in the reachable sources
