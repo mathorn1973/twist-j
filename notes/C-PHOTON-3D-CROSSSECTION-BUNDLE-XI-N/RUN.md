@@ -1,0 +1,52 @@
+# RUN
+
+**PUBLIC, NON-CANONICAL. candidate-C finite audit only.**
+Owner: #1190
+Author: A. M. Thorn
+Date: 26 September 2026
+
+Frozen pin:
+
+`732e79b1df30e58bfad59a0522936ed1b2da6c7b`
+
+GitHub readback before execution:
+
+- `PREREG.md`
+  - Git blob: `fcae1fe1fc83f33aed27f2dcb7dcc80b63277549`
+  - SHA-256: `419dab5fb30cd72a922792a10d936742ed47ab4eade52d5e86fd8bead83da77c`
+- `verify.py`
+  - Git blob: `8fbf3baa61225c3887917d9d8ec8d4cffc0e0d82`
+  - SHA-256: `a853a34e4a4af9aa49af216cac01e99859e4cfbef7c9d7c4c807bb9ba9877d32`
+
+Environment:
+
+```text
+platform: Linux
+architecture: x86_64
+python: 3.13.5
+```
+
+Result:
+
+```text
+exit_code: 0
+stdout_bytes: 717
+stderr_bytes: 0
+stdout_sha256: fc6bf1fb85cbf4294c333406fcd661eb1582e8ab405ed5f4b7f83e74524c65f9
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+```
+
+Exact stdout:
+
+```text
+CONSTANTS PASS a=15625/131072 r=34/25 s=16/25 ar3=4913/16384 b3=410338673/671088640 q4=582622237229761/72057594037927936
+SERIES PASS G1_coeff=n^4_n>=2 G2_coeff=(n+2)^4
+PRISM_EXAMPLES PASS count=18 Q4_planar Q6_nonplanar Q8_nonplanar_chord D=1..6
+BOUND PASS C_3D=416111769351155706070895686830876801103138788170283618286216649193431878890383774432994992129503634668171136834991156398402287791533817104721964500733667707895377665906779672/810346186280159622950128642014436246076173224046581600732070223656100332631630378613650246835347252680870452600695509050882158368173859139023151286705714420762315673828125
+BOUND_DIGITS num=174 den=171
+AUDIT PASS; arbitrary_3D_crosssection_prism_uniform=YES; full_Xi=OPEN; P1=OPEN
+```
+
+Stderr is empty.
+
+One architecture only. No two-architecture scientific gate is claimed.
