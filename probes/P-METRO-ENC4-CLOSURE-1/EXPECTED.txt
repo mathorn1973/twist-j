@@ -1,0 +1,4 @@
+SEMANTICS cases=12 exact
+WITNESSES cases=3 tampering=2 polynomial=1 exact
+SURFACE cases=192 ZERO=56 PROB=104 REJECT=32
+PASS METRO ENC4 bounded exact audit
