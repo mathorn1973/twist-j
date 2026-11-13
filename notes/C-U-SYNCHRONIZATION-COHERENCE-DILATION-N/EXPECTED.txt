@@ -1,0 +1,87 @@
+{
+  "coherence": {
+    "endpoint_current_work": "NOT DERIVED by this archive construction",
+    "global_density_squared_distance": "(phi+2)/2",
+    "merger_pair": [
+      [
+        4,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        1,
+        2,
+        1,
+        0
+      ]
+    ],
+    "merger_reduced_checkpoint": "identical rank-one density for j and j^-1",
+    "physical_coherent_preparation": "NOT DERIVED",
+    "same_phase_local_coherence": "retained; squared density distance (phi+2)/2"
+  },
+  "full_forward_clock_lift": "isometry, not onto unitary",
+  "hamiltonian_or_continuum_limit": "NOT DERIVED",
+  "native_extension": {
+    "E3_checkpoints": 3125,
+    "archive_states_per_E3_checkpoint": 5,
+    "dirty_carrier_states": 78125,
+    "dirty_native_projection_disagreements": 62475,
+    "first_dirty_permutation_cases": 78125,
+    "initialized_continuation_checks": 500000,
+    "merger_cross_terms_erased_by_partial_trace": 31250,
+    "minimum_all_head_archive": 5,
+    "minimum_one_step_archive": 3,
+    "native_archive_writer": "NOT DERIVED; added shear/control gates",
+    "native_heads": 15625,
+    "original_heads_restored_after_ticks": 32,
+    "restored_heads": 15625,
+    "tail_template_cases": 390625,
+    "tail_templates": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      [
+        4,
+        3,
+        4,
+        3,
+        3
+      ],
+      [
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    ],
+    "two_sided_clock_inverse_fixtures": 160
+  },
+  "optional_two_sided_clock": "added domain and negative-time identity rule",
+  "physical_hilbert_ontology": "NOT FORCED",
+  "status": "NON-CANONICAL candidate-C finite audit only",
+  "verdict": "PASS frozen archive inverse and conditional coherence tests"
+}
