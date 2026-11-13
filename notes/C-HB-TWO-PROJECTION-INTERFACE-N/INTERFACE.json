@@ -1,0 +1,175 @@
+{
+  "schema": "twist-j.incubation-interface.v1",
+  "candidate_id": "C-HB-TWO-PROJECTION-INTERFACE-N",
+  "issue": 1509,
+  "program": 1506,
+  "authority_base": "8b91a935c426036e00ecb300019fd94734addeec",
+  "preregistration_commit": "8112f35da7c606601cea0a29a408dfc6f9dd96e8",
+  "status": "NON-CANONICAL",
+  "mathematical_status": "conditional candidate-T",
+  "action_layer": "L1",
+  "scientific_code_status": "NONE / NOT_RUN",
+  "independent_review": "PENDING",
+  "physical_status": "NOT_READY",
+  "promotion": "DO NOT PROMOTE",
+  "source_matrix": {
+    "A": "[S e0, S e1]",
+    "not_a_tape": true,
+    "G": "(1/5)[[4,-1],[-1,4]]",
+    "G_inverse": "(1/3)[[4,1],[1,4]]"
+  },
+  "contact_summary": {
+    "domain": "Q^D x Q^D on the fixed supplied Dirichlet D",
+    "R": "A^T(v-Hu/2)",
+    "codomain": "Q^2",
+    "work": "(eta2^T G eta2)/2 + sigma eta2^T R",
+    "labels": "all F5^2",
+    "directions": [
+      1,
+      -1
+    ]
+  },
+  "reduced_contact": {
+    "carrier": "F5^2 x Q^2 x Q x ([0,B] cap Q) x {+1,-1}, every rational B>=0",
+    "coordinates": [
+      "r",
+      "R",
+      "Wlog",
+      "b",
+      "sigma"
+    ],
+    "acceptance": "0<=b-Delta_sigma<=B",
+    "accepted": {
+      "R": "R+sigma*G*eta2",
+      "Wlog": "Wlog+Delta_sigma",
+      "b": "b-Delta_sigma",
+      "sigma": "-sigma",
+      "r": "r"
+    },
+    "refused": "identity",
+    "identity": "pi H_B = h_B pi and h_B^2=id",
+    "full_wave_reconstruction": false
+  },
+  "acquisition_support": {
+    "v": "Y",
+    "u": "Y+B0",
+    "kind": "sufficient upper bound in the supplied lattice",
+    "physical_locality_claim": false
+  },
+  "linear_summary_classification": {
+    "summary": "one fixed rational linear L independent of receiver label",
+    "decoder": "arbitrary exact function of Im(L), separately for each label and sign",
+    "hidden_wave_side_information": false,
+    "criterion": "ker L subset ker R",
+    "minimum_rank": 2,
+    "minimizers": "invertible linear reparameterizations of R on their images",
+    "not_claimed": [
+      "nonlinear encoding minimum",
+      "bit minimum",
+      "controller minimum",
+      "Boolean-guard-only minimum",
+      "label-dependent minimum"
+    ]
+  },
+  "F_refresh": {
+    "gamma": "(u_y4-(Hv)_y4/2)/5",
+    "R_next": "gamma*(1,1)^T+2 A^T P a_in",
+    "difference": "rho0_next-rho1_next=2*((a_in)_0-(a_in)_1)",
+    "support_gamma": "u at y4; v at y4+B0",
+    "autonomous_R_closure": "NO on the entire occupied rational carrier, even with current tapes, k, E_full and fixed contact/store/control/native/time registers",
+    "one_gamma_register_closes_all_future_steps": "NOT CLAIMED"
+  },
+  "nonclosure_witness": {
+    "z": [
+      6,
+      0,
+      0
+    ],
+    "u": "0",
+    "v_plus": "delta_z",
+    "v_minus": "-delta_z",
+    "tapes": "all zero",
+    "k": 0,
+    "r": [
+      0,
+      1
+    ],
+    "Wlog": [
+      0,
+      1
+    ],
+    "B": [
+      1,
+      1
+    ],
+    "b": [
+      1,
+      1
+    ],
+    "sigma": 1,
+    "R_both": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "E_full_both": [
+      1,
+      2
+    ],
+    "R_after_F_plus": [
+      [
+        -1,
+        3240
+      ],
+      [
+        -1,
+        3240
+      ]
+    ],
+    "R_after_F_minus": [
+      [
+        1,
+        3240
+      ],
+      [
+        1,
+        3240
+      ]
+    ],
+    "outgoing_tapes": "zero in both",
+    "post_F_E_full": [
+      1,
+      2
+    ],
+    "reachability_from_two_use_common_ready": "NOT CLAIMED"
+  },
+  "permission_boundary": {
+    "native_U_and_coordinates": "CANON-ADMITTED as defined, not this contact",
+    "eta_S_wave_F_energy": "EXPLICITLY-SUPPLIED-COMPARISON",
+    "native_R_acquisition": "UNSUPPLIED",
+    "native_gamma_acquisition": "UNSUPPLIED",
+    "native_arithmetic_order_and_store_actuation": "UNSUPPLIED; only comparison kinds used by A1",
+    "native_source_translation_and_direction_control": "UNSUPPLIED as realization of the supplied H_B",
+    "new_gate_granted": false
+  },
+  "unchanged_open_owners": [
+    "QUADRATIC-MEMORY-NATIVE-CONTACT",
+    "QDD-INSTRUMENT-APPARATUS"
+  ],
+  "exclusions": [
+    "global V inverse",
+    "native compilation",
+    "physical occurrence",
+    "SI calibration",
+    "finite-bit store",
+    "arbitrary reuse",
+    "infinite-lattice four-cut claim",
+    "minimum predictive carrier",
+    "independent confirmation"
+  ]
+}
