@@ -50,6 +50,13 @@ ADMITTED_CONTEXT_PATHS = {
         'canon/REGISTRY.tsv',
         'canon/CHANGELOG.md',
     }),
+    'P-INTEGER-JOINT-VARIATION-1': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
     'P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1': frozenset({
         'canon/CANON.md',
         'canon/CORE.md',
@@ -149,6 +156,9 @@ ADMITTED_BUNDLE_PATHS = {
     }),
     'P-INTEGER-PRIMITIVE-SOURCE-METRIC-1': frozenset({
         'probes/P-INTEGER-PRIMITIVE-SOURCE-METRIC-1/breaker.py',
+    }),
+    'P-INTEGER-JOINT-VARIATION-1': frozenset({
+        'probes/P-INTEGER-JOINT-VARIATION-1/breaker.py',
     }),
     'P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1': frozenset({
         'probes/P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1/breaker.py',
