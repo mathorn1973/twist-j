@@ -1,0 +1,10 @@
+scope=NON-CANONICAL L1 local a=1 collision; no free-field replay
+ring_displacements=81 collision_cases=567 occupied_pointer_cases=2835
+refused_cores=4 zero_work_cycles=2 running_total_cases=486
+old_source_carry_numerator=-7; new_centered_cycle_carry=B(d)
+actual_current_identity=Q(i)-Q(J*i)=5B(d)
+zero_work_phases=J:j^-1,phi:j; complete_account=16
+running_total_branches=accepted:74,refused:412
+calendar_occupied=1944 refused_collision_calendar=32 ready_horizons=567
+calendar_branches=accepted:712,refused:1232 positive_cost_horizons=560
+assertions=55950 PASS
