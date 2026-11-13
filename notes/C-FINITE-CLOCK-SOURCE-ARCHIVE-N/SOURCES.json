@@ -1,0 +1,63 @@
+{
+  "status": "NON-CANONICAL",
+  "date": "2026-10-29",
+  "reservation": 1826,
+  "authority": {
+    "repository": "mathorn1973/twist-j",
+    "main_commit": "a193e389fb1ddb0bdc89165b015c95a17eb1e425",
+    "tag": "canon-v106",
+    "canon_sha256": "52302c640033dd15d4a7a075cad16fa48b1473b7396d1f7413536a9ec45422e7"
+  },
+  "public_source_files": [
+    {
+      "git_blob": "34a560efb973ad75bd5447fdd66377a7f81a0514",
+      "url": "https://github.com/mathorn1973/twist-j/blob/181b8b0dd98e0a697311fb83ab61493c94fd9e20/notes/C-DIRAC-FINITE-COHERENT-SOURCE-N/PROOF.md",
+      "bytes": 15319,
+      "sha256": "d7738df053b6bc30152526e405d35c7a7fba902874818652b5a415c397bfd14e"
+    },
+    {
+      "git_blob": "1e344413c6ff21bd18198d4b9af91d505e1b8db1",
+      "url": "https://github.com/mathorn1973/twist-j/blob/181b8b0dd98e0a697311fb83ab61493c94fd9e20/notes/C-DIRAC-FINITE-COHERENT-SOURCE-N/LOCALITY.md",
+      "bytes": 6184,
+      "sha256": "8835127d2fa34fbb282720022102247713fc2a2a4210aa7bfe93279247060840"
+    },
+    {
+      "git_blob": "d7e0f6c13d25287a6a301973bff132e57fc32cfb",
+      "url": "https://github.com/mathorn1973/twist-j/blob/181b8b0dd98e0a697311fb83ab61493c94fd9e20/notes/C-DIRAC-FINITE-COHERENT-SOURCE-N/PREPARATION.md",
+      "bytes": 4992,
+      "sha256": "1c7d1b3d092e1524007933385a0306c414adac3562ab48b940e353c8d9a01d6b"
+    },
+    {
+      "git_blob": "5a0f130acde8af89a0870e880f897b50f1f5d303",
+      "url": "https://github.com/mathorn1973/twist-j/blob/e4d165c5c5471ea5746013f7f8f5c394512f9884/notes/C-DIRAC-FINITE-ROTOR-CLOCK-N/PROOF.md",
+      "bytes": 23943,
+      "sha256": "959c2e62d5b909fe94d634b77628ae831221f7f73a0a4dc91390b86e443a7d6c"
+    },
+    {
+      "git_blob": "e108e3d12ffddf496568d1efe2c63fea3ab30062",
+      "url": "https://github.com/mathorn1973/twist-j/blob/3de02b0eb898f1756e3626ee2881d596c72d0094/notes/C-FINITE-PREFIX-ENERGY-BRIDGE-N/FINITE_PREFIX.md",
+      "bytes": 5864,
+      "sha256": "d45ba1d25356221387bff0c2ac9e75948a98759fd08cd78e551cf9f1f826d308"
+    },
+    {
+      "git_blob": "4e6155e8c8e688fe6a32c3b60b8d9db963d6cab2",
+      "url": "https://github.com/mathorn1973/twist-j/blob/3de02b0eb898f1756e3626ee2881d596c72d0094/notes/C-FINITE-PREFIX-ENERGY-BRIDGE-N/FUNDED_DECODER.md",
+      "bytes": 8408,
+      "sha256": "b14c618b4b8bfe42abbeafb141f444e4d899f53f6e7e2a90ebd30b88d7a4c49c"
+    },
+    {
+      "git_blob": "89992ea87b6755583aacfa27b15be46dc2fcfe8c",
+      "url": "https://github.com/mathorn1973/twist-j/blob/3de02b0eb898f1756e3626ee2881d596c72d0094/notes/C-FINITE-PREFIX-ENERGY-BRIDGE-N/THERMAL_REALIZATION.md",
+      "bytes": 12885,
+      "sha256": "7792dbad289a74131d07708f7d5242e62a7738d99c8011f2e188fc989589d915"
+    }
+  ],
+  "proof_roles": {
+    "1795": "Rotor graph-norm/tail/compression method, rederived for a finite program; original spatial carrier and locality not imported.",
+    "1804": "Exact finite16D sine-energy sector and coherent source shells; full active archive degeneracy explicitly added and proved.",
+    "1774": "Complete occupied-record, reference, preparation and read-window obligations; its different26-state target, thermal apparatus and conditional probability are not imported."
+  },
+  "new_construction": "One completely finite positive static Hamiltonian with explicit source, active archive, finite-stage clock and final hold window. No new scientific execution.",
+  "review": "Fresh separate-context automated mathematical review within the same assistant system; not external human or another-model review.",
+  "boundary": "Supplied source/clock coherence, blank fresh archive, record partition, exact couplings and tick. No primitive preparation, original-position locality, native U admission, permanent stop, infinite stream, physical generator/energy identification, or occurrence law."
+}
