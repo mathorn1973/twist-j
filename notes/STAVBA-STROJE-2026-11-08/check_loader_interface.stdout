@@ -1,0 +1,31 @@
+carrier O = Z[j], residue map j -> 1 onto F_5
+contact pairs checked on the box [-2,2]^4 x [-2,2]^4: 390625; state-changing: 27936; residue, account sum and ring sum preserved: yes
+loader output pair (u + tB, u - tB), u = 1 - j, B = 1 - j^2:
+  t=-2: residues (0, 0), accounts (15, 35)
+  t=-1: residues (0, 0), accounts (5, 15)
+  t=+0: residues (0, 0), accounts (5, 5)
+  t=+1: residues (0, 0), accounts (15, 5)
+  t=+2: residues (0, 0), accounts (35, 15)
+read-core clock pair X_r = (rho^r w, -rho^r w), w = 1 + rho:
+  r=0: residues (2, 3), accounts (3, 3)
+  r=1: residues (2, 3), accounts (3, 3)
+  r=2: residues (2, 3), accounts (3, 3)
+  r=3: residues (2, 3), accounts (3, 3)
+  r=4: residues (2, 3), accounts (3, 3)
+read-core source triple Y_n = F^n (0, 2, 0), F = C_01 C_12 acting left first:
+  n=0: residues (0, 2, 0), accounts (0, 8, 0)
+  n=1: residues (0, 2, 0), accounts (5, 3, 0)
+  n=2: residues (0, 2, 0), accounts (5, 3, 0)
+  n=3: residues (0, 2, 0), accounts (5, 3, 0)
+  n=4: residues (0, 2, 0), accounts (5, 3, 0)
+  n=5: residues (0, 2, 0), accounts (0, 3, 5)
+  n=6: residues (0, 2, 0), accounts (0, 3, 5)
+  n=7: residues (0, 2, 0), accounts (0, 3, 5)
+  n=8: residues (0, 2, 0), accounts (0, 3, 5)
+  n=9: residues (0, 2, 0), accounts (0, 8, 0)
+  period of the source orbit under F: 9
+consequence: a fixed contact/swap word permutes the residue vector of the complete state (RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY [T]);
+  loader pair residues (0, 0) versus clock pair residues (2, 3): no word on the pair alone maps one into the other for any t
+  a conversion needs borrowed slots of residues 2 and 3 and a parking place for the residue-0 pair; it is a relabeling with stock, not a transformation of the pair
+  the source triple keeps residues (0, 2, 0) on its whole orbit, so the loader pair cannot become a source triple either
+LOADER-INTERFACE RESIDUE AUDIT PASS
