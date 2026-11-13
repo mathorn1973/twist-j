@@ -394,6 +394,45 @@ class ReviewedRegistrationTests(unittest.TestCase):
             if path != prefix + "INPUTS.sha256":
                 self.assertEqual(spec["sha256"], listed[path.removeprefix(prefix)])
 
+    def test_p_integer_second_order_noether_closure_2_registration_matches_verifier_authority(self) -> None:
+        # The frozen SOURCE.md prints a truncated REGISTRY.tsv digest (a
+        # transcription error recorded in the post-run errata); the frozen
+        # verifier's own AUTHORITY table carries the complete digest, so the
+        # registration is bound to that table and to FROZEN.sha256.
+        root = Path(__file__).resolve().parents[1]
+        name = "P-INTEGER-SECOND-ORDER-NOETHER-CLOSURE-2"
+        prefix = f"probes/{name}/"
+        entry = context.registrations(root)[name]
+        pin = check_verifier.read_run(root / prefix / "RUN.md").fields["pin_commit"]
+        self.assertEqual(entry["pin_commit"], pin)
+        context.git_bytes(root, "merge-base", "--is-ancestor", pin, "HEAD")
+        frozen = (root / prefix / "FROZEN.sha256").read_bytes()
+        self.assertEqual(frozen, context.git_bytes(
+            root, "show", f"{pin}:{prefix}FROZEN.sha256"))
+        listed = dict(line.split("  ", 1)[::-1] for line in
+                      frozen.decode().splitlines())
+        self.assertEqual(set(listed), {
+            "PREREG.md", "PROOF.md", "SOURCE.md", "verify.py", "breaker.py",
+        })
+        for filename, digest in listed.items():
+            current = (root / prefix / filename).read_bytes()
+            self.assertEqual(hashlib.sha256(current).hexdigest(), digest)
+        authority = re.findall(
+            r'^\s*\("(canon/[^"]+)", (\d+), "([0-9a-f]{64})"\),\s*$',
+            (root / prefix / "verify.py").read_text(), re.MULTILINE)
+        self.assertEqual(len(authority), 5)
+        declared = {path: (int(count), digest) for path, count, digest in authority}
+        self.assertEqual(set(declared), set(entry["context_files"]))
+        for path, spec in entry["context_files"].items():
+            self.assertEqual((spec["bytes"], spec["sha256"]), declared[path])
+            context.pinned_blob(root, pin, path, spec)
+        local = {prefix + "verify.py": entry["verifier"],
+                 prefix + "PREREG.md": entry["prereg"], **entry["bundle_files"]}
+        for path, spec in local.items():
+            self.assertEqual(spec["sha256"], listed[path.removeprefix(prefix)])
+            context.verify_bytes((root / path).read_bytes(), spec, path)
+            context.pinned_blob(root, pin, path, spec)
+
     def test_readout_regression_registration_covers_exact_frozen_inputs(self) -> None:
         root = Path(__file__).resolve().parents[1]
         name = "P-TWO-USE-READOUT-FAILURE-REGRESSION-2"
@@ -525,6 +564,7 @@ class ReviewedRegistrationTests(unittest.TestCase):
             "P-INTEGER-SCALAR-LAPSE-RIGIDITY-1",
             "P-INTEGER-FIXED-DURATION-BOUNDARY-1",
             "P-RELATIONAL-MASS-METRIC-RESPONSE-1",
+            "P-INTEGER-SECOND-ORDER-NOETHER-CLOSURE-2",
             "P-RELATIONAL-MASS-JOINT-ACTION-1",
             "P-RELATIONAL-MASS-STABLE-BINDING-1",
         })
