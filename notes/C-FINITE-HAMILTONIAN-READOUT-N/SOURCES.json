@@ -1,0 +1,143 @@
+{
+  "candidate": "C-FINITE-HAMILTONIAN-READOUT-N",
+  "status": "NON-CANONICAL L1 conditional candidate-T",
+  "sources": [
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "STATUS.md",
+      "blob": "705d2241b3a84a2d8164342b0a464f07f0bdc94a",
+      "bytes": 2391,
+      "sha256": "24c115b808e61bf0be4efffec79af50bc7ca350dcc2c1d8dc5f91899d1fdb125",
+      "role": "public authority"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "POLICY.md",
+      "blob": "10b49a9551eb2f2a3e32d65b0d5b7206febe9de9",
+      "bytes": 17333,
+      "sha256": "da5d2cf5a021f4d069c471725e02b6d2c201e3acadd5ecfd4213a361184b7a5d",
+      "role": "public authority"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "AGENTS.md",
+      "blob": "a449c8036ccbc40240060c885bb936630d4fc680",
+      "bytes": 21813,
+      "sha256": "7363b83ca6d822ec35e8465fe64c1aa8cd0007bf8b99ae599c265cc49fcee6e1",
+      "role": "public authority"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "canon/CORE.md",
+      "blob": "4c1e784a584cb04dc0babdceec63d6743ab8d2d1",
+      "bytes": 38193,
+      "sha256": "5318823839f7f42c61cc5245166493b3cd9b641b849e288a12ec300ee60d1e9e",
+      "role": "public authority"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "canon/FRONTIER.md",
+      "blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+      "bytes": 27382,
+      "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+      "role": "public authority"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "canon/REGISTRY.tsv",
+      "blob": "c28f829885385cdb7be3e11f078026e9f89af35e",
+      "bytes": 560217,
+      "sha256": "460db26185e18ef684ebd9db2e2dd4163a18830a5b362489dc41eeb2526e82af",
+      "role": "public authority"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "canon/EVIDENCE.tsv",
+      "blob": "1eba5b0288fd60c97a9b9601a90d69b741a9b987",
+      "bytes": 115937,
+      "sha256": "e7223862470764513b1f84da75c875137d7ac4adc0f17ecdae35649707aad184",
+      "role": "public authority"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "canon/GATES.tsv",
+      "blob": "27ea01b11bf6d1f2d6f7c3b0c1b81a704582153f",
+      "bytes": 13324,
+      "sha256": "a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e",
+      "role": "public authority"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "canon/SHA256SUMS",
+      "blob": "6159065d7459bf74c2cff9bbb89575546c5e82bb",
+      "bytes": 415,
+      "sha256": "c9e1971de8bb797b6be8712415f8cde52f0de4beb06e4516491c66427fcdccce",
+      "role": "public authority"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "01acc42b78f75095587765e9a5b91ee70dc28f37",
+      "path": "notes/C-FORWARD-ONLY-CAPTURE-FILTER-N/PROOF.md",
+      "blob": "f3611d8fe43a5ed0f56afb0fa2abc013eba89d5b",
+      "bytes": 17185,
+      "sha256": "01313d6a8909fdc41e53926e53dba8f2ac54570e1b81d67d36e7ee4694c244bf",
+      "role": "unaccepted source/filter candidate"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "01acc42b78f75095587765e9a5b91ee70dc28f37",
+      "path": "notes/C-FORWARD-ONLY-CAPTURE-FILTER-N/PREREG.md",
+      "blob": "4fea77fb7764a976c30e0bfe28442f80defd883e",
+      "bytes": 2382,
+      "sha256": "2509df9aa0d3d2c50db800477e86973a9ce9e8972ee4a161c4d9d07c2a5dfa37",
+      "role": "unaccepted source/filter candidate"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "ecb3460977cd2ee8a120797ffa53ba88cbe14171",
+      "path": "notes/C-FORWARD-AUTONOMOUS-CLOCK-N/CLOCK.md",
+      "blob": "38437bc4386410a460fa9155ba09e395294d15d4",
+      "bytes": 15337,
+      "sha256": "46f2898011f8cda66d4abd427229d3e53411944887822367917db99caef1437b",
+      "role": "unaccepted schedule/energy candidate"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "ecb3460977cd2ee8a120797ffa53ba88cbe14171",
+      "path": "notes/C-FORWARD-AUTONOMOUS-CLOCK-N/ENERGY.md",
+      "blob": "85f135406d5c05bcb2bd7fff5dec5e837e4524b8",
+      "bytes": 18698,
+      "sha256": "e8ff4f56eeff1a906848fe3c922efbf3be7bbf49504985593c68961b01b92524",
+      "role": "unaccepted schedule/energy candidate"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "ecb3460977cd2ee8a120797ffa53ba88cbe14171",
+      "path": "notes/C-FORWARD-AUTONOMOUS-CLOCK-N/FORWARD.md",
+      "blob": "e339e96c93dc0b67d04b46dc097efbb5a5b36ccd",
+      "bytes": 9855,
+      "sha256": "d04eacdb5fdd8601fea6487969594dafcb3cb66e4c53abc27e8a78305d1df495",
+      "role": "unaccepted schedule/energy candidate"
+    }
+  ],
+  "prior_art": [
+    {
+      "arxiv": "quant-ph/0309131",
+      "role": "attribution only; clock proof self-contained"
+    },
+    {
+      "arxiv": "1311.6101",
+      "role": "attribution only; no external theorem imported"
+    }
+  ],
+  "concurrent_scope_excluded": "issue #1749 geometrically local compiler and reservoir preparation"
+}
