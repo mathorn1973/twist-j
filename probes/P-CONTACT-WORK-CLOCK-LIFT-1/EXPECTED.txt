@@ -1,0 +1,8 @@
+P-CONTACT-WORK-CLOCK-LIFT-1 NON-CANONICAL L1 EXACT
+PASS MATRICES primitive_form=preserved contact_order=5 half_order=10 half_square=contact
+PASS PRODUCT_DEFECT lambda=0,1,2,7 zero_iff_lambda_zero=True
+PASS FORMAL_CLOCK pullback=14x14 Hamilton_equation=all_polynomial_coefficients variables=24
+PASS FINITE {"active":6169,"cases":75972,"cycle_checks":75972,"funding_hold":5043,"parity_hold":64760}
+PASS RESERVE R=15 interaction=15,20,15 sharp_path_reserve=5lambda endpoint_payment=0
+PASS FREE_COEFFICIENT lambda=1,2 common_bank=60 same_contact_clock=True bank_gains=10,20
+RESULT PASS; continuous claims require PROOF.md; no native or physical alpha claim
