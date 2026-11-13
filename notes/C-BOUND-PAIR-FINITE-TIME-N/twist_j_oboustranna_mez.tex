@@ -1,0 +1,2818 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Latin Modern Sans}
+\setmonofont[Scale=0.85]{DejaVu Sans Mono}
+\usepackage{babel}
+\babelprovide[main,import]{czech}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\renewcommand{\proofname}{Důkaz}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{xurl}
+\usepackage{mathrsfs}
+\usepackage{fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,pdftitle={TWIST-J: oboustranná normová mez původního rozptylového stavu},pdfauthor={Analytická pracovní poznámka}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{3em}
+\setlist{nosep,leftmargin=1.6em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily TWIST-J / oboustranná normová mez}
+\fancyhead[R]{\small\sffamily NON-CANONICAL / L1}
+\fancyfoot[C]{\small\thepage}
+\setlength{\headheight}{15pt}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\ind}{\mathbf1}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ccal}{\mathcal C}
+\newcommand{\Tcal}{\mathcal T}
+\newcommand{\eps}{\varepsilon}
+\newtheorem{theorem}{Tvrzení}[section]
+\newtheorem{lemma}[theorem]{Pomocné tvrzení}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Poznámka}
+\numberwithin{equation}{section}
+
+\usepackage{calc}
+\usepackage{needspace}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{tocdepth}{1}
+
+\begin{document}
+
+\thispagestyle{empty}
+{\Large\sffamily\bfseries Oboustranná normová mez původního rozptylového stavu TWIST-J\par}
+\vspace{3mm}
+{\large Úplný spektrální účet a kvantitativní část komplementu\par}
+\vspace{4mm}
+Samostatný analytický dodatek, 29. října 2026\par
+\textbf{NON-CANONICAL / L1. Interně přezkoumaný návrh důkazu.}
+
+\section*{Hlavní nový výsledek}
+
+Pro skutečný celý rozptýlený stav \(\chi=S\Psi\), s původním
+normalizovaným zdrojem a pevným počátkem času, je sestrojen
+pomocný celý volný stav \(\widehat\chi\). Zahrnuje oba vázané
+stacionární prahy z obou stran i oba ostré konce původního
+energetického okna. Pro každý čas \(n\ge0\) platí
+\[
+\boxed{\begin{aligned}
+\|(U^n\Omega_+-U_0^n)\chi\|
+&\le\|(U^n\Omega_+-U_0^n)\widehat\chi\|
+ +\varepsilon_{\rm app},\\
+\varepsilon_{\rm app}&<2\cdot10^{-9}.
+\end{aligned}}
+\]
+Mez je odvozena přímo ve \textbf{skutečné celé stavové normě}.
+Započítává celou spektrální hustotu druhého kontaktu, celý kruh
+\(K\), obě pulzní větve, všech 26 štítků a původní paměť/reference.
+Pomocný stav se nepřenormovává a vybraný jev se nemění.
+
+Rozhodující přesná identita je
+\[
+\boxed{\|\chi(K,E)-\chi_\infty(K,E)\|^2
+=\frac{32\pi f(E)^2}{|F_1(E)|^2}
+\Re\frac1{F_2(K,E)+4/F_1(E)}.}
+\]
+Kladnost úplné spektrální míry a místní harmonická míra dávají
+oboustranný integrovaný odhad i bez bodové meze celého
+\(F_{2,\mathrm{comp}}\).
+
+\section*{Další dokončené výsledky}
+
+Celý komplement u vázaných prahů má kvalitativně doložené
+holomorfní pokračování. Jeho koncové úseky mají výslovnou
+normu \(2^{78}\). Celý hlavní záporný atomový komplement
+má normu \(<2^{280}\) na polydisku s poloměry \(2^{-286}\),
+včetně obou pulzních větví a pohyblivých koncových oprav.
+Tato poslední mez ještě nezahrnuje ostatní atomy a kontinuum.
+
+\vfill
+\small
+Číslo \(2\cdot10^{-9}\) je zaplacená aproximační chyba,
+nikoli celá časová chyba. Tento dodatek neurčuje nový menší
+globální čas. Přesný zbývající časový vstup je uveden v CT10--CT13.
+Práce je oddělena od rezervace \#1816. Veřejný Canon v106 se
+nemění a žádný podmíněný matematický závěr není vydáván za
+uskutečněný experiment.
+\newpage\normalsize
+\tableofcontents
+\clearpage
+
+\section{Původní úloha, normalizace a návaznost}
+
+\subsection{Přesně zachovaný zdroj a jev}
+
+Používáme původní unitární model, úplné kontaktní funkce
+a rozptylové předpoklady z [S1--S3]. Neprovádí se nová
+postselekce ani změna zdrojové normalizace. Položme
+\[
+h=10^{-3},\quad E_*=8\pi/5,\quad I=[E_*-h,E_*+h],
+\quad \beta=4\pi/5,\quad e=E-\beta,\quad g=2\pi/5.
+\]
+Původní normalizovaný objektový vstup je
+\[
+\psi_{\rm obj}
+=[2h\rho_{\rm in}(H_1)]^{-1/2}
+\mathbf1_I(H_1)\mathbf1_{[-h,h]}(P)a_0,
+\quad a_0=\delta_{R=0,r=0}\,iB,
+\quad \|\psi_{\rm obj}\|=1.
+\]
+Token je přesně v \(y=0\). Celková hybnost \(K\) proto
+zůstává rovnoměrná na celém kruhu; energetická míra vstupu
+je přesně \(\mathbf1_I(E)\,\mathrm dE/(2h)\).
+Výstupní projektor je stále
+\[
+\begin{aligned}
+Q={}&\mathbf1_{I_K}(K)\mathbf1_{|P|\le1/100}
+\mathbf1_I\bigl(\Omega_b(P)+\beta+\varepsilon(k)\bigr)\Pi_b(P)\\
+&\otimes P_+(k)\mathbf1_{\varepsilon'(k)>0}
+\otimes I_{\rm label}\otimes|d_1\rangle\langle d_1|
+\otimes I_{\rm ref}.
+\end{aligned}
+\]
+Operátor \(I_{\rm label}\) zachovává všech 26 štítků.
+Původní paměť může být v libovolné korelaci s referencí.
+Místní dekompozice integračního kruhu a pomocné stavy slouží důkazu
+regularity; žádný člen zdroje ani jevu se tím nevynechává.
+
+\subsection{Úplný kontakt a rozptylový operátor}
+
+Původní pulzní fáze a váhy jsou
+\[
+\varepsilon(k)=\arccos\frac{1-4\cos k}{5},\qquad
+h_\sigma(k)=\frac{1-\sigma\varepsilon'(k)}2.
+\]
+Se správným vnějším předpisem \(E\mapsto E+i0\) platí
+\[
+F_1(E)=\int_{-\pi}^{\pi}f_B(P,E-\beta)\frac{\mathrm dP}{2\pi},
+\]
+\[
+F_2(K,E)=\sum_{\sigma=\pm1}\int_{-\pi}^{\pi}
+h_\sigma(K-P)f_A\bigl(P,E-\beta-\sigma\varepsilon(K-P)\bigr)
+\frac{\mathrm dP}{2\pi},
+\]
+\[
+T(K,E)=\frac1{4+F_1F_2}
+\begin{pmatrix}-2F_2&-4\\4&-2F_1\end{pmatrix},\qquad
+V(K,E)=T(K,E)e_1=\frac{(-2F_2,4)^T}{4+F_1F_2}.
+\]
+V druhém kontaktu je ponecháno celé objektové kontinuum,
+všechny kontaktně viditelné póly a obě pulzní větve. Symbol
+\(V(k)\) v místní maticové identitě pro pulz níže označuje
+původní dvourozměrnou pulzní matici. Je odlišný od sloupce
+\(V(K,E)\); argumenty obou symbolů jsou vždy uvedeny.
+
+
+Výstupní okno je přesně
+\[
+I_K=[k_*-10^{-3},k_*+10^{-3}],\qquad
+k_*=-\arccos\frac{9-5\sqrt5}{16}.
+\]
+Zdroj se na toto okno předem neomezuje. Jeho původní celé
+K-rozložení má stále míru \(\mathrm dK/(2\pi)\).
+
+\subsection{Které předchozí analytické výsledky se přebírají}
+
+Tento dodatek navazuje na tři samostatné pracovní důkazy
+[S4--S6]. Jejich stav je rovněž NON-CANONICAL/L1.
+Značky BC, BS, CS, M, L označují úplný fyzikální soupis
+a rychlostní důkazy v [S5]. Značky QA, QB, QC, FQ, BF
+označují výslovné místní důkazy v [S6]. PT označuje
+fyzikální hranový soupis v [S4]. Níže jsou nové důkazy
+SP, CT, CG, HC a AM uvedeny v úplnosti.
+
+Pro nový normový důkaz postačují tyto již doložené vstupy:
+\begin{enumerate}
+\item V původním okně jsou právě dvě vázané stacionární
+konfigurace, obě s \(\sigma=-1\). Ve středu mají
+\(r_b>1/32\), \(h_->3/8\) a společnou křivost
+\(1/4<\Phi_{PP}<2\).
+\item Původní objektový pól má holomorfní graf na
+\(|P-P_0|<2^{-24}\), s \(|r_b|<64\),
+\(|\omega_b''|<2^{20}\). Stacionární graf splňuje
+\(|P_b'|,|E_b'|<8\) na \(|K-K_0|<2^{-58}\).
+\item Celý první kontakt splňuje
+\(\Re F_1>1/16\), \(|F_1|<3\) na každém komplexním
+disku \(|E-E_0|<2^{-30}\), \(E_0\in I\).
+\item Původní kontaktní spektrální mapa má
+\(\mathcal Z^*\mathcal Z=\operatorname{diag}(\rho_1,\rho_2)\),
+\(2\pi\rho_j=\Re F_j\), a skutečný operátor je
+\(S=I+2\pi\mathcal ZT\mathcal Z^*\), podle [S1, §15].
+\end{enumerate}
+Převzaté obecné spektrální a rozptylové předpoklady se tím
+nezesilují. Nové konstrukce nepřidávají fyzikální předpoklad
+o rychlosti konvergence vlnových operátorů.
+
+\subsection{Přehled přesného dosahu}
+
+\begin{center}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{41mm}>{\raggedright\arraybackslash}p{49mm}>{\raggedright\arraybackslash}p{61mm}}
+\toprule
+Část důkazu & Nově doložená mez & Rozsah\\
+\midrule
+SP: úplný stav & \(2^{19}\eta^{3/4}\), \(\eta\le2^{-64}\) &
+Obě strany obou vázaných prahů; celý druhý kontakt\\[3pt]
+CT: prahy a konce I & \(\varepsilon_{\rm app}<2\cdot10^{-9}\) &
+Pomocný stav a přesný návrat k původnímu výstupu\\[3pt]
+CG: reálná geometrie & \(|t_P|>1/1600\), \(|D_o|>1/2000\) &
+Všechny reálné hranové průchody v pásu BF\\[3pt]
+HC: koncové úseky & \(|F_{2,\rm ann}|<2^{78}\) &
+Dva přesné intervaly při pohyblivých koncích\\[3pt]
+HC: celý komplement & Holomorfie na společném okolí &
+Číselný poloměr celého okolí není přidělen\\[3pt]
+AM: celý hlavní atom & \(|\mathcal A_{\rm comp}|<2^{280}\) &
+Poloměry \(2^{-286}\); ostatní spektrum se nepřičítá\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage
+\section{Oboustranná mez ve skutečné celé stavové normě}
+\hypertarget{vuxfdsledek-oboustrannuxe1-norma-bez-bodovuxe9-meze-komplementu}{%
+\subsection{Výsledek: oboustranná norma bez bodové meze
+komplementu}\label{vuxfdsledek-oboustrannuxe1-norma-bez-bodovuxe9-meze-komplementu}}
+
+Fixujme libovolný skutečný vázaný stacionární bod \((P_0,K_0,E_0)\) z
+(BS25), s \(E_0\in I\). Holomorfní stacionární graf \(P_b(K)\),
+\(E_b(K)\) je ten z (BF19),(BF20). Následující meze platí pro všechna
+reálná
+
+\[
+|K-K_0|<2^{-60},\qquad 0<\eta\le2^{-64}.
+\tag{SP1}
+\]
+
+Přípustný K-interval je zde větší než finální velmi malý polydisk BF2:
+použije se již dříve dokázaný graf BF20, nikoli extrapolace koeficientu
+A z BF3. Přípustné je také malé vybočení \(E_b(K)\) za konec I; potřebné
+okolí prvního kontaktu stále obsahuje celý použitý interval.
+
+Pro celý přenos a jeho limitní sloupec pišme
+
+\[
+V(K,E)=\frac{(-2F_2(K,E),4)^T}{4+F_1(E)F_2(K,E)},
+\qquad V_\infty(E)=\binom{-2/F_1(E)}{0}.
+\tag{SP2}
+\]
+
+Pak se bez předpokladu holomorfie nebo bodové meze
+\(F_{2,\mathrm{comp}}\) dokáže
+
+\[
+\boxed{
+\int_{E_b(K)-\eta}^{E_b(K)+\eta}
+\|V(K,E)-V_\infty(E)\|_2^2\,dE
+\le2^{56}\eta^{3/2}.}
+\tag{SP3}
+\]
+
+Jde o \textbf{oboustranný integrovaný} výsledek pro skutečné úplné
+okrajové hodnoty. Není to bodová Hölderova mez, holomorfní pokračování
+celého komplementu ani nový globální čas.
+
+Silnější fyzikálně vážená identita níže přenáší výsledek na celý původní
+rozptýlený stav. Po spojení příslušných reálných K-intervalů okolo obou
+vázaných křivek lze zvolit pomocný výstup \(\widetilde\chi\) tak, že
+
+\[
+\boxed{\|\chi-\widetilde\chi\|\le2^{18}\eta^{3/4},
+\qquad \chi=S\Psi,}
+\tag{SP4}
+\]
+
+a příspěvek návratu k původnímu stavu do odchozí bez přijímače časové
+chyby je nejvýše
+
+\[
+\boxed{2^{19}\eta^{3/4}.}
+\tag{SP5}
+\]
+
+Pro \(\eta=2^{-64}\) je (SP5) právě \(2^{-29}\). Původní normovaný
+vstup, pevný počátek času a úplný vybraný jev se nepřepisují. Pomocný
+výstup slouží pouze v trojúhelníkovém normovém účtu.
+
+\hypertarget{pux16fvodnuxed-uxfaplnuxe1-kladnuxe1-spektruxe1lnuxed-muxedra}{%
+\subsection{Původní úplná kladná spektrální
+míra}\label{pux16fvodnuxed-uxfaplnuxe1-kladnuxe1-spektruxe1lnuxed-muxedra}}
+
+Pro reálné K má původní úplný kontakt reprezentaci
+
+\[
+F_2(K,E+i y)=\int_{\mathbb T}
+\frac{e^{-i(E+i y)}+e^{-i\theta}}
+{e^{-i(E+i y)}-e^{-i\theta}}\,d\mu_K(\theta),
+\quad y>0,\quad \mu_K(\mathbb T)=1.
+\tag{SP6}
+\]
+
+Jde přesně o míru normovaného úplného druhého kontaktního vektoru. Je to
+součet obou pulzních větví a integrál přes všechna P, s vahami
+\(h_\sigma(K-P)\ge0\), \(h_++h_-=1\), a původní mírou dP/(\(2\pi\)).
+Každá objektová spektrální míra v tomto součtu zahrnuje všechny
+viditelné vázané i kontinuální složky.
+
+Reálná část jednotlivého původního Carathéodoryho jádra je přesně
+
+\[
+\operatorname{Re}
+\frac{e^{-i(E+i y)}+e^{-i\theta}}
+{e^{-i(E+i y)}-e^{-i\theta}}
+=\frac{\sinh y}{\cosh y-\cos(E-\theta)}.
+\tag{SP7}
+\]
+
+Pro \(0<y\le1\), \(|E-\theta|\le y\), stačí \(\sinh y\ge y\),
+\(\cosh y-1\le y^2\), \(1-\cos(E-\theta)\le(E-\theta)^2/2\). Proto
+
+\[
+\frac{\sinh y}{\cosh y-\cos(E-\theta)}\ge\frac1{2y}.
+\tag{SP8}
+\]
+
+Například \(\cosh y-1\le y^2\) plyne integrací \(\cosh u<2\) pro
+\(0\le u\le1\).
+
+Na skutečné objektové vázané větvi je kladná podmíra
+
+\[
+d\mu_{K,b}
+=\bigl[\Phi(\cdot,K)\bigr]_*
+\left(h_-(K-P)\,r_b(P)\frac{dP}{2\pi}\right),
+\quad
+\Phi(P,K)=\beta+\omega_b(P)-\varepsilon(K-P).
+\tag{SP9}
+\]
+
+Vzorec používá spektrální atom o hmotnosti \(r_b\). Jeho Carathéodoryho
+reziduum je \(2ir_b\), ale jeho hmotnost není \(2r_b\). Proto se v (SP9)
+žádný další faktor 2 nebo \(2\pi\) nevkládá.
+
+\hypertarget{ux161irux161uxed-radiuxe1lnuxed-dolnuxed-mez-z-objektovuxe9ho-grafu}{%
+\subsection{Širší radiální dolní mez z objektového
+grafu}\label{ux161irux161uxed-radiuxe1lnuxed-dolnuxed-mez-z-objektovuxe9ho-grafu}}
+
+Použijme již dokázané původní objektové okolí z BF:
+
+\[
+R_o=2^{-24},\quad |r_b(P)|<64,\quad
+|\omega_b''(P)|<2^{20}
+\qquad (|P-P_0|<R_o).
+\tag{SP10}
+\]
+
+Cauchyho odhad na polovičním P-disku dává \(|r_b'|\le2^{31}\). Pro (SP1)
+je podle BF20
+
+\[
+|P_b(K)-P_0|\le8|K-K_0|<2^{-57},\qquad
+|E_b(K)-E_0|<2^{-57}.
+\tag{SP11}
+\]
+
+Zvolme nyní reálný P-interval kolem skutečného stacionárního bodu
+\(P_b(K)\), o poloviční šířce
+
+\[
+w=2^{-11}\sqrt\eta\le2^{-43}.
+\tag{SP12}
+\]
+
+Celý interval leží v \(|P-P_0|<R_o/2\). Z (BS31) a (SP10),(SP11) plyne
+na něm
+
+\[
+r_b(P)>\frac1{32}-2^{31}(2^{-57}+2^{-43})
+=\frac1{32}-2^{-26}-2^{-12}>\frac1{64}.
+\]
+
+Na reálném pulzním pásu \(|\varepsilon''|\le1\). Vzhledem k původnímu
+\(h_-(K_0-P_0)>3/8\) se pulzní váha na tomto intervalu změní o méně než
+\((2^{-60}+2^{-57}+2^{-43})/2<1/8\). Tedy
+
+\[
+\boxed{r_b(P)>2^{-6},\qquad h_-(K-P)>2^{-2}.}
+\tag{SP13}
+\]
+
+Tyto jsou skutečné fyzikální atomy: objektový graf zůstává uvnitř jediné
+fyzikální mezery a pochází ze stejného jednoduchého původního pólu BF17.
+Samotný analytický kandidát na opačném listě se nepoužívá.
+
+Jelikož \(\Phi_P(P_b(K),K)=0\) a
+\(|\Phi_{PP}|\le|\omega_b''|+|\varepsilon''|<2^{21}\), Taylorova formule
+dává pro \(|p|\le w\)
+
+\[
+|\Phi(P_b(K)+p,K)-E_b(K)|
+\le2^{20}p^2\le\eta/4.
+\tag{SP14}
+\]
+
+V tomto kroku se nepotřebuje tvrzení o křivosti na celém intervalu w;
+stačí odhad absolutní hodnoty druhé derivace a přesná stacionarita ve
+středu.
+
+Z (SP7)--(SP14) a kladnosti všech ostatních částí úplné míry dostáváme
+
+\[
+\operatorname{Re}F_2(K,E_b(K)+i\eta)
+\ge\int_{P_b-w}^{P_b+w}
+\frac{1}{2\eta}\,2^{-8}\frac{dP}{2\pi}
+=\frac{2^{-20}}{\pi}\eta^{-1/2}
+>2^{-22}\eta^{-1/2}.
+\tag{SP15}
+\]
+
+Toto je dolní mez \textbf{celého} \(F_2\) na jeho původní vnější straně.
+Interval w může být větší než pohyblivý Morseův řez BF25 s konci
+\(x=\pm2^{-64}\). To není záměna \(B_{\mathrm{loc}}\) za celý zbytek:
+(SP9) používá kladnou atomovou podmíru úplného \(F_2\), tedy podle
+potřeby části ležící na obou stranách těchto umělých integračních konců.
+Původní dekompozice BF3 zůstává přesná a beze změny. Žádný konec
+intervalu ani reziduum nebyly z celého operátoru vynechány.
+
+\hypertarget{omezenuxe1-analytickuxe1-reciprokuxe1-funkce-na-muxedstnuxedm-polodisku}{%
+\subsection{Omezená analytická reciproká funkce na místním
+polodisku}\label{omezenuxe1-analytickuxe1-reciprokuxe1-funkce-na-muxedstnuxedm-polodisku}}
+
+Pro přehlednost v tomto oddílu označme \(z=E-E_b(K)\) a zvolme
+
+\[
+R=2^{-31},\qquad D_R=\{z:\ |z|<R,\ \operatorname{Im}z>0\}.
+\tag{SP16}
+\]
+
+Podle (SP11) a FQ9 leží celý tento polodisk ve fyzikálně identifikovaném
+okolí úplného prvního kontaktu: \(|E-E_0|<2^{-31}+2^{-57}<2^{-30}\). Na
+něm tedy
+
+\[
+\operatorname{Re}F_1>1/16,\qquad |F_1|<3.
+\]
+
+Definujme
+
+\[
+\Gamma(E)=\frac4{F_1(E)},\qquad
+G(K,E)=\frac1{F_2(K,E)+\Gamma(E)}.
+\tag{SP17}
+\]
+
+V celém horním polodisku je původní \(F_2\) holomorfní se striktně
+kladnou reálnou částí, zatímco
+
+\[
+\operatorname{Re}\Gamma
+=\frac{4\operatorname{Re}F_1}{|F_1|^2}>\frac1{36}.
+\]
+
+Proto G nemá pól, je holomorfní, \(|G|\le36\), a jeho reálná část u je
+kladná omezená harmonická funkce. Přesně platí
+
+\[
+|G|^2\le36\operatorname{Re}G,
+\quad
+0\le\operatorname{Re}G(K,E_b+i\eta)
+\le|G(K,E_b+i\eta)|\le2^{22}\sqrt\eta.
+\tag{SP18}
+\]
+
+Poslední mez je důsledkem (SP15). Žádný horní odhad \(F_2\) nebo jeho
+komplementu se zde nepředpokládá.
+
+\hypertarget{pux159esnuxe1-muxedstnuxed-harmonickuxe1-muxedra}{%
+\subsection{Přesná místní harmonická
+míra}\label{pux159esnuxe1-muxedstnuxed-harmonickuxe1-muxedra}}
+
+Použití plného kruhového Poissonova vzorce bez znalosti \(F_1\) mimo
+jeho doložené okolí by zde nebylo oprávněné. Pracujeme výhradně v
+polodisku (SP16).
+
+Poissonovo jádro jeho průměru, pro vnitřní bod \(i\eta\) a reálné
+\(-R<x<R\), je
+
+\[
+\mathcal P_{R,\eta}(x)
+=\frac\eta\pi\left(
+\frac1{x^2+\eta^2}-\frac{R^2}{R^4+\eta^2x^2}\right).
+\tag{SP19}
+\]
+
+Vzorec lze přímo odvodit biholomorfním zobrazením \(z\mapsto-(z/R+R/z)\)
+polodisku na horní polorovinu. Bod \(i\eta\) se zobrazí na
+\(i(R/\eta-\eta/R)\), zatímco na průměru je derivace reálné okrajové
+souřadnice \((R^2-x^2)/(Rx^2)\). Dosazení do obyčejného polorovinného
+jádra dává (SP19), v bodě x=0 spojitým pokračováním. Ekvivalentní zjevně
+kladný tvar je
+
+\[
+\mathcal P_{R,\eta}(x)
+=\frac{\eta(R^2-\eta^2)(R^2-x^2)}
+{\pi(x^2+\eta^2)(R^4+\eta^2x^2)}.
+\]
+
+Pro \(|x|\le\eta\) a \(\eta\le R/2\) první zlomek v závorkách (SP19) je
+nejméně \(1/(2\eta^2)\), druhý nejvýše \(1/R^2\le1/(4\eta^2)\). Tedy
+
+\[
+\mathcal P_{R,\eta}(x)\ge\frac1{4\pi\eta}
+\qquad(|x|\le\eta).
+\tag{SP20}
+\]
+
+Reprezentace omezené kladné harmonické funkce u obsahuje také nezáporný
+příspěvek půlkružnice. Jeho vypuštění \textbf{z dolní meze} proto dává
+
+\[
+u(i\eta)\ge\int_{-\eta}^{\eta}
+\mathcal P_{R,\eta}(x)u(x+i0)\,dx.
+\]
+
+Pro použití postačují téměř všude existující okrajové hodnoty omezeného
+holomorfního G; případně se nerovnost dostane limitou menších polodisků
+a Fatouovým lemmatem. Nezápornost na zbývající hranici je zajištěna
+(SP18), ne odhadem operátoru mimo FQ.
+
+Protože \(\eta\le2^{-64}<R/2\), (SP18),(SP20) dávají
+
+\[
+\boxed{
+\int_{-\eta}^{\eta}
+\operatorname{Re}G(K,E_b+x+i0)\,dx
+\le4\pi\eta\operatorname{Re}G(K,E_b+i\eta)
+<2^{26}\eta^{3/2}.}
+\tag{SP21}
+\]
+
+\hypertarget{oboustrannuxfd-integrovanuxfd-pux159enos}{%
+\subsection{Oboustranný integrovaný
+přenos}\label{oboustrannuxfd-integrovanuxfd-pux159enos}}
+
+Z úplné původní matice T plyne přesná identita
+
+\[
+V-V_\infty
+=\binom{8/F_1^2}{4/F_1}\,G.
+\tag{SP22}
+\]
+
+Na doloženém okolí \(|F_1|\ge1/16\), takže norma vektoru před G je menší
+než \(8\cdot256+4\cdot16=2112<2^{12}\). Z (SP18),(SP21) tedy
+
+\[
+\int_{-\eta}^{\eta}|G(K,E_b+x)|^2dx
+\le36\,2^{26}\eta^{3/2}<2^{32}\eta^{3/2},
+\] \[
+\int_{-\eta}^{\eta}\|V(K,E_b+x)-V_\infty(E_b+x)\|^2dx
+<2^{24}2^{32}\eta^{3/2},
+\]
+
+což dokazuje (SP3). Odhad se týká obou stran x=0 současně, včetně
+záporné strany, na níž samotný argument
+\(\operatorname{Re}F_2\ge A/\sqrt x\) neplatí.
+
+\hypertarget{pux159esnuxe1-vuxe1ux17eenuxe1-identita-v-celuxe9-fyzikuxe1lnuxed-vuxfdstupnuxed-normux11b}{%
+\subsection{Přesná vážená identita v celé fyzikální výstupní
+normě}\label{pux159esnuxe1-vuxe1ux17eenuxe1-identita-v-celuxe9-fyzikuxe1lnuxed-vuxfdstupnuxed-normux11b}}
+
+Označme \(\mathcal Z_K(E):\mathbb C^2\to\mathfrak h_K(E)\) původní úplný
+kontaktní spektrální operátor. Jeho sloupce z\_1,z\_2 leží v
+ortogonálních uspořádáních a
+
+\[
+\mathcal Z_K(E)^*\mathcal Z_K(E)
+=\operatorname{diag}(\rho_1(E),\rho_2(K,E)),
+\qquad \rho_j=\frac{\operatorname{Re}F_j}{2\pi}.
+\tag{SP23}
+\]
+
+Zde \(\rho_2\) označuje \textbf{celou} hustotu druhého kontaktu; není to
+hustota vybraného vázaného nebo pravoběžného výstupu. Auditovaný úplný
+stacionární vzorec je
+
+\[
+S(K,E)=I+2\pi\mathcal Z_K(E)T(K,E)\mathcal Z_K(E)^*.
+\tag{SP24}
+\]
+
+Na původním vstupu platí přesně
+
+\[
+\mathcal Z_K(E)^*\Psi(K,E)=f(E)e_1,
+\qquad f(E)=\sqrt{\rho_{\rm in}(E)/(2h)},\quad E\in I,
+\tag{SP25}
+\]
+
+a nula mimo I; K má původní míru \(\mathrm dK/(2\pi)\). Ze zdrojové meze
+\(|f|\le3/20\) nic nepřepočítáváme na podmíněně vybraný kanál. Tuto mez
+lze také přímo zkontrolovat z úplného lichého vzorce:
+\(\rho(P,E)<8/(21\pi)\) a \(I_P=[-h,h]\) dávají
+\(f^2<4/(21\pi^2)<4/189<9/400\).
+
+Definujme na původním I a použitých reálných FQ okolích pomocný úplný
+unitární operátor
+
+\[
+S_\infty(K,E)=I-\frac{4\pi}{F_1(E)}|z_1(E)\rangle\langle z_1(E)|.
+\tag{SP26}
+\]
+
+Na jednotkovém vektoru \(z_1/\sqrt{\rho_1}\) má násobitel
+\(1-4\pi\rho_1/F_1=1-2\operatorname{Re}F_1/F_1 =-\overline{F_1}/F_1\),
+jehož modul je jedna. Na ortogonálním doplňku je identita. Je tedy
+skutečně unitární na celé volné energetické vrstvě; není to
+renormalizovaný vybraný výstup. Mimo uvedený energetický obor jej lze
+definovat jako identitu. Na \(\chi_\infty=S_\infty\Psi\) to nemá vliv,
+protože původní zdroj má podporu v I.
+
+Položme \(\chi_\infty=S_\infty\Psi\). Z (SP24),(SP25) máme
+
+\[
+\chi-\chi_\infty
+=2\pi f\,\mathcal Z_K(E)(V-V_\infty).
+\tag{SP27}
+\]
+
+Spektrální váhy, které by jinak při prahu mohly růst, se zde účtují
+přesně. Dosazení (SP22),(SP23) dává
+
+\[
+\begin{aligned}
+\|\mathcal Z_K(V-V_\infty)\|^2
+&=\frac{16}{2\pi|F_1|^2}
+\left(\operatorname{Re}F_2+
+\frac{4\operatorname{Re}F_1}{|F_1|^2}\right)|G|^2\\
+&=\frac{16}{2\pi|F_1|^2}\operatorname{Re}G.
+\end{aligned}
+\tag{SP28}
+\]
+
+Poslední rovnost je přesná identita
+\(\operatorname{Re}(1/H)=\operatorname{Re}H/|H|^2\), \(H=F_2+4/F_1\).
+Žádný horní odhad \(\rho_2\) není potřeba.
+
+Proto ve skutečné úplné výstupní vrstvě
+
+\[
+\boxed{
+\|\chi(K,E)-\chi_\infty(K,E)\|^2
+=\frac{32\pi f(E)^2}{|F_1(E)|^2}
+\operatorname{Re}G(K,E)
+\le2^{10}\operatorname{Re}G(K,E).}
+\tag{SP29}
+\]
+
+Číselně stačí \(32\cdot4\cdot(9/400)\cdot256<2^{10}\). Toto je
+důležitější než nevažované (SP3): jde již o normu skutečného původního
+výstupního vektoru.
+
+\hypertarget{spojenuxed-obou-kux159ivek-a-pomocnuxe1-nuxe1hrada-bez-zmux11bny-zdroje}{%
+\subsection{Spojení obou křivek a pomocná náhrada bez změny
+zdroje}\label{spojenuxed-obou-kux159ivek-a-pomocnuxe1-nuxe1hrada-bez-zmux11bny-zdroje}}
+
+Na původním energetickém okně jsou obě křivky BS25 hladké, monotónní v
+příslušné energetické parametrizaci a oddělené v K. Jejich lokální grafy
+BF20 se na překryvech shodují jednoznačností stacionárního pokračování.
+Vezměme jejich K-obory, případně rozšířené uvnitř reálných okolí (SP1),
+a označme jejich sjednocení \(\mathcal J\). Každému zde přísluší jediná
+z uvažovaných vázaných energií \(E_b\)(K). Jejich oddělení z BS27 stačí,
+aby tak malá rozšíření nesplynula. Nezávisle na jejich konkrétní délce
+platí \(\int_\mathcal J dK/(2\pi)\le1\).
+
+Zvolme libovolnou měřitelnou \(0\le\Theta(K,E)\le1\), jejíž podpora leží
+v
+
+\[
+K\in\mathcal J,\qquad |E-E_b(K)|\le\eta,
+\]
+
+a definujme pomocný vektor
+
+\[
+\widetilde\chi=(1-\Theta)\chi+\Theta\chi_\infty.
+\tag{SP30}
+\]
+
+Samotné \(\Theta\) může být hladce definováno i kousek za konci I.
+Skutečná změna stavu má automaticky podporu v I, protože oba původní
+vektory \(\chi\) a \(\chi_\infty\) jsou mimo I nulové. Tím se netvrdí,
+že ostré konce zdroje již byly vyhlazeny; jejich samostatný normový účet
+se tímto krokem nemění.
+
+Integrace (SP29) nejprve přes I průnik \([E_b-\eta,E_b+\eta]\), poté
+přes původní \textbf{celou} míru \(\mathrm dK/(2\pi)\), s (SP21), dává
+
+\[
+\|\chi-\widetilde\chi\|^2
+\le2^{10}2^{26}\eta^{3/2}=2^{36}\eta^{3/2}.
+\tag{SP31}
+\]
+
+To dokazuje (SP4), bez dělení velikostí \(\mathcal J\), bez nové
+pravděpodobnostní normalizace a bez záměny celého výstupu za vybranou
+událost. Mimo \(\mathcal J\) je pomocný vektor přesně původní. Jestliže
+\(E_b\)(K) nepatrně leží mimo I, omezí se jen integrační interval
+zdroje; odhad přes celý symetrický interval zůstává platnou horní mezí.
+
+Oba S a \(S_\infty\) jsou unitární na celé volné vrstvě, takže
+\(\|\widetilde\chi\|\le\|\Psi\|=1\); žádné přenormování pomocného
+vektoru se neprovádí. Pro ostrou hodnotu \(\Theta\in\{0,1\}\) je dokonce
+jeho norma přesně jedna. Pro časové derivace lze použít hladké
+\(\Theta\) rovné jedné na \(|E-E_b|\le\eta/2\), nule na
+\(|E-E_b|\ge\eta\), s libovolným z již doložených koncově plochých
+přechodů. Odhad (SP31) zůstává beze změny.
+
+Všechny vzorce jsou totožné na všech 26 nosičových štítcích a působí
+jako identita na staré paměti a referenci. Proto (SP31) platí se stejnou
+konstantou pro libovolný původní normalizovaný provázaný
+paměťový/referenční vstup.
+
+\hypertarget{pux159esnuxe9-muxedsto-v-ux10dasovuxe9m-uxfaux10dtu}{%
+\subsection{Přesné místo v časovém
+účtu}\label{pux159esnuxe9-muxedsto-v-ux10dasovuxe9m-uxfaux10dtu}}
+
+Na volném a.c. podprostoru jsou \(U_0\) a \(\Omega_+\) izometrické. Pro
+každé n proto přesně
+
+\[
+\begin{aligned}
+\|(U^n\Omega_+-U_0^n)\chi\|
+&\le\|(U^n\Omega_+-U_0^n)\widetilde\chi\|
++2\|\chi-\widetilde\chi\|\\
+&\le\|(U^n\Omega_+-U_0^n)\widetilde\chi\|
++2^{19}\eta^{3/4}.
+\end{aligned}
+\tag{SP32}
+\]
+
+Tento krok je platný i pro nenormovaný pomocný vektor a je nezávislý na
+čase n.~Proto pro konkrétní \(\eta=2^{-64}\)
+
+\[
+\boxed{
+\|(U^n\Omega_+-U_0^n)\chi\|
+\le\|(U^n\Omega_+-U_0^n)\widetilde\chi\|+2^{-29}.}
+\tag{SP33}
+\]
+
+Vnitřek prahového pásku má nyní mimořádně jednoduchý \textbf{volný}
+kontaktní profil. Z (SP23), (SP25) a (SP26) plyne
+
+\[
+\boxed{
+\mathcal Z_K(E)^*\chi_\infty(K,E)
+=-f(E)\frac{\overline{F_1(E)}}{F_1(E)}\,e_1.}
+\tag{SP34}
+\]
+
+Druhá složka je přesně nula a první používá pouze již kontrolovaný první
+kontakt a původní zdroj. Reálná okrajová funkce \(\overline{F_1(E)}\) má
+na symetrickém FQ okolí holomorfní pokračování
+\(F_1^\sharp(z)=\overline{F_1(\bar z)}\). Nenulový jmenovatel \(F_1\) je
+již doložen. Tento profil lze tedy použít v přímém odchozím Cookově
+postupu pro pomocný volný výstup.
+
+Mimo vnitřek odřezaného pásku zůstává skutečný úplný profil
+\(\mathcal Z_K(E)^*\chi\), včetně obou původních uspořádání. Jeho
+derivace na přechodových a zbývajících intervalech, ostatní pravé
+stacionární prahy a ostré konce I mají nadále vlastní analytický účet.
+Rovnice (SP32) sama takový odhad neposkytuje.
+
+Je také nutné odlišit dvě pomocné konstrukce. Pouhá náhrada
+\(fV\mapsto f[(1-\Theta)V+\Theta V_\infty]\) v inverzní Duhamelově
+kontaktní amplitudě není bez dalšího identitou pro
+\(K_cJ^*U^m\Omega_+\widetilde\chi\). Její malá nevažovaná L² chyba by
+sama nedokazovala malou celou stavovou chybu ani absolutní Cookův
+součet. Zde se použil úplný stacionární stav (SP30) a přesná vážená
+identita (SP28); díky nim je právě (SP32) oprávněný normový návrat k
+původnímu experimentu.
+
+\hypertarget{ostux159ejux161uxed-varianta-na-velmi-maluxe9m-pux16fvodnuxedm-bf-okoluxed}{%
+\subsection{Ostřejší varianta na velmi malém původním BF
+okolí}\label{ostux159ejux161uxed-varianta-na-velmi-maluxe9m-pux16fvodnuxedm-bf-okoluxed}}
+
+Pro \(|K-K_0|<2^{-88}\), \(0<\eta\le2^{-152}\), lze přímo použít
+Morseovu souřadnici BF24 a \(A(K,x^2)>2^{-8}\) pro
+\(0\le x\le\sqrt\eta\). Párování obou kořenů x a −x v atomové míře dává
+
+\[
+\operatorname{Re}F_2(K,E_b+i\eta)
+\ge\frac1\pi\int_0^{\sqrt\eta}
+A(K,x^2)\frac{dx}{2\eta}
+\ge\frac{2^{-9}}\pi\eta^{-1/2}>2^{-11}\eta^{-1/2}.
+\tag{SP35}
+\]
+
+Stejný místní harmonický důkaz pak dává
+
+\[
+\int_{-\eta}^{\eta}\operatorname{Re}G(K,E_b+x)dx
+<2^{15}\eta^{3/2},
+\quad
+\int_{-\eta}^{\eta}\|V-V_\infty\|^2dx<2^{45}\eta^{3/2},
+\] \[
+\|\chi-\widetilde\chi\|\le2^{13}\eta^{3/4},
+\quad\text{časový návrat}\le2^{14}\eta^{3/4}.
+\tag{SP36}
+\]
+
+Širší varianta (SP1)--(SP33) je pro konkrétní odříznutí vhodnější,
+protože dovoluje \(\eta=2^{-64}\). Menší varianta slouží také jako
+nezávislá kontrola původního koeficientu a míry BF.
+
+\hypertarget{co-kladnost-nedokazuje-a-co-jeux161tux11b-musuxed-dodat-geometrie}{%
+\subsection{Co kladnost nedokazuje a co ještě musí dodat
+geometrie}\label{co-kladnost-nedokazuje-a-co-jeux161tux11b-musuxed-dodat-geometrie}}
+
+Z úplné kladné míry a jedné pevné lokální odmocninové hustoty samotných
+nelze odvodit jednotný bodový oboustranný modul ani společný holomorfní
+poloměr \(B_{\mathrm{comp}}\). To není jen chybějící krok této metody.
+Existuje jednoduchý abstraktní důvod:
+
+Uvažujme pevnou kladnou podmíru \(\nu\) s hustotou \(c\theta^{-1/2}\) na
+malém \(0<\theta<a\), s celkovou hmotností menší než jedna. Její
+transformace má týž nenulový pravostranný záhyb v nule. V bodě E=−d je
+její imaginární část záporná a řádu \(-d^{-1/2}\). Kladný atom v
+\(\theta=-2d\) přispívá \(i m\cot(d/2)\). Volbou malé kladné hmotnosti
+\(m=O(\sqrt d)\) lze zrušit původní imaginární část právě v E=−d;
+zbývající hmotnost se umístí například v \(\theta=\pi\).
+
+Přesně, označí-li \(H_\nu(-d)\) imaginární část transformace \(\nu\) a
+\(M=1-\nu(\mathbb T)>0\), stačí
+
+\[
+m=-\frac{H_\nu(-d)+M\tan(d/2)}
+{\cot(d/2)-\tan(d/2)}.
+\]
+
+Pro dostatečně malé d je \(0<m<M\), a míra
+\(\nu+m\delta_{-2d}+(M-m)\delta_\pi\) je normovaná a kladná. Její
+Carathéodoryho transformace má v −d hodnotu nula a stále má původní
+lokální záhyb v nule. Při \(F_1\)=1 je tedy v −d \(V=(0,1)^T\), i když
+limitní sloupec je \((-2,0)^T\). Atom v komplementu může být libovolně
+blízko nule.
+
+Tento příklad není tvrzením o skutečném TWIST-J spektru. Dokazuje pouze,
+proč nelze potřebnou bodovou mez celého komplementu vyvodit ze samotné
+kladnosti, normalizace a lokálního BF koeficientu. Oproti tomu
+integrované (SP3),(SP31) platí i v přítomnosti takových imaginárních
+kompenzací.
+
+Skutečný TWIST-J má navíc fyzikální soupis BS/CS a společné analytické
+lokální příspěvky QA, QB a QC. Ty mohou dále dodat holomorfii a číselnou
+mez celé pravidelné periody, nebo postačující derivace jejího
+kontaktního profilu mimo již zaplacené prahové pásky. Tato poznámka
+jejich nevyčíslený komplement nezaměňuje za lokální
+\(B_{\mathrm{loc}}\). Poskytuje alternativní úplný normový účet, který
+při řešení časového problému nemusí čekat na bodovou mez komplementu
+\textbf{uvnitř} těchto pásků. Žádný nový globální čas, hotový experiment
+nebo nová hodnota původní pravděpodobnosti se tím samotným neprohlašuje.
+
+\section{Konkrétní pomocný stav a přesné napojení na časovou řadu}
+\hypertarget{vuxfdslovnuxfd-pux159echod-u-obou-vuxe1zanuxfdch-prahux16f}{%
+\subsection{Výslovný přechod u obou vázaných
+prahů}\label{vuxfdslovnuxfd-pux159echod-u-obou-vuxe1zanuxfdch-prahux16f}}
+
+Zvolme přesně
+
+\[
+\eta=2^{-64},\qquad h=10^{-3},\qquad
+\delta=h\,2^{-68},\qquad I=[E_*-h,E_*+h].
+\tag{CT1}
+\]
+
+Položme \(p(u)=6u^5-15u^4+10u^3\) na \([0,1]\) a definujme funkci
+\(\theta\) na reálné ose:
+
+\[
+\theta(t)=
+\begin{cases}
+1,&|t|\le1/2,\\
+1-p(2|t|-1),&1/2<|t|<1,\\
+0,&|t|\ge1.
+\end{cases}
+\tag{CT2}
+\]
+
+Je to skutečná \(C^2\) funkce, \(0\le\theta\le1\). Z
+\(p'=30u^2(1-u)^2\le15/8\) a \(|p''|\le10/\sqrt3<6\) plyne
+
+\[
+|\theta'|<4,\qquad |\theta''|<24.
+\tag{CT3}
+\]
+
+Na sjednocení obou K-oborů \(\mathcal J\) ze SP zvolme
+\(\Theta(K,E)=\theta((E-E_b(K))/\eta)\); mimo ně \(\Theta\)=0. Hladkost
+v K pro tento časový Fourierův argument není potřebná: pracuje se ve
+vláknovém prostoru \(L^2(\mathbb T_K;\mathbb C^2)\). V energii máme
+
+\[
+|\partial_E\Theta|<4/\eta,\qquad
+|\partial_E^2\Theta|<24/\eta^2.
+\tag{CT4}
+\]
+
+Lokální grafy se na překryvech shodují a oba jejich K-obory jsou
+oddělené. Rozšíření oborů u konců I lze vést uvnitř reálných okolí SP1.
+\(\Theta\) smí být definováno také mimo I; původní zdroj i všechny níže
+uvedené stavy jsou tam nulové. Tím nevzniká nový zdrojový jev.
+
+\hypertarget{oba-pux16fvodnuxed-ostruxe9-konce-zdroje}{%
+\subsection{Oba původní ostré konce
+zdroje}\label{oba-pux16fvodnuxed-ostruxe9-konce-zdroje}}
+
+Nechť \(q_\delta(E)\) je nula mimo I, jedna mimo oba koncové proužky
+šířky \(\delta\), a na každém proužku roste od nuly k jedné podle
+\(r(u)=3u^2-2u^3\), orientovaného od příslušného konce I. Funkce
+\(q_\delta\) je \(C^1\), má integrabilní druhou slabou derivaci a
+\(0\le q_\delta\le1\). Původní zdroj má přesnou energetickou míru
+\(\mathbf1_I(E)\,\mathrm dE/(2h)\), takže
+
+\[
+\|(1-q_\delta(H_0))\Psi\|^2
+=\frac1{2h}\,2\delta\int_0^1(1-3u^2+2u^3)^2\,\mathrm du
+=\frac{13\delta}{35h}.
+\tag{CT5}
+\]
+
+Jde o normový účet původního normalizovaného zdroje, nikoli o jeho nové
+přenormování. Oba ostré konce jsou započteny.
+
+\hypertarget{jeden-celuxfd-pomocnuxfd-vuxfdstup-a-jeho-cena}{%
+\subsection{Jeden celý pomocný výstup a jeho
+cena}\label{jeden-celuxfd-pomocnuxfd-vuxfdstup-a-jeho-cena}}
+
+Označme jako ve SP \(\chi=S\Psi\), \(\chi_\infty=S_\infty\Psi\) a zvolme
+
+\[
+\widehat\chi(K,E)=q_\delta(E)
+\bigl[(1-\Theta(K,E))\chi(K,E)
+ +\Theta(K,E)\chi_\infty(K,E)\bigr].
+\tag{CT6}
+\]
+
+Tento vektor má normu nejvýše jedna. Protože S je unitární a na původním
+bezpečném okně I komutuje s původní energií, z CT5 a SP31 plyne
+
+\[
+\|\chi-\widehat\chi\|
+\le\sqrt{\frac{13\delta}{35h}}+2^{18}\eta^{3/4}.
+\]
+
+Pro každý nezáporný čas n jsou oba evoluční členy izometrické. Proto
+návrat od pomocného stavu k původnímu celému výstupu stojí nejvýše
+
+\[
+\begin{aligned}
+\varepsilon_{\rm app}
+&:=2\sqrt{\frac{13\delta}{35h}}+2^{19}\eta^{3/4}\\
+&=2\sqrt{\frac{13}{35}}\,2^{-34}+2^{-29}
+<2^{-33}+2^{-29}=17\,2^{-33}<2\cdot10^{-9}.
+\end{aligned}
+\tag{CT7}
+\]
+
+Poslední porovnání je přesná racionální nerovnost
+\(17\cdot10^9<2\cdot2^{33}\). Takto jsou současně a bez nové normalizace
+zaplaceny oba vázané prahy z obou stran i oba původní ostré konce I.
+Hodnota CT7 stále není celou časovou chybou.
+
+\hypertarget{skuteux10dnuxfd-uxfaplnuxfd-volnuxfd-kontaktnuxed-profil}{%
+\subsection{Skutečný úplný volný kontaktní
+profil}\label{skuteux10dnuxfd-uxfaplnuxfd-volnuxfd-kontaktnuxed-profil}}
+
+Položme \(b_\chi=\mathcal Z^*\chi\). Z původního úplného S a
+\(\mathcal Z^*\mathcal Z =\operatorname{diag}(\operatorname{Re}F_1,\operatorname{Re}F_2)/(2\pi)\)
+plyne přesně
+
+\[
+b_\chi(K,E)=f(E)
+\left[e_1+
+\begin{pmatrix}\operatorname{Re}F_1&0\\0&\operatorname{Re}F_2\end{pmatrix}
+V(K,E)\right],\qquad E\in I.
+\tag{CT8}
+\]
+
+Tedy plný profil pomocného stavu je
+
+\[
+\boxed{
+\widehat b(K,E)=q_\delta(E)f(E)
+\left\{(1-\Theta)
+\left[e_1+\operatorname{diag}(\operatorname{Re}F_1,
+\operatorname{Re}F_2)V\right]
+-\Theta\frac{\overline{F_1}}{F_1}e_1\right\}.}
+\tag{CT9}
+\]
+
+Na \(|E-E_b(K)|\le\eta/2\) zůstává pouze
+\(-q_\delta f\,\overline{F_1}/F_1\) v prvním kontaktu. Na přechodech a
+mimo pásky jsou zachovány celé \(F_2\) i celý přenosový sloupec. Druhá
+složka v CT8 není nahrazena hustotou vybraného výstupu. Všechny identity
+mají původní míru dE, nikoli \(\mathrm dE/(2\pi)\).
+
+Profil CT9 je omezená měřitelná funkce. Z
+\(\operatorname{Re}F_1\ge1/16\), \(|F_1|\le3\),
+\(\operatorname{Re}F_2\ge0\) plyne \(|T_{11}|\le32\) a
+\(|\operatorname{Re}F_2\,T_{21}|\le64\). První složka hranaté závorky
+CT8 má tedy modul nejvýše 97, druhá 64. S \(|f|\le3/20\),
+\(0\le q_\delta,\Theta\le1\) a \(|\overline{F_1}/F_1|=1\) dostáváme
+\(\|\widehat b(K,E)\|_2<32\). Konečnost vážené normy CT10 z této samotné
+bodové meze neplyne a bude dále samostatným číselným vstupem.
+
+\hypertarget{pux159esnux11b-vymezenuxfd-zbuxfdvajuxedcuxed-ux10duxedselnuxfd-vstup-pro-novuxfd-ux10das}{%
+\subsection{Přesně vymezený zbývající číselný vstup pro nový
+čas}\label{pux159esnux11b-vymezenuxfd-zbuxfdvajuxedcuxed-ux10duxedselnuxfd-vstup-pro-novuxfd-ux10das}}
+
+Nechť \(\mathcal H_K=L^2(\mathbb T_K,\mathrm dK/(2\pi);\mathbb C^2)\).
+Pro skutečný profil CT9 definujme
+
+\[
+c_m(K)=\int_I e^{-imE}\widehat b(K,E)\,\mathrm dE,
+\qquad
+\mathcal B^2=\sum_{m\ge1}m^{3/2}\|c_m\|_{\mathcal H_K}^2.
+\tag{CT10}
+\]
+
+Původní spektrální věta s mírou dE dává přesně
+\(c_m=J^*U_0^m\widehat\chi\); nepřidává se faktor \(2\pi\) ani posun m.
+Pro \(W_m=U^{-m}U_0^m\) platí konečná teleskopická identita
+
+\[
+(W_{m+1}-W_m)\widehat\chi
+=-U^{-(m+1)}U_0J K_c\,c_m.
+\]
+
+Po sečtení od m=n, použití definice \(\Omega_+\) a vynásobení \(U^n\) má
+tedy odpovídající Cookova řada přesný tvar
+
+\[
+(U^n\Omega_+-U_0^n)\widehat\chi
+=-\sum_{m=n}^{\infty}U^{n-m-1}U_0J K_c\,c_m,
+\]
+
+jakmile je doložena níže uvedená absolutní konvergence.
+
+Předpokládejme, že je dodáno \textbf{konkrétní doložené číslo} \(B\) s
+\(\mathcal B\le B<\infty\). Potom pro \(n\ge2\) přímá odchozí Cookova
+řada a \(\|U-U_0\|\le2\), v přesném kontaktním rozkladu
+\(U-U_0=U_0JK_cJ^*\), dávají
+
+\[
+\begin{aligned}
+\|(U^n\Omega_+-U_0^n)\widehat\chi\|
+&\le2\sum_{m=n}^{\infty}\|c_m\|_{\mathcal H_K}\\
+&\le2B\left(\sum_{m=n}^{\infty}m^{-3/2}\right)^{1/2}
+\le\frac{2\sqrt2\,B}{(n-1)^{1/4}}.
+\end{aligned}
+\tag{CT11}
+\]
+
+Zde lze použít přesnější normu původního \(K_c\); bezpečná obecná mez 2
+však stačí. Absolutní konvergence této řady je důsledkem dodaného CT10,
+nikoli skrytým předpokladem při součtu.
+
+Spojení s CT7 dává podmíněný nový odhad pro původní holý výstup
+
+\[
+\boxed{
+\varepsilon_{+,\rm bare}(n)
+<2\cdot10^{-9}+
+\frac{2\sqrt2\,B}{(n-1)^{1/4}}.}
+\tag{CT12}
+\]
+
+Pro libovolný cíl \(\varepsilon>2\cdot10^{-9}\) by stačil konkrétní čas
+
+\[
+n\ge\max\left\{2,\,
+1+\left\lceil
+\left(\frac{2\sqrt2\,B}{\varepsilon-2\cdot10^{-9}}\right)^4
+\right\rceil\right\}.
+\tag{CT13}
+\]
+
+Toto je přesná postačující podmínka, nikoli zde nově přidělené číselné
+B. K jeho doložení musí být započteny přechody CT2, zbytek původního
+profilu a další skutečné kontinuální prahy. Vyhlazení konců zruší
+nesčitatelné holé krajní členy 1/m, ale jeho derivační cenu je třeba
+zahrnout do B. Samotná kvalitativní holomorfie komplementu nebo již
+známá lokální mez \(B_{\mathrm{loc}}\) tuto úlohu neplní.
+
+Pokud se použije dřívější úplný konečný časový návrh, jeho časy a
+pravděpodobnostní závěry se nemění. CT12--CT13 přesně určují jinou cestu
+k novému časovému odhadu a jeden přesně vymezený postačující číselný
+údaj v této cestě. Příchozí čas, kalibrace čtení a aparátové chyby mají
+své původní samostatné účty. Žádný z nich se nezaměňuje s CT7.
+
+\clearpage
+\section{Fyzikální oddělení a všechny reálné hranové průchody}
+Pišme
+
+\[
+g=2\pi/5,\quad e=E-4\pi/5,\quad
+I_e=[4\pi/5-10^{-3},4\pi/5+10^{-3}],\quad
+a=\arccos(-3/5),\quad b=\pi-a.
+\tag{CG1}
+\]
+
+Pulz má kladnou fázi \(\varepsilon(k)\in[0,a]\) a velikost rychlosti
+
+\[
+W(\varepsilon)^2=
+\frac{3+5\cos\varepsilon}{5(1+\cos\varepsilon)}.
+\tag{CG2}
+\]
+
+Kruhová vzdálenost hybností se vždy počítá modulo \(2\pi\).
+
+\hypertarget{ostux159ejux161uxed-fyzikuxe1lnuxed-obor-vuxe1zanuxe9ho-prahu}{%
+\subsection{Ostřejší fyzikální obor vázaného
+prahu}\label{ostux159ejux161uxed-fyzikuxe1lnuxed-obor-vuxe1zanuxe9ho-prahu}}
+
+Použijme parametrizaci BS4--BS6:
+
+\[
+c=\cos\delta,\quad s=\sin\delta,\quad
+v=c-4sz,\quad \mathscr G(z,\delta)=cU(z)-sV(z)=0,
+\]
+
+\[
+U=(3+5C)z^2-5(1-C),\qquad
+V=h(1+z^2)+4z-4z^3,
+\quad C=\cos g,\quad h=5\sin g.
+\tag{CG3}
+\]
+
+Již platí \(1/4<\delta_*<1/3\), \(1<z<5/4\), \(v'<-4\),
+\(z'=V/(c\mathscr G_z)>0\), \(|v'|<64/9\), a
+
+\[
+309/1000<C<31/100,\qquad 19/4<h<119/25.
+\tag{CG4}
+\]
+
+\hypertarget{dvux11b-pomocnuxe9-meze-pro-parametrizaci}{%
+\subsubsection{Dvě pomocné meze pro
+parametrizaci}\label{dvux11b-pomocnuxe9-meze-pro-parametrizaci}}
+
+Na celém BS boxu máme
+
+\[
+z>9/8,\qquad z'>7/10.
+\tag{CG5}
+\]
+
+První mez plyne z testu při \(z=9/8\): \(U<591/256\), \(V>2449/256\),
+tedy \(U/V<591/2449<1/4<\tan\delta\). Funkce \(\mathscr G/z^2\) je
+striktně rostoucí; její jediný kladný kořen proto leží napravo od testu.
+
+Pro druhou mez je V konkávní na \([1,5/4]\), a proto
+
+\[
+V>\min\{19/2,599/64\}=599/64.
+\]
+
+Současně \(V'>-7/2\), \(3+5C<91/20\), takže
+
+\[
+0<c\mathscr G_z\le\mathscr G_z
+<91/8+7/6=301/24.
+\]
+
+Tedy \(z'>1797/2408>7/10\). Z (CG5) vychází
+
+\[
+-v'=s+4cz+4sz'
+>\frac{19}{5}s+4cz
+>\frac{19}{5}\frac{95}{384}
+  +4\frac{17}{18}\frac98
+=\frac{1993}{384}>5.
+\tag{CG6}
+\]
+
+Na každém stacionárním bodě proto \(w=\sqrt{1-v^2}/(-v')<1/5\).
+
+\hypertarget{dolnuxed-mez-delta}{%
+\subsubsection{Dolní mez delta}\label{dolnuxed-mez-delta}}
+
+Z \(W=w<1/5\) plyne přesně \(\cos\varepsilon<-7/12\). Kdyby
+\(\delta_*\le3/10\), bylo by \(\varepsilon\le3\pi/5+301/1000\). Pro
+\(q=301/1000\) dávají střídavé Taylorovy meze \(\cos q<239/250\),
+\(\sin q<3/10\). Proto
+
+\[
+\cos(3\pi/5+q)
+=-C\cos q-\sin g\sin q
+>-\frac{31}{100}\frac{239}{250}
+ -\frac{119}{125}\frac3{10}
+=-\frac{14549}{25000}>-\frac7{12},
+\]
+
+což je spor. Tedy
+
+\[
+\delta_*>3/10.
+\tag{CG7}
+\]
+
+\hypertarget{hornuxed-mez-delta}{%
+\subsubsection{Horní mez delta}\label{hornuxed-mez-delta}}
+
+Testujme \(\delta_0=13/40\), \(z_0=121/100\). Taylorovy meze dávají
+
+\[
+\cos\delta_0>3031/3200,\qquad
+\sin\delta_0<639/2000.
+\]
+
+Při tomto z je
+
+\[
+U>6398669/2000000,\qquad V<1185359/125000.
+\]
+
+Odtud přesně
+
+\[
+\mathscr G(z_0,\delta_0)
+>\frac{18945367}{32000000000}>0.
+\tag{CG8}
+\]
+
+Jedinečný fyzikální parametr proto splňuje \(z(\delta_0)<121/100\), a
+tudíž
+
+\[
+v(\delta_0)>
+\frac{3031}{3200}
+-4\frac{639}{2000}\frac{121}{100}
+=-\frac35+\frac{323}{400000}.
+\tag{CG9}
+\]
+
+Proto \(\sin p>4/5\), a BS mez \(-v'<64/9\) dává \(w(\delta_0)>9/80\).
+
+Je-li \(\delta_0\) za energeticky přípustným koncem
+\(\delta_{\max}(e)\), je tvrzení \(\delta_*<\delta_0\) okamžité. Jinak
+je při testu \(\varepsilon\ge3\pi/5+81/250\). Při \(q=81/250\) platí
+
+\[
+C\cos q+\sin g\sin q
+>\frac{309}{1000}\left(1-\frac{q^2}{2}\right)
+ +\frac{19}{20}\left(q-\frac{q^3}{6}\right)
+=\frac{371997462}{625000000}
+>\frac{3759}{6319}.
+\]
+
+Poslední nerovnost má kladný křížový rozdíl 1276962378. Z (CG2) je
+\(\cos\varepsilon<-3759/6319\) právě podmínkou \(W<9/80\). Test tedy
+leží na kladné straně rozdílu BS23. Jeho jediný průchod z minus do plus
+nastává před testem:
+
+\[
+\boxed{3/10<\delta_*<13/40.}
+\tag{CG10}
+\]
+
+\hypertarget{meze-v-rychlosti-a-celkovuxe9-hybnosti}{%
+\subsubsection{Meze v, rychlosti a celkové
+hybnosti}\label{meze-v-rychlosti-a-celkovuxe9-hybnosti}}
+
+Na \(\delta>3/10\) test \(z=7/6\) dává
+
+\[
+U<395/144,\qquad V>4117/432,
+\qquad U/V<1185/4117<3/10<\tan\delta,
+\]
+
+tedy \(z>7/6\). Jelikož \(c<24/25\) a \(s>591/2000\), máme
+
+\[
+v<\frac{24}{25}-4\frac{591}{2000}\frac76
+=-\frac{419}{1000}<-\frac25.
+\]
+
+Z monotonicity v a (CG9) současně \(v>-3/5\). Navíc
+
+\[
+-v'>\frac{19}{5}\frac{591}{2000}
+   +4\frac{17}{18}\frac76
+=\frac{1493183}{270000}>\frac{11}{2}.
+\]
+
+Tedy
+
+\[
+\boxed{-3/5<v<-2/5,\qquad
+ w<\frac{2\sqrt{21}}{55}<\frac16.}
+\tag{CG11}
+\]
+
+Poslední ostrá nerovnost je přesně \(3024<3025\). Pro původní kladné P
+je \(P=\arccos(-v)\), \(K_b=P-\kappa\). Střídavé meze poskytují
+
+\[
+\cos(37/40)>3/5,
+\qquad \cos(7/40)<69/70,
+\qquad \cos(6/5)<2/5.
+\]
+
+Z \(w<1/6\) a přesné pulzní formule je \(\cos\kappa>69/70\), takže
+\(\kappa<7/40\). Proto
+
+\[
+\boxed{3/4<K_b(e)<6/5,\qquad K_\pm(e)=\pm K_b(e).}
+\tag{CG12}
+\]
+
+Existuje i výslovná rezerva pro úzké BF okolí. Taylorův polynom šestého
+řádu v 37/40 dává
+
+\[
+\cos(37/40)-3/5>
+\frac{5371601591}{2949120000000}>10^{-3}.
+\]
+
+Z jednotkové Lipschitzovy meze kosinu plyne \(P>37/40+10^{-3}\). Dále
+\(\cos(6/5)<229/625\), a tedy \(6/5-\arccos(2/5)>21/625>3/100\). Můžeme
+tak zesílit (CG12) na
+
+\[
+\boxed{3/4+10^{-3}<K_b(e)<6/5-3/100.}
+\tag{CG13}
+\]
+
+\hypertarget{oddux11blenuxed-od-vux161ech-ostatnuxedch-fyzikuxe1lnuxedch-konfiguracuxed}{%
+\subsection{Oddělení od všech ostatních fyzikálních
+konfigurací}\label{oddux11blenuxed-od-vux161ech-ostatnuxedch-fyzikuxe1lnuxedch-konfiguracuxed}}
+
+Označme \(\varphi=(1+\sqrt5)/2\), \(v_a=(5\sqrt5-11)/4\),
+\(p_a=\arccos v_a\), \(p_b=\pi-p_a\). Z \(559/250<\sqrt5<56/25\) plyne
+
+\[
+809/500<\varphi<81/50,\qquad
+9/200<v_a<1/20,\qquad 3/2<p_a<31/20.
+\tag{CG14}
+\]
+
+Poslední dvojici dokazují přímo \(\cos(3/2)>3231/46080>1/20\) a
+\(\cos(31/20)<150721/3840000<9/200\).
+
+\hypertarget{setkuxe1nuxed-puxf3lu-s-hranou}{%
+\subsubsection{Setkání pólu s
+hranou}\label{setkuxe1nuxed-puxf3lu-s-hranou}}
+
+První čtveřice QA má \(K=\pm p_a\pm\kappa_a(e)\), kde
+
+\[
+\cos\kappa_a(e_0)=(5\varphi-3)/8,
+\quad e_0=4\pi/5,
+\quad
+|\cos\kappa_a(e)-\cos\kappa_a(e_0)|\le1/800.
+\]
+
+Tedy \(127/200<\cos\kappa_a<511/800\), a Taylorovy testy
+\(\cos(9/10)<127/200\), \(\cos(17/20)>511/800\) dávají
+
+\[
+17/20<\kappa_a<9/10.
+\]
+
+Její kladné absolutní polohy jsou proto
+
+\[
+3/5<p_a-\kappa_a<7/10,
+\qquad 47/20<p_a+\kappa_a<49/20.
+\tag{CG15}
+\]
+
+Druhá čtveřice má \(K=\pm p_b\pm\kappa_b\),
+\(\cos\kappa_b(e_0)=(7-5\varphi)/8\). Z téže změny kosinu vychází
+
+\[
+-111/800<\cos\kappa_b<-27/200,
+\qquad 3/2<\kappa_b<7/4.
+\]
+
+Horní úhlovou mez potvrzuje \(\cos(7/4)<-863/6144<-111/800\). Také
+\(3/2<p_b<7/4\), tedy
+
+\[
+|p_b-\kappa_b|<1/4,
+\qquad 3<p_b+\kappa_b<7/2.
+\tag{CG16}
+\]
+
+Poslední součet má po redukci modulo \(2\pi\) absolutní hodnotu větší
+než \(5/2\). S (CG12) dostáváme od \textbf{všech osmi} QA křivek
+kruhovou vzdálenost větší než \(1/20\).
+
+\hypertarget{kuux17eelovuxe9-konce-a-pulznuxed-banky}{%
+\subsubsection{Kuželové konce a pulzní
+banky}\label{kuux17eelovuxe9-konce-a-pulznuxed-banky}}
+
+U přístupného kužele QC je kladné \(K_q=\pi-\kappa_q\),
+
+\[
+\cos K_q=-(1+5\cos e)/4,
+\qquad \cos K_q(e_0)=(5\varphi-2)/8.
+\]
+
+Odtud \(\cos K_q>19/25\), zatímco \(\cos(18/25)<293749/390625<19/25\).
+Proto
+
+\[
+0<K_q<18/25.
+\tag{CG17}
+\]
+
+Obě kuželové křivky jsou od BF vzdáleny o více než \(3/100\).
+
+Pro hranové setkání pulzních bank QB má kladná redukovaná poloha
+\(K_h=\pi-\arccos(4+5\cos e)\), tedy
+
+\[
+\cos K_h=-4-5\cos e,
+\qquad 1/25<\cos K_h<11/200.
+\]
+
+Proto \(3/2<K_h<\pi/2\), a obě bankové křivky jsou od BF vzdáleny o více
+než \(3/10\).
+
+\hypertarget{bux11bux17enuxe9-kontinuuxe1lnuxed-prahy-a-druhuxfd-vuxe1zanuxfd-pruxe1h}{%
+\subsubsection{Běžné kontinuální prahy a druhý vázaný
+práh}\label{bux11bux17enuxe9-kontinuuxe1lnuxed-prahy-a-druhuxfd-vuxe1zanuxfd-pruxe1h}}
+
+Již dokázaná kontinuální poloha splňuje \(0<K_c(e)<12/25\). Z (CG12) se
+její vzdálenost od BF zesiluje na \(27/100\). Oba samotné vázané prahy
+mají kruhovou vzdálenost \(2K_b>3/2\), protože \(2K_b<12/5<\pi\).
+
+Celý výsledek je následující. Meze v posledním sloupci platí pro
+libovolný bod pásu \(3/4<|K|<6/5\), vyjma posledního řádku, který
+porovnává dva skutečné BF body při stejné energii.
+
+\Needspace{12\baselineskip}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3000}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Fyzikální konfigurace
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Její redukované polohy
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Odstup od BF pásu/body
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Běžné kontinuální prahy & \(\pm K_c\), \(0<K_c<12/25\) & \(>27/100\) \\
+První pólové a hranové čtveřice & (CG15) a jejich zápory & \(>1/20\) \\
+Druhá pólové a hranové čtveřice & (CG16) modulo \(2\pi\) & \(>1/20\) \\
+Přístupný kužel & \(\pm K_q\), \(0<K_q<18/25\) & \(>3/100\) \\
+Hranové setkání bank & \(\pm K_h\), \(3/2<K_h<\pi/2\) & \(>3/10\) \\
+Druhý vázaný práh & \(-K_b\) proti \(K_b\) & \(>3/2\) \\
+\end{longtable}
+
+\[
+\operatorname{dist}_{\mathbb T}
+\bigl(K_b(e),\{K_c,K_{QA},K_q,K_h,-K_b\}\bigr)>3/100.
+\tag{CG18}
+\]
+
+U kontinuálních, QA, QC a QB křivek jsou v množině zahrnuty obě
+znaménkové kopie; z dvojice BF je zde zahrnut pouze opačný bod. Nejsou
+přidávány nepřístupné algebraické kořeny jiných vrstev.
+
+\hypertarget{vux161echny-reuxe1lnuxe9-hranovuxe9-prux16fchody-majuxed-jednotnou-rychlostnuxed-mez}{%
+\subsection{Všechny reálné hranové průchody mají jednotnou rychlostní
+mez}\label{vux161echny-reuxe1lnuxe9-hranovuxe9-prux16fchody-majuxed-jednotnou-rychlostnuxed-mez}}
+
+\hypertarget{jedinuxe1-potenciuxe1lnux11b-pomaluxe1-rodina}{%
+\subsubsection{Jediná potenciálně pomalá
+rodina}\label{jedinuxe1-potenciuxe1lnux11b-pomaluxe1-rodina}}
+
+Pro nízkou \(t=-4\) hranu a kladný pulz parametrizujme
+\(\omega\in[e-a,b]\). Absolutní objektová rychlost je
+
+\[
+u(\omega)=
+\sqrt{\frac{\cos\omega-3/5}{1+\cos\omega}},
+\qquad D(\omega)=W(e-\omega)-u(\omega).
+\tag{CG19}
+\]
+
+Funkce u klesá a W(e−\(\omega\)) roste. Jejich jediný průsečík je
+dřívější kontinuální práh \(\omega_c(e)\), s \(\omega_c<21/50\). V celém
+přípustném intervalu je \(\omega>149/1000\), \(\sin\omega>1/8\),
+\(u<1/2\). Proto
+
+\[
+-u'(\omega)
+=\frac{(4/5)\sin\omega}{u(1+\cos\omega)^2}>1/20,
+\quad D'>1/20.
+\tag{CG20}
+\]
+
+Derivační formule se používají na otevřeném intervalu; v krajích, kde u
+nebo W mizí, se níže uvedené závěry berou spojitým limitem.
+
+Kdyby v některém bodě \(|D|\le10^{-3}\), pak
+\(|\omega-\omega_c|\le1/50\) a \(\omega<11/25\). Po celém spojujícím
+intervalu tedy \(\cos\omega>9/10\), \(u>1/3\), \(W>3/10\), \(uW>1/10\).
+Pro protisměrné momenty \(K_-(\omega)=p(\omega)-\kappa(\omega)\) platí
+
+\[
+K_-'=\frac1u-\frac1W=\frac{D}{uW}.
+\]
+
+Monotonicita D proto dává
+
+\[
+|K_-(\omega)-K_c(e)|
+<10\,(10^{-3})\,(20\cdot10^{-3})=1/5000.
+\]
+
+To odporuje (CG18) pro K v BF pásu. V protisměrné konfiguraci je tudíž
+relativní rychlost větší než \(10^{-3}\). Pro souhlasné momenty je
+rychlostní rozdíl součtem u+W. Je-li \(|D|>10^{-3}\), je tento součet
+ještě větší; v opačném případě předchozí argument dává \(u>1/3\). Také v
+této konfiguraci je součet větší než \(10^{-3}\).
+
+\hypertarget{vux161echny-ostatnuxed-hranovuxe9-rodiny}{%
+\subsubsection{Všechny ostatní hranové
+rodiny}\label{vux161echny-ostatnuxed-hranovuxe9-rodiny}}
+
+Přípustné zbývající hrany mají \(t=+4\) a pulzní fázi
+\(0\le\varepsilon<\pi/2\). Pro kladný pulz to plyne z
+\(\varepsilon\le e-a<\pi/2\). Pro záporný pulz použijme
+
+\[
+a>7\pi/10+10^{-3}.
+\tag{CG21}
+\]
+
+Nerovnost (CG21) je elementární: \(\sin(\pi/5)<59/100\), takže
+\(\cos(7\pi/10+10^{-3})=-\sin(\pi/5+10^{-3})>-591/1000>-3/5\). Proto
+\(\varepsilon\le2\pi-a-e<\pi/2\). Pulz má tedy \(W>\sqrt{3/5}>3/4\),
+kdežto každá jednostranná objektová hranová rychlost je nejvýše
+\(1/\sqrt5<1/2\). Jejich relativní rychlost je větší než \(1/4\).
+
+Celkově na každém skutečném reálném hranovém průchodu v BF pásu
+
+\[
+\boxed{|\omega_{\rm edge}'(P)-\sigma\varepsilon'(K-P)|>1/1000.}
+\tag{CG22}
+\]
+
+\hypertarget{od-relativnuxed-rychlosti-k-pux16fvodnuxedmu-diskriminantu}{%
+\subsubsection{Od relativní rychlosti k původnímu
+diskriminantu}\label{od-relativnuxed-rychlosti-k-pux16fvodnuxedmu-diskriminantu}}
+
+Pro nízkou hranu již máme \(\sin\omega>1/8\). Na vysoké hraně v BF pásu
+platí
+
+\[
+|\sin\omega|>1/1000.
+\tag{CG23}
+\]
+
+Pro kladný pulz je tato mez okamžitá, protože \(a\le\omega\le e<\pi\) a
+\(\sin e>1/2\). U záporného pulzu by její selhání vyžadovalo
+\(\omega=\pi+\nu\), \(|\nu|<1/500\). Přesná hranová identita dává
+
+\[
+|\sin((P-\pi)/2)|=\sqrt5|\sin(\nu/2)|,
+\quad |P-\pi|<3|\nu|.
+\]
+
+Pulzní hybnost se při přechodu od \(\omega\) k \(\pi\) změní nejvýše o
+\((4/3)|\nu|\), neboť celá příslušná pulzní fáze leží v \((0,\pi/2)\).
+Celkové K by tedy bylo vzdáleno méně než \((13/3)|\nu|<13/1500<3/100\)
+od kuželové křivky, což odporuje (CG18). Tím je (CG23) dokázáno.
+
+Na hraně \(t=\cos P-5\cos\omega_\sigma\) má přesně derivaci
+
+\[
+\partial_Pt
+=5\sin\omega\,[\sigma\varepsilon'(K-P)-\omega_{\rm edge}'(P)].
+\]
+
+Nízká hrana tedy dává \(|\partial_Pt|>1/1600\), vysoká dokonce
+\(|\partial_Pt|>1/800\). Jednotná mez je
+
+\[
+\boxed{|\partial_Pt|>1/1600.}
+\tag{CG24}
+\]
+
+\hypertarget{kontaktnuxed-jmenovatel-na-vux161ech-hranuxe1ch}{%
+\subsection{Kontaktní jmenovatel na všech
+hranách}\label{kontaktnuxed-jmenovatel-na-vux161ech-hranuxe1ch}}
+
+Položme \(x=e^{-i(\omega-g)}\). Na nízké hraně \(q=-1\) původní
+nezkrácený jmenovatel přesně dává
+
+\[
+|D_o|=8\cos((\omega-g)/2)\sin(g/2)
+                 |\sin(\omega-g/2)|.
+\tag{CG25}
+\]
+
+Prefaktor je větší než \(16/5\). Jestliže by \(|\omega-g/2|\le10^{-3}\),
+potom podél hranové větve od \(\omega\) k g/2 platí
+\(|v-v_a|\le5\cdot10^{-3}\), \(|P_\omega|<6\). Pulz v této malé oblasti
+má \(W>1/2\), tedy \(|\kappa_\omega|<2\). Bod K by byl do
+\(8\cdot10^{-3}\) od první QA čtveřice, v rozporu s odstupem \(1/20\).
+Proto \(|\omega-g/2|>10^{-3}\). Tento úhlový rozdíl má modul menší než
+jedna; z \(\sin y\ge5y/6\) na \([0,1]\) vychází \(|D_o|>1/375\).
+
+Na vysoké hraně \(q=1\) je obdobně přesná formule
+
+\[
+|D_o|=8|\sin((\omega-g)/2)|\sin(g/2)
+                 |\sin(\omega-\pi-g/2)|.
+\tag{CG26}
+\]
+
+První prefaktor je větší než \(4/3\): z \(a>2\pi/3\) je
+\((\omega-g)/2>2\pi/15>2/5\), zatímco horní konec je pod \(\pi/2\), a
+\(\sin(2/5)>1/3\). Případ \(|\omega-\pi-g/2|\le10^{-3}\) je dostupný
+pouze zápornému pulzu. Tentýž odhad \(|P_\omega|<6\),
+\(|\kappa_\omega|<2\) by dal vzdálenost do \(8\cdot10^{-3}\) od druhé QA
+čtveřice. Je tedy vyloučen. Z (CG21) je modul úhlového rozdílu v (CG26)
+menší než \(\pi/2\), a \(\sin y\ge2y/\pi>(3/5)y\) dává \(|D_o|>1/1250\).
+
+Obě formule tak poskytují jednotný původní, fyzikální odhad
+
+\[
+\boxed{|D_o|>1/2000\quad\hbox{na každém hranovém průchodu v BF pásu}.}
+\tag{CG27}
+\]
+
+Použitá malá pulzní okolí nejsou odvozena z extrapolace starého
+výstupního okna. U první QA skupiny, na celé spojovací úsečce
+\(|\omega-g/2|\le10^{-3}\), je \(|\varepsilon-3\pi/5|\le2/1000\), tedy
+\(\cos\varepsilon>-31/100-2/1000=-39/125>-1/3\) a \(W^2>2/5>1/4\). U
+druhé skupiny obdobně \(|\varepsilon-2\pi/5|\le2/1000\),
+\(\cos\varepsilon>307/1000>0\) a \(W^2>3/5>1/4\). Obě meze přímo
+zajišťují \(|\kappa_\omega|<2\). Také \(|v|<1/20+5/1000=11/200<1/10\),
+takže \(|P_\omega|\le5/\sqrt{1-v^2}<6\) na celých těchto úsecích.
+
+\hypertarget{hlavnuxed-zuxe1pornuxe1-vuxe1zanuxe1-vux11btev-pux159i-bf-energii-pruxe1vux11b-jeden-koux159en}{%
+\subsection{Hlavní záporná vázaná větev: při BF energii právě jeden
+kořen}\label{hlavnuxed-zuxe1pornuxe1-vuxe1zanuxe1-vux11btev-pux159i-bf-energii-pruxe1vux11b-jeden-koux159en}}
+
+Tato část rozlišuje počet \textbf{stacionárních} řešení od počtu všech
+energetických kořenů. Druhý počet nevyplývá pouze ze slovního soupisu
+stacionárních křivek; zde se odvozuje přímo.
+
+Při pevném \(e\in I_e\) parametrizujme všechny přístupné body hlavní
+záporné větve pomocí \(0\le\delta\le\delta_{\max}(e)\):
+
+\[
+p(\delta)=\arccos v(\delta),\quad P(\delta)=\pi-p(\delta),
+\quad \varepsilon=d(e)+\delta,\quad d(e)=\pi+g-e,
+\quad \kappa(\delta)\ge0.
+\tag{CG28}
+\]
+
+Čtyři možné celkové hybnosti jsou \(\pm K_-(\delta)\),
+\(\pm K_+(\delta)\), modulo \(2\pi\), kde
+
+\[
+K_-=P-\kappa,\qquad K_+=P+\kappa.
+\]
+
+V otevřeném parametrickém intervalu je
+
+\[
+K_-'=-\frac1w+\frac1W=\frac{w-W}{wW},
+\qquad K_+'=-\frac1w-\frac1W<0.
+\tag{CG29}
+\]
+
+BS23 má právě jednu nulu a mění se tam z minus do plus. Proto \(K_-\) má
+právě jedno přísné \textbf{globální minimum}, rovné \(K_b(e)\), a
+dosahuje ho pouze při \(\delta=\delta_*\). Všude jinde je \(K_->K_b\).
+
+Na vnitřku intervalu je \(K_+>K_-\ge K_b\). Při konci \(\delta_{\max}\)
+sice \(\kappa=0\), ale \(K_+=K_->K_b\), protože minimum je vnitřní. Také
+na začátku jsou hodnoty od minima odděleny. Protože \(0<K_-<\pi\),
+záporná kopie \(-K_-\) nemůže dát kladné \(K_b\) ani po redukci do
+\((-\pi,\pi]\).
+
+Zbývá možnost \(-K_+\) po oběhu kruhu. Platí \(0<K_+\le\pi+\kappa(d)\),
+a \(\kappa(d)<\pi/2\): \(d>\pi/2\), tudíž
+\(\cos\kappa(d)=(1-5\cos d)/4>0\). Případná kladná redukovaná hodnota
+\(-K_+\) je proto větší než \(\pi/2>6/5>K_b\). Žádná další znaménková
+kopie nepřidává kořen.
+
+\[
+\boxed{\begin{gathered}
+\text{Při }(K,e)=(K_b(e),e)\text{ má hlavní záporná větev}\\
+\text{právě jediný energetický kořen P: původní dvojitý BF bod.}
+\end{gathered}}
+\tag{CG30}
+\]
+
+Reflexe dokazuje totéž u záporného BF. Pole má původní kladnou kontaktní
+váhu a křivost \(>1/4\); nebylo odstraněno ani nahrazeno algebraickým
+kandidátem.
+
+Proto je reálná spojená fáze této větve při pevném \(K_b\) všude alespoň
+\(e\), s rovností jen v BF bodě. Důvodem je její spojitost na celém
+kruhu, kladný lokální kvadratický rozdíl u BF a (CG30): změna znaménka
+jinde by vyžadovala další energetický kořen. Tento argument sám však
+nedává číselnou velikost kladné mezery mimo zvolený Morseův interval.
+
+\hypertarget{co-tento-vuxfdsledek-duxe1vuxe1-celuxe9mu-komplementu-a-co-jeux161tux11b-potux159ebuje}{%
+\subsection{Co tento výsledek dává celému komplementu a co ještě
+potřebuje}\label{co-tento-vuxfdsledek-duxe1vuxe1-celuxe9mu-komplementu-a-co-jeux161tux11b-potux159ebuje}}
+
+Pro celý původní \(F_2\), po odečtení konkrétního lokálního BF
+intervalu, jsou nyní doloženy následující údaje:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Všechny jiné fyzikální kritické konfigurace jsou od centra BF
+  vyčísleně odděleny, s nejmenší zde použitou kruhovou rezervou
+  \(3/100\). Platí to na celém původním kruhu, bez omezení na vybrané
+  výstupní okno.
+\item
+  Každá reálná kontinuální hrana v BF pásu je jednoduchá:
+  \(|\partial_Pt|>1/1600\), a její původní kontaktní jmenovatel je
+  \(|D_o|>1/2000\).
+\item
+  Na hlavní záporné větvi není vedle vyjmutého BF bodu žádný další
+  energetický pól. Hlavní kladná a obě nízké větve jsou nestacionární
+  podle předchozích rychlostních důkazů; jejich skutečné příspěvky
+  zůstávají v komplementu.
+\item
+  Samostatné společné příspěvky QA, QC a QB již mají odvozené lokální
+  holomorfní obvody, ale zde získaná separace navíc dokazuje, že tyto
+  společné konfigurace nenastávají přímo na BF centrech.
+\end{enumerate}
+
+Tyto body \textbf{neopravňují} nahradit lokální mez
+\(|B_{\rm loc}|<2^{80}\) mezí pro celý \(B=B_{\rm loc}+F_{2,\rm comp}\).
+Ke číselné normě celého komplementu zbývá převést doložené reálné
+informace na konkrétní komplexní obvod: uvést jeho vzdálenost od všech
+příslušných kořenů, minima jmenovatelů na obvodu a jednotnou mez
+integrandu. Zejména v části hlavní záporné větve mimo maličký BF
+interval je pozitivita energetické mezery z (CG30) kvalitativní, dokud
+není zaplacen konkrétní obvod nebo přímý kvantitativní odhad této
+mezery.
+
+Jde tedy o dokončený fyzikální geometrický certifikát pro tento
+zbývající krok, nikoli o nový obecný časový důkaz nebo nový čas. Závěr
+původního experimentu zůstává podmíněn všemi jeho dřívějšími aparátovými
+a rozptylovými předpoklady.
+
+Konkrétní mezera posledního uvedeného atomového dílu je dále
+vyčíslena v AM13--AM18. Norma celého odpovídajícího atomového
+komplementu je doložena v AM3. Tyto následné výsledky nepřidávají
+do CG27 žádnou dosud neodvozenou mez kontinua.
+
+\clearpage
+\section{Holomorfie celého komplementu a výslovné koncové meze}
+\hypertarget{pux16fvodnuxed-pux159esnuxe1-dekompozice}{%
+\subsection{Původní přesná
+dekompozice}\label{pux16fvodnuxed-pux159esnuxe1-dekompozice}}
+
+Pišme jako v BF
+
+\[
+\Phi(P,K)=\beta+\omega_b(P)-\varepsilon(K-P),\qquad
+\Phi(P(x,K),K)=E_b(K)+x^2,
+\] \[
+Z=E-E_b(K),\qquad r=2^{-64}.
+\tag{HC1}
+\]
+
+Původní místní příspěvek \(F_{2,\mathrm{loc}}\) je celý člen
+\(\sigma=-1\) na intervalu \(P(-r,K)\le P\le P(r,K)\), s původní mírou
+\(\mathrm dP/(2\pi)\). Jeho doplněk je přesně
+
+\[
+F_{2,\mathrm{comp}}=F_2-F_{2,\mathrm{loc}}.
+\tag{HC2}
+\]
+
+Do doplňku patří celá druhá pulzní větev a celý zbytek první větve.
+Pohyb konců v K se zachovává na obou stranách rovnosti. Zdroj, jeho
+normalizace, celé energetické okno, kruh K, všech 26 štítků a původní
+pravděpodobnostní jev se tím nemění.
+
+\hypertarget{vuxfdslovnux11b-omezenuxe1-ux10duxe1st-u-pohyblivuxfdch-koncux16f}{%
+\subsection{Výslovně omezená část u pohyblivých
+konců}\label{vuxfdslovnux11b-omezenuxe1-ux10duxe1st-u-pohyblivuxfdch-koncux16f}}
+
+Na širším Morseově oboru z BF24 jsou doloženy
+
+\[
+|K-K_0|<2^{-60},\quad |x|<2^{-61},\quad
+|a(x,K)|<2^{12},\quad |P_x|<8,
+\] \[
+a=h_-r_bP_x,\quad |h_-|<5,\quad |R_A|<2^{34},\qquad
+f_A=\frac{2ir_b}{Z-x^2}+R_A.
+\tag{HC3}
+\]
+
+Vyčleňme dva přesné intervaly \(r\le|x|\le2r\). Jejich celý původní
+příspěvek označme \(F_{2,\mathrm{ann}}\). Zvolme
+
+\[
+|K-K_0|<2^{-60},\qquad |Z|<r^2/4=2^{-130}.
+\tag{HC4}
+\]
+
+Všechny zde používané objektové argumenty zůstávají v oboru BF18.
+Skutečně \(|P-P_0|\le8|K-K_0|+4|x|<2^{-57}+2^{-61}\), zatímco
+\(|\omega-\omega_b(P)|=|Z-x^2|<5r^2\). Obě meze jsou přísně menší než
+odpovídající části objektového poloměru \(R_o=2^{-24}\).
+
+Na uvedených intervalech
+
+\[
+|Z-x^2|\ge\frac34x^2.
+\tag{HC5}
+\]
+
+Přesný integrál proto je
+
+\[
+F_{2,\mathrm{ann}}=
+\frac{i}{\pi}\int_{r\le|x|\le2r}\frac{a(x,K)}{Z-x^2}\,\mathrm dx
++\frac1{2\pi}\int_{r\le|x|\le2r}h_-R_AP_x\,\mathrm dx.
+\tag{HC6}
+\]
+
+Je holomorfní v obyčejných proměnných K,Z na celém (HC4), včetně
+\(Z=0\). První člen je omezen číslem
+
+\[
+\frac{2^{12}}{\pi}\frac43\,2\int_r^{2r}\frac{\mathrm dx}{x^2}
+=\frac{2^{12}}{\pi}\frac4{3r}<2^{77}.
+\]
+
+Druhý člen má modul menší než \(2r\cdot5\cdot2^{34}\cdot8<2^{-23}\).
+Celkem tedy bezpečně
+
+\[
+\boxed{|F_{2,\mathrm{ann}}|<2^{78}\quad\text{na (HC4)}.}
+\tag{HC7}
+\]
+
+Pro reálné K a původní horní komplexní energii jde o prostou změnu
+integrační proměnné. Následné pokračování má proto přesně původní
+fyzikální význam. Kolem konců \(x=\pm r\) nevzniká nezapočtené reziduum
+ani nový prahový bod.
+
+Na menším původním oboru BF2 je k dispozici Cauchyův polydisk poloměrů
+\(2^{-61}\) v K a \(2^{-131}\) v Z. Pro všechna \(m,n\ge0\) tudíž
+
+\[
+\boxed{
+|\partial_K^m\partial_Z^n F_{2,\mathrm{ann}}|
+\le m!n!\,2^{61m+131n+78}.}
+\tag{HC8}
+\]
+
+Derivace v K je zde při pevném Z; \(\partial_E=\partial_Z\). Část
+\(r\le|x|\le2r\) tedy již není otevřeným číselným úkolem. Mez (HC7) se
+nevztahuje na vzdálený zbytek integračního kruhu.
+
+\hypertarget{uxfaplnost-muxedstnuxedch-typux16f-mimo-vyjmutuxfd-vuxe1zanuxfd-bod}{%
+\subsection{Úplnost místních typů mimo vyjmutý vázaný
+bod}\label{uxfaplnost-muxedstnuxedch-typux16f-mimo-vyjmutuxfd-vuxe1zanuxfd-bod}}
+
+Fixujme jedno původní reálné centrum \((K_0,E_0)\) na BF. Na každém z
+obou pulzních příspěvků rozdělme původní kruh na intervaly s konci mimo
+všechny singularity. Nepoužívá se hladké dělení jednotky v P: takový
+váhový činitel by sám neumožňoval holomorfní deformaci obvodu.
+
+Úplný objektový vzorec je racionální v původní fyzikální odmocnině. Jeho
+možné místní překážky tedy pocházejí z objektových hran, kontaktních
+pólů a výměny pulzních větví. Jejich úplný fyzikální soupis již byl
+dokázán v PT, BC, M, L a BS.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Obyčejná objektová hrana.} Jestliže je relativní rychlost
+  nenulová, její průmět je jednoduchý holomorfní kořen v P. Původní
+  vnější energie posune kořen do jedné poloroviny. Pevný oblouk v opačné
+  polorovině dává holomorfní místní periodu. Obě stacionární kontinuální
+  křivky jsou od našeho centra odděleny podle CS12.
+\item
+  \textbf{Jednoduchý objektový pól uvnitř mezery.} Pro nenulovou
+  relativní rychlost je jeho průmět opět jednoduchý. Původní jmenovatel
+  splňuje \(D_P=D_\omega(\sigma\varepsilon'-\omega_b')\ne0\). Stejná
+  vnější deformace zachovává fyzikální reziduum a dává holomorfní místní
+  příspěvek. Jediný stacionární pól při našem \((K_0,E_0)\) je právě
+  vyjmutý BF bod. Druhá vázaná konfigurace má jiné K podle BS25--BS30.
+\item
+  \textbf{Pól společně s hranou.} Všechny možnosti jsou již úplně
+  zahrnuty v QA. Jejich společná perioda má holomorfní pokračování, i
+  když jednotlivé oddělené příspěvky takový závěr nedávají.
+\item
+  \textbf{Kuželový konec.} Jediný dosažitelný objektový kužel je zahrnut
+  v QC, včetně obou jeho hran a původního listu.
+\item
+  \textbf{Výměna pulzních větví.} Přesné maticové rozštěpení KP15b
+  zachovává obě původní větve. Mimo objektovou hranu je součet
+  regulární; na současné hraně jej řeší QB.
+\end{enumerate}
+
+Žádný vynechaný stacionární fyzikální typ v tomto seznamu nezůstává.
+Póly na jiné odmocninové vrstvě se do něj svévolně nepřidávají. Současné
+kořeny dvou různých pulzních sčítanců se deformují v každém z přesně
+zachovaných sčítanců zvlášť.
+
+\hypertarget{kompaktnuxed-objektovuxe9-konce-nevytvuxe1ux159ejuxed-dalux161uxed-pux159ekuxe1ux17eku}{%
+\subsection{Kompaktní objektové konce nevytvářejí další
+překážku}\label{kompaktnuxed-objektovuxe9-konce-nevytvuxe1ux159ejuxed-dalux161uxed-pux159ekuxe1ux17eku}}
+
+Je třeba ošetřit také \(v=\pm1\), kde kontaktní váha některého
+objektového stavu může vymizet. Samotné zkrácení funkce při jednom P by
+k holomorfii okolní periody nestačilo.
+
+Při \(v=1\) se původní polynomy přesně rozkládají jako
+
+\[
+D_o=(x-1)N,\qquad
+N=x^2+\frac35(1+q)x+q.
+\tag{HC9}
+\]
+
+U viditelného kompaktního pólu \(x=1\), \(\omega=g\), je
+
+\[
+N=\frac85(1+q)\ne0,\qquad
+D_\omega=-\frac{8i}{5}(1+q)\ne0.
+\tag{HC10}
+\]
+
+Zde \(q\ne-1\), protože \(t=1-5\cos g\) je přísně uvnitř mezery a není
+roven \(-4\). Půlperiodová symetrie dává totéž pro viditelný kompaktní
+pól při \(v=-1\).
+
+Zrušený faktor N nemá při \(v=1\) přehlédnutý kořen na otevřeném
+kontinuu. Tam je fyzikální q reálné, \(|q|<1\), a při
+\(x=e^{-i\delta}\), \(\delta=\omega-g\), platí přesně
+
+\[
+\frac Nx=(1+q)(\cos\delta+3/5)
+-i(1-q)\sin\delta.
+\]
+
+Nula by tedy vyžadovala x=±1, ale \(N(1)=8(1+q)/5\) a \(N(-1)=2(1+q)/5\)
+jsou nenulové. Symetrie řeší i \(v=-1\). Na hranách byly všechny
+fyzikální nuly \(D_o\) úplně určeny v PT23: mají \(v=\pm v_a\),
+\(0<v_a<1\), a proto neleží na kompaktních koncích. Všechny zbývající
+koncové kořeny tak skutečně leží v přísné fyzikální mezeře.
+
+U ostatních koncových objektových kořenů je
+\(L=(\cos(\omega-g)-v)^2+16\sin^2(\omega-g)>0\). Původní reálná fázová
+rovnice BC10--BC12 se tam proto hladce pokračuje a stále má
+\(F_\omega>1\). Výslovně s
+\(B_o=-(2/5)x[\cos\delta-v+4i\sin\delta]\ne0\), \(q=e^{-i\eta_o}\),
+\(q_{\rm pole}=e^{-i\varphi}\) je \(D_o=B_o(q-q_{\rm pole})\). V jeho
+nule proto
+\(D_{o,\omega}=iB_oq\,\partial_\omega(\varphi-\eta_o) =iB_oq F_\omega\ne0\).
+Objektová větev je holomorfní přes konec v P; její kontaktní reziduum
+smí být nulové, ale nevzniká nový pól vyššího řádu.
+
+Na kompaktních koncích je objektová rychlost nulová. Původní energetické
+podmínky a úplná vyloučení M, L, BS zajišťují nenulovou pulzní rychlost
+u všech zde dosažitelných rezonancí. Jde tedy opět o nestacionární
+případ bodu 2 výše, případně o odstranitelný čitatel. Zkrácení nevytváří
+nový stacionární příspěvek celého druhého kontaktu.
+
+\hypertarget{sloux17eenuxed-pux16fvodnuxedch-vnux11bjux161uxedch-period}{%
+\subsection{Složení původních vnějších
+period}\label{sloux17eenuxed-pux16fvodnuxedch-vnux11bjux161uxedch-period}}
+
+Po odstranění intervalu \(|x|<r\) jsou na reálném kruhu při pevném
+\((K_0,E_0)\) jen konečně mnohé výše klasifikované singularity. Plyne to
+také přímo z algebraického popisu původního integrandu. Identicky nulová
+kontaktní větev by vytvořila celý interval stacionárních rezonancí,
+který úplný soupis vylučuje.
+
+Kolem každého zbývajícího bodu lze zvolit malý interval a správný pevný
+vnější oblouk podle předchozího seznamu. Jejich konce jsou regulární. Na
+zbytku kruhu je původní fyzikální integrand holomorfní v okolí kompaktní
+cesty. Konečný součet těchto period je proto holomorfní na společném
+komplexním okolí parametrů. Původní horní energetický limit je ve všech
+členech stejný.
+
+Případné spoje mezi souřadnicí P a podepsanou pulzní souřadnicí
+\(h=k-\pi\) lze vést po regulárních úsecích. Pohyb konců s K pak přidává
+pouze integrály holomorfního integrandu mezi holomorfními konci. Obdobně
+jsou konce vyjmutého BF intervalu kontrolovány již výslovně v
+(HC4)--(HC8).
+
+Tím se dokazuje skutečné tvrzení pro celý původní zbytek:
+
+\[
+\boxed{
+F_{2,\mathrm{comp}}\text{ má u každého původního centra vázaného prahu}
+\text{ holomorfní pokračování v }(K,Z).}
+\tag{HC11}
+\]
+
+Používá se přesný součet integračních úseků. Žádný zdrojový stav, pulzní
+větev, kontakt ani část vybraného pravděpodobnostního jevu se
+neodstraňuje.
+
+Morseova souřadnice
+\(x=\operatorname{sgn}(P-P_b) \sqrt{\Phi(P,K)-E_b(K)}\), s kladnou
+orientací v reálném řezu, je na překryvech jednoznačná. Pevné konce
+\(x=\pm r\) se tudíž na překryvech shodují. Obě původní BF křivky nad
+uzavřeným I jsou kompaktní. Konečný výběr těchto okolí proto zaručuje
+také společný kladný poloměr a konečnou horní mez zbytku po vhodném
+zmenšení. \textbf{Tento poslední argument jejich číselné hodnoty
+neurčuje.}
+
+\hypertarget{dux16fsledek-pro-celuxfd-pux159enos-a-zbuxfdvajuxedcuxed-ux10duxedselnuxfd-uxfadaj}{%
+\subsection{Důsledek pro celý přenos a zbývající číselný
+údaj}\label{dux16fsledek-pro-celuxfd-pux159enos-a-zbuxfdvajuxedcuxed-ux10duxedselnuxfd-uxfadaj}}
+
+S \(B=B_{\mathrm{loc}}+F_{2,\mathrm{comp}}\) a \(s^2=Z\) je původní celý
+přenos přesně
+
+\[
+V(K,E_b+s^2)=
+\frac{(-2A-2sB,\,4s)^T}{F_1A+s(4+F_1B)}.
+\tag{HC12}
+\]
+
+Z (HC11), BF a FQ je tedy skutečně holomorfní funkcí \((K,s)\) na
+nějakém okolí \(s=0\). Má rozvoj
+
+\[
+V(K,E_b+s^2)=\binom{-2/F_1(E_b)}0
++s\binom{8/[F_1(E_b)^2 A(K,0)]}{4/[F_1(E_b)A(K,0)]}
++O(s^2).
+\tag{HC13}
+\]
+
+Koeficient s je nenulový. Tento kvalitativní tvar již není podmíněn
+dodatečnou holomorfií celého komplementu; ta byla výše dokázána. Jeho
+společný číselný obor a bodová konstanta však nadále vyžadují explicitní
+společný obvod a mez celého zbytku.
+
+Je-li taková mez na konkrétním společném oboru doložena jako
+\(|B|\le M_B\), již ověřené původní FQ konstanty dovolují
+
+\[
+|K-K_0|<2^{-88},\qquad
+|s|<\min\left\{2^{-76},\frac{2^{-13}}{4+3M_B}\right\},
+\qquad
+\left\|V-\binom{-2/F_1(E_b+s^2)}0\right\|_2<2^{21}|s|.
+\tag{HC14}
+\]
+
+K číselnému oboru v (HC14) se ovšem musí přidat skutečný explicitní
+obor, na němž platí dodaná mez \(M_B\). Zde přidělené \(2^{78}\) pro
+koncové úseky ani starší \(2^{80}\) pro místní \(B_{\mathrm{loc}}\) se
+za normu celého B nepovažují.
+
+Samostatný nový odhad SP používá spektrální kladnost a poskytuje
+oboustrannou integrovanou stavovou mez bez této bodové konstanty. Jeho
+normový závěr není zaměňován s chybějící číselnou holomorfní mezí v
+tomto oddílu. Žádný nový globální čas zde tvrzen není.
+
+\clearpage
+\section{Číselná mez celého hlavního záporného atomového komplementu}
+\hypertarget{pux159esnuxfd-vuxfdsledek}{%
+\subsection{Přesný výsledek}\label{pux159esnuxfd-vuxfdsledek}}
+
+Fixujme kladný střed vázaného prahu \((P_0,K_0,E_0)\),
+\(e_0=E_0-\beta\), \(K_0=K_b(e_0)\). Záporný střed se získá reflexí.
+Označme původní hlavní zápornou objektovou fázi
+
+\[
+\omega_b(P)=\pi+\omega_c(-\cos P),\qquad
+u_b(P)=e^{-i\omega_b(P)},
+\tag{AM1}
+\]
+
+a její skutečnou kontaktní atomovou váhu \(r_b(P)\). Pro reálné P platí
+\(0\le r_b(P)\le1\), protože jde o atom původní normalizované kontaktní
+spektrální míry. Případné kompaktní koncové hodnoty lze doplnit spojitě;
+hodnoty na jednotlivých bodech nemění integrál.
+
+Nechť \(P(x,K)\), \(E_b(K)\) jsou přesně funkce BF24 a
+
+\[
+r=2^{-64},\qquad
+a(K)=P(-r,K),\quad b(K)=P(r,K),\quad I(K)=[a(K),b(K)].
+\tag{AM2}
+\]
+
+Při komplexním K znamená interval holomorfní pokračování téže Morseovy
+cesty. Definujme \(\mathcal A_{\mathrm{comp}}\) jako celý původní
+příspěvek atomu (AM1), s oběma pulzními větvemi, minus jeho
+\(\sigma=-1\) příspěvek na \(I(K)\). Pak
+
+\[
+\boxed{\begin{gathered}
+|K-K_0|<2^{-286},\qquad
+Z=E-E_b(K),\quad |Z|<2^{-286}\\
+\Longrightarrow\quad
+\mathcal A_{\mathrm{comp}}\text{ je holomorfní a }
+|\mathcal A_{\mathrm{comp}}|<2^{280}.
+\end{gathered}}
+\tag{AM3}
+\]
+
+Obor je menší než BF2. Funkce je pokračováním původního vnějšího
+integrálu; žádný atom ani pulzní větev se neodstraňuje změnou
+normalizace. Následuje úplný důkaz včetně pevného intervalu a obou
+koncových oprav.
+
+\hypertarget{jednotnuxe9-pomocnuxe9-meze}{%
+\subsection{Jednotné pomocné meze}\label{jednotnuxe9-pomocnuxe9-meze}}
+
+Z CG10--CG13 a BS vyplývá ve středu
+
+\[
+\frac3{10}<\delta_*<\frac{13}{40},\quad
+-\frac35<v_*<-\frac25,\quad
+\frac34<K_0<\frac65.
+\]
+
+Na celém BS boxu \(1/4<\delta<1/3\), \(1<z<5/4\) máme
+
+\[
+-v'=\sin\delta+4\cos\delta\,z+4\sin\delta\,z'
+<\frac13+5+\frac{16}{9}=\frac{64}{9}.
+\]
+
+Protože ve středu \(\sin P_0>4/5\), jeho objektová i pulzní rychlost
+splňuje
+
+\[
+\boxed{w_* >9/80.}
+\tag{AM4}
+\]
+
+Na hlavní větvi je celkově \(|\omega_b'(P)|<3/4\) podle M3 a fyzikální
+symetrie. Pulz má pro \(0\le k\le\pi\)
+
+\[
+W(k)=|\varepsilon'(k)|
+=\frac{2\sin(k/2)}{\sqrt{3-2\cos k}},
+\qquad
+\boxed{k/5<W(k)\le k\quad(k>0).}
+\tag{AM5}
+\]
+
+Horní mez plyne ze \(2\sin(k/2)\le k\) a jmenovatele nejméně 1. Pro
+dolní použijme \(\sin(k/2)\ge k/\pi\), \(\sqrt5<3\), \(\pi<10/3\). Dále
+vždy \(W<1\). Každá reálná spojená fáze
+\(\omega_b(P)-\varepsilon(K_0-P)\) je tedy na kruhu Lipschitzova s
+konstantou menší než 2.
+
+Při pevném \(e_0\) pišme jako v CG28
+
+\[
+d=\pi+g-e_0,\quad \delta_{\max}=a_p-d,\quad
+a_p=\arccos(-3/5),\quad
+P(\delta)=\pi-\arccos v(\delta).
+\]
+
+Označme \(p_e=P(\delta_{\max})\). Protože
+\(\kappa_*\ge W(\kappa_*)=w_*>9/80\), dostáváme z (AM5)
+
+\[
+\delta_{\max}-\delta_*
+=a_p-\varepsilon(\kappa_*)
+=\int_0^{\kappa_*}W(t)\,dt
+>\frac{81}{64000}>\frac1{1000}.
+\tag{AM6}
+\]
+
+Na této části BS dává \(|d\delta/dP|<1/3\), a proto \(P_0-p_e>3/1000\).
+
+Budeme také potřebovat malou explicitní rezervu od konce BS boxu:
+
+\[
+\boxed{\delta_{\max}<1/3-1/2000.}
+\tag{AM7}
+\]
+
+Je to přímé zesílení BS11. Položme \(\Delta=a_p-3\pi/5\),
+\(x=997/3000\). BS dává \(\tan\Delta<343/1000\). Přitom \[
+\tan x\ge x+x^3/3
+>\frac{1032937}{3000000}
+>\frac{343}{1000}+\frac1{1000}.
+\] Na \([0,x]\) je \(\sec^2<2\), takže \(x-\Delta>1/2000\). Z
+\(\delta_{\max}\le\Delta+1/1000\) plyne (AM7).
+
+\hypertarget{kvantitativnuxed-rux16fst-energetickuxe9-kux159ivky-k-pux159i-pevnuxe9m-e0}{%
+\subsection{Kvantitativní růst energetické křivky K při pevném
+E0}\label{kvantitativnuxed-rux16fst-energetickuxe9-kux159ivky-k-pux159i-pevnuxe9m-e0}}
+
+Použijme původní \(\Phi(P,K)=\beta+\omega_b(P)-\varepsilon(K-P)\) a
+položme
+
+\[
+h=2^{-60},\qquad
+\mathcal D(P,K)=\frac{\Phi(P,K)-E_0}{\Phi_K(P_0,K_0)}.
+\tag{AM8}
+\]
+
+Ve středu je \(\mathcal D_P=0\), \(\mathcal D_K=1\) a \(\Phi_K=-w_*\).
+Na komplexním polydisku poloměru h v P,K jsou z BF16 a pulzních mezí BF
+druhé derivace \(\Phi\) menší než \(2^{21}\), třetí menší než
+\(2^{44}\). Z (AM4) tedy druhé derivace \(\mathcal D\) mají mez
+\(2^{25}\).
+
+Na K-kružnici \(|K-K_0|=h\), pro \(|P-P_0|\le h\), máme
+
+\[
+|\mathcal D-(K-K_0)|
+\le\tfrac12 2^{25}(|P-P_0|+|K-K_0|)^2
+\le2^{26}h^2<h.
+\tag{AM9}
+\]
+
+Rouchého věta dává jediný holomorfní graf \(K=\mathcal K(P)\). Je reálný
+pro reálné P a shoduje se s původním \(K_-(\delta(P))\). Označení
+k\textless0 je zachováno, protože jeho středová vzdálenost od nuly je
+větší než \(9/80\). Dostáváme
+
+\[
+|\mathcal K-K_0|\le2^{26}h^2,
+\qquad |\mathcal K'|<2^{27}h=2^{-33}.
+\tag{AM10}
+\]
+
+Na tomto reálném grafu je \(\Phi_K<0\), \(|\Phi_K|<1\). Z
+\(\Phi_{PP}(P_0,K_0)>1/4\) a meze třetích derivací plyne
+\(\Phi_{PP}>1/4-2^{-15}\). Smíšené druhé derivace
+\(\Phi_{PK},\Phi_{KK}\) mají pulzní mez 8. Proto
+
+\[
+\mathcal K''
+=-\frac{\Phi_{PP}+2\Phi_{PK}\mathcal K'
+               +\Phi_{KK}(\mathcal K')^2}{\Phi_K}
+>\frac18.
+\tag{AM11}
+\]
+
+V čitateli stačí odečíst \(2^{-15}+2^{-29}+2^{-63}\) od \(1/4\).
+Následkem je
+
+\[
+\mathcal K(P)-K_0\ge\frac{|P-P_0|^2}{16}
+\quad (|P-P_0|\le h).
+\tag{AM12}
+\]
+
+CG29 dokazuje, že \(K_-(\delta)\) je přísně monotónní na obou stranách
+svého jediného globálního minima. Proto se (AM12) převádí na celý
+energeticky přípustný kladný interval \(p_e\le P\le\pi\):
+
+\[
+K_-(\delta(P))-K_0
+\ge\frac{\min\{|P-P_0|^2,h^2\}}{16}.
+\tag{AM13}
+\]
+
+Oba okraje lokálního intervalu jsou uvnitř přípustného intervalu: vlevo
+to zajišťuje (AM6), vpravo \(P_0<6/5<\pi\). Není zde dosazen pouze
+kvalitativní argument kompaktností.
+
+\hypertarget{globuxe1lnuxed-reuxe1lnuxe1-energetickuxe1-mez-mimo-pux159esnuxfd-interval-i_0}{%
+\subsection{\texorpdfstring{Globální reálná energetická mez mimo přesný
+interval
+\(I_0\)}{Globální reálná energetická mez mimo přesný interval I\_0}}\label{globuxe1lnuxed-reuxe1lnuxe1-energetickuxe1-mez-mimo-pux159esnuxfd-interval-i_0}}
+
+Položme \(I_0=I(K_0)\). V BF Morseově souřadnici
+\(x=(P-P_0)\sqrt{C_M}\), s \(0<C_M<2\) na reálném řezu, proto oba okraje
+splňují
+
+\[
+|P(\pm r,K_0)-P_0|>r/2=2^{-65}.
+\tag{AM14}
+\]
+
+\hypertarget{kladnuxe9-energeticky-pux159uxedpustnuxe9-p}{%
+\subsubsection{Kladné energeticky přípustné
+P}\label{kladnuxe9-energeticky-pux159uxedpustnuxe9-p}}
+
+Pro \(P\in[p_e,\pi]\setminus I_0\) určuje energie \(e_0\) požadovanou
+pulzní fázi \(\varepsilon_{\rm req}=d+\delta(P)\) a moment
+\(\kappa_{\rm req}\). Protože \(K_-(P)=P-\kappa_{\rm req}\ge K_0\),
+skutečný moment má modul \(\kappa_{\rm act}=P-K_0\ge\kappa_{\rm req}\).
+Z (AM13),(AM14)
+
+\[
+\kappa_{\rm act}-\kappa_{\rm req}
+=K_-(P)-K_0>2^{-134}.
+\]
+
+Skutečný energetický rozdíl tedy splňuje
+
+\[
+\begin{aligned}
+g(P)&=\omega_b(P)-\varepsilon(K_0-P)-e_0\\
+&=\int_{\kappa_{\rm req}}^{\kappa_{\rm act}}W(t)\,dt
+>\frac{(\kappa_{\rm act}-\kappa_{\rm req})^2}{10}
+>2^{-272}.
+\end{aligned}
+\tag{AM15}
+\]
+
+Ve zvláštním bodě \(P=p_e\) lze v (AM13) použít h, protože
+\(P_0-p_e>3/1000>h\). Dostáváme silnější
+
+\[
+g(p_e)>2^{-252}=:g_0.
+\tag{AM16}
+\]
+
+\hypertarget{zuxe1pornuxe9-energeticky-pux159uxedpustnuxe9-p}{%
+\subsubsection{Záporné energeticky přípustné
+P}\label{zuxe1pornuxe9-energeticky-pux159uxedpustnuxe9-p}}
+
+Pišme \(P=-p\), \(p_e\le p\le\pi\). Ze CG29 máme \(p_e>K_0>3/4\).
+Složený skutečný pulzní moment tedy splňuje
+
+\[
+\kappa_{\rm act}
+=\operatorname{dist}_{\mathbb T}(K_0+p,0)
+\ge\min\{K_0+p_e,\pi-K_0\}>3/2.
+\]
+
+Naproti tomu \(\kappa_{\rm req}\le\kappa(d)<\pi/3\): z \(\cos d<-1/5\)
+plyne \(\cos\kappa(d)=(1-5\cos d)/4>1/2\). Proto
+\(\kappa_{\rm act}-\kappa_{\rm req}>1/4\), a (AM5) dává \(g(-p)>1/160\).
+Zejména také \(g(-p_e)>g_0\).
+
+\hypertarget{zbyluxe9-body-s-delta-nad-energetickuxfdm-koncem}{%
+\subsubsection{Zbylé body s delta nad energetickým
+koncem}\label{zbyluxe9-body-s-delta-nad-energetickuxfdm-koncem}}
+
+Pro \(|P|<p_e\) je \(\delta(P)>\delta_{\max}\), takže přímo
+
+\[
+g(P)\ge\delta(P)-\delta_{\max}.
+\tag{AM17}
+\]
+
+V bodě \(p_e\) je objektová rychlost větší než \(3/32\). Skutečně BS
+dává \(v_e>-13/18\), zatímco \(\delta_{\max}>\delta_*\) a monotonicita v
+dávají \(v_e<v_*<-2/5\). Proto \(\sin p_e>2/3\), a \(-v'<64/9\). Na BS
+boxu je navíc \(|\omega_b''|<29/48<1\), jak plyne z BF8 a jeho důkazu.
+
+Na úsečce délky \(g_0/4\) dovnitř od \(p_e\) proto zůstává objektová
+rychlost větší než \(1/16\). Tento úsek neopouští BS box: (AM7) dává
+rezervu \(1/2000\), zatímco změna fáze je podle M3 menší než délka
+úsečky. Pokud \(p_e-|P|\le g_0/4\), globální Lipschitzova mez 2 a (AM16)
+dávají \(g(P)>g_0/2\). Pokud \(p_e-|P|\ge g_0/4\), monotonicita
+objektové fáze a (AM17) dávají
+
+\[
+g(P)\ge\frac1{16}\frac{g_0}{4}=2^{-258}.
+\]
+
+Všechny případy tedy uzavírají konkrétní celokruhovou mezeru
+
+\[
+\boxed{
+\omega_b(P)-\varepsilon(K_0-P)-e_0>\gamma,
+\qquad\gamma=2^{-272},\qquad P\notin I_0.}
+\tag{AM18}
+\]
+
+Jde o skutečnou původní fázi na celém kruhu. Převod z CG30 na číselnou
+mezeru zde nevyužívá nevyčíslené minimum.
+
+\hypertarget{celuxe1-pulznuxed-matice-pevnuxfd-reuxe1lnuxfd-komplement}{%
+\subsection{Celá pulzní matice: pevný reálný
+komplement}\label{celuxe1-pulznuxed-matice-pevnuxfd-reuxe1lnuxfd-komplement}}
+
+Pro \(\lambda=e^{-ie}\) a původní pulzní symbol V definujme
+
+\[
+\boxed{
+\mathcal C_P(K,e)=
+(\lambda I+u_b(P)V(K-P))
+\, (\lambda I-u_b(P)V(K-P))^{-1}.}
+\tag{AM19}
+\]
+
+Pro reálné K a původní vnější e je \(r_b(P)[\mathcal C_P]_{11}\) přesně
+celý objektový atom konvolvovaný s oběma pulzními větvemi. Tato maticová
+formule nevytváří volbu pulzní banky u \(k=\pm\pi\).
+
+Při \((K_0,e_0)\) má větev \(\sigma=-1\) podle (AM18) úhlovou spektrální
+vzdálenost větší než \(\gamma\). Její rozdíl fází je menší než \(\pi\),
+neboť \(\omega_b\le\pi+g+b\), \(b=\pi-a_p<\pi/3\). Pro druhou větev
+platí
+
+\[
+\pi+g\le\omega_b+\varepsilon\le2\pi+g,
+\]
+
+takže její kruhová úhlová vzdálenost od \(e_0\) je větší než 1. Proto
+pro \(P\notin I_0\)
+
+\[
+\|[\lambda_0I-u_b(P)V(K_0-P)]^{-1}\|<2^{273}.
+\tag{AM20}
+\]
+
+Použita byla \(2\sin(\theta/2)\ge2\theta/\pi>\theta/2\) pro
+\(0\le\theta\le\pi\).
+
+Na pomocném absolutním polydisku
+
+\[
+|K-K_0|<2^{-282},\qquad |e-e_0|<2^{-282}
+\tag{AM21}
+\]
+
+je \(|\lambda-\lambda_0|<2|e-e_0|\) a \(\|V(K-P)-V(K_0-P)\|<4|K-K_0|\).
+Druhá mez plyne přímo z původních čtyř exponenciálních položek matice V;
+její derivace má na tomto proužku Frobeniovu normu menší než 4,
+nezávisle na reálném P. Neumannův součin je proto menší než
+\(6\,2^{-282}2^{273}<1/2\). Získáváme
+
+\[
+\|[\lambda I-u_bV]^{-1}\|<2^{274},\qquad
+\|\mathcal C_P\|<2^{277}.
+\tag{AM22}
+\]
+
+Pro druhou nerovnost lze použít přesnou identitu
+\(\mathcal C_P=2\lambda(\lambda I-u_bV)^{-1}-I\), \(|\lambda|<2\).
+
+Pevný komplement
+
+\[
+J_0(K,e)=\int_{\mathbb T\setminus I_0}
+r_b(P)[\mathcal C_P(K,e)]_{11}\frac{dP}{2\pi}
+\tag{AM23}
+\]
+
+je tedy holomorfní na (AM21), s \(|J_0|<2^{277}\). Stačí dominované
+holomorfní integrování: P zůstává reálné, \(0\le r_b(P)\le1\), a žádná
+globální komplexní šířka objektové vázané fáze v P není potřebná.
+
+Na výsledném oboru (AM3) totiž BF20 dává
+
+\[
+|e-e_0|\le8|K-K_0|+|Z|<9\,2^{-286}<2^{-282},
+\tag{AM24}
+\]
+
+takže celý tento Neumannův odhad zůstává platný.
+
+\hypertarget{pux159esnuxe9-muxedstnuxed-a-koncovuxe9-opravy}{%
+\subsection{Přesné místní a koncové
+opravy}\label{pux159esnuxe9-muxedstnuxed-a-koncovuxe9-opravy}}
+
+V okolí \(I_0\) jsou obě pulzní větve analyticky oddělené. Pišme
+
+\[
+c_\sigma(P,K,e)=h_\sigma(K-P)r_b(P)
+\frac{e^{-ie}+e^{-i[\omega_b(P)+\sigma\varepsilon(K-P)]}}
+{e^{-ie}-e^{-i[\omega_b(P)+\sigma\varepsilon(K-P)]}}.
+\tag{AM25}
+\]
+
+Na reálném P pro původní vnější e platí přesně
+\(r_b[\mathcal C_P]_{11}=c_++c_-\). Položme \(a_0=a(K_0)\),
+\(b_0=b(K_0)\). Požadovaný atomový komplement má přesnou reprezentaci
+
+\[
+\boxed{
+\mathcal A_{\mathrm{comp}}
+=J_0
+ +\int_{a_0}^{b_0}c_+\frac{dP}{2\pi}
+ +\int_{a_0}^{a(K)}c_-\frac{dP}{2\pi}
+ -\int_{b_0}^{b(K)}c_-\frac{dP}{2\pi}.}
+\tag{AM26}
+\]
+
+Nejprve se tato identita vezme pro reálné K a \(\operatorname{Im}e>0\),
+kde je to prosté rozdělení původního integrálu. Poté pravá strana určuje
+jeho holomorfní pokračování. Znaménka obou koncových oprav jsou dána
+rozdílem \(\int_{I_0}c_- -\int_{I(K)}c_-\).
+
+\hypertarget{duxe9lky-a-analytickuxe9-koncovuxe9-funkce}{%
+\subsubsection{Délky a analytické koncové
+funkce}\label{duxe9lky-a-analytickuxe9-koncovuxe9-funkce}}
+
+BF24 dává na \(|K-K_0|<2^{-60}\), pro pevné \(x=\pm r\),
+
+\[
+|P(x,K)-P_0|\le8\,2^{-60}+4r<2^{-56}.
+\]
+
+Cauchyův odhad na polovičním K-disku tedy dává
+
+\[
+|a'(K)|,|b'(K)|<32,
+\qquad
+|a(K)-a_0|,|b(K)-b_0|<32|K-K_0|.
+\tag{AM27}
+\]
+
+Obě krátké koncové cesty lze vzít jako přímé úsečky. Pro pevný interval
+máme \(|I_0|\le8r\).
+
+\hypertarget{pravidelnuxe1-plusovuxe1-muxedstnuxed-vux11btev}{%
+\subsubsection{Pravidelná plusová místní
+větev}\label{pravidelnuxe1-plusovuxe1-muxedstnuxed-vux11btev}}
+
+Její reálná úhlová mezera je větší než 1 podle (AM19)--(AM20). Na oboru
+(AM3) zůstává jmenovatel jejího skalárního resolventu větší než \(1/4\),
+čitatel menší než 4. Z BF máme \(|h_+|<5\); na pevném reálném P je
+\(r_b(P)\le1\). Proto
+
+\[
+\left|\int_{a_0}^{b_0}c_+\frac{dP}{2\pi}\right|
+<80(8r)<1.
+\tag{AM28}
+\]
+
+\hypertarget{obux11b-kritickuxe9-koncovuxe9-opravy}{%
+\subsubsection{Obě kritické koncové
+opravy}\label{obux11b-kritickuxe9-koncovuxe9-opravy}}
+
+Na každém reálném základním konci je přesně
+\(E_0-\Phi(a_0,K_0)=E_0-\Phi(b_0,K_0)=-r^2\). Pro P na příslušné krátké
+koncové cestě dávají BF16 a pulzní meze \(|\Phi_P|<3\), \(|\Phi_K|<2\).
+S (AM24),(AM27) tedy
+
+\[
+|[E-\Phi(P,K)]+r^2|
+< (9+3\cdot32+2)2^{-286}
+=107\,2^{-286}<2^{-279}.
+\tag{AM29}
+\]
+
+Zejména \(|E-\Phi(P,K)|>r^2/2=2^{-129}\), přičemž jeho modul je menší
+než \(1/2\). Pro \(|z|<1/2\) platí \(|e^{-iz}-1|\ge|z|/2\), a proto celý
+skalární Cayleyův faktor v \(c_-\) má zde bezpečnou mez \(2^{133}\).
+BF17 dává \(|r_b(P)|<64\) na této komplexní místní oblasti a opět
+\(|h_-|<5\). Stačí tedy
+
+\[
+|c_-|<2^{144}.
+\]
+
+Součet délek obou úseček je menší než \(64\,2^{-286}\). S původní mírou
+\(dP/(2\pi)\) dostáváme
+
+\[
+\left|\int_{a_0}^{a(K)}c_-\frac{dP}{2\pi}
+-\int_{b_0}^{b(K)}c_-\frac{dP}{2\pi}\right|
+<2^{150}2^{-286}<1.
+\tag{AM30}
+\]
+
+Integrandy jsou holomorfní v P,K,E na celých obou krátkých cestách a
+jejich konce závisejí holomorfně na K. Obě koncové opravy proto jsou
+holomorfní, nikoli pouze omezené okrajové hodnoty.
+
+Spojením (AM22),(AM26),(AM28),(AM30) získáváme dokonce
+\(|\mathcal A_{\mathrm{comp}}|<2^{277}+2<2^{278}\). Rezerva \(2^{280}\)
+v (AM3) je tedy bezpečná.
+
+\hypertarget{co-pux159esnux11b-tato-mez-uzavuxedruxe1-a-co-ne}{%
+\subsection{Co přesně tato mez uzavírá a co
+ne}\label{co-pux159esnux11b-tato-mez-uzavuxedruxe1-a-co-ne}}
+
+Rozklad (AM26) zachovává celý původní hlavní záporný objektový atom, obě
+jeho pulzní větve i přesný pohyblivý interval, z něhož BF vyjímá svůj
+původní \(\sigma=-1\) integrand. Zbytek plného kontaktu lze nadále psát
+jako
+
+\[
+F_{2,\mathrm{comp}}
+=\mathcal A_{\mathrm{comp}}
+ +\bigl[\text{celé ostatní objektové spektrum}
+       -\text{jeho původní místní }\sigma=-1\text{ díl}\bigr].
+\tag{AM31}
+\]
+
+Druhý člen obsahuje objektové kontinuum a ostatní vázané větve. Jejich
+možné jednoduché reálné průchody vyžadují vlastní fyzikální deformace a
+číselné meze; (AM3) se za jejich normu nevydává. Zvláště se zde netvrdí
+celý \(M_{\mathrm{comp}}\), nový globální Fourierův chvost ani nový čas.
+
+Už doložený přínos je konkrétní: původně pouze kvalitativní mezera CG30
+mimo maličký BF interval je nyní nahrazena celokruhovou mezerou
+\(2^{-272}\), a celý odpovídající atomový komplement má přesné komplexní
+okolí a číselnou normu (AM3).
+
+Zdroj, pevný počátek času, vybraný jev, normalizace, všech 26 štítků a
+korelace s pamětí a referencí se tím nemění.
+
+\clearpage
+\section{Časový závěr, kontrola a přesně zbývající údaje}
+
+\subsection{Dokončený oboustranný normový krok}
+
+Předchozí BF důkaz dával bodovou mez skutečného celého přenosu
+jen na reálné straně \(Z>0\), bez znalosti komplementu.
+Nové SP21 a SP28 řeší obě strany současně přímo ve fyzikálně
+vážené normě. Není třeba předem omezit bodovou hustotu
+\(\rho_2\) nebo celý \(B_{\rm comp}\).
+Pomocná aproximace CT6 obsahuje všechny původní kanály.
+
+Přesná cena je při uvedených parametrech
+\[
+2\sqrt{13/35}\,2^{-34}+2^{-29}<2\cdot10^{-9}.
+\]
+To současně platí pro všech 26 štítků a libovolnou původní
+korelaci s pamětí a referencí. Není zde součet 26 samostatných
+chyb: celý operátor působí na těchto faktorech totožně.
+
+\subsection{Co zbývá pro bodový číselný komplement}
+
+HC11 dokazuje kvalitativní holomorfii celého fyzikálního zbytku.
+HC7--HC8 vyčíslují přesné koncové úseky a AM3 celý hlavní
+záporný atom po původním místním odpočtu. Pro číselnou normu
+\(F_{2,\rm comp}\) zbývá celý druhý člen AM31:
+objektové kontinuum a ostatní vázané atomy, se stejným místním
+odpočtem. Jejich reálné průchody jsou jednoduché a v CG mají
+vyčíslené rychlosti, ale ty samy ještě neurčují komplexní
+normu celé periody.
+
+Přímá obvodová cesta musí dodat dvě společné číselné nerovnosti.
+První vyloučí nuly příslušných objektových radikandů během
+celé fyzikální deformace a omezí je na konečném obvodu.
+Druhá totéž provede pro původní kontaktní jmenovatel \(D_o\).
+Musí pokrývat celý zbývající integrační kruh, nejen malé
+oblouky u již určených reálných kořenů. Původní listy, obě
+pulzní složky a pohyblivé konce musejí zůstat zachovány.
+
+Žádný navržený malý posun obvodu není v tomto dodatku
+vydáván za dokončenou hodnotu \(M_{\rm comp}\).
+Na druhé straně SP již tuto bodovou hodnotu uvnitř placených
+prahových pásků nepotřebuje. Jde o dvě rozdílné analytické cesty.
+
+\subsection{Jeden přesný dodatečný údaj pro nový globální čas}
+
+Časová cesta přes pomocný stav potřebuje číselnou horní mez
+\(B\) pro úplnou normu CT10, včetně přechodů CT2, původních
+konců I a zbývajících skutečných kontinuálních prahů.
+Samotná konečnost nebo omezenost profilu CT9 jí není.
+Dodání B by již bez dalšího asymptotického kroku určilo
+celočíselný čas CT13. Do výsledného experimentu se pak
+přičte původní příchozí chyba, kalibrace přijímače,
+konečný zdroj a konečné čtení podle [S2].
+
+Nejde o tvrzení, že tyto údaje musí být novými fyzikálními
+předpoklady. Jsou to konkrétní ještě nevyčíslené analytické
+vlastnosti již zadaného původního operátoru.
+
+\subsection{Dosavadní samostatný konečný čas}
+
+Předchozí obecný pracovní návrh [S4] zůstává beze změny.
+Za svých výslovných převzatých operátorových a aparátových
+předpokladů uvádí
+\[
+N_-=10^{16},\qquad N_+=2^{81\,000\,000\,000\,000},
+\]
+\[
+\varepsilon_-(N_-)+\varepsilon_+(N_+)
+<2.310002\cdot10^{-7}<10^{-6}.
+\]
+S původními \(\varepsilon_S=\varepsilon_D=10^{-6}\)
+je jeho dřívější konzervativní závěr
+\[
+p_{\rm finite}>3.3362176\cdot10^{-9}.
+\]
+Tato čísla jsou převzata z [S4]; nový dodatek je nezostřuje.
+[S4] je interně přezkoumaný samostatný návrh této relace,
+nikoli veřejně přijatý důkaz v PR~\#1817. Počet makrokroků
+nemá v modelu doložený převod na fyzikální sekundy.
+Matematický konečný protokol není uskutečněný experiment.
+
+\subsection{Zachování původního pravděpodobnostního jevu}
+
+Původní asymptotická pravděpodobnost z [S3] a původní projektor
+Q se nepřepisují. Z normové chyby úplného stavu se pro tentýž
+jev používá amplitudová nerovnost
+\[
+\left|\sqrt{p_{\rm finite}}-\sqrt{P_0}\right|
+\le\varepsilon_S+\varepsilon_D+\varepsilon_-+\varepsilon_+.
+\]
+Samotná nová aproximační cena CT7 nenahrazuje pravou stranu
+této úplné nerovnosti. Z CT7 se proto nevyhlašuje nová
+pravděpodobnost hotového experimentu.
+
+\subsection{Vnitřní matematický přezkum}
+
+Každý nový modul prošel samostatným analytickým čtením v této
+spolupracující relaci. Kontrola zahrnovala původní faktory
+\(2\pi\), skutečné spektrální váhy, oba kraje energie,
+všechny znaménkové kopie geometrických křivek a oba konce
+pohyblivého intervalu. Dílčí poznámky z přezkumu byly
+zapracovány do úplného textu: zejména skryté zrušené kořeny
+u kompaktních konců, číselné rezervy v malých QA úsecích,
+definice \(\Theta\) přes konce I a přesné teleskopování Cookovy řady.
+
+Není to externí nezávislé přijetí výsledku, formální veřejný
+replay ani nový výpočet CAS. V tomto pokračování nebyl proveden
+vědecký numerický běh. Sazba dokumentu a kontrola jeho zobrazení
+nejsou vědeckým důkazem.
+
+\subsection{Veřejná návaznost}
+
+Před začátkem tohoto pokračování byla 29.~10.~2026
+v~10:28:43--10:31:14 UTC znovu přečtena veřejná práce.
+PR~\#1817 zůstával otevřeným draftem na
+\nolinkurl{66ef8220df3ad5764ca941b84223a9f46cf5411f},
+PR~\#1815 na
+\nolinkurl{32306016908c0097650277aa416fc0152b2f81a4}.
+Rezervace \#1816 byla otevřená a nezměněná, bez komentářů.
+Od předchozí kontroly v~10:18:13 UTC nebyly aktualizovány
+žádné issues ani PR. Všech 322 vzdálených hlav souhlasilo
+s předchozím úplným manifestem.
+
+Závěrečná kontrola 29.~10.~2026 v~10:59:55--10:59:56 UTC
+znovu ověřila oba PR, rezervaci, hlavní větev a STATUS.
+Od 10:31:14 UTC nebyla aktualizována žádná issue ani PR.
+Všech 322 vzdálených hlav zůstalo přesně shodných:
+žádná přidaná, odstraněná ani změněná větev.
+
+Main zůstával na
+\nolinkurl{a193e389fb1ddb0bdc89165b015c95a17eb1e425}.
+STATUS označoval ACTIVE Public Canon v106,
+s obsahovým commitem
+\nolinkurl{9242db4f040d67d9417eacd06612230b74248cff}.
+Tato poznámka nepřebírá rezervaci \#1816, neprovádí
+veřejnou změnu a nemění Canon.
+
+\clearpage
+\section{Zdroje a předchozí pracovní důkazy}
+
+\begin{description}[style=nextline,leftmargin=1.2cm]
+\item[S1]
+\href{https://github.com/mathorn1973/twist-j/blob/66ef8220df3ad5764ca941b84223a9f46cf5411f/notes/C-BOUND-PAIR-RESOLVENT-AUDIT-N/PROOF.md}
+{Původní algebraický audit úplných kontaktních resolventů, PR \#1817.}
+Pin \nolinkurl{66ef8220df3ad5764ca941b84223a9f46cf5411f}.
+Zejména §§9--10 a §§15.2--15.4.
+
+\item[S2]
+\href{https://github.com/mathorn1973/twist-j/blob/66ef8220df3ad5764ca941b84223a9f46cf5411f/notes/C-BOUND-PAIR-RESOLVENT-AUDIT-N/FINITE_PROTOCOL.md}
+{Původní FINITE\_PROTOCOL, tentýž pin PR \#1817.}
+Původní zdroj, celý jev, konečný aparát a úplný časový účet.
+
+\item[S3]
+\href{https://github.com/mathorn1973/twist-j/blob/32306016908c0097650277aa416fc0152b2f81a4/notes/C-BOUND-PAIR-ABSOLUTE-CAPTURE-N/PROOF.md}
+{Úplný absolutní důkaz pravděpodobnosti, PR \#1815.}
+Pin \nolinkurl{32306016908c0097650277aa416fc0152b2f81a4}.
+
+\item[S4]
+\href{twist_j_konecny_cas.tex}
+{Konečný čas rozptylu původního paketu TWIST-J.}
+Samostatný pracovní analytický návrh této relace, 29.~10.~2026,
+33 stran. NON-CANONICAL/L1.
+
+\item[S5]
+\href{twist_j_vazane_vetve.tex}
+{Vázané větve a úplný fyzikální soupis.}
+Samostatný pracovní analytický dodatek, 29.~10.~2026,
+28 stran. NON-CANONICAL/L1.
+
+\item[S6]
+\href{twist_j_ciselne_prahy.tex}
+{Číselná okolí skutečných rozptylových prahů TWIST-J.}
+Samostatný pracovní analytický dodatek, 29.~10.~2026,
+27 stran. NON-CANONICAL/L1. Obsahuje QA, QB, QC, FQ a BF.
+
+\item[S7]
+\href{https://github.com/mathorn1973/twist-j/issues/1816}{Rezervace \#1816.}
+Veřejné rozhraní běžící souběžné práce; tento dodatek je oddělený.
+\end{description}
+
+\end{document}
