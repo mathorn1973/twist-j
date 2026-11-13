@@ -106,6 +106,13 @@ ADMITTED_CONTEXT_PATHS = {
         'canon/REGISTRY.tsv',
         'canon/CHANGELOG.md',
     }),
+    'P-INTEGER-SECOND-ORDER-NOETHER-CLOSURE-3': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
     "P-FRW-INHOM-K1-BACKREACTION-3": frozenset({
         "canon/CANON.md", "STATUS.md",
         "notes/canon/C-FRW-INHOM-TYPED-ADM-PREDEFINITION-N.md",
@@ -173,6 +180,9 @@ ADMITTED_BUNDLE_PATHS = {
     }),
     'P-RELATIONAL-MASS-STABLE-BINDING-1': frozenset({
         'probes/P-RELATIONAL-MASS-STABLE-BINDING-1/breaker.py',
+    }),
+    'P-INTEGER-SECOND-ORDER-NOETHER-CLOSURE-3': frozenset({
+        'probes/P-INTEGER-SECOND-ORDER-NOETHER-CLOSURE-3/breaker.py',
     }),
     "P-FRW-INHOM-K1-BACKREACTION-3": frozenset(),
     "P-U-EARLY-SOURCE-FIBRE-CONTACT-1": frozenset(
