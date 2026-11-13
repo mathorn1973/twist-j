@@ -1,0 +1,5 @@
+Full aligned-limit sets: 192 permutation cases and one active product
+Reduction fixtures: 22 exact transports with stream and certificate comparisons
+Normalization order and MSD transient zero family: exact
+Independent quotient dimensions, averaging entries, and Jordan size: exact
+PASS ENC4 supplemental review reproduction
