@@ -1,0 +1,6 @@
+R2_INDEPENDENT_BREAKER C-FUNDED-AREA-INDEPENDENT-REVIEW-N
+ATTACK_1_2 E<=12: r4_sum=761 xb_tuples=3605 raw_states=57680 gate_evals=230720 accepted=141568 rejected=89152 bijection_images=57680 extra_E13_15_states=51120 extra_E13_15_rejects=69568 STATUS=PASS
+ATTACK_3_4 WORD_TREE: prefixes=87381 closed=5341 min_bank=7776 max_abs_A=16 tree_sha256=6208e48291b4d5014115c1bfe762adbd9073f3098e662f433ca49d516b0677ca adv_paths=28672 adv_rejected_steps=11521 unprepared_reader_failures_verified=15631 STATUS=PASS
+ATTACK_5 B4_OBSTRUCTION: H_hist=(2, 3, 6, 5, 4) b_hist=(4, 3, 0, 1, 2) ord_pos=(4, 0) ord_neg=(0, 4) A_pos=1 A_neg=-1 W_exp_pos=1 W_exp_neg=4 coarse_match=True exposed_separates=True STATUS=PASS
+ATTACK_6 RESOURCES_AND_ORBITS: budget_cases=972 accepted_runs=584 rejected_runs=388 K5_B52_refs=(6,4) K5_B52_work=50 B3_end=(1,0,1,-1,2,-1) zero_ref_costs=(1,1) period_s4_pos=124 period_s4_neg=124 E6_states=3728 E6_cycle_spectrum=[20:16,52:32,124:8,188:4] capacity_states_checked=882 control_bits_cardinality=16 STATUS=PASS
+OVERALL_VERDICT: CONFIRMED_IN_SCOPE (0 COUNTEREXAMPLES, ALL MANDATORY ATTACKS PASSED)
