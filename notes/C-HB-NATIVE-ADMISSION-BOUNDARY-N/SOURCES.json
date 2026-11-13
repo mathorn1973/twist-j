@@ -1,0 +1,252 @@
+{
+  "status": "NON-CANONICAL / L1 analytical incubation; native admission OPEN; physical NOT_READY",
+  "license": "Apache-2.0",
+  "candidate_id": "C-HB-NATIVE-ADMISSION-BOUNDARY-N",
+  "lane_issue": "https://github.com/mathorn1973/twist-j/issues/1498",
+  "dispatch_issue": "https://github.com/mathorn1973/twist-j/issues/1497",
+  "assignment_body_sha256": "fd7c7567e73f5aadc2cc874885473d477a10305539ca6be82b94517e195b2c2d",
+  "assignment_body_bytes": 34945,
+  "authority_base": "8b91a935c426036e00ecb300019fd94734addeec",
+  "canon": "Public Canon v101",
+  "canon_tag": "canon-v101",
+  "content_commit": "421a4ec1daf07c04d19022c1ee219607e83c09a8",
+  "canon_sha256": "b83a99feccac173bd3c9c5851c5874ca27cbd135f71d136d793b45f86c8a87f7",
+  "canon_bytes": 992352,
+  "source_exposure": "All listed sources are result-exposed historical inputs read at immutable commits. No blind discovery is claimed. No sibling A2/A3 new work was read. No scientific code was executed.",
+  "neighbour_issues_inspected_read_only": [
+    "https://github.com/mathorn1973/twist-j/issues/1398",
+    "https://github.com/mathorn1973/twist-j/issues/1484",
+    "https://github.com/mathorn1973/twist-j/issues/1486",
+    "https://github.com/mathorn1973/twist-j/issues/1495"
+  ],
+  "sources": [
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "STATUS.md",
+      "blob": "196017e00399b6608f4abae2e63c6237e344703c",
+      "bytes": 2393,
+      "sha256": "7aeae60b5bdbdaa902f350b7441cb530032b40a2bacb0c0fb26964967e2b14fe",
+      "source_status": "normative-authority",
+      "scope_used": "ACTIVE authority declaration",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/STATUS.md"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "POLICY.md",
+      "blob": "10b49a9551eb2f2a3e32d65b0d5b7206febe9de9",
+      "bytes": 17333,
+      "sha256": "da5d2cf5a021f4d069c471725e02b6d2c201e3acadd5ecfd4213a361184b7a5d",
+      "source_status": "normative-authority",
+      "scope_used": "repository policy",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/POLICY.md"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "AGENTS.md",
+      "blob": "a449c8036ccbc40240060c885bb936630d4fc680",
+      "bytes": 21813,
+      "sha256": "7363b83ca6d822ec35e8465fe64c1aa8cd0007bf8b99ae599c265cc49fcee6e1",
+      "source_status": "normative-authority",
+      "scope_used": "agent operating procedure",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/AGENTS.md"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "canon/CANON.md",
+      "blob": "ddc5ae5b72d73d23c51eb32805947c3088193f65",
+      "bytes": 992352,
+      "sha256": "b83a99feccac173bd3c9c5851c5874ca27cbd135f71d136d793b45f86c8a87f7",
+      "source_status": "canon-normative",
+      "scope_used": "native conventions (generators/U); QUADRATIC-MEMORY-NATIVE-CONTACT owner text",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/canon/CANON.md"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "canon/CORE.md",
+      "blob": "71bc3d8e36b6ba4e260ecbb6d641a084955de70d",
+      "bytes": 27375,
+      "sha256": "f939e40c7288cdc2d6afdf32cc1a1ff932492b37ad7c1bb3af12e06031522a55",
+      "source_status": "canon-normative",
+      "scope_used": "native contact boundary summary",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/canon/CORE.md"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "canon/FRONTIER.md",
+      "blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+      "bytes": 27382,
+      "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+      "source_status": "canon-normative",
+      "scope_used": "live owner rows",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/canon/FRONTIER.md"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "canon/REGISTRY.tsv",
+      "blob": "e00ddaf4fae7a294e465a973ed9a5bcbea070e7e",
+      "bytes": 518295,
+      "sha256": "d49a8ac07af087973e98523242ab0ce5554a52b2bc2dcc2aa1eeafe3685b2a81",
+      "source_status": "canon-normative",
+      "scope_used": "QUADRATIC-MEMORY-NATIVE-CONTACT and QDD-INSTRUMENT-APPARATUS rows",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/canon/REGISTRY.tsv"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "canon/SHA256SUMS",
+      "blob": "c340df94d051765757a5222aad1cf556b2cf6e75",
+      "bytes": 415,
+      "sha256": "381e60d4eb9128722317fc916561ca8e797f1a18c2ff8356714e19f727898ae9",
+      "source_status": "canon-normative",
+      "scope_used": "normative hash manifest",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/canon/SHA256SUMS"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "probes/P-NATIVE-CLASSICAL-CONTACT-CENSUS-1/RESULT.md",
+      "blob": "108c67f638312b4fb5e2e8736990a9eb15f96a39",
+      "bytes": 3763,
+      "sha256": "ed26096b603a8c91d488e53ce23bbdf4f9bdd14a9878a1b1e6c9ee367821563e",
+      "source_status": "canon-main-probe-result-unregistered",
+      "scope_used": "finite census disposition and limits (context only)",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/probes/P-NATIVE-CLASSICAL-CONTACT-CENSUS-1/RESULT.md"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "probes/P-ALG-CONTACT-REALIZATION-1/SPEC.md",
+      "blob": "30e0a466045e0e251d35a2baa4d192b5d5b9c01b",
+      "bytes": 46719,
+      "sha256": "bcf48fbece05e445a1e6d958b749dfc0ff4d0b6f05f702d699f08fb142bfa656",
+      "source_status": "canon-main-probe-spec",
+      "scope_used": "CW-ALG-1 finite F5 compiler scope (headings/scope inspected; not a rational-wave permission)",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/probes/P-ALG-CONTACT-REALIZATION-1/SPEC.md"
+    },
+    {
+      "commit": "1b69563af4018b08d7dc75781b12e9553a8c19c3",
+      "path": "notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/CONTRACT.md",
+      "blob": "fa5e7ce18869118a2bd3f7a92cc8b3b97478d88c",
+      "bytes": 12408,
+      "sha256": "0a9c248e03385c1a7b5212821f8d6c83b2c76cd4dea626d4e3b984ef6eeb217e",
+      "source_status": "noncanonical-supplied",
+      "scope_used": "classical carrier, Dirichlet energy E_D, E_full, tapes",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/1b69563af4018b08d7dc75781b12e9553a8c19c3/notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/CONTRACT.md"
+    },
+    {
+      "commit": "ea924e214ec3c29009fd4590f294954d3e5ad43f",
+      "path": "notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/CONTRACT.md",
+      "blob": "9e333057c5f8bf52c086a64b656a11688cdffe1c",
+      "bytes": 6583,
+      "sha256": "5be2274dd7e2b12dc2a17bcc0b802776b86ef430fd4f81d0b00981db6ea46f0c",
+      "source_status": "noncanonical-supplied",
+      "scope_used": "contact C, eta lift, N0/NC classes, schedule",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/ea924e214ec3c29009fd4590f294954d3e5ad43f/notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/CONTRACT.md"
+    },
+    {
+      "commit": "ea924e214ec3c29009fd4590f294954d3e5ad43f",
+      "path": "notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/PROOF.md",
+      "blob": "4b2b05854e998aa6d75c88d044a782b2af13ccbc",
+      "bytes": 11507,
+      "sha256": "bc2db035cf56d174f6be90b4c57ae55e3f564aebcfa1535b11de278771ef091b",
+      "source_status": "noncanonical-supplied",
+      "scope_used": "contact inverse; N0 factor-separation boundary; invertibility limits",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/ea924e214ec3c29009fd4590f294954d3e5ad43f/notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/PROOF.md"
+    },
+    {
+      "commit": "ea924e214ec3c29009fd4590f294954d3e5ad43f",
+      "path": "notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/SOURCES.json",
+      "blob": "6515a12361143e1afaceee3386f110e9d57592c6",
+      "bytes": 3615,
+      "sha256": "f31d6928ce0ac4363979752d8660bd91e7704dd6051a30d746d3b67f500e2fce",
+      "source_status": "noncanonical-supplied",
+      "scope_used": "predecessor provenance record",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/ea924e214ec3c29009fd4590f294954d3e5ad43f/notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/SOURCES.json"
+    },
+    {
+      "commit": "b7636a334b09fcc68422bcd6cc6e15334d416c59",
+      "path": "notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/README.md",
+      "blob": "ff149a3b56c87ef9dd09d407977fa74bfe4621a6",
+      "bytes": 5720,
+      "sha256": "7542455989b5fb4a923582f5e607e952d5ddb6d46c98bb8581b4b1b0b96f19d8",
+      "source_status": "noncanonical-supplied-premise",
+      "scope_used": "funded contact summary; native admission OPEN",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/b7636a334b09fcc68422bcd6cc6e15334d416c59/notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/README.md"
+    },
+    {
+      "commit": "b7636a334b09fcc68422bcd6cc6e15334d416c59",
+      "path": "notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/CONTRACT.md",
+      "blob": "a8e5962551ecf89b73998983a961e851882ba812",
+      "bytes": 6899,
+      "sha256": "bedf7f6f55aafcb8bd82156a62bd6216a7dfc336c081be8ea9b0ab6a31162540",
+      "source_status": "noncanonical-supplied-premise",
+      "scope_used": "complete H_B carrier, law, realization requirements",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/b7636a334b09fcc68422bcd6cc6e15334d416c59/notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/CONTRACT.md"
+    },
+    {
+      "commit": "b7636a334b09fcc68422bcd6cc6e15334d416c59",
+      "path": "notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/PROOF.md",
+      "blob": "ca1a03fdead5d055ddb9b926c5a845bbbe946066",
+      "bytes": 12460,
+      "sha256": "d064be2717ed6906777bbc730f019cb578e635be2d48d800ff3baaad334ce00f",
+      "source_status": "noncanonical-supplied-premise",
+      "scope_used": "Delta formula; H_B involution; known obstructions NOT reclaimed here",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/b7636a334b09fcc68422bcd6cc6e15334d416c59/notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/PROOF.md"
+    },
+    {
+      "commit": "b7636a334b09fcc68422bcd6cc6e15334d416c59",
+      "path": "notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/RESULT.md",
+      "blob": "eaca7cd7ff12cc80a90d69d7651cf1e53f15eb5f",
+      "bytes": 5572,
+      "sha256": "b9120a6b8c1e4ee6b335cadd313bd41da896bf14756e87a73019a0bbb3199b11",
+      "source_status": "noncanonical-supplied-premise",
+      "scope_used": "result-exposed finite audit record (not rerun, not used as new evidence)",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/b7636a334b09fcc68422bcd6cc6e15334d416c59/notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/RESULT.md"
+    },
+    {
+      "commit": "521d6c77b456677375fe424cc5e2c4ec4eafdb3a",
+      "path": "notes/C-CONTACT-INTERFACE-ADMISSION-BOUNDARY-N/README.md",
+      "blob": "e6758334806c6414af691a06d17b15946f400ee7",
+      "bytes": 3656,
+      "sha256": "20d92bf7df7c7106b4caf47745470db1d1fc8107a88a918e08374def5a95c790",
+      "source_status": "noncanonical-neighbour-boundary",
+      "scope_used": "neighbour scope summary (finite F5 source-table class)",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/521d6c77b456677375fe424cc5e2c4ec4eafdb3a/notes/C-CONTACT-INTERFACE-ADMISSION-BOUNDARY-N/README.md"
+    },
+    {
+      "commit": "521d6c77b456677375fe424cc5e2c4ec4eafdb3a",
+      "path": "notes/C-CONTACT-INTERFACE-ADMISSION-BOUNDARY-N/PROOF.md",
+      "blob": "089173c9c49741ea87d396617cae791eff45ce7d",
+      "bytes": 25229,
+      "sha256": "10fd8c23d0d12ab3985487bb9f8461aeb23e55651fe3848677cb008ad67c1b64",
+      "source_status": "noncanonical-neighbour-boundary",
+      "scope_used": "factor-compatible word obstruction and admission table (boundary only)",
+      "license": "Apache-2.0 (repository LICENSE; noncanonical notes carry Apache-2.0 notices)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/521d6c77b456677375fe424cc5e2c4ec4eafdb3a/notes/C-CONTACT-INTERFACE-ADMISSION-BOUNDARY-N/PROOF.md"
+    }
+  ],
+  "limits": {
+    "scientific_code_executed": false,
+    "historical_trees_imported": false,
+    "sibling_science_consumed": false,
+    "owner_rows_claimed": false,
+    "global_U_inverse_claimed": false,
+    "physical_claimed": false
+  }
+}
