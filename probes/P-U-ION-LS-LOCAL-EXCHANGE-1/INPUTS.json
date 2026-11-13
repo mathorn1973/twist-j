@@ -1,0 +1,40 @@
+{
+  "purpose": "Immutable support inputs for the prospective local construction audit",
+  "files": [
+    {
+      "path": "MODEL.md",
+      "bytes": 13389,
+      "sha256": "66d2472000dbef87ec381f04579d42e97852294725af42a5cbd305d82adbcdeb"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 15282,
+      "sha256": "e29933650c32cc118c232c67a842315ae50c4d18dd203e5a1bd90029071a3e1b"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 5378,
+      "sha256": "a820a38f2e1f0a7ac72175f97d225454e525a3c824d8232005536c5f1294e11b"
+    },
+    {
+      "path": "PREREG.md",
+      "bytes": 11004,
+      "sha256": "60a6675489b2d2a6cdedb309f876dd57bd78e4cc251c9e3046366151e459bfaa"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2159,
+      "sha256": "147d6254eaee0c274d911a4cb5b998c53c32852eac36cff2eb881f24eb65f34a"
+    },
+    {
+      "path": "REVIEW-PREREG.md",
+      "bytes": 4064,
+      "sha256": "b975eee11c8a03add91043fc151424123c4189baf633692e4ea99f11f47363b6"
+    },
+    {
+      "path": "verify_independent.py",
+      "bytes": 12355,
+      "sha256": "a01ad570eda155daada9924c38f1737ed63c5c128c5cca9d7e6411b4ae0a9dd9"
+    }
+  ]
+}
