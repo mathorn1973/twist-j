@@ -1,0 +1,118 @@
+{"arithmetic":"EXACT_INTEGER","beam_width":128,"extra_undirected_loops":20,"kind":"PROBE","logical_beam_contact_budget":20000000,"name":"P-POLE-HEIGHT-COMMON-ODD-1","observation":"RESULT_EXPOSED","odd_depth":4,"odd_state_cap":2000,"rounds_per_direction":20,"visited_cap_per_direction":20000}
+{"admission_bits":"11111100000000000000000000001000000011","changed_steps":9,"final_state":[[-2,-2,-4,-2],[2,2,4,2],[2,0,-1,-1],[1,-1,0,0],[0,0,0,0],[2,0,1,-1]],"forward_contacts":38,"helpers_returned":false,"inverse_contacts":152,"inverse_recovery":true,"kind":"W38_INPUT","t":-2,"target_first_four":false}
+{"admission_bits":"11111111111000111111111011111111111111","changed_steps":30,"final_state":[[0,-1,1,0],[2,-1,-1,0],[0,0,0,0],[0,0,0,0],[1,1,0,-2],[2,0,0,0]],"forward_contacts":38,"helpers_returned":true,"inverse_contacts":152,"inverse_recovery":true,"kind":"W38_INPUT","t":-1,"target_first_four":true}
+{"admission_bits":"11111100000000000000000000001000000011","changed_steps":3,"final_state":[[0,0,0,0],[0,0,0,0],[2,0,-1,-1],[1,-1,0,0],[0,0,0,0],[2,0,1,-1]],"forward_contacts":38,"helpers_returned":false,"inverse_contacts":152,"inverse_recovery":true,"kind":"W38_INPUT","t":0,"target_first_four":false}
+{"admission_bits":"11111111110111111111000111111111111111","changed_steps":30,"final_state":[[2,-1,-1,0],[0,-1,1,0],[0,0,0,0],[0,0,0,0],[1,1,0,-2],[2,0,0,0]],"forward_contacts":38,"helpers_returned":true,"inverse_contacts":152,"inverse_recovery":true,"kind":"W38_INPUT","t":1,"target_first_four":true}
+{"admission_bits":"11111100000000000000000000001000000011","changed_steps":9,"final_state":[[2,2,4,2],[-2,-2,-4,-2],[2,0,-1,-1],[1,-1,0,0],[0,0,0,0],[2,0,1,-1]],"forward_contacts":38,"helpers_returned":false,"inverse_contacts":152,"inverse_recovery":true,"kind":"W38_INPUT","t":2,"target_first_four":false}
+{"common_five":false,"kind":"W38_SCOPE","minimum_38":"NOT_AUDITED","odd_pair_verified":true}
+{"arbitrary_helper_traps":32,"ball":171,"ball_Q":[[0,1],[5,20],[10,30],[15,60],[20,60]],"isolated_Q":[[5,8],[10,30],[15,24],[20,40]],"isolated_closure_edges":15300,"isolated_orbits":204,"kind":"STOCK_CLASSIFIER","overlap":14,"overlap_Q":[[5,8],[10,4],[15,2]],"parity_isolated":102,"residual":51,"residual_Q":[[15,32],[20,19]],"residual_reachability":"NOT_CENSUSED","states_per_isolated_orbit":5,"trap_Q":[[0,1],[5,20],[10,4],[15,6],[20,1]],"union":120,"union_Q":[[0,1],[5,20],[10,30],[15,28],[20,41]]}
+{"closure_edges":3000,"excluded_union":124,"kind":"HELPER_ISOLATION","odd_inputs":2,"orbits":8,"residual":47,"residual_Q":[[15,32],[20,15]],"residual_reachability":"NOT_CENSUSED","states_per_orbit":25,"stocks":[[0,-2,0,2],[0,0,-2,2],[0,0,2,-2],[0,2,0,-2]]}
+{"even_source":[[[-2,-2,-4,-2],[2,2,4,2],[2,0,-1,-1],[1,-1,0,0],[0,0,0,0],[2,0,1,-1]],[[0,0,0,0],[0,0,0,0],[2,0,-1,-1],[1,-1,0,0],[0,0,0,0],[2,0,1,-1]],[[2,2,4,2],[-2,-2,-4,-2],[2,0,-1,-1],[1,-1,0,0],[0,0,0,0],[2,0,1,-1]]],"even_target":[[[-1,-1,2,0],[3,-1,-2,0],[0,0,0,0],[0,0,0,0],[1,1,0,-2],[2,0,0,0]],[[1,-1,0,0],[1,-1,0,0],[0,0,0,0],[0,0,0,0],[1,1,0,-2],[2,0,0,0]],[[3,-1,-2,0],[-1,-1,2,0],[0,0,0,0],[0,0,0,0],[1,1,0,-2],[2,0,0,0]]],"initial_Q_error":390,"kind":"EXTENSION_ROOTS","odd_target":[[[0,-1,1,0],[2,-1,-1,0],[0,0,0,0],[0,0,0,0],[1,1,0,-2],[2,0,0,0]],[[2,-1,-1,0],[0,-1,1,0],[0,0,0,0],[0,0,0,0],[1,1,0,-2],[2,0,0,0]]]}
+{"capped":false,"depth_limit":4,"external_edges":38,"formal_undirected_loops":366,"internal_edges":397,"kind":"ODD_TREE","loop_sha256":"be0ff2c9c747773ccec3139595a0aa6a7df6e47fda13a24bdba324fec30189e9","reserved_primitives":12,"state_cap":2000,"stored_states":29,"tree_edge_offers":240,"tree_sha256":"36ab4e37be4a261464e33213b4e4dfbc121e8c36a479046b60028f53eb315dae"}
+{"best_ranked_scores":[[210,310],[210,310],[310,210],[310,210],[330,210],[330,210],[330,210],[330,210],[330,210],[330,210],[330,210],[330,210],[330,210],[330,210],[330,210],[330,210],[330,210],[330,210],[390,210],[390,210]],"candidate_evaluations":354,"candidate_odd_return_checks":732,"directed_selected":64,"directed_word_sha256":"dcab4a8a41fa10f1515afd5f1b95417c649c38c7e10926ba6356661555a93078","kind":"LOOP_SELECTION","logical_even_case_contacts":22020,"logical_odd_case_contacts":14800,"reserved_undirected":12,"undirected_selected":32}
+{"contacts":1,"id":0,"inverse_id":1,"kind":"MACRO","reserved_primitive":true,"word":"13"}
+{"contacts":4,"id":1,"inverse_id":0,"kind":"MACRO","reserved_primitive":true,"word":"13 13 13 13"}
+{"contacts":1,"id":2,"inverse_id":3,"kind":"MACRO","reserved_primitive":true,"word":"14"}
+{"contacts":4,"id":3,"inverse_id":2,"kind":"MACRO","reserved_primitive":true,"word":"14 14 14 14"}
+{"contacts":1,"id":4,"inverse_id":5,"kind":"MACRO","reserved_primitive":true,"word":"15"}
+{"contacts":4,"id":5,"inverse_id":4,"kind":"MACRO","reserved_primitive":true,"word":"15 15 15 15"}
+{"contacts":1,"id":6,"inverse_id":7,"kind":"MACRO","reserved_primitive":true,"word":"16"}
+{"contacts":4,"id":7,"inverse_id":6,"kind":"MACRO","reserved_primitive":true,"word":"16 16 16 16"}
+{"contacts":1,"id":8,"inverse_id":9,"kind":"MACRO","reserved_primitive":true,"word":"23"}
+{"contacts":4,"id":9,"inverse_id":8,"kind":"MACRO","reserved_primitive":true,"word":"23 23 23 23"}
+{"contacts":1,"id":10,"inverse_id":11,"kind":"MACRO","reserved_primitive":true,"word":"24"}
+{"contacts":4,"id":11,"inverse_id":10,"kind":"MACRO","reserved_primitive":true,"word":"24 24 24 24"}
+{"contacts":1,"id":12,"inverse_id":13,"kind":"MACRO","reserved_primitive":true,"word":"25"}
+{"contacts":4,"id":13,"inverse_id":12,"kind":"MACRO","reserved_primitive":true,"word":"25 25 25 25"}
+{"contacts":1,"id":14,"inverse_id":15,"kind":"MACRO","reserved_primitive":true,"word":"26"}
+{"contacts":4,"id":15,"inverse_id":14,"kind":"MACRO","reserved_primitive":true,"word":"26 26 26 26"}
+{"contacts":1,"id":16,"inverse_id":17,"kind":"MACRO","reserved_primitive":true,"word":"34"}
+{"contacts":4,"id":17,"inverse_id":16,"kind":"MACRO","reserved_primitive":true,"word":"34 34 34 34"}
+{"contacts":1,"id":18,"inverse_id":19,"kind":"MACRO","reserved_primitive":true,"word":"35"}
+{"contacts":4,"id":19,"inverse_id":18,"kind":"MACRO","reserved_primitive":true,"word":"35 35 35 35"}
+{"contacts":1,"id":20,"inverse_id":21,"kind":"MACRO","reserved_primitive":true,"word":"45"}
+{"contacts":4,"id":21,"inverse_id":20,"kind":"MACRO","reserved_primitive":true,"word":"45 45 45 45"}
+{"contacts":1,"id":22,"inverse_id":23,"kind":"MACRO","reserved_primitive":true,"word":"56"}
+{"contacts":4,"id":23,"inverse_id":22,"kind":"MACRO","reserved_primitive":true,"word":"56 56 56 56"}
+{"contacts":6,"id":24,"inverse_id":25,"kind":"MACRO","reserved_primitive":false,"word":"12 12 12 12 15 12"}
+{"contacts":9,"id":25,"inverse_id":24,"kind":"MACRO","reserved_primitive":false,"word":"12 12 12 12 15 15 15 15 12"}
+{"contacts":6,"id":26,"inverse_id":27,"kind":"MACRO","reserved_primitive":false,"word":"12 12 12 12 25 12"}
+{"contacts":9,"id":27,"inverse_id":26,"kind":"MACRO","reserved_primitive":false,"word":"12 12 12 12 25 25 25 25 12"}
+{"contacts":6,"id":28,"inverse_id":29,"kind":"MACRO","reserved_primitive":false,"word":"12 15 12 12 12 12"}
+{"contacts":9,"id":29,"inverse_id":28,"kind":"MACRO","reserved_primitive":false,"word":"12 15 15 15 15 12 12 12 12"}
+{"contacts":6,"id":30,"inverse_id":31,"kind":"MACRO","reserved_primitive":false,"word":"12 25 12 12 12 12"}
+{"contacts":9,"id":31,"inverse_id":30,"kind":"MACRO","reserved_primitive":false,"word":"12 25 25 25 25 12 12 12 12"}
+{"contacts":14,"id":32,"inverse_id":33,"kind":"MACRO","reserved_primitive":false,"word":"12 36 15 15 15 15 36 36 36 36 12 12 12 12"}
+{"contacts":11,"id":33,"inverse_id":32,"kind":"MACRO","reserved_primitive":false,"word":"12 36 15 36 36 36 36 12 12 12 12"}
+{"contacts":14,"id":34,"inverse_id":35,"kind":"MACRO","reserved_primitive":false,"word":"12 36 25 25 25 25 36 36 36 36 12 12 12 12"}
+{"contacts":11,"id":35,"inverse_id":34,"kind":"MACRO","reserved_primitive":false,"word":"12 36 25 36 36 36 36 12 12 12 12"}
+{"contacts":14,"id":36,"inverse_id":37,"kind":"MACRO","reserved_primitive":false,"word":"12 36 36 15 15 15 15 36 36 36 12 12 12 12"}
+{"contacts":11,"id":37,"inverse_id":36,"kind":"MACRO","reserved_primitive":false,"word":"12 36 36 15 36 36 36 12 12 12 12"}
+{"contacts":14,"id":38,"inverse_id":39,"kind":"MACRO","reserved_primitive":false,"word":"12 36 36 25 25 25 25 36 36 36 12 12 12 12"}
+{"contacts":11,"id":39,"inverse_id":38,"kind":"MACRO","reserved_primitive":false,"word":"12 36 36 25 36 36 36 12 12 12 12"}
+{"contacts":14,"id":40,"inverse_id":41,"kind":"MACRO","reserved_primitive":false,"word":"12 36 36 36 13 13 13 13 36 36 12 12 12 12"}
+{"contacts":11,"id":41,"inverse_id":40,"kind":"MACRO","reserved_primitive":false,"word":"12 36 36 36 13 36 36 12 12 12 12"}
+{"contacts":14,"id":42,"inverse_id":43,"kind":"MACRO","reserved_primitive":false,"word":"12 36 36 36 15 15 15 15 36 36 12 12 12 12"}
+{"contacts":11,"id":43,"inverse_id":42,"kind":"MACRO","reserved_primitive":false,"word":"12 36 36 36 15 36 36 12 12 12 12"}
+{"contacts":14,"id":44,"inverse_id":45,"kind":"MACRO","reserved_primitive":false,"word":"12 36 36 36 23 23 23 23 36 36 12 12 12 12"}
+{"contacts":11,"id":45,"inverse_id":44,"kind":"MACRO","reserved_primitive":false,"word":"12 36 36 36 23 36 36 12 12 12 12"}
+{"contacts":14,"id":46,"inverse_id":47,"kind":"MACRO","reserved_primitive":false,"word":"12 36 36 36 25 25 25 25 36 36 12 12 12 12"}
+{"contacts":11,"id":47,"inverse_id":46,"kind":"MACRO","reserved_primitive":false,"word":"12 36 36 36 25 36 36 12 12 12 12"}
+{"contacts":14,"id":48,"inverse_id":49,"kind":"MACRO","reserved_primitive":false,"word":"12 46 15 15 15 15 46 46 46 46 12 12 12 12"}
+{"contacts":11,"id":49,"inverse_id":48,"kind":"MACRO","reserved_primitive":false,"word":"12 46 15 46 46 46 46 12 12 12 12"}
+{"contacts":14,"id":50,"inverse_id":51,"kind":"MACRO","reserved_primitive":false,"word":"12 46 25 25 25 25 46 46 46 46 12 12 12 12"}
+{"contacts":11,"id":51,"inverse_id":50,"kind":"MACRO","reserved_primitive":false,"word":"12 46 25 46 46 46 46 12 12 12 12"}
+{"contacts":14,"id":52,"inverse_id":53,"kind":"MACRO","reserved_primitive":false,"word":"12 46 46 15 15 15 15 46 46 46 12 12 12 12"}
+{"contacts":11,"id":53,"inverse_id":52,"kind":"MACRO","reserved_primitive":false,"word":"12 46 46 15 46 46 46 12 12 12 12"}
+{"contacts":14,"id":54,"inverse_id":55,"kind":"MACRO","reserved_primitive":false,"word":"12 46 46 25 25 25 25 46 46 46 12 12 12 12"}
+{"contacts":11,"id":55,"inverse_id":54,"kind":"MACRO","reserved_primitive":false,"word":"12 46 46 25 46 46 46 12 12 12 12"}
+{"contacts":14,"id":56,"inverse_id":57,"kind":"MACRO","reserved_primitive":false,"word":"12 46 46 46 15 15 15 15 46 46 12 12 12 12"}
+{"contacts":11,"id":57,"inverse_id":56,"kind":"MACRO","reserved_primitive":false,"word":"12 46 46 46 15 46 46 12 12 12 12"}
+{"contacts":14,"id":58,"inverse_id":59,"kind":"MACRO","reserved_primitive":false,"word":"12 46 46 46 25 25 25 25 46 46 12 12 12 12"}
+{"contacts":11,"id":59,"inverse_id":58,"kind":"MACRO","reserved_primitive":false,"word":"12 46 46 46 25 46 46 12 12 12 12"}
+{"contacts":14,"id":60,"inverse_id":61,"kind":"MACRO","reserved_primitive":false,"word":"12 46 46 46 14 14 14 14 46 46 12 12 12 12"}
+{"contacts":11,"id":61,"inverse_id":60,"kind":"MACRO","reserved_primitive":false,"word":"12 46 46 46 14 46 46 12 12 12 12"}
+{"contacts":14,"id":62,"inverse_id":63,"kind":"MACRO","reserved_primitive":false,"word":"12 46 46 46 24 24 24 24 46 46 12 12 12 12"}
+{"contacts":11,"id":63,"inverse_id":62,"kind":"MACRO","reserved_primitive":false,"word":"12 46 46 46 24 46 46 12 12 12 12"}
+{"best_retained_Q":210,"best_seen_Q":210,"candidate_states":16,"kind":"BEAM_LAYER","layer":1,"logical_even_case_contacts":1560,"retained":16,"side":0,"visited":17}
+{"best_retained_Q":210,"best_seen_Q":210,"candidate_states":20,"kind":"BEAM_LAYER","layer":1,"logical_even_case_contacts":3120,"retained":20,"side":1,"visited":21}
+{"best_retained_Q":150,"best_seen_Q":150,"candidate_states":107,"kind":"BEAM_LAYER","layer":2,"logical_even_case_contacts":28080,"retained":107,"side":0,"visited":124}
+{"best_retained_Q":150,"best_seen_Q":150,"candidate_states":170,"kind":"BEAM_LAYER","layer":2,"logical_even_case_contacts":59280,"retained":128,"side":1,"visited":149}
+{"best_retained_Q":120,"best_seen_Q":120,"candidate_states":752,"kind":"BEAM_LAYER","layer":3,"logical_even_case_contacts":226200,"retained":128,"side":0,"visited":252}
+{"best_retained_Q":110,"best_seen_Q":110,"candidate_states":892,"kind":"BEAM_LAYER","layer":3,"logical_even_case_contacts":425880,"retained":128,"side":1,"visited":277}
+{"best_retained_Q":115,"best_seen_Q":115,"candidate_states":1294,"kind":"BEAM_LAYER","layer":4,"logical_even_case_contacts":625560,"retained":128,"side":0,"visited":380}
+{"best_retained_Q":80,"best_seen_Q":80,"candidate_states":1243,"kind":"BEAM_LAYER","layer":4,"logical_even_case_contacts":825240,"retained":128,"side":1,"visited":405}
+{"best_retained_Q":60,"best_seen_Q":60,"candidate_states":1886,"kind":"BEAM_LAYER","layer":5,"logical_even_case_contacts":1024920,"retained":128,"side":0,"visited":508}
+{"best_retained_Q":85,"best_seen_Q":80,"candidate_states":1530,"kind":"BEAM_LAYER","layer":5,"logical_even_case_contacts":1224600,"retained":128,"side":1,"visited":533}
+{"best_retained_Q":90,"best_seen_Q":60,"candidate_states":2051,"kind":"BEAM_LAYER","layer":6,"logical_even_case_contacts":1424280,"retained":128,"side":0,"visited":636}
+{"best_retained_Q":80,"best_seen_Q":80,"candidate_states":1274,"kind":"BEAM_LAYER","layer":6,"logical_even_case_contacts":1623960,"retained":128,"side":1,"visited":661}
+{"best_retained_Q":85,"best_seen_Q":60,"candidate_states":2025,"kind":"BEAM_LAYER","layer":7,"logical_even_case_contacts":1823640,"retained":128,"side":0,"visited":764}
+{"best_retained_Q":85,"best_seen_Q":80,"candidate_states":1252,"kind":"BEAM_LAYER","layer":7,"logical_even_case_contacts":2023320,"retained":128,"side":1,"visited":789}
+{"best_retained_Q":80,"best_seen_Q":60,"candidate_states":2282,"kind":"BEAM_LAYER","layer":8,"logical_even_case_contacts":2223000,"retained":128,"side":0,"visited":892}
+{"best_retained_Q":90,"best_seen_Q":80,"candidate_states":1208,"kind":"BEAM_LAYER","layer":8,"logical_even_case_contacts":2422680,"retained":128,"side":1,"visited":917}
+{"best_retained_Q":80,"best_seen_Q":60,"candidate_states":2328,"kind":"BEAM_LAYER","layer":9,"logical_even_case_contacts":2622360,"retained":128,"side":0,"visited":1020}
+{"best_retained_Q":100,"best_seen_Q":80,"candidate_states":1150,"kind":"BEAM_LAYER","layer":9,"logical_even_case_contacts":2822040,"retained":128,"side":1,"visited":1045}
+{"best_retained_Q":85,"best_seen_Q":60,"candidate_states":2369,"kind":"BEAM_LAYER","layer":10,"logical_even_case_contacts":3021720,"retained":128,"side":0,"visited":1148}
+{"best_retained_Q":90,"best_seen_Q":80,"candidate_states":1046,"kind":"BEAM_LAYER","layer":10,"logical_even_case_contacts":3221400,"retained":128,"side":1,"visited":1173}
+{"best_retained_Q":85,"best_seen_Q":60,"candidate_states":2357,"kind":"BEAM_LAYER","layer":11,"logical_even_case_contacts":3421080,"retained":128,"side":0,"visited":1276}
+{"best_retained_Q":90,"best_seen_Q":80,"candidate_states":939,"kind":"BEAM_LAYER","layer":11,"logical_even_case_contacts":3620760,"retained":128,"side":1,"visited":1301}
+{"best_retained_Q":85,"best_seen_Q":60,"candidate_states":2126,"kind":"BEAM_LAYER","layer":12,"logical_even_case_contacts":3820440,"retained":128,"side":0,"visited":1404}
+{"best_retained_Q":100,"best_seen_Q":80,"candidate_states":1040,"kind":"BEAM_LAYER","layer":12,"logical_even_case_contacts":4020120,"retained":128,"side":1,"visited":1429}
+{"best_retained_Q":85,"best_seen_Q":60,"candidate_states":2064,"kind":"BEAM_LAYER","layer":13,"logical_even_case_contacts":4219800,"retained":128,"side":0,"visited":1532}
+{"best_retained_Q":90,"best_seen_Q":80,"candidate_states":1215,"kind":"BEAM_LAYER","layer":13,"logical_even_case_contacts":4419480,"retained":128,"side":1,"visited":1557}
+{"best_retained_Q":75,"best_seen_Q":60,"candidate_states":2049,"kind":"BEAM_LAYER","layer":14,"logical_even_case_contacts":4619160,"retained":128,"side":0,"visited":1660}
+{"best_retained_Q":100,"best_seen_Q":80,"candidate_states":1368,"kind":"BEAM_LAYER","layer":14,"logical_even_case_contacts":4818840,"retained":128,"side":1,"visited":1685}
+{"best_retained_Q":80,"best_seen_Q":60,"candidate_states":2147,"kind":"BEAM_LAYER","layer":15,"logical_even_case_contacts":5018520,"retained":128,"side":0,"visited":1788}
+{"best_retained_Q":90,"best_seen_Q":80,"candidate_states":1333,"kind":"BEAM_LAYER","layer":15,"logical_even_case_contacts":5218200,"retained":128,"side":1,"visited":1813}
+{"best_retained_Q":75,"best_seen_Q":60,"candidate_states":2282,"kind":"BEAM_LAYER","layer":16,"logical_even_case_contacts":5417880,"retained":128,"side":0,"visited":1916}
+{"best_retained_Q":80,"best_seen_Q":80,"candidate_states":1322,"kind":"BEAM_LAYER","layer":16,"logical_even_case_contacts":5617560,"retained":128,"side":1,"visited":1941}
+{"best_retained_Q":70,"best_seen_Q":60,"candidate_states":2171,"kind":"BEAM_LAYER","layer":17,"logical_even_case_contacts":5817240,"retained":128,"side":0,"visited":2044}
+{"best_retained_Q":90,"best_seen_Q":80,"candidate_states":1321,"kind":"BEAM_LAYER","layer":17,"logical_even_case_contacts":6016920,"retained":128,"side":1,"visited":2069}
+{"best_retained_Q":70,"best_seen_Q":60,"candidate_states":2148,"kind":"BEAM_LAYER","layer":18,"logical_even_case_contacts":6216600,"retained":128,"side":0,"visited":2172}
+{"best_retained_Q":80,"best_seen_Q":80,"candidate_states":1290,"kind":"BEAM_LAYER","layer":18,"logical_even_case_contacts":6416280,"retained":128,"side":1,"visited":2197}
+{"best_retained_Q":75,"best_seen_Q":60,"candidate_states":2279,"kind":"BEAM_LAYER","layer":19,"logical_even_case_contacts":6615960,"retained":128,"side":0,"visited":2300}
+{"best_retained_Q":90,"best_seen_Q":80,"candidate_states":1382,"kind":"BEAM_LAYER","layer":19,"logical_even_case_contacts":6815640,"retained":128,"side":1,"visited":2325}
+{"best_retained_Q":75,"best_seen_Q":60,"candidate_states":2229,"kind":"BEAM_LAYER","layer":20,"logical_even_case_contacts":7015320,"retained":128,"side":0,"visited":2428}
+{"best_retained_Q":85,"best_seen_Q":80,"candidate_states":1337,"kind":"BEAM_LAYER","layer":20,"logical_even_case_contacts":7215000,"retained":128,"side":1,"visited":2453}
+{"applied_macros":[147200,148800],"best_Q_errors":[60,80],"completed_layers":[20,20],"contact_budget":20000000,"kind":"EVEN_SEARCH","logical_even_case_contacts":7215000,"offered_macros":[147200,148800],"partial_layer":false,"retained_visited":[2428,2453],"shortest_claim":false,"status":"LIMIT_LAYER_BUDGET","visited_sha256":["eee158593a85c83a70db3edf076aba1a9057867b1dda929caf8e0489fdc85b5a","d0ee43168ac460b4198a4302fac8599c3c99e3e5071a8a01461c0a61e2f9379a"],"witness_found":false}
+{"canon_promotion":false,"common_five_search":"LIMIT_LAYER_BUDGET","common_five_verified":false,"finite_classifier":"PASS","kind":"RESULT","minimum_38":"NOT_AUDITED","supplied_odd_word":"VERIFIED"}
