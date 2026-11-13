@@ -1,0 +1,19 @@
+COLLATZ-ODD-HEAD-REPLAY v1
+arithmetic: exact integers and Fraction; bounded replay of stated identities
+odd inputs: 32768; actual blocks, head/inverse/sign identities and carry flags; PASS
+joint cylinders: k,t,k'=1..4,u' mod16; 512 exact cells modulo 2^16; PASS
+conditional cylinders: k=1..8,odd u<=4095; 1024 exact cells; PASS
+inverse triples: k,t,k'=1..6,odd u'<=255; valid inputs: 2299
+fixed-child fibers: k=1..6,odd child<=63 coprime to3; targets: 126
+growing family: R=1..128; exactly R growth blocks then a contracting boundary; PASS
+family rows: R,start_n,after_R_n,start_u,after_R_u
+1,59,67,15,17
+2,507,643,127,161
+4,32763,52483,8191,13121
+finite block words: length=1..3,k,t=1..3; words: 819
+word cylinders: four integer representatives each; highest code bit toggle rejected; PASS
+traces: 16 blocks for 512 odd starts; composition, descent, size ratio and coboundary; PASS
+moment partial sums: M=1..64; direct pair/triple sums M=1..6; PASS
+head u=1: odd k=1..31; first next heads [1,7,61]; PASS
+scope: infinite Haar laws, limiting moments and logarithmic drift are proof-only
+scope: no claim of convergence or divergence of a positive integer orbit
