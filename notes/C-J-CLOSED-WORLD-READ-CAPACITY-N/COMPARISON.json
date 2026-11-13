@@ -1,0 +1,137 @@
+{
+  "census_rows": 288,
+  "code_pin": "9b0406c3bf4ea2c9f8d9afe17596ea5308907713",
+  "comparison_scope": "All finite census F/P/cycles/feasibility; all singular exclusions; all sufficient onsets and strides. Certificates may differ.",
+  "enumerated_states": 5712901,
+  "explicit_quotient_enumerations": 31,
+  "finite_decisions": 276,
+  "onsets": [
+    {
+      "audit_end": 43,
+      "audited_units": [
+        "J",
+        "phi_inverse"
+      ],
+      "k": 1,
+      "m": 2,
+      "n0": 4,
+      "sufficient_onset": 31
+    },
+    {
+      "audit_end": 22,
+      "audited_units": [
+        "J_squared"
+      ],
+      "k": 2,
+      "m": 2,
+      "n0": 2,
+      "sufficient_onset": 10
+    },
+    {
+      "audit_end": 22,
+      "audited_units": [
+        "J_squared"
+      ],
+      "k": 2,
+      "m": 3,
+      "n0": 2,
+      "sufficient_onset": 10
+    },
+    {
+      "audit_end": 25,
+      "audited_units": [
+        "J_squared"
+      ],
+      "k": 2,
+      "m": 4,
+      "n0": 2,
+      "sufficient_onset": 13
+    },
+    {
+      "audit_end": 38,
+      "audited_units": [
+        "J_squared"
+      ],
+      "k": 2,
+      "m": 5,
+      "n0": 4,
+      "sufficient_onset": 26
+    },
+    {
+      "audit_end": 113,
+      "audited_units": [
+        "J_squared"
+      ],
+      "k": 2,
+      "m": 6,
+      "n0": 12,
+      "sufficient_onset": 101
+    }
+  ],
+  "permutation_control": {
+    "all_cycle_types_up_to": 8,
+    "all_permutations_up_to": 4,
+    "alphabets": [
+      2,
+      3
+    ],
+    "de_bruijn_label": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "de_bruijn_windows": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "horizons": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "rows": 228,
+    "status": "PASS",
+    "tested_c_values": 59,
+    "type": "PERMUTATION_CONTROL"
+  },
+  "singular_rows": 12,
+  "status": "PASS",
+  "stdout_sha256": {
+    "break": "88c9702586852f4f968ce905c1f6f874d647ffb37f9b18b536e49744e0472569",
+    "verify": "327d81693491db6ea76aa3c7cb3edf60bea475edd4a6531f3297f4afc4e15360"
+  },
+  "strides": [
+    [
+      2,
+      1
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      16,
+      3
+    ],
+    [
+      256,
+      6
+    ]
+  ]
+}
