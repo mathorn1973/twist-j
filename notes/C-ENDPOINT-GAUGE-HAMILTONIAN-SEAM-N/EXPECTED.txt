@@ -1,0 +1,180 @@
+{
+  "D3": [
+    {
+      "active_hops": 104,
+      "basis_inputs": 7,
+      "charge_electric_identities": 392,
+      "diagonal_and_omitted_flux_controls": "PASS",
+      "edges": 48,
+      "face_hop_commutations": 21504,
+      "face_inverse": 448,
+      "faces": 64,
+      "hops": 336,
+      "neutral_off_diagonal_configs": 128,
+      "periods": [
+        2,
+        2,
+        2
+      ],
+      "phase_negative": {
+        "charge_derivative_plus": [
+          "-1",
+          "0"
+        ],
+        "common_mean_energy": [
+          "603/4",
+          "-64"
+        ],
+        "direction": -1,
+        "work_minus": [
+          "-1/2",
+          "0"
+        ],
+        "work_plus": [
+          "1/2",
+          "0"
+        ]
+      },
+      "phase_positive": {
+        "charge_derivative_plus": [
+          "1",
+          "0"
+        ],
+        "common_mean_energy": [
+          "603/4",
+          "-64"
+        ],
+        "direction": 1,
+        "work_minus": [
+          "-1/2",
+          "0"
+        ],
+        "work_plus": [
+          "1/2",
+          "0"
+        ]
+      },
+      "positive_energy_2H": [
+        783,
+        -216
+      ],
+      "two_hop_H2_squared_coefficient": [
+        4,
+        0
+      ],
+      "vertices": 8,
+      "work_identities": 3
+    },
+    {
+      "active_hops": 106,
+      "basis_inputs": 7,
+      "charge_electric_identities": 588,
+      "diagonal_and_omitted_flux_controls": "PASS",
+      "edges": 72,
+      "face_hop_commutations": 48384,
+      "face_inverse": 672,
+      "faces": 96,
+      "hops": 504,
+      "neutral_off_diagonal_configs": 192,
+      "periods": [
+        3,
+        2,
+        2
+      ],
+      "phase_negative": {
+        "charge_derivative_plus": [
+          "-1",
+          "0"
+        ],
+        "common_mean_energy": [
+          "863/4",
+          "-96"
+        ],
+        "direction": -1,
+        "work_minus": [
+          "-1/2",
+          "0"
+        ],
+        "work_plus": [
+          "1/2",
+          "0"
+        ]
+      },
+      "phase_positive": {
+        "charge_derivative_plus": [
+          "1",
+          "0"
+        ],
+        "common_mean_energy": [
+          "863/4",
+          "-96"
+        ],
+        "direction": 1,
+        "work_minus": [
+          "-1/2",
+          "0"
+        ],
+        "work_plus": [
+          "1/2",
+          "0"
+        ]
+      },
+      "positive_energy_2H": [
+        1107,
+        -340
+      ],
+      "two_hop_H2_squared_coefficient": [
+        4,
+        0
+      ],
+      "vertices": 12,
+      "work_identities": 3
+    }
+  ],
+  "arithmetic": "Z[phi] pairs and rational expectation normalizations",
+  "cyclic_cutoff_commutator_error": -5,
+  "independent_review": "NOT PROVIDED",
+  "native_integer_time": "NOT PROVIDED",
+  "photon_phase": "NOT PROVED; harmonic comparison only",
+  "physical_closure": "NOT PROVIDED",
+  "status": "NON-CANONICAL candidate-C; quantum comparison only",
+  "triangle": {
+    "active_hops": 48,
+    "basis_inputs": 29,
+    "charge_electric_identities": 174,
+    "face_hop_commutations": 87,
+    "face_inverse": 29,
+    "hops": 87,
+    "phase": {
+      "charge_derivative_plus": [
+        "1",
+        "0"
+      ],
+      "common_mean_energy": [
+        "27/4",
+        "-1"
+      ],
+      "direction": 1,
+      "work_minus": [
+        "-1/2",
+        "0"
+      ],
+      "work_plus": [
+        "1/2",
+        "0"
+      ]
+    },
+    "positive_energy_2H": [
+      25,
+      4
+    ],
+    "unbounded_output_control": [
+      3,
+      3,
+      -3
+    ],
+    "window_inputs": 125,
+    "work_identities": 29
+  },
+  "verdict": "PASS exact frozen identities and negative controls"
+}
