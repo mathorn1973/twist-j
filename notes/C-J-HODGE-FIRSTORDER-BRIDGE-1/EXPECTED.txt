@@ -1,0 +1,11 @@
+01 PASS: marked A4, integral K^2=5I, L preserves unimodular wedge pairing
+02 PASS: ramified Hodge image and exact quotient isometry to W5
+03 PASS: first-order restriction h_plus=3*g5, h_minus=-3*g5, square classes differ
+04 PASS: exact six-by-six Hodge identity and definite base form at both real places
+05 PASS: orientation reversal stable, but non-unimodular beta/2 changes square class
+06 PASS: End_A5(W5)=F5; marked A5-equivariant square class is fixed
+07 PASS: 30 uniformizers exact (n=-7..7, both signs), real-place definiteness
+08 PASS: square residual multiplier iff Norm(unit)=-1; isometry vs sign tradeoff
+09 PASS: A5 preserves one metric line; adding J leaves no nonzero fixed symmetric form
+10 PASS: Phi_p(1+p*t)=p mod p^2 on p=3,5,7,11,13, all t
+ALL 10 EXACT LOCAL CHECKS PASS; NON-CANONICAL L1, no independent gate
