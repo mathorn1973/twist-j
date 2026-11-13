@@ -1,0 +1,45 @@
+{
+  "purpose": "Immutable support inputs for the prospective 64-block native-step compression audit",
+  "files": [
+    {
+      "path": "MODEL.md",
+      "bytes": 13037,
+      "sha256": "084028c39f1bca54838e55354338dfd6d703cac816ff8147d21d8cd80769131a"
+    },
+    {
+      "path": "PROGRAM.json",
+      "bytes": 1117,
+      "sha256": "1072a33f96304620b75d196d8b7c39939e06636fed2ed74a1cb613aa182f32bc"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 20410,
+      "sha256": "f7bf4cac1bea7913d7ea688092a88e5a63ac61df0a92ba36ee1709969439ec60"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 7866,
+      "sha256": "af68aa02a08023549514082f697435527db5c5ca69215c85744a636e2ed30e42"
+    },
+    {
+      "path": "PREREG.md",
+      "bytes": 12342,
+      "sha256": "1c1c024d7d03459c7f36a233121193132f066db89ba6c20ab293cf555c8f8095"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2704,
+      "sha256": "d38f7afce1ac3123b5e9a293253a7226476d1f9cb4bdbfde1ef3e4dcc298765f"
+    },
+    {
+      "path": "REVIEW-PREREG.md",
+      "bytes": 6665,
+      "sha256": "80b69d18e21f52cbb96c7fcf138849c961064e04ef80a15607b9bc1636aeca86"
+    },
+    {
+      "path": "verify_independent.py",
+      "bytes": 22255,
+      "sha256": "552a1172bdd0a41cd03905102eaab8fafd6bc317535bd813af9fddcbd4c3c3b2"
+    }
+  ]
+}
