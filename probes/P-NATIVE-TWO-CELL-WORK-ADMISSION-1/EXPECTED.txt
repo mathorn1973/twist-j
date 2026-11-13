@@ -1,0 +1,13 @@
+P-NATIVE-TWO-CELL-WORK-ADMISSION-1
+native_stable_states=6250 edges=12500 even_basis_checks=150000 coefficients=12
+native_xi_histories=5 boundaries=0..9 checkpoint_returns=3:5,4:6
+work_preparations=5 steps_each=10 first_hits=2,6,5,4,3
+WORK_READER_REJECTED_FROZEN_ALIGNMENT
+literal_b_lift=REFUSAL_MISMATCH literal_bank=PAYMENT_MISMATCH
+affine_bank_coefficients=15625 witnesses=6 survivors=1 zero_only=true
+nonlinear_bank=NONZERO_ANTI_INVARIANT no_full_native_lift_claimed
+low_field_states=22305 H0=1205 H1=21100 both_inverse_compositions=PASS
+single_checkpoint_capacity=22305>15625
+native_benchmark=acebb F2=0,2,8,8,2 F4=0,4,64,64,4 preparation_cut=3 return_cut=5
+positive_even_energy_nonselection=I:1,1 G:1,2
+AUDIT PASS; native paid Ksrc admission and physical energy remain OPEN
