@@ -5,7 +5,7 @@ The exact transition source is copied byte for byte from public revision
 `c089e7ec7ecc82f4838c27663d94c040f5cc4ea3`, directory
 `probes/P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/`.
 `prepare_capacity.py` verifies all five published source hashes and changes
-three guarded blocks in a separately generated `kernel64/` copy:
+five guarded blocks in a separately generated `kernel64/` copy:
 
 1. `LineFaces` capacity `6 * 16` becomes `6 * 64`.
 2. The inherited generic CLI size guard `[2,16]` becomes `[2,64]`.
@@ -15,9 +15,19 @@ three guarded blocks in a separately generated `kernel64/` copy:
    Sorting detects a duplicate exactly when some pair was equal, with the
    same failure string. This is validation-only algorithmic equivalence.
 
-No upstream file, categorical rule, random namespace, sweep order, mass,
+4. The exact categorical sampler packs each original 64-bit block into an
+   unsigned word in the same bit order before appending it to the unbounded
+   prefix. By positional arithmetic this is the same prefix after every
+   complete block, with the same 64/128/192/256-bit checks.
+5. For line masses the even face weight turns f+s*delta into s*f+delta.
+   Count signed residues once. For each candidate its exact mass is
+   4^z * phi^(2(n-f)), with z, n, f the counts of zero, near and far
+   residues. A table of exact powers and binary shifts of both coefficients
+   supplies the same unnormalized masses in the original candidate order.
+
+The upstream source and the categorical rule, random namespace, sweep order, mass,
 line move, flat sheet, charge conjugation or prefix cap is edited. This is a
-new capacity/validation adapter requiring its own prospective pin, not a modification
+new capacity, validation and exact throughput adapter with a prospective pin, not a modification
 or replay of the sealed historical pilot.
 
 ## Build and small integrity checks
@@ -29,11 +39,13 @@ python3 -B check_capacity.py
 python3 -B check_kernel_parity.py
 python3 -B check_adapter_fixture.py
 python3 -B check_stream_fixture.py
+g++ -std=c++20 -O2 -Wall -Wextra -Wpedantic -Werror line_mass_fixture.cpp -o /tmp/ordered_line_mass_fixture
+/tmp/ordered_line_mass_fixture
 g++ -std=c++20 -O2 -Wall -Wextra -Wpedantic -Werror ordered_sampler.cpp -o /tmp/ordered_sampler
 ```
 
 The geometry check uses no states or random draws. The parity check builds
-original and capacity-only sources separately and compares the inherited
+original and adapted sources separately and compares the inherited
 two-cycle L3/L4 fixture bytes. The exporter check uses precisely those same
 two-cycle fixture seeds and hashes. Neither script invokes a pilot or a
 production schedule. These are pre-pin engineering checks, not formal receipts.
@@ -134,16 +146,24 @@ Line masses use unbounded cpp_int coefficients. The only size-dependent
 fixed line array found is the explicitly enlarged one.
 
 At L=64 the three coordinate/neighbor arrays plus links and flux require
-58L^4=973078528 bytes before other allocations. The unchanged constructor's
-historical duplicate-line-face validation would perform
+58L^4=973078528 bytes before other allocations. The inherited pairwise
+constructor check would perform
 4L^3*(6L)*(6L-1)/2=77108084736 comparisons. The guarded sort replacement
 instead validates 4L^3 arrays of 6L IDs with O(L log L) work per array.
 One macrocycle makes 4L^4 local and 4L^3 line categorical decisions;
-line mass reconstruction processes 6L faces for each of five candidates.
+line mass reconstruction processes 6L faces once and forms five exact masses.
 The update work therefore grows at least as L^4, with increasing integer
 operand sizes, and the new constructor validation grows as O(L^4 log L).
-No target-size runtime benchmark has been run. L64 readiness here means
-checked geometry and integer capacity, not demonstrated practical throughput.
+Two target-size engineering fixtures at L=64 used a cold start and a single
+macrocycle at the inherited fixture seed. They emitted sentinels and counters
+with zero saved states. Baseline wall time was 115.43 s and the combined
+exact-throughput build took 62.05 s. Their ASCII transcripts have the same
+SHA-256 after substituting the common chain label in the ORDERED_RUN header;
+the rest of the transcript was byte-identical. The state fingerprint, cache
+fingerprint and exact update counters were included. The normalized digest is
+c55679e04994841d27ec8f8987f63b8dd062cab1431a78ef992ec6698406944c.
+These are single-cycle checks and timing estimates. The measured workload uses
+long equilibrated prefixes and separate costs for state streaming and replay.
 
 The saved payload alone has 4L^4 bytes. L64 is 67108864 bytes per state,
 requiring external manifest custody under public file-size policy.

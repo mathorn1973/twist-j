@@ -65,8 +65,15 @@ The descriptive analyzer takes one complete volume file and reports
 secondary means and standard errors, packet checks and paired primary
 covariance. The estimates and diagnostics remain finite-volume results.
 
-The minimum schedule entails 2,275,011,461,120 single-link and
-43,751,833,600 noncontractible-line categorical decisions before replay.
+For a chain accepted at thermal endpoint T, the driver and complete digest
+replay execute the sum of the candidate endpoints through T plus 2(T+4096)
+macrocycles. For the first endpoint, that is 11,264 per chain. For the last
+endpoint, it is 39,936. The four serial chains at L=64 therefore need at least
+45,056 macrocycles for an admitted volume. A single cold engineering
+macrocycle took 62.05 s after the exact-throughput changes. At that timing,
+the earliest serial L=64 workload projects about 32 days for the sampler
+alone. An execution allocation must include state reading, uncertainty in
+the macrocycle timing and the later possible thermal endpoints.
+
 Uncompressed link payload for the saved states would total 1,820,009,168,896
-bytes. Streaming caps the number of raw states held by each worker. A replay
-executes the prefix again and its cost belongs in the resource allocation.
+bytes. Streaming caps the number of raw states held by each worker.
