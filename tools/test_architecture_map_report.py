@@ -375,20 +375,19 @@ class ArchitectureMapReportTests(unittest.TestCase):
 
     def test_current_counts_match_the_public_summary(self) -> None:
         # audit(ROOT) reads this checkout, not the historical v10 map note.
-        # v112 adds three inline theorems, one dictionary and one finite C claim.
-        # All 621 prior claim statuses stay unchanged; ENC4 narrows one residual domain.
-        self.assertEqual(self.report.claims, 626)
+        # v113 adds the incidence-support dictionary and closes the cone owner.
+        self.assertEqual(self.report.claims, 627)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 43, "D": 60, "F": 19, "H": 2, "O": 24, "T": 478},
+            {"C": 43, "D": 62, "F": 19, "H": 2, "O": 23, "T": 478},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 202,
+                "none": 201,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 384,
+                "two-architecture": 386,
             },
         )
         self.assertFalse(self.report.count_mismatches)

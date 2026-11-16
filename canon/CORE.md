@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v112. Authority and activation are declared
+**Release identity:** Public Canon v113. Authority and activation are declared
 exclusively by [STATUS.md](../STATUS.md). This orientation does not replace the
 complete statements, evidence and falsifiers in [CANON.md](CANON.md) and
 [REGISTRY.tsv](REGISTRY.tsv).
@@ -10,7 +10,7 @@ system whose geometry, continuum, fields and probabilities are typed readings.
 Its primitive algebraic axiom is `J = 1 + j^2`, with `j = zeta_5`. The axiom is
 posited, not derived. The declared architecture has no fitted dimensionless
 parameter and uses the electron mass as its single SI calibration anchor.
-Public Canon v112 also declares a discrete architecture.
+Public Canon v113 also declares a discrete architecture.
 A common coefficient ring or a common action-layer label does not identify two
 state spaces, update laws, preparations or readings.
 

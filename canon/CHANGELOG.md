@@ -1,11 +1,23 @@
 # Canon changelog (public series)
 
-## Public Canon v112
+## Public Canon v113
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 626 claims; 0 T-LOCK, 478 T, 60 D, 43 C, 2 H, 24 O, 19 F; 26 live H/O.
+Registry snapshot: 627 claims; 0 T-LOCK, 478 T, 62 D, 43 C, 2 H, 23 O, 19 F; 25 live H/O.
 Reproduction witnesses: 43.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Adopt the weighted scalar incidence support dictionary at L4. Close
+PHOTON-CONE-CONVERGENCE at D for its complete selected incidence class and
+literal character-preserving map. The six-component spatial sign bundle
+and temporal sign line give exact global agreement with the registered
+L5 characteristic. The separate massless-phase obligation and the prior
+tangent and ordinary separated-carrier theorems retain their scopes.
+
+## Public Canon v112
+
+Registry snapshot: 626 claims; 0 T-LOCK, 478 T, 60 D, 43 C, 2 H, 24 O, 19 F; 26 live H/O.
+Reproduction witnesses: 43.
 
 Consolidate complete-state transport, observation quotients and fixed-reference
 reading in one contract. Add the exactly funded native longwave theorem and a
