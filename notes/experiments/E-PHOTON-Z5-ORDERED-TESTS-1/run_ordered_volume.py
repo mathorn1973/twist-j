@@ -255,10 +255,12 @@ def main():
                          if (path := output / f"thermal-{t}.json").is_file()
                          and json.loads(path.read_text(encoding="utf-8"))["status"] == "PASS"), None)
         stop = "STOP_BUDGET" if isinstance(failure, TimeoutError) else "STOP_INTEGRITY"
-        receipt = {"status": stop, "endpoint": endpoint, "detail": str(failure)}
+        receipt = {"status": stop, "endpoint": endpoint, "detail": str(failure),
+                   "sampler_sha256": args.sampler_sha256}
         if stop == "STOP_INTEGRITY":
             json_file(output / "receipts.json", {str(args.volume): receipt})
             raise
+    receipt["sampler_sha256"] = args.sampler_sha256
     json_file(output / "receipts.json", {str(args.volume): receipt})
 
 

@@ -49,11 +49,13 @@ compiler and sampler digests. The volume driver is run once per registered
 volume. It records the executable, settings, protocol logs and per-state
 SHA-256 and enclosures. The execution record fixes platform availability,
 longdouble precision and the wall-time budgets. The output directory for
-each volume is new. Before classification, verify recorded digests by
-replaying any required chain prefixes under the same executable and settings.
+each volume is new. Before a volume is admitted to a primary decision, replay each of its saved
+states under the same executable and settings. Supply the resulting
+replay-receipt.json to the primary analyzer using --replay-receipt.
 No thermal endpoint is chosen from a measured observable.
 
     python3 -B run_ordered_volume.py --help
+    python3 -B replay_ordered_volume.py --help
     python3 -B analyze_ordered.py --help
     python3 -B analyze_descriptive.py --help
 

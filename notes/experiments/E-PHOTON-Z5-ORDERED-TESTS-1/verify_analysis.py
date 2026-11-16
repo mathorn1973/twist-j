@@ -24,7 +24,7 @@ class InputFixture:
 
 entry = {
     "L": 16, "chain": "L16-c1", "sample": 0, "macrocycle": 1025,
-    "observables": observables,
+    "observables": observables, "state_sha256": "0"*64, "state_bytes": 4*16**4+80,
 }
 receipts = {"16": {"endpoint": 1024}}
 cells = suite.get_chains([InputFixture(entry)], receipts)

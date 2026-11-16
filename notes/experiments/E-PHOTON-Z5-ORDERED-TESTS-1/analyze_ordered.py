@@ -3,9 +3,10 @@ import argparse
 from collections import defaultdict
 from decimal import Decimal
 import hashlib
-import importlib.util
+import types
 import json
 import math
+import re
 from pathlib import Path
 from statistics import NormalDist, stdev
 import sys
@@ -28,6 +29,7 @@ ROW_VOLUMES = {
 VOLUMES = sorted({L for row in ROW_VOLUMES.values() for L in row})
 PRIMARY_COUNT = sum(map(len, ROW_VOLUMES.values()))
 ROUNDING = Decimal(2) ** -30
+SHA256 = re.compile(r"[a-f0-9]{64}\Z")
 Z = NormalDist().inv_cdf(1 - 0.01 / (2 * PRIMARY_COUNT))
 PILOT_DIAGNOSTICS_SHA = "d3d2ffba5ade37863f8e34a9b6c8198cf3e222aa8f12a6ba78b621d5c5bef4ce"
 
@@ -36,10 +38,10 @@ def load_diagnostics(path):
     payload = path.read_bytes()
     if hashlib.sha256(payload).hexdigest() != PILOT_DIAGNOSTICS_SHA:
         raise ValueError("Inherited diagnostics source hash mismatch")
-    spec = importlib.util.spec_from_file_location("pinned_pilot_diagnostics", path)
-    module = importlib.util.module_from_spec(spec)
-    sys.modules[spec.name] = module
-    spec.loader.exec_module(module)
+    module = types.ModuleType("pinned_pilot_diagnostics")
+    module.__file__ = str(path)
+    sys.modules[module.__name__] = module
+    exec(compile(payload, str(path), "exec", dont_inherit=True), module.__dict__)
     return module
 
 
@@ -76,6 +78,11 @@ def get_chains(files, thermal):
                     raise ValueError(f"Unregistered sample index {identity}")
                 if type(macro) is not int or macro != endpoint + sample + 1:
                     raise ValueError(f"Wrong macrocycle for {identity}")
+                digest = row.get("state_sha256")
+                size = row.get("state_bytes")
+                if not isinstance(digest, str) or not SHA256.fullmatch(digest) \
+                        or type(size) is not int or not 4 * L**4 < size <= 4 * L**4 + 256:
+                    raise ValueError(f"Invalid state SHA-256 or length for {identity}")
                 values = row["observables"]
                 for key, volumes in ROW_VOLUMES.items():
                     if L not in volumes:
@@ -140,6 +147,9 @@ def volume_rows(cells, thermal, diagnostics):
                     or thermal_record.get("measurement_sentinels") != "PASS"):
                 results[str(L)] = {"status": "mixing-unresolved", "counts": counts}
                 continue
+            if not thermal_record.get("replay_pass"):
+                results[str(L)] = {"status": "replay-unverified", "counts": counts}
+                continue
             data = [[chain[i] for i in range(SAMPLES)] for chain in chains]
             result = statistic(data, diagnostics)
             lo, hi = result["interval"]
@@ -193,10 +203,49 @@ def decisions(rows):
     }
 
 
+def series_identity(path):
+    with path.open("rb") as data:
+        first = data.readline()
+        if not first:
+            return None
+        L = json_record(first.decode("utf-8"))["L"]
+        checksum = hashlib.sha256(first)
+        for chunk in iter(lambda: data.read(1 << 20), b""):
+            checksum.update(chunk)
+    return L, checksum.hexdigest()
+
+
+def verify_replay_receipts(thermal, files, receipts):
+    pending = set()
+    available = {}
+    if not receipts:
+        return
+    for file in files:
+        if (identity := series_identity(file)) is not None:
+            L, digest = identity
+            if L in available:
+                raise ValueError("Replay verification needs one ledger per volume")
+            available[L] = digest
+    for path in receipts:
+        receipt = json.loads(path.read_text(encoding="utf-8"))
+        L = receipt["L"]
+        data = thermal.get(str(L))
+        if (type(L) is not int or L not in VOLUMES or L in pending or not data
+                or receipt["status"] != "PASS" or receipt["verified_states"] != 4 * SAMPLES
+                or receipt["endpoint"] != data["endpoint"]
+                or receipt["measurement_sha256"] != available.get(L)
+                or receipt["sampler_sha256"] != data.get("sampler_sha256")
+                or not SHA256.fullmatch(receipt["sampler_sha256"])):
+            raise ValueError(f"Invalid replay receipt for volume {L}")
+        pending.add(L)
+        data["replay_pass"] = True
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--diagnostics", required=True, type=Path)
     parser.add_argument("--thermal-receipts", required=True, type=Path, action="append")
+    parser.add_argument("--replay-receipt", type=Path, action="append", default=[])
     parser.add_argument("measurement_jsonl", type=Path, nargs="*")
     args = parser.parse_args()
     diagnostics = load_diagnostics(args.diagnostics)
@@ -205,7 +254,10 @@ def main():
         receipt = json.loads(path.read_text(encoding="utf-8"))
         if thermal.keys() & receipt.keys():
             raise ValueError("Duplicate thermal receipt for a volume")
+        for record in receipt.values():
+            record.pop("replay_pass", None)
         thermal.update(receipt)
+    verify_replay_receipts(thermal, args.measurement_jsonl, args.replay_receipt)
     rows = volume_rows(get_chains(args.measurement_jsonl, thermal), thermal, diagnostics)
     print(json.dumps({"volume_rows": rows, "decisions": decisions(rows)},
                      allow_nan=False, indent=2))
