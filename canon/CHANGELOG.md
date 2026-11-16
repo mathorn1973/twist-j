@@ -1,11 +1,27 @@
 # Canon changelog (public series)
 
-## Public Canon v111
+## Public Canon v112
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
+Registry snapshot: 626 claims; 0 T-LOCK, 478 T, 60 D, 43 C, 2 H, 24 O, 19 F; 26 live H/O.
+Reproduction witnesses: 43.
+<!-- END GENERATED CURRENT COUNTS -->
+
+Consolidate complete-state transport, observation quotients and fixed-reference
+reading in one contract. Add the exactly funded native longwave theorem and a
+finite referenced-record reproduction, with full accounts and explicit unlock.
+Adopt the all-input common ENC4 decision and the separate aggregate-normalization
+dictionary; retain the outside-ENC4 residual and all other live obligations.
+
+Replace repeated core exposition with a short typed orientation. Replace the
+historical manual frontier by current ownership references while retaining its
+unique rapidity obligation verbatim. No previous claim is retired or changes
+status. All 26 live H/O obligations and ten root queue positions remain.
+
+## Public Canon v111
+
 Registry snapshot: 621 claims; 0 T-LOCK, 475 T, 59 D, 42 C, 2 H, 24 O, 19 F; 26 live H/O.
 Reproduction witnesses: 41.
-<!-- END GENERATED CURRENT COUNTS -->
 
 Add seven exact L1 theorems and two C statements. The reciprocal four-slot
 contact has a complete balance guard and full-account involution, a sharp

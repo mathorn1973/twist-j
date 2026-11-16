@@ -12,8 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its 232 checks cover the current
-registry partition,
+and emits deterministic text. The inherited 232 checks cover earlier registry partitions,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
 branch-invariant C8-BILINEAR-SHADOW theorem, the exact boost drift and
@@ -139,7 +138,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 192/192 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 241/241 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -1197,3 +1196,44 @@ EXPECTED.txt is authored before execution by preserving PASS lines 1 through
 imported or executed by this adapter. The first execution of this complete
 successor follows its immutable public content pin and byte readback. Both
 complete architecture jobs and the exact-head activation gate must then pass.
+
+## Public Canon v112 boundary
+
+Nine structural checks extend the exact inverse chain to v112. The 13 Canon
+inputs and updated architecture metadata test are bound to the exact
+successor content bytes. Exact inverse line edits recover the prior inputs
+from Public Canon v111 at 4350f1fff2e6bcdafce10550341473e219aa6f28. Only the
+v111 input reads use these validated views. All 232 historical predicates,
+PASS descriptions and ordering are retained. There is no historical byte
+fallback or runtime fetch.
+
+The fold preserves the identifiers and statuses of all 621 previous claims,
+all 19 F rows, the 26 live H/O owners and all ten root queue positions. Five
+new claims consist of three T theorems, one D dictionary and one C
+computation. The two METRO scope records keep O: the dimensional obligation
+covers the remaining outside-common-ENC4 class and the parent R1 remains the
+complement of the full original dimensional class. The open residual gate
+and the separate adopted ENC4 normalization gate have their own owners.
+The v112 partition is T478/D60/C43/H2/O24/F19, totalling 626 claims.
+
+The statements bind the complete-state observation contract, the funded
+long-wave sector, the fixed-reference finite H3 record and the separate
+ENC4 theorem and normalization dictionary. The finite H3 evidence is the
+three-file reproduction bundle with two-architecture evidence. The two
+neutral RUNS records are pinned separately for custody. The Core selection
+and section 18 changes are presentation audits; all twelve section 18
+normative owners remain, including the open rapidity evaluation statement.
+
+The exact current inventory is 43 reproduction directories. The three-file
+post-v111 ENC4 review supplement was already on the public main base, and
+the five-file H3 reproduction was admitted through the intake. The adapter
+validates the complete directory inventory and exact admitted source bytes
+before removing only these two directory names from the v111 projection.
+It binds the public source and provenance files without hashing its own
+directory or treating structural checks as independent mathematical review.
+
+EXPECTED.txt preserves PASS lines 1 through 232 verbatim and adds nine
+predeclared descriptions. The 241-check result is an output contract,
+rather than an execution receipt. The structural adapter executes no
+scientific verifier. Formal complete replay follows the prospective
+immutable source pin and fresh byte readback, on both required architectures.

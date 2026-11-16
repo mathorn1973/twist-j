@@ -962,6 +962,2800 @@ V111_CHECKS = [['V111-PRIOR-BYTES',
   'the exact 41-directory inventory adds only the accepted plenum reproduction to the validated '
   'historical 40; no scientific verifier is imported or executed']]
 
+
+
+V112_INPUT_PATCH = {'canon/REGISTRY.tsv': {'current_sha256': 'ad6c7df7fdecac7b747e20d1754ca4a0882b055bb4cac94e6932d4ab1ff419c9',
+                        'current_bytes': 609543,
+                        'prior_sha256': 'e3d97bfa91f7ad7e935f5582b73f05f06999abe582e4ee4d7d9bff612e40124a',
+                        'prior_bytes': 601962,
+                        'restore': [(222,
+                                     223,
+                                     'METRO-ADMISSIBILITY\tO\tthe exhaustive residual cover R1 through R8 of '
+                                     'the registered METRO universe: R1=U_RF minus the commuting higher-rank '
+                                     'METRO-ADMISSIBILITY-DIM child, including rank-one, noncommuting, and '
+                                     'otherwise out-of-child finite rational protocols; plus '
+                                     'non-finite-state, unbounded-memory adaptive, non-reducible stochastic, '
+                                     'irrational, out-of-child cross-layer, physical-unit, and mixed-class '
+                                     'protocols\t15. Couplings, instruments, and metrology\tinline\tSTOP '
+                                     'until R1 through R8 each has a typed child and decision condition; '
+                                     'closes only when all eight children close; '
+                                     'METRO-FINITE-STATE-RATIONALITY proves conditional rationality inside '
+                                     'only part of R1 and does not close it\n'),
+                                    (313,
+                                     314,
+                                     'METRO-ADMISSIBILITY-DIM\tO\tthe exact admissibility decision for '
+                                     'finite N^a-indexed commuting digit-word systems over Q with q >= 2, a '
+                                     '>= 2, r >= 1, finite state carrier, nonempty allowed starts, fixed '
+                                     'digit and padding convention, commuting coordinate digit actions, '
+                                     'complete raw L5 stream in Q_(>=0)^r, total tagged L6 normalization '
+                                     'Y_r, and uniform translated-box convergence with an effective modulus; '
+                                     'an independently defined joint certificate must be sound, complete, '
+                                     'and decision-coherent and must cover individual digit maps, the '
+                                     'relevant invariant submodule, allowed-start observable quotient, '
+                                     'primary, peripheral, Jordan, q-adic boundary and residue data, and the '
+                                     'exact terminal value\t15. Couplings, instruments, and metrology\t'
+                                     'inline\tcloses positively when the direct translated-box criterion '
+                                     'decides the complete frozen child, the independent joint certificate '
+                                     'is terminating, sound, complete, and coherent, and every allowed '
+                                     'reduction preserves the decision and terminal value; closes negatively '
+                                     'on an exact admitted counterexample to soundness, completeness, '
+                                     'coherence, total normalization, or reduction invariance; STOP while '
+                                     'any type, endpoint, certificate field, reduction, completeness proof, '
+                                     'boundary theorem, or effective modulus is incomplete\n'),
+                                    (622, 627, '')]},
+ 'canon/NORMATIVE.tsv': {'current_sha256': '8728c326194f48f6e070383c869ab8f3e866849f9eb85357d78899d87c0a44fa',
+                         'current_bytes': 80790,
+                         'prior_sha256': '17351797694e41e17629f6186fb23de62b5bd541bf12a97c59bf3f35abfd3f96',
+                         'prior_bytes': 80175,
+                         'restore': [(687, 692, '')]},
+ 'canon/DEPENDENCIES.tsv': {'current_sha256': 'd1a6bf3bb775a97d26a3df0378156aed5139ff3f2e1081835c48584df91ba6b1',
+                            'current_bytes': 206968,
+                            'prior_sha256': '0d9f865a5cd086b0257acf81316a8c4e28a3e10e6f6c0225487db1332b2680ae',
+                            'prior_bytes': 204996,
+                            'restore': [(517,
+                                         518,
+                                         'METRO-ADMISSIBILITY\tMETRO-REDUCTION-CALCULUS\tREQUIRES\tthe '
+                                         'exhaustive residual class R1 is defined as U_RF minus the '
+                                         "dimensional child and therefore requires the parent's exact U_RF "
+                                         'protocol type\n'),
+                                        (1235, 1244, '')]},
+ 'canon/EVIDENCE.tsv': {'current_sha256': 'd434072f2d0a7f7730d083d6d2a37d3975fe5b103b1d0858258f4c8c242b6128',
+                        'current_bytes': 125419,
+                        'prior_sha256': 'e6cef26b9fcecf5124da70922a180c143495f39fad785dfe0b312449fb70a82c',
+                        'prior_bytes': 124510,
+                        'restore': [(213,
+                                     214,
+                                     'METRO-ADMISSIBILITY\tEV-METRO-ADMISSIBILITY\tINLINE_CANON\tinline\t'
+                                     '48091af4453a15143ebb671f858b2c692b5598c2a11188dc87537071bca45e6d\t'
+                                     'registry-scope-sha256-v1\tnone\n'),
+                                    (304,
+                                     305,
+                                     'METRO-ADMISSIBILITY-DIM\tEV-METRO-ADMISSIBILITY-DIM\tINLINE_CANON\t'
+                                     'inline\t'
+                                     '4607286c31d4fcc8142d1ee01f835f155737363a91a693516f41357deb2c9d31\t'
+                                     'registry-scope-sha256-v1\tnone\n'),
+                                    (622, 627, '')]},
+ 'canon/HISTORY.tsv': {'current_sha256': 'cc10a762ce7d6c910058dfb9f1e65d142935147e4d2e6fe2ac6f855f1e6b23c1',
+                       'current_bytes': 540945,
+                       'prior_sha256': 'fbb9d930bd744dc681bb0491a8568a827a67d2faf08a1ff6de5bee3fb115e9dc',
+                       'prior_bytes': 538239,
+                       'restore': [(1170, 1177, '')]},
+ 'canon/GATES.tsv': {'current_sha256': '57132309a6215bb1855d428cb779920c0f09855e4cbd16a8f6c4e02a1b242550',
+                     'current_bytes': 13957,
+                     'prior_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+                     'prior_bytes': 13324,
+                     'restore': [(7,
+                                  8,
+                                  'GATE-L5-L6-METRO-NORMALIZATION\tMETRO-ADMISSIBILITY-DIM\tL5\tL6\t'
+                                  'OPEN_LIFT\tcloses only when the complete raw L5 stream, total tagged L6 '
+                                  'normalization, uniform translated-box decision with effective modulus, '
+                                  'and independent joint certificate are exactly typed and the certificate '
+                                  'is terminating, sound, complete, coherent, and invariant under every '
+                                  'allowed reduction; otherwise STOP or an exact admitted counterexample '
+                                  'routes negative\n'),
+                                 (27, 28, '')]},
+ 'canon/FRONTIER_PROGRAMS.tsv': {'current_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                                 'current_bytes': 1502,
+                                 'prior_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                                 'prior_bytes': 1502,
+                                 'restore': []},
+ 'canon/CORE_SELECTION.tsv': {'current_sha256': '2ffc8234faea17b2ca6f9e96648515b68bc083bafb95434f0e4723ad3e8c2361',
+                              'current_bytes': 349,
+                              'prior_sha256': '63abc00f5fe61484f3fc3eb168c094cab9b06c8ef4a10c13fdca706e756105e0',
+                              'prior_bytes': 1566,
+                              'restore': [(1,
+                                           13,
+                                           '1\tREADING-SPLIT\n'
+                                           '2\tJ-UNIT\n'
+                                           '3\tJ-PROJECTIONS\n'
+                                           '4\tPLENUM-POINT\n'
+                                           '5\tJ-GOLDEN-BRIDGE\n'
+                                           '6\tJ-STEP\n'
+                                           '7\tAXIOM-PROJECTION-DICTIONARY\n'
+                                           '8\tCENSUS-313\n'
+                                           '9\tBORN-HALF-ANGLE\n'
+                                           '10\tBORN-RESIDUAL-SPLIT\n'
+                                           '11\tSPIN-BISECTOR\n'
+                                           '12\tBORN-ORDER-STAIRCASE\n'
+                                           '13\tMEASURE-BORN-VERB\n'
+                                           '14\tMAXWELL-BIANCHI\n'
+                                           '15\tMAXWELL-GAUSS-CHAIN\n'
+                                           '16\tMAXWELL-AMPERE-CHAIN\n'
+                                           '17\tMAXWELL-OBSTRUCTION-P\n'
+                                           '18\tMAXWELL-CLOSED\n'
+                                           '19\tZ2-PLACES-SPLIT\n'
+                                           '20\tTWO-PLACE-PHYSICS\n'
+                                           '21\tFORCE-WEYL-HOLONOMY\n'
+                                           '22\tFORCE-AS-CURVATURE\n'
+                                           '23\tFRW-CANONICAL-FORM\n'
+                                           '24\tGRAVITY-BRIDGE-LAW\n'
+                                           '25\tCOSMOLOGY-READING-DICTIONARY\n'
+                                           '26\tBOOST-READING-SPLIT\n'
+                                           '27\tBOOST-COUNT-LADDER\n'
+                                           '28\tCOLOR-MCKAY-E8\n'
+                                           '29\tCOLOR-LADDER-DICTIONARY\n'
+                                           '30\tCOLOR-KINEMATICAL-GL2\n'
+                                           '31\tINTEGER-HERMITIAN-OCCUPIED-SOURCE\n'
+                                           '32\tINTEGER-PRIMITIVE-SOURCED-METRIC\n'
+                                           '33\tRELATIONAL-DECLARED-BOOST-INERTIA\n'
+                                           '34\tRELATIONAL-CLOSED-RECOIL-RATIO\n'
+                                           '35\tCONTACT-W-SPECTRAL-READING\n'
+                                           '36\tSELECTED-SPECTRAL-ENERGY-SOURCE\n'
+                                           '37\tCM5-POLARIZATION-DICTIONARY\n'
+                                           '38\tCM5-INTEGRAL-PULLBACK-REACHABILITY\n'
+                                           '39\tJM-POSITIVE-REFERENCED-READING\n'
+                                           '40\tJM-FUNDED-INTEGER-PAIR-SOURCE\n'
+                                           '41\tCONTACT-W-BOUND-PAIR-RESPONSE\n'
+                                           '42\tHOMOGENEOUS-CAPTURE-CURRENT-RECORD\n'
+                                           '43\tU-NATIVE-WHOLE-SHEET-RETURN-WINDOWS\n'
+                                           '44\tCOHERENT-W-LOCALIZED-RING-CLOSURE\n'
+                                           '45\tACTIVE-ISOSPECTRAL-RECORD\n'
+                                           '46\tFINITE-COHERENT-BATTERY-DRIFT\n'
+                                           '47\tRELATIVE-CONTACT-FOUR-SLOT-MINIMUM\n'
+                                           '48\tRELATIVE-CONTACT-RETAINED-BANK-CAPACITY\n'
+                                           '49\tRELATIVE-CONTACT-COMMON-APPARATUS-OPEN\n'
+                                           '50\tRELATIVE-CONTACT-RHYTHM-CLASSIFICATION\n'
+                                           '51\tRELATIVE-CONTACT-FINITE-WORKBANK-REUSE\n'
+                                           '52\tU-CARRY-MIRROR-FINITE-CIRCUIT\n'
+                                           '53\tRELATIVE-CONTACT-FIVE-HEIGHT-COMPILER\n'
+                                           '54\tRELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS\n'
+                                           '55\tRELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION\n')]},
+ 'canon/CANON.md': {'current_sha256': '246c76843fca21da8a4e7e16c3324d674690cd12c38b26d7fcd96cf094217534',
+                    'current_bytes': 1554930,
+                    'prior_sha256': '9a9f80571f4fbfe50dbfda1bf0e8d7e46e3fa1827bc989621eb8fd875aff75e6',
+                    'prior_bytes': 1532230,
+                    'restore': [(0, 1, '# TWIST-J Public Canon v111\n'),
+                                (2,
+                                 3,
+                                 '**Release identity.** Public Canon v111. Normative authority and '
+                                 'activation\n'),
+                                (17061, 17379, ''),
+                                (30697,
+                                 30699,
+                                 'Second, METRO-ADMISSIBILITY-DIM [O] is the child on an `N^a`-indexed\n'
+                                 'commuting digit-word system, not an additive action. Its input has\n'),
+                                (30742,
+                                 30749,
+                                 'with one terminal `L` across all valid admissible certificates. The child\n'
+                                 'alone owns GATE-L5-L6-METRO-NORMALIZATION and is STOP until the stream\n'
+                                 'semantics, complete certificate schema, exact checker, reductions,\n'
+                                 'all-parameter proof or fully bounded finite surface, translated-box '
+                                 'theorem,\n'
+                                 'and effective modulus are public. The fixed-length two-state factorwise\n'),
+                                (30753,
+                                 30756,
+                                 'Third, let `C_dim` be exactly the subclass of `U_RF` typed by\n'
+                                 'METRO-ADMISSIBILITY-DIM [O]. Residual METRO-ADMISSIBILITY [O] owns '
+                                 'exactly:\n'),
+                                (33676, 33936, ''),
+                                (34455,
+                                 34487,
+                                 'The live obligations and hypotheses of the program. Each identifier is\n'
+                                 'a registry row with status O or H; the registry carries for every row\n'
+                                 'a concrete falsifier or a decision condition: what closes it\n'
+                                 'positively and what closes it negatively. The COIN-MINIMAL-READ [D]\n'
+                                 'paragraph below is status-separation context for its live O owner, not a\n'
+                                 'frontier row.\n'),
+                                (34517,
+                                 34517,
+                                 '- LAMBDA-COCYCLE-ANGLES [H]. The compact lambda-adic boundary route '
+                                 'remains\n'
+                                 '  open only in cocycle-vector form: an exact realization would require a\n'
+                                 '  vector `v in L^2(O_lambda,Haar)` with\n'
+                                 '  `||sum_(k=0)^(n-1) U_J^k v||^2 = lambda_n` for every `n >= 1`. Such a\n'
+                                 '  vector exists exactly when the Riemann hypothesis holds and every '
+                                 'Cayley\n'
+                                 '  angle `2 arctan(1/(2 gamma))` lies in `2 pi (1/4) Z[1/5]`, equivalently\n'
+                                 '  when every nontrivial zero is `rho = 1/(1 - xi)` with `xi != 1` and\n'
+                                 '  `xi^(4 . 5^a) = 1` for some integer `a >= 0`. The hypothesis is fired by '
+                                 'a\n'
+                                 '  disproof of the Riemann hypothesis or by one exact arithmetic exclusion '
+                                 'of a\n'
+                                 '  nontrivial zero from that form. With\n'
+                                 '  `t_n = lambda_(n+1) + lambda_(n-1) - 2 lambda_n`, `M = 2 lambda_1`, and\n'
+                                 '  `n_A = 4 . 5^A`, failure of the tail limit `t_(n_A) -> M` localizes to '
+                                 'one\n'
+                                 '  such off-grid ordinate. The pointwise inequalities\n'
+                                 '  `0 <= M - t_n <= 2 M` are necessary only: an exact finite violation\n'
+                                 '  contradicts membership, while\n'
+                                 '  satisfaction at finitely many indices does not decide the row. No '
+                                 'general\n'
+                                 '  finite-profile nonfalsifiability or realization theorem is claimed. The '
+                                 'tail\n'
+                                 '  localization and the all-real tail/grid equivalence are supplied '
+                                 'respectively\n'
+                                 '  by LAMBDA-COCYCLE-BRANCH-COLLAPSE [T] and\n'
+                                 '  LAMBDA-COCYCLE-GRID-EQUIVALENCE [T] in section 16.\n'
+                                 '\n'
+                                 'COIN-MINIMAL-READ [D] is the adopted L1 dictionary premise that selects\n'
+                                 '`beta_1` from the complete integer-admissible pair by the two distinct\n'
+                                 'minimum-cost criteria proved in COIN-SELECTION-CONDITIONAL [T].\n'
+                                 'MAXIMAL-REACH remains the named unadopted alternative and selects '
+                                 '`beta_3`.\n'
+                                 'The dictionary does not say that the decoder architecture forces this\n'
+                                 'choice.\n'
+                                 '\n'
+                                 'MINIMAL-READ-DERIVATION [O] is the corresponding open L5-to-L1 decision. '
+                                 'It\n'
+                                 'requires a complete typed decoder class, cover-to-output map,\n'
+                                 'accumulator/equality rule, redundancy theorem, dependency graph, and '
+                                 'layer\n'
+                                 'typing. A complete derivation uniquely forcing `w=1` and `beta_1` closes '
+                                 'it\n'
+                                 'positively; a complete nonempty class supporting both coins, or uniquely\n'
+                                 'forcing `beta_3`, closes it negatively. Missing structure or failure of '
+                                 'only\n'
+                                 'one proposed route is STOP.\n'
+                                 '\n'
+                                 'The v36 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'claims:    220 + 1 Kappa falsification row = 221,\n'
+                                 'T:         118, D: 41, C: 24, H: 3, all unchanged,\n'
+                                 'O:         24 - 1 falsified compound route = 23,\n'
+                                 'F:         10 + 1 Kappa row + 1 compound route = 12,\n'
+                                 'live H/O:  27 - 1 = 26.\n'
+                                 '```\n'
+                                 '\n'
+                                 'Public Canon v36 declares PHOTON-KAPPA-LEMMA [F] at L4 and changes\n'
+                                 'PHOTON-WINDOW-PROOF from O to F. The public two-architecture\n'
+                                 '`P-PHOTON-KAPPA-LEMMA-1` certificate exhibits one admitted connected\n'
+                                 'current with `L=3240` and one ternary filling of support 7993 satisfying\n'
+                                 '`2^7993<=7^3240`. Only `F_occ<=7993` is used. The exact integer exclusion\n'
+                                 'lemma therefore rules out every admissible rational Kappa coefficient '
+                                 'from\n'
+                                 'the frozen universal occupancy proposition. The `F` label classifies that\n'
+                                 'failed positive proposition; the exclusion lemma itself is true.\n'
+                                 '\n'
+                                 'The parent was a conjunction. Falsification of its necessary Kappa '
+                                 'conjunct\n'
+                                 'falsifies the frozen compound route regardless of the separate roughening\n'
+                                 'question. Issue #201 and electric-face roughening remain open, undecided, '
+                                 'and\n'
+                                 'unregistered; no successor is created automatically. KAPPA-SHAPES [C] and\n'
+                                 'MONOPOLE-COST [C] remain unchanged. No filling equality or optimality, '
+                                 'pump\n'
+                                 'family, asymptotic family, broader carrier, Froehlich-Spencer import,\n'
+                                 'massless or Coulomb phase, continuum limit, propagator, physical photon,\n'
+                                 'cross-layer lift, or physical measure is claimed.\n'
+                                 '\n'
+                                 'The explanatory README of the older `reproduce/photon-electron` bundle is\n'
+                                 'updated to point to the later public Kappa probe while preserving that\n'
+                                 "reproduction's own exact scope and unchanged verifier. Its 14 existing\n"
+                                 'evidence consumers are re-pinned to the recomputed bundle hash with '
+                                 'explicit\n'
+                                 'evidence-change history events. The public Kappa probe supplies the new '
+                                 'and\n'
+                                 'parent evidence rows. Mandatory architecture CI replays every public '
+                                 'probe\n'
+                                 'and minimal reproduction because this fold changes `canon/`.\n'
+                                 '\n'
+                                 'The v35 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'claims:    220 unchanged,\n'
+                                 'T:         118, C: 24, O: 24, F: 10, all unchanged,\n'
+                                 'D:         40 + 1 dictionary retype = 41,\n'
+                                 'H:         4 - 1 retyped dictionary = 3,\n'
+                                 'live H/O:  28 - 1 = 27.\n'
+                                 '```\n'
+                                 '\n'
+                                 'Public Canon v35 reclassifies COIN-MINIMAL-READ from H to D at '
+                                 'byte-identical\n'
+                                 'scope and byte-identical falsifier. The registered sentence already '
+                                 'adopts\n'
+                                 '`beta_1` by the MINIMAL-READ dictionary on the complete proved pair and '
+                                 'does\n'
+                                 'not assert that the decoder architecture forces that choice. The public\n'
+                                 'evidence bundle remains `probes/P-BOOST-COHERENCE-1`; no probe file, probe '
+                                 'verifier,\n'
+                                 'or evidence row changes, and no new formal scientific execution or '
+                                 'evidence is\n'
+                                 'introduced. The status-separation audit moves with the fold, and '
+                                 'mandatory\n'
+                                 'architecture CI replay creates no evidence record.\n'
+                                 '\n'
+                                 'MINIMAL-READ-DERIVATION [O] remains the separate live L5-to-L1 decision '
+                                 'and\n'
+                                 'stays O, ROOT, STOP, and owner of GATE-L5-L1-MINIMAL-READ. MAXIMAL-REACH\n'
+                                 'remains named and unadopted. No derivation, closure, theorem, selector,\n'
+                                 'dependency edge, action-layer lift, decoder completion, or physical claim '
+                                 'is\n'
+                                 'added.\n'
+                                 '\n'
+                                 'The v34 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'claims:    219 + 1 theorem = 220,\n'
+                                 'T:         117 + 1 abelian CM discriminant-minimum theorem = 118,\n'
+                                 'D:         40, C: 24, H: 4, O: 24, F: 10, all unchanged,\n'
+                                 'live H/O:  28 unchanged.\n'
+                                 '```\n'
+                                 '\n'
+                                 'Public Canon v34 registers\n'
+                                 'ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM [T] at L1 on the '
+                                 'immutable\n'
+                                 '`probes/P-ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM-1` bundle. The\n'
+                                 'theorem status is earned by the complete owner-accepted proof; the '
+                                 'accepted\n'
+                                 'proof and byte-identical x86_64 and aarch64 transcripts audit its seven '
+                                 'exact\n'
+                                 'gates, with the full execution-integrity record retained in the evidence\n'
+                                 'bundle. The fold adds only the unique absolute-discriminant\n'
+                                 'minimum in the frozen abelian Galois CM unique-even-bit class and the '
+                                 'concise\n'
+                                 'Core synthesis of the two independent field-characterisation results, '
+                                 'neither\n'
+                                 'of which derives or justifies the primitive axiom. It adds no claim\n'
+                                 'that the class, total ramification, or discriminant minimization is '
+                                 'physically\n'
+                                 'selected, no physical-field uniqueness, TWO-PLACE-PHYSICS promotion, '
+                                 'decoder,\n'
+                                 'measure, or L2-L6 lift, and no live H or O row moves.\n'
+                                 '\n'
+                                 'The v33 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'claims:    218 + 1 theorem = 219,\n'
+                                 'T:         116 + 1 quartic cyclotomic total-ramification theorem = 117,\n'
+                                 'D:         40, C: 24, H: 4, O: 24, F: 10, all unchanged,\n'
+                                 'live H/O:  28 unchanged.\n'
+                                 '```\n'
+                                 '\n'
+                                 'Public Canon v33 registers\n'
+                                 'QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS [T] at L1 on the immutable\n'
+                                 '`probes/P-QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS-1` bundle. The\n'
+                                 'theorem status is earned by the complete independently accepted proof; '
+                                 'the\n'
+                                 'byte-identical x86_64 and aarch64 transcript and the independently frozen\n'
+                                 'blind breaker audit its exact certificates. The fold adds only the '
+                                 'complete\n'
+                                 '`phi(n)=4` index and field quotient, discriminants, ramification '
+                                 'profiles,\n'
+                                 'total-prime locus, residue-unit groups, and inherited `J` compatibility. '
+                                 'It\n'
+                                 'adds no degree-four or broader CM selection, physical-field uniqueness,\n'
+                                 'TWO-PLACE-PHYSICS promotion, decoder, measure, or L2-L6 lift, and no live '
+                                 'H\n'
+                                 'or O row moves.\n'
+                                 '\n'
+                                 'The v32 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'claims:    217 + 1 theorem = 218,\n'
+                                 'T:         115 + 1 central-lift phase theorem = 116,\n'
+                                 'D:         40, C: 24, H: 4, O: 24, F: 10, all unchanged,\n'
+                                 'live H/O:  28 unchanged.\n'
+                                 '```\n'
+                                 '\n'
+                                 'Public Canon v32 registers CENTRAL-LIFT-PHASE [T] at L4 on the immutable\n'
+                                 '`probes/P-CENTRAL-LIFT-PHASE-1` bundle. The theorem status is earned by '
+                                 'the\n'
+                                 'independently accepted proof in its preregistration; the byte-identical\n'
+                                 'x86_64 and aarch64 transcript audits the exact E1-E3 certificates. The '
+                                 'fold\n'
+                                 'adds only the projective fifth, normalized Herm/Sym scalar separation,\n'
+                                 'square-root-free J action, central `zeta_5^2` Sym factor, exact '
+                                 'unit-phase\n'
+                                 'image `mu_5`, and the `mu_10 \\ mu_5` obstruction. It adds no Herm2 cone,\n'
+                                 'rigidity, common carrier, decoder data, U(1), measure, or physical tick, '
+                                 'and\n'
+                                 'no live H or O row moves.\n'
+                                 '\n'
+                                 'The v31 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'claims:    216 + 1 theorem = 217,\n'
+                                 'T:         114 + 1 marked-CM semilinear-pair theorem = 115,\n'
+                                 'D:         40, C: 24, H: 4, O: 24, F: 10, all unchanged,\n'
+                                 'live H/O:  28 unchanged.\n'
+                                 '```\n'
+                                 '\n'
+                                 'Public Canon v31 registers COLOR-CM-2I-SEMILINEAR-PAIR [T] at L4 on the\n'
+                                 'immutable `probes/P-CM-2I-QCARRIER-1` bundle. The theorem status is earned '
+                                 'by\n'
+                                 'the independently accepted proof in its preregistration; the '
+                                 'byte-identical\n'
+                                 'x86_64 and aarch64 verifier transcript audits its exact certificates. The\n'
+                                 'result is relative to the displayed marked representative and creates no\n'
+                                 'marked-lift selector, decoder `QCarrier`, U(1) dictionary, or measure '
+                                 'lift. No\n'
+                                 'live H or O row moves, and both adjacent STOP obligations remain '
+                                 'unchanged.\n'
+                                 '\n'
+                                 'The v30 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'claims:    216 unchanged,\n'
+                                 'statuses:  0 T-LOCK, 114 T, 40 D, 24 C, 4 H, 24 O, 10 F, all unchanged,\n'
+                                 'live H/O:  28 unchanged,\n'
+                                 'evidence:  216 unchanged.\n'
+                                 '```\n'
+                                 '\n'
+                                 'Public Canon v30 registers no claim and retires none. It republishes the '
+                                 'v29\n'
+                                 'ledger unchanged so that a tagged tree passes its own activation readback '
+                                 'and\n'
+                                 'the release can carry assets. The v29 gap is recorded in\n'
+                                 '`notes/canon/V29-RELEASE-ERRATUM.md` and is not repaired by this version.\n'
+                                 '\n'
+                                 'The v29 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'claims:    215 + 1 computation = 216,\n'
+                                 'C:         23 + 1 renormalization-return computation = 24,\n'
+                                 'T:         114, D: 40, H: 4, O: 24, F: 10, all unchanged,\n'
+                                 'live H/O:  28 unchanged.\n'
+                                 '```\n'
+                                 '\n'
+                                 'Public Canon v29 registers ENTROPY-RG-RETURN [C] at L5 on the immutable\n'
+                                 '`probes/P-ENTROPY-RG-RETURN-1` bundle, whose local aarch64 leg and '
+                                 'required\n'
+                                 'GitHub x86_64 leg produced the same 13-gate PASS transcript byte for byte. '
+                                 'The\n'
+                                 'row is closed at birth inside the declared range and no live H or O row '
+                                 'moves.\n'
+                                 'No continuum limit, scaling limit, critical exponent, monotone scale '
+                                 'function,\n'
+                                 'measure or all-scale law is registered with it.\n'
+                                 '\n'
+                                 'The v28 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'claims:    214 + 1 theorem = 215,\n'
+                                 'T:         113 + 1 read-redundancy theorem = 114,\n'
+                                 'D:         40, C: 23, H: 4, O: 24, F: 10, all unchanged,\n'
+                                 'live H/O:  28 unchanged.\n'
+                                 '```\n'
+                                 '\n'
+                                 'Public Canon v28 registers READ-REDUNDANCY-PRIME-SUPPORT [T] at L5 on the\n'
+                                 'immutable `probes/P-READ-REDUNDANCY-1` bundle, whose local aarch64 leg '
+                                 'and\n'
+                                 'required GitHub x86_64 leg produced the same 16-gate PASS transcript byte '
+                                 'for\n'
+                                 'byte. The universal classification rests on the short symbolic proof that '
+                                 'the\n'
+                                 'verifier audits; the three exhaustion legs corroborate it inside their '
+                                 'frozen\n'
+                                 'boxes and establish nothing beyond them.\n'
+                                 '\n'
+                                 'Public Canon v28 also amends the scope and falsifier of\n'
+                                 'TM-SYM2-PHYSICAL-MEASURE, which was O at that release. The row previously '
+                                 'required a future bridge to\n'
+                                 'preserve mu_i = 1/6 and M_TM = (1/3)P1 + (2/15)P5 and to derive the typed\n'
+                                 'factorization 1/6 = (1/2)(1/3); those are the values such a bridge would '
+                                 'be\n'
+                                 'trying to establish, so requiring them in advance stated the answer before '
+                                 'the\n'
+                                 'question. The amendment moves them to the result side and adds the '
+                                 'explicit\n'
+                                 'CIRCULAR rejection, following CANON13-SCOPE-DE-CONFORMAL-WEIGHT. The fired '
+                                 'N2\n'
+                                 'boundary, the complete 48-selector class in four free orbits of 12, the\n'
+                                 'retained reading orientation, the prohibition on enlarging gauge, and the\n'
+                                 'three exact classifications are all preserved without change, and the row\n'
+                                 'stays O and STOP. No status or count moves except the history.\n'
+                                 '\n'
+                                 'The v27 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'claims:    210 + 2 theorems + 1 hypothesis + 1 obligation = 214,\n'
+                                 'T:         111 + 2 exact boost/coin theorems = 113,\n'
+                                 'H:         3 + 1 adopted coin premise = 4,\n'
+                                 'O:         23 + 1 derivation owner = 24,\n'
+                                 'live H/O:  26 + 2 = 28.\n'
+                                 '```\n'
+                                 '\n'
+                                 'Public Canon v27 registers DRIFT-IS-THE-READ [T] at L5 and\n'
+                                 'COIN-SELECTION-CONDITIONAL [T] at the exact L1/L5 comparison boundary. '
+                                 'The\n'
+                                 'first row packages the fixed `beta_1` reflection, division-free spectral\n'
+                                 'skeleton, nonclosing gap, exact drift and range, and all-`N` uniform '
+                                 'bound.\n'
+                                 'Its read interpretation is conditional on P1 and P2; neither premise is\n'
+                                 'derived or physically anchored. The second row proves the complete pair\n'
+                                 '`{beta_1,beta_3}`, endpoint-qualified cover and multiplicity statements,\n'
+                                 'exact uniform constants and squared gaps, and the S1/S2/S3 rankings.\n'
+                                 '\n'
+                                 'The same immutable `probes/P-BOOST-COHERENCE-1` bundle is the sole '
+                                 'evidence\n'
+                                 'for both theorem rows and for the current D/O split. Its one formal\n'
+                                 'aarch64 execution and required GitHub x86_64 reproduction produced the '
+                                 'same\n'
+                                 '8-group, 477-check PASS transcript byte for byte. No probe file is '
+                                 'amended\n'
+                                 'and no `P-BOOST-COHERENCE-1` probe verifier or formal execution is rerun '
+                                 'by\n'
+                                 'this fold.\n'
+                                 '\n'
+                                 'COIN-MINIMAL-READ [D] adopts `beta_1` by MINIMAL-READ and records\n'
+                                 'MAXIMAL-REACH as the unadopted selector of `beta_3`.\n'
+                                 'MINIMAL-READ-DERIVATION [O] separately owns the OPEN_SELECTION gate and\n'
+                                 'remains STOP on incomplete decoder, class, map, accumulator, redundancy,\n'
+                                 'graph, and layer data. No premise-to-theorem promotion, P1/P2 anchoring,\n'
+                                 'decoherence, Born, L6, SI, measurement, collapse, environment, or unique\n'
+                                 'physics is added. The absent incubation identifiers\n'
+                                 '`O-COIN-CANONICAL` and `O-DECOHERENCE-CLAUSE` receive no public '
+                                 'retirement\n'
+                                 'or history event. TM-SYM2-PHYSICAL-MEASURE and every other v26 row remain\n'
+                                 'unchanged.\n'
+                                 '\n'
+                                 'The v26 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'claims:    208 + 1 L1 theorem + 1 L5 computation = 210,\n'
+                                 'T:         110 + 1 C8 bilinear-shadow theorem = 111,\n'
+                                 'C:         22 + 1 reduction-arrow computation = 23,\n'
+                                 'O:         23 unchanged,\n'
+                                 'live H/O:  26 unchanged.\n'
+                                 '```\n'
+                                 '\n'
+                                 'Public Canon v26 registers C8-BILINEAR-SHADOW [T] at its exact L1 '
+                                 'boundary.\n'
+                                 'The proof identifies the two nonzero axes of `<tau>`, the exact '
+                                 'order-eight\n'
+                                 'elements and Frobenius conjugation, proves the all-`n` branch swap and '
+                                 'the\n'
+                                 'branch-invariant record, and shows its strict mod-8 refinement of the '
+                                 'norm\n'
+                                 'channel. The existing public probe supplies byte-identical aarch64 and\n'
+                                 'GitHub x86_64 audit output. No probe file is amended, and no branch '
+                                 'selector,\n'
+                                 'physical gauge equivalence, checkpoint, clock, gravity, SI, force,\n'
+                                 'uniqueness, or L2-L6 statement is introduced.\n'
+                                 '\n'
+                                 'Public Canon v26 also registers METRO-REDUCTION-ARROWS [C] at its exact '
+                                 'L5\n'
+                                 'boundary. The computation freezes the preconditions and transports of the\n'
+                                 'four admitted arrows and their pointwise `tau_R = identity` L5-stream\n'
+                                 'invariance, closing obligations A and C only. Its public '
+                                 'prospective-pinned\n'
+                                 'bundle passed all 17 gates and the exact two-state and three-state '
+                                 'exhaustion.\n'
+                                 'The local and GitHub records are both x86_64 and byte-identical, so this '
+                                 'earns\n'
+                                 'reproduction but not a two-architecture theorem gate and remains C.\n'
+                                 'METRO-REDUCTION-CALCULUS remains O and STOP on obligation B, common `q^k`\n'
+                                 'blocking with decision and terminal-value transport in obligation D, and\n'
+                                 '`approx_red` completeness in obligation E. No L6, cross-layer, physical,\n'
+                                 'or SI claim is added.\n'
+                                 '\n'
+                                 'The v25 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'claims:    208 unchanged,\n'
+                                 'T:         109 + 1 KERNEL-Z6 theorem = 110,\n'
+                                 'O:         24 - 1 closed owner = 23,\n'
+                                 'live H/O:  27 - 1 = 26.\n'
+                                 '```\n'
+                                 '\n'
+                                 'Public Canon v25 promotes KERNEL-Z6-SYNCHRONIZATION from O to T at its\n'
+                                 'unchanged L1 boundary. The self-contained proof establishes the '
+                                 'fixed-time\n'
+                                 '5-to-1 and 2-to-1 sheet laws, non-eventual-periodicity of every '
+                                 'checkpoint\n'
+                                 'trace and trajectory, and the impossibility of any finite autonomous\n'
+                                 'realization. The existing public probe audits the exact finite premises,\n'
+                                 'complete induction cases, and two implementations; its aarch64 and x86_64\n'
+                                 'outputs are byte-identical. No new run, physical interpretation, decoder\n'
+                                 'completion, or L2-L6 lift is introduced.\n'
+                                 '\n'
+                                 'The v24 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'claims:    206 + 2 L1 theorems = 208,\n'
+                                 'T:         107 + 2 = 109,\n'
+                                 'live H/O:  27 unchanged,\n'
+                                 'decoder factor-canonicity definition: +0 claims, +0 dependencies, +0 '
+                                 'gates.\n'
+                                 '```\n'
+                                 '\n'
+                                 'The Gyron-owned transaction registers GYRON-DISCREPANCY-LOG [T] and\n'
+                                 'TM-PAIR-SUBSTITUTION-FIXED-POINT [T], and corrects GYRON-DENSITY [T] '
+                                 'without\n'
+                                 'changing its status or the separate dictionary consumers of its value. '
+                                 'The\n'
+                                 'public proof bundle passed its sole native aarch64 execution and the '
+                                 'first\n'
+                                 'GitHub x86_64 replay byte identically. The corrected density row is '
+                                 're-pinned\n'
+                                 'to that public probe.\n'
+                                 '\n'
+                                 'The decoder-owned transaction extends only\n'
+                                 '`DEF-DECODER-COMPLETION-CONTRACT` with the optional factor-canonicity '
+                                 'audit\n'
+                                 'overlay. It creates no decoder-universality row, scientific claim, '
+                                 'evidence,\n'
+                                 'dependency, gate, probe, result, or status change. No Gyron-to-decoder\n'
+                                 'dependency is added.\n'
+                                 '\n'
+                                 'Both transactions retain their firewalls. The forward pair-substitution\n'
+                                 'operator is not coarse-graining or a decoder factor, and the decoder '
+                                 'schema\n'
+                                 'does not inherit existence, canonicity, maximality, nontriviality, '
+                                 'physical\n'
+                                 'meaning, or cross-layer closure from a commuting square.\n'
+                                 '\n'
+                                 'The v23 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'live H/O: 26 + 1 KERNEL-Z6 owner = 27,\n'
+                                 'claims:    205 + 1 = 206,\n'
+                                 'O:         23 + 1 = 24.\n'
+                                 '```\n'
+                                 '\n'
+                                 'Public Canon v23 registered KERNEL-Z6-SYNCHRONIZATION as one L1\n'
+                                 'owner-definition row at status O. It froze the four candidate '
+                                 'synchronization\n'
+                                 'clauses and their exclusions but supplies no proof, computation, probe,\n'
+                                 'gate, run, physical reading, or L2-L6 lift. No existing claim changes\n'
+                                 'status; no candidate clause is promoted.\n'
+                                 '\n'
+                                 'The v22 ledger change is signed term by term:\n'
+                                 '\n'
+                                 '```text\n'
+                                 'live H/O: 25 - 1 retired KC3 - 1 consumed METRO row\n'
+                                 '              + 3 typed METRO rows = 26,\n'
+                                 'claims:    203 - 1 KC3 - 1 old METRO + 3 split rows\n'
+                                 '              + 1 entropy cursor theorem = 205,\n'
+                                 'T:        106 + 1 = 107,      H: 4 - 1 = 3,\n'
+                                 'O:        21 - 1 + 3 = 23.\n'
+                                 '```\n'
+                                 '\n'
+                                 'The metrology and STOP-surface subfold changes no scientific status. The\n'
+                                 'only new scientific status in v22 is ENTROPY-CYLINDER-NOGO-CURSOR [T],\n'
+                                 'earned by its pinned two-architecture public probe.\n'
+                                 '\n'
+                                 '```\n'
+                                 'MEASUREMENT AND METROLOGY\n'
+                                 '  METRO-REDUCTION-CALCULUS   typed protocol objects, reduction '
+                                 'preconditions,\n'
+                                 '                             w transport, and generated equivalence; STOP\n'
+                                 '  METRO-ADMISSIBILITY-DIM    commuting digit-word N^a child with exact '
+                                 'raw\n'
+                                 '                             L5 stream, tagged L6 normalization, direct\n'
+                                 '                             translated-box decision, and joint '
+                                 'certificate;\n'
+                                 '                             owns the L5-to-L6 gate and remains STOP\n'
+                                 '  METRO-ADMISSIBILITY        exhaustive R1 through R8 residual: U_RF '
+                                 'minus\n'
+                                 '                             C_dim, including rank-one, noncommuting, and\n'
+                                 '                             other out-of-child finite rational '
+                                 'protocols;\n'
+                                 '                             non-finite-state, unbounded adaptive,\n'
+                                 '                             non-reducible stochastic, irrational,\n'
+                                 '                             out-of-child cross-layer, physical-unit, and\n'
+                                 '                             mixed-class protocols; STOP\n'
+                                 '  METRO-EDGE-SCALE           the canonical selector on the commutator\n'
+                                 '                             phi ladder; the SI clause (the second and\n'
+                                 '                             the meter over the single m_e bridge)\n'
+                                 '  DRESS-CROSSCOUNT           the integer crossing count per observable;\n'
+                                 '                             witness 72 alpha^4, labeled\n'
+                                 '  QDD-INSTRUMENT-NONSELECTION\n'
+                                 '                             the L4 rational fibre, diagonal-orbit and\n'
+                                 '                             dilation classification; fixed effects, '
+                                 'weights\n'
+                                 '                             and C = 0 leave infinitely many physical\n'
+                                 '                             post-state classes, and dilation existence '
+                                 'does\n'
+                                 '                             not select an instrument\n'
+                                 '  QDD-J-AFFINE-APPARATUS-NONSELECTION\n'
+                                 '                             four target-independent affine members, four\n'
+                                 '                             sign classes; self-adjoint involutivity '
+                                 'leaves two\n'
+                                 '  QDD-J-CENTRALIZER-NONSELECTION\n'
+                                 '                             complete C_4 centralizer, rational circle '
+                                 'and\n'
+                                 '                             infinite sign-class nonselection boundary\n'
+                                 '  QDD-J-TERMINALITY-SELECTION\n'
+                                 '                             conditional ray terminality gives +/-Q and '
+                                 'strict\n'
+                                 '                             representative idempotence gives +Q\n'
+                                 '  QDD-FRESH-RECORD-EXTENSION\n'
+                                 '                             reversible append-only three-symbol record\n'
+                                 '                             extension for the full two-sided-support '
+                                 'class\n'
+                                 '  QDD-PROJECTIVE-IDEMPOTENCE-NONIMPLICATION\n'
+                                 '                             fresh no-feedback records and repeatability '
+                                 'do\n'
+                                 '                             not imply projective idempotence; witness '
+                                 'R-C\n'
+                                 '  QDD-RECORD-SUFFICIENCY-TERMINALITY\n'
+                                 '                             four-way equivalence only under the full '
+                                 'frozen\n'
+                                 '                             two-sided support equations\n'
+                                 '  QDD-RECORD-COMPLETE-LUEDER-SELECTION\n'
+                                 '                             strict microscopic S_4 law naturality\n'
+                                 '                             conditionally leaves one Lueder sign class\n'
+                                 '  QDD-LAW-NATURALITY-VS-GAUGE-BOUNDARY\n'
+                                 '                             weak S_4 quotient covariance leaves 24 sign\n'
+                                 '                             classes; collapse to one requires a new '
+                                 'gauge\n'
+                                 '                             equality\n'
+                                 '  QDD-INSTRUMENT-APPARATUS   sole owner of the transferred physical debt;\n'
+                                 '                             algebraic projector targets are not physical\n'
+                                 '                             effect identifiers; ETH-QDD-1/2 now select\n'
+                                 '                             a complete effective event and record model,\n'
+                                 '                             while target-independent physical '
+                                 'realization,\n'
+                                 '                             terminal justification and complete '
+                                 'apparatus\n'
+                                 '                             classification remain with this owner and '
+                                 'its\n'
+                                 '                             two children below\n'
+                                 '  QDD-TERMINAL-EVENT-SEMANTICS\n'
+                                 '                             the independently justified physical meaning '
+                                 'of\n'
+                                 '                             a completed terminal event; no saturation law '
+                                 'is\n'
+                                 '                             adopted from the conditional COMM-SAT '
+                                 'theorem\n'
+                                 '  QDD-INSTRUMENT-CLASS-COMPLETENESS\n'
+                                 '                             the complete physical preselection class and\n'
+                                 '                             equality, including memory, ready phase,\n'
+                                 '                             transitions and phase-indexed branch '
+                                 'families\n'
+                                 'THE WALL\n'
+                                 '  QUANT-SUBSTRATE            the Larmor gate and the Schwinger '
+                                 'physical-realization\n'
+                                 '                             gate; the target scalar is exact arithmetic '
+                                 'and its\n'
+                                 '                             production as the first-order coefficient '
+                                 'remains open\n'
+                                 '  COLOR-MEASURE-SELECTION    the typed canonical normalized L4-to-L6\n'
+                                 '                             lift; target carrier, equivalence, '
+                                 'observables,\n'
+                                 '                             action, normalization, and constraints are '
+                                 'STOP\n'
+                                 'GRAVITATIONAL WAVE\n'
+                                 '  QNM-LEAVER-MU              the quasinormal mu decision\n'
+                                 'COSMOLOGY\n'
+                                 '  NS-TILT                    n_s - 1 = -5 alpha; falsifier live, CMB-S4\n'
+                                 '  DE-CONFORMAL-WEIGHT        the typed homogeneous dictionary, if any,\n'
+                                 '                             selecting the dark-energy density character;\n'
+                                 '                             FRW continuity alone is nonunique and no\n'
+                                 '                             trace-Gram dictionary is authorized\n'
+                                 'COLOR\n'
+                                 '  ALPHA-S-RUNNING            the running above the 3/4 seed\n'
+                                 '  SCHEME-DICTIONARY          exact seeds to measured couplings; '
+                                 'source-seed\n'
+                                 '                             domain, named scheme, scale and threshold,\n'
+                                 '                             total map, source manifests, and dependency\n'
+                                 '                             graph are STOP\n'
+                                 '  GENERATIONS-L3             the generation structure at the L3 frontier\n'
+                                 'PLENUM AND KERNEL\n'
+                                 '\n'
+                                 '  SQRT-PHI-TIME-GRAVITY      the typed clock and gravity bridge remains\n'
+                                 '                             after the exact L1 digit lift\n'
+                                 'RAPIDITY EVALUATION\n'
+                                 '  TRIVIAL-RAPIDITY-EVALUATION-BRIDGE\n'
+                                 '                             derive controlled summatory cancellation at\n'
+                                 '                             augmentation from the full integral rapidity\n'
+                                 '                             shell by a non-circular uniform diagonal or\n'
+                                 '                             non-diagonal transfer; STOP\n'
+                                 'ENTROPY BOUNDARY\n'
+                                 '  ENTROPY-LAYER-BRIDGE       F: the complete registered Route A is empty\n'
+                                 '  ENTROPY-MEASURABLE-OBSTRUCTION\n'
+                                 '                             T: no measurable equivariant reader from\n'
+                                 '                             the frozen independent product source\n'
+                                 '  ENTROPY-CYLINDER-NOGO-CURSOR\n'
+                                 '                             exact finite-cylinder no-go at every cursor\n'
+                                 '                             for L = 4..32, with structural zero-residue\n'
+                                 '                             transport to every lambda-depth; T boundary\n'
+                                 '\n'
+                                 'MATTER\n'
+                                 '  NEUTRON-DELTA-EM           the interior compression channel\n'
+                                 '  PROTON-RESIDUAL-IS-QCD     typed exact QCD residual only; carrier,\n'
+                                 '                             normalization, equality, and inference are '
+                                 'STOP\n'
+                                 'OBSERVER\n'
+                                 '  MINIMAL-READ-DERIVATION    decide whether a complete typed decoder '
+                                 'forces\n'
+                                 '                             the beta_1 minimum read; L5-to-L1 gate is '
+                                 'STOP\n'
+                                 'EMPIRICAL HORIZON\n'
+                                 '  MOLLER (sin^2 theta_W); future shadow measurements after a public\n'
+                                 '  inference rule; CMB-S4 (the tilt)\n'
+                                 '```\n'
+                                 '\n')]},
+ 'canon/CORE.md': {'current_sha256': '803270bf8af518966554924b2c0ecaa5e3e61fb5c596957927b4c72fe7fb2731',
+                   'current_bytes': 17207,
+                   'prior_sha256': 'dbac1e8dd649eae1cc6cbe9e3b7a53bc4ccd0db3ca65ace833dda5dfbf93c28c',
+                   'prior_bytes': 55694,
+                   'restore': [(2,
+                                6,
+                                '**Release identity:** Public Canon v111. Normative authority and '
+                                'activation\n'
+                                'state are declared exclusively by [STATUS.md](../STATUS.md).\n'),
+                               (7,
+                                15,
+                                'TWIST-J tests whether physical reality can be modeled as a closed,\n'
+                                'exact, deterministic integer system whose continuum, geometry,\n'
+                                'probability, and fields are readings. Its single algebraic axiom is\n'),
+                               (16, 17, '```\nJ = 1 + zeta_5^2.\n```\n'),
+                               (18,
+                                23,
+                                'TWIST-J posits this as a primitive axiom. No theorem within TWIST-J is\n'
+                                'presented as deriving or justifying it. Where a well-typed comparison '
+                                'family\n'
+                                'exists, uniform and `p = 5`-specific content are distinguished for '
+                                'attribution\n'
+                                'only.\n'),
+                               (24,
+                                28,
+                                'Public Canon v111 also declares a discrete architecture. It does not\n'
+                                'claim that the checkpoint space, the five kernel generators, the\n'
+                                'selector, or the decoder are uniquely derived from J. The architecture\n'
+                                'contains no fitted dimensionless parameter; its one SI calibration\n'
+                                'anchor is the electron mass.\n'),
+                               (29,
+                                43,
+                                'Specified sources and readings are proved by constructing them and '
+                                'verifying\n'
+                                'their stated properties. Their existence does not depend on global decoder\n'
+                                'uniqueness, necessity from J alone or derivation from the original U.\n'
+                                'INTEGER-HERMITIAN-OCCUPIED-SOURCE and INTEGER-PRIMITIVE-SOURCED-METRIC\n'
+                                'give complete reversible integer sources, occupied records and a primitive\n'
+                                'metric reader. RELATIONAL-DECLARED-BOOST-INERTIA and\n'
+                                'RELATIONAL-CLOSED-RECOIL-RATIO give bound objects, moving dynamics and an\n'
+                                'exact finite-clock inertia ratio in their declared common model.\n'
+                                'CONTACT-W-SPECTRAL-READING and SELECTED-SPECTRAL-ENERGY-SOURCE give a\n'
+                                'fixed bounded energy reading, a source with finite energy capacity and\n'
+                                'exact additive conservation, with explicit approximation bounds.\n'
+                                'CM5-POLARIZATION-DICTIONARY and its reachability and Hecke consequences\n'
+                                'supply a separate exact mathematical reading of the specified CM model.\n'
+                                'JM-POSITIVE-REFERENCED-READING and JM-FUNDED-INTEGER-PAIR-SOURCE\n'
+                                'give the selected coherent reading and a funded integer pair source.\n'
+                                'CONTACT-W-BOUND-PAIR-RESPONSE supplies finite prepared packets with a\n'
+                                'proved limiting inertial response under the conserving spectral source.\n'
+                                'The full definitions and proofs distinguish these carriers and '
+                                'operations.\n'),
+                               (44,
+                                45,
+                                'The reciprocal four-slot contact has exact full-account funding and a\n'
+                                'clock-qualified regional record. A separate field uses the conservative\n'
+                                'two-slot contact to retain a prepared fixed-cell value permanently. The '
+                                'latter\n'
+                                'retains C status and depends on an exact finite certificate plus an '
+                                'all-future\n'
+                                'separation proof. Physical occurrence, active reading, calibration and '
+                                'full\n'
+                                'native realization remain separate.\n'),
+                               (46,
+                                54,
+                                'HOMOGENEOUS-CAPTURE-CURRENT-RECORD joins capture, complete physical-cut\n'
+                                'charge current and coherent receiver recording in one specified '
+                                'homogeneous\n'
+                                'model. For its fixed incoming packet the joint asymptotic probability is\n'
+                                'greater than 2/10^28, with old memory transferred to the outgoing carrier.\n'
+                                'Native occupancy charge and the safe-window spectral energy remain '
+                                'distinct.\n'
+                                'Finite physical preparation, selective detection, quantitative retention '
+                                'and\n'
+                                'empirical occurrence remain open; the conditional one-shot coin '
+                                'construction\n'
+                                'is not a premise or repeated-gate implementation of this theorem.\n'),
+                               (55,
+                                63,
+                                'RELATIVE-CONTACT-INTEGRAL-LAW [T] supplies a separate total conservative\n'
+                                'contact on marked integral slots. With exactly four auxiliary slots on\n'
+                                'O^26, initial data (6,0^21) and the declared contact/permutation alphabet,\n'
+                                'RELATIVE-CONTACT-FOUR-SLOT-MINIMUM [T] gives sharp initial auxiliary trace\n'
+                                'accounts 12 for (-3,3,3,3,0^18) and 27 for (3,3,3,3,0^18).\n'
+                                'The account is conserved while the ready bank changes. For N disjoint\n'
+                                'copies of that known-input load, with every changing auxiliary resource\n'
+                                'counted and no uncounted residue exchange, retaining N specified outputs\n'
+                                'needs at least 4N auxiliary slots and initial trace account 12N. Signed\n'
+                                'copies attain both, while positive copies give only the upper bound 27N.\n'
+                                'One fixed word preserves input residue distance. The complete 56-slot\n'
+                                'construction now closes RELATIVE-CONTACT-COMMON-APPARATUS-OPEN [T] for two\n'
+                                'experiments, each chosen independently from ten prepared inputs. One '
+                                'common\n'
+                                'read core processes all 100 pairs; four current archive banks distinguish\n'
+                                'them, retain the first record through reload, and account for every spent\n'
+                                'resource. The common auxiliary preparation has trace account 128 and the\n'
+                                'complete account is 156. Five whole-slot swaps and prepared inputs are\n'
+                                'supplied; the two-experiment stock is finite.\n'),
+                               (64, 65, ''),
+                               (66,
+                                75,
+                                'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE [T] now restores the same entire\n'
+                                '31-slot work core after every input for any chosen finite horizon k.\n'
+                                'It uses 26+25k slots, conserved account 68+74k and 2k fresh archive banks.\n'
+                                'One fixed program handles all 10^k prepared input tuples. The archives '
+                                'alone\n'
+                                'decode the history; exact reversal removes it. Working-bank restoration\n'
+                                'therefore coexists with finite retained-storage consumption.\n'),
+                               (76,
+                                85,
+                                'RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER [T] translates five supplied integer\n'
+                                'heights into the exact clock phases with one 95-contact word, returning '
+                                'all\n'
+                                'seven stock coordinates. RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS\n'
+                                '[T] joins that translator to the restored read core for every fixed finite\n'
+                                'horizon k. It accepts independently supplied source messages and heights,\n'
+                                'uses 39+25k slots and two fresh archive banks per input, and decodes the\n'
+                                'ordered history from the retained archives alone. The total positive '
+                                'account\n'
+                                'is 177+78k+10 sum_i t_i^2. RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION\n'
+                                '[T] excludes extension to all integer heights by any finite fixed\n'
+                                'contact/SWAP word on an affine input family with finite common stock.\n'
+                                'Preparation, scheduling and fresh retained storage remain supplied; these\n'
+                                'results do not identify the contact carrier with the native update or '
+                                'close\n'
+                                'physical preparation and autonomous operation.\n'),
+                               (86,
+                                87,
+                                'The separate U-CARRY-MIRROR-FINITE-CIRCUIT [C] uses the actual native '
+                                'first\n'
+                                'receiver, a supplied affine transfer and reversible carry routing on 62 F5\n'
+                                'registers. All 500 admitted inputs preserve the primary post-tick '
+                                'checkpoint\n'
+                                'and retain both carries plus the second native output. Integral carry '
+                                'pairing\n'
+                                'and the additional precision distinguishing J from J inverse have exact\n'
+                                'proofs. Reader conventions, wiring, clean workspace and separately enabled\n'
+                                'native origins remain explicit. Neither carrier supplies autonomous input\n'
+                                'selection, retained-archive regeneration or an identification with the '
+                                'other.\n'),
+                               (88,
+                                95,
+                                'The same contact, ordered left then right on three slots, has a complete\n'
+                                'arithmetic rhythm classification. At maximal difference depth d, put\n'
+                                'A_d=(4^(d+1)-1)/3. The three nondiagonal primitive classes have least '
+                                'periods\n'
+                                'A_d, 2A_d-1 and 5A_d, with sharp relative-account bounds. An exact pair '
+                                'has\n'
+                                'equal E, S and M, local invariant residues and depth history but\n'
+                                'periods five and twenty-five. Sufficient coefficient readings distinguish\n'
+                                'the full state on a fixed sum/account slice. These are conditional L1\n'
+                                'statements, without a native-U or measured-energy identification.\n'),
+                               (96,
+                                105,
+                                'The native zero predicate now has an exact comparison with the declared\n'
+                                'integer field shell: the piston swap carries it to the shell residue\n'
+                                'condition. Exactly twenty of the twenty-five admitted residues have an\n'
+                                "energy-one preimage. The native zero orbit's boundary-three residue has a\n"
+                                'unique minimum-energy integer representative of energy five; its '
+                                'boundary-four\n'
+                                'residue has no unit preimage. This excludes a unit-seed assignment at '
+                                'every\n'
+                                'n>=3 for that fixed origin and comparison; higher-energy lifts remain '
+                                'open.\n'),
+                               (106,
+                                107,
+                                'The fixed preparation families obey different gate conditions. The '
+                                'original\n'
+                                'two-message family never passes, the alternative passes once transiently,\n'
+                                'and occupied one-shot zero passes even before its semantic reader is '
+                                'ready.\n'
+                                'The unchanged rational contact source is blind across messages with '
+                                'identical\n'
+                                'q,r histories and a common complete receiver/protocol. A source-access '
+                                'map,\n'
+                                'complete preparation, funding and physical receiver still need their own\n'
+                                'contracts. The five declared cell shears have matrix orders 4,3,6,5 and\n'
+                                'infinite; this bounded comparison does not select a physical cell or '
+                                'order.\n'
+                                'All existing physical apparatus owners and layer gates retain their '
+                                'scopes.\n'),
+                               (108,
+                                116,
+                                'The fixed F5 quadratic target now has a complete initialized-memory\n'
+                                'classification: no finite ignored register works at ranks one or two,\n'
+                                'six states are necessary and sufficient at rank three, and two suffice\n'
+                                'abstractly at ranks four through six. One constructed global permutation\n'
+                                'can return the complete state after ten steps. '
+                                'QUADRATIC-L5-INITIALIZED-CAPACITY\n'
+                                '[T] does not select the reader or compile a native contact. Fixed affine\n'
+                                'words and the literal selector fail the stated binary contract;\n'
+                                'QUADRATIC-MEMORY-NATIVE-CONTACT [O] requires independently admitted '
+                                'reading,\n'
+                                'actual register-writing gates and complete occupied-memory continuation.\n'),
+                               (117,
+                                123,
+                                'Three separately proved conditional L1 results now compose one residual\n'
+                                'step with its in-machine record. CONTACT-RECORD supplies the complete\n'
+                                'reader contract; ALGEBRAIC-RESIDUAL-REALIZATION supplies the distinct\n'
+                                'algebraic Pi_alg through the fixed finite CW-ALG-1 word; and\n'
+                                'RESIDUAL-STEP-RECORD gives V=A_y T_alg A_x on the same full carrier.\n'
+                                'One preparation r_x=r_y=eta=0 permits arbitrary pistons and unknown q,\n'
+                                'the exact L5 readout step, and records delta(g),delta(Mg). The complete\n'
+                                'inverse, exact one-pass image, occupied-bit continuation and restoration\n'
+                                'of the first record are proved. The declared W gates, reader couplings,\n'
+                                'preparation and reading remain premises. This supplies neither their\n'
+                                'physical admission nor a fresh archive on repetition, and\n'
+                                'QUADRATIC-MEMORY-NATIVE-CONTACT remains open.\n'),
+                               (124,
+                                125,
+                                'SCALAR-HERMITIAN-NORM-IMAGE [T] separately characterizes the full '
+                                'arithmetic\n'
+                                'scalar norm image; RAMIFIED-HERMITIAN-NORM-OBSTRUCTION [T] excludes '
+                                'reciprocal\n'
+                                'Lucas squared lengths even over Q(zeta5), and J-TWO-TRACE-SCALAR-NORM-IMAGE '
+                                '[T]\n'
+                                'recognizes exactly which pure-J trace pairs come from a scalar. These '
+                                'remain\n'
+                                'L1 statements and provide no new physical reading or native Hodge step.\n'),
+                               (126,
+                                133,
+                                'The unchanged native U also transfers the residue sum of arbitrary '
+                                'four-piston\n'
+                                'inputs to a common receiver prepared at (q,r)=(0,1), without putting a\n'
+                                'precomputed answer into the preparation. U-NATIVE-RAW-RESIDUE-READOUT [T]\n'
+                                'gives exact recovery from the current receiver and native counter at every\n'
+                                'n>=3. At most twenty time-context values suffice for that evaluation;\n'
+                                'readiness detection and native context updating are separate obligations.\n'
+                                'U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO [T] proves that, for every common '
+                                'ready,\n'
+                                'no fixed current-receiver-only reading eventually retains a nonconstant\n'
+                                'function of the original sum on the full input family. The history factor\n'
+                                'also forces a distinct absence label to consume an entire observable '
+                                'class;\n'
+                                'at ready (0,1), this leaves at most four present residue values. These are\n'
+                                'L1 readout and information boundaries, not a physical instrument or '
+                                'reset.\n'),
+                               (134,
+                                137,
+                                'The complete autonomous state and update are\n'
+                                '\n'
+                                '```\n'
+                                'Omega = N_0 x F_5^6,                    omega = (n, psi),\n'
+                                'theta_n = s_2(n) mod 2,\n'
+                                'z_6(psi) = sum_k psi_k mod 5,\n'
+                                'U(n, psi) = (n + 1, g_(z_6(psi) + 2 theta_n mod 5)(psi)),\n'
+                                '(g_0, ..., g_4) = (a, b, c, d, e).\n'
+                                '```\n'
+                                '\n'
+                                '`N_0` is the forward orbit of zero under the 2-adic odometer. No\n'
+                                'Thue-Morse parity function on all of `Z_2` is asserted. The projection\n'
+                                'to `F_5^6` is the finite checkpoint; it is not the whole autonomous\n'
+                                'state. Log streams are derived orbit records.\n'
+                                '\n'
+                                'The decoder is a typed partial interface. Its functional order is\n'
+                                'matter, then geometry, then clock:\n'
+                                '\n'
+                                '```\n'
+                                'D_matter : dom(D_matter) subset K -> MatterData\n'
+                                'D_geom   : dom(D_geom) subset K x MatterData -> GeometryData\n'
+                                'D_clock  : dom(D_clock) subset K x MatterData x GeometryData\n'
+                                '           -> ObservableHistory\n'
+                                '```\n'
+                                '\n'
+                                'Here `K` is the set of forward `U`-orbits. Decoder outputs never feed\n'
+                                'the state update. The public theory may contain more than one\n'
+                                'admissible typed reading of the same substrate. Totality,\n'
+                                'classification of the admissible reading family, compatibility on\n'
+                                'overlaps, and physical completeness remain open. Global uniqueness is\n'
+                                'not a program requirement. Individual registered claims may still ask\n'
+                                'whether a particular operator, selector, reading leg, or restricted\n'
+                                'class is unique at its frozen scope. The public reading split is a\n'
+                                'dictionary at its registered legs (READING-SPLIT [D]), not a\n'
+                                'completeness theorem.\n'
+                                '`DEF-DECODER-COMPLETION-CONTRACT` supplies only the finite typed manifest\n'
+                                'shape against which a future candidate can be audited. Its optional\n'
+                                'factor-canonicity overlay freezes one stage, leg, scope, factor datum, and\n'
+                                'four distinct per-map coherence obligations, together with independent\n'
+                                'equivalence, completeness, maximality, and nonconstancy slots. It supplies\n'
+                                'no surviving factor, classification, universality, carrier, physical\n'
+                                'bridge, completion-wide terminality result, evidence, or status change,\n'
+                                'and it authorizes no verifier or probe.\n'
+                                '\n'
+                                'The complete declared native-word curvature class is nonunique, and its\n'
+                                'total trace subrecord is underdetermined. This decides the corresponding\n'
+                                'operator question without choosing a physical geometry. The native decoder\n'
+                                'has exact readback and memory boundaries, a finite-history phase reader,\n'
+                                'and complete mathematical reader spectra. A fixed common ready now permits\n'
+                                'recovery of every original piston source from the full current state and\n'
+                                'native counter; regenerating a history is not material recording. The\n'
+                                'conditional incidence construction still declares its coupling and '
+                                'calendar.\n'
+                                'No common onset law makes its chronological first outcomes agree with all\n'
+                                'QDD ratios; a permutation scan repairs the marginal only with an '
+                                'additional\n'
+                                'order carrier and law. Three fixed attenuation observables select identity\n'
+                                'even among mixed CP channels, but their physical preservation remains a\n'
+                                'premise. Physical preparation, writing, reset and occurrence remain open.\n'
+                                '\n'
+                                'The relational-reading boundary is now exact. Binary structure, reversible\n'
+                                'faithful writing and the listed scalar symmetries do not select a '
+                                'quadratic\n'
+                                'count; a square is exactly equal matching and nonmatching weight. '
+                                'Occurrence\n'
+                                'needs cycle balance or an independently supplied ensemble, correct pair '
+                                'laws\n'
+                                'do not give independence, and a fixed finite-window reader of the actual\n'
+                                'native trajectory cannot carry all-order product frequencies while every\n'
+                                'finite horizon remains attainable. Addresses, logs, loaders, a finite\n'
+                                'occupancy bank, the registration-pair inverse and the composed record '
+                                'chain\n'
+                                'have exact classifications and identifiability limits. None supplies a\n'
+                                'physical apparatus, event, occurrence law, persistence, reset, spatial\n'
+                                'dimension or measure; those owners remain open.\n'
+                                '\n'
+                                'U-GALOIS-FIBER-CODE [T] supplies a specified coherent four-dimensional\n'
+                                'Galois-fiber code over sixteen original checkpoints whose free native\n'
+                                'pushforward preserves the complete QDD Gram at every step. Under\n'
+                                'U-GALOIS-FIBER-QDD-SPLIT [T], its coarse final coordinates match the\n'
+                                'algebraic LOW/HIGH pair in an explicit shifted source chart. Physical\n'
+                                'realization of this correlated code and a complete target-independent\n'
+                                'apparatus family remain under QDD-INSTRUMENT-APPARATUS [O]. Its source,\n'
+                                'coarse instrument and event law are now explicitly selected in ETH-QDD-1.\n'
+                                '\n'
+                                'Native point preparation through the unchanged apparatus-history port has\n'
+                                'an exact five-label information limit. A separate coherent Galois-code\n'
+                                'comparison admits globally normalized channels with sharp coordinate\n'
+                                'agreement 5/8 and minimum optimal purified auxiliary dimension five.\n'
+                                'These mathematical results use different declared state descriptions;\n'
+                                'physical preparation, coupling, event occurrence, persistent record and\n'
+                                'reset remain open.\n'
+                                '\n'
+                                'The selected passive QDD family now has exact predictive limits. Seven\n'
+                                'additional fixed scalar expectation calibrations are necessary and\n'
+                                'sufficient to recover every quadratic mean for arbitrary preparation\n'
+                                'ensembles, even when the complete passive-record law is known. A specified\n'
+                                'threshold response still admits a sharp interval of count laws after all\n'
+                                'quadratic means are fixed; one further fourth-moment expectation resolves\n'
+                                'that particular law. Recovering the original passive records from native\n'
+                                'checkpoints at n>=3, and for an all-time reader, requires exactly three\n'
+                                'explicitly initialized auxiliary states, or restricted preparation sets '
+                                'with\n'
+                                'the proved cardinality bounds.\n'
+                                'These are conditional mathematical completions; physical preparation,\n'
+                                'calibration, occurrence, apparatus and reset remain open.\n'
+                                '\n'
+                                'The marked exterior J system has an exact three-coordinate semilinear\n'
+                                'Hodge read, a four-dimensional F-linear predictive chart for one fixed '
+                                'axis,\n'
+                                'and a six-dimensional rational containing carrier. Its ramified bracket '
+                                'and\n'
+                                'six-chart atlas are classified. Finite-reader and native-word obstructions\n'
+                                'delimit direct realization routes. Whole-state separable counter readings\n'
+                                'factor through thirteen invariant classes; general readings on the '
+                                'reachable\n'
+                                'domain allow arbitrary amplitudes on 3125 retained labels. These classes\n'
+                                'select neither the target operator nor its amplitudes. All are L1 results;\n'
+                                'physical time, spatial dimension, apparatus and occurrence remain open.\n'
+                                '\n'
+                                'The norm-bounded scalar reader has an exact inverse. Two pure-J traces\n'
+                                'and the full residue modulo 25 determine every nonzero integral scalar of\n'
+                                'norm at most 941, its normalized strip representative and its integer '
+                                'orbit\n'
+                                'coordinate. Norm, ordered magnitudes, normalization and all further pure-J\n'
+                                'traces are derived fields. The observed mod-5 capacity is only 2603 in the\n'
+                                'declared global class without a separately supplied clock; a selected\n'
+                                'normalized codebook with mod-25 reading also restores the current\n'
+                                'synchronized native state. Codebook choice and physical acquisition remain\n'
+                                'premises. This is distinct from the original balanced QDD head amplitude,\n'
+                                'whose four coefficients already have a unique mod-5 lift, including zero.\n'
+                                'The direct QDD write then determines its five algebraic fields; neither '
+                                'this\n'
+                                'representation nor manifest identifiers introduce additional independent\n'
+                                'physical inputs. Lost original heads and the existing physical owners keep\n'
+                                'their stated boundaries.\n'
+                                '\n'
+                                'A separate origin-zero source-only preparation gives an actual native\n'
+                                'one-shot transfer into an initially common receiver. The first selected\n'
+                                'step clears the source; one fixed receiver-only reader retains the five\n'
+                                'possible symbols at every tick from three, distinguishing stored zero\n'
+                                'from an explicit absence preparation. The exact continuation theorem is\n'
+                                'family-specific: all later payload differences remain in the same two\n'
+                                'memory coordinates, so a fresh fixed raw or affine target gains none.\n'
+                                'This transient write is compatible with the synchronized no-write theorem.\n'
+                                'Physical preparation, reusable writing and full QDD apparatus semantics\n'
+                                'remain separate obligations.\n'
+                                '\n'
+                                'Declared integer automata have a separate set of exact construction\n'
+                                'theorems: invariant forms for the chosen F=JG, reversible energy-funded\n'
+                                'gates, charge continuity with contact-flux memory, field-energy '
+                                'positivity,\n'
+                                'triangular shell resonance and finite decision/certificate principles.\n'
+                                'A two-triangle zero mode prevents direct replication of the one-cell\n'
+                                'positive energy. Zero field enforces local neutrality, and bridge flux\n'
+                                'bounds charge separation at fixed energy in the declared geometry.\n'
+                                'These results concern their stated architectures. A separately selected\n'
+                                'positive field cell supplies a complete conservative integer chain for\n'
+                                'every finite N>=2: FIELD-CONSERVATIVE-CHAIN-LAW gives its inverse and '
+                                'actual\n'
+                                'invariant accounts; FIELD-CHAIN-FIRST-WORK gives first arrival N-1, funded\n'
+                                'work N and return of the original receiver N+1 for the declared '
+                                'preparation;\n'
+                                'FIELD-LOCAL-WORK-RECORD adds a reversible local C5 event pointer, '
+                                'initially\n'
+                                'blank and readable at eight boundaries spanning seven elapsed steps from\n'
+                                'its first write. The returned original receiver is not a reset of the\n'
+                                'complete apparatus, and finite-energy recurrence forces eventual return to\n'
+                                'the initial state. Derivation from native U or J, physical energy '
+                                'selection\n'
+                                'and physical realization remain\n'
+                                'open; this mathematical construction supplies no experiment.\n'
+                                '\n'
+                                'A separately selected packet law now has complete conservative transport '
+                                'and\n'
+                                'funded finite records. Its chosen complex extension gives an entire '
+                                'coherent\n'
+                                'LOW/HIGH instrument with source/reference continuation and finite archive\n'
+                                'semantics. Fresh pure bath bits and exact phase-sensitive collisions '
+                                'prepare\n'
+                                'the even pointer bank to any positive tolerance, with one joint error '
+                                'bound\n'
+                                'against the actual remaining output state. A fetched-program port '
+                                'controller\n'
+                                'executes that finite preparation and a supplied nonadaptive context word '
+                                'with\n'
+                                'exact complete-operator equality, including dirty correlated buses. These\n'
+                                'five L1 theorems retain the supplied source coding, catalogue, graph, '
+                                'phases,\n'
+                                'pure baths and abstract tick. They do not select one actual result, derive\n'
+                                'an occurrence measure, implement native U, or close a physical apparatus\n'
+                                'owner. In particular a supported WRITE, occupied archive and actual\n'
+                                'LOW/HIGH event are distinct; the last remains unprovided by this '
+                                'construction.\n'
+                                '\n'
+                                'A retained archive is now separated from predictive Hodge memory by six\n'
+                                'conditional L1 theorems. Faithful native continuation and a direct present\n'
+                                'reading force the axial memory to factor through the original data and\n'
+                                'counter. For a\n'
+                                'specified passive-archive family, the connected light-shift responses '
+                                'admit\n'
+                                'no nonzero affine Hodge reading at the stated nondegenerate profiles; an\n'
+                                'exact finite response graph decides arbitrary nonlinear readings and gives\n'
+                                'both compatible and obstructed profiles. Nonlinear scores of joint '
+                                'outcomes\n'
+                                'remain mixture-linear, but at those nondegenerate profiles nonzero '
+                                'compatible\n'
+                                'scores cannot be recovered from only six means over the full declared '
+                                'mixture\n'
+                                'family. Code-subspace\n'
+                                'transport retains its separate unitary premise. These results select no\n'
+                                'calibrated profile, detector, postmeasurement continuation, four physical\n'
+                                'coordinates or physical time; the existing apparatus obligations remain '
+                                'open.\n'
+                                '\n'
+                                'Three decisions have exact dispositions. The complete measurable\n'
+                                'product-source Route A is empty, so ENTROPY-LAYER-BRIDGE closes at F with\n'
+                                'its separate obstruction theorem T. BELL-CAUSAL-ACCOUNTING closes at D\n'
+                                'on the complete adopted ETH-QDD-2 contract: five contexts exclude the\n'
+                                'entire setting-independent Bell-local class although every CHSH slice is\n'
+                                'nonviolating; complete local-record laws permit no controllable message.\n'
+                                'The pair source, records and occurrence measure have distinct D gates.\n'
+                                '\n'
+                                'On the stable native sheets z in {1,4}, U preserves an inserted signed\n'
+                                'port deviation for every finite wait without changing the free source\n'
+                                'trajectory. Entrance and archive interactions are additional resources.\n'
+                                'The exact affine/control, energy and ion-sideband results delimit and\n'
+                                'realize specified mathematical control models. ETH-QDD-1/2 adopt coherent\n'
+                                'preparation, controlled coarse instruments, one-outcome Born occurrence,\n'
+                                'ordered persistent records and explicit renewal resources. These choices\n'
+                                'complete an effective theory; independent physical realization, terminal\n'
+                                'justification and whole apparatus-class completeness remain open.\n'
+                                '\n'
+                                'TT-VECTOR-STATE-NORMALIZATION closes at D on ETH-TT-1/ETH-COS-1. A '
+                                'complete\n'
+                                'non-Gaussian outgoing vector state and a separately prepared dynamical\n'
+                                'curvature scalar share one scalar-clock background, Cauchy surface and\n'
+                                'coordinate/time/scale dictionary. At positive supported powers their\n'
+                                'exact geometric ratios are 60+24sqrt(5) and 60-24sqrt(5). Both powers\n'
+                                'vanish at transfer nodes and the ratio there is undefined. This selected\n'
+                                'decelerating planar finite-band model is not an isotropic primordial CMB\n'
+                                'spectrum, quantum vacuum or SI calibration. All additional model inputs\n'
+                                'are explicit; mathematical replay establishes their consequences, not\n'
+                                'experimental adequacy or derivation from J.\n'
+                                '\n'
+                                'The finite counter-model comparison now has a sharp overlap price: the\n'
+                                'complete ETH-QDD-2 numerical table needs exactly 1/16, without selecting a\n'
+                                'physical latent variable or causal mechanism. ENC4 common blocking has an\n'
+                                'exact admission criterion and an initialized MSD augmentation; the broader\n'
+                                'metrology calculus remains open. A self-contained conditional-variance '
+                                'proof\n'
+                                'in the chosen finite photon measure gives b>=25rho and chi>=rho. These '
+                                'common\n'
+                                'local floors do not give a positive b-25chi margin. The 26 live H/O owners\n'
+                                'remain open, including apparatus realization and the physical photon '
+                                'bridge.\n'
+                                '\n'
+                                '## Native movement and specified finite apparatuses\n'
+                                '\n'
+                                'U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS [T] classifies actual native return\n'
+                                'windows. A separately supplied X1 sheet gives nonzero densities 1/4,\n'
+                                '11/24 and 1/2 at lengths four, six and eight, with exact dyadic counts.\n'
+                                'On the whole actually occupied sheet the four-tick density is 1/3.\n'
+                                'Whole-sheet quantification excludes extra returns of special individual\n'
+                                'states. Overlapping movement windows are not independent prepared '
+                                'contacts.\n'
+                                '\n'
+                                'The seven coherent-W theorems give exact Clifford identities, spatial\n'
+                                'propagation, localized amplitude closure, a specified native residue '
+                                'factor\n'
+                                'and normalized spectral-energy conservation. They distinguish raw O,\n'
+                                'amplitudes O[1/5] and F5 residues. The factor uses an additional '
+                                'three-tick\n'
+                                'intercell coupling. Scalar finite-support injectivity is not injectivity\n'
+                                'of the entire four-channel reduction or a faithful residue realization\n'
+                                'of the Hilbert-space energy.\n'
+                                '\n'
+                                'ACTIVE-ISOSPECTRAL-RECORD [T] constructs two active sources with the same\n'
+                                'complete spectral distribution and different three-step receiver reading.\n'
+                                'THERMAL-ORIGINAL-PORT-APPARATUS and COMPACT-ACTIVE-RECORD-APPARATUS [T]\n'
+                                'give distinct supplied finite implementations with explicit read windows,\n'
+                                'resources, errors and later returns. Their locality and energy operators\n'
+                                'are not identified. FINITE-COHERENT-BATTERY-DRIFT [T] bounds a complete '
+                                'word\n'
+                                'with one finite coherent source and gives an energy-rounding error that\n'
+                                'does not accumulate with time.\n'
+                                '\n'
+                                'OCCUPIED-RECORD-EXPORT-REUSE and LOCAL-THERMAL-TWO-ATTEMPT [T] retain old\n'
+                                'memory, failed branches, output correlations and all spent stock. The '
+                                'latter\n'
+                                'is conditional on its own complete thermal core and uniform channel\n'
+                                'premises. DIRAC-CONTACT-COMPLETE-ACCOUNT and '
+                                'DIRAC-CONTACT-SOURCE-COHERENCE\n'
+                                '[T] give the full signed energy law, an exact conserving completion and\n'
+                                'sharp limits of stationary sources in their specified two-walk model.\n'
+                                'None of these statements equates its conserved account with every other\n'
+                                'time generator or supplies a physical outcome-selection law.\n'
+                                'All 26 live H/O owners and their decision conditions remain unchanged.\n'
+                                '\n'
+                                '## Reader and contact boundaries\n'
+                                '\n'
+                                'U-RAW-RESIDUE-CONTEXT-BOUNDARY [T] excludes every finite autonomous,\n'
+                                'source-independent context for a nonconstant permanent raw-residue '
+                                'reading.\n'
+                                'A supplied current Thue-Morse bit permits an explicit 23-state observer;\n'
+                                'neither its physical acquisition nor autonomous implementation follows.\n'
+                                'CONTEXT-COMPLETE-PRODUCT-LIFT-OBSTRUCTION [T] excludes a bijective '
+                                'complete-\n'
+                                'product lift of that particular nonsurjective update, not all reversible\n'
+                                'observers. FIELD-RETAINED-CONTACT-ARCHIVE [T] gives a sharp three-value\n'
+                                'last-gain code for the declared contacts, unbounded archive capacity '
+                                'across\n'
+                                'horizons, and an exact extension using two unbounded integer registers.\n'
+                                '\n'
+                                'The native two-message results separate three contracts. A common raw\n'
+                                'reset obstructs affine readings of any dimension. A global nonlinear chart\n'
+                                'has a common raw blank and permanent second-message readback. On its fixed\n'
+                                '550-point prepared family, affine observation dimension three and two-\n'
+                                'coordinate polynomial degree two are sharp when only semantic blank is\n'
+                                'required. A different 150-point joint preparation permits affine dimension\n'
+                                'two with a nonlinear decoder; its raw blank already contains the second\n'
+                                'message. Both messages are initially present in every construction. These\n'
+                                'are the precise scopes of U-ORIGIN-AFFINE-COMMON-RESET-BOUND,\n'
+                                'U-ORIGIN-NONLINEAR-TWO-MESSAGE-READOUT, U-FIXED-FAMILY-READOUT-COMPLEXITY\n'
+                                'and U-ALTERNATIVE-AFFINE-SEMANTIC-READOUT [T]. They supply no later '
+                                'independent\n'
+                                'loading, source depletion, local physical detector or indefinite renewal.\n'
+                                '\n'
+                                'SIGNED-PORT-OCCUPIED-REVERSIBILITY [T] gives complete rational wave/tape\n'
+                                'inverses and a positive conserved energy for the declared signed port.\n'
+                                'Finite/infinite agreement is limited to its prepared first two cold cuts.\n'
+                                'FUNDED-CONTACT-INVOLUTION [T] supplies a retained-direction contact with a\n'
+                                'bounded rational store, sharp blank budgets 2/5 and 8/5 on the stated\n'
+                                'receiver sets, and an explicit occupied-state funding boundary. Bounded\n'
+                                'energy does not bound precision or establish a physical reservoir. All\n'
+                                '26 live H/O owners and their decision conditions remain unchanged.\n'
+                                '\n'
+                                '## Two field characterisations involving five\n'
+                                '\n'
+                                'Two independent L1 theorems characterize two narrow arithmetic classes\n'
+                                'involving five. Neither derives or justifies the primitive axiom.\n'
+                                '\n'
+                                '- QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS [T] says that among full\n'
+                                '  quartic cyclotomic fields, the complete total-ramification locus is '
+                                'exactly\n'
+                                '  `{(K_5,5),(K_8,2)}`. Their residue-unit groups are respectively `C_4` '
+                                'and\n'
+                                '  `C_1`.\n'
+                                '- ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM [T] says that among '
+                                'finite\n'
+                                '  abelian Galois CM fields with exactly one nontrivial quadratic '
+                                'character,\n'
+                                '  even on CM conjugation, `Q(zeta_5)` is the unique absolute-discriminant\n'
+                                '  minimizer, with minimum `125`.\n'
+                                '\n'
+                                'These are separate frozen classes, not a physical-selection chain or '
+                                'evidence\n'
+                                'for the axiom. Total ramification is not a premise of the minimum theorem,\n'
+                                'and neither theorem says that its class or optimization rule is forced by\n'
+                                '`J`, the decoder, or Nature.\n'
+                                'TWO-PLACE-PHYSICS remains [D], and no live H or O row moves.\n'),
+                               (141, 143, ''),
+                               (144,
+                                146,
+                                '- J-UNIT [T]: Q(zeta_5)\n'
+                                '- J-PROJECTIONS [T]: in the principal archimedean embedding, J = 1 + '
+                                'zeta_5^2 has modulus 1/phi and principal argument 2 pi/5\n'
+                                '- PLENUM-POINT [T]: in Z[i, zeta_5], T_pl = s_J + i phi = 2i(1 - J), with '
+                                's_J^2 = 3 - phi, abs(T_pl) = 2, arg(T_pl) = 3 pi/10, zeta_5 T_pl^2 + 4 = 0, '
+                                'T_pl^10 = -2^10, and T_pl/2 = zeta_20^3 = zeta_4^-1 zeta_5^2\n'
+                                '- J-GOLDEN-BRIDGE [T]: Z[zeta_5]\n'
+                                '- J-STEP [T]: Z^4, the regular representation\n'
+                                '- AXIOM-PROJECTION-DICTIONARY [D]: the modulus projection read as gravity '
+                                'and scale, the argument projection as electromagnetism and phase, the CRT '
+                                'factors of T_pl as the prime 5 write and prime 2 read, and the unit and '
+                                'ramified chords as gravity and space channels; a dictionary resting on '
+                                'J-PROJECTIONS, PLENUM-POINT, J-MODULUS-CHORD, and J-RAMIFIED-CHORD, with no '
+                                'uniqueness claim\n'
+                                '- CENSUS-313 [C]: the full enumeration of Z_5^6 under the Thue-Morse driven '
+                                'kernel, warmup 400, window 300, closure and stability checked\n'
+                                '- BORN-HALF-ANGLE [T]: every Born unit of A_8 = Z[zeta_8]/5; the normalized '
+                                'root on the 11 non antipodal units of the norm gated half (the squares of '
+                                'the cyclic unit group of order 24); at u = -1 the bisector vanishes and '
+                                'normalization is undefined\n'
+                                '- BORN-RESIDUAL-SPLIT [T]: the residual rings Z[i]/5 and Z[zeta_8]/5 and '
+                                'their conjugation swap\n'
+                                '- SPIN-BISECTOR [T]: the integer skeleton and the SL_2(F_25) shadow of '
+                                'order 8; no positivity claim\n'
+                                '- BORN-ORDER-STAIRCASE [T]: root orders 4, 8, 16 first realized at F_5, '
+                                'F_25, F_625, with minimality against every smaller degree (16 divides none '
+                                'of 4, 24, 124); the gate is the square condition on the bisector norm\n'
+                                '- MEASURE-BORN-VERB [D]: the measure read as the Born square of the verb, '
+                                'resting on the exact BORN-FACE-WEIGHTS theorem layer\n'
+                                '- MAXWELL-BIANCHI [T]: on the 3+1 tesseract the Bianchi identity dF = d(dA) '
+                                '= 0 holds identically in the 32 independent edge symbols on all 8 cubes, '
+                                'and gauge invariance F[A + d Lambda] = F[A] is an identity in 16 more '
+                                'vertex symbols on all 24 faces\n'
+                                '- MAXWELL-GAUSS-CHAIN [T]: Gauss as the boundary equation bd E = rho on the '
+                                'closed 2 x 2 x 2 spatial torus: the Smith form of the boundary has all '
+                                'seven elementary divisors equal to 1, a constructive two edge dipole solves '
+                                'the point pair exactly, and the integrated law holds on every one of the '
+                                '256 vertex regions\n'
+                                '- MAXWELL-AMPERE-CHAIN [T]: the inhomogeneous pair as the face boundary '
+                                'equation on the 2^4 spacetime torus: conservation bd1 bd2 = 0 is an exact '
+                                'identity in the 96 face symbols, the Smith form of the face boundary has '
+                                'all 45 divisors equal to 1, and H_1 is free of rank 4 with the four winding '
+                                'certificates pairing to the identity on the elementary winding currents\n'
+                                '- MAXWELL-OBSTRUCTION-P [T]: the obstruction pair is counted in p = 5: over '
+                                'F_5 Gauss is solvable iff the total charge vanishes mod 5 (rank 7 with the '
+                                'augmentation annihilating the image, constructive solution and exhibited '
+                                'obstruction), and the current pair is solvable iff the current is conserved '
+                                'and all four winding numbers vanish mod 5 (the exact rank identity 45 = 64 '
+                                '- 19, the single winding obstructed, five parallel windings solved)\n'
+                                '- MAXWELL-CLOSED [D]: the dictionary reading: the classical Maxwell system '
+                                'of the decoder closes exactly on the chain complex, the electric and '
+                                'magnetic laws as boundary equations with their obstructions counted in p; '
+                                'no continuum limit is claimed\n'
+                                '- Z2-PLACES-SPLIT [T]: the cyclotomic Galois involutions sit at exactly two '
+                                'places: one involution at zeta_5 (the single order 2 element of the cyclic '
+                                'Galois group) and a complete Klein four at zeta_8; 5 = (2 + i)(2 - i) in '
+                                'Z[i] with conjugation swapping the two Gaussian primes above 5\n'
+                                '- TWO-PLACE-PHYSICS [D]: the v_5 place read as the write side for geometry, '
+                                'gravity, and the pentit substrate, the v_2 place as the read side for '
+                                'Clifford, Born, and the foreign qubit; CP read from zeta_5 and Gaussian '
+                                'conjugation, T from Thue-Morse reversal, and CPT as their composition; the '
+                                'Born square declared as the cross-place descent reading; no uniqueness or '
+                                'physical CPT-operator theorem is claimed\n'
+                                '- FORCE-WEYL-HOLONOMY [T]: the finite Weyl pair on five basis states '
+                                'satisfies Z X Z^-1 X^-1 = zeta_5 I exactly; the commutator phase is '
+                                'primitive of order 5 with principal argument 2 pi/5\n'
+                                '- FORCE-AS-CURVATURE [D]: the finite Weyl commutator read as a force '
+                                'curvature and, through AXIOM-PROJECTION-DICTIONARY, the two J projections '
+                                'read as the two abelian force channels; no uniqueness or completeness of '
+                                'the force dictionary is claimed\n'
+                                '- FRW-CANONICAL-FORM [T]: the rank 1 lapse action closes the displayed (00) '
+                                'constraint algebra: the lapse variation gives 3 H^2 = lambda rho, lambda = '
+                                '216 pi gives H^2 = 72 pi rho, the coefficient 3 = C(3,2) counts the spatial '
+                                '2-planes, continuity gives the second Friedmann equation, and the '
+                                'Hamiltonian constraint takes the canonical form; the fiber multiplier k_f = '
+                                '1 is forced by the displayed master identity against G_nat = 27 = d^3 with '
+                                'V_cell = 864 pi carrying exactly one fiber 2 pi; no source-projector '
+                                'uniqueness, amplitude ansatz, or E_total claim is included\n'
+                                '- GRAVITY-BRIDGE-LAW [D]: the equation layer of the SI bridge on the single '
+                                'anchor m_e: alpha B g = 1 identically with B = alpha^-1/g; g = 2^5 phi^2 '
+                                'sqrt(3 - phi) with g^2 = 1024 phi^4 (3 - phi) and 3 - phi = |1 - zeta_5|^2 '
+                                'exactly; G_T = (32/33)^2 alpha^20 / g with (32/33)^2 = (2^5/(2^5 + 1))^2 '
+                                'and alpha content exactly alpha^20; the wall spelling ell_P / lambda_e = '
+                                '(32/33) alpha^10 / sqrt(g) is equivalent under ell_P^2 = 27 ell_G^2; the SI '
+                                'value of G is not claimed and stays on the frontier\n'
+                                '- COSMOLOGY-READING-DICTIONARY [D]: the zero linear variation in '
+                                'TT-LINEAR-ZERO read as zero linear tensor response and r_T = 0 at the '
+                                'declared isotropic dictionary layer, GYRON-DENSITY read as the mass-ladder '
+                                'prefactor, and the committed COSMOLOGY-REGISTER forms read as cosmological '
+                                'observables; no unique decoder or full perturbation theorem is claimed\n'
+                                '- BOOST-READING-SPLIT [T]: for every n >= 0 in Q(sqrt5), C_n = phi^n + '
+                                'phi^-n and S_n = phi^n - phi^-n read as (L_n, sqrt5 F_n) for even n and '
+                                '(sqrt5 F_n, L_n) for odd n; beta_n = S_n/C_n obeys the exact index-addition '
+                                'law and C_n^2 - S_n^2 = 4\n'
+                                '- BOOST-COUNT-LADDER [D]: the integer exponent n read as the substrate '
+                                'rapidity count n ln phi and beta_n as the decoder velocity; Einstein '
+                                'composition read as index addition, resting on BOOST-READING-SPLIT\n'
+                                '- COLOR-MCKAY-E8 [T]: tensoring by the spin row gives affine E8 with '
+                                'dimension marks; the moments are Catalan through degree 10 and first differ '
+                                'at degree 12 by 133 = 132 + 1; the verb weights are {4 phi^-2, 4 phi^2}\n'
+                                '- COLOR-LADDER-DICTIONARY [D]: the exact D5 to 2I to affine E8 '
+                                'representation and invariant ladder read as the nonabelian color door, with '
+                                'color su(3) on the traceless endomorphisms of the three dimensional trace '
+                                'kernel; no unique color assignment, QCD running, confinement, or complete '
+                                'measure lift is claimed\n'
+                                '- COLOR-KINEMATICAL-GL2 [D]: the special-linear kinematical image read as '
+                                'GL_2(F_5) of order 480 on the antisymmetric plane, embedded by g -> (det '
+                                'g)^-1 direct-sum g along 3 = 1 + 2\n'
+                                '- INTEGER-HERMITIAN-OCCUPIED-SOURCE [T]: Conditional L1 theorem of the '
+                                'explicitly specified model. The explicitly specified six-phase Hermitian '
+                                'source and occupied record map is a total reversible funded bijection with '
+                                'conserved proper account and finite shells; equal-account source signs with '
+                                'common bank772 produce fixed reader outputs−1,+1, sharp banks716/772 and '
+                                'recoverable old detector data.\n'
+                                '- INTEGER-PRIMITIVE-SOURCED-METRIC [T]: Conditional L1 theorem of the '
+                                'explicitly specified model. The explicit seven-phase integer extension and '
+                                'congruence inverse have a total funded completion; its primitive '
+                                'current-state reader exactly realizes the declared source-forced recurrence '
+                                'with all-counter denominator2*324^(n−1), ready-history Lorentz signature '
+                                'and same-counter source contrastell/162.\n'
+                                '- RELATIONAL-DECLARED-BOOST-INERTIA [T]: Conditional L1 theorem of the '
+                                'explicitly specified model. On the elliptic sector delta>0, the explicit '
+                                'declared H=sqrt(h squared+c squared P transpose gamma P) completion has the '
+                                'displayed full planar Poincare generators and stable moving family; the h10 '
+                                'object has energy/force inertia10/c squared under that common law.\n'
+                                '- RELATIONAL-CLOSED-RECOIL-RATIO [T]: Conditional L1 theorem of the '
+                                'explicitly specified model. The declared closed two-species apparatus with '
+                                'h10 and h45, shared boost law and finite spectator clocks admits the exact '
+                                'energy77 momentum-zero recoil at p24 with energies26 and51, and '
+                                'clock-adjusted inertial ratio9/2.\n'
+                                '- CONTACT-W-SPECTRAL-READING [T]: For the explicitly supplied '
+                                'contact-after-streaming walk W=exp[-i(2pi/5)P0]SG on ell2(Z_R x Z_r) tensor '
+                                'C4, G=((I+2iX) tensor (I+2iX))/5: the whole spectrum has two proved gaps of '
+                                'width at least acos(7/25)-2pi/5>0; the fixed cut alpha=3pi/10 defines a '
+                                'bounded self-adjoint H=i Log_alpha(W), exp(-iH)=W, with an explicit '
+                                'exponential spatial bound and ||[H,R]||<=csc^2[(acos(7/25)-2pi/5)/4]. '
+                                'Existence and correctness of this nominated reading; no uniqueness, '
+                                'finite-range, native derivation, particle identification or empirical '
+                                'reading claim.\n'
+                                '- SELECTED-SPECTRAL-ENERGY-SOURCE [T]: For every specified bounded '
+                                '0<=H_S<=h on a separable Hilbert space and specified unitary V, the '
+                                'continuous battery L2([0,L+2h]) with fixed sine preparation admits a '
+                                'unitary U conserving H_S+H_B exactly, with joint vector error '
+                                '<=pi||V*H_SV-H_S||/L, half-diamond error <=min(1,pi^2 h '
+                                'osc(V*H_SV-H_S)/(2L^2)) and work error <=pi^2 h^2 osc(V*H_SV-H_S)/(4L^2). '
+                                'The selected contact-walk energy and two moving copies with V_eta=exp[i '
+                                'eta(R-Y)] satisfy these bounds, preserve common translations, and have the '
+                                'displayed q-schedule errors. A bounded autonomous generator realizes one '
+                                'combined period. Finite energy capacity with infinite Hilbert dimension; no '
+                                'exact universal target channel, uniform full-apparatus locality, finite '
+                                'integer realization, native derivation, species identification or '
+                                'self-stopping clock claim.\n'
+                                '- CM5-POLARIZATION-DICTIONARY [T]: Specified complex Jacobian '
+                                'B=Jac(y^2=x^5-1) with its canonical principal polarization and chosen '
+                                'fifth-root action: full integral endomorphism ring, Rosati conjugation, NS '
+                                'identification with O_F, ample cone and norm/intersection/degree formula, '
+                                'full origin-preserving automorphism orbits in bijection with integral '
+                                'F-ideals, content/type and unique fundamental cone. Existence and '
+                                'correctness for this model, with no uniqueness/native selection '
+                                'requirement.\n'
+                                '- CM5-INTEGRAL-PULLBACK-REACHABILITY [T]: Specified CM5 positive integral '
+                                'classes modulo positive units, integral endomorphism pullbacks with no '
+                                'content division; exact inert-valuation criterion, parity invariants, '
+                                'prime-norm table and no finite universal seed set. Fixed-model '
+                                'interpretation only.\n'
+                                '- JM-POSITIVE-REFERENCED-READING [T]: L1 positive outer record and '
+                                'mass-projector reconstruction up to sign; homogeneous scale obstruction; '
+                                'injective affine-reference reading on the specified S and G\n'
+                                '- JM-FUNDED-INTEGER-PAIR-SOURCE [T]: L1 Cartesian integer cell source with '
+                                'declared positive integer resource functional, finite fixed-budget levels, '
+                                'funded reversible dynamics and port-independent sharp K-round bank\n'
+                                '- CONTACT-W-BOUND-PAIR-RESPONSE [T]: For the explicitly specified '
+                                'contact-after-streaming W with mu=2 and g=2pi/5, the relative compact state '
+                                'at center momentum zero continues to a simple exponentially localized '
+                                "branch exp[-i Omega(P)] with Omega even and Omega''(0)=sqrt(16phi+7)/20. "
+                                'Finite unprojected binomial packets, with q=5^j, N=q^4, eta=2atan(1/q) and '
+                                'averaging time T=q, have actual mean displacement divided by the actual '
+                                'principal-momentum impulse tending to this curvature. Two moving copies '
+                                'with the specified continuous energy source of capacity q+8pi retain '
+                                'opposite responses and relative limit twice the curvature, while conserving '
+                                'the selected additive energy and total circular momentum. The first '
+                                'post-kick tick has zero bare-kick velocity; the claim is the stated '
+                                'averaged limit. No global closed contact-dispersion polynomial, '
+                                'positive-energy massless-particle interpretation, physical species, native '
+                                'carrier bridge, finite-dimensional source or intrinsic stopping clock is '
+                                'asserted.\n'
+                                '- HOMOGENEOUS-CAPTURE-CURRENT-RECORD [T]: L1 specified homogeneous one-pair '
+                                'one-carrier one-receiver occupancy model: a normalized relative-ac incoming '
+                                'packet has zero free bound weight and joint asymptotic capture-and-record '
+                                'probability p_full>=p_window>2/10^28; the same law intertwines the complete '
+                                'native physical-cut charge current and coherently transfers arbitrary '
+                                'encoded old-memory/reference correlations, with unaliased spectral energy '
+                                'only on the stated one-carrier safe window.\n'
+                                '- U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS [T]: At L1 for unchanged native U on '
+                                'the complete F5 trace sheets and the origin-zero Thue-Morse clock: on X1 '
+                                'separately supplied at every start, a whole-sheet pure fibre translation '
+                                'returning all pistons occurs exactly at even length with final clock bit '
+                                'one; the shortest nonzero length is four, with words 0011 and 1001 and r '
+                                'shifts +2 and -2. Lengths 2,4,6,8 have exact nonzero densities '
+                                '0,1/4,11/24,1/2 and the stated all-start dyadic counts, including '
+                                '0,1023,1876,2049 at N=4096. On the whole actually occupied sheet of an '
+                                'uninterrupted X1-union-X4 trajectory the four-tick return density is '
+                                'instead 1/3, directions 1/6 each, with no identities in that class. Six '
+                                'standard basis inputs certify affine whole-sheet translations. These '
+                                'overlapping-counter densities do not count every special pointwise return '
+                                'or supply prepared-contact rates, physical occurrence or renewal.\n'),
+                               (147,
+                                153,
+                                '- ACTIVE-ISOSPECTRAL-RECORD [T]: L1 on the fixed v105 homogeneous U_rec and '
+                                'its pinned active source: '
+                                'psi_plus/minus=(I+/-(U_rec^2-U_rec^-2))chi/sqrt(Z) have identical initial '
+                                'populations and complete spectral measures for all 26 old-memory labels and '
+                                'passive references; on the 25-label unwritten-memory family their exact '
+                                'three-step write contrast is greater than 1/50; supplied complete '
+                                'preparation and coherent setting gates preserve their controlled phases; no '
+                                'incoming-unbound capture, occurrence or native compilation\n'
+                                '- FINITE-COHERENT-BATTERY-DRIFT [T]: L1 for any supplied bounded '
+                                '0<=Q<=Delta I, d>0, m=ceil(Delta/d), integer N>=2m and the stated '
+                                'sine-ready finite battery: complete total-charge sectors define a '
+                                'full-space unitary representation Gamma(U) conserving floor(Q/d)*d+B '
+                                'exactly; joint reference-uniform whole-word error is at most 2m '
+                                'sin(pi/(2L)), L=N-2m+2; every rounded-energy-conserving unitary changes '
+                                'original Q+B by an operator between -d I and d I; supplied coherence and '
+                                'spectral gates, not exact original-energy conservation or locality\n'
+                                '- RELATIVE-CONTACT-FOUR-SLOT-MINIMUM [T]: at L1 on O^26 with O=Z[j], '
+                                'rho=j^2, the declared total relative contact, arbitrary whole-slot '
+                                'permutations, initial data (6,0^21), exactly four arbitrary auxiliary slots '
+                                'and complete endpoint equality, the least initial auxiliary positive trace '
+                                'account is 27 for (3,3,3,3,0^18) and 12 for (-3,3,3,3,0^18); complete '
+                                'endpoint accounts and inverse witnesses attain both; no shortest length, '
+                                'common unknown-input encoder, native realization or physical energy '
+                                'interpretation is asserted\n'
+                                '- RELATIVE-CONTACT-RETAINED-BANK-CAPACITY [T]: at L1 in the same declared '
+                                'contact/permutation alphabet, the stated used banks cannot return to their '
+                                'initial states while prepared output data stay fixed and every other '
+                                'resource returns exactly; for N disjoint known-input loads and N retained '
+                                'signed or positive outputs, all changing auxiliary resources satisfy '
+                                'L_aux>=4N and E_aux(initial)>=12N; signed disjoint copies attain both, '
+                                'while positive copies give only the upper bound 27N; initial loads and '
+                                'sites are supplied and no clean or autonomous renewal is asserted\n'
+                                '- RELATIVE-CONTACT-COMMON-APPARATUS-OPEN [T]: at L1 the supplied total '
+                                'relative contact and five declared whole-slot transpositions admit one '
+                                'complete fixed program on O^56, with O=Z[j], that processes every ordered '
+                                'pair from the ten-input prepared family {0,1} times Z/5 through the same '
+                                'read core; the 46 designated auxiliary coordinates have one common initial '
+                                'state of positive half-trace account 128 and the complete account is 156; '
+                                'the current four archive banks distinguish all 100 input pairs, the first '
+                                'archives retain their addresses and values throughout reload and the second '
+                                'experiment, the shared controls become ready with initially funded fresh '
+                                'second banks, and every spent input and bank remains in the exact final '
+                                'state; the construction positively decides the common-apparatus existence '
+                                'question at the declared two-experiment horizon, with within-stage '
+                                'retention at complete read and step boundaries, and asserts no raw-input '
+                                'synthesis, arbitrary external post-start loading, contact-only '
+                                'implementation of the transpositions, regeneration of used memory, '
+                                'unbounded reuse, resource minimum, native-U realization or physical '
+                                'interpretation\n'
+                                '- RELATIVE-CONTACT-RHYTHM-CLASSIFICATION [T]: at L1 on O^3, O=Z[j], '
+                                'rho=j^2, with the supplied total integral relative contact and fixed tick '
+                                'F(x)=C23(C12(x)) acting left first, every trajectory is a cycle; doubling '
+                                'has first even return time 1+4r and changes least period/refusal totals by '
+                                '(P,R)->(P+4R,4R); the simultaneous-parity section is reached within at most '
+                                'eight ticks unless the complete primitive one- or five-cycle is recognized, '
+                                'and eight is sharp; with finite maximal common difference depth d and '
+                                'A_d=(4^(d+1)-1)/3, every nondiagonal cycle has exactly one primitive type '
+                                'with (P,R)=(A_d,4^d),(2A_d-1,2*4^d),or(5A_d,5*4^d), all attained; the fully '
+                                'diagonal case has (P,R,M)=(1,0,0) and infinite depth; the schedule and '
+                                'arithmetic carrier are supplied\n'
+                                '- RELATIVE-CONTACT-FINITE-WORKBANK-REUSE [T]: at L1, for every k>=1 fixed '
+                                'in advance, one supplied contact/SWAP word P_k on 26+25k slots accepts all '
+                                '10^k tuples from ({0,1} times Z/5)^k with one common preparation of the '
+                                '26+20k auxiliary slots; each cycle writes two records, copies them to fresh '
+                                'archive banks and reverses the complete 31-slot work core, restoring the '
+                                'same work-bank addresses and the current prepared source and clock; fixed '
+                                'swaps load prequeued inputs and retain all actual earlier inputs, the 2k '
+                                'archive banks alone decode the ordered input tuple, and each completed '
+                                'archive is untouched through the remainder of the forward P_k; total '
+                                'account is 68+74k, auxiliary account 68+60k and ring sum 2(k+1); P_k has '
+                                '26870k contacts and 5(k-1) swaps, and its unreduced inverse has 107480k '
+                                'contacts and 5(k-1) swaps and restores every initial coordinate while '
+                                'removing the records; B five-valued marked banks alone require 5^B>=10^k, '
+                                'so 2k is a construction upper bound and not a storage minimum; no one '
+                                'finite carrier retaining unlimited history, occupied-archive regeneration, '
+                                'post-start external loading, autonomous schedule, contact-only swap '
+                                'compilation, native-U realization or physical interpretation follows\n'
+                                '- U-CARRY-MIRROR-FINITE-CIRCUIT [C]: At L1 the hash-bound discrete compiler '
+                                'witness in P-NATIVE-RECEIVER-CARRY-MIRROR-1 expands into 40348 '
+                                'SUM/EQ/MUL/SHIFT/REFLECT/SCALE primitives on 50 compiler cells, including '
+                                '48 clean work cells; its literal reversed and primitive-inverted word '
+                                'realizes I on every two-digit input. The finite audit checks all 25 inputs '
+                                'in each direction, an untouched archive sentinel and five marked mirrors '
+                                'with complete undo. On the declared 62-cell carrier, only four primary '
+                                'pistons vary and 58 other initial cells are common; all 500 admitted s!=0 '
+                                'preparations execute the actual primary origin tick, live receiver shear, '
+                                'forward word, secondary SUM and origin tick, carry/archive swap, literal '
+                                'inverse word and inverse shear. Complete endpoints restore the primary '
+                                'post-tick checkpoint, retain high=s and archive=3s and the full secondary '
+                                'output at a=2s, and restore all 48 work cells at both multiplier '
+                                'boundaries. Each input uses 80705 primitives and two supplied native ticks, '
+                                'with four boundary classes of 125. The 62 count excludes the supplied '
+                                'origins and program control; no pulse execution, circuit minimum, extra '
+                                'carry coefficient, native global inverse, autonomous controller, '
+                                'contact-bank bridge or archive regeneration is established.\n'
+                                '- RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER [T]: at L1 on the supplied integral '
+                                'contact carrier O^15, O=Z[j], rho=j^2, lambda=1-j, B=1-rho and J=1+rho, one '
+                                'explicit fixed 95-contact word with seven common stock coordinates Z takes '
+                                '(G_t,J,-J,Z) to (G_t,rho^(t+2)J,-rho^(t+2)J,Z) for every t in '
+                                '{-2,-1,0,1,2}, where G_t=(lambda+tB,lambda-tB,0,0,1+j-2j^3,2); every '
+                                'non-clock coordinate returns exactly, the common stock has Q=80, Hermitian '
+                                'account 33+14phi and sum (-4,-10,-6,-10), and the literal 380-contact '
+                                'inverse restores the entire initial state; all primitive sum, Hermitian, '
+                                'positive half-trace and labelled-residue invariants hold; the preparation, '
+                                'seven stock values and schedule are supplied, no word or stock minimum or '
+                                'classification of success at other individual integers is asserted, and no '
+                                'autonomous control, native-U realization or physical interpretation '
+                                'follows\n'
+                                '- RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS [T]: at L1 for every '
+                                'k>=1 fixed before choosing inputs, one supplied contact/SWAP program on '
+                                '39+25k slots processes all 10^k sequences (n_i,t_i) in ({0,1} times '
+                                '{-2,-1,0,1,2})^k, with independently supplied Y_(n_i) and prepared height '
+                                'pairs, through the same source, translated clock and read core; each A U_i '
+                                'A^-1 cycle restores the complete translator and work core, keeps two '
+                                'fresh-target archive records and parks every earlier raw input through five '
+                                'fixed reload swaps; the 2k current archive banks alone decode the ordered '
+                                'input tuple and every completed archive is untouched during the remaining '
+                                'forward program; common auxiliaries number 39+20k with account 177+60k, the '
+                                'total account is 177+78k+10 sum_i t_i^2, '
+                                'H=70+37phi+k(30+18phi)+(4+2phi)sum_i t_i^2 and sum=(1+4k,-9-2k,-6,-12); '
+                                'forward counts are 27345k contacts and 5(k-1) swaps, and the unreduced '
+                                'inverse has 109380k contacts and the same swaps and restores all initial '
+                                'coordinates while removing the records; the result is finite-k induction '
+                                'with supplied prepared inputs and growing archives, not input synthesis, '
+                                'arbitrary post-start loading, occupied-archive regeneration, unlimited '
+                                'history on one finite carrier, autonomous scheduling, contact-only swap '
+                                'compilation, native-U realization or physical interpretation\n'
+                                '- RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION [T]: at L1, for every '
+                                'finite m, affine all-integer preparation A+tD in O^m with arbitrary finite '
+                                'common stock included, and finite fixed word of total integral contacts and '
+                                'whole-slot SWAPs, the integer domain admits a finite partition into dyadic '
+                                'cylinders on each of which the full output is affine in its integer '
+                                'parameter; any designated output coordinate whose positive half-trace '
+                                'account is bounded for all t is constant on each cylinder and hence '
+                                'dyadic-periodic; therefore no such word produces the exact output '
+                                'rho^(t+c)J for every integer t, for any fixed integer c, even with '
+                                'unrestricted retained remainder coordinates; this excludes the stated '
+                                'all-integer finite-word class only and neither obstructs the five-height '
+                                'compiler nor classifies its success at other individual integers, nonlinear '
+                                'input preparation or unbounded programs\n'),
+                               (155,
+                                155,
+                                'Time is a counter. Space is read through commutators. The modulus and\n'
+                                'argument of J provide two exact algebraic projections. Their physical\n'
+                                'interpretations are only as strong as the registered dictionary rows.\n'
+                                '\n'
+                                'The selected FRW-INHOM dictionary supplies one continuous homogeneous FRW\n'
+                                'metric with separately marked finite inhomogeneous source and constraint\n'
+                                'records. Its complete joint-action proof closes the positive existence\n'
+                                'clause; it supplies no full continuous inhomogeneous metric, physical TT\n'
+                                'emission, scalar-spectrum comparison or SI calibration.\n'
+                                '\n'
+                                'The selected TT-SOURCE dictionary maps the unchanged native K1 packet to\n'
+                                'one zero-start outgoing TT history through Phi=H1-H0. The '
+                                'complete-transfer\n'
+                                'condition, relative sign and isolated onset are explicit choices. Its '
+                                'linear\n'
+                                'source equations and quadratic work/auxiliary records are compatible; no\n'
+                                'complete microscopic source depletion, physical occurrence, outgoing '
+                                'vector\n'
+                                'state, scalar comparison, numerical r_T or L2-L6 output is supplied.\n'
+                                '\n'
+                                'The authoritative current state is `canon/REGISTRY.tsv`.\n'
+                                '`canon/CANON.md` gives complete scopes and `canon/FRONTIER.md` gives\n'
+                                'the live obligations grouped by scheduler-only program metadata from\n'
+                                '`canon/FRONTIER_PROGRAMS.tsv`. That metadata creates no scientific edge or\n'
+                                'status. Reproductions under `reproduce/` must exit zero\n'
+                                'with byte-identical stdout.\n')]},
+ 'canon/FRONTIER.md': {'current_sha256': 'd32f4a06f8f7a3d9a5b8351fd2119ce90c8828450e781b779b5a4655d43cc8ea',
+                       'current_bytes': 27712,
+                       'prior_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                       'prior_bytes': 27382,
+                       'restore': [(23,
+                                    24,
+                                    '- METRO-ADMISSIBILITY [O]: the exhaustive residual cover R1 through R8 '
+                                    'of the registered METRO universe: R1=U_RF minus the commuting '
+                                    'higher-rank METRO-ADMISSIBILITY-DIM child, including rank-one, '
+                                    'noncommuting, and otherwise out-of-child finite rational protocols; '
+                                    'plus non-finite-state, unbounded-memory adaptive, non-reducible '
+                                    'stochastic, irrational, out-of-child cross-layer, physical-unit, and '
+                                    'mixed-class protocols\n'),
+                                   (26,
+                                    27,
+                                    '- METRO-ADMISSIBILITY-DIM [O]: the exact admissibility decision for '
+                                    'finite N^a-indexed commuting digit-word systems over Q with q >= 2, a '
+                                    '>= 2, r >= 1, finite state carrier, nonempty allowed starts, fixed '
+                                    'digit and padding convention, commuting coordinate digit actions, '
+                                    'complete raw L5 stream in Q_(>=0)^r, total tagged L6 normalization Y_r, '
+                                    'and uniform translated-box convergence with an effective modulus; an '
+                                    'independently defined joint certificate must be sound, complete, and '
+                                    'decision-coherent and must cover individual digit maps, the relevant '
+                                    'invariant submodule, allowed-start observable quotient, primary, '
+                                    'peripheral, Jordan, q-adic boundary and residue data, and the exact '
+                                    'terminal value\n'),
+                                   (28,
+                                    29,
+                                    '  Decision: closes positively when the direct translated-box criterion '
+                                    'decides the complete frozen child, the independent joint certificate is '
+                                    'terminating, sound, complete, and coherent, and every allowed reduction '
+                                    'preserves the decision and terminal value; closes negatively on an '
+                                    'exact admitted counterexample to soundness, completeness, coherence, '
+                                    'total normalization, or reduction invariance; STOP while any type, '
+                                    'endpoint, certificate field, reduction, completeness proof, boundary '
+                                    'theorem, or effective modulus is incomplete\n')]},
+ 'canon/CHANGELOG.md': {'current_sha256': '7fc1910fb4f4443ca7f4b63b23484d521aa899beb9e6ff8b09417f0126ce056b',
+                        'current_bytes': 222577,
+                        'prior_sha256': 'e5e05a17ba56203b58de9370d83e3d58d505f025ee05761d57dede13798a6898',
+                        'prior_bytes': 221732,
+                        'restore': [(1, 19, ''),
+                                    (22, 22, '<!-- BEGIN GENERATED CURRENT COUNTS -->\n'),
+                                    (24, 24, '<!-- END GENERATED CURRENT COUNTS -->\n')]},
+ 'canon/STATUS_COUNTS.tsv': {'current_sha256': '3c32622df5adf1fe866b6029daa3c199e8c3ff7683ace58349ebf192c2ddf2af',
+                             'current_bytes': 244,
+                             'prior_sha256': '8fe3bd0d3f074ecf60323d44318af1a2319de073ccdceabf2c041dcb0ec8e0e0',
+                             'prior_bytes': 244,
+                             'restore': [(1, 2, 'claims\t621\n'),
+                                         (3, 6, 'status_T\t475\nstatus_D\t59\nstatus_C\t42\n'),
+                                         (10, 12, 'reproductions\t41\nevidence_none\t198\n'),
+                                         (14, 15, 'evidence_two-architecture\t383\n')]},
+ 'tools/test_architecture_map_report.py': {'current_sha256': 'ab935346436bc0226e6da258f2afed3e89c08fd2109a689cc89145f792fccc3a',
+                                           'current_bytes': 54579,
+                                           'prior_sha256': '811bfcab77fdc0f376b55508533cb4e40ba567853deb00f2589f46fd9967cb17',
+                                           'prior_bytes': 54537,
+                                           'restore': [(377,
+                                                        380,
+                                                        '        # v111 adds seven inline L1 theorems and '
+                                                        'two reproduced C claims.\n'
+                                                        '        # All 612 prior claim statuses stay '
+                                                        'unchanged.\n'
+                                                        '        self.assertEqual(self.report.claims, '
+                                                        '621)\n'),
+                                                       (382,
+                                                        383,
+                                                        '            {"C": 42, "D": 59, "F": 19, "H": 2, '
+                                                        '"O": 24, "T": 475},\n'),
+                                                       (387, 388, '                "none": 198,\n'),
+                                                       (390,
+                                                        391,
+                                                        '                "two-architecture": 383,\n'),
+                                                       (396,
+                                                        397,
+                                                        '        '
+                                                        'self.assertEqual(len(self.report.direct_architecture_requires), '
+                                                        '202)\n'),
+                                                       (398,
+                                                        399,
+                                                        '            '
+                                                        'len(self.report.transitive_architecture_dependents), '
+                                                        '385\n'),
+                                                       (400,
+                                                        401,
+                                                        '        '
+                                                        'self.assertEqual(len(self.report.dependency_terminals), '
+                                                        '84)\n')]}}
+
+V112_METADATA_TEST = 'tools/test_architecture_map_report.py'
+
+V112_SOURCE_INVENTORIES = {'probes/P-METRO-ENC4-CLOSURE-1': ('probes/P-METRO-ENC4-CLOSURE-1/EXPECTED.txt',
+                                   'probes/P-METRO-ENC4-CLOSURE-1/PREREG.md',
+                                   'probes/P-METRO-ENC4-CLOSURE-1/RESULT.md',
+                                   'probes/P-METRO-ENC4-CLOSURE-1/RUN.md',
+                                   'probes/P-METRO-ENC4-CLOSURE-1/auxiliary.py',
+                                   'probes/P-METRO-ENC4-CLOSURE-1/check.py',
+                                   'probes/P-METRO-ENC4-CLOSURE-1/common.py',
+                                   'probes/P-METRO-ENC4-CLOSURE-1/generate.py',
+                                   'probes/P-METRO-ENC4-CLOSURE-1/polynomial.py',
+                                   'probes/P-METRO-ENC4-CLOSURE-1/verify.py'),
+ 'reproduce/metro-enc4-review': ('reproduce/metro-enc4-review/EXPECTED.txt',
+                                 'reproduce/metro-enc4-review/README.md',
+                                 'reproduce/metro-enc4-review/verify.py'),
+ 'reproduce/h3-referenced-record': ('reproduce/h3-referenced-record/EXPECTED.txt',
+                                    'reproduce/h3-referenced-record/README.md',
+                                    'reproduce/h3-referenced-record/RUNS/aarch64.md',
+                                    'reproduce/h3-referenced-record/RUNS/x86_64.md',
+                                    'reproduce/h3-referenced-record/verify.py'),
+ 'legacy/canon-v112-intake': ('legacy/canon-v112-intake/IDENTIFICATIONS.tsv',
+                              'legacy/canon-v112-intake/RECONCILIATION.md',
+                              'legacy/canon-v112-intake/SOURCE_IDENTITIES.tsv'),
+ 'legacy/h3-referenced-record-intake': ('legacy/h3-referenced-record-intake/README.md',
+                                        'legacy/h3-referenced-record-intake/SOURCE_IDENTITIES.tsv')}
+
+V112_SOURCE_FILES = {'legacy/canon-v112-intake/IDENTIFICATIONS.tsv': {'bytes': 6399,
+                                                  'sha256': 'a4b8ad6228ed2c99180da7803d8b5d7da3ed8011bb21d85836be6ab65eb07b55',
+                                                  'git_blob': '35ee3bb8f208653044ebed7ecff8e05948c53696',
+                                                  'source_commit': '97869bc99f3bce867265fd9d22c669ac797704bf'},
+ 'legacy/canon-v112-intake/RECONCILIATION.md': {'bytes': 6428,
+                                                'sha256': 'dfcdcaa9217170f4930d07250d2a979b1fc82b22a95e74b61a877bd57fef5393',
+                                                'git_blob': '882d1b27b0ec80454552c382dcca19a0d75b08a1',
+                                                'source_commit': '97869bc99f3bce867265fd9d22c669ac797704bf'},
+ 'legacy/canon-v112-intake/SOURCE_IDENTITIES.tsv': {'bytes': 2096,
+                                                    'sha256': '7d6352370d6dcd50311ff53acc663b7e804e8f5834f8f810c4dbbb0e50fe119f',
+                                                    'git_blob': 'f6ead7412f629305b66202becfd9be0e4522028d',
+                                                    'source_commit': '97869bc99f3bce867265fd9d22c669ac797704bf'},
+ 'legacy/h3-referenced-record-intake/README.md': {'bytes': 2000,
+                                                  'sha256': '0826a5ebe5882de1a4d0b67623622c54005c60efb9d93a63ec3342cdaf856d5f',
+                                                  'git_blob': '185c45625cad9f6d6f521f53527d1b61f8744e64',
+                                                  'source_commit': '5750adfce695b1a5460eed6ba847b3af8c97dbef'},
+ 'legacy/h3-referenced-record-intake/SOURCE_IDENTITIES.tsv': {'bytes': 571,
+                                                              'sha256': 'ccb026a054740c5cc684a058df5d23cb558bb4923289e5f3d070df010310e95d',
+                                                              'git_blob': '219cfca404eafb34ba29d2026f47730fc6bcd7ed',
+                                                              'source_commit': '5750adfce695b1a5460eed6ba847b3af8c97dbef'},
+ 'notes/canon/METRO-ENC4-CLOSURE-2026-11-13.md': {'bytes': 15758,
+                                                  'sha256': 'af1da9656d78ea2589b6b2a70476dd1b30b56a4dc5ed5f9d7a49f0ab586a0846',
+                                                  'git_blob': '0f3be8d79dfd08cd651e58e6a292880dc129f085',
+                                                  'source_commit': 'd7639aa2c5faf3c5ebcebb48ef20e98dc3e18332'},
+ 'notes/canon/METRO-ENC4-REVIEW-RESPONSE-2026-11-13.md': {'bytes': 2882,
+                                                          'sha256': '660eb5f425ed0aa86933c62e17b8ae8c8cbbf8a9361188e3e3fad95e5db64460',
+                                                          'git_blob': '65c441b3e1d1d55f3b038cd97181775fb71d87d0',
+                                                          'source_commit': '7addc15b11b4ed594b36a9edd288f1de27899e45'},
+ 'probes/P-METRO-ENC4-CLOSURE-1/EXPECTED.txt': {'bytes': 155,
+                                                'sha256': 'ee17a7ff46f25bb50afa62c4313dafa42c1d412423ef40b4cf44a878a1e491d5',
+                                                'git_blob': '0e80b6b8fce3b31d590ce832793f7be5ea8f4fa5',
+                                                'source_commit': 'd7639aa2c5faf3c5ebcebb48ef20e98dc3e18332'},
+ 'probes/P-METRO-ENC4-CLOSURE-1/PREREG.md': {'bytes': 5199,
+                                             'sha256': '59c629a8272daae92b4011aba1011cad7aa77b7a6db4a0dc7b664beb9c0ccc3e',
+                                             'git_blob': 'a183e1feb70235d4e171044b3ebcd508cbb043dc',
+                                             'source_commit': 'd7639aa2c5faf3c5ebcebb48ef20e98dc3e18332'},
+ 'probes/P-METRO-ENC4-CLOSURE-1/RESULT.md': {'bytes': 1796,
+                                             'sha256': '014c1e0657c1bddd0caa9320ad878d0296771a1b1f71ae95cb5d8540234b61d8',
+                                             'git_blob': 'c3d5ce1320d150b4b16c09706444273d4f6ba942',
+                                             'source_commit': 'd7639aa2c5faf3c5ebcebb48ef20e98dc3e18332'},
+ 'probes/P-METRO-ENC4-CLOSURE-1/RUN.md': {'bytes': 2026,
+                                          'sha256': 'fd9c89bab9e2cc2c6ce39a5498e4a5efeeaf182e5927744eb886448c7e55b119',
+                                          'git_blob': '68ce9bef26d58420565a4d9467410b5f53346dbb',
+                                          'source_commit': 'd7639aa2c5faf3c5ebcebb48ef20e98dc3e18332'},
+ 'probes/P-METRO-ENC4-CLOSURE-1/auxiliary.py': {'bytes': 10812,
+                                                'sha256': 'fd7ee07ee5f559e943d9ebb590f6c0fb154b248506ba004cb7fcd6f18dc7e3fe',
+                                                'git_blob': '4fe5e91ae7aabb089d629505b8311d1c163fe322',
+                                                'source_commit': 'd7639aa2c5faf3c5ebcebb48ef20e98dc3e18332'},
+ 'probes/P-METRO-ENC4-CLOSURE-1/check.py': {'bytes': 7088,
+                                            'sha256': '5a8fb2aa9d6bfbe302719ce0871576539c1f5043ec96944aa153c44a768b9ccf',
+                                            'git_blob': '8db60515c408e9f0f5d9250b2eaab6da918de338',
+                                            'source_commit': 'd7639aa2c5faf3c5ebcebb48ef20e98dc3e18332'},
+ 'probes/P-METRO-ENC4-CLOSURE-1/common.py': {'bytes': 7604,
+                                             'sha256': '27a5bac2040105bd092edc4a279e5f7a5673362de2cfb32bf183520f5019c7ab',
+                                             'git_blob': 'eb6de6a6fecaeaaa20a9e1e96f532a1fe51d32bf',
+                                             'source_commit': 'd7639aa2c5faf3c5ebcebb48ef20e98dc3e18332'},
+ 'probes/P-METRO-ENC4-CLOSURE-1/generate.py': {'bytes': 6016,
+                                               'sha256': 'b6e3169260944d4bff772d8c68d0b8e261cc4076b08d6e1e52dfca6c1c444de4',
+                                               'git_blob': '88dd6de10a7797c771406c436fbf54b63fc58e13',
+                                               'source_commit': 'd7639aa2c5faf3c5ebcebb48ef20e98dc3e18332'},
+ 'probes/P-METRO-ENC4-CLOSURE-1/polynomial.py': {'bytes': 5214,
+                                                 'sha256': 'f1f3dcb0857d6054beeffe6f7811949e28083540f1a8ea0f5fad5b2236932e60',
+                                                 'git_blob': '9a2b6c99b98fc22c3099b262d5db64c24624bbc7',
+                                                 'source_commit': 'd7639aa2c5faf3c5ebcebb48ef20e98dc3e18332'},
+ 'probes/P-METRO-ENC4-CLOSURE-1/verify.py': {'bytes': 6502,
+                                             'sha256': '54d54cd95273d0c8a7fcb8e74174f221ef72b8043728447d3996be2097459da9',
+                                             'git_blob': '8e719c9d56dff9848c23ec12e44f3824e6cdba87',
+                                             'source_commit': 'd7639aa2c5faf3c5ebcebb48ef20e98dc3e18332'},
+ 'reproduce/h3-referenced-record/EXPECTED.txt': {'bytes': 442,
+                                                 'sha256': '236164bad41772f516600e2f573d28791dd350ff32de8c28d1033f4386a80c1d',
+                                                 'git_blob': '902cd6f7ecb0d1fd7a2093bc79d5eadd8e835927',
+                                                 'source_commit': '5750adfce695b1a5460eed6ba847b3af8c97dbef'},
+ 'reproduce/h3-referenced-record/README.md': {'bytes': 4674,
+                                              'sha256': 'e48ddd3d964756c0c0e00b4eebde769004fa2cc09ef3d916d1af32eeada56b14',
+                                              'git_blob': '6082f1af2a47918666eac76bf9fff4ca20a7c4c3',
+                                              'source_commit': '5750adfce695b1a5460eed6ba847b3af8c97dbef'},
+ 'reproduce/h3-referenced-record/RUNS/aarch64.md': {'bytes': 814,
+                                                    'sha256': 'ee0235052f19d8ace36d5e5ec82966edb89b08c077a3cc5b4b99a98bd55f0939',
+                                                    'git_blob': '8905dd4fd4d8ebe506c3cc9cddd0f7dcb7ce58d3',
+                                                    'source_commit': '5cb1547cb5d03d0301327958092e97db30707b53'},
+ 'reproduce/h3-referenced-record/RUNS/x86_64.md': {'bytes': 814,
+                                                   'sha256': 'e1bd2b6f7e14b2ed10a258ff704fe250f81c6c9df78171ee789d3b4fcabfd3fe',
+                                                   'git_blob': 'ddedb1dcf1ab8be82b11833ed989fbf40898da4d',
+                                                   'source_commit': '5cb1547cb5d03d0301327958092e97db30707b53'},
+ 'reproduce/h3-referenced-record/verify.py': {'bytes': 20745,
+                                              'sha256': '4553945d3bf32574ffd55de917859497e9644394f506aaf01ff9492adb8eeedd',
+                                              'git_blob': 'fd215e24fefbbebf83cf3985d8ebcedd590aa709',
+                                              'source_commit': '5750adfce695b1a5460eed6ba847b3af8c97dbef'},
+ 'reproduce/metro-enc4-review/EXPECTED.txt': {'bytes': 325,
+                                              'sha256': 'e7d185b32901eb2ab6a68de00d9f5ae23f665cac412aaf0927ea668e5db9bf55',
+                                              'git_blob': 'f2f6ee0c4f18c340d80bb8c3cd19a47436a70e24',
+                                              'source_commit': '7addc15b11b4ed594b36a9edd288f1de27899e45'},
+ 'reproduce/metro-enc4-review/README.md': {'bytes': 1106,
+                                           'sha256': '6eb0038d5fbe3b0cb38638ae7a0284bcadbd9f114e4ca9a17cdff4735b82758e',
+                                           'git_blob': 'b0dd1e2fb212d367ed11c47e4e8a096c2b4ff9dc',
+                                           'source_commit': '7addc15b11b4ed594b36a9edd288f1de27899e45'},
+ 'reproduce/metro-enc4-review/verify.py': {'bytes': 10354,
+                                           'sha256': 'd62551b675a3b2f48658c38a520fcf0373438392072e8adfded39fdca1a4bb2d',
+                                           'git_blob': 'bb40f24fbaa09ab55c66d83da79072d31c61a663',
+                                           'source_commit': '7addc15b11b4ed594b36a9edd288f1de27899e45'}}
+
+V112_TABLE_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'COMPLETE-STATE-OBSERVATION-CONTRACT',
+                   'status': 'T',
+                   'scope': 'At L1, over an effective field with fixed finite coordinate order, the '
+                            'first-nonzero field section with its retained scalar and dimension-tagged zero '
+                            'is lossless; retaining all additional complete-state context transports every '
+                            'permitted deterministic transition, inverse and observation by exact conjugacy, '
+                            'without assuming homogeneity. Output factorization is equivalent to constancy '
+                            'on declared fibres; a quotient-state transition requires transition congruence, '
+                            'while history-only equivalence means equality of every admitted future output. '
+                            'In Q(zeta_5), the optional primitive integral section follows under the three '
+                            'named existing arithmetic premises. On a fixed nonzero-reference slice (a,b), '
+                            'its K-ray is injective, and each embedded rank-one projector has the displayed '
+                            'exact inverse and two-sided budget-controlled metric bounds. The admitted '
+                            'signed H3 preparation gives an exact three-tick failure of the specifically '
+                            'declared ray-only continuation. No local archive or account list is thereby a '
+                            'complete field; no native decoding circuit, physical gauge, occurrence law, '
+                            'calibration or cross-layer equivalence is supplied.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'An admitted effective-field vector, complete-state transition or '
+                                'fixed-reference pair violating a displayed reconstruction, section, '
+                                'conjugacy, factor criterion or projector identity/bound; a violation of the '
+                                'explicit native signed three-tick witness under its defined preparation and '
+                                'quotient. Changed reference slices, missing state variables, history-only '
+                                'claims substituted for state congruence, or physical interpretations are '
+                                'outside scope.'},
+                  {'claim_id': 'H3-FUNDED-LONGWAVE-SECTOR',
+                   'status': 'T',
+                   'scope': 'At L1 for the fully defined integer H3 law on the even torus nx=2N, ny=2, with '
+                            'even N and N > 2 max_(l in S)|l| for the prescribed common finite Fourier '
+                            'support S (maximum zero when S is empty) and only row-zero CORR nonzero, '
+                            'matter-zero invariance makes B inactive under the unchanged law. Its admitted '
+                            'two-tick Laurent symbol is unitary at both embeddings, with Hermitian generator '
+                            'G and squared speeds (5+sqrt(5))/8 and (5-sqrt(5))/8. For supplied '
+                            'two-embedding finite-Fourier initial data, positive integer D, horizon '
+                            'Ttime>=0, and integer H>=10 floor(Ttime N/5), the specified integer preparation '
+                            'at scale A=D 2^H is admitted through H; its fixed ten-tick reader has joint L2 '
+                            'error at most 4/D+(Ttime/N)||Psi0 second derivative||, including full-mode '
+                            'rounding error, and complete stock Q=N A^2||Z||_N^2. The inherited first-order '
+                            'initial-velocity condition, finite paid horizon and exponentially growing '
+                            'resource scale of this construction are retained. Matter-zero 2D transport is a '
+                            'product of axis walks, not isotropic propagation. The displayed X_A,Y_A coupled '
+                            'preparations rule out a common unrestricted normalized continuity modulus. No '
+                            'native preparer/detector, interacting general limit, optimal cost, physical '
+                            'speed, action/SI/qIKA or embedding selection follows.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'A legal state or specified prepared finite-band family violating sector '
+                                'invariance, the exact symbol/Gram/generator identities, the full-horizon '
+                                'admission, the declared joint state-error or stock formula, or the '
+                                'displayed guard-discontinuity counterexample; arbitrary wave velocities, '
+                                'different guard classes and physical identifications are outside scope.'},
+                  {'claim_id': 'H3-FINITE-REFERENCED-RECORD',
+                   'status': 'C',
+                   'scope': 'At L1 for the literal six fixed H3 histories with nx=8, ny in {4,6}, the named '
+                            'row-and-rail-matched ABSENT_ROW0/PLUS/MINUS preparations, initial phase zero '
+                            'and horizon 14: 174 full/post-C cuts and 84 full transitions preserve the '
+                            'complete global accounts and exact inverse; the actual reference CORR(4,ny-1)=8 '
+                            'rho^4 remains fixed through cut 14 and contributes q=128 exactly once to total '
+                            'Q=27392. The actual archive CORR(2,ny-1) is stationary at both stages of cuts '
+                            '4..13 and its fixed trace reader returns 0,+1,-1 with q values 128,313,73. At '
+                            'cut 14 the signed q values are both 163 and reader values 1/6,-1/2, ending the '
+                            'hold. Whole-field field-chart-plus-scalar encodings retain phase/context, '
+                            'reconstruct every coordinate/account and carry exact native continuation; '
+                            'anchored pair charts preserve the stated outputs but do not replace the whole '
+                            'field. No permanence, ny=6 all-time absence, source preparation mechanism, '
+                            'native trace circuit, arbitrary renewal, coupled continuum or physical '
+                            'interpretation is asserted.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'reproduce/h3-referenced-record',
+                   'falsifier': 'An exact contradiction of a stated field, event, inverse, reconstruction, '
+                                'account, reference, hold/unlock, reader or projector assertion on one of '
+                                'the six declared histories rejects the corresponding finite claim. A '
+                                'timeout, nonzero exit, stderr, custody failure or stdout-byte mismatch '
+                                'prevents reproduction acceptance and remains STOP unless it exhibits such a '
+                                'mathematical contradiction. An untested geometry, horizon, input, active '
+                                'reader or physical interpretation is outside scope.'},
+                  {'claim_id': 'METRO-ENC4-TRANSLATED-BOX',
+                   'status': 'T',
+                   'scope': 'At L5 for every finite deterministic digit-word tuple with q>=2, a>=2, r>=1, '
+                            'nonempty allowed starts A0, rational nonnegative r-vector readout, commuting '
+                            'distinct-coordinate digit actions, ordered input/output bases and one common '
+                            'ENC4 convention: the finite rational aligned-limit set G decides uniform '
+                            'translated-box raw convergence exactly by singleton G and tagged aggregate '
+                            'convergence exactly by an identically zero stream or zero-free G with one '
+                            'common normalized direction. A finite exact joint certificate is terminating, '
+                            'sound, complete and decision-coherent, includes observable '
+                            'quotient/primary/peripheral/Jordan/boundary/residue data and rejection '
+                            'witnesses, and yields an effective modulus uniform in all translations and '
+                            'allowed starts. Relabeling, reachable restriction, congruence-checked Nerode '
+                            'quotient, transported coordinate permutation, common Pre_blk blocking and '
+                            'initialized MSD blocking preserve the decision and terminal. No completeness '
+                            'classification of all stream-equivalent tuples, outside-ENC4 convention, '
+                            'physical units or occurrence law is asserted.',
+                   'canon_section': '15. Couplings, instruments, and metrology',
+                   'evidence': 'inline',
+                   'falsifier': 'An admitted exact counterexample to the aligned-limit construction, '
+                                'zero-family lemma, finite certificate soundness/completeness/coherence, '
+                                'translated-box modulus, or decision/terminal invariance under an admitted '
+                                'reduction. A finite-audit integrity failure without an exact mathematical '
+                                'negation is STOP.'},
+                  {'claim_id': 'METRO-ENC4-NORMALIZATION',
+                   'status': 'D',
+                   'scope': 'The explicitly adopted dimensionless L5-to-L6 tagged aggregate contract on '
+                            'precisely the common ENC4 domain of METRO-ENC4-TRANSLATED-BOX: first average '
+                            'the complete rational nonnegative raw stream over each translated box, then '
+                            'apply total Normalize, returning ZERO at zero mass or its probability vector '
+                            'otherwise. The exact theorem supplies INADMISSIBLE or the unique uniform '
+                            'ADMISSIBLE(L) and effective modulus. RAW convergence is a separate diagnostic, '
+                            'not an additional admission requirement; no pointwise-before-average '
+                            'normalization, physical unit or occurrence law is selected.',
+                   'canon_section': '15. Couplings, instruments, and metrology',
+                   'evidence': 'inline',
+                   'falsifier': 'An exact discrepancy with the declared ZERO/probability tag, normalized box '
+                                'mean or accepted terminal under the adopted formula and exact common ENC4 '
+                                'scope.'}],
+ 'NORMATIVE.tsv': [{'item_id': 'COMPLETE-STATE-OBSERVATION-CONTRACT',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'COMPLETE-STATE-OBSERVATION-CONTRACT',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::COMPLETE-STATE-OBSERVATION-CONTRACT'},
+                   {'item_id': 'H3-FUNDED-LONGWAVE-SECTOR',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'H3-FUNDED-LONGWAVE-SECTOR',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::H3-FUNDED-LONGWAVE-SECTOR'},
+                   {'item_id': 'H3-FINITE-REFERENCED-RECORD',
+                    'item_type': 'COMPUTATION',
+                    'claim_id': 'H3-FINITE-REFERENCED-RECORD',
+                    'status': 'C',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::H3-FINITE-REFERENCED-RECORD'},
+                   {'item_id': 'METRO-ENC4-TRANSLATED-BOX',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'METRO-ENC4-TRANSLATED-BOX',
+                    'status': 'T',
+                    'layer': 'L5',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::METRO-ENC4-TRANSLATED-BOX'},
+                   {'item_id': 'METRO-ENC4-NORMALIZATION',
+                    'item_type': 'DICTIONARY',
+                    'claim_id': 'METRO-ENC4-NORMALIZATION',
+                    'status': 'D',
+                    'layer': 'L6',
+                    'gate_ids': 'GATE-L5-L6-METRO-ENC4-NORMALIZATION',
+                    'statement_source': 'canon/CANON.md::METRO-ENC4-NORMALIZATION'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'COMPLETE-STATE-OBSERVATION-CONTRACT',
+                   'evidence_id': 'EV-COMPLETE-STATE-OBSERVATION-CONTRACT',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '7215aa2efbb135b84b5be297cc16ad1c2ff583523a97d2f46bbc67492c1b3754',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'H3-FUNDED-LONGWAVE-SECTOR',
+                   'evidence_id': 'EV-H3-FUNDED-LONGWAVE-SECTOR',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '17bc6219e15a48032a6e31decd175e372ce9117c5a5461f6e761c5dc4c760ff1',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'H3-FINITE-REFERENCED-RECORD',
+                   'evidence_id': 'EV-H3-FINITE-REFERENCED-RECORD',
+                   'evidence_kind': 'REPRODUCTION',
+                   'location': 'reproduce/h3-referenced-record',
+                   'sha256': '58f315117882f7caf1afda8805dc83704e075e872a3431b563ff3fe767395253',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'METRO-ENC4-TRANSLATED-BOX',
+                   'evidence_id': 'EV-METRO-ENC4-TRANSLATED-BOX',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '7aba820afbced96a964c630bb6342d820f23a3fd1f7c4f62ffd9790d4a4e88d1',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'METRO-ENC4-NORMALIZATION',
+                   'evidence_id': 'EV-METRO-ENC4-NORMALIZATION',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '3ea8f67765396f52726a90e12c96ed65b2a437e6146973e57168234f5ca720f5',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'COMPLETE-STATE-OBSERVATION-CONTRACT',
+                       'depends_on': 'CYCLOTOMIC-CLASS-NUMBER-ONE',
+                       'relation': 'REQUIRES',
+                       'basis': 'Optional primitive integral section only; the field chart, generic '
+                                'conjugacy and fixed-reference proof are independent of this arithmetic '
+                                'premise.'},
+                      {'item_id': 'COMPLETE-STATE-OBSERVATION-CONTRACT',
+                       'depends_on': 'J-HARMONIC-SEAM',
+                       'relation': 'REQUIRES',
+                       'basis': 'Optional primitive integral section only; the field chart, generic '
+                                'conjugacy and fixed-reference proof are independent of this arithmetic '
+                                'premise.'},
+                      {'item_id': 'COMPLETE-STATE-OBSERVATION-CONTRACT',
+                       'depends_on': 'J-UNIT-STRIP-NORMAL-FORM',
+                       'relation': 'REQUIRES',
+                       'basis': 'Optional primitive integral section only; the field chart, generic '
+                                'conjugacy and fixed-reference proof are independent of this arithmetic '
+                                'premise.'},
+                      {'item_id': 'H3-FINITE-REFERENCED-RECORD',
+                       'depends_on': 'COMPLETE-STATE-OBSERVATION-CONTRACT',
+                       'relation': 'REQUIRES',
+                       'basis': 'Field-chart reconstruction, exact complete-state conjugacy and '
+                                'fixed-reference projector identities used by the finite audit; no primitive '
+                                'integral section implementation is required.'},
+                      {'item_id': 'METRO-ENC4-TRANSLATED-BOX',
+                       'depends_on': 'DEF-ARCHITECTURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The typed U_RF finite digit-word carrier and declared pointwise L5 stream '
+                                'semantics.'},
+                      {'item_id': 'METRO-ENC4-TRANSLATED-BOX',
+                       'depends_on': 'METRO-COMMON-BLOCKING',
+                       'relation': 'REQUIRES',
+                       'basis': 'The already proved pointwise stream transport for common Pre_blk blocking '
+                                'and initialized MSD augmentation; the other four arrow transports are '
+                                'proved directly here, without relying on their C-grade censuses.'},
+                      {'item_id': 'METRO-ENC4-NORMALIZATION',
+                       'depends_on': 'METRO-ENC4-TRANSLATED-BOX',
+                       'relation': 'REQUIRES',
+                       'basis': 'The exact common ENC4 decision, total tagged result and uniform effective '
+                                'modulus provide the mathematical source of this adopted L5-to-L6 '
+                                'dictionary.'},
+                      {'item_id': 'METRO-ENC4-NORMALIZATION',
+                       'depends_on': 'DEF-ACTION-LAYERS',
+                       'relation': 'REQUIRES',
+                       'basis': 'The complete raw L5 stream and dimensionless tagged L6 endpoint retain '
+                                'their distinct protocol types.'},
+                      {'item_id': 'METRO-ADMISSIBILITY-DIM',
+                       'depends_on': 'METRO-ENC4-TRANSLATED-BOX',
+                       'relation': 'BOUNDED_BY',
+                       'basis': 'The exact common ENC4 theorem delimits the discharged subdomain C_ENC4; the '
+                                'open obligation retains only C_dim minus that subdomain and keeps the full '
+                                'C_dim for R1/R6 ownership.'}],
+ 'HISTORY.tsv': [{'event_id': 'CANON112-DECLARE-COMPLETE-STATE-OBSERVATION-CONTRACT',
+                  'event_sequence': '1',
+                  'event_date': '2026-11-16',
+                  'release': 'canon-v112',
+                  'claim_id': 'COMPLETE-STATE-OBSERVATION-CONTRACT',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '7215aa2efbb135b84b5be297cc16ad1c2ff583523a97d2f46bbc67492c1b3754',
+                  'evidence_id': 'EV-COMPLETE-STATE-OBSERVATION-CONTRACT',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '7215aa2efbb135b84b5be297cc16ad1c2ff583523a97d2f46bbc67492c1b3754',
+                  'rationale': 'Adopt the complete displayed mathematical contract and proof at its exact '
+                               'scope.'},
+                 {'event_id': 'CANON112-DECLARE-H3-FUNDED-LONGWAVE-SECTOR',
+                  'event_sequence': '1',
+                  'event_date': '2026-11-16',
+                  'release': 'canon-v112',
+                  'claim_id': 'H3-FUNDED-LONGWAVE-SECTOR',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '17bc6219e15a48032a6e31decd175e372ce9117c5a5461f6e761c5dc4c760ff1',
+                  'evidence_id': 'EV-H3-FUNDED-LONGWAVE-SECTOR',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '17bc6219e15a48032a6e31decd175e372ce9117c5a5461f6e761c5dc4c760ff1',
+                  'rationale': 'Adopt the complete displayed mathematical contract and proof at its exact '
+                               'scope.'},
+                 {'event_id': 'CANON112-DECLARE-H3-FINITE-REFERENCED-RECORD',
+                  'event_sequence': '1',
+                  'event_date': '2026-11-16',
+                  'release': 'canon-v112',
+                  'claim_id': 'H3-FINITE-REFERENCED-RECORD',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'C',
+                  'scope_sha256': '5143d842147bb8f4f9d7c67d8cd0cf928c269451ec37842c44d19d1db535ff42',
+                  'evidence_id': 'EV-H3-FINITE-REFERENCED-RECORD',
+                  'evidence_location': 'reproduce/h3-referenced-record',
+                  'evidence_sha256': '58f315117882f7caf1afda8805dc83704e075e872a3431b563ff3fe767395253',
+                  'rationale': 'Retain finite computation status for the publicly frozen complete-field '
+                               'reproduction; no infinite-time or physical lift.'},
+                 {'event_id': 'CANON112-DECLARE-METRO-ENC4-TRANSLATED-BOX',
+                  'event_sequence': '1',
+                  'event_date': '2026-11-16',
+                  'release': 'canon-v112',
+                  'claim_id': 'METRO-ENC4-TRANSLATED-BOX',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '7aba820afbced96a964c630bb6342d820f23a3fd1f7c4f62ffd9790d4a4e88d1',
+                  'evidence_id': 'EV-METRO-ENC4-TRANSLATED-BOX',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '7aba820afbced96a964c630bb6342d820f23a3fd1f7c4f62ffd9790d4a4e88d1',
+                  'rationale': 'Adopt the complete displayed mathematical contract and proof at its exact '
+                               'scope.'},
+                 {'event_id': 'CANON112-DECLARE-METRO-ENC4-NORMALIZATION',
+                  'event_sequence': '1',
+                  'event_date': '2026-11-16',
+                  'release': 'canon-v112',
+                  'claim_id': 'METRO-ENC4-NORMALIZATION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'D',
+                  'scope_sha256': '3ea8f67765396f52726a90e12c96ed65b2a437e6146973e57168234f5ca720f5',
+                  'evidence_id': 'EV-METRO-ENC4-NORMALIZATION',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '3ea8f67765396f52726a90e12c96ed65b2a437e6146973e57168234f5ca720f5',
+                  'rationale': 'Adopt the specified common ENC4 aggregate normalization; no occurrence or '
+                               'unit law.'},
+                 {'event_id': 'CANON112-SCOPE-METRO-ADMISSIBILITY-DIM',
+                  'event_sequence': '2',
+                  'event_date': '2026-11-16',
+                  'release': 'canon-v112',
+                  'claim_id': 'METRO-ADMISSIBILITY-DIM',
+                  'event_type': 'SCOPE_CHANGE',
+                  'previous_status': 'O',
+                  'new_status': 'O',
+                  'scope_sha256': '0816bf68f1d9ce9049ea7c102296eb259e103336d098577af63ee9cbb6fdd69d',
+                  'evidence_id': 'EV-METRO-ADMISSIBILITY-DIM',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '0816bf68f1d9ce9049ea7c102296eb259e103336d098577af63ee9cbb6fdd69d',
+                  'rationale': 'Remove only the explicitly proved and adopted common ENC4 child from the '
+                               'residual debt; preserve the full dimensional domain in R1 and all '
+                               'outside-ENC4 obligations.'},
+                 {'event_id': 'CANON112-CLARIFY-METRO-ADMISSIBILITY',
+                  'event_sequence': '15',
+                  'event_date': '2026-11-16',
+                  'release': 'canon-v112',
+                  'claim_id': 'METRO-ADMISSIBILITY',
+                  'event_type': 'SCOPE_CHANGE',
+                  'previous_status': 'O',
+                  'new_status': 'O',
+                  'scope_sha256': '61e60ebdee322f73e49046a3f07b2e28722d44a87d1b49a653f4547e64a6c24e',
+                  'evidence_id': 'EV-METRO-ADMISSIBILITY',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '61e60ebdee322f73e49046a3f07b2e28722d44a87d1b49a653f4547e64a6c24e',
+                  'rationale': 'Clarify that R1 remains the complement of the full original dimensional '
+                               'class including common ENC4; the parent residual domain and status do not '
+                               'change.'}],
+ 'GATES.tsv': [{'gate_id': 'GATE-L5-L6-METRO-ENC4-NORMALIZATION',
+                'owner_item_id': 'METRO-ENC4-NORMALIZATION',
+                'from_layer': 'L5',
+                'to_layer': 'L6',
+                'gate_kind': 'DICTIONARY_LIFT',
+                'decision_condition': 'closed at D by adopting A_R=Normalize(sum_(n in R) '
+                                      'W5(state(s,n))/|R|) on precisely the common ENC4 class of '
+                                      'METRO-ENC4-TRANSLATED-BOX, with ZERO at zero mass and one division by '
+                                      'total mass after box averaging otherwise; the proved finite joint '
+                                      'certificate returns INADMISSIBLE or the unique uniform ADMISSIBLE(L) '
+                                      'with an effective modulus; RAW is a separate diagnostic and no '
+                                      'physical unit or occurrence law is adopted'}]}
+
+V112_TABLE_REPLACEMENTS = {'REGISTRY.tsv': [{'claim_id': 'METRO-ADMISSIBILITY',
+                   'status': 'O',
+                   'scope': 'the exhaustive residual cover R1 through R8 of the registered METRO universe: '
+                            'R1=U_RF minus the full original commuting higher-rank dimensional class C_dim, '
+                            'including the adopted common ENC4 part and the remaining '
+                            'METRO-ADMISSIBILITY-DIM portion; R1 includes rank-one, noncommuting, and '
+                            'otherwise out-of-child finite rational protocols; plus non-finite-state, '
+                            'unbounded-memory adaptive, non-reducible stochastic, irrational, out-of-child '
+                            'cross-layer, physical-unit, and mixed-class protocols',
+                   'canon_section': '15. Couplings, instruments, and metrology',
+                   'evidence': 'inline',
+                   'falsifier': 'STOP until R1 through R8 each has a typed child and decision condition; '
+                                'closes only when all eight children close; METRO-FINITE-STATE-RATIONALITY '
+                                'proves conditional rationality inside only part of R1 and does not close '
+                                'it'},
+                  {'claim_id': 'METRO-ADMISSIBILITY-DIM',
+                   'status': 'O',
+                   'scope': 'The remaining outside-common-ENC4 portion C_dim\\C_ENC4 of the original full '
+                            'dimensional class C_dim: finite N^a-indexed commuting digit-word systems over Q '
+                            'with q>=2, a>=2, r>=1, finite carrier, nonempty allowed starts, fixed digit and '
+                            'padding convention, complete rational nonnegative raw L5 stream, total tagged '
+                            'L6 normalization and uniform translated-box convergence with an effective '
+                            'modulus. C_ENC4 is exactly the common MSD-E0/MSD-Z0/LSD-E0/LSD-Z0 subdomain '
+                            'admitted by METRO-ENC4-TRANSLATED-BOX and METRO-ENC4-NORMALIZATION. The '
+                            'remaining independent joint certificate must cover individual digits, invariant '
+                            'submodule, allowed-start observable quotient, '
+                            'primary/peripheral/Jordan/boundary/residue data and exact terminal, and be '
+                            'terminating, sound, complete, coherent and invariant under admitted reductions. '
+                            'C_dim remains the full union, including C_ENC4, for residual R1 and R6 '
+                            'ownership.',
+                   'canon_section': '15. Couplings, instruments, and metrology',
+                   'evidence': 'inline',
+                   'falsifier': 'Closes positively only when the complete remaining C_dim\\C_ENC4 class has '
+                                'the fully typed direct decision and total normalization, terminating sound '
+                                'complete coherent independent joint certificate, effective uniform '
+                                'translated-box modulus, and decision/terminal invariance under every '
+                                'admitted reduction. Closes negatively on an exact admitted counterexample '
+                                'to these clauses in that residual class; otherwise STOP. The adopted ENC4 '
+                                'child does not close the remaining encoding obligation or '
+                                'METRO-REDUCTION-CALCULUS.'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'METRO-ADMISSIBILITY',
+                   'evidence_id': 'EV-METRO-ADMISSIBILITY',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '61e60ebdee322f73e49046a3f07b2e28722d44a87d1b49a653f4547e64a6c24e',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'METRO-ADMISSIBILITY-DIM',
+                   'evidence_id': 'EV-METRO-ADMISSIBILITY-DIM',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '0816bf68f1d9ce9049ea7c102296eb259e103336d098577af63ee9cbb6fdd69d',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'METRO-ADMISSIBILITY',
+                       'depends_on': 'METRO-REDUCTION-CALCULUS',
+                       'relation': 'REQUIRES',
+                       'basis': 'the exhaustive residual class R1 is U_RF minus the full original '
+                                'dimensional class C_dim, including the adopted common ENC4 part and '
+                                'remaining outside-ENC4 part, and requires the exact U_RF protocol type'}],
+ 'GATES.tsv': [{'gate_id': 'GATE-L5-L6-METRO-NORMALIZATION',
+                'owner_item_id': 'METRO-ADMISSIBILITY-DIM',
+                'from_layer': 'L5',
+                'to_layer': 'L6',
+                'gate_kind': 'OPEN_LIFT',
+                'decision_condition': 'OPEN_LIFT for C_dim\\C_ENC4 only: closes when the complete residual '
+                                      'raw L5 stream and total tagged L6 normalization, uniform '
+                                      'translated-box decision with effective modulus, and independent joint '
+                                      'certificate are exactly typed and the certificate is terminating, '
+                                      'sound, complete, coherent and invariant under every admitted '
+                                      'reduction; otherwise STOP or an exact residual admitted '
+                                      'counterexample routes negative; the common ENC4 lift is owned '
+                                      'separately by GATE-L5-L6-METRO-ENC4-NORMALIZATION'}]}
+
+V112_PROOF_SECTIONS = {'COMPLETE-STATE-OBSERVATION-CONTRACT': (b'\n### Exact state representations, reference slices and native co'
+                                         b'ntinuation\n',
+                                         b'\n### Native law, full accounts and a funded long-wave sector\n',
+                                         'ccb1df655a4d4134536cedcc5f4c5785f2ca178c8d5de1a2b61c3d182348bc9e'),
+ 'H3-FUNDED-LONGWAVE-SECTOR': (b'\n### Native law, full accounts and a funded long-wave sector\n',
+                               b'\n### A finite native record with a counted fixed reference\n',
+                               '4bd1883449887353edbcfd381ca18c71dffbbbaae2f03b3a8a6b1b42db1ae637'),
+ 'H3-FINITE-REFERENCED-RECORD': (b'\n### A finite native record with a counted fixed reference\n',
+                                 b'\n## 3. The kernel and the census\n',
+                                 'ae22f069f79082a4a942de0f8e4dd086f04627c43cd60f5176fcd7a397a603cf'),
+ 'METRO-ENC4-TRANSLATED-BOX': (b'\n### METRO-ENC4-TRANSLATED-BOX [T]\n',
+                               b'\n### METRO-ENC4-NORMALIZATION [D]\n',
+                               'c9686fcbb467620ffe3509edbe40e23e9922e0e7c68b0cb9ce02b92250e5c6b3'),
+ 'METRO-ENC4-NORMALIZATION': (b'\n### METRO-ENC4-NORMALIZATION [D]\n',
+                              b'\n### Remaining dimensional metrology obligation\n',
+                              'fa9f8c98520ffdc40e2f9f1878ba1a2a7c013db6fcb31d3df273a705d03c5f26')}
+
+V112_FRONTIER_SECTION = (b'\n## 18. The frontier\n',
+ b'\n## 19. Verification and the registry\n',
+ '69698c1bc76c0422b0e7415d958a2ddc097b47e245ef032cfddd240a166f7d8c')
+
+V112_NEW_STATUSES = {'COMPLETE-STATE-OBSERVATION-CONTRACT': 'T',
+ 'H3-FUNDED-LONGWAVE-SECTOR': 'T',
+ 'H3-FINITE-REFERENCED-RECORD': 'C',
+ 'METRO-ENC4-TRANSLATED-BOX': 'T',
+ 'METRO-ENC4-NORMALIZATION': 'D'}
+
+V112_STATUS_PARTITION = {'T': 478, 'D': 60, 'C': 43, 'H': 2, 'O': 24, 'F': 19}
+
+V112_STATUS_ITEM_TYPES = {'T': 'THEOREM', 'C': 'COMPUTATION', 'D': 'DICTIONARY'}
+
+V112_CORE_SELECTION = [{'rank': '1', 'claim_id': 'J-STEP'},
+ {'rank': '2', 'claim_id': 'J-PROJECTIONS'},
+ {'rank': '3', 'claim_id': 'READING-SPLIT'},
+ {'rank': '4', 'claim_id': 'J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE'},
+ {'rank': '5', 'claim_id': 'RELATIVE-CONTACT-INTEGRAL-LAW'},
+ {'rank': '6', 'claim_id': 'COHERENT-W-LOCALIZED-RING-CLOSURE'},
+ {'rank': '7', 'claim_id': 'PLENUM-PREPARED-PERMANENT-RECORD'},
+ {'rank': '8', 'claim_id': 'COMPLETE-STATE-OBSERVATION-CONTRACT'},
+ {'rank': '9', 'claim_id': 'H3-FUNDED-LONGWAVE-SECTOR'},
+ {'rank': '10', 'claim_id': 'H3-FINITE-REFERENCED-RECORD'},
+ {'rank': '11', 'claim_id': 'METRO-ENC4-TRANSLATED-BOX'},
+ {'rank': '12', 'claim_id': 'METRO-ENC4-NORMALIZATION'}]
+
+V112_METRICS = {'claims': '626',
+ 'status_T-LOCK': '0',
+ 'status_T': '478',
+ 'status_D': '60',
+ 'status_C': '43',
+ 'status_H': '2',
+ 'status_O': '24',
+ 'status_F': '19',
+ 'live_H_O': '26',
+ 'reproductions': '43',
+ 'evidence_none': '202',
+ 'evidence_one-architecture': '9',
+ 'evidence_recorded-audit': '31',
+ 'evidence_two-architecture': '384'}
+
+V112_CHECKS = [('V112-PRIOR-BYTES',
+  'thirteen exact v112 Canon inputs and one metadata-test inverse reconstruct public v111 before all 232 '
+  'historical guards'),
+ ('V112-CLAIM-LEDGERS',
+  'all 621 prior identifiers and statuses remain, two METRO scope rows change explicitly, and five new rows '
+  'and seven events are exact'),
+ ('V112-DEPENDENCIES',
+  'the R1 basis clarification and only the declared new edges change the premise ledger; no theorem requires '
+  'a computational or open premise'),
+ ('V112-OPEN-BOUNDARY',
+  'all 26 live owners and ten roots remain, with the residual METRO lift open and the separate ENC4 '
+  'normalization adopted at D'),
+ ('V112-PROOF-SCOPE',
+  'the five byte-pinned statements preserve complete-state hypotheses, funded finite-time bounds, the finite '
+  'H3 record and the common ENC4 domain'),
+ ('V112-EVIDENCE',
+  'four new inline rows and both scoped METRO rows match scope hashes; finite H3 evidence binds the exact '
+  'three-file two-architecture bundle'),
+ ('V112-PRESENTATION',
+  'the twelve Core selections are exact and section 18 retains all twelve normative owners and the full '
+  'rapidity evaluation obligation'),
+ ('V112-SOURCE-CUSTODY',
+  'the accepted public ENC4, H3 and intake files retain exact bytes, SHA-256 and Git blob identities'),
+ ('V112-REPRO-INVENTORY',
+  'the exact 43-directory inventory restores the historical 41 after validating both supplements; no '
+  'scientific verifier is imported or executed')]
+
+V112_SCOPE_CHANGES = frozenset(('METRO-ADMISSIBILITY', 'METRO-ADMISSIBILITY-DIM'))
+V112_ADDED_REPRODUCTIONS = frozenset(('h3-referenced-record', 'metro-enc4-review'))
+V112_STANDALONE_SOURCES = frozenset(('notes/canon/METRO-ENC4-CLOSURE-2026-11-13.md',
+ 'notes/canon/METRO-ENC4-REVIEW-RESPONSE-2026-11-13.md'))
+
+
+# Exact v112 custody and reversible v111 input reconstruction.
+# This structural adapter reads bytes only and executes no scientific verifier.
+@lru_cache(maxsize=1)
+def v112_current_snapshot():
+    canon, tooling, sources = {}, {}, {}
+    try:
+        for relative, contract in V112_INPUT_PATCH.items():
+            path = ROOT / relative
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            if (len(content) != contract['current_bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
+                return None
+            target = canon if path.parent == ROOT / 'canon' else tooling
+            target[relative] = content
+        if any(path.is_symlink() for path in REPRODUCE.iterdir()):
+            return None
+        inventory = frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+        if inventory != frozenset(V111_REPRODUCTIONS) | V112_ADDED_REPRODUCTIONS:
+            return None
+        for directory, expected in V112_SOURCE_INVENTORIES.items():
+            base = ROOT / directory
+            if not base.is_dir() or base.is_symlink():
+                return None
+            actual = set()
+            for path in base.rglob('*'):
+                if path.is_symlink():
+                    return None
+                if path.is_file() and '__pycache__' not in path.parts and path.suffix != '.pyc':
+                    actual.add(path.relative_to(ROOT).as_posix())
+            if actual != set(expected):
+                return None
+        for relative, contract in V112_SOURCE_FILES.items():
+            path = ROOT / relative
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            blob = hashlib.sha1(b'blob ' + str(len(content)).encode('ascii')
+                                + b'\0' + content).hexdigest()
+            if (len(content) != contract['bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['sha256']
+                    or blob != contract['git_blob']):
+                return None
+            sources[relative] = content
+    except OSError:
+        return None
+    return {'canon': canon, 'tooling': tooling, 'sources': sources, 'reproductions': inventory}
+
+
+@lru_cache(maxsize=14)
+def v112_previous_bytes(path):
+    """Reconstruct an exact historical input only from the complete validated v112 snapshot."""
+    if path.parent != ROOT / 'canon':
+        return None
+    relative = path.relative_to(ROOT).as_posix()
+    if relative not in V112_INPUT_PATCH:
+        return None
+    snapshot = v112_current_snapshot()
+    if snapshot is None:
+        return None
+    return v111_restore_bytes(snapshot['canon'][relative], V112_INPUT_PATCH[relative])
+
+
+def v112_previous_source_bytes(relative):
+    """Provide only the named historical tooling input."""
+    if relative != V112_METADATA_TEST:
+        return None
+    snapshot = v112_current_snapshot()
+    if snapshot is None:
+        return None
+    return v111_restore_bytes(snapshot['tooling'][relative], V112_INPUT_PATCH[relative])
+
+
+def v112_previous_reproduction_dirs():
+    snapshot = v112_current_snapshot()
+    if snapshot is None:
+        return None
+    return snapshot['reproductions'] - V112_ADDED_REPRODUCTIONS
+
+
+def v112_rows_by_id(rows, key):
+    return {row[key]: row for row in rows}
+
+
+def v112_exact_delta(name, old_rows, rows, keys):
+    """Verify ordered retention, explicitly listed replacements, and exact appended rows."""
+    replacements = {
+        tuple(row[key] for key in keys): row for row in V112_TABLE_REPLACEMENTS.get(name, ())
+    }
+    old_ids = {tuple(row[key] for key in keys) for row in old_rows}
+    expected = [
+        replacements.get(tuple(row[key] for key in keys), row) for row in old_rows
+    ]
+    return replacements.keys() <= old_ids and rows == expected + V112_TABLE_ADDITIONS.get(name, [])
+
+
+def v112_scope_hash(row):
+    return hashlib.sha256(row['scope'].encode('utf-8')).hexdigest()
+
+
+def v112_exact_section(canon, contract):
+    start, end, digest = contract
+    if canon.count(start) != 1 or canon.count(end) != 1:
+        return False
+    first = canon.index(start)
+    last = canon.index(end)
+    return first < last and hashlib.sha256(canon[first:last]).hexdigest() == digest
+
+
+def v112_current_checks():
+    failed = [(tag, description, False) for tag, description in V112_CHECKS]
+    snapshot = v112_current_snapshot()
+    if snapshot is None:
+        return failed
+    prior_bytes = {
+        name: v112_previous_bytes(ROOT / 'canon' / name) for name in V111_INPUT_PATCH
+    }
+    tool_before = v112_previous_source_bytes(V112_METADATA_TEST)
+    if tool_before is None or any(content is None for content in prior_bytes.values()):
+        return failed
+    exact_prior = (
+        len(prior_bytes) == 13
+        and all(len(content) == V111_INPUT_PATCH[name]['current_bytes']
+                and hashlib.sha256(content).hexdigest() == V111_INPUT_PATCH[name]['current_sha256']
+                for name, content in prior_bytes.items())
+        and len(tool_before) == V111_TOOL_PATCH[V112_METADATA_TEST]['current_bytes']
+        and hashlib.sha256(tool_before).hexdigest()
+            == V111_TOOL_PATCH[V112_METADATA_TEST]['current_sha256'])
+    try:
+        names = tuple(name for name in prior_bytes if name.endswith('.tsv'))
+        prior = {name: v87_table_bytes(prior_bytes[name]) for name in names}
+        current = {
+            name: v87_table_bytes(snapshot['canon']['canon/' + name]) for name in names
+        }
+        old_index = v112_rows_by_id(prior['REGISTRY.tsv'], 'claim_id')
+        index = v112_rows_by_id(current['REGISTRY.tsv'], 'claim_id')
+        normative = v112_rows_by_id(current['NORMATIVE.tsv'], 'item_id')
+        evidence = v112_rows_by_id(current['EVIDENCE.tsv'], 'claim_id')
+        new_ids = set(V112_NEW_STATUSES)
+        scope_ids = V112_SCOPE_CHANGES
+        changed = new_ids | scope_ids
+
+        claims = (
+            len(old_index) == len(prior['REGISTRY.tsv']) == 621
+            and len(index) == len(current['REGISTRY.tsv']) == 626
+            and len(new_ids) == 5 and len(scope_ids) == 2
+            and not new_ids & old_index.keys()
+            and set(index) == set(old_index) | new_ids
+            and all(index[claim]['status'] == row['status'] for claim, row in old_index.items())
+            and sum(row['status'] == 'F' for row in old_index.values()) == 19
+            and {claim for claim in old_index
+                 if index[claim]['scope'] != old_index[claim]['scope']} == scope_ids
+            and v112_exact_delta('REGISTRY.tsv', prior['REGISTRY.tsv'],
+                                current['REGISTRY.tsv'], ('claim_id',))
+            and v112_exact_delta('NORMATIVE.tsv', prior['NORMATIVE.tsv'],
+                                current['NORMATIVE.tsv'], ('item_id',))
+            and all(index[claim]['status'] == status and normative[claim]['status'] == status
+                    and normative[claim]['item_type']
+                        == V112_STATUS_ITEM_TYPES[status]
+                    for claim, status in V112_NEW_STATUSES.items()))
+        history = current['HISTORY.tsv'][len(prior['HISTORY.tsv']):]
+        declarations = (
+            v112_exact_delta('HISTORY.tsv', prior['HISTORY.tsv'],
+                            current['HISTORY.tsv'], ('event_id',))
+            and len(history) == 7 and {row['claim_id'] for row in history} == changed
+            and all(
+                row['release'] == 'canon-v112'
+                and row['event_type'] == ('SCOPE_CHANGE' if claim in scope_ids else 'DECLARE')
+                and row['previous_status'] == ('O' if claim in scope_ids else '-')
+                and row['new_status'] == index[claim]['status']
+                and row['scope_sha256'] == v112_scope_hash(index[claim])
+                and row['evidence_id'] == evidence[claim]['evidence_id']
+                and row['evidence_location'] == evidence[claim]['location']
+                and row['evidence_sha256'] == evidence[claim]['sha256']
+                for row in history for claim in (row['claim_id'],)))
+        added_edges = current['DEPENDENCIES.tsv'][len(prior['DEPENDENCIES.tsv']):]
+        exact_dependencies = (
+            v112_exact_delta('DEPENDENCIES.tsv', prior['DEPENDENCIES.tsv'],
+                            current['DEPENDENCIES.tsv'], ('item_id', 'depends_on', 'relation'))
+            and all(
+                row['item_id'] in changed and row['depends_on'] in normative
+                and (row['relation'] != 'REQUIRES'
+                     or normative[row['item_id']]['status'] != 'T'
+                     or normative[row['depends_on']]['status'] in {'T', 'T-LOCK'}
+                     or normative[row['depends_on']]['item_type'] in {'AXIOM', 'DEFINITION'})
+                for row in added_edges))
+        old_live = {claim: row for claim, row in old_index.items() if row['status'] in {'H', 'O'}}
+        live = {claim: row for claim, row in index.items() if row['status'] in {'H', 'O'}}
+        roots = [row['claim_id'] for row in current['FRONTIER_PROGRAMS.tsv']
+                 if row['queue_role'] == 'ROOT']
+        counts = {status: sum(row['status'] == status for row in index.values())
+                  for status in {row['status'] for row in index.values()}}
+        metrics = {row['metric']: row['value'] for row in current['STATUS_COUNTS.tsv']}
+        gates = v112_rows_by_id(current['GATES.tsv'], 'gate_id')
+        exact_boundary = (
+            len(live) == 26 and live.keys() == old_live.keys()
+            and {claim for claim in live if live[claim] != old_live[claim]} == scope_ids
+            and len(roots) == len(set(roots)) == 10
+            and current['FRONTIER_PROGRAMS.tsv'] == prior['FRONTIER_PROGRAMS.tsv']
+            and v112_exact_delta('GATES.tsv', prior['GATES.tsv'], current['GATES.tsv'], ('gate_id',))
+            and gates['GATE-L5-L6-METRO-NORMALIZATION']['gate_kind'] == 'OPEN_LIFT'
+            and gates['GATE-L5-L6-METRO-NORMALIZATION']['owner_item_id'] == 'METRO-ADMISSIBILITY-DIM'
+            and gates['GATE-L5-L6-METRO-ENC4-NORMALIZATION']['gate_kind'] == 'DICTIONARY_LIFT'
+            and gates['GATE-L5-L6-METRO-ENC4-NORMALIZATION']['owner_item_id']
+                == 'METRO-ENC4-NORMALIZATION'
+            and counts == V112_STATUS_PARTITION and metrics == V112_METRICS)
+
+        canon = snapshot['canon']['canon/CANON.md']
+        exact_proofs = (
+            set(V112_PROOF_SECTIONS) == new_ids
+            and all(v112_exact_section(canon, contract) for contract in V112_PROOF_SECTIONS.values()))
+
+        h3_prefix = 'reproduce/h3-referenced-record/'
+        h3_paths = sorted(path for path in V112_SOURCE_INVENTORIES[h3_prefix[:-1]]
+                          if not path.startswith(h3_prefix + 'RUNS/'))
+        bundle_manifest = ''.join(
+            hashlib.sha256(snapshot['sources'][path]).hexdigest() + '  ' + path + '\n'
+            for path in h3_paths)
+        h3_evidence = evidence['H3-FINITE-REFERENCED-RECORD']
+        exact_evidence = (
+            v112_exact_delta('EVIDENCE.tsv', prior['EVIDENCE.tsv'],
+                            current['EVIDENCE.tsv'], ('claim_id',))
+            and set(h3_paths) == {h3_prefix + name for name in ('EXPECTED.txt', 'README.md', 'verify.py')}
+            and h3_evidence['evidence_kind'] == 'REPRODUCTION'
+            and h3_evidence['location'] == h3_prefix[:-1]
+            and h3_evidence['hash_mode'] == 'bundle-manifest-sha256-v1'
+            and h3_evidence['architecture_requirement'] == 'two-architecture'
+            and h3_evidence['sha256'] == hashlib.sha256(bundle_manifest.encode('utf-8')).hexdigest()
+            and all(evidence[claim]['evidence_kind'] == 'INLINE_CANON'
+                    and evidence[claim]['location'] == 'inline'
+                    and evidence[claim]['architecture_requirement'] == 'none'
+                    and evidence[claim]['hash_mode'] == 'registry-scope-sha256-v1'
+                    and evidence[claim]['sha256'] == v112_scope_hash(index[claim])
+                    for claim in changed - {'H3-FINITE-REFERENCED-RECORD'}))
+
+        frontier_owners = {
+            row['item_id'] for row in current['NORMATIVE.tsv']
+            if row['statement_source'] == 'canon/CANON.md::18. The frontier'
+        }
+        section = canon[canon.index(V112_FRONTIER_SECTION[0]):canon.index(V112_FRONTIER_SECTION[1])]
+        presentation = (
+            current['CORE_SELECTION.tsv'] == V112_CORE_SELECTION
+            and len(V112_CORE_SELECTION) == 12
+            and all(row['claim_id'] in index for row in current['CORE_SELECTION.tsv'])
+            and v112_exact_section(canon, V112_FRONTIER_SECTION)
+            and len(frontier_owners) == 12
+            and all(owner.encode('ascii') in section for owner in frontier_owners)
+            and 'TRIVIAL-RAPIDITY-EVALUATION-BRIDGE' in frontier_owners)
+        exact_sources = (
+            set(snapshot['sources']) == set(V112_SOURCE_FILES)
+            and set(V112_SOURCE_FILES) == V112_STANDALONE_SOURCES | set().union(
+                *V112_SOURCE_INVENTORIES.values())
+            and all(len(contract['source_commit']) == 40
+                    and set(contract['source_commit']) <= set('0123456789abcdef')
+                    for contract in V112_SOURCE_FILES.values()))
+        exact_inventory = (
+            len(snapshot['reproductions']) == 43
+            and v112_previous_reproduction_dirs() == frozenset(V111_REPRODUCTIONS)
+            and set(V112_SOURCE_INVENTORIES[h3_prefix[:-1]]) == set(h3_paths) | {
+                h3_prefix + 'RUNS/aarch64.md', h3_prefix + 'RUNS/x86_64.md'})
+    except (KeyError, TypeError, ValueError, IndexError):
+        return failed
+    outcomes = (exact_prior, claims and declarations, exact_dependencies, exact_boundary,
+                exact_proofs, exact_evidence, presentation, exact_sources, exact_inventory)
+    return [(tag, description, bool(ok)) for (tag, description), ok in zip(V112_CHECKS, outcomes)]
+
+
 # Exact current custody and reversible v110 input reconstruction.
 # This structural adapter reads bytes only and executes no scientific verifier.
 
@@ -973,8 +3767,8 @@ def v111_current_snapshot():
             path = ROOT / 'canon' / name
             if not path.is_file() or path.is_symlink():
                 return None
-            content = path.read_bytes()
-            if (len(content) != contract['current_bytes']
+            content = v112_previous_bytes(path)
+            if (content is None or len(content) != contract['current_bytes']
                     or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
                 return None
             data[name] = content
@@ -982,14 +3776,14 @@ def v111_current_snapshot():
             path = ROOT / relative
             if not path.is_file() or path.is_symlink():
                 return None
-            content = path.read_bytes()
-            if (len(content) != contract['current_bytes']
+            content = v112_previous_source_bytes(relative)
+            if (content is None or len(content) != contract['current_bytes']
                     or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
                 return None
             tooling[relative] = content
         if any(path.is_symlink() for path in REPRODUCE.iterdir()):
             return None
-        inventory = frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+        inventory = v112_previous_reproduction_dirs()
         if inventory != frozenset(V111_REPRODUCTIONS):
             return None
         for relative, contract in V111_SOURCE_FILES.items():
@@ -27255,9 +30049,10 @@ def run():
     checks.extend(v109_current_checks())
     checks.extend(v110_current_checks())
     checks.extend(v111_current_checks())
+    checks.extend(v112_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v111")
+    print("historical guards: exact reconstructed v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v112")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0
