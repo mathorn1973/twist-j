@@ -1,0 +1,10 @@
+H3 fixed-reference record
+geometry: 8 x 4, 8 x 6
+histories=6 full=90 post-C=84 steps=84 inverse-substeps=168
+reference-cuts=174 hold-cuts=120 boundary-cuts=12 matched-geometries=2 in-class-comparisons=44
+Q=27392 reference-q=128
+ABSENT_ROW0 hold-R=0 hold-q=128 cut14-R=0 cut14-q=128
+PLUS hold-R=1 hold-q=313 cut14-R=1/6 cut14-q=163
+MINUS hold-R=-1 hold-q=73 cut14-R=-1/2 cut14-q=163
+projectors=10 comparisons=20 P22>=1/427 (also >=1/429)
+PASS
