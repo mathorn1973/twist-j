@@ -8,7 +8,9 @@ import re
 import time
 
 from analyze_ordered import ENDPOINTS, SAMPLES, VOLUMES
-from run_ordered_volume import CHAIN_IDS, chain_settings, json_file, run_chain, state_size
+from run_ordered_volume import (
+    CHAIN_IDS, chain_settings, json_file, run_chain, run_chains, state_size,
+)
 
 SHA256 = re.compile(r"[a-f0-9]{64}\Z")
 
@@ -44,7 +46,35 @@ def verified_prefix(path, endpoint):
     return prefix
 
 
-def replay(volume, L, sampler, output, wall_seconds):
+def replay_chains(volume, L, sampler, output, deadline, endpoint, ledger, chain_workers):
+    """Replay with one private monotone cursor and digest tuple per chain."""
+    def worker(i, cohort):
+        name = chain_settings(L, i)[0]
+        expected = tuple(ledger[(name, sample)] for sample in range(SAMPLES))
+        verified = 0
+
+        def verify_state(data, actual_L, chain, sample, macrocycle):
+            nonlocal verified
+            if (verified >= len(expected)
+                    or (actual_L, chain, sample, macrocycle)
+                    != (L, name, verified, endpoint + verified + 1)):
+                raise ValueError(f"Unexpected replay state identity for {name}: {sample}")
+            if hashlib.sha256(data).hexdigest() != expected[verified]:
+                raise ValueError(f"Replay SHA-256 mismatch for {name} sample {sample}")
+            verified += 1
+
+        original = volume / f"measurement-c{i}" / "protocol.log"
+        prefix = verified_prefix(original, endpoint)
+        run_chain(sampler, output / f"replay-c{i}", deadline, L, i, endpoint, SAMPLES,
+                  prefix, verify_state, cohort=cohort)
+        if verified != len(expected):
+            raise ValueError(f"Replay did not consume every saved-state receipt for {name}")
+        return {"chain": name, "verified_states": verified}
+
+    return run_chains(worker, chain_workers)
+
+
+def replay(volume, L, sampler, output, wall_seconds, *, chain_workers=1):
     environment = json.loads((volume / "environment.json").read_text(encoding="utf-8"))
     executable_digest = hashlib.sha256(sampler.read_bytes()).hexdigest()
     receipt = json.loads((volume / "receipts.json").read_text(encoding="utf-8"))[str(L)]
@@ -55,22 +85,16 @@ def replay(volume, L, sampler, output, wall_seconds):
         raise ValueError("Invalid original configuration or incomplete measurement")
     series_digest, ledger = read_ledger(volume / "measurements.jsonl", L, endpoint)
 
-    def verify_state(data, actual_L, chain, sample, macrocycle):
-        if hashlib.sha256(data).hexdigest() != ledger.pop((chain, sample)):
-            raise ValueError(f"Replay SHA-256 mismatch for {chain} sample {sample}")
-
     output.mkdir()
     deadline = time.monotonic() + wall_seconds
-    for i in CHAIN_IDS:
-        original = volume / f"measurement-c{i}" / "protocol.log"
-        prefix = verified_prefix(original, endpoint)
-        run_chain(sampler, output / f"replay-c{i}", deadline, L, i, endpoint, SAMPLES,
-                  prefix, verify_state)
-    if ledger:
+    chains = replay_chains(volume, L, sampler, output, deadline, endpoint, ledger, chain_workers)
+    verified_states = sum(chain["verified_states"] for chain in chains)
+    if verified_states != len(ledger):
         raise ValueError("Replay did not consume every saved-state receipt")
     json_file(output / "replay-receipt.json", {
         "status": "PASS", "L": L, "endpoint": endpoint, "sampler_sha256": executable_digest,
-        "measurement_sha256": series_digest, "verified_states": len(CHAIN_IDS) * SAMPLES,
+        "measurement_sha256": series_digest, "verified_states": verified_states,
+        "chains": chains,
         "wall_seconds": wall_seconds,
     })
 
@@ -82,11 +106,12 @@ def main():
     parser.add_argument("--sampler", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--wall-seconds", required=True, type=int)
+    parser.add_argument("--chain-workers", type=int, choices=(1, 4), default=1)
     args = parser.parse_args()
     if args.wall_seconds < 1:
         parser.error("Wall budget must be positive")
     replay(args.original.resolve(strict=True), args.volume, args.sampler.resolve(strict=True),
-           args.output.resolve(), args.wall_seconds)
+           args.output.resolve(), args.wall_seconds, chain_workers=args.chain_workers)
 
 
 if __name__ == "__main__":

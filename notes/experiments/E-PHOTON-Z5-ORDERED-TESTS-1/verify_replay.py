@@ -2,6 +2,8 @@
 import hashlib
 import io
 import json
+from pathlib import Path
+from threading import Barrier
 from unittest.mock import patch
 
 import analyze_ordered as analysis
@@ -62,4 +64,54 @@ with patch.object(replay, "SAMPLES", 2), patch.object(analysis, "SAMPLES", 2):
         pass
     else:
         raise AssertionError("Invalid ledger hash was accepted")
-print("REPLAY LEDGER AND ANALYSIS CUSTODY FIXTURES PASS")
+
+    observed = []
+    parallel_barrier = Barrier(len(replay.CHAIN_IDS), timeout=5)
+
+    def fake_chain(sampler_path, directory, deadline, side, i, thermal, samples,
+                   previous_prefix, accepted_state, *, cohort):
+        name = replay.chain_settings(side, i)[0]
+        assert side == L and thermal == endpoint and samples == 2
+        assert directory.name == f"replay-c{i}"
+        assert previous_prefix == [f"prefix-c{i}"]
+        if mode == 4:
+            assert cohort is not None
+            parallel_barrier.wait()
+        for sample in range(samples):
+            data = name.encode() + bytes([sample])
+            accepted_state(data, side, name, sample, thermal + sample + 1)
+        observed.append(i)
+
+    def fake_prefix(original_log, thermal):
+        assert thermal == endpoint
+        return ["prefix-" + original_log.parent.name.removeprefix("measurement-")]
+
+    expected = [{"chain": replay.chain_settings(L, i)[0], "verified_states": 2}
+                for i in replay.CHAIN_IDS]
+    with patch.object(replay, "run_chain", fake_chain), patch.object(
+        replay, "verified_prefix", fake_prefix
+    ):
+        for mode in (1, 4):
+            observed.clear()
+            result = replay.replay_chains(Path("original"), L, Path("sampler"),
+                                          Path("output"), 0, endpoint, ledger, mode)
+            assert result == expected
+            assert sorted(observed) == list(replay.CHAIN_IDS)
+            assert len(ledger) == len(replay.CHAIN_IDS) * 2
+
+    def misrouted_chain(sampler_path, directory, deadline, side, i, thermal, samples,
+                        previous_prefix, accepted_state, *, cohort):
+        wrong_name = replay.chain_settings(side, 2)[0]
+        accepted_state(wrong_name.encode() + b"\0", side, wrong_name, 0, thermal + 1)
+
+    with patch.object(replay, "run_chain", misrouted_chain), patch.object(
+        replay, "verified_prefix", fake_prefix
+    ):
+        try:
+            replay.replay_chains(Path("original"), L, Path("sampler"),
+                                 Path("output"), 0, endpoint, ledger, 1)
+        except ValueError as error:
+            assert "Unexpected replay state identity" in str(error)
+        else:
+            raise AssertionError("Cross-chain replay data accepted")
+print("REPLAY LEDGER, CONCURRENT CHAINS AND ANALYSIS CUSTODY FIXTURES PASS")

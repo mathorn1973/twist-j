@@ -1,12 +1,14 @@
 """Local pre-pin driver for one registered volume and exact replay custody."""
 import argparse
-from contextlib import contextmanager
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from contextlib import contextmanager, nullcontext
 from functools import partial
 import hashlib
 import json
 import os
 from pathlib import Path
 import platform
+import shutil
 import subprocess
 import threading
 import time
@@ -109,8 +111,62 @@ def verify_counters(control, L, cycles):
         raise ValueError("Missing sampler completion marker")
 
 
+class ChainCohort:
+    """Track live sampler children so one failed chain cancels the stage."""
+    def __init__(self):
+        self.lock = threading.Lock()
+        self.children = set()
+        self.cancelled = False
+
+    @contextmanager
+    def supervise(self, child):
+        with self.lock:
+            if self.cancelled:
+                child.kill()
+                raise RuntimeError("Sampler stage cancelled")
+            self.children.add(child)
+        try:
+            yield
+        finally:
+            with self.lock:
+                self.children.remove(child)
+
+    def cancel(self):
+        with self.lock:
+            self.cancelled = True
+            for child in self.children:
+                child.kill()
+
+
+def run_chains(worker, chain_workers):
+    """Run a four-chain stage and return results in chain ID order."""
+    if chain_workers == 1:
+        return [worker(i, None) for i in CHAIN_IDS]
+    if chain_workers != len(CHAIN_IDS):
+        raise ValueError("Use one worker or one per chain")
+    cohort = ChainCohort()
+    with ThreadPoolExecutor(max_workers=chain_workers) as executor:
+        futures = {}
+        try:
+            futures = {executor.submit(worker, i, cohort): i for i in CHAIN_IDS}
+            results = {}
+            for future in as_completed(futures):
+                results[futures[future]] = future.result()
+        except BaseException:
+            cohort.cancel()
+            for future in futures:
+                future.cancel()
+            raise
+    return [results[i] for i in CHAIN_IDS]
+
+
+def require_time(deadline):
+    if time.monotonic() >= deadline:
+        raise TimeoutError("Volume time budget exhausted")
+
+
 @contextmanager
-def launch(args, directory, deadline):
+def launch(args, directory, deadline, *, cohort=None):
     remaining = deadline - time.monotonic()
     if remaining <= 0:
         raise TimeoutError("Volume time budget exhausted")
@@ -124,30 +180,33 @@ def launch(args, directory, deadline):
                 expired.set()
                 child.kill()
 
-            timer = threading.Timer(remaining, expire)
-            timer.start()
-            try:
-                yield child
-                if child.stdout.read(1) or child.wait() != 0:
-                    raise ValueError("Unexpected output or failed sampler exit")
-            except BaseException as failure:
-                if expired.is_set():
-                    raise TimeoutError("Volume time budget exhausted") from failure
-                raise
-            finally:
-                timer.cancel()
-                if child.poll() is None:
-                    child.kill()
+            timer = threading.Timer(deadline - time.monotonic(), expire)
+            guard = cohort.supervise(child) if cohort is not None else nullcontext()
+            with guard:
+                timer.start()
+                try:
+                    yield child
+                    if child.stdout.read(1) or child.wait() != 0:
+                        raise ValueError("Unexpected output or failed sampler exit")
+                    require_time(deadline)
+                except BaseException as failure:
+                    if expired.is_set():
+                        raise TimeoutError("Volume time budget exhausted") from failure
+                    raise
+                finally:
+                    timer.cancel()
+                    if child.poll() is None:
+                        child.kill()
 
 
 def run_chain(sampler, directory, deadline, L, chain, thermal, samples,
-              previous_prefix=(), accepted_state=None):
+              previous_prefix=(), accepted_state=None, *, cohort=None):
     chain_name, seed, start = chain_settings(L, chain)
     command = [str(sampler), "--mode", "run", "--L", str(L), "--seed", str(seed),
                "--start", start, "--thermal", str(thermal), "--samples", str(samples),
                "--between", "1", "--chain", chain_name, "--output-dir", "-", "--t", "1",
                "--transport", "stream", "--thermal-sentinels", "1"]
-    with launch(command, directory, deadline) as child:
+    with launch(command, directory, deadline, cohort=cohort) as child:
         with (directory / "protocol.log").open("xb") as log:
             control = partial(read_control, child.stdout, log)
             require_fields(control(), "ORDERED_RUN", {
@@ -194,27 +253,51 @@ def measure_state(output, requested_m, requested_R, payload, L, chain, sample, m
     json_line(output, {**measurement, "state_sha256": digest, "state_bytes": len(payload)})
 
 
-def run_volume(sampler, diagnostics, directory, L, deadline):
+def combine_measurements(directory, deadline):
+    temporary = directory / "measurements.pending"
+    with temporary.open("xb") as target:
+        for i in CHAIN_IDS:
+            require_time(deadline)
+            with (directory / f"measurement-c{i}.jsonl").open("rb") as source:
+                shutil.copyfileobj(source, target, length=1 << 20)
+        target.flush()
+        os.fsync(target.fileno())
+    require_time(deadline)
+    temporary.replace(directory / "measurements.jsonl")
+
+
+def run_volume(sampler, diagnostics, directory, L, deadline, *, chain_workers=1):
     from ordered_sentinels import assess
 
     previous = [[] for _ in CHAIN_IDS]
     for endpoint in sorted(ENDPOINTS):
-        previous = [run_chain(sampler, directory / f"thermal-{endpoint}-c{i}",
-                              deadline, L, i, endpoint, 0, old)[0]
-                    for i, old in zip(CHAIN_IDS, previous)]
+        def thermal_worker(i, cohort):
+            return run_chain(sampler, directory / f"thermal-{endpoint}-c{i}",
+                             deadline, L, i, endpoint, 0, previous[i - 1],
+                             cohort=cohort)[0]
+
+        previous = run_chains(thermal_worker, chain_workers)
         candidate = assess(previous, diagnostics)
+        require_time(deadline)
         json_file(directory / f"thermal-{endpoint}.json", candidate)
         if candidate["status"] == "PASS":
             break
     else:
         return {"status": "STOP_MIXING", "endpoint": None, "measurement_sentinels": None}
+
     requested_m, requested_R = scales_for(L)
-    with (directory / "measurements.jsonl").open("x", encoding="utf-8", newline="\n") as output:
-        receive = partial(measure_state, output, requested_m, requested_R)
-        measured = [run_chain(sampler, directory / f"measurement-c{i}", deadline,
-                              L, i, endpoint, SAMPLES, old, receive)[1]
-                    for i, old in zip(CHAIN_IDS, previous)]
+
+    def measurement_worker(i, cohort):
+        with (directory / f"measurement-c{i}.jsonl").open("x", encoding="utf-8", newline="\n") as output:
+            receive = partial(measure_state, output, requested_m, requested_R)
+            return run_chain(sampler, directory / f"measurement-c{i}", deadline,
+                             L, i, endpoint, SAMPLES, previous[i - 1], receive,
+                             cohort=cohort)[1]
+
+    measured = run_chains(measurement_worker, chain_workers)
+    combine_measurements(directory, deadline)
     result = assess(measured, diagnostics, measurement=True)
+    require_time(deadline)
     json_file(directory / "measurement-sentinels.json", result)
     return {"status": "PASS", "endpoint": endpoint, "measurement_sentinels": result["status"]}
 
@@ -227,6 +310,7 @@ def main():
     parser.add_argument("--diagnostics", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--wall-seconds", required=True, type=int)
+    parser.add_argument("--chain-workers", type=int, choices=(1, 4), default=1)
     args = parser.parse_args()
     if args.wall_seconds < 1:
         parser.error("Wall budget must be positive")
@@ -245,11 +329,12 @@ def main():
         "sampler_sha256": args.sampler_sha256, "python": platform.python_version(),
         "platform": platform.platform(), "machine": platform.machine(), "numpy": np.__version__,
         "longdouble_mantissa_bits": int(np.finfo(np.longdouble).nmant) + 1,
-        "wall_seconds": args.wall_seconds, "L": args.volume,
+        "wall_seconds": args.wall_seconds, "chain_workers": args.chain_workers, "L": args.volume,
     })
     try:
         budget = time.monotonic() + args.wall_seconds
-        receipt = run_volume(custody, diagnostics, output, args.volume, budget)
+        receipt = run_volume(custody, diagnostics, output, args.volume, budget,
+                             chain_workers=args.chain_workers)
     except Exception as failure:
         endpoint = next((t for t in sorted(ENDPOINTS)
                          if (path := output / f"thermal-{t}.json").is_file()

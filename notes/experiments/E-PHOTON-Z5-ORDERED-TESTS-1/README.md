@@ -59,6 +59,22 @@ No thermal endpoint is chosen from a measured observable.
     python3 -B analyze_ordered.py --help
     python3 -B analyze_descriptive.py --help
 
+Set --chain-workers 4 in both the generation and receipt replay commands
+to run four chains per volume. The single-worker mode remains available
+for parity checks. The driver keeps one ledger shard per chain until the
+combined ledger is committed in chain order. If one worker fails, the
+driver cancels the other sampler children and retains available logs.
+
+The temporary L=16 engineering fixture used two thermal endpoints (one and
+two macrocycles) and two saved states per chain, with the full reader and
+independent receipt replay. On Linux aarch64 at low process priority, serial
+generation including reading took 11.351 s and replay 4.944 s. With four
+workers generation took 3.158 s and replay 1.426 s. The merged ledgers,
+control transcripts and receipts matched byte for byte. This fixture uses
+separate engineering seeds and a scripted endpoint decision.
+
+    python3 -B check_parallel_fixture.py
+
 The primary analyzer consumes each volume's receipts and measurement file.
 Repeated --thermal-receipts options supply the distinct volume receipts.
 The descriptive analyzer takes one complete volume file and reports
