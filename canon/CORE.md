@@ -1,574 +1,155 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v111. Normative authority and activation
-state are declared exclusively by [STATUS.md](../STATUS.md).
+**Release identity:** Public Canon v112. Authority and activation are declared
+exclusively by [STATUS.md](../STATUS.md). This orientation does not replace the
+complete statements, evidence and falsifiers in [CANON.md](CANON.md) and
+[REGISTRY.tsv](REGISTRY.tsv).
 
-TWIST-J tests whether physical reality can be modeled as a closed,
-exact, deterministic integer system whose continuum, geometry,
-probability, and fields are readings. Its single algebraic axiom is
+TWIST-J asks whether physical reality can be described by a closed exact integer
+system whose geometry, continuum, fields and probabilities are typed readings.
+Its primitive algebraic axiom is `J = 1 + j^2`, with `j = zeta_5`. The axiom is
+posited, not derived. The declared architecture has no fitted dimensionless
+parameter and uses the electron mass as its single SI calibration anchor.
+Public Canon v112 also declares a discrete architecture.
+A common coefficient ring or a common action-layer label does not identify two
+state spaces, update laws, preparations or readings.
 
-```
-J = 1 + zeta_5^2.
-```
+## Exact arithmetic and actual identifications
 
-TWIST-J posits this as a primitive axiom. No theorem within TWIST-J is
-presented as deriving or justifying it. Where a well-typed comparison family
-exists, uniform and `p = 5`-specific content are distinguished for attribution
-only.
+On `O = Z[j]`, multiplication by `J` and its regular matrix on `Z^4` are the
+same operation in the specified basis (J-UNIT, J-STEP [T]). The principal
+embedding has `|J| = phi^-1` and `arg(J) = 2 pi/5`
+(J-PROJECTIONS [T]). Their gravity/scale and electromagnetic/phase meanings
+belong to AXIOM-PROJECTION-DICTIONARY [D].
 
-Public Canon v111 also declares a discrete architecture. It does not
-claim that the checkpoint space, the five kernel generators, the
-selector, or the decoder are uniquely derived from J. The architecture
-contains no fitted dimensionless parameter; its one SI calibration
-anchor is the electron mass.
+The ramified quotients `O/(1-j)^m` have residue field `F_5`. The equality
+`(5) = (1-j)^4` is an equality of ideals, not elements. These local rings
+have no element of order eight (C20-TEICHMULLER-SPLIT [T]); the separate
+`F_25` and eighth-root constructions must retain their own carriers.
 
-Specified sources and readings are proved by constructing them and verifying
-their stated properties. Their existence does not depend on global decoder
-uniqueness, necessity from J alone or derivation from the original U.
-INTEGER-HERMITIAN-OCCUPIED-SOURCE and INTEGER-PRIMITIVE-SOURCED-METRIC
-give complete reversible integer sources, occupied records and a primitive
-metric reader. RELATIONAL-DECLARED-BOOST-INERTIA and
-RELATIONAL-CLOSED-RECOIL-RATIO give bound objects, moving dynamics and an
-exact finite-clock inertia ratio in their declared common model.
-CONTACT-W-SPECTRAL-READING and SELECTED-SPECTRAL-ENERGY-SOURCE give a
-fixed bounded energy reading, a source with finite energy capacity and
-exact additive conservation, with explicit approximation bounds.
-CM5-POLARIZATION-DICTIONARY and its reachability and Hecke consequences
-supply a separate exact mathematical reading of the specified CM model.
-JM-POSITIVE-REFERENCED-READING and JM-FUNDED-INTEGER-PAIR-SOURCE
-give the selected coherent reading and a funded integer pair source.
-CONTACT-W-BOUND-PAIR-RESPONSE supplies finite prepared packets with a
-proved limiting inertial response under the conserving spectral source.
-The full definitions and proofs distinguish these carriers and operations.
+One exact bridge identifies the marked rational QDD lattice with the metric
+dual `L#` of the circular `A4` lattice. The signed intertwiner `T` transports
+the metric and specified affine action and gives the strict chain
+`C_Z < L < L#`, with adjacent index five
+(J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE and
+J-CIRCULAR-QDD-SIGNED-AFFINE-PROJECTOR-INTERTWINER [T]). This is an isometry
+onto the dual, not literal equality with `L`. Its fractional nonorthogonal
+projectors are not a PVM and provide no physical effect or occurrence law.
+The specified CM5 Jacobian, its polarization and pullback reachability are
+another mathematical model (CM5-POLARIZATION-DICTIONARY and
+CM5-INTEGRAL-PULLBACK-REACHABILITY [T]). The two field-characterisation
+claims about quartic cyclotomic ramification and the abelian CM discriminant
+minimum classify their own frozen families; they do not select a physical
+carrier or justify the axiom.
 
-The reciprocal four-slot contact has exact full-account funding and a
-clock-qualified regional record. A separate field uses the conservative
-two-slot contact to retain a prepared fixed-cell value permanently. The latter
-retains C status and depends on an exact finite certificate plus an all-future
-separation proof. Physical occurrence, active reading, calibration and full
-native realization remain separate.
+## Native state and typed readings
 
-HOMOGENEOUS-CAPTURE-CURRENT-RECORD joins capture, complete physical-cut
-charge current and coherent receiver recording in one specified homogeneous
-model. For its fixed incoming packet the joint asymptotic probability is
-greater than 2/10^28, with old memory transferred to the outgoing carrier.
-Native occupancy charge and the safe-window spectral energy remain distinct.
-Finite physical preparation, selective detection, quantitative retention and
-empirical occurrence remain open; the conditional one-shot coin construction
-is not a premise or repeated-gate implementation of this theorem.
+The declared autonomous state is `Omega = N_0 x F_5^6`, including the origin-zero
+clock. The update advances `n` and applies one of five specified affine
+involutions, selected by `sum(psi) + 2 theta_n mod 5`, where
+`theta_n = s_2(n) mod 2`. Its finite checkpoint is not its whole state.
+RAMIFIED-TM-LIFT [T] identifies the stated digit recursion and trace channel,
+not the full checkpoint with a scalar power of `J`. CENSUS-313 [C] retains its
+finite enumeration scope. Whole-sheet native return windows and their exact
+densities do not supply independent preparation or physical occurrence.
 
-RELATIVE-CONTACT-INTEGRAL-LAW [T] supplies a separate total conservative
-contact on marked integral slots. With exactly four auxiliary slots on
-O^26, initial data (6,0^21) and the declared contact/permutation alphabet,
-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM [T] gives sharp initial auxiliary trace
-accounts 12 for (-3,3,3,3,0^18) and 27 for (3,3,3,3,0^18).
-The account is conserved while the ready bank changes. For N disjoint
-copies of that known-input load, with every changing auxiliary resource
-counted and no uncounted residue exchange, retaining N specified outputs
-needs at least 4N auxiliary slots and initial trace account 12N. Signed
-copies attain both, while positive copies give only the upper bound 27N.
-One fixed word preserves input residue distance. The complete 56-slot
-construction now closes RELATIVE-CONTACT-COMMON-APPARATUS-OPEN [T] for two
-experiments, each chosen independently from ten prepared inputs. One common
-read core processes all 100 pairs; four current archive banks distinguish
-them, retain the first record through reload, and account for every spent
-resource. The common auxiliary preparation has trace account 128 and the
-complete account is 156. Five whole-slot swaps and prepared inputs are
-supplied; the two-experiment stock is finite.
+Readings act in the order matter, geometry, clock on their declared partial
+domains, and never feed the native update. READING-SPLIT and
+ALGEBRAIC-DMATTER [D] adopt specified legs. QDD-ALGEBRAIC-FACTORIZATION [T]
+proves equality of the direct and factorised quadratic records on the full
+registered finite domain, including ZERO_SUPPORT. The equality does not
+force the adoption, extend its domain or turn its algebraic targets into
+physical effects. Reading-family completeness is not global uniqueness;
+any claim-specific uniqueness condition retains its frozen class and equality.
 
+## Conservative contacts, memory and resources
 
-RELATIVE-CONTACT-FINITE-WORKBANK-REUSE [T] now restores the same entire
-31-slot work core after every input for any chosen finite horizon k.
-It uses 26+25k slots, conserved account 68+74k and 2k fresh archive banks.
-One fixed program handles all 10^k prepared input tuples. The archives alone
-decode the history; exact reversal removes it. Working-bank restoration
-therefore coexists with finite retained-storage consumption.
+RELATIVE-CONTACT-INTEGRAL-LAW [T] defines a total reversible contact on
+marked `O` slots, acting on the integral parity domain and otherwise as the
+identity. It preserves the complete sum, Hermitian account, positive
+half-trace account and marked residues. Its fixed contact/SWAP apparatuses
+process every input tuple for each supplied finite horizon, restore the work
+core and retain the history in growing archives. Prepared-height translation
+has the same finite-horizon contract; the affine all-integer five-phase
+extension is excluded in its stated finite-word class. Prepared inputs,
+stock, scheduling and fresh archives remain explicit premises.
 
-RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER [T] translates five supplied integer
-heights into the exact clock phases with one 95-contact word, returning all
-seven stock coordinates. RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS
-[T] joins that translator to the restored read core for every fixed finite
-horizon k. It accepts independently supplied source messages and heights,
-uses 39+25k slots and two fresh archive banks per input, and decodes the
-ordered history from the retained archives alone. The total positive account
-is 177+78k+10 sum_i t_i^2. RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION
-[T] excludes extension to all integer heights by any finite fixed
-contact/SWAP word on an affine input family with finite common stock.
-Preparation, scheduling and fresh retained storage remain supplied; these
-results do not identify the contact carrier with the native update or close
-physical preparation and autonomous operation.
+The funded reciprocal `J/J^-1` contact is a distinct involution.
+RECIPROCAL-J-RHO-WORD-OBSTRUCTION [T] excludes its realization by the old
+contact/permutation alphabet with all auxiliaries restored, using a residue
+histogram witness. On the infinite contact field, local permanent records
+can coexist with reversible outward transport: PLENUM-PREPARED-PERMANENT-RECORD
+[C] combines a finite certificate with an all-future separation proof.
+Neither finite work-core reuse nor a local permanent record supplies unlimited
+retained history on one finite carrier, occupied-archive regeneration or an
+active physical reader.
 
-The separate U-CARRY-MIRROR-FINITE-CIRCUIT [C] uses the actual native first
-receiver, a supplied affine transfer and reversible carry routing on 62 F5
-registers. All 500 admitted inputs preserve the primary post-tick checkpoint
-and retain both carries plus the second native output. Integral carry pairing
-and the additional precision distinguishing J from J inverse have exact
-proofs. Reader conventions, wiring, clean workspace and separately enabled
-native origins remain explicit. Neither carrier supplies autonomous input
-selection, retained-archive regeneration or an identification with the other.
+## Coherent and selected physical models
 
-The same contact, ordered left then right on three slots, has a complete
-arithmetic rhythm classification. At maximal difference depth d, put
-A_d=(4^(d+1)-1)/3. The three nondiagonal primitive classes have least periods
-A_d, 2A_d-1 and 5A_d, with sharp relative-account bounds. An exact pair has
-equal E, S and M, local invariant residues and depth history but
-periods five and twenty-five. Sufficient coefficient readings distinguish
-the full state on a fixed sum/account slice. These are conditional L1
-statements, without a native-U or measured-energy identification.
+For the specified coherent walk, `W=A/5` is a local automorphism over
+`Z[zeta_20][1/5]`; raw `A` is integral, injective and nonsurjective
+(COHERENT-W-LOCALIZED-RING-CLOSURE [T]). There is no unital map from this
+localized ring to `F_5`. The raw residue construction gives a clock-tagged
+semiconjugacy to a native network with additional chart coupling
+(COHERENT-W-LOCAL-NATIVE-NETWORK [T]); it does not identify `W` with the
+unchanged native update.
 
-The native zero predicate now has an exact comparison with the declared
-integer field shell: the piston swap carries it to the shell residue
-condition. Exactly twenty of the twenty-five admitted residues have an
-energy-one preimage. The native zero orbit's boundary-three residue has a
-unique minimum-energy integer representative of energy five; its boundary-four
-residue has no unit preimage. This excludes a unit-seed assignment at every
-n>=3 for that fixed origin and comparison; higher-energy lifts remain open.
+Specified spectral energy, conserving sources, bound-pair response and
+homogeneous capture/current/record theorems establish their stated model
+properties. Continuous finite-capacity batteries and finite rounded-energy
+batteries retain different conservation and dimension contracts. Integer
+source/metric models, relational recoil, discrete Maxwell laws, and selected
+QDD, tensor and cosmological apparatuses likewise retain their supplied
+carriers and readings. Exact construction proves existence and correctness
+at that scope, without requiring derivation from `J` alone; physical
+adoption, realization and empirical comparison are separate assertions.
 
-The fixed preparation families obey different gate conditions. The original
-two-message family never passes, the alternative passes once transiently,
-and occupied one-shot zero passes even before its semantic reader is ready.
-The unchanged rational contact source is blind across messages with identical
-q,r histories and a common complete receiver/protocol. A source-access map,
-complete preparation, funding and physical receiver still need their own
-contracts. The five declared cell shears have matrix orders 4,3,6,5 and
-infinite; this bounded comparison does not select a physical cell or order.
-All existing physical apparatus owners and layer gates retain their scopes.
+## The boundary is part of the result
 
-The fixed F5 quadratic target now has a complete initialized-memory
-classification: no finite ignored register works at ranks one or two,
-six states are necessary and sufficient at rank three, and two suffice
-abstractly at ranks four through six. One constructed global permutation
-can return the complete state after ten steps. QUADRATIC-L5-INITIALIZED-CAPACITY
-[T] does not select the reader or compile a native contact. Fixed affine
-words and the literal selector fail the stated binary contract;
-QUADRATIC-MEMORY-NATIVE-CONTACT [O] requires independently admitted reading,
-actual register-writing gates and complete occupied-memory continuation.
+Every theorem, computation, dictionary, hypothesis, open obligation and fired
+falsifier retains its explicitly registered status and scope. All negative results remain in the
+complete Canon. A no-go in a restricted class does not decide a broader open
+owner. Algebraic factorisation, classical recording and selected effective
+Born laws do not discharge QDD-INSTRUMENT-APPARATUS or its distinct terminal-event
+and class-completeness children. Photon global-carrier agreement, massless-phase
+transport, nonabelian measure selection, metrology and empirical tests keep
+their exact registered contracts. L1-to-L6 lifts require their named gates.
 
-Three separately proved conditional L1 results now compose one residual
-step with its in-machine record. CONTACT-RECORD supplies the complete
-reader contract; ALGEBRAIC-RESIDUAL-REALIZATION supplies the distinct
-algebraic Pi_alg through the fixed finite CW-ALG-1 word; and
-RESIDUAL-STEP-RECORD gives V=A_y T_alg A_x on the same full carrier.
-One preparation r_x=r_y=eta=0 permits arbitrary pistons and unknown q,
-the exact L5 readout step, and records delta(g),delta(Mg). The complete
-inverse, exact one-pass image, occupied-bit continuation and restoration
-of the first record are proved. The declared W gates, reader couplings,
-preparation and reading remain premises. This supplies neither their
-physical admission nor a fresh archive on repetition, and
-QUADRATIC-MEMORY-NATIVE-CONTACT remains open.
+[FRONTIER.md](FRONTIER.md) is generated from the live registry and scheduler
+metadata. It is the complete open-owner index; this short core is not another
+frontier ledger. All existing identifiers and statuses are retained. The ENC4 result
+discharges only its explicitly registered subdomain; the remaining contracts
+and named gates are stated in the registry. Structural compression creates no scientific
+promotion and no new permission to execute or publish.
 
-SCALAR-HERMITIAN-NORM-IMAGE [T] separately characterizes the full arithmetic
-scalar norm image; RAMIFIED-HERMITIAN-NORM-OBSTRUCTION [T] excludes reciprocal
-Lucas squared lengths even over Q(zeta5), and J-TWO-TRACE-SCALAR-NORM-IMAGE [T]
-recognizes exactly which pure-J trace pairs come from a scalar. These remain
-L1 statements and provide no new physical reading or native Hodge step.
+## Complete-state observation and funded propagation
 
-The unchanged native U also transfers the residue sum of arbitrary four-piston
-inputs to a common receiver prepared at (q,r)=(0,1), without putting a
-precomputed answer into the preparation. U-NATIVE-RAW-RESIDUE-READOUT [T]
-gives exact recovery from the current receiver and native counter at every
-n>=3. At most twenty time-context values suffice for that evaluation;
-readiness detection and native context updating are separate obligations.
-U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO [T] proves that, for every common ready,
-no fixed current-receiver-only reading eventually retains a nonconstant
-function of the original sum on the full input family. The history factor
-also forces a distinct absence label to consume an entire observable class;
-at ready (0,1), this leaves at most four present residue values. These are
-L1 readout and information boundaries, not a physical instrument or reset.
+COMPLETE-STATE-OBSERVATION-CONTRACT states exact complete-state transport,
+the condition for discarding information and the faithful fixed-reference chart.
+H3-FUNDED-LONGWAVE-SECTOR gives a conditional two-place state approximation
+under the unchanged integer law with its explicit finite preparation cost.
+H3-FINITE-REFERENCED-RECORD supplies a finite paid archive, a counted reference,
+a stationary window and its exact unlock boundary. Its trace reader remains
+a mathematical observation; native reading and physical occurrence are separate.
 
-The complete autonomous state and update are
-
-```
-Omega = N_0 x F_5^6,                    omega = (n, psi),
-theta_n = s_2(n) mod 2,
-z_6(psi) = sum_k psi_k mod 5,
-U(n, psi) = (n + 1, g_(z_6(psi) + 2 theta_n mod 5)(psi)),
-(g_0, ..., g_4) = (a, b, c, d, e).
-```
-
-`N_0` is the forward orbit of zero under the 2-adic odometer. No
-Thue-Morse parity function on all of `Z_2` is asserted. The projection
-to `F_5^6` is the finite checkpoint; it is not the whole autonomous
-state. Log streams are derived orbit records.
-
-The decoder is a typed partial interface. Its functional order is
-matter, then geometry, then clock:
-
-```
-D_matter : dom(D_matter) subset K -> MatterData
-D_geom   : dom(D_geom) subset K x MatterData -> GeometryData
-D_clock  : dom(D_clock) subset K x MatterData x GeometryData
-           -> ObservableHistory
-```
-
-Here `K` is the set of forward `U`-orbits. Decoder outputs never feed
-the state update. The public theory may contain more than one
-admissible typed reading of the same substrate. Totality,
-classification of the admissible reading family, compatibility on
-overlaps, and physical completeness remain open. Global uniqueness is
-not a program requirement. Individual registered claims may still ask
-whether a particular operator, selector, reading leg, or restricted
-class is unique at its frozen scope. The public reading split is a
-dictionary at its registered legs (READING-SPLIT [D]), not a
-completeness theorem.
-`DEF-DECODER-COMPLETION-CONTRACT` supplies only the finite typed manifest
-shape against which a future candidate can be audited. Its optional
-factor-canonicity overlay freezes one stage, leg, scope, factor datum, and
-four distinct per-map coherence obligations, together with independent
-equivalence, completeness, maximality, and nonconstancy slots. It supplies
-no surviving factor, classification, universality, carrier, physical
-bridge, completion-wide terminality result, evidence, or status change,
-and it authorizes no verifier or probe.
-
-The complete declared native-word curvature class is nonunique, and its
-total trace subrecord is underdetermined. This decides the corresponding
-operator question without choosing a physical geometry. The native decoder
-has exact readback and memory boundaries, a finite-history phase reader,
-and complete mathematical reader spectra. A fixed common ready now permits
-recovery of every original piston source from the full current state and
-native counter; regenerating a history is not material recording. The
-conditional incidence construction still declares its coupling and calendar.
-No common onset law makes its chronological first outcomes agree with all
-QDD ratios; a permutation scan repairs the marginal only with an additional
-order carrier and law. Three fixed attenuation observables select identity
-even among mixed CP channels, but their physical preservation remains a
-premise. Physical preparation, writing, reset and occurrence remain open.
-
-The relational-reading boundary is now exact. Binary structure, reversible
-faithful writing and the listed scalar symmetries do not select a quadratic
-count; a square is exactly equal matching and nonmatching weight. Occurrence
-needs cycle balance or an independently supplied ensemble, correct pair laws
-do not give independence, and a fixed finite-window reader of the actual
-native trajectory cannot carry all-order product frequencies while every
-finite horizon remains attainable. Addresses, logs, loaders, a finite
-occupancy bank, the registration-pair inverse and the composed record chain
-have exact classifications and identifiability limits. None supplies a
-physical apparatus, event, occurrence law, persistence, reset, spatial
-dimension or measure; those owners remain open.
-
-U-GALOIS-FIBER-CODE [T] supplies a specified coherent four-dimensional
-Galois-fiber code over sixteen original checkpoints whose free native
-pushforward preserves the complete QDD Gram at every step. Under
-U-GALOIS-FIBER-QDD-SPLIT [T], its coarse final coordinates match the
-algebraic LOW/HIGH pair in an explicit shifted source chart. Physical
-realization of this correlated code and a complete target-independent
-apparatus family remain under QDD-INSTRUMENT-APPARATUS [O]. Its source,
-coarse instrument and event law are now explicitly selected in ETH-QDD-1.
-
-Native point preparation through the unchanged apparatus-history port has
-an exact five-label information limit. A separate coherent Galois-code
-comparison admits globally normalized channels with sharp coordinate
-agreement 5/8 and minimum optimal purified auxiliary dimension five.
-These mathematical results use different declared state descriptions;
-physical preparation, coupling, event occurrence, persistent record and
-reset remain open.
-
-The selected passive QDD family now has exact predictive limits. Seven
-additional fixed scalar expectation calibrations are necessary and
-sufficient to recover every quadratic mean for arbitrary preparation
-ensembles, even when the complete passive-record law is known. A specified
-threshold response still admits a sharp interval of count laws after all
-quadratic means are fixed; one further fourth-moment expectation resolves
-that particular law. Recovering the original passive records from native
-checkpoints at n>=3, and for an all-time reader, requires exactly three
-explicitly initialized auxiliary states, or restricted preparation sets with
-the proved cardinality bounds.
-These are conditional mathematical completions; physical preparation,
-calibration, occurrence, apparatus and reset remain open.
-
-The marked exterior J system has an exact three-coordinate semilinear
-Hodge read, a four-dimensional F-linear predictive chart for one fixed axis,
-and a six-dimensional rational containing carrier. Its ramified bracket and
-six-chart atlas are classified. Finite-reader and native-word obstructions
-delimit direct realization routes. Whole-state separable counter readings
-factor through thirteen invariant classes; general readings on the reachable
-domain allow arbitrary amplitudes on 3125 retained labels. These classes
-select neither the target operator nor its amplitudes. All are L1 results;
-physical time, spatial dimension, apparatus and occurrence remain open.
-
-The norm-bounded scalar reader has an exact inverse. Two pure-J traces
-and the full residue modulo 25 determine every nonzero integral scalar of
-norm at most 941, its normalized strip representative and its integer orbit
-coordinate. Norm, ordered magnitudes, normalization and all further pure-J
-traces are derived fields. The observed mod-5 capacity is only 2603 in the
-declared global class without a separately supplied clock; a selected
-normalized codebook with mod-25 reading also restores the current
-synchronized native state. Codebook choice and physical acquisition remain
-premises. This is distinct from the original balanced QDD head amplitude,
-whose four coefficients already have a unique mod-5 lift, including zero.
-The direct QDD write then determines its five algebraic fields; neither this
-representation nor manifest identifiers introduce additional independent
-physical inputs. Lost original heads and the existing physical owners keep
-their stated boundaries.
-
-A separate origin-zero source-only preparation gives an actual native
-one-shot transfer into an initially common receiver. The first selected
-step clears the source; one fixed receiver-only reader retains the five
-possible symbols at every tick from three, distinguishing stored zero
-from an explicit absence preparation. The exact continuation theorem is
-family-specific: all later payload differences remain in the same two
-memory coordinates, so a fresh fixed raw or affine target gains none.
-This transient write is compatible with the synchronized no-write theorem.
-Physical preparation, reusable writing and full QDD apparatus semantics
-remain separate obligations.
-
-Declared integer automata have a separate set of exact construction
-theorems: invariant forms for the chosen F=JG, reversible energy-funded
-gates, charge continuity with contact-flux memory, field-energy positivity,
-triangular shell resonance and finite decision/certificate principles.
-A two-triangle zero mode prevents direct replication of the one-cell
-positive energy. Zero field enforces local neutrality, and bridge flux
-bounds charge separation at fixed energy in the declared geometry.
-These results concern their stated architectures. A separately selected
-positive field cell supplies a complete conservative integer chain for
-every finite N>=2: FIELD-CONSERVATIVE-CHAIN-LAW gives its inverse and actual
-invariant accounts; FIELD-CHAIN-FIRST-WORK gives first arrival N-1, funded
-work N and return of the original receiver N+1 for the declared preparation;
-FIELD-LOCAL-WORK-RECORD adds a reversible local C5 event pointer, initially
-blank and readable at eight boundaries spanning seven elapsed steps from
-its first write. The returned original receiver is not a reset of the
-complete apparatus, and finite-energy recurrence forces eventual return to
-the initial state. Derivation from native U or J, physical energy selection
-and physical realization remain
-open; this mathematical construction supplies no experiment.
-
-A separately selected packet law now has complete conservative transport and
-funded finite records. Its chosen complex extension gives an entire coherent
-LOW/HIGH instrument with source/reference continuation and finite archive
-semantics. Fresh pure bath bits and exact phase-sensitive collisions prepare
-the even pointer bank to any positive tolerance, with one joint error bound
-against the actual remaining output state. A fetched-program port controller
-executes that finite preparation and a supplied nonadaptive context word with
-exact complete-operator equality, including dirty correlated buses. These
-five L1 theorems retain the supplied source coding, catalogue, graph, phases,
-pure baths and abstract tick. They do not select one actual result, derive
-an occurrence measure, implement native U, or close a physical apparatus
-owner. In particular a supported WRITE, occupied archive and actual
-LOW/HIGH event are distinct; the last remains unprovided by this construction.
-
-A retained archive is now separated from predictive Hodge memory by six
-conditional L1 theorems. Faithful native continuation and a direct present
-reading force the axial memory to factor through the original data and
-counter. For a
-specified passive-archive family, the connected light-shift responses admit
-no nonzero affine Hodge reading at the stated nondegenerate profiles; an
-exact finite response graph decides arbitrary nonlinear readings and gives
-both compatible and obstructed profiles. Nonlinear scores of joint outcomes
-remain mixture-linear, but at those nondegenerate profiles nonzero compatible
-scores cannot be recovered from only six means over the full declared mixture
-family. Code-subspace
-transport retains its separate unitary premise. These results select no
-calibrated profile, detector, postmeasurement continuation, four physical
-coordinates or physical time; the existing apparatus obligations remain open.
-
-Three decisions have exact dispositions. The complete measurable
-product-source Route A is empty, so ENTROPY-LAYER-BRIDGE closes at F with
-its separate obstruction theorem T. BELL-CAUSAL-ACCOUNTING closes at D
-on the complete adopted ETH-QDD-2 contract: five contexts exclude the
-entire setting-independent Bell-local class although every CHSH slice is
-nonviolating; complete local-record laws permit no controllable message.
-The pair source, records and occurrence measure have distinct D gates.
-
-On the stable native sheets z in {1,4}, U preserves an inserted signed
-port deviation for every finite wait without changing the free source
-trajectory. Entrance and archive interactions are additional resources.
-The exact affine/control, energy and ion-sideband results delimit and
-realize specified mathematical control models. ETH-QDD-1/2 adopt coherent
-preparation, controlled coarse instruments, one-outcome Born occurrence,
-ordered persistent records and explicit renewal resources. These choices
-complete an effective theory; independent physical realization, terminal
-justification and whole apparatus-class completeness remain open.
-
-TT-VECTOR-STATE-NORMALIZATION closes at D on ETH-TT-1/ETH-COS-1. A complete
-non-Gaussian outgoing vector state and a separately prepared dynamical
-curvature scalar share one scalar-clock background, Cauchy surface and
-coordinate/time/scale dictionary. At positive supported powers their
-exact geometric ratios are 60+24sqrt(5) and 60-24sqrt(5). Both powers
-vanish at transfer nodes and the ratio there is undefined. This selected
-decelerating planar finite-band model is not an isotropic primordial CMB
-spectrum, quantum vacuum or SI calibration. All additional model inputs
-are explicit; mathematical replay establishes their consequences, not
-experimental adequacy or derivation from J.
-
-The finite counter-model comparison now has a sharp overlap price: the
-complete ETH-QDD-2 numerical table needs exactly 1/16, without selecting a
-physical latent variable or causal mechanism. ENC4 common blocking has an
-exact admission criterion and an initialized MSD augmentation; the broader
-metrology calculus remains open. A self-contained conditional-variance proof
-in the chosen finite photon measure gives b>=25rho and chi>=rho. These common
-local floors do not give a positive b-25chi margin. The 26 live H/O owners
-remain open, including apparatus realization and the physical photon bridge.
-
-## Native movement and specified finite apparatuses
-
-U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS [T] classifies actual native return
-windows. A separately supplied X1 sheet gives nonzero densities 1/4,
-11/24 and 1/2 at lengths four, six and eight, with exact dyadic counts.
-On the whole actually occupied sheet the four-tick density is 1/3.
-Whole-sheet quantification excludes extra returns of special individual
-states. Overlapping movement windows are not independent prepared contacts.
-
-The seven coherent-W theorems give exact Clifford identities, spatial
-propagation, localized amplitude closure, a specified native residue factor
-and normalized spectral-energy conservation. They distinguish raw O,
-amplitudes O[1/5] and F5 residues. The factor uses an additional three-tick
-intercell coupling. Scalar finite-support injectivity is not injectivity
-of the entire four-channel reduction or a faithful residue realization
-of the Hilbert-space energy.
-
-ACTIVE-ISOSPECTRAL-RECORD [T] constructs two active sources with the same
-complete spectral distribution and different three-step receiver reading.
-THERMAL-ORIGINAL-PORT-APPARATUS and COMPACT-ACTIVE-RECORD-APPARATUS [T]
-give distinct supplied finite implementations with explicit read windows,
-resources, errors and later returns. Their locality and energy operators
-are not identified. FINITE-COHERENT-BATTERY-DRIFT [T] bounds a complete word
-with one finite coherent source and gives an energy-rounding error that
-does not accumulate with time.
-
-OCCUPIED-RECORD-EXPORT-REUSE and LOCAL-THERMAL-TWO-ATTEMPT [T] retain old
-memory, failed branches, output correlations and all spent stock. The latter
-is conditional on its own complete thermal core and uniform channel
-premises. DIRAC-CONTACT-COMPLETE-ACCOUNT and DIRAC-CONTACT-SOURCE-COHERENCE
-[T] give the full signed energy law, an exact conserving completion and
-sharp limits of stationary sources in their specified two-walk model.
-None of these statements equates its conserved account with every other
-time generator or supplies a physical outcome-selection law.
-All 26 live H/O owners and their decision conditions remain unchanged.
-
-## Reader and contact boundaries
-
-U-RAW-RESIDUE-CONTEXT-BOUNDARY [T] excludes every finite autonomous,
-source-independent context for a nonconstant permanent raw-residue reading.
-A supplied current Thue-Morse bit permits an explicit 23-state observer;
-neither its physical acquisition nor autonomous implementation follows.
-CONTEXT-COMPLETE-PRODUCT-LIFT-OBSTRUCTION [T] excludes a bijective complete-
-product lift of that particular nonsurjective update, not all reversible
-observers. FIELD-RETAINED-CONTACT-ARCHIVE [T] gives a sharp three-value
-last-gain code for the declared contacts, unbounded archive capacity across
-horizons, and an exact extension using two unbounded integer registers.
-
-The native two-message results separate three contracts. A common raw
-reset obstructs affine readings of any dimension. A global nonlinear chart
-has a common raw blank and permanent second-message readback. On its fixed
-550-point prepared family, affine observation dimension three and two-
-coordinate polynomial degree two are sharp when only semantic blank is
-required. A different 150-point joint preparation permits affine dimension
-two with a nonlinear decoder; its raw blank already contains the second
-message. Both messages are initially present in every construction. These
-are the precise scopes of U-ORIGIN-AFFINE-COMMON-RESET-BOUND,
-U-ORIGIN-NONLINEAR-TWO-MESSAGE-READOUT, U-FIXED-FAMILY-READOUT-COMPLEXITY
-and U-ALTERNATIVE-AFFINE-SEMANTIC-READOUT [T]. They supply no later independent
-loading, source depletion, local physical detector or indefinite renewal.
-
-SIGNED-PORT-OCCUPIED-REVERSIBILITY [T] gives complete rational wave/tape
-inverses and a positive conserved energy for the declared signed port.
-Finite/infinite agreement is limited to its prepared first two cold cuts.
-FUNDED-CONTACT-INVOLUTION [T] supplies a retained-direction contact with a
-bounded rational store, sharp blank budgets 2/5 and 8/5 on the stated
-receiver sets, and an explicit occupied-state funding boundary. Bounded
-energy does not bound precision or establish a physical reservoir. All
-26 live H/O owners and their decision conditions remain unchanged.
-
-## Two field characterisations involving five
-
-Two independent L1 theorems characterize two narrow arithmetic classes
-involving five. Neither derives or justifies the primitive axiom.
-
-- QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS [T] says that among full
-  quartic cyclotomic fields, the complete total-ramification locus is exactly
-  `{(K_5,5),(K_8,2)}`. Their residue-unit groups are respectively `C_4` and
-  `C_1`.
-- ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM [T] says that among finite
-  abelian Galois CM fields with exactly one nontrivial quadratic character,
-  even on CM conjugation, `Q(zeta_5)` is the unique absolute-discriminant
-  minimizer, with minimum `125`.
-
-These are separate frozen classes, not a physical-selection chain or evidence
-for the axiom. Total ramification is not a premise of the minimum theorem,
-and neither theorem says that its class or optimization rule is forced by
-`J`, the decoder, or Nature.
-TWO-PLACE-PHYSICS remains [D], and no live H or O row moves.
+METRO-ENC4-TRANSLATED-BOX decides the explicitly common ENC4 mathematical
+class. METRO-ENC4-NORMALIZATION adopts normalization after aggregation for that
+class. The remaining dimensional encodings and reduction completeness stay open.
 
 <!-- BEGIN GENERATED CORE CLAIMS -->
 The stable orientation claims are generated from the registry:
 
-- READING-SPLIT [D]: the partial decoder interface reads the registered legs by linear projection, binary Thue-Morse cut, and the owner-adopted algebraic quadratic registration; the linear leg is CODEC-TR4, the binary cut drives the census, and the quadratic leg is ALGEBRAIC-DMATTER only on (K_QDD,D_quadratic) through D_QDD_direct; the quadratic registration is L1 algebraic data, not a physical effect, apparatus, realized event, occurrence law, sampling law or L6 measure, and no totality beyond K_QDD, other-leg closure, uniqueness, or completeness of the decoder is claimed
-- J-UNIT [T]: Q(zeta_5)
-- J-PROJECTIONS [T]: in the principal archimedean embedding, J = 1 + zeta_5^2 has modulus 1/phi and principal argument 2 pi/5
-- PLENUM-POINT [T]: in Z[i, zeta_5], T_pl = s_J + i phi = 2i(1 - J), with s_J^2 = 3 - phi, abs(T_pl) = 2, arg(T_pl) = 3 pi/10, zeta_5 T_pl^2 + 4 = 0, T_pl^10 = -2^10, and T_pl/2 = zeta_20^3 = zeta_4^-1 zeta_5^2
-- J-GOLDEN-BRIDGE [T]: Z[zeta_5]
 - J-STEP [T]: Z^4, the regular representation
-- AXIOM-PROJECTION-DICTIONARY [D]: the modulus projection read as gravity and scale, the argument projection as electromagnetism and phase, the CRT factors of T_pl as the prime 5 write and prime 2 read, and the unit and ramified chords as gravity and space channels; a dictionary resting on J-PROJECTIONS, PLENUM-POINT, J-MODULUS-CHORD, and J-RAMIFIED-CHORD, with no uniqueness claim
-- CENSUS-313 [C]: the full enumeration of Z_5^6 under the Thue-Morse driven kernel, warmup 400, window 300, closure and stability checked
-- BORN-HALF-ANGLE [T]: every Born unit of A_8 = Z[zeta_8]/5; the normalized root on the 11 non antipodal units of the norm gated half (the squares of the cyclic unit group of order 24); at u = -1 the bisector vanishes and normalization is undefined
-- BORN-RESIDUAL-SPLIT [T]: the residual rings Z[i]/5 and Z[zeta_8]/5 and their conjugation swap
-- SPIN-BISECTOR [T]: the integer skeleton and the SL_2(F_25) shadow of order 8; no positivity claim
-- BORN-ORDER-STAIRCASE [T]: root orders 4, 8, 16 first realized at F_5, F_25, F_625, with minimality against every smaller degree (16 divides none of 4, 24, 124); the gate is the square condition on the bisector norm
-- MEASURE-BORN-VERB [D]: the measure read as the Born square of the verb, resting on the exact BORN-FACE-WEIGHTS theorem layer
-- MAXWELL-BIANCHI [T]: on the 3+1 tesseract the Bianchi identity dF = d(dA) = 0 holds identically in the 32 independent edge symbols on all 8 cubes, and gauge invariance F[A + d Lambda] = F[A] is an identity in 16 more vertex symbols on all 24 faces
-- MAXWELL-GAUSS-CHAIN [T]: Gauss as the boundary equation bd E = rho on the closed 2 x 2 x 2 spatial torus: the Smith form of the boundary has all seven elementary divisors equal to 1, a constructive two edge dipole solves the point pair exactly, and the integrated law holds on every one of the 256 vertex regions
-- MAXWELL-AMPERE-CHAIN [T]: the inhomogeneous pair as the face boundary equation on the 2^4 spacetime torus: conservation bd1 bd2 = 0 is an exact identity in the 96 face symbols, the Smith form of the face boundary has all 45 divisors equal to 1, and H_1 is free of rank 4 with the four winding certificates pairing to the identity on the elementary winding currents
-- MAXWELL-OBSTRUCTION-P [T]: the obstruction pair is counted in p = 5: over F_5 Gauss is solvable iff the total charge vanishes mod 5 (rank 7 with the augmentation annihilating the image, constructive solution and exhibited obstruction), and the current pair is solvable iff the current is conserved and all four winding numbers vanish mod 5 (the exact rank identity 45 = 64 - 19, the single winding obstructed, five parallel windings solved)
-- MAXWELL-CLOSED [D]: the dictionary reading: the classical Maxwell system of the decoder closes exactly on the chain complex, the electric and magnetic laws as boundary equations with their obstructions counted in p; no continuum limit is claimed
-- Z2-PLACES-SPLIT [T]: the cyclotomic Galois involutions sit at exactly two places: one involution at zeta_5 (the single order 2 element of the cyclic Galois group) and a complete Klein four at zeta_8; 5 = (2 + i)(2 - i) in Z[i] with conjugation swapping the two Gaussian primes above 5
-- TWO-PLACE-PHYSICS [D]: the v_5 place read as the write side for geometry, gravity, and the pentit substrate, the v_2 place as the read side for Clifford, Born, and the foreign qubit; CP read from zeta_5 and Gaussian conjugation, T from Thue-Morse reversal, and CPT as their composition; the Born square declared as the cross-place descent reading; no uniqueness or physical CPT-operator theorem is claimed
-- FORCE-WEYL-HOLONOMY [T]: the finite Weyl pair on five basis states satisfies Z X Z^-1 X^-1 = zeta_5 I exactly; the commutator phase is primitive of order 5 with principal argument 2 pi/5
-- FORCE-AS-CURVATURE [D]: the finite Weyl commutator read as a force curvature and, through AXIOM-PROJECTION-DICTIONARY, the two J projections read as the two abelian force channels; no uniqueness or completeness of the force dictionary is claimed
-- FRW-CANONICAL-FORM [T]: the rank 1 lapse action closes the displayed (00) constraint algebra: the lapse variation gives 3 H^2 = lambda rho, lambda = 216 pi gives H^2 = 72 pi rho, the coefficient 3 = C(3,2) counts the spatial 2-planes, continuity gives the second Friedmann equation, and the Hamiltonian constraint takes the canonical form; the fiber multiplier k_f = 1 is forced by the displayed master identity against G_nat = 27 = d^3 with V_cell = 864 pi carrying exactly one fiber 2 pi; no source-projector uniqueness, amplitude ansatz, or E_total claim is included
-- GRAVITY-BRIDGE-LAW [D]: the equation layer of the SI bridge on the single anchor m_e: alpha B g = 1 identically with B = alpha^-1/g; g = 2^5 phi^2 sqrt(3 - phi) with g^2 = 1024 phi^4 (3 - phi) and 3 - phi = |1 - zeta_5|^2 exactly; G_T = (32/33)^2 alpha^20 / g with (32/33)^2 = (2^5/(2^5 + 1))^2 and alpha content exactly alpha^20; the wall spelling ell_P / lambda_e = (32/33) alpha^10 / sqrt(g) is equivalent under ell_P^2 = 27 ell_G^2; the SI value of G is not claimed and stays on the frontier
-- COSMOLOGY-READING-DICTIONARY [D]: the zero linear variation in TT-LINEAR-ZERO read as zero linear tensor response and r_T = 0 at the declared isotropic dictionary layer, GYRON-DENSITY read as the mass-ladder prefactor, and the committed COSMOLOGY-REGISTER forms read as cosmological observables; no unique decoder or full perturbation theorem is claimed
-- BOOST-READING-SPLIT [T]: for every n >= 0 in Q(sqrt5), C_n = phi^n + phi^-n and S_n = phi^n - phi^-n read as (L_n, sqrt5 F_n) for even n and (sqrt5 F_n, L_n) for odd n; beta_n = S_n/C_n obeys the exact index-addition law and C_n^2 - S_n^2 = 4
-- BOOST-COUNT-LADDER [D]: the integer exponent n read as the substrate rapidity count n ln phi and beta_n as the decoder velocity; Einstein composition read as index addition, resting on BOOST-READING-SPLIT
-- COLOR-MCKAY-E8 [T]: tensoring by the spin row gives affine E8 with dimension marks; the moments are Catalan through degree 10 and first differ at degree 12 by 133 = 132 + 1; the verb weights are {4 phi^-2, 4 phi^2}
-- COLOR-LADDER-DICTIONARY [D]: the exact D5 to 2I to affine E8 representation and invariant ladder read as the nonabelian color door, with color su(3) on the traceless endomorphisms of the three dimensional trace kernel; no unique color assignment, QCD running, confinement, or complete measure lift is claimed
-- COLOR-KINEMATICAL-GL2 [D]: the special-linear kinematical image read as GL_2(F_5) of order 480 on the antisymmetric plane, embedded by g -> (det g)^-1 direct-sum g along 3 = 1 + 2
-- INTEGER-HERMITIAN-OCCUPIED-SOURCE [T]: Conditional L1 theorem of the explicitly specified model. The explicitly specified six-phase Hermitian source and occupied record map is a total reversible funded bijection with conserved proper account and finite shells; equal-account source signs with common bank772 produce fixed reader outputs−1,+1, sharp banks716/772 and recoverable old detector data.
-- INTEGER-PRIMITIVE-SOURCED-METRIC [T]: Conditional L1 theorem of the explicitly specified model. The explicit seven-phase integer extension and congruence inverse have a total funded completion; its primitive current-state reader exactly realizes the declared source-forced recurrence with all-counter denominator2*324^(n−1), ready-history Lorentz signature and same-counter source contrastell/162.
-- RELATIONAL-DECLARED-BOOST-INERTIA [T]: Conditional L1 theorem of the explicitly specified model. On the elliptic sector delta>0, the explicit declared H=sqrt(h squared+c squared P transpose gamma P) completion has the displayed full planar Poincare generators and stable moving family; the h10 object has energy/force inertia10/c squared under that common law.
-- RELATIONAL-CLOSED-RECOIL-RATIO [T]: Conditional L1 theorem of the explicitly specified model. The declared closed two-species apparatus with h10 and h45, shared boost law and finite spectator clocks admits the exact energy77 momentum-zero recoil at p24 with energies26 and51, and clock-adjusted inertial ratio9/2.
-- CONTACT-W-SPECTRAL-READING [T]: For the explicitly supplied contact-after-streaming walk W=exp[-i(2pi/5)P0]SG on ell2(Z_R x Z_r) tensor C4, G=((I+2iX) tensor (I+2iX))/5: the whole spectrum has two proved gaps of width at least acos(7/25)-2pi/5>0; the fixed cut alpha=3pi/10 defines a bounded self-adjoint H=i Log_alpha(W), exp(-iH)=W, with an explicit exponential spatial bound and ||[H,R]||<=csc^2[(acos(7/25)-2pi/5)/4]. Existence and correctness of this nominated reading; no uniqueness, finite-range, native derivation, particle identification or empirical reading claim.
-- SELECTED-SPECTRAL-ENERGY-SOURCE [T]: For every specified bounded 0<=H_S<=h on a separable Hilbert space and specified unitary V, the continuous battery L2([0,L+2h]) with fixed sine preparation admits a unitary U conserving H_S+H_B exactly, with joint vector error <=pi||V*H_SV-H_S||/L, half-diamond error <=min(1,pi^2 h osc(V*H_SV-H_S)/(2L^2)) and work error <=pi^2 h^2 osc(V*H_SV-H_S)/(4L^2). The selected contact-walk energy and two moving copies with V_eta=exp[i eta(R-Y)] satisfy these bounds, preserve common translations, and have the displayed q-schedule errors. A bounded autonomous generator realizes one combined period. Finite energy capacity with infinite Hilbert dimension; no exact universal target channel, uniform full-apparatus locality, finite integer realization, native derivation, species identification or self-stopping clock claim.
-- CM5-POLARIZATION-DICTIONARY [T]: Specified complex Jacobian B=Jac(y^2=x^5-1) with its canonical principal polarization and chosen fifth-root action: full integral endomorphism ring, Rosati conjugation, NS identification with O_F, ample cone and norm/intersection/degree formula, full origin-preserving automorphism orbits in bijection with integral F-ideals, content/type and unique fundamental cone. Existence and correctness for this model, with no uniqueness/native selection requirement.
-- CM5-INTEGRAL-PULLBACK-REACHABILITY [T]: Specified CM5 positive integral classes modulo positive units, integral endomorphism pullbacks with no content division; exact inert-valuation criterion, parity invariants, prime-norm table and no finite universal seed set. Fixed-model interpretation only.
-- JM-POSITIVE-REFERENCED-READING [T]: L1 positive outer record and mass-projector reconstruction up to sign; homogeneous scale obstruction; injective affine-reference reading on the specified S and G
-- JM-FUNDED-INTEGER-PAIR-SOURCE [T]: L1 Cartesian integer cell source with declared positive integer resource functional, finite fixed-budget levels, funded reversible dynamics and port-independent sharp K-round bank
-- CONTACT-W-BOUND-PAIR-RESPONSE [T]: For the explicitly specified contact-after-streaming W with mu=2 and g=2pi/5, the relative compact state at center momentum zero continues to a simple exponentially localized branch exp[-i Omega(P)] with Omega even and Omega''(0)=sqrt(16phi+7)/20. Finite unprojected binomial packets, with q=5^j, N=q^4, eta=2atan(1/q) and averaging time T=q, have actual mean displacement divided by the actual principal-momentum impulse tending to this curvature. Two moving copies with the specified continuous energy source of capacity q+8pi retain opposite responses and relative limit twice the curvature, while conserving the selected additive energy and total circular momentum. The first post-kick tick has zero bare-kick velocity; the claim is the stated averaged limit. No global closed contact-dispersion polynomial, positive-energy massless-particle interpretation, physical species, native carrier bridge, finite-dimensional source or intrinsic stopping clock is asserted.
-- HOMOGENEOUS-CAPTURE-CURRENT-RECORD [T]: L1 specified homogeneous one-pair one-carrier one-receiver occupancy model: a normalized relative-ac incoming packet has zero free bound weight and joint asymptotic capture-and-record probability p_full>=p_window>2/10^28; the same law intertwines the complete native physical-cut charge current and coherently transfers arbitrary encoded old-memory/reference correlations, with unaliased spectral energy only on the stated one-carrier safe window.
-- U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS [T]: At L1 for unchanged native U on the complete F5 trace sheets and the origin-zero Thue-Morse clock: on X1 separately supplied at every start, a whole-sheet pure fibre translation returning all pistons occurs exactly at even length with final clock bit one; the shortest nonzero length is four, with words 0011 and 1001 and r shifts +2 and -2. Lengths 2,4,6,8 have exact nonzero densities 0,1/4,11/24,1/2 and the stated all-start dyadic counts, including 0,1023,1876,2049 at N=4096. On the whole actually occupied sheet of an uninterrupted X1-union-X4 trajectory the four-tick return density is instead 1/3, directions 1/6 each, with no identities in that class. Six standard basis inputs certify affine whole-sheet translations. These overlapping-counter densities do not count every special pointwise return or supply prepared-contact rates, physical occurrence or renewal.
+- J-PROJECTIONS [T]: in the principal archimedean embedding, J = 1 + zeta_5^2 has modulus 1/phi and principal argument 2 pi/5
+- READING-SPLIT [D]: the partial decoder interface reads the registered legs by linear projection, binary Thue-Morse cut, and the owner-adopted algebraic quadratic registration; the linear leg is CODEC-TR4, the binary cut drives the census, and the quadratic leg is ALGEBRAIC-DMATTER only on (K_QDD,D_quadratic) through D_QDD_direct; the quadratic registration is L1 algebraic data, not a physical effect, apparatus, realized event, occurrence law, sampling law or L6 measure, and no totality beyond K_QDD, other-leg closure, uniqueness, or completeness of the decoder is claimed
+- J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE [T]: at L1 between the marked pure rational QDD lattice (Z^4,G_Q=I-11^T/5) and the marked circular quotient (L,G_L), with D=M_J-I, u_x=D^x e_0 and rho(c,b)u_x=u_(b+cx), the rational simultaneous intertwiner space XD=(-P_L)X, Xrho(3,0)=(-S_L)X is one-dimensional; its primitive integer positive-first-entry generator is A=5T=[[4,-1,-1,-1],[1,1,1,-4],[-3,2,2,2],[2,-3,2,-3]], det T=-1/5, and imposing T^T G_L T=G_Q leaves exactly +/-T before the fixed sign normalization; G_L T is unimodular, so T O_K=L#, T(lambda O_K)=L and T(lambda^2 O_K)=C_Z=(I+P_L)L for lambda=zeta_5-1, each adjacent index is five and L#/C_Z has Smith invariants (1,1,5,5); (L,G_L) is the even A4 root lattice of determinant five, its dual minimum squared norm is 4/5 and its complete minimum shell is exactly +/-w_x, w_x=T u_x, ten vectors/five antipodal classes whose differences generate L; L admits no integral orthogonal basis; this is relative marked lattice isometry to the dual, not literal carrier equality, an unmarked canonical bridge or physical selector
+- RELATIVE-CONTACT-INTEGRAL-LAW [T]: at L1 on the supplied Cartesian carrier O^N, O=Z[j], rho=j^2 and marked slots, the sum-preserving relative rotation has an integral solution exactly when x-y belongs to 2O, an index-16 sublattice; completing it by identity on the entire refused complement gives a total bijection C with inverse C^4 and C^5=I, preserving the complete O-valued sum, Hermitian norm, positive half-trace account and every marked slot residue modulo 1-j; fixed words with whole-slot permutations preserve the complete residue histogram; the contact, slot frame and arithmetic account are model premises, not a native-U implementation or physical energy identification
 - COHERENT-W-LOCALIZED-RING-CLOSURE [T]: At L1 for the chosen O=Z[zeta_20] and full finite-support port module, W=A/5 is a local Hermitian-form-preserving automorphism of direct_sum O[1/5]^4 with inverse A^dagger/5; O[1/5] is minimal among coefficient rings containing O for that full module. Raw A is injective but not onto direct_sum O^4. Raw residues retain their scale and no unital O[1/5] to F_5 map exists. Unit Hilbert normalization uses one fixed preparation scalar and may leave the localized coefficient module.
-- ACTIVE-ISOSPECTRAL-RECORD [T]: L1 on the fixed v105 homogeneous U_rec and its pinned active source: psi_plus/minus=(I+/-(U_rec^2-U_rec^-2))chi/sqrt(Z) have identical initial populations and complete spectral measures for all 26 old-memory labels and passive references; on the 25-label unwritten-memory family their exact three-step write contrast is greater than 1/50; supplied complete preparation and coherent setting gates preserve their controlled phases; no incoming-unbound capture, occurrence or native compilation
-- FINITE-COHERENT-BATTERY-DRIFT [T]: L1 for any supplied bounded 0<=Q<=Delta I, d>0, m=ceil(Delta/d), integer N>=2m and the stated sine-ready finite battery: complete total-charge sectors define a full-space unitary representation Gamma(U) conserving floor(Q/d)*d+B exactly; joint reference-uniform whole-word error is at most 2m sin(pi/(2L)), L=N-2m+2; every rounded-energy-conserving unitary changes original Q+B by an operator between -d I and d I; supplied coherence and spectral gates, not exact original-energy conservation or locality
-- RELATIVE-CONTACT-FOUR-SLOT-MINIMUM [T]: at L1 on O^26 with O=Z[j], rho=j^2, the declared total relative contact, arbitrary whole-slot permutations, initial data (6,0^21), exactly four arbitrary auxiliary slots and complete endpoint equality, the least initial auxiliary positive trace account is 27 for (3,3,3,3,0^18) and 12 for (-3,3,3,3,0^18); complete endpoint accounts and inverse witnesses attain both; no shortest length, common unknown-input encoder, native realization or physical energy interpretation is asserted
-- RELATIVE-CONTACT-RETAINED-BANK-CAPACITY [T]: at L1 in the same declared contact/permutation alphabet, the stated used banks cannot return to their initial states while prepared output data stay fixed and every other resource returns exactly; for N disjoint known-input loads and N retained signed or positive outputs, all changing auxiliary resources satisfy L_aux>=4N and E_aux(initial)>=12N; signed disjoint copies attain both, while positive copies give only the upper bound 27N; initial loads and sites are supplied and no clean or autonomous renewal is asserted
-- RELATIVE-CONTACT-COMMON-APPARATUS-OPEN [T]: at L1 the supplied total relative contact and five declared whole-slot transpositions admit one complete fixed program on O^56, with O=Z[j], that processes every ordered pair from the ten-input prepared family {0,1} times Z/5 through the same read core; the 46 designated auxiliary coordinates have one common initial state of positive half-trace account 128 and the complete account is 156; the current four archive banks distinguish all 100 input pairs, the first archives retain their addresses and values throughout reload and the second experiment, the shared controls become ready with initially funded fresh second banks, and every spent input and bank remains in the exact final state; the construction positively decides the common-apparatus existence question at the declared two-experiment horizon, with within-stage retention at complete read and step boundaries, and asserts no raw-input synthesis, arbitrary external post-start loading, contact-only implementation of the transpositions, regeneration of used memory, unbounded reuse, resource minimum, native-U realization or physical interpretation
-- RELATIVE-CONTACT-RHYTHM-CLASSIFICATION [T]: at L1 on O^3, O=Z[j], rho=j^2, with the supplied total integral relative contact and fixed tick F(x)=C23(C12(x)) acting left first, every trajectory is a cycle; doubling has first even return time 1+4r and changes least period/refusal totals by (P,R)->(P+4R,4R); the simultaneous-parity section is reached within at most eight ticks unless the complete primitive one- or five-cycle is recognized, and eight is sharp; with finite maximal common difference depth d and A_d=(4^(d+1)-1)/3, every nondiagonal cycle has exactly one primitive type with (P,R)=(A_d,4^d),(2A_d-1,2*4^d),or(5A_d,5*4^d), all attained; the fully diagonal case has (P,R,M)=(1,0,0) and infinite depth; the schedule and arithmetic carrier are supplied
-- RELATIVE-CONTACT-FINITE-WORKBANK-REUSE [T]: at L1, for every k>=1 fixed in advance, one supplied contact/SWAP word P_k on 26+25k slots accepts all 10^k tuples from ({0,1} times Z/5)^k with one common preparation of the 26+20k auxiliary slots; each cycle writes two records, copies them to fresh archive banks and reverses the complete 31-slot work core, restoring the same work-bank addresses and the current prepared source and clock; fixed swaps load prequeued inputs and retain all actual earlier inputs, the 2k archive banks alone decode the ordered input tuple, and each completed archive is untouched through the remainder of the forward P_k; total account is 68+74k, auxiliary account 68+60k and ring sum 2(k+1); P_k has 26870k contacts and 5(k-1) swaps, and its unreduced inverse has 107480k contacts and 5(k-1) swaps and restores every initial coordinate while removing the records; B five-valued marked banks alone require 5^B>=10^k, so 2k is a construction upper bound and not a storage minimum; no one finite carrier retaining unlimited history, occupied-archive regeneration, post-start external loading, autonomous schedule, contact-only swap compilation, native-U realization or physical interpretation follows
-- U-CARRY-MIRROR-FINITE-CIRCUIT [C]: At L1 the hash-bound discrete compiler witness in P-NATIVE-RECEIVER-CARRY-MIRROR-1 expands into 40348 SUM/EQ/MUL/SHIFT/REFLECT/SCALE primitives on 50 compiler cells, including 48 clean work cells; its literal reversed and primitive-inverted word realizes I on every two-digit input. The finite audit checks all 25 inputs in each direction, an untouched archive sentinel and five marked mirrors with complete undo. On the declared 62-cell carrier, only four primary pistons vary and 58 other initial cells are common; all 500 admitted s!=0 preparations execute the actual primary origin tick, live receiver shear, forward word, secondary SUM and origin tick, carry/archive swap, literal inverse word and inverse shear. Complete endpoints restore the primary post-tick checkpoint, retain high=s and archive=3s and the full secondary output at a=2s, and restore all 48 work cells at both multiplier boundaries. Each input uses 80705 primitives and two supplied native ticks, with four boundary classes of 125. The 62 count excludes the supplied origins and program control; no pulse execution, circuit minimum, extra carry coefficient, native global inverse, autonomous controller, contact-bank bridge or archive regeneration is established.
-- RELATIVE-CONTACT-FIVE-HEIGHT-COMPILER [T]: at L1 on the supplied integral contact carrier O^15, O=Z[j], rho=j^2, lambda=1-j, B=1-rho and J=1+rho, one explicit fixed 95-contact word with seven common stock coordinates Z takes (G_t,J,-J,Z) to (G_t,rho^(t+2)J,-rho^(t+2)J,Z) for every t in {-2,-1,0,1,2}, where G_t=(lambda+tB,lambda-tB,0,0,1+j-2j^3,2); every non-clock coordinate returns exactly, the common stock has Q=80, Hermitian account 33+14phi and sum (-4,-10,-6,-10), and the literal 380-contact inverse restores the entire initial state; all primitive sum, Hermitian, positive half-trace and labelled-residue invariants hold; the preparation, seven stock values and schedule are supplied, no word or stock minimum or classification of success at other individual integers is asserted, and no autonomous control, native-U realization or physical interpretation follows
-- RELATIVE-CONTACT-PREPARED-HEIGHT-FINITE-APPARATUS [T]: at L1 for every k>=1 fixed before choosing inputs, one supplied contact/SWAP program on 39+25k slots processes all 10^k sequences (n_i,t_i) in ({0,1} times {-2,-1,0,1,2})^k, with independently supplied Y_(n_i) and prepared height pairs, through the same source, translated clock and read core; each A U_i A^-1 cycle restores the complete translator and work core, keeps two fresh-target archive records and parks every earlier raw input through five fixed reload swaps; the 2k current archive banks alone decode the ordered input tuple and every completed archive is untouched during the remaining forward program; common auxiliaries number 39+20k with account 177+60k, the total account is 177+78k+10 sum_i t_i^2, H=70+37phi+k(30+18phi)+(4+2phi)sum_i t_i^2 and sum=(1+4k,-9-2k,-6,-12); forward counts are 27345k contacts and 5(k-1) swaps, and the unreduced inverse has 109380k contacts and the same swaps and restores all initial coordinates while removing the records; the result is finite-k induction with supplied prepared inputs and growing archives, not input synthesis, arbitrary post-start loading, occupied-archive regeneration, unlimited history on one finite carrier, autonomous scheduling, contact-only swap compilation, native-U realization or physical interpretation
-- RELATIVE-CONTACT-AFFINE-FIVE-PHASE-OBSTRUCTION [T]: at L1, for every finite m, affine all-integer preparation A+tD in O^m with arbitrary finite common stock included, and finite fixed word of total integral contacts and whole-slot SWAPs, the integer domain admits a finite partition into dyadic cylinders on each of which the full output is affine in its integer parameter; any designated output coordinate whose positive half-trace account is bounded for all t is constant on each cylinder and hence dyadic-periodic; therefore no such word produces the exact output rho^(t+c)J for every integer t, for any fixed integer c, even with unrestricted retained remainder coordinates; this excludes the stated all-integer finite-word class only and neither obstructs the five-height compiler nor classifies its success at other individual integers, nonlinear input preparation or unbounded programs
+- PLENUM-PREPARED-PERMANENT-RECORD [C]: at L1 using the accepted computed finite certificate and generic escape implication, every integer h>=0 and the specified WRITE/FAR preparations at n0=2^18 h+1 give fixed site 560 values m_plus/m_minus at every n>=2^18 h+196608 with both original writers retained; the phase and all-future extension are analytical but the specific claim remains C because of its computational premise; primary input equality is only S,H,Q, and receiver-only invariant equality does not imply whole-field indistinguishability; receiver and site are supplied after exposure, with no later active-read or reuse claim
+- COMPLETE-STATE-OBSERVATION-CONTRACT [T]: At L1, over an effective field with fixed finite coordinate order, the first-nonzero field section with its retained scalar and dimension-tagged zero is lossless; retaining all additional complete-state context transports every permitted deterministic transition, inverse and observation by exact conjugacy, without assuming homogeneity. Output factorization is equivalent to constancy on declared fibres; a quotient-state transition requires transition congruence, while history-only equivalence means equality of every admitted future output. In Q(zeta_5), the optional primitive integral section follows under the three named existing arithmetic premises. On a fixed nonzero-reference slice (a,b), its K-ray is injective, and each embedded rank-one projector has the displayed exact inverse and two-sided budget-controlled metric bounds. The admitted signed H3 preparation gives an exact three-tick failure of the specifically declared ray-only continuation. No local archive or account list is thereby a complete field; no native decoding circuit, physical gauge, occurrence law, calibration or cross-layer equivalence is supplied.
+- H3-FUNDED-LONGWAVE-SECTOR [T]: At L1 for the fully defined integer H3 law on the even torus nx=2N, ny=2, with even N and N > 2 max_(l in S)|l| for the prescribed common finite Fourier support S (maximum zero when S is empty) and only row-zero CORR nonzero, matter-zero invariance makes B inactive under the unchanged law. Its admitted two-tick Laurent symbol is unitary at both embeddings, with Hermitian generator G and squared speeds (5+sqrt(5))/8 and (5-sqrt(5))/8. For supplied two-embedding finite-Fourier initial data, positive integer D, horizon Ttime>=0, and integer H>=10 floor(Ttime N/5), the specified integer preparation at scale A=D 2^H is admitted through H; its fixed ten-tick reader has joint L2 error at most 4/D+(Ttime/N)||Psi0 second derivative||, including full-mode rounding error, and complete stock Q=N A^2||Z||_N^2. The inherited first-order initial-velocity condition, finite paid horizon and exponentially growing resource scale of this construction are retained. Matter-zero 2D transport is a product of axis walks, not isotropic propagation. The displayed X_A,Y_A coupled preparations rule out a common unrestricted normalized continuity modulus. No native preparer/detector, interacting general limit, optimal cost, physical speed, action/SI/qIKA or embedding selection follows.
+- H3-FINITE-REFERENCED-RECORD [C]: At L1 for the literal six fixed H3 histories with nx=8, ny in {4,6}, the named row-and-rail-matched ABSENT_ROW0/PLUS/MINUS preparations, initial phase zero and horizon 14: 174 full/post-C cuts and 84 full transitions preserve the complete global accounts and exact inverse; the actual reference CORR(4,ny-1)=8 rho^4 remains fixed through cut 14 and contributes q=128 exactly once to total Q=27392. The actual archive CORR(2,ny-1) is stationary at both stages of cuts 4..13 and its fixed trace reader returns 0,+1,-1 with q values 128,313,73. At cut 14 the signed q values are both 163 and reader values 1/6,-1/2, ending the hold. Whole-field field-chart-plus-scalar encodings retain phase/context, reconstruct every coordinate/account and carry exact native continuation; anchored pair charts preserve the stated outputs but do not replace the whole field. No permanence, ny=6 all-time absence, source preparation mechanism, native trace circuit, arbitrary renewal, coupled continuum or physical interpretation is asserted.
+- METRO-ENC4-TRANSLATED-BOX [T]: At L5 for every finite deterministic digit-word tuple with q>=2, a>=2, r>=1, nonempty allowed starts A0, rational nonnegative r-vector readout, commuting distinct-coordinate digit actions, ordered input/output bases and one common ENC4 convention: the finite rational aligned-limit set G decides uniform translated-box raw convergence exactly by singleton G and tagged aggregate convergence exactly by an identically zero stream or zero-free G with one common normalized direction. A finite exact joint certificate is terminating, sound, complete and decision-coherent, includes observable quotient/primary/peripheral/Jordan/boundary/residue data and rejection witnesses, and yields an effective modulus uniform in all translations and allowed starts. Relabeling, reachable restriction, congruence-checked Nerode quotient, transported coordinate permutation, common Pre_blk blocking and initialized MSD blocking preserve the decision and terminal. No completeness classification of all stream-equivalent tuples, outside-ENC4 convention, physical units or occurrence law is asserted.
+- METRO-ENC4-NORMALIZATION [D]: The explicitly adopted dimensionless L5-to-L6 tagged aggregate contract on precisely the common ENC4 domain of METRO-ENC4-TRANSLATED-BOX: first average the complete rational nonnegative raw stream over each translated box, then apply total Normalize, returning ZERO at zero mass or its probability vector otherwise. The exact theorem supplies INADMISSIBLE or the unique uniform ADMISSIBLE(L) and effective modulus. RAW convergence is a separate diagnostic, not an additional admission requirement; no pointwise-before-average normalization, physical unit or occurrence law is selected.
 
 <!-- END GENERATED CORE CLAIMS -->
-Time is a counter. Space is read through commutators. The modulus and
-argument of J provide two exact algebraic projections. Their physical
-interpretations are only as strong as the registered dictionary rows.
-
-The selected FRW-INHOM dictionary supplies one continuous homogeneous FRW
-metric with separately marked finite inhomogeneous source and constraint
-records. Its complete joint-action proof closes the positive existence
-clause; it supplies no full continuous inhomogeneous metric, physical TT
-emission, scalar-spectrum comparison or SI calibration.
-
-The selected TT-SOURCE dictionary maps the unchanged native K1 packet to
-one zero-start outgoing TT history through Phi=H1-H0. The complete-transfer
-condition, relative sign and isolated onset are explicit choices. Its linear
-source equations and quadratic work/auxiliary records are compatible; no
-complete microscopic source depletion, physical occurrence, outgoing vector
-state, scalar comparison, numerical r_T or L2-L6 output is supplied.
-
-The authoritative current state is `canon/REGISTRY.tsv`.
-`canon/CANON.md` gives complete scopes and `canon/FRONTIER.md` gives
-the live obligations grouped by scheduler-only program metadata from
-`canon/FRONTIER_PROGRAMS.tsv`. That metadata creates no scientific edge or
-status. Reproductions under `reproduce/` must exit zero
-with byte-identical stdout.
