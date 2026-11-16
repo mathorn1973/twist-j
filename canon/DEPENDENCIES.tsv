@@ -515,7 +515,7 @@ TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-SEMILINEAR-TWOFOLD	BOUNDED_BY	Gamma_sl remains 
 TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-REVERSAL-CLOSURE	BOUNDED_BY	R, N, and NR remain drive comparison actions and do not enlarge the postcomposition gauge
 WALL-CIRCLE-LEMMA	J-PROJECTIONS	REQUIRES	the N = 5 corollary uses the registered archimedean J-channel locations
 WALL-CIRCLE-LEMMA	PI-FROM-J	REQUIRES	the principal logarithm fixes the pi normalization and branch used in the proof
-METRO-ADMISSIBILITY	METRO-REDUCTION-CALCULUS	REQUIRES	the exhaustive residual class R1 is defined as U_RF minus the dimensional child and therefore requires the parent's exact U_RF protocol type
+METRO-ADMISSIBILITY	METRO-REDUCTION-CALCULUS	REQUIRES	the exhaustive residual class R1 is U_RF minus the full original dimensional class C_dim, including the adopted common ENC4 part and remaining outside-ENC4 part, and requires the exact U_RF protocol type
 METRO-REDUCTION-CALCULUS	DEF-ARCHITECTURE	REQUIRES	the typed protocol and reduction calculus is conditional on the declared architecture
 METRO-REDUCTION-CALCULUS	METRO-FINITE-STATE-RATIONALITY	REQUIRES	the one-dimensional theorem is a boundary and base dependency only, not a proof of the calculus
 METRO-ADMISSIBILITY-DIM	DEF-ARCHITECTURE	REQUIRES	the child protocol type is conditional on the declared architecture
@@ -1233,3 +1233,12 @@ PLENUM-PREPARED-PERMANENT-RECORD	PLENUM-FULL-CHAIN-FINITE-CERTIFICATE	REQUIRES	T
 RECIPROCAL-J-SIGN-REMOTE-HOLD	RECIPROCAL-J-FUNDED-INTEGRAL-CONTACT	REQUIRES	The stated construction uses this exact accepted prerequisite at L1
 PLENUM-PREPARED-PERMANENT-RECORD	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	The supplied L1 record does not provide the target-independent complete physical apparatus, active event mechanism or occurrence law owned by this separate obligation
 RECIPROCAL-J-SIGN-REMOTE-HOLD	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	The supplied L1 record does not provide the target-independent complete physical apparatus, active event mechanism or occurrence law owned by this separate obligation
+COMPLETE-STATE-OBSERVATION-CONTRACT	CYCLOTOMIC-CLASS-NUMBER-ONE	REQUIRES	Optional primitive integral section only; the field chart, generic conjugacy and fixed-reference proof are independent of this arithmetic premise.
+COMPLETE-STATE-OBSERVATION-CONTRACT	J-HARMONIC-SEAM	REQUIRES	Optional primitive integral section only; the field chart, generic conjugacy and fixed-reference proof are independent of this arithmetic premise.
+COMPLETE-STATE-OBSERVATION-CONTRACT	J-UNIT-STRIP-NORMAL-FORM	REQUIRES	Optional primitive integral section only; the field chart, generic conjugacy and fixed-reference proof are independent of this arithmetic premise.
+H3-FINITE-REFERENCED-RECORD	COMPLETE-STATE-OBSERVATION-CONTRACT	REQUIRES	Field-chart reconstruction, exact complete-state conjugacy and fixed-reference projector identities used by the finite audit; no primitive integral section implementation is required.
+METRO-ENC4-TRANSLATED-BOX	DEF-ARCHITECTURE	REQUIRES	The typed U_RF finite digit-word carrier and declared pointwise L5 stream semantics.
+METRO-ENC4-TRANSLATED-BOX	METRO-COMMON-BLOCKING	REQUIRES	The already proved pointwise stream transport for common Pre_blk blocking and initialized MSD augmentation; the other four arrow transports are proved directly here, without relying on their C-grade censuses.
+METRO-ENC4-NORMALIZATION	METRO-ENC4-TRANSLATED-BOX	REQUIRES	The exact common ENC4 decision, total tagged result and uniform effective modulus provide the mathematical source of this adopted L5-to-L6 dictionary.
+METRO-ENC4-NORMALIZATION	DEF-ACTION-LAYERS	REQUIRES	The complete raw L5 stream and dimensionless tagged L6 endpoint retain their distinct protocol types.
+METRO-ADMISSIBILITY-DIM	METRO-ENC4-TRANSLATED-BOX	BOUNDED_BY	The exact common ENC4 theorem delimits the discharged subdomain C_ENC4; the open obligation retains only C_dim minus that subdomain and keeps the full C_dim for R1/R6 ownership.
