@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v111
+historical guards: exact reconstructed v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v112
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -234,5 +234,14 @@ PASS 229 V111-PROOF-SCOPE byte-pinned complete contact, finite-stock, refusal, e
 PASS 230 V111-EVIDENCE seven theorems use inline scope hashes; both plenum computations bind the exact eight-file reproduction bundle and require two architectures
 PASS 231 V111-SOURCE-CUSTODY all 37 accepted source and neutral run-record files retain exact bytes, SHA-256 and Git blob identities; structural checking is not independent scientific review
 PASS 232 V111-REPRO-INVENTORY the exact 41-directory inventory adds only the accepted plenum reproduction to the validated historical 40; no scientific verifier is imported or executed
+PASS 233 V112-PRIOR-BYTES thirteen exact v112 Canon inputs and one metadata-test inverse reconstruct public v111 before all 232 historical guards
+PASS 234 V112-CLAIM-LEDGERS all 621 prior identifiers and statuses remain, two METRO scope rows change explicitly, and five new rows and seven events are exact
+PASS 235 V112-DEPENDENCIES the R1 basis clarification and only the declared new edges change the premise ledger; no theorem requires a computational or open premise
+PASS 236 V112-OPEN-BOUNDARY all 26 live owners and ten roots remain, with the residual METRO lift open and the separate ENC4 normalization adopted at D
+PASS 237 V112-PROOF-SCOPE the five byte-pinned statements preserve complete-state hypotheses, funded finite-time bounds, the finite H3 record and the common ENC4 domain
+PASS 238 V112-EVIDENCE four new inline rows and both scoped METRO rows match scope hashes; finite H3 evidence binds the exact three-file two-architecture bundle
+PASS 239 V112-PRESENTATION the twelve Core selections are exact and section 18 retains all twelve normative owners and the full rapidity evaluation obligation
+PASS 240 V112-SOURCE-CUSTODY the accepted public ENC4, H3 and intake files retain exact bytes, SHA-256 and Git blob identities
+PASS 241 V112-REPRO-INVENTORY the exact 43-directory inventory restores the historical 41 after validating both supplements; no scientific verifier is imported or executed
 
-RESULT 232/232 ALL PASS
+RESULT 241/241 ALL PASS
