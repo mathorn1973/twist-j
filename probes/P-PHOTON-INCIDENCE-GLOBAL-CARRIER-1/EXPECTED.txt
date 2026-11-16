@@ -1,0 +1,8 @@
+PASS shells: directed=60 paired=30 nearest=6
+PASS incidence: groups=48 transported_rows=1440
+PASS moments: paired_second=324I quartic_isotropic=true
+PASS forms: spatial_terms=61 metric_floor=6/81
+PASS characteristic: det(lambda I-T)=-lambda Q
+PASS torsion: zero=1 one_third=4 thirty_two_over_eighty_one=3
+PASS controls: corrupt_row orientation fixed_gauge bad_weight missing_pair c eta off_graph
+PASS PHOTON-INCIDENCE-GLOBAL-CARRIER-1
