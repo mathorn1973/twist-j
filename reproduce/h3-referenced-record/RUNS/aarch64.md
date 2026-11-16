@@ -1,0 +1,21 @@
+# Exact finite reproduction record
+
+candidate_commit: 5750adfce695b1a5460eed6ba847b3af8c97dbef
+run_base_commit: 5750adfce695b1a5460eed6ba847b3af8c97dbef
+reproduction: h3-referenced-record
+verifier_sha256: 4553945d3bf32574ffd55de917859497e9644394f506aaf01ff9492adb8eeedd
+expected_sha256: 236164bad41772f516600e2f573d28791dd350ff32de8c28d1033f4386a80c1d
+command: python3 reproduce/h3-referenced-record/verify.py
+platform: Linux
+architecture: aarch64
+python: 3.11.2
+exit_code: 0
+stdout_sha256: 236164bad41772f516600e2f573d28791dd350ff32de8c28d1033f4386a80c1d
+stdout_bytes: 442
+stdout_lines: 10
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS
+started_utc: 2026-11-16T00:18:26.118177+00:00
+finished_utc: 2026-11-16T00:18:29.796508+00:00
+timeout_seconds: 120
