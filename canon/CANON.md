@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v112
+# TWIST-J Public Canon v113
 
-**Release identity.** Public Canon v112. Normative authority and activation
+**Release identity.** Public Canon v113. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -23829,49 +23829,59 @@ blocking, RG or universality bridge. It proves no Gibbs state, thermodynamic
 limit, roughening, Coulomb or massless phase, propagator, continuum limit or
 physical photon.
 
-### Photon successor roots
+### Photon global support and the separate phase question
 
-The preceding theorems do not repair or reopen `PHOTON-KAPPA-LEMMA [F]` or
-`PHOTON-WINDOW-PROOF [F]`. They delimit two separate successor roots.
+The earlier photon falsifiers retain their registered scopes. The selected
+L2-to-L5 transfer in `PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]` and the exact
+`PHOTON-TEMPORAL-CHARACTERISTIC [T]` fix the operational null set on the
+temporal character circle times the reciprocal `D3` torus.
 
-`PHOTON-CONE-CONVERGENCE [O]` is now narrowed to the unresolved global
-carrier problem. The complete owner-adopted tuple
-`PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]`, supported by
-`PHOTON-TEMPORAL-CHARACTERISTIC [T]`, yields the exact L5 characteristic
+`PHOTON-INCIDENCE-SUPPORT [D]` adopts the L2-to-L4 scalar incidence dictionary.
+It starts from the weighted `D3` shell graph with trivial connection and
+the primitive integer time line. The source action has the temporal
+difference square with coefficient one and the negative spatial pair
+squares with coefficients `w_v/324`. The paired L2 second moment
+`324 I_3` fixes the unit tangent normalization. The temporal line supplies
+the variational incidence and its translation character.
+
+The admissible set `B` is a subset of the 30 registered spatial shell pairs.
+It is invariant under all signed coordinate permutations and generates
+`D3`. Each finite-range rational
+factor `R` has identity rows on `B` and satisfies `R D_B = D_S` as a
+group-ring operator identity. Centered incidence gives spatial real sign
+lines and one temporal sign line. Averaging the spatial pullback metric
+over the point group preserves the scalar-gradient sector and its
+quadratic value. Literal character equality and the deck transitions fix
+the unit-character graph. The full-shell identity and a six-nearest-pair
+factorization are both admitted.
+
+`PHOTON-CONE-CONVERGENCE [D]` closes the global L4-to-L5 comparison in that
+class. Its map `iota` preserves both literal marked characters at every
+graph point. For each admitted presentation the source quadratic value is
 
 ```text
-K_op = {(omega,k) : det C(omega,k)=0},
+Q(omega,k) = 2 - lambda - lambda^(-1) - s(k),
+lambda = exp(-i omega),
+det(lambda I - T(k)) = -lambda Q(omega,k).
 ```
 
-on the selected `D3` quotient. The L2-to-L5 temporal-characteristic gate is
-closed positively as a dictionary lift. `PHOTON-HERM2-TANGENT-GERM [T]`
-also proves that the rescaled characteristic has the standard Hermitian
-Minkowski determinant as its exact quadratic germ, with an effective bounded-
-set modulus. That local/scaling comparison is closed mathematics and is not
-owned by an open gate.
+Thus `iota(K_quad)=K_op` on the whole periodic base, including both
+frequency branches and their common apex. The six-component spatial
+bundle plus the temporal line supplies an exact witness. The full
+fibrewise null cone is a different carrier because its zero section
+projects to every base point. A positive second-difference time term can
+preserve the quadratic germ while changing the global decision. The
+adopted local action and map are therefore part of the claim.
 
-Globally, `PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION [T]` proves that the
-natural single-chart separated inversion-equivariant vector-square-root
-class is empty. The remaining obligation first requires a separately frozen
-complete admissible L4 class `A_global` of pairs `(X_quad,K_quad)`, with
-`K_quad` a null subset of its carrier `X_quad`; the class may include
-multichart or twisted-bundle, frequency-mixing, higher-rank or otherwise
-differently typed constructions. It then asks whether there exist
-`(X_quad,K_quad) in A_global` and an admissible total map
-
-```text
-iota : X_quad -> carrier(K_op)
-```
-
-with `iota(K_quad)=K_op` as exact equality of global null sets. This is
-`GATE-L4-L5-PHOTON-GLOBAL-CARRIER`, still `OPEN_LIFT`. Failure of the frozen
-separated class does not decide that broader class. `CENTRAL-LIFT-PHASE`
-supplies only L4 quadratic-support action, not a positive or causal Herm2
-cone. Here convergence means agreement of two typed routes, not a continuum
-limit. The two registered temporal branches are unit-modulus phases; they are
-not a contraction/expansion pair in transfer-amplitude sense. A broader
-contraction/expansion, matter/light or visible/invisible interpretation is
-neither assumed nor refuted by this closure.
+The complete proof and exact two-architecture audit are recorded in
+[P-PHOTON-INCIDENCE-GLOBAL-CARRIER-1](../probes/P-PHOTON-INCIDENCE-GLOBAL-CARRIER-1/RESULT.md).
+`PHOTON-HERM2-TANGENT-GERM [T]` and the empty ordinary separated
+single-chart class of
+`PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION [T]` keep their original scopes.
+The global result compares two typed readings of the selected data.
+`CENTRAL-LIFT-PHASE` retains its own L4 support action. Physical time,
+Lorentz invariance, polarization, propagators, apparatus and a physical
+photon require their own evidence.
 
 `PHOTON-MASSLESS-PHASE [O]` separately owns the L4-to-L6 mathematical phase
 question. Before it can move, the exact five-vector must be embedded in a
@@ -23883,9 +23893,7 @@ theorem-preserving comparison with explicit constants. The finite
 Wilson/Villain nonmembership theorem is boundary information only; it is not
 negative closure of this broader obligation.
 
-Both successor roots are `ROOT / STOP / FORMAL`. Neither adopts a roughening
-slogan, an uncited Froehlich-Spencer import, Lorentz invariance, a continuum
-propagator, polarization, apparatus, physical readout or a physical photon.
+The separate massless-phase root remains `ROOT / STOP / FORMAL`.
 
 The electron: g = 2 = (2 pi/5) / (pi/5) is the vertex flux over the
 spinor half angle, the reading ELECTRON-G-TREE [D] on exact pillars:

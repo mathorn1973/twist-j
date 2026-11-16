@@ -1237,3 +1237,20 @@ predeclared descriptions. The 241-check result is an output contract,
 rather than an execution receipt. The structural adapter executes no
 scientific verifier. Formal complete replay follows the prospective
 immutable source pin and fresh byte readback, on both required architectures.
+
+## Public Canon v113 photon dictionary closure
+
+The v113 adapter checks the reviewed fold against exact v112 input bytes using
+a hash-pinned reverse patch. Every v112 and earlier assertion is evaluated on
+its own reconstructed inputs. The four additional guards check both named
+dictionary lifts, their common sealed public probe bundle and exact lifecycle
+records, and the reduction from 26 to 25 live H/O owners. The rest of the
+Frontier schedule is preserved. The aggregate partition is
+T478/D62/C43/H2/O23/F19 with 627 claims.
+
+The incidence-support and global-null-set dictionaries are restricted to the
+adopted carrier and admissible maps. The local Hermitian germ and the separated
+single-chart obstruction retain their earlier scopes. The adapter verifies the
+ledger and source custody, without replaying the photon proof or deciding a
+physical photon, continuum limit, or massless phase. The separately required
+architecture jobs replay frozen scientific evidence.

@@ -3488,6 +3488,500 @@ V112_STANDALONE_SOURCES = frozenset(('notes/canon/METRO-ENC4-CLOSURE-2026-11-13.
  'notes/canon/METRO-ENC4-REVIEW-RESPONSE-2026-11-13.md'))
 
 
+
+# The release assembly binds this adapter to the reviewed v113 fold and probe.
+V113_INPUT_PATCH = {'canon/CANON.md': {'current_bytes': 1555510,
+                    'current_sha256': '47114cb616069242cff36bb499e5fe9b11266a92c744ba3f15a9085c11956b34',
+                    'prior_bytes': 1554930,
+                    'prior_sha256': '246c76843fca21da8a4e7e16c3324d674690cd12c38b26d7fcd96cf094217534',
+                    'restore': [(0,
+                                 3,
+                                 '# TWIST-J Public Canon v112\n'
+                                 '\n'
+                                 '**Release identity.** Public Canon v112. Normative authority and '
+                                 'activation\n'),
+                                (23831,
+                                 23884,
+                                 '### Photon successor roots\n'
+                                 '\n'
+                                 'The preceding theorems do not repair or reopen '
+                                 '`PHOTON-KAPPA-LEMMA [F]` or\n'
+                                 '`PHOTON-WINDOW-PROOF [F]`. They delimit two separate successor '
+                                 'roots.\n'
+                                 '\n'
+                                 '`PHOTON-CONE-CONVERGENCE [O]` is now narrowed to the unresolved '
+                                 'global\n'
+                                 'carrier problem. The complete owner-adopted tuple\n'
+                                 '`PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]`, supported by\n'
+                                 '`PHOTON-TEMPORAL-CHARACTERISTIC [T]`, yields the exact L5 '
+                                 'characteristic\n'
+                                 '\n'
+                                 '```text\n'
+                                 'K_op = {(omega,k) : det C(omega,k)=0},\n'
+                                 '```\n'
+                                 '\n'
+                                 'on the selected `D3` quotient. The L2-to-L5 '
+                                 'temporal-characteristic gate is\n'
+                                 'closed positively as a dictionary lift. '
+                                 '`PHOTON-HERM2-TANGENT-GERM [T]`\n'
+                                 'also proves that the rescaled characteristic has the standard '
+                                 'Hermitian\n'
+                                 'Minkowski determinant as its exact quadratic germ, with an '
+                                 'effective bounded-\n'
+                                 'set modulus. That local/scaling comparison is closed mathematics '
+                                 'and is not\n'
+                                 'owned by an open gate.\n'
+                                 '\n'
+                                 'Globally, `PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION [T]` proves '
+                                 'that the\n'
+                                 'natural single-chart separated inversion-equivariant '
+                                 'vector-square-root\n'
+                                 'class is empty. The remaining obligation first requires a '
+                                 'separately frozen\n'
+                                 'complete admissible L4 class `A_global` of pairs '
+                                 '`(X_quad,K_quad)`, with\n'
+                                 '`K_quad` a null subset of its carrier `X_quad`; the class may '
+                                 'include\n'
+                                 'multichart or twisted-bundle, frequency-mixing, higher-rank or '
+                                 'otherwise\n'
+                                 'differently typed constructions. It then asks whether there '
+                                 'exist\n'
+                                 '`(X_quad,K_quad) in A_global` and an admissible total map\n'
+                                 '\n'
+                                 '```text\n'
+                                 'iota : X_quad -> carrier(K_op)\n'
+                                 '```\n'
+                                 '\n'
+                                 'with `iota(K_quad)=K_op` as exact equality of global null sets. '
+                                 'This is\n'
+                                 '`GATE-L4-L5-PHOTON-GLOBAL-CARRIER`, still `OPEN_LIFT`. Failure '
+                                 'of the frozen\n'
+                                 'separated class does not decide that broader class. '
+                                 '`CENTRAL-LIFT-PHASE`\n'
+                                 'supplies only L4 quadratic-support action, not a positive or '
+                                 'causal Herm2\n'
+                                 'cone. Here convergence means agreement of two typed routes, not '
+                                 'a continuum\n'
+                                 'limit. The two registered temporal branches are unit-modulus '
+                                 'phases; they are\n'
+                                 'not a contraction/expansion pair in transfer-amplitude sense. A '
+                                 'broader\n'
+                                 'contraction/expansion, matter/light or visible/invisible '
+                                 'interpretation is\n'
+                                 'neither assumed nor refuted by this closure.\n'),
+                                (23895,
+                                 23896,
+                                 'Both successor roots are `ROOT / STOP / FORMAL`. Neither adopts '
+                                 'a roughening\n'
+                                 'slogan, an uncited Froehlich-Spencer import, Lorentz invariance, '
+                                 'a continuum\n'
+                                 'propagator, polarization, apparatus, physical readout or a '
+                                 'physical photon.\n')]},
+ 'canon/CHANGELOG.md': {'current_bytes': 223146,
+                        'current_sha256': '4823c6bf14f312796dfe6e14e4eb974fc15e5ad47157acaf21d168a942a06903',
+                        'prior_bytes': 222577,
+                        'prior_sha256': '7fc1910fb4f4443ca7f4b63b23484d521aa899beb9e6ff8b09417f0126ce056b',
+                        'restore': [(2, 3, '## Public Canon v112\n'),
+                                    (5,
+                                     6,
+                                     'Registry snapshot: 626 claims; 0 T-LOCK, 478 T, 60 D, 43 C, '
+                                     '2 H, 24 O, 19 F; 26 live H/O.\n'),
+                                    (8, 20, '')]},
+ 'canon/CORE.md': {'current_bytes': 17207,
+                   'current_sha256': 'a43ad24109dfa4331a03945963295de801e934a003cd1ee9c61dda560b77783e',
+                   'prior_bytes': 17207,
+                   'prior_sha256': '803270bf8af518966554924b2c0ecaa5e3e61fb5c596957927b4c72fe7fb2731',
+                   'restore': [(2,
+                                3,
+                                '**Release identity:** Public Canon v112. Authority and activation '
+                                'are declared\n'),
+                               (12,
+                                13,
+                                'Public Canon v112 also declares a discrete architecture.\n')]},
+ 'canon/DEPENDENCIES.tsv': {'current_bytes': 207257,
+                            'current_sha256': 'f1a692670236ad92e2e8cd80e9903ab19c8a7037da4c5ce6e3f3e230a3c3e957',
+                            'prior_bytes': 206968,
+                            'prior_sha256': 'd1a6bf3bb775a97d26a3df0378156aed5139ff3f2e1081835c48584df91ba6b1',
+                            'restore': [(714,
+                                         719,
+                                         'PHOTON-CONE-CONVERGENCE\tDEF-ACTION-LAYERS\tREQUIRES\t'
+                                         'the remaining global-carrier obligation is exactly a '
+                                         'typed MULTI comparison from a separately frozen L4 '
+                                         'carrier class to the canonical L5 characteristic\n'
+                                         'PHOTON-CONE-CONVERGENCE\tCENTRAL-LIFT-PHASE\tBOUNDED_BY\t'
+                                         'the registered L4 normalized Hermitian support action '
+                                         'constrains one source route but explicitly supplies no '
+                                         'complete admissible global carrier class or total cone '
+                                         'map\n'),
+                                        (730,
+                                         732,
+                                         'PHOTON-CONE-CONVERGENCE\t'
+                                         'PHOTON-SPATIAL-TEMPORAL-TRANSFER\tREQUIRES\tthe '
+                                         'positively closed dictionary lift fixes the selected '
+                                         'T_D3 carrier and normalized symbol consumed by the '
+                                         'remaining global comparison\n'
+                                         'PHOTON-CONE-CONVERGENCE\tPHOTON-TEMPORAL-CHARACTERISTIC\t'
+                                         'REQUIRES\tthe remaining L4-to-L5 global comparison '
+                                         'consumes the exact canonical K_op proved on the selected '
+                                         'tuple\n'),
+                                        (744,
+                                         746,
+                                         'PHOTON-CONE-CONVERGENCE\tPHOTON-HERM2-TANGENT-GERM\t'
+                                         'REQUIRES\tthe exact local Hermitian tangent germ is a '
+                                         'fixed consumed endpoint and is no longer part of the '
+                                         'remaining global debt\n'
+                                         'PHOTON-CONE-CONVERGENCE\t'
+                                         'PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION\tBOUNDED_BY\t'
+                                         'the natural separated inversion-equivariant single-chart '
+                                         'vector class is empty while broader multichart, twisted, '
+                                         'frequency-mixing and higher-rank classes remain '
+                                         'unclassified\n')]},
+ 'canon/EVIDENCE.tsv': {'current_bytes': 125685,
+                        'current_sha256': '8d48c5001462a4b760d6554c2912a6c1ea20841997ba1a0b4ed713c8bd933e28',
+                        'prior_bytes': 125419,
+                        'prior_sha256': 'd434072f2d0a7f7730d083d6d2a37d3975fe5b103b1d0858258f4c8c242b6128',
+                        'restore': [(391,
+                                     393,
+                                     'PHOTON-CONE-CONVERGENCE\tEV-PHOTON-CONE-CONVERGENCE\t'
+                                     'INLINE_CANON\tinline\t'
+                                     '5c97f9bed2b084b792ed3f83e75507dd0bf9880d8191c7ff0e53712cdd9db245\t'
+                                     'registry-scope-sha256-v1\tnone\n')]},
+ 'canon/FRONTIER.md': {'current_bytes': 25630,
+                       'current_sha256': '2720c8032a31a4a0c3a704b00ca462f6e5faad6696958c0e4e03e3b7b74658cd',
+                       'prior_bytes': 27712,
+                       'prior_sha256': 'd32f4a06f8f7a3d9a5b8351fd2119ce90c8828450e781b779b5a4655d43cc8ea',
+                       'restore': [(92,
+                                    92,
+                                    '- PHOTON-CONE-CONVERGENCE [O]: the remaining open MULTI '
+                                    'global-carrier decision after '
+                                    'PHOTON-SPATIAL-TEMPORAL-TRANSFER [D] and '
+                                    'PHOTON-TEMPORAL-CHARACTERISTIC [T] fix K_op on the selected '
+                                    'T_D3 carrier, PHOTON-HERM2-TANGENT-GERM [T] closes exact '
+                                    'local quadratic-germ agreement with the standard Hermitian '
+                                    'determinant, and PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION '
+                                    '[T] proves empty the natural total single-chart class '
+                                    'p:T_D3->R^3 with p(-k)=-p(k) and |p(k)|^2=s(k): the '
+                                    'unresolved route first requires a separately frozen complete '
+                                    'broader admissible L4 class A_global of pairs '
+                                    '(X_quad,K_quad), where K_quad is a null subset of its carrier '
+                                    'X_quad and the class may include multichart or '
+                                    'twisted-bundle, frequency-mixing, higher-rank or otherwise '
+                                    'differently typed constructions; it then asks whether '
+                                    'A_global is nonempty and there exist (X_quad,K_quad) in '
+                                    'A_global and an admissible total typed map '
+                                    'iota:X_quad->carrier(K_op) with iota(K_quad)=K_op as exact '
+                                    'equality of global null sets; CENTRAL-LIFT-PHASE supplies '
+                                    'only L4 quadratic-support action and no complete global '
+                                    'carrier class; convergence means typed route agreement, not a '
+                                    'continuum limit, and no Lorentz invariance, phase, '
+                                    'propagator, polarization, apparatus, readout or '
+                                    'physical-photon conclusion is adopted\n'
+                                    '  Queue: ROOT; STOP; FORMAL.\n'
+                                    '  Decision: STOP until A_global and its admissible-map '
+                                    'contract are frozen independently and '
+                                    'GATE-L4-L5-PHOTON-GLOBAL-CARRIER passes; closes AGREE only '
+                                    'when the complete class is nonempty and some (X_quad,K_quad) '
+                                    'in A_global together with an admissible total typed '
+                                    'iota:X_quad->carrier(K_op) proves exact global null-set '
+                                    'equality; closes DIFFER only when the same complete nonempty '
+                                    'class and admissible-map contract are fixed and, for every '
+                                    '(X_quad,K_quad) in A_global and every admissible total typed '
+                                    'iota:X_quad->carrier(K_op), an exact witness proves that '
+                                    'equality fails; the closed tangent germ and empty separated '
+                                    'inversion-equivariant single-chart subclass neither close nor '
+                                    'falsify this broader gate, and failure of a provisional '
+                                    'carrier while completeness remains open is STOP\n'),
+                                   (105, 106, 'Live total: 26.\n')]},
+ 'canon/FRONTIER_PROGRAMS.tsv': {'current_bytes': 1444,
+                                 'current_sha256': '53fa7ded98facb495ed676f0ec6b20cd488150afdbf8734f3f436fead0ee0de7',
+                                 'prior_bytes': 1502,
+                                 'prior_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                                 'restore': [(14,
+                                              14,
+                                              'PHOTON-CONE-CONVERGENCE\tPHOTON_CONTINUUM\tROOT\t'
+                                              'STOP\tFORMAL\n')]},
+ 'canon/GATES.tsv': {'current_bytes': 13927,
+                     'current_sha256': '207c999f2e70538949fbdf434a8be2fb6ccf0d6190ed8cc2f0e4d1fd623562f2',
+                     'prior_bytes': 13957,
+                     'prior_sha256': '57132309a6215bb1855d428cb779920c0f09855e4cbd16a8f6c4e02a1b242550',
+                     'restore': [(13,
+                                  15,
+                                  'GATE-L4-L5-PHOTON-GLOBAL-CARRIER\tPHOTON-CONE-CONVERGENCE\tL4\t'
+                                  'L5\tOPEN_LIFT\tcloses AGREE only when a separately frozen '
+                                  'complete broader admissible global L4 class A_global of pairs '
+                                  '(X_quad,K_quad), with K_quad a null subset of X_quad, is '
+                                  'nonempty and some (X_quad,K_quad) in A_global together with an '
+                                  'admissible total typed map iota:X_quad->carrier(K_op) proves '
+                                  'iota(K_quad)=K_op as exact equality of global null sets; closes '
+                                  'DIFFER only after that same complete nonempty class and '
+                                  'admissible-map contract are independently fixed and, for every '
+                                  '(X_quad,K_quad) in A_global and every admissible total typed '
+                                  'iota:X_quad->carrier(K_op), an exact witness proves that '
+                                  'equality fails; otherwise STOP, and the closed tangent germ '
+                                  'plus emptiness of the separated inversion-equivariant '
+                                  'single-chart vector class neither closes nor falsifies this '
+                                  'broader gate\n')]},
+ 'canon/HISTORY.tsv': {'current_bytes': 541837,
+                       'current_sha256': 'dfb91b7fe0b6b7110ee835d6a03d5275fab03fc4ea5ce4fc7f6dfb3f859ada3d',
+                       'prior_bytes': 540945,
+                       'prior_sha256': 'cc10a762ce7d6c910058dfb9f1e65d142935147e4d2e6fe2ac6f855f1e6b23c1',
+                       'restore': [(1177, 1179, '')]},
+ 'canon/NORMATIVE.tsv': {'current_bytes': 80936,
+                         'current_sha256': '54ea622a7151c32c2e3e38e29b65e8924182101699967e79d66c28f63e2109c5',
+                         'prior_bytes': 80790,
+                         'prior_sha256': '8728c326194f48f6e070383c869ab8f3e866849f9eb85357d78899d87c0a44fa',
+                         'restore': [(440,
+                                      442,
+                                      'PHOTON-CONE-CONVERGENCE\tOBLIGATION\t'
+                                      'PHOTON-CONE-CONVERGENCE\tO\tMULTI\t'
+                                      'GATE-L4-L5-PHOTON-GLOBAL-CARRIER\tcanon/CANON.md::9. The '
+                                      'photon and the electron\n')]},
+ 'canon/REGISTRY.tsv': {'current_bytes': 610346,
+                        'current_sha256': 'de46ab121b5425ea020caa36fed935e8f163b4567c67e625c142102a17ca186d',
+                        'prior_bytes': 609543,
+                        'prior_sha256': 'ad6c7df7fdecac7b747e20d1754ca4a0882b055bb4cac94e6932d4ab1ff419c9',
+                        'restore': [(399,
+                                     401,
+                                     'PHOTON-CONE-CONVERGENCE\tO\tthe remaining open MULTI '
+                                     'global-carrier decision after '
+                                     'PHOTON-SPATIAL-TEMPORAL-TRANSFER [D] and '
+                                     'PHOTON-TEMPORAL-CHARACTERISTIC [T] fix K_op on the selected '
+                                     'T_D3 carrier, PHOTON-HERM2-TANGENT-GERM [T] closes exact '
+                                     'local quadratic-germ agreement with the standard Hermitian '
+                                     'determinant, and PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION '
+                                     '[T] proves empty the natural total single-chart class '
+                                     'p:T_D3->R^3 with p(-k)=-p(k) and |p(k)|^2=s(k): the '
+                                     'unresolved route first requires a separately frozen complete '
+                                     'broader admissible L4 class A_global of pairs '
+                                     '(X_quad,K_quad), where K_quad is a null subset of its '
+                                     'carrier X_quad and the class may include multichart or '
+                                     'twisted-bundle, frequency-mixing, higher-rank or otherwise '
+                                     'differently typed constructions; it then asks whether '
+                                     'A_global is nonempty and there exist (X_quad,K_quad) in '
+                                     'A_global and an admissible total typed map '
+                                     'iota:X_quad->carrier(K_op) with iota(K_quad)=K_op as exact '
+                                     'equality of global null sets; CENTRAL-LIFT-PHASE supplies '
+                                     'only L4 quadratic-support action and no complete global '
+                                     'carrier class; convergence means typed route agreement, not '
+                                     'a continuum limit, and no Lorentz invariance, phase, '
+                                     'propagator, polarization, apparatus, readout or '
+                                     'physical-photon conclusion is adopted\t9. The photon and the '
+                                     'electron\tinline\tSTOP until A_global and its admissible-map '
+                                     'contract are frozen independently and '
+                                     'GATE-L4-L5-PHOTON-GLOBAL-CARRIER passes; closes AGREE only '
+                                     'when the complete class is nonempty and some (X_quad,K_quad) '
+                                     'in A_global together with an admissible total typed '
+                                     'iota:X_quad->carrier(K_op) proves exact global null-set '
+                                     'equality; closes DIFFER only when the same complete nonempty '
+                                     'class and admissible-map contract are fixed and, for every '
+                                     '(X_quad,K_quad) in A_global and every admissible total typed '
+                                     'iota:X_quad->carrier(K_op), an exact witness proves that '
+                                     'equality fails; the closed tangent germ and empty separated '
+                                     'inversion-equivariant single-chart subclass neither close '
+                                     'nor falsify this broader gate, and failure of a provisional '
+                                     'carrier while completeness remains open is STOP\n')]},
+ 'canon/STATUS_COUNTS.tsv': {'current_bytes': 244,
+                             'current_sha256': '3ebcbb81f506eb43d2ce49552b6303c60aa7684949509825abeeb78062d6e321',
+                             'prior_bytes': 244,
+                             'prior_sha256': '3c32622df5adf1fe866b6029daa3c199e8c3ff7683ace58349ebf192c2ddf2af',
+                             'restore': [(1, 2, 'claims\t626\n'),
+                                         (4, 5, 'status_D\t60\n'),
+                                         (7, 8, 'status_O\t24\n'),
+                                         (9, 10, 'live_H_O\t26\n'),
+                                         (11, 12, 'evidence_none\t202\n'),
+                                         (14, 15, 'evidence_two-architecture\t384\n')]},
+ 'tools/test_architecture_map_report.py': {'current_bytes': 54488,
+                                           'current_sha256': '6211eed1a7c5047c1ba144f3d9711000c52ed7f0e12961b2ad4efb3401914b6a',
+                                           'prior_bytes': 54579,
+                                           'prior_sha256': 'ab935346436bc0226e6da258f2afed3e89c08fd2109a689cc89145f792fccc3a',
+                                           'restore': [(377,
+                                                        379,
+                                                        '        # v112 adds three inline '
+                                                        'theorems, one dictionary and one finite C '
+                                                        'claim.\n'
+                                                        '        # All 621 prior claim statuses '
+                                                        'stay unchanged; ENC4 narrows one residual '
+                                                        'domain.\n'
+                                                        '        '
+                                                        'self.assertEqual(self.report.claims, '
+                                                        '626)\n'),
+                                                       (381,
+                                                        382,
+                                                        '            {"C": 43, "D": 60, "F": 19, '
+                                                        '"H": 2, "O": 24, "T": 478},\n'),
+                                                       (386, 387, '                "none": 202,\n'),
+                                                       (389,
+                                                        390,
+                                                        '                "two-architecture": '
+                                                        '384,\n')]}}
+V113_PROBE = 'probes/P-PHOTON-INCIDENCE-GLOBAL-CARRIER-1'
+V113_INCIDENT_SUPPORT = 'PHOTON-INCIDENCE-SUPPORT'
+V113_CONE = 'PHOTON-CONE-CONVERGENCE'
+V113_GATES = {
+    'GATE-L2-L4-PHOTON-INCIDENCE-SUPPORT': (V113_INCIDENT_SUPPORT, 'L2', 'L4'),
+    'GATE-L4-L5-PHOTON-GLOBAL-CARRIER': (V113_CONE, 'L4', 'L5'),
+}
+V113_CHECKS = (
+    ('V113-PRIOR-BYTES',
+     'the pinned reverse fold reconstructs the exact v112 Canon and tooling before all 241 historical guards'),
+    ('V113-PHOTON-DICTIONARIES',
+     'the L2-to-L4 incidence selection and L4-to-L5 global null-set agreement close only as mathematical dictionaries'),
+    ('V113-PHOTON-EVIDENCE',
+     'both dictionary rows and lifecycle events bind the same complete two-architecture public probe bundle'),
+    ('V113-FRONTIER',
+     'the cone owner leaves the live Frontier; the other 25 H/O rows and scheduler entries remain unchanged'),
+)
+
+
+@lru_cache(maxsize=14)
+def v113_previous_bytes(path):
+    """Return the original v112 input through a hash-pinned reverse fold."""
+    content = path.read_bytes()
+    relative = path.relative_to(ROOT).as_posix()
+    contract = V113_INPUT_PATCH.get(relative)
+    if contract is None:
+        return content
+    if (len(content) != contract['current_bytes']
+            or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
+        return None
+    return v111_restore_bytes(content, contract)
+
+
+def v113_current_checks():
+    failed = [(tag, description, False) for tag, description in V113_CHECKS]
+    if not V113_INPUT_PATCH or not V113_PROBE:
+        return failed
+    prior_snapshot = v112_current_snapshot()
+    if prior_snapshot is None:
+        return failed
+    try:
+        names = (
+            'REGISTRY.tsv', 'NORMATIVE.tsv', 'GATES.tsv', 'DEPENDENCIES.tsv',
+            'EVIDENCE.tsv', 'HISTORY.tsv', 'FRONTIER_PROGRAMS.tsv',
+        )
+        current = {
+            name: v87_table_bytes((ROOT / 'canon' / name).read_bytes())
+            for name in names
+        }
+        prior = {
+            name: v87_table_bytes(prior_snapshot['canon']['canon/' + name])
+            for name in names
+        }
+        probe = ROOT / V113_PROBE
+        probe_files = sorted(
+            (path for path in probe.rglob('*') if path.is_file()
+             and '__pycache__' not in path.parts and path.suffix != '.pyc'
+             and 'RUNS' not in path.relative_to(probe).parts),
+            key=lambda path: path.relative_to(ROOT).as_posix(),
+        )
+        if not set(('PREREG.md', 'verify.py', 'EXPECTED.txt', 'RUN.md', 'RESULT.md')) <= {
+            path.relative_to(probe).as_posix() for path in probe_files
+        }:
+            return failed
+        manifest = ''.join(
+            f"{hashlib.sha256(path.read_bytes()).hexdigest()}  "
+            f"{path.relative_to(ROOT).as_posix()}\n"
+            for path in probe_files
+        )
+        digest = hashlib.sha256(manifest.encode('utf-8')).hexdigest()
+        index = v112_rows_by_id(current['REGISTRY.tsv'], 'claim_id')
+        normative = v112_rows_by_id(current['NORMATIVE.tsv'], 'item_id')
+        gates = v112_rows_by_id(current['GATES.tsv'], 'gate_id')
+        evidence = v112_rows_by_id(current['EVIDENCE.tsv'], 'claim_id')
+        history = current['HISTORY.tsv']
+        ids = {V113_INCIDENT_SUPPORT, V113_CONE}
+        targets = set(V113_GATES)
+
+        def unaffected(table, key, affected):
+            before = [row for row in prior[table] if row[key] not in affected]
+            after = [row for row in current[table] if row[key] not in affected]
+            return after == before
+
+        routes = (
+            unaffected('REGISTRY.tsv', 'claim_id', ids)
+            and unaffected('NORMATIVE.tsv', 'item_id', ids)
+            and unaffected('GATES.tsv', 'gate_id', targets)
+            and unaffected('DEPENDENCIES.tsv', 'item_id', ids)
+            and all(
+                (gates[gate]['owner_item_id'], gates[gate]['from_layer'],
+                 gates[gate]['to_layer'], gates[gate]['gate_kind'])
+                == (owner, source, target, 'DICTIONARY_LIFT')
+                and (normative[owner]['item_type'], normative[owner]['status'],
+                     normative[owner]['layer'], normative[owner]['gate_ids'])
+                == ('DICTIONARY', 'D', target, gate)
+                and index[owner]['status'] == 'D'
+                for gate, (owner, source, target) in V113_GATES.items()
+            )
+        )
+        required_edges = {
+            (V113_INCIDENT_SUPPORT, 'FCC-WEIGHTED-SHELL-SYMBOL'),
+            (V113_CONE, V113_INCIDENT_SUPPORT),
+            (V113_CONE, 'PHOTON-TEMPORAL-CHARACTERISTIC'),
+        }
+        routes = routes and required_edges <= {
+            (row['item_id'], row['depends_on'])
+            for row in current['DEPENDENCIES.tsv'] if row['relation'] == 'REQUIRES'
+        }
+
+        earlier_events = {
+            row['event_id']: row for row in prior['HISTORY.tsv']
+        }
+        new_events = [row for row in history if row['event_id'] not in earlier_events]
+        provenance = (
+            [row for row in history if row['event_id'] in earlier_events]
+            == prior['HISTORY.tsv']
+            and len(new_events) == 2
+            and {row['claim_id'] for row in new_events} == ids
+            and unaffected('EVIDENCE.tsv', 'claim_id', ids)
+        )
+        for row in new_events:
+            claim = row['claim_id']
+            if claim not in ids:
+                provenance = False
+                continue
+            transition = ('STATUS_CHANGE', '4', 'O') if claim == V113_CONE else (
+                'DECLARE', '1', '-'
+            )
+            location = evidence[claim]['location']
+            provenance = (
+                provenance
+                and (row['event_type'], row['event_sequence'], row['previous_status'])
+                == transition
+                and (row['new_status'], row['release']) == ('D', 'canon-v113')
+                and location in {V113_PROBE, f'{V113_PROBE}/RESULT.md'}
+                and index[claim]['evidence'] == location
+                and (evidence[claim]['evidence_kind'], evidence[claim]['sha256'],
+                     evidence[claim]['hash_mode'], evidence[claim]['architecture_requirement'])
+                == ('PUBLIC_PROBE', digest, 'bundle-manifest-sha256-v1', 'two-architecture')
+                and (row['scope_sha256'], row['evidence_id'],
+                     row['evidence_location'], row['evidence_sha256'])
+                == (v112_scope_hash(index[claim]), evidence[claim]['evidence_id'],
+                    location, digest)
+            )
+
+        live = {claim for claim, row in index.items() if row['status'] in {'H', 'O'}}
+        programs = current['FRONTIER_PROGRAMS.tsv']
+        partition = {status: 0 for status in ('T', 'D', 'C', 'H', 'O', 'F')}
+        for row in index.values():
+            partition[row['status']] += 1
+        frontier = (
+            partition == {'T': 478, 'D': 62, 'C': 43, 'H': 2, 'O': 23, 'F': 19}
+            and len(index) == len(current['REGISTRY.tsv']) == 627
+            and len(live) == len(programs) == 25
+            and {row['claim_id'] for row in programs} == live
+            and not live & ids
+            and programs == [
+                row for row in prior['FRONTIER_PROGRAMS.tsv'] if row['claim_id'] != V113_CONE
+            ]
+        )
+    except (OSError, KeyError, ValueError):
+        return failed
+    return [
+        (tag, description, ok)
+        for (tag, description), ok in zip(V113_CHECKS, (True, routes, provenance, frontier))
+    ]
+
+
 # Exact v112 custody and reversible v111 input reconstruction.
 # This structural adapter reads bytes only and executes no scientific verifier.
 @lru_cache(maxsize=1)
@@ -3498,7 +3992,9 @@ def v112_current_snapshot():
             path = ROOT / relative
             if not path.is_file() or path.is_symlink():
                 return None
-            content = path.read_bytes()
+            content = v113_previous_bytes(path)
+            if content is None:
+                return None
             if (len(content) != contract['current_bytes']
                     or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
                 return None
@@ -30050,9 +30546,10 @@ def run():
     checks.extend(v110_current_checks())
     checks.extend(v111_current_checks())
     checks.extend(v112_current_checks())
+    checks.extend(v113_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v112")
+    print("historical guards: exact reconstructed v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v113")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

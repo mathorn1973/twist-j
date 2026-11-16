@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v112
+historical guards: exact reconstructed v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v113
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -243,5 +243,9 @@ PASS 238 V112-EVIDENCE four new inline rows and both scoped METRO rows match sco
 PASS 239 V112-PRESENTATION the twelve Core selections are exact and section 18 retains all twelve normative owners and the full rapidity evaluation obligation
 PASS 240 V112-SOURCE-CUSTODY the accepted public ENC4, H3 and intake files retain exact bytes, SHA-256 and Git blob identities
 PASS 241 V112-REPRO-INVENTORY the exact 43-directory inventory restores the historical 41 after validating both supplements; no scientific verifier is imported or executed
+PASS 242 V113-PRIOR-BYTES the pinned reverse fold reconstructs the exact v112 Canon and tooling before all 241 historical guards
+PASS 243 V113-PHOTON-DICTIONARIES the L2-to-L4 incidence selection and L4-to-L5 global null-set agreement close only as mathematical dictionaries
+PASS 244 V113-PHOTON-EVIDENCE both dictionary rows and lifecycle events bind the same complete two-architecture public probe bundle
+PASS 245 V113-FRONTIER the cone owner leaves the live Frontier; the other 25 H/O rows and scheduler entries remain unchanged
 
-RESULT 241/241 ALL PASS
+RESULT 245/245 ALL PASS
