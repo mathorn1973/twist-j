@@ -1,0 +1,25 @@
+carrier period=622 special_ready_returns=(72, 72, 174, 72, 72) other_ready_returns=2
+carrier bare_CORR=(11, 85, 45) outgoing_post_transport_CORR=(11, 85, 45)
+carrier middle_residues=15 largest_class=21 outgoing_right_guard=85/85
+carrier raw_rank_44=74 target_in_j=(-2, 0, -1, -5) target_complete_and_post_transport_ticks=(74, 75)
+carrier raw_rank_4_same_residue=True target_following_left_guard_refuses=True
+capacity isolated_span_bound=38 minimum_Q_for_85=717780700011756164 funded_exponents=-4..4
+base accounts=((80, 0, 0, 0), (20570, 20, 40, 40), (105002830, 0, 21013020, 21013020), 188992640)
+base period=3110 ready=425 work=225 inverse_substeps=6220
+base receiver_site_scalar_changes=[(-60, 18), (-40, 54), (-20, 72), (0, 162), (20, 72), (40, 54), (60, 18)]
+base first_work_signatures=85 max_delay=44
+base projected_middle_CORR=85 actual_middle_CORR_at_(1,0)=85
+base passive_common_time_max=21 first_delay=34 count_at_44=21
+base ordinary_marks=[(212, 1), (220, 4)] actual_middle_CORR_ports_0_1_4=(85, 85, 85)
+base trace_sha256=be7255f4b7404dfd3b6d9b0f20fab59ed1fabb558db3b3bd7121eda27d5b0c46
+translated accounts=((-160, 80, -80, 160), (20570, 20, 40, 40), (105005070, 0, 21013820, 21013820), 188996320)
+translated period=3110 ready=425 work=225 inverse_substeps=6220
+translated receiver_site_scalar_changes=[(-180, 18), (-160, 54), (-140, 18), (20, 72), (40, 216), (60, 72)]
+translated first_work_signatures=85 max_delay=44
+translated projected_middle_CORR=85 actual_middle_CORR_at_(1,0)=85
+translated passive_common_time_max=21 first_delay=34 count_at_44=21
+translated ordinary_marks=[(212, 1), (220, 4)] actual_middle_CORR_ports_0_1_4=(85, 85, 85)
+translated seam_columns=(5, 6) marker_cut=212 spatial_tiles=311 spatial_Q=58777855520
+translated trace_sha256=0b6d9cee7dadab88d034f459fcb2a037b8eb64d0c30f55421818bcd30cea0d9a
+loading predecessor=85/85 direct=83/85 mismatches=[(15, (1, 2), (2, 16)), (19, (4, 2), (2, 8))]
+PASS
