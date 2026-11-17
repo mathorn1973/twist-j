@@ -9,7 +9,8 @@ import time
 
 from analyze_ordered import ENDPOINTS, SAMPLES, VOLUMES
 from run_ordered_volume import (
-    CHAIN_IDS, chain_settings, json_file, run_chain, run_chains, state_size,
+    CHAIN_IDS, affinity_record, chain_settings, json_file, parse_affinity, run_chain,
+    run_chains, state_size, validate_affinity,
 )
 
 SHA256 = re.compile(r"[a-f0-9]{64}\Z")
@@ -46,8 +47,9 @@ def verified_prefix(path, endpoint):
     return prefix
 
 
-def replay_chains(volume, L, sampler, output, deadline, endpoint, ledger, chain_workers):
+def replay_chains(volume, L, sampler, output, deadline, endpoint, ledger, chain_workers, *, affinity=None):
     """Replay with one private monotone cursor and digest tuple per chain."""
+    binding = {"affinity": affinity} if affinity is not None else {}
     def worker(i, cohort):
         name = chain_settings(L, i)[0]
         expected = tuple(ledger[(name, sample)] for sample in range(SAMPLES))
@@ -66,7 +68,7 @@ def replay_chains(volume, L, sampler, output, deadline, endpoint, ledger, chain_
         original = volume / f"measurement-c{i}" / "protocol.log"
         prefix = verified_prefix(original, endpoint)
         run_chain(sampler, output / f"replay-c{i}", deadline, L, i, endpoint, SAMPLES,
-                  prefix, verify_state, cohort=cohort)
+                  prefix, verify_state, cohort=cohort, **binding)
         if verified != len(expected):
             raise ValueError(f"Replay did not consume every saved-state receipt for {name}")
         return {"chain": name, "verified_states": verified}
@@ -74,11 +76,15 @@ def replay_chains(volume, L, sampler, output, deadline, endpoint, ledger, chain_
     return run_chains(worker, chain_workers)
 
 
-def replay(volume, L, sampler, output, wall_seconds, *, chain_workers=1):
+def replay(volume, L, sampler, output, wall_seconds, *, chain_workers=1, affinity=None):
     environment = json.loads((volume / "environment.json").read_text(encoding="utf-8"))
     executable_digest = hashlib.sha256(sampler.read_bytes()).hexdigest()
     receipt = json.loads((volume / "receipts.json").read_text(encoding="utf-8"))[str(L)]
     endpoint = receipt.get("endpoint")
+    validate_affinity(affinity, chain_workers)
+    binding_record = affinity_record(affinity) if affinity is not None else None
+    if environment.get("affinity") != binding_record:
+        raise ValueError("Replay affinity differs from generation")
     if (environment["L"] != L or executable_digest != environment["sampler_sha256"]
             or receipt["sampler_sha256"] != executable_digest
             or receipt["status"] != "PASS" or endpoint not in ENDPOINTS):
@@ -87,16 +93,21 @@ def replay(volume, L, sampler, output, wall_seconds, *, chain_workers=1):
 
     output.mkdir()
     deadline = time.monotonic() + wall_seconds
-    chains = replay_chains(volume, L, sampler, output, deadline, endpoint, ledger, chain_workers)
+    binding = {"affinity": affinity} if affinity is not None else {}
+    chains = replay_chains(volume, L, sampler, output, deadline, endpoint, ledger,
+                           chain_workers, **binding)
     verified_states = sum(chain["verified_states"] for chain in chains)
     if verified_states != len(ledger):
         raise ValueError("Replay did not consume every saved-state receipt")
-    json_file(output / "replay-receipt.json", {
+    replay_record = {
         "status": "PASS", "L": L, "endpoint": endpoint, "sampler_sha256": executable_digest,
         "measurement_sha256": series_digest, "verified_states": verified_states,
         "chains": chains,
         "wall_seconds": wall_seconds,
-    })
+    }
+    if binding_record is not None:
+        replay_record["affinity"] = binding_record
+    json_file(output / "replay-receipt.json", replay_record)
 
 
 def main():
@@ -107,11 +118,13 @@ def main():
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--wall-seconds", required=True, type=int)
     parser.add_argument("--chain-workers", type=int, choices=(1, 4), default=1)
+    parser.add_argument("--affinity", type=parse_affinity, metavar="CPU-LIST;CPU-LIST;CPU-LIST;CPU-LIST")
     args = parser.parse_args()
     if args.wall_seconds < 1:
         parser.error("Wall budget must be positive")
     replay(args.original.resolve(strict=True), args.volume, args.sampler.resolve(strict=True),
-           args.output.resolve(), args.wall_seconds, chain_workers=args.chain_workers)
+           args.output.resolve(), args.wall_seconds, chain_workers=args.chain_workers,
+           affinity=args.affinity)
 
 
 if __name__ == "__main__":

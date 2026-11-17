@@ -43,6 +43,12 @@ fields. The fixture commands produce no phase or tail estimates.
 
 ## Execution and custody
 
+[Parallel stream execution](PARALLEL_STREAM.md) describes the exact
+within-chain schedule and the optional reader process pool. Materialization
+checks the committed OpenMP sources before generating the build tree. Use
+`-fopenmp` to enable the parallel sweeps. The single-thread build remains
+available for the parity fixture.
+
 After the public preregistration commit and execution record are pinned,
 build the sampler using the recipe in SAMPLER_ADAPTER.md and retain the
 compiler and sampler digests. The volume driver is run once per registered

@@ -516,7 +516,8 @@ def _amplitudes(wide_band, max_ratio, m, label, side, contact):
     return result
 
 
-def measure_bytes(data, sha256, requested_m=(), requested_R=(), *, secondary=False):
+def measure_bytes(data, sha256, requested_m=(), requested_R=(), *, secondary=False,
+                  orientations=ORIENTATIONS):
     metadata, links = parse_state(data, sha256)
     _check_floating_environment()
     side = metadata["L"]
@@ -532,8 +533,15 @@ def measure_bytes(data, sha256, requested_m=(), requested_R=(), *, secondary=Fal
     if any(isinstance(R, bool) or not isinstance(R, int) or not 2 <= R <= side//2
            for R in requested_R):
         raise IntegrityError("bad R for the declared state side")
+    orientations = tuple(orientations)
+    if len(set(orientations)) != len(orientations) or any(
+        orientation not in ORIENTATIONS for orientation in orientations
+    ):
+        raise IntegrityError("duplicate or unsupported orientation")
     observables = {}
     for orientation in ORIENTATIONS:
+        if orientation not in orientations:
+            continue
         needed_a = orientation in ((0, 1), (0, 2)) and requested_m
         needed_b = requested_R and (secondary or orientation in PRIMARY)
         if not (needed_a or needed_b):

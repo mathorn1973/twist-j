@@ -8,6 +8,7 @@ import json
 import os
 from pathlib import Path
 import platform
+import re
 import shutil
 import subprocess
 import threading
@@ -20,7 +21,47 @@ from ordered_reader import SCHEMA, measure_bytes
 
 SEED_BASE = 0xC571000000000000
 CHAIN_IDS = (1, 2, 3, 4)
+TASKSET = "/usr/bin/taskset"
 CATEGORICAL_KINDS = ("HOT", "LOCAL", "LINE", "FLAT", "CHARGE")
+
+
+def parse_affinity(value):
+    """Four canonical, equal-size, disjoint lists in chain order."""
+    syntax = r"(?:0|[1-9][0-9]*)(?:,(?:0|[1-9][0-9]*))*"
+    groups = value.split(";")
+    if len(groups) != len(CHAIN_IDS) or any(not re.fullmatch(syntax, group) for group in groups):
+        raise argparse.ArgumentTypeError("affinity requires four comma-separated CPU lists separated by semicolons")
+    affinity = tuple(tuple(map(int, group.split(","))) for group in groups)
+    if any(tuple(sorted(set(group))) != group or len(group) != len(affinity[0])
+           for group in affinity):
+        raise argparse.ArgumentTypeError("CPU lists must be increasing and have equal widths")
+    if len(set().union(*affinity)) != len(CHAIN_IDS) * len(affinity[0]):
+        raise argparse.ArgumentTypeError("CPU lists must be disjoint")
+    return affinity
+
+
+def validate_affinity(affinity, chain_workers):
+    if affinity is None:
+        return
+    if chain_workers != len(CHAIN_IDS):
+        raise ValueError("--affinity requires --chain-workers 4")
+    if platform.system() != "Linux" or not os.access(TASKSET, os.X_OK):
+        raise ValueError("--affinity requires Linux and executable /usr/bin/taskset")
+    if not set().union(*affinity).issubset(os.sched_getaffinity(0)):
+        raise ValueError("requested CPUs are outside the controller's affinity")
+
+
+def affinity_record(affinity):
+    width = str(len(affinity[0]))
+    return {
+        "taskset": TASKSET,
+        "cpu_groups_in_chain_order": [list(group) for group in affinity],
+        "environment": {
+            "OMP_NUM_THREADS": width, "OMP_THREAD_LIMIT": width,
+            "OMP_DYNAMIC": "FALSE", "OMP_PLACES": "cores",
+            "OMP_PROC_BIND": "close", "OMP_WAIT_POLICY": "PASSIVE",
+        },
+    }
 
 
 def named(line, marker):
@@ -166,14 +207,15 @@ def require_time(deadline):
 
 
 @contextmanager
-def launch(args, directory, deadline, *, cohort=None):
+def launch(args, directory, deadline, *, cohort=None, env=None):
     remaining = deadline - time.monotonic()
     if remaining <= 0:
         raise TimeoutError("Volume time budget exhausted")
     directory.mkdir()
     json_file(directory / "command.json", args)
     with (directory / "stderr.log").open("xb") as error:
-        with subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=error) as child:
+        with subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                              stderr=error, env=env) as child:
             expired = threading.Event()
 
             def expire():
@@ -200,13 +242,18 @@ def launch(args, directory, deadline, *, cohort=None):
 
 
 def run_chain(sampler, directory, deadline, L, chain, thermal, samples,
-              previous_prefix=(), accepted_state=None, *, cohort=None):
+              previous_prefix=(), accepted_state=None, *, cohort=None, affinity=None):
     chain_name, seed, start = chain_settings(L, chain)
     command = [str(sampler), "--mode", "run", "--L", str(L), "--seed", str(seed),
                "--start", start, "--thermal", str(thermal), "--samples", str(samples),
                "--between", "1", "--chain", chain_name, "--output-dir", "-", "--t", "1",
                "--transport", "stream", "--thermal-sentinels", "1"]
-    with launch(command, directory, deadline, cohort=cohort) as child:
+    options = {"cohort": cohort}
+    if affinity is not None:
+        cpus = ",".join(map(str, affinity[chain - 1]))
+        command = [TASKSET, "-c", cpus, *command]
+        options["env"] = {**os.environ, **affinity_record(affinity)["environment"]}
+    with launch(command, directory, deadline, **options) as child:
         with (directory / "protocol.log").open("xb") as log:
             control = partial(read_control, child.stdout, log)
             require_fields(control(), "ORDERED_RUN", {
@@ -244,9 +291,10 @@ def scales_for(L):
             tuple(scale for scale, volumes in D_VOLUMES.items() if L in volumes))
 
 
-def measure_state(output, requested_m, requested_R, payload, L, chain, sample, macrocycle):
+def measure_state(output, requested_m, requested_R, payload, L, chain, sample, macrocycle,
+                  *, reader=measure_bytes):
     digest = hashlib.sha256(payload).hexdigest()
-    measurement = measure_bytes(payload, digest, requested_m, requested_R, secondary=True)
+    measurement = reader(payload, digest, requested_m, requested_R, secondary=True)
     identity = (measurement["L"], measurement["chain"], measurement["sample"], measurement["macrocycle"])
     if identity != (L, chain, sample, macrocycle):
         raise ValueError("Incorrect saved-state identity")
@@ -266,15 +314,17 @@ def combine_measurements(directory, deadline):
     temporary.replace(directory / "measurements.jsonl")
 
 
-def run_volume(sampler, diagnostics, directory, L, deadline, *, chain_workers=1):
+def run_volume(sampler, diagnostics, directory, L, deadline, *, chain_workers=1, affinity=None,
+               reader_workers=0):
     from ordered_sentinels import assess
 
     previous = [[] for _ in CHAIN_IDS]
+    binding = {"affinity": affinity} if affinity is not None else {}
     for endpoint in sorted(ENDPOINTS):
         def thermal_worker(i, cohort):
             return run_chain(sampler, directory / f"thermal-{endpoint}-c{i}",
                              deadline, L, i, endpoint, 0, previous[i - 1],
-                             cohort=cohort)[0]
+                             cohort=cohort, **binding)[0]
 
         previous = run_chains(thermal_worker, chain_workers)
         candidate = assess(previous, diagnostics)
@@ -287,14 +337,22 @@ def run_volume(sampler, diagnostics, directory, L, deadline, *, chain_workers=1)
 
     requested_m, requested_R = scales_for(L)
 
-    def measurement_worker(i, cohort):
-        with (directory / f"measurement-c{i}.jsonl").open("x", encoding="utf-8", newline="\n") as output:
-            receive = partial(measure_state, output, requested_m, requested_R)
-            return run_chain(sampler, directory / f"measurement-c{i}", deadline,
-                             L, i, endpoint, SAMPLES, previous[i - 1], receive,
-                             cohort=cohort)[1]
+    if reader_workers:
+        from parallel_ordered_reader import ParallelReader
+        reader_scope = ParallelReader(reader_workers)
+    else:
+        reader_scope = nullcontext()
+    with reader_scope as service:
+        reader = measure_bytes if service is None else service.measure_bytes
 
-    measured = run_chains(measurement_worker, chain_workers)
+        def measurement_worker(i, cohort):
+            with (directory / f"measurement-c{i}.jsonl").open("x", encoding="utf-8", newline="\n") as output:
+                receive = partial(measure_state, output, requested_m, requested_R, reader=reader)
+                return run_chain(sampler, directory / f"measurement-c{i}", deadline,
+                                 L, i, endpoint, SAMPLES, previous[i - 1], receive,
+                                 cohort=cohort, **binding)[1]
+
+        measured = run_chains(measurement_worker, chain_workers)
     combine_measurements(directory, deadline)
     result = assess(measured, diagnostics, measurement=True)
     require_time(deadline)
@@ -311,7 +369,13 @@ def main():
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--wall-seconds", required=True, type=int)
     parser.add_argument("--chain-workers", type=int, choices=(1, 4), default=1)
+    parser.add_argument("--affinity", type=parse_affinity, metavar="CPU-LIST;CPU-LIST;CPU-LIST;CPU-LIST")
+    parser.add_argument("--reader-workers", type=int, choices=range(25), default=0, metavar="0..24")
     args = parser.parse_args()
+    try:
+        validate_affinity(args.affinity, args.chain_workers)
+    except ValueError as error:
+        parser.error(str(error))
     if args.wall_seconds < 1:
         parser.error("Wall budget must be positive")
     sampler = args.sampler.resolve(strict=True)
@@ -325,16 +389,24 @@ def main():
     with custody.open("xb") as target:
         target.write(payload)
     custody.chmod(sampler.stat().st_mode & 0o777)
-    json_file(output / "environment.json", {
+    environment = {
         "sampler_sha256": args.sampler_sha256, "python": platform.python_version(),
         "platform": platform.platform(), "machine": platform.machine(), "numpy": np.__version__,
         "longdouble_mantissa_bits": int(np.finfo(np.longdouble).nmant) + 1,
         "wall_seconds": args.wall_seconds, "chain_workers": args.chain_workers, "L": args.volume,
-    })
+    }
+    binding = {}
+    if args.affinity is not None:
+        environment["affinity"] = affinity_record(args.affinity)
+        binding["affinity"] = args.affinity
+    if args.reader_workers:
+        environment["reader_workers"] = args.reader_workers
+        binding["reader_workers"] = args.reader_workers
+    json_file(output / "environment.json", environment)
     try:
         budget = time.monotonic() + args.wall_seconds
         receipt = run_volume(custody, diagnostics, output, args.volume, budget,
-                             chain_workers=args.chain_workers)
+                             chain_workers=args.chain_workers, **binding)
     except Exception as failure:
         endpoint = next((t for t in sorted(ENDPOINTS)
                          if (path := output / f"thermal-{t}.json").is_file()

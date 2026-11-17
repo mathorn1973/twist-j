@@ -102,7 +102,7 @@ Config parse(int argc, char **argv) {
 }
 
 void save(const Config &c, const std::vector<std::uint8_t> &links,
-          std::uint64_t sample, std::uint64_t cycles) {
+          std::uint64_t sample, std::uint64_t cycles, bool quiet = false) {
     std::uint64_t expected = 4;
     for (unsigned i = 0; i < 4; ++i) expected *= c.L;
     if (links.size() != expected) throw std::runtime_error("link payload census");
@@ -145,6 +145,7 @@ void save(const Config &c, const std::vector<std::uint8_t> &links,
     }
     file.close();
     if (!file) throw std::runtime_error("state write or close failure");
+    if (quiet) return;
     std::cout << "STATE_FILE sample=" << sample << " macrocycle=" << cycles
               << " path=" << name.str() << " bytes=" << fs::file_size(path) << '\n';
 }
@@ -196,6 +197,7 @@ int execute(const Config &c) {
 }
 } // namespace ordered
 
+#ifndef PHITORCH_Z5_CHUNK_WORKER
 int main(int argc, char **argv) {
 #ifdef _WIN32
     _setmode(_fileno(stdin), _O_BINARY);
@@ -213,3 +215,4 @@ int main(int argc, char **argv) {
         return 2;
     }
 }
+#endif

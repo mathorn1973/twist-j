@@ -11,6 +11,11 @@ HASHES = {
     "photon_z5_part3.inc": "c6f5776e5c401618bd8478cf98bf99ad9020f50b0dc4495e53e2eea4a971686a",
     "photon_z5_part4.inc": "442f79534fc7849fa4801d46908c24abf2d22e0b31a5fdec2e4b068bfd66db4b",
 }
+OPENMP_HASHES = {
+    "photon_z5_part1.inc": "c9429a88b2614c2bfe7d9a43dea23311cb64a4992958691d7f31ed9f2ceb66d8",
+    "photon_z5_part2.inc": "acf32631de815f1ed3f4ee843d3083289979e9628ac342b0fca9824c50818bd9",
+    "photon_z5_part3.inc": "8cd94fef0a42f4c4195f13f7f84568dc8a69bae3c3970f42e04b0ef92aebc02b",
+}
 REPLACE = {
     "photon_z5_part1.inc": (
         b'if (options.L < 2 || options.L > 16) throw std::runtime_error("L must be in [2,16]");',
@@ -143,6 +148,11 @@ def prepare():
             if data.count(old) != 1:
                 raise ValueError("sampler speedup guard mismatch: " + name)
             data = data.replace(old, new)
+        if name in OPENMP_HASHES:
+            previous[name].append(data)
+            data = (ROOT / "openmp" / name).read_bytes()
+            if hashlib.sha256(data).hexdigest() != OPENMP_HASHES[name]:
+                raise ValueError("parallel kernel source hash mismatch: " + name)
         outputs[name] = data
     target = ROOT / "kernel64"
     if target.exists():
