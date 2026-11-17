@@ -215,6 +215,8 @@ python -B notes/C-H3-RECURRENT-PHASE-WORKER-N/verify.py
 
 The checker uses integer cyclic convolution in a fifth-root basis. For each full cut it serializes the next matching bit followed by all 640 ring elements in the ordered basis \(1,j,j^2,j^3\), using little-endian signed 32-bit coefficients. Each trajectory digest is compared with that of a separately coded native kernel. The expected file records the digests and the reproducible summary for both preparations. [Expected output](EXPECTED.txt)
 
+The public verifier at commit `46f34d449a68aa65493cdb4d401f0a853d3c85f1` was replayed on Linux x86-64 and Linux aarch64 with Python 3.12.3. Both runs exited zero with empty stderr and matched all 1931 expected stdout bytes. The script SHA-256 is `54b9788e21dbed4cc3e311a0bb4aa43c8d5a621f7403b81617ac40bdf3aa408a`. The stdout SHA-256 is `c4fe151e78d45495b806c814bee36664bb3cb762800511f45266246ab067ebf9`. These replays check computational reproducibility. Independent scientific review remains open.
+
 The two preparations, finite clock carrier, port references and paid stocks
 are explicit inputs. All 85 origins and the two ordinary head aliases were
 known during development. This record is a result-exposed reproduction of a
