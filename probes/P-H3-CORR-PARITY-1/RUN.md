@@ -48,3 +48,9 @@ PY
 ```
 
 This run covers 27263392 ticks. All invocations succeeded with empty stderr. Output size is 11920 bytes and SHA-256 is 5934c73efdf8075f389d4fa4842a57270a14926e81fd78c90f65bb1a455bfe3e. The column names are those of the registered sweep. [COVERAGE.txt](COVERAGE.txt).
+
+## Cross-architecture replay
+
+The GitHub Linux x86_64 and aarch64 jobs both executed the pinned primary verifier and reproduced all 171481 bytes of EXPECTED.txt. [Two-architecture check](https://github.com/mathorn1973/twist-j/actions/runs/44181408481).
+
+A separate Darwin 25.4.0 arm64 run used Apple Clang 21.0.0 and Python 3.9.6 for the supplemental driver. It downloaded period.cpp and sweep.py from the public pin and checked their SHA-256 before compiling. The registered 352 invocations and the additional 85 Q725 invocations reproduced SWEEP.txt (45665 bytes) and COVERAGE.txt (11920 bytes) exactly, with the same SHA-256 values given above and no stderr from the executable.
