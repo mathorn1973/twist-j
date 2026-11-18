@@ -20,4 +20,6 @@ Uniform and alternating material profiles have the same support, pointwise Hermi
 
 A free radiation row also has an exact material realization. Writing its words and their negatives on a vertical material column transfers the full evolution at twice the quadratic budget. The audit compared all coordinates and inverses on 1,620 pairs of ticks, including 1,184 admitted and 3,520 refused unequal row contacts. This puts the public funded free-wave propagation on a material rail over its stated finite horizon with both embeddings. It does not introduce an interaction-specific rest mass. [Motion and resource proof](MOTION.md)
 
+A post-run bound links the signed label to the minimum native stock. A state with |ν|=1 has Q≥3, attained by a stationary single rail. Any active B requires Q≥10, also sharp. These are exact preparation costs over the stated carrier. [Proof and extremizers](STOCK.md)
+
 The outstanding physical tests are a field-coupled phase change at a separately prepared material probe, a sign-dependent interaction with independently oriented sources and test objects, and momentum or recoil of a mobile localized excitation. The computations here do not identify a Coulomb field, elementary electric charge or particle mass.
