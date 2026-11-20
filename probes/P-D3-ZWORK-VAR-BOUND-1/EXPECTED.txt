@@ -1,0 +1,20 @@
+PASS gram_floor: det_G=125 spec=[1, 5, 5, 5] min_nz_q=2 mu10=10 shells=1,10,20,20,60
+PASS vacuum_bounds: dipole_4d=4,8,12,16 periodic_4L=24,32,40,48 parallelogram=true
+PASS poisson_4d: betas=0.50,1.00,2.00 max_rel_err=1.286e-48
+PASS spin_wave_strictness: L=2,4,6 max_abs_B_dx=0 max_abs_sw=0 gauss_Z=1/4 min_vortex_Ginv=2/5
+PASS complex_2edge_3edge: max_ov_2=9.307e-47 max_ov_3=1.925e-45 all_var_lt_quarter=true
+PASS complex_3edge_crossover: beta_star=0.242528416 Z_var=0.24920214 Z_disc=0.24920214 abs_diff=1.914e-43
+DATA 2edge beta=0.01 Z_var=0.250000000000 deficit=9.267768e-84 Z_disc=0.250000000000
+DATA 2edge beta=0.05 Z_var=0.250000000000 deficit=7.063840e-16 Z_disc=0.250000000000
+DATA 2edge beta=0.10 Z_var=0.249999867980 deficit=1.320202e-7 Z_disc=0.250000000000
+DATA 2edge beta=0.50 Z_var=0.105368994175 deficit=1.446310e-1 Z_disc=0.250000000000
+DATA 2edge beta=1.00 Z_var=0.003526791256 deficit=2.464732e-1 Z_disc=0.250000000000
+DATA 2edge beta=2.00 Z_var=0.000002252966 deficit=2.499977e-1 Z_disc=0.250000000000
+DATA 3edge beta=0.01 Z_var=0.250000000000 deficit=4.926898e-112 Z_disc=0.250000000000 diff=+1.252028e-84
+DATA 3edge beta=0.05 Z_var=0.250000000000 deficit=2.722604e-21 Z_disc=0.250000000000 diff=+9.542616e-17
+DATA 3edge beta=0.10 Z_var=0.249999999633 deficit=3.665470e-10 Z_disc=0.249999982165 diff=+1.746870e-8
+DATA 3edge beta=0.50 Z_var=0.152510662962 deficit=9.748934e-2 Z_disc=0.229602085754 diff=-7.709142e-2
+DATA 3edge beta=1.00 Z_var=0.005361781072 deficit=2.446382e-1 Z_disc=0.205499673669 diff=-2.001379e-1
+DATA 3edge beta=2.00 Z_var=0.000003379591 deficit=2.499966e-1 Z_disc=0.195990952500 diff=-1.959876e-1
+PASS controls: corrupt_gram zero_vortex_truncation perturbed_edge_weight broken_divergence_string constant_sign_3edge
+PASS D3-ZWORK-VAR-BOUND-1
