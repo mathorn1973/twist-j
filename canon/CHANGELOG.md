@@ -1,11 +1,23 @@
 # Canon changelog (public series)
 
-## Public Canon v113
+## Public Canon v114
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 627 claims; 0 T-LOCK, 478 T, 62 D, 43 C, 2 H, 23 O, 19 F; 25 live H/O.
+Registry snapshot: 630 claims; 0 T-LOCK, 479 T, 62 D, 45 C, 2 H, 23 O, 19 F; 25 live H/O.
 Reproduction witnesses: 43.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Add one finite-volume equilibrium theorem and two finite H3 computations.
+The variance bound applies to the all-sector measure on the stated labeled
+periodic lattice. The H3 results record an autonomously restored second
+write in three prepared launches and a word-dependent branch at matched
+receiver readiness. All earlier scopes, statuses and open obligations
+retain their previous meanings. The physical coupling selection stays open.
+
+## Public Canon v113
+
+Registry snapshot: 627 claims; 0 T-LOCK, 478 T, 62 D, 43 C, 2 H, 23 O, 19 F; 25 live H/O.
+Reproduction witnesses: 43.
 
 Adopt the weighted scalar incidence support dictionary at L4. Close
 PHOTON-CONE-CONVERGENCE at D for its complete selected incidence class and
