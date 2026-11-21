@@ -431,6 +431,53 @@
         }
       }
     },
+    "P-INTEGER-POSITIVE-KINETIC-JOINT-1": {
+      "pin_commit": "bd7e1dada3a4869ecfae76c0aea03c0a88c9983f",
+      "verifier": {
+        "git_blob": "14afb4613d45f9422d790964d83ce5adbc23844b",
+        "sha256": "7fdea52ae7f106f45104bb7d7a7e9f7d13f36c8a1f9e14cc028ed5f634fbfd3b",
+        "bytes": 27218
+      },
+      "prereg": {
+        "git_blob": "f32a1398ef772f83bd83ecccf57c3dc68ef60daa",
+        "sha256": "343340814f65850c2a745746039c9db599c4f325c0afb4aed7611e2800d532a6",
+        "bytes": 16977
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-INTEGER-POSITIVE-KINETIC-JOINT-1/breaker.py": {
+          "git_blob": "ed842522057dcb572db6b0c0846a36e1103d95e7",
+          "sha256": "071bd62a5ef52a03f413ff6069fc0e3f468615dfde73ca09d4cdd9add2009ec9",
+          "bytes": 39476
+        }
+      }
+    },
     "P-INTEGER-FIXED-DURATION-BOUNDARY-1": {
       "pin_commit": "02ec973ecb77655e83d69b990ba22bef05df3424",
       "verifier": {
