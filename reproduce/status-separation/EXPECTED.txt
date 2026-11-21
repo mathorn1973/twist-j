@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v113
+historical guards: exact reconstructed v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v114
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -247,5 +247,9 @@ PASS 242 V113-PRIOR-BYTES the pinned reverse fold reconstructs the exact v112 Ca
 PASS 243 V113-PHOTON-DICTIONARIES the L2-to-L4 incidence selection and L4-to-L5 global null-set agreement close only as mathematical dictionaries
 PASS 244 V113-PHOTON-EVIDENCE both dictionary rows and lifecycle events bind the same complete two-architecture public probe bundle
 PASS 245 V113-FRONTIER the cone owner leaves the live Frontier; the other 25 H/O rows and scheduler entries remain unchanged
+PASS 246 V114-PRIOR-BYTES the pinned reverse fold reconstructs exact v113 Canon and metadata inputs before all 245 historical guards
+PASS 247 V114-CLAIM-LEDGERS one finite-volume equilibrium theorem and two finite H3 computations enter at their exact scopes without changing any prior row
+PASS 248 V114-EVIDENCE all three declarations bind their exact two-architecture public probe bundles and scope hashes
+PASS 249 V114-BOUNDARY the frontier, dependency and gate ledgers are byte-identical to v113 and the exact 43-directory reproduction inventory is preserved
 
-RESULT 245/245 ALL PASS
+RESULT 249/249 ALL PASS

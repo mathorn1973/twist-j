@@ -1254,3 +1254,18 @@ single-chart obstruction retain their earlier scopes. The adapter verifies the
 ledger and source custody, without replaying the photon proof or deciding a
 physical photon, continuum limit, or massless phase. The separately required
 architecture jobs replay frozen scientific evidence.
+
+## Public Canon v114 theorem and finite H3 boundaries
+
+The v114 adapter validates the current Canon and architecture metadata bytes
+and reverses the exact release delta before the 245 historical checks run.
+Four checks pin the finite-volume D3 variance theorem and the two finite H3
+computations, their exact registry, normative, evidence and declaration
+memberships, and their public probe manifests. The Frontier, dependency and
+gate ledgers and the 43-directory reproduction inventory match v113. The
+status partition is T479/D62/C45/H2/O23/F19 with 630 claims.
+
+The reverse fold needs no Git history. The audit reads evidence bytes and
+does not run the scientific verifiers. The H3 additions have finite
+computation status. The D3 statement concerns the specified finite-volume
+equilibrium ensemble.

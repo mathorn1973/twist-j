@@ -3489,6 +3489,291 @@ V112_STANDALONE_SOURCES = frozenset(('notes/canon/METRO-ENC4-CLOSURE-2026-11-13.
 
 
 
+
+# Byte-pinned inputs for the v114 release and their minimal inverse edits.
+V114_INPUT_PATCH = {'canon/CANON.md': {'current_bytes': 1560523,
+                    'current_sha256': 'f145483b62c6c2cdc4007729d10ea33a18e00366b31927d03df9cd41f2972b56',
+                    'prior_bytes': 1555510,
+                    'prior_sha256': '47114cb616069242cff36bb499e5fe9b11266a92c744ba3f15a9085c11956b34',
+                    'restore': [(0, 1, '# TWIST-J Public Canon v113\n'),
+                                (2,
+                                 3,
+                                 '**Release identity.** Public Canon v113. Normative authority and '
+                                 'activation\n'),
+                                (17379, 17426, ''),
+                                (24920, 24960, '')]},
+ 'canon/CHANGELOG.md': {'current_bytes': 223727,
+                        'current_sha256': '52f8d25ddd1f3e9599dd28387d456394c7865aabe38b9ae344952c41dc80972d',
+                        'prior_bytes': 223146,
+                        'prior_sha256': '4823c6bf14f312796dfe6e14e4eb974fc15e5ad47157acaf21d168a942a06903',
+                        'restore': [(1, 15, ''),
+                                    (18, 18, '<!-- BEGIN GENERATED CURRENT COUNTS -->\n'),
+                                    (20, 20, '<!-- END GENERATED CURRENT COUNTS -->\n')]},
+ 'canon/CORE.md': {'current_bytes': 17207,
+                   'current_sha256': 'b9ba9855e98b360cddaa11a3cc4dff7c0d10c2a6e1d9562991da8c2e7e8cb3c8',
+                   'prior_bytes': 17207,
+                   'prior_sha256': 'a43ad24109dfa4331a03945963295de801e934a003cd1ee9c61dda560b77783e',
+                   'restore': [(2,
+                                3,
+                                '**Release identity:** Public Canon v113. Authority and activation '
+                                'are declared\n'),
+                               (12,
+                                13,
+                                'Public Canon v113 also declares a discrete architecture.\n')]},
+ 'canon/CORE_SELECTION.tsv': {'current_bytes': 349,
+                              'current_sha256': '2ffc8234faea17b2ca6f9e96648515b68bc083bafb95434f0e4723ad3e8c2361',
+                              'prior_bytes': 349,
+                              'prior_sha256': '2ffc8234faea17b2ca6f9e96648515b68bc083bafb95434f0e4723ad3e8c2361',
+                              'restore': []},
+ 'canon/DEPENDENCIES.tsv': {'current_bytes': 207257,
+                            'current_sha256': 'f1a692670236ad92e2e8cd80e9903ab19c8a7037da4c5ce6e3f3e230a3c3e957',
+                            'prior_bytes': 207257,
+                            'prior_sha256': 'f1a692670236ad92e2e8cd80e9903ab19c8a7037da4c5ce6e3f3e230a3c3e957',
+                            'restore': []},
+ 'canon/EVIDENCE.tsv': {'current_bytes': 126271,
+                        'current_sha256': '51eb70dc5cde88cf2c46e8d9052db39373b68424d08921445dbf1a24d0582e4c',
+                        'prior_bytes': 125685,
+                        'prior_sha256': '8d48c5001462a4b760d6554c2912a6c1ea20841997ba1a0b4ed713c8bd933e28',
+                        'restore': [(628, 631, '')]},
+ 'canon/FRONTIER.md': {'current_bytes': 25630,
+                       'current_sha256': '2720c8032a31a4a0c3a704b00ca462f6e5faad6696958c0e4e03e3b7b74658cd',
+                       'prior_bytes': 25630,
+                       'prior_sha256': '2720c8032a31a4a0c3a704b00ca462f6e5faad6696958c0e4e03e3b7b74658cd',
+                       'restore': []},
+ 'canon/FRONTIER_PROGRAMS.tsv': {'current_bytes': 1444,
+                                 'current_sha256': '53fa7ded98facb495ed676f0ec6b20cd488150afdbf8734f3f436fead0ee0de7',
+                                 'prior_bytes': 1444,
+                                 'prior_sha256': '53fa7ded98facb495ed676f0ec6b20cd488150afdbf8734f3f436fead0ee0de7',
+                                 'restore': []},
+ 'canon/GATES.tsv': {'current_bytes': 13927,
+                     'current_sha256': '207c999f2e70538949fbdf434a8be2fb6ccf0d6190ed8cc2f0e4d1fd623562f2',
+                     'prior_bytes': 13927,
+                     'prior_sha256': '207c999f2e70538949fbdf434a8be2fb6ccf0d6190ed8cc2f0e4d1fd623562f2',
+                     'restore': []},
+ 'canon/HISTORY.tsv': {'current_bytes': 542925,
+                       'current_sha256': '4b39c4ab5ada81089215baf4dfd4ad77b7bb026e1eff6b3b82e82b5a8fc1b461',
+                       'prior_bytes': 541837,
+                       'prior_sha256': 'dfb91b7fe0b6b7110ee835d6a03d5275fab03fc4ea5ce4fc7f6dfb3f859ada3d',
+                       'restore': [(1179, 1182, '')]},
+ 'canon/LEDGER.md': {'current_bytes': 5531,
+                     'current_sha256': 'da299b1b2bb4b6d038c278b729ddeda385e8a7b02a114f6dcfa6f096d2cd737c',
+                     'prior_bytes': 5531,
+                     'prior_sha256': 'da299b1b2bb4b6d038c278b729ddeda385e8a7b02a114f6dcfa6f096d2cd737c',
+                     'restore': []},
+ 'canon/NORMATIVE.tsv': {'current_bytes': 81232,
+                         'current_sha256': 'db77566e7330a6517fb7865af93db7bfb80052b56bdf463fcf59f6d0b1497e08',
+                         'prior_bytes': 80936,
+                         'prior_sha256': '54ea622a7151c32c2e3e38e29b65e8924182101699967e79d66c28f63e2109c5',
+                         'restore': [(693, 696, '')]},
+ 'canon/REGISTRY.tsv': {'current_bytes': 612567,
+                        'current_sha256': '010bd6ea2838e01a42aa010e72afafb3036589b0f589fa36f25c74ec62e68187',
+                        'prior_bytes': 610346,
+                        'prior_sha256': 'de46ab121b5425ea020caa36fed935e8f163b4567c67e625c142102a17ca186d',
+                        'restore': [(628, 631, '')]},
+ 'canon/SHA256SUMS': {'current_bytes': 415,
+                      'current_sha256': 'a262f92bf957a714f64110fb458b46342621a98254fa6cde3eb15fc6a018cf2e',
+                      'prior_bytes': 415,
+                      'prior_sha256': '126baac8a8b53f7b58866e3456412a254df7ac8f1a6d5b967f61e8684055f5d6',
+                      'restore': [(0,
+                                   2,
+                                   '47114cb616069242cff36bb499e5fe9b11266a92c744ba3f15a9085c11956b34  '
+                                   'canon/CANON.md\n'
+                                   'a43ad24109dfa4331a03945963295de801e934a003cd1ee9c61dda560b77783e  '
+                                   'canon/CORE.md\n'),
+                                  (3,
+                                   5,
+                                   'de46ab121b5425ea020caa36fed935e8f163b4567c67e625c142102a17ca186d  '
+                                   'canon/REGISTRY.tsv\n'
+                                   '4823c6bf14f312796dfe6e14e4eb974fc15e5ad47157acaf21d168a942a06903  '
+                                   'canon/CHANGELOG.md\n')]},
+ 'canon/STATUS_COUNTS.tsv': {'current_bytes': 244,
+                             'current_sha256': 'e76d374eba8b687c0ee50e0667c6ee2ca3686117259d2189c00c28d847a5ed34',
+                             'prior_bytes': 244,
+                             'prior_sha256': '3ebcbb81f506eb43d2ce49552b6303c60aa7684949509825abeeb78062d6e321',
+                             'restore': [(1, 2, 'claims\t627\n'),
+                                         (3, 4, 'status_T\t478\n'),
+                                         (5, 6, 'status_C\t43\n'),
+                                         (14, 15, 'evidence_two-architecture\t386\n')]},
+ 'tools/test_architecture_map_report.py': {'current_bytes': 54481,
+                                           'current_sha256': '818d285a99bfbc065cf34a91321a628d4c3432efd3735bd6f19d5da29a9e7482',
+                                           'prior_bytes': 54488,
+                                           'prior_sha256': '6211eed1a7c5047c1ba144f3d9711000c52ed7f0e12961b2ad4efb3401914b6a',
+                                           'restore': [(377,
+                                                        379,
+                                                        '        # v113 adds the incidence-support '
+                                                        'dictionary and closes the cone owner.\n'
+                                                        '        '
+                                                        'self.assertEqual(self.report.claims, '
+                                                        '627)\n'),
+                                                       (381,
+                                                        382,
+                                                        '            {"C": 43, "D": 62, "F": 19, '
+                                                        '"H": 2, "O": 23, "T": 478},\n'),
+                                                       (389,
+                                                        390,
+                                                        '                "two-architecture": '
+                                                        '386,\n'),
+                                                       (399,
+                                                        400,
+                                                        '        '
+                                                        'self.assertEqual(len(self.report.dependency_terminals), '
+                                                        '85)\n')]}}
+V114_CLAIMS = {
+    'D3-FLUX-VARIANCE-BOUND': (
+        'T', 'THEOREM', '9. The photon and the electron', 'P-D3-ZWORK-VAR-BOUND-1'),
+    'H3-SECOND-WORD-WRITE': ('C', 'COMPUTATION', '2. Time, space, and the decoder', 'P-H3-SECOND-WRITE-1'),
+    'H3-WORD-BRANCH-CHOICE': ('C', 'COMPUTATION', '2. Time, space, and the decoder', 'P-H3-THIRD-CELL-1'),
+}
+V114_CHECKS = (
+    ('V114-PRIOR-BYTES',
+     'the pinned reverse fold reconstructs exact v113 Canon and metadata inputs before all 245 historical guards'),
+    ('V114-CLAIM-LEDGERS',
+     'one finite-volume equilibrium theorem and two finite H3 computations enter at their exact scopes without changing any prior row'),
+    ('V114-EVIDENCE',
+     'all three declarations bind their exact two-architecture public probe bundles and scope hashes'),
+    ('V114-BOUNDARY',
+     'the frontier, dependency and gate ledgers are byte-identical to v113 and the exact 43-directory reproduction inventory is preserved'),
+)
+
+
+@lru_cache(maxsize=1)
+def v114_current_inputs():
+    """Validate the complete current v114 input and its exact v113 inverse."""
+    if not V114_INPUT_PATCH:
+        return None
+    current, previous = {}, {}
+    try:
+        for relative, contract in V114_INPUT_PATCH.items():
+            path = ROOT / relative
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            if (len(content) != contract['current_bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
+                return None
+            prior = v111_restore_bytes(content, contract)
+            if prior is None:
+                return None
+            current[relative], previous[relative] = content, prior
+    except (OSError, ValueError):
+        return None
+    return current, previous
+
+
+def v114_previous_bytes(path):
+    """Give v113 consumers the reconstructed release inputs only."""
+    inputs = v114_current_inputs()
+    if inputs is None:
+        return None
+    return inputs[1].get(path.relative_to(ROOT).as_posix())
+
+
+def v114_probe_digest(probe_name):
+    relative = 'probes/' + probe_name
+    probe = ROOT / relative
+    if probe.is_symlink() or not probe.is_dir():
+        return None
+    paths = [
+        path for path in probe.rglob('*')
+        if '__pycache__' not in path.parts and path.suffix != '.pyc'
+        and 'RUNS' not in path.relative_to(probe).parts
+    ]
+    if any(path.is_symlink() for path in paths):
+        return None
+    files = {path.relative_to(ROOT).as_posix(): path for path in paths if path.is_file()}
+    if not {f'{relative}/{name}' for name in
+            ('PREREG.md', 'verify.py', 'EXPECTED.txt', 'RUN.md', 'RESULT.md')} <= files.keys():
+        return None
+    manifest = ''.join(
+        f'{hashlib.sha256(files[name].read_bytes()).hexdigest()}  {name}\n'
+        for name in sorted(files)
+    )
+    return hashlib.sha256(manifest.encode('utf-8')).hexdigest()
+
+
+def v114_current_checks():
+    failed = [(tag, description, False) for tag, description in V114_CHECKS]
+    inputs = v114_current_inputs()
+    if inputs is None:
+        return failed
+    current, prior = inputs
+    ids = V114_CLAIMS.keys()
+
+    def split_rows(name, key):
+        relative = 'canon/' + name
+        rows = v87_table_bytes(current[relative])
+        additions = [row for row in rows if row[key] in ids]
+        unchanged = [row for row in rows if row[key] not in ids]
+        members = v112_rows_by_id(additions, key)
+        exact = (
+            len(additions) == len(ids)
+            and members.keys() == ids
+            and unchanged == v87_table_bytes(prior[relative])
+        )
+        return rows, members, exact
+
+    try:
+        registry, claims, exact_claims = split_rows('REGISTRY.tsv', 'claim_id')
+        _, normative, exact_normative = split_rows('NORMATIVE.tsv', 'item_id')
+        _, evidence, exact_evidence = split_rows('EVIDENCE.tsv', 'claim_id')
+        _, history, exact_history = split_rows('HISTORY.tsv', 'claim_id')
+        partition = {status: 0 for status in ('T', 'D', 'C', 'H', 'O', 'F')}
+        for row in registry:
+            partition[row['status']] += 1
+        members = (
+            exact_claims and exact_normative and len(registry) == 630
+            and partition == {'T': 479, 'D': 62, 'C': 45, 'H': 2, 'O': 23, 'F': 19}
+        )
+        provenance = exact_evidence and exact_history
+        canon = current['canon/CANON.md'].decode('utf-8')
+        for claim, (status, kind, section, probe) in V114_CLAIMS.items():
+            row, definition = claims[claim], normative[claim]
+            heading = f'### {claim} [{status}]\n'
+            section_index = canon.rfind('\n## ', 0, canon.index(heading))
+            canon_section = canon[section_index + 4:].splitlines()[0]
+            members = (
+                members and row['status'] == status and canon.count(heading) == 1
+                and row['canon_section'] == canon_section
+                and canon_section == section
+                and (definition['item_type'], definition['claim_id'],
+                     definition['status'], definition['layer'], definition['gate_ids'],
+                     definition['statement_source'])
+                == (kind, claim, status, 'L1', '', f'canon/CANON.md::{claim}')
+            )
+            location = 'probes/' + probe
+            evidence_id = 'EV-' + claim
+            bundle = v114_probe_digest(probe)
+            scope = v112_scope_hash(row)
+            ev, event = evidence[claim], history[claim]
+            provenance = (
+                provenance and bundle is not None and row['evidence'] == location
+                and (ev['evidence_id'], ev['evidence_kind'], ev['location'], ev['sha256'],
+                     ev['hash_mode'], ev['architecture_requirement'])
+                == (evidence_id, 'PUBLIC_PROBE', location, bundle,
+                    'bundle-manifest-sha256-v1', 'two-architecture')
+                and (event['event_id'], event['event_sequence'], event['event_date'],
+                     event['release'], event['event_type'], event['previous_status'],
+                     event['new_status'], event['scope_sha256'], event['evidence_id'],
+                     event['evidence_location'], event['evidence_sha256'])
+                == ('CANON114-DECLARE-' + claim, '1', '2026-11-21', 'canon-v114',
+                    'DECLARE', '-', status, scope, evidence_id, location, bundle)
+            )
+        boundary = (
+            all(current['canon/' + name] == prior['canon/' + name] for name in (
+                'FRONTIER.md', 'FRONTIER_PROGRAMS.tsv', 'DEPENDENCIES.tsv', 'GATES.tsv',
+            ))
+            and not any(path.is_symlink() for path in REPRODUCE.iterdir())
+            and frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+            == frozenset(V111_REPRODUCTIONS) | V112_ADDED_REPRODUCTIONS
+        )
+    except (OSError, KeyError, ValueError):
+        return failed
+    return [
+        (tag, description, ok)
+        for (tag, description), ok in zip(V114_CHECKS, (True, members, provenance, boundary))
+    ]
+
+
 # The release assembly binds this adapter to the reviewed v113 fold and probe.
 V113_INPUT_PATCH = {'canon/CANON.md': {'current_bytes': 1555510,
                     'current_sha256': '47114cb616069242cff36bb499e5fe9b11266a92c744ba3f15a9085c11956b34',
@@ -3836,7 +4121,9 @@ V113_CHECKS = (
 @lru_cache(maxsize=14)
 def v113_previous_bytes(path):
     """Return the original v112 input through a hash-pinned reverse fold."""
-    content = path.read_bytes()
+    content = v114_previous_bytes(path)
+    if content is None:
+        return None
     relative = path.relative_to(ROOT).as_posix()
     contract = V113_INPUT_PATCH.get(relative)
     if contract is None:
@@ -3860,7 +4147,7 @@ def v113_current_checks():
             'EVIDENCE.tsv', 'HISTORY.tsv', 'FRONTIER_PROGRAMS.tsv',
         )
         current = {
-            name: v87_table_bytes((ROOT / 'canon' / name).read_bytes())
+            name: v87_table_bytes(v114_previous_bytes(ROOT / 'canon' / name))
             for name in names
         }
         prior = {
@@ -30547,9 +30834,10 @@ def run():
     checks.extend(v111_current_checks())
     checks.extend(v112_current_checks())
     checks.extend(v113_current_checks())
+    checks.extend(v114_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v113")
+    print("historical guards: exact reconstructed v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v114")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0
