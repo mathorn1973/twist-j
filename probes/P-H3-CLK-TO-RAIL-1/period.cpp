@@ -1,0 +1,449 @@
+// SPDX-License-Identifier: Apache-2.0
+// Supplemental exact long-cycle test for P-H3-CLK-TO-RAIL-1.
+// Build: g++ -std=c++20 -O3 period.cpp -o period
+// Usage: ./period {active|control|antenna} [tick-bound]
+// The bare mode independently checks the 622-tick reference.
+#include <array>
+#include <algorithm>
+#include <map>
+#include <cstdint>
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <unordered_map>
+#include <vector>
+
+using I = std::int64_t;
+using W = __int128_t;
+using Id = std::uint32_t;
+using Ring = std::array<I, 4>;
+using Cell = std::array<Id, 4>;
+using Field = std::array<Cell, 32>;
+using Pair = std::array<Id, 2>;
+constexpr Ring zero{}, one{1}, rho{0,0,1}, J{1,0,1}, invJ{0,-1,-1};
+constexpr I coefficient_bound = I{1} << 29;
+
+I checked(W x) {
+    if (x < -coefficient_bound || x > coefficient_bound)
+        throw std::overflow_error("checked ring-coefficient bound exceeded");
+    return static_cast<I>(x);
+}
+Ring add(Ring a, Ring b, I sign=1) {
+    for (size_t i=0; i<4; ++i) a[i]=checked(W(a[i])+W(sign)*b[i]);
+    return a;
+}
+Ring scale(Ring a, I m) {
+    for (auto &x:a) x=checked(W(x)*m);
+    return a;
+}
+Ring mul(const Ring &a, const Ring &b) {
+    std::array<W,5> c{};
+    for(size_t i=0; i<4; ++i)
+        for(size_t q=0; q<4; ++q) c[(i+q)%5]+=W(a[i])*b[q];
+    return {checked(c[0]-c[4]),checked(c[1]-c[4]),
+            checked(c[2]-c[4]),checked(c[3]-c[4])};
+}
+Ring norm(const Ring &a) {
+    return mul(a, {checked(W(a[0])-a[1]), -a[1], checked(W(a[3])-a[1]), checked(W(a[2])-a[1])});
+}
+Ring half(Ring a) {
+    for(auto &x:a) {
+        if(x%2) throw std::logic_error("nonintegral half-gap");
+        x/=2;
+    }
+    return a;
+}
+
+using RingPair = std::array<Ring, 2>;
+using RingCell = std::array<Ring, 4>;
+
+RingPair native_contact(const RingPair &in, bool inverse) {
+    const Ring gap = half(add(in[0], in[1], -1));
+    const Ring midpoint = half(add(in[0], in[1]));
+    const Ring rotated = mul(gap, inverse ? Ring{0, 0, 0, 1} : rho);
+    return {add(midpoint, rotated), add(midpoint, rotated, -1)};
+}
+
+bool integral_pair(const Ring &a, const Ring &b) {
+    for (unsigned i = 0; i < a.size(); ++i) {
+        if ((a[i] - b[i]) % 2) return false;
+    }
+    return true;
+}
+
+std::pair<RingCell, unsigned> native_collision(const RingCell &in) {
+    if (in[0] == in[1] || in[2] == in[3] ||
+        !integral_pair(in[0], in[1]) || !integral_pair(in[2], in[3])) return {in, 0};
+
+    Ring d = half(add(in[0], in[1], -1));
+    Ring f = half(add(in[2], in[3], -1));
+    const Ring hd = norm(d), hf = norm(f);
+    static const Ring theta = norm(J);
+    const unsigned tag = hf == mul(theta, hd) ? 1 : hd == mul(theta, hf) ? 2 : 0;
+    if (!tag) return {in, 0};
+
+    const Ring m = half(add(in[0], in[1]));
+    const Ring n = half(add(in[2], in[3]));
+    d = mul(d, tag == 1 ? J : invJ);
+    f = mul(f, tag == 1 ? invJ : J);
+    return {{add(m, d), add(m, d, -1), add(n, f), add(n, f, -1)}, tag};
+}
+
+template<std::size_t size>
+Ring hermitian_account(const std::array<Ring, size> &a) {
+    Ring sum{};
+    for (const Ring &v : a) sum = add(sum, norm(v));
+    return sum;
+}
+
+struct Hash {
+    template<class T,size_t n> size_t operator()(const std::array<T,n>& a) const noexcept {
+        std::uint64_t h=0x9e3779b97f4a7c15ULL;
+        for(auto x:a) {
+            h^=static_cast<std::uint64_t>(x)+0x9e3779b97f4a7c15ULL+(h<<6)+(h>>2);
+        }
+        return h;
+    }
+};
+struct Entry {
+    Ring value;
+    unsigned parity;
+};
+class Kernel {
+    std::vector<Entry> values;
+    std::unordered_map<Ring,Id,Hash> ids;
+    std::array<std::unordered_map<Pair,Pair,Hash>,2> contact_cache;
+    std::unordered_map<Cell,std::pair<Cell,unsigned>,Hash> collision_cache;
+    std::array<std::array<std::array<unsigned,2>,16>,2> rows{}, columns{};
+public:
+    explicit Kernel() {
+        intern(zero);
+        for(unsigned b=0; b<2; ++b) {
+            unsigned ix=0;
+            for(unsigned x=0; x<8; ++x)
+                for(unsigned y=b; y<4; y+=2) rows[b][ix++]={4*x+y,4*x+(y+1)%4};
+            ix=0;
+            for(unsigned x=b; x<8; x+=2)
+                for(unsigned y=0; y<4; ++y) columns[b][ix++]={4*x+y,4*((x+1)%8)+y};
+        }
+    }
+    Id intern(const Ring &a) {
+        auto it=ids.find(a);
+        if(it!=ids.end()) return it->second;
+        if(values.size()>=2'000'000) throw std::overflow_error("exact ring capacity limit reached");
+        unsigned parity=0;
+        for(size_t x=0; x<4; ++x) parity|=(static_cast<unsigned>(a[x])&1u)<<x;
+        Id id=static_cast<Id>(values.size());
+        values.push_back({a,parity});
+        ids.emplace(a,id);
+        return id;
+    }
+    const Ring &value(Id id) const {return values[id].value;}
+    void contact(Id &a, Id &b, bool inverse) {
+        if(a==b || values[a].parity!=values[b].parity) return;
+        const bool reversed=a>b;
+        Pair key=reversed?Pair{b,a}:Pair{a,b};
+        auto &cache=contact_cache[inverse];
+        auto it=cache.find(key);
+        if(it==cache.end()) {
+            const RingPair in{value(key[0]), value(key[1])};
+            const RingPair mapped = native_contact(in, inverse);
+            if (add(in[0], in[1]) != add(mapped[0], mapped[1]) ||
+                hermitian_account(in) != hermitian_account(mapped)) {
+                throw std::logic_error("contact conservation mismatch");
+            }
+            if (!integral_pair(mapped[0], mapped[1]) ||
+                native_contact(mapped, !inverse) != in) {
+                throw std::logic_error("contact inverse mismatch");
+            }
+            const Pair out{intern(mapped[0]), intern(mapped[1])};
+            if(cache.size()>=500'000) cache.clear();
+            it=cache.emplace(key,out).first;
+        }
+        a=it->second[reversed]; b=it->second[!reversed];
+    }
+    unsigned collide(Cell &a) {
+        if(a[0]==a[1] || a[2]==a[3] || values[a[0]].parity!=values[a[1]].parity ||
+            values[a[2]].parity!=values[a[3]].parity) return 0;
+        if(collision_cache.size()>=500'000) collision_cache.clear();
+        auto it=collision_cache.find(a);
+        if(it!=collision_cache.end()) {
+            a=it->second.first;
+            return it->second.second;
+        }
+        const RingCell in{value(a[0]), value(a[1]), value(a[2]), value(a[3])};
+        const auto [mapped, tag] = native_collision(in);
+        Cell out = a;
+        if (tag) {
+            if (add(in[0], in[1]) != add(mapped[0], mapped[1]) ||
+                add(in[2], in[3]) != add(mapped[2], mapped[3]) ||
+                hermitian_account(in) != hermitian_account(mapped)) {
+                throw std::logic_error("collision conservation mismatch");
+            }
+            const auto [recovered, inverse_tag] = native_collision(mapped);
+            if (recovered != in || inverse_tag != 3 - tag) {
+                throw std::logic_error("collision inverse mismatch");
+            }
+            for (unsigned lane = 0; lane < out.size(); ++lane) out[lane] = intern(mapped[lane]);
+        }
+        collision_cache.emplace(a,std::pair{out,tag});
+        a=out;
+        return tag;
+    }
+    void transport(Field &f,unsigned b,bool inverse=false) {
+        for(auto [i,j]:rows[b]) for(unsigned lane=0;lane<3;++lane)
+            contact(f[i][lane],f[j][lane],inverse);
+        for(auto [i,j]:columns[b]) contact(f[i][3],f[j][3],inverse);
+    }
+    unsigned scatter(Field &f) {
+        unsigned head_tag=0;
+        for(unsigned site=0;site<f.size();++site) {
+            const auto tag=collide(f[site]);
+            if(site==4) head_tag=tag;
+        }
+        return head_tag;
+    }
+
+};
+std::ostream &operator<<(std::ostream &o,const Ring &a) {
+    return o<<'('<<a[0]<<','<<a[1]<<','<<a[2]<<','<<a[3]<<')';
+}
+Field seed(Kernel &k,const std::string &mode) {
+    Field f{};
+    const Ring rho2=mul(rho,rho);
+    const Ring d=add(add(Ring{2},rho),rho2);
+    const Ring k0=add(J,rho2,-1);
+    const Ring stash=add(k0,scale(mul(mul(rho,J),d),2),-1);
+    for(unsigned y=0;y<4;++y) {
+        f[y]={k.intern(scale(J,2)),k.intern(scale(J,-2)),k.intern(one),
+              k.intern(y<2?Ring{-3}:stash)};
+    }
+    for(unsigned y=0;y<2;++y) {
+        f[4+y][3]=k.intern(Ring{-3});
+        f[8+y][3]=k.intern(Ring{5});
+    }
+    if(mode=="bare")return f;
+    const Ring D{1,-1,-1,1},g=mul(J,D);
+    f[4]={k.intern(D),k.intern(scale(D,-1)),k.intern(Ring{0,2,-1,1}),f[4][3]};
+    const Ring K=mode=="control"?Ring{5,-1,1,-3}:Ring{2,-2,1,6};
+    f[5]={k.intern(scale(g,-3)),k.intern(scale(g,-1)),k.intern(K),f[5][3]};
+    if(mode=="antenna") f[6][2]=k.intern({6,-1,3,1});
+    return f;
+}
+std::array<Ring,3> account(Kernel &k,const Field &f) {
+    std::array<Ring,3> out{};
+    for(const auto &cell:f) for(unsigned lane=0;lane<4;++lane) {
+        const Ring a=k.value(cell[lane]);
+        out[lane/2]=add(out[lane/2],a);
+        out[2]=add(out[2],norm(a));
+    }
+    return out;
+}
+
+using Tick=std::uint64_t;
+constexpr Tick limit=100'000'000;
+constexpr Tick audit_stride=4096;
+constexpr std::array<unsigned,2> labels{44,4};
+constexpr unsigned receiver=5;
+
+std::array<Field,2> predecessors(Kernel &k) {
+    Field bare=seed(k,"bare");
+    const Field initial=bare;
+    const auto ledger=account(k,bare);
+    std::array<Field,2> cuts{};
+    for(unsigned n=0;n<622;++n) {
+        if(n==73) cuts[0]=bare;
+        if(n==189) cuts[1]=bare;
+        k.transport(bare,n%2);
+        if(account(k,bare)!=ledger) throw std::logic_error("bare transport ledger");
+        k.scatter(bare);
+        if(account(k,bare)!=ledger) throw std::logic_error("bare collision ledger");
+        if(n%2 && bare==initial && n!=621) throw std::logic_error("early bare return");
+    }
+    if(bare!=initial) throw std::logic_error("missing bare return");
+    return cuts;
+}
+
+bool projected_equal(const Field &a,const Field &b,bool antenna) {
+    if(a[4][3]!=b[4][3] || a[0][3]!=b[0][3]) return false;
+    for(unsigned site=0;site<a.size();++site) {
+        if(site==4 || site==5) {
+            if(a[site][3]!=b[site][3]) return false;
+        } else if(antenna && site==6) {
+            for(unsigned lane:{0u,1u,3u})
+                if(a[site][lane]!=b[site][lane]) return false;
+        } else if(a[site]!=b[site]) return false;
+    }
+    return true;
+}
+
+struct Class {
+    Tick projected=0, reads=0, observations=0, writes=0, first_observation=0;
+    std::map<Ring,Tick> words, written_words;
+};
+struct Violation {
+    Tick count=0, first_tick=0;
+    char first_stage='-';
+    Ring first_before{}, first_after{};
+
+    void note(Tick tick,char stage,Id before,Id after,const Kernel &k) {
+        if(count++==0) {
+            first_tick=tick;
+            first_stage=stage;
+            first_before=k.value(before);
+            first_after=k.value(after);
+        }
+    }
+    void print(const char *label) const {
+        std::cout<<label<<" count="<<count;
+        if(count) std::cout<<" first_tick="<<first_tick<<" first_stage="<<first_stage
+                           <<" before="<<first_before<<" after="<<first_after;
+        std::cout<<'\n';
+    }
+};
+void print_class(const char *label,const std::map<Ring,Tick> &words) {
+    std::cout<<label<<" distinct="<<words.size();
+    for(const auto &[word,tick]:words) std::cout<<' '<<word<<'@'<<tick;
+    std::cout<<'\n';
+}
+void print_intersection(const char *label,const std::map<Ring,Tick> &a,
+                        const std::map<Ring,Tick> &b) {
+    auto first=std::pair{UINT64_MAX,UINT64_MAX};
+    Ring first_word{};
+    std::size_t count=0;
+    for(const auto &[word,tick]:a) {
+        auto other=b.find(word);
+        if(other==b.end()) continue;
+        ++count;
+        const auto pair=std::minmax(tick,other->second);
+        const auto completion=std::pair{pair.second,pair.first};
+        if(completion<first) {
+            first=completion;
+            first_word=word;
+        }
+    }
+    std::cout<<label<<" distinct="<<count;
+    if(count) std::cout<<" first_word="<<first_word<<" raw44_tick="<<a.at(first_word)
+                       <<" raw4_tick="<<b.at(first_word);
+    std::cout<<'\n';
+}
+
+int main(int argc,char **argv) try {
+    if(argc<2 || argc>3) throw std::runtime_error("usage: period {active|control|antenna} [tick-bound]");
+    const std::string mode=argv[1];
+    if(mode!="bare" && mode!="active" && mode!="control" && mode!="antenna")
+        throw std::runtime_error("unknown preparation");
+    Tick horizon=argc==3?std::stoull(argv[2]):limit;
+    if(!horizon || horizon>limit) throw std::runtime_error("tick-bound must be in 1..100,000,000");
+    Kernel k;
+    auto cuts=predecessors(k);
+    Field f=seed(k,mode);
+    const Field initial=f;
+    const auto expected=account(k,f);
+    const auto &h=expected[2];
+    const auto trace=5*h[0]-(h[0]+h[1]+h[2]+h[3]);
+    std::cout<<"preparation="<<mode<<" horizon="<<horizon<<" Q="<<trace/2
+             <<" matter="<<expected[0]<<" radiation="<<expected[1]
+             <<" hermitian="<<h<<'\n';
+    // A forward tick is C then B, so undo B before undoing C.
+    // Capture the unique complete predecessor to audit a return on any tick.
+    Field return_predecessor=initial;
+    k.scatter(return_predecessor);
+    k.transport(return_predecessor,1,true);
+    f=initial;
+
+    Tick transport_writes=0,scatter_writes=0,audits=0,visited=0,first_return=0;
+    std::array<Class,2> classes{};
+    Violation unscheduled,hold,missing_write;
+    Id held=f[receiver][0];
+    int pending=-1;
+    for(Tick n=0;n<horizon;++n) {
+        const Tick tick=n+1;
+        const unsigned bit=n%2;
+        const bool audited=(tick%audit_stride==0) || tick==horizon ||
+                           (bit && f==return_predecessor);
+        Field prior{},work{};
+        if(audited) prior=f;
+
+        int projected=-1;
+        if(bit) for(unsigned label=0;label<cuts.size();++label) {
+            if(projected_equal(f,cuts[label],mode=="antenna")) {
+                projected=static_cast<int>(label);
+                ++classes[label].projected;
+                break;
+            }
+        }
+
+        const Id before=f[receiver][0];
+        k.transport(f,bit);
+        const Id after_c=f[receiver][0];
+        if(after_c!=before) ++transport_writes;
+        if(audited) {
+            work=f;
+            if(account(k,f)!=expected) throw std::logic_error("transport ledger mismatch");
+        }
+        const unsigned head_tag=k.scatter(f);
+        const Id after_b=f[receiver][0];
+        if(after_b!=after_c) ++scatter_writes;
+        if(audited) {
+            if(account(k,f)!=expected) throw std::logic_error("collision ledger mismatch");
+            Field inverse=f;
+            k.scatter(inverse);
+            if(inverse!=work) throw std::logic_error("inverse B mismatch");
+            k.transport(inverse,bit,true);
+            if(inverse!=prior) throw std::logic_error("inverse tick mismatch");
+            ++audits;
+        }
+        if(pending>=0) {
+            Class &record=classes[pending];
+            if(record.observations++==0) record.first_observation=tick;
+            const Ring word=k.value(after_b);
+            record.words.try_emplace(word,tick);
+            if(after_b!=before) {
+                ++record.writes;
+                record.written_words.try_emplace(word,tick);
+            } else missing_write.note(tick,'B',before,after_b,k);
+            held=after_b;
+        } else {
+            if(after_c!=before) unscheduled.note(tick,'C',before,after_c,k);
+            if(after_b!=after_c) unscheduled.note(tick,'B',after_c,after_b,k);
+            if(after_c!=held) hold.note(tick,'C',held,after_c,k);
+            if(after_b!=held) hold.note(tick,'B',held,after_b,k);
+        }
+        pending=projected>=0 && head_tag==1?projected:-1;
+        if(pending>=0) ++classes[pending].reads;
+
+        visited=tick;
+        if(bit && f==initial) {
+            if (pending >= 0) throw std::logic_error("full return has an unscored wrap read");
+            first_return=tick;
+            break;
+        }
+    }
+
+    // The native tick with matching bit is bijective. Exact return to the
+    // initial state is necessarily the orbit's first repeat.
+    std::cout<<"ticks="<<visited<<" first_full_return=";
+    if(first_return) std::cout<<first_return;
+    else std::cout<<"none_within_bound";
+    std::cout<<" audit_count="<<audits<<" transport_writes="<<transport_writes
+             <<" collision_writes="<<scatter_writes<<'\n';
+    for(unsigned i=0;i<classes.size();++i) {
+        const auto &c=classes[i];
+        std::cout<<"raw="<<labels[i]<<" projected_predecessors="<<c.projected
+                 <<" B1_reads="<<c.reads<<" following_observations="<<c.observations
+                 <<" changed_words="<<c.writes<<" first_observation="<<c.first_observation
+                 <<'\n';
+        print_class("observed_class",c.words);
+        print_class("written_class",c.written_words);
+    }
+    if (pending >= 0) std::cout << "read_pending_beyond_bound=" << labels[pending] << '\n';
+    print_intersection("observed_class_intersection",classes[0].words,classes[1].words);
+    print_intersection("written_class_intersection",classes[0].written_words,classes[1].written_words);
+    unscheduled.print("unscheduled_substep_changes");
+    hold.print("hold_mismatches");
+    missing_write.print("qualifying_contacts_without_final_change");
+} catch(const std::exception &e) {
+    std::cerr<<e.what()<<'\n';
+    return 2;
+}
