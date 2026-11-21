@@ -1,0 +1,17 @@
+COLLATZ-VALUATION-CARRY-REPLAY v1
+arithmetic: exact integers; result-exposed replay
+carry: n=0..4095; Kummer n=0..127; h=0..63,r=1..8; PASS
+odd inputs: n=1..4095; actual T, both maximal prefixes, gcd, inverse; PASS
+Mersenne and plus-one families: k=1..128; prefixes and boundaries; PASS
+Mersenne block: k=1 equal; k=2,4,8 decrease; remaining k<=128 increase
+Mersenne golden last-prefix states, k=1..128: [1, 2, 3, 5, 8]
+golden powers 3^m, m=0..100000: [0, 2, 4]
+golden (3^(k-1)-1)/2, k=1..100001: [1, 2, 3, 5, 8]
+carry/overlap at 3,27,243: [2,5,6] / [1,2,4]
+plus-one m=5 at k=10,11,12: states [61,487,973], carries [4,7,6]
+inverse: 510 admissible pairs; towers p<=255,j<=6; odd divisors d<=255; PASS
+cycle words: length=1..5, depths=1..4; 1364 words; only repeated fixed point 1
+fixtures: 255 reaches first Z at 4373 then 205; 257 joins 27 at 41; PASS
+orbit 27: 41 odd steps, 111 ordinary steps, maxima 3077 and 9232; PASS
+scope: finite replay; universal identities require the accompanying proofs
+scope: no global golden-exponent classification or Collatz convergence claim
