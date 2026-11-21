@@ -1,0 +1,52 @@
+C-FIELD-CYCLOTOMIC-WINDOW-N independent challenge; NON-CANONICAL L1
+Source: frozen preregistration/public definitions only; targets exposed
+control.zero_2_by_3=passed
+control.rectangular_2_by_1=passed
+control.rank_deficient=passed
+control.empty_0_by_0=passed
+control.empty_0_by_3=passed
+control.empty_2_by_0=passed
+control.critical_diag_2_0=passed
+control.unstable_diag_3_0=passed
+unstable.special_orbit=nonzero fixed E1; universal boundedness is essential
+control.Ccrit=passed
+critical.formula_n_0_to_12=passed; all-n proof uses C^t C v=4v
+adjacent_ordinary_signed_triangles=Gram roots 2,4; outside strict window
+control.C5=passed
+raw.T=[[1,0,0,0,1,-1],[0,1,0,0,-1,0],[0,0,1,0,0,1],[0,0,0,1,0,1],[-1,1,0,0,-1,1],[1,0,-1,-1,1,-2]]
+raw.inverse=[[-1,1,1,1,-1,1],[1,0,0,0,1,0],[1,0,0,-1,0,-1],[1,0,-1,0,0,-1],[1,-1,0,0,1,0],[-1,0,1,1,0,1]]
+graph.D=[[1,1,1,0],[-1,-1,0,-1],[0,0,-1,1]]
+active.unsaturated_basis_control=same rational kernel, index2, rejected
+active.embedding=[[1,-1,0,0],[-1,0,0,0],[0,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]
+active.extraction=[[0,-1,0,0,0,0],[0,0,1,0,0,0],[0,0,0,0,1,0],[0,0,0,0,0,1]]
+active.T=[[1,0,1,0],[0,1,0,1],[-2,1,-1,1],[1,-3,1,-2]]
+active.B=[[4,-2,2,-1],[-2,6,-1,3],[2,-1,2,0],[-1,3,0,2]]
+module.map=[[0,1,0,0],[0,0,1,-1],[1,-1,0,-1],[0,1,-2,1]]
+module.inverse=[[2,-2,1,-1],[1,0,0,0],[1,-1,0,-1],[1,-2,0,-1]]
+static.basis=[[1,0],[1,0],[0,1],[1,-1],[0,0],[0,0]]
+static.charges=[[2,1],[-3,1],[1,-2]]
+gluing.index=5
+gluing.admission=2E0-3E1+E2+E3=0 mod5 iff 2rho0+rho2=0 mod5
+gluing.inverse=[[2/5,-3/5,1/5,1/5,0,0],[-1/5,-1/5,2/5,2/5,0,0],[0,0,0,0,1,0],[0,0,0,0,0,1],[2/5,2/5,1/5,1/5,0,0],[1/5,1/5,3/5,-2/5,0,0]]
+J.energy_counterexample=[[1,0,0,0],2,3]
+L5.matrix=[[1,-3,-1,-2],[-3,4,-2,1],[0,5,1,2],[5,-5,2,-1]]
+L5.energy_adjoint=[[1,2,1,2],[2,-1,2,-1],[0,-5,1,-3],[-5,5,-3,4]]
+L5.inverse_numerator=[[1,2,1,2],[2,-1,2,-1],[0,-5,1,-3],[-5,5,-3,4]]
+L5.Smith_determinantal_divisors=[1,1,1,5,25]
+L5.Smith=[1,1,5,5]
+L5.Hermite=[[5,3,0,0],[0,1,0,0],[0,0,5,3],[0,0,0,1]]
+L5.Hermite_right_unimodular=[[1,1,1,1],[2,1,2,1],[0,-1,1,0],[-5,-2,-3,-1]]
+L5.image_congruence_rows_mod5=[[1,2,0,0],[0,0,1,2]]
+L5.residue_audit_accepted_rejected_total=[25,600,625]
+L5.H5_nonimage_witness=[[0,0,1,-2],[-3,4,7,-11]]
+full_L.static_witness_energy_and_charge=[[1,1,0,1,0,0],3,[2,-3,1]]
+rational_extension.raw_integer_counterexample=[[1,0,0,0,0,0],[17/5,-3/5,-9/5,-9/5,-1,3]]
+rational_extension.projector=[[2/5,2/5,1/5,1/5,0,0],[2/5,2/5,1/5,1/5,0,0],[1/5,1/5,3/5,-2/5,0,0],[1/5,1/5,-2/5,3/5,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]]
+DISPOSITION: active identities pass; total injection and partial inverse distinguished
+REJECTED OVERCLAIMS: integral direct sum, J isometry, Euclidean adjoint,
+whole H1-to-H5 shell surjectivity, full L similitude/charge retention,
+and whole raw-lattice integrality of the charge-preserving rational extension
+INTERFACE: Z^4 active raw embedding; L5 image admission has two mod5 residues;
+energy h->5h; active D charge zero; inverse rejects before dividing by five;
+phase/branch/coupling and a 4h release reservoir remain additional data
+Finite exact audit only; no shell enumeration, physical claim, or earned public status
