@@ -1,0 +1,155 @@
+{
+  "boundary_contact_class": {
+    "admitted": 1085,
+    "cases": 10125,
+    "nonidentity": 872,
+    "rejected": 9040
+  },
+  "complete_periodic_rows": [
+    {
+      "changed": 548,
+      "distinct_images": 625,
+      "length": 4,
+      "states": 625
+    },
+    {
+      "changed": 15174,
+      "distinct_images": 15625,
+      "length": 6,
+      "states": 15625
+    }
+  ],
+  "d3_tori": [
+    {
+      "endpoint_extension_old_wave_energy_error": 1,
+      "exact_forward_backward_translate_checks": 64,
+      "full_edge_contact_checks": 768,
+      "labelled_edges": 96,
+      "neutral_loop_is_fixed": true,
+      "same_charge_loop_blocks": true,
+      "shape": [
+        4,
+        2,
+        2
+      ],
+      "string_length_defect_energy_wave_energy": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          2,
+          3
+        ]
+      ],
+      "trajectory_steps": 96,
+      "vertices": 16
+    },
+    {
+      "endpoint_extension_old_wave_energy_error": 1,
+      "exact_forward_backward_translate_checks": 128,
+      "full_edge_contact_checks": 1152,
+      "labelled_edges": 144,
+      "neutral_loop_is_fixed": true,
+      "same_charge_loop_blocks": true,
+      "shape": [
+        6,
+        2,
+        2
+      ],
+      "string_length_defect_energy_wave_energy": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          4,
+          2,
+          4
+        ],
+        [
+          5,
+          2,
+          5
+        ]
+      ],
+      "trajectory_steps": 96,
+      "vertices": 24
+    },
+    {
+      "endpoint_extension_old_wave_energy_error": 1,
+      "exact_forward_backward_translate_checks": 128,
+      "full_edge_contact_checks": 2304,
+      "labelled_edges": 288,
+      "neutral_loop_is_fixed": true,
+      "same_charge_loop_blocks": true,
+      "shape": [
+        8,
+        3,
+        2
+      ],
+      "string_length_defect_energy_wave_energy": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          4,
+          2,
+          4
+        ],
+        [
+          5,
+          2,
+          5
+        ],
+        [
+          6,
+          2,
+          6
+        ],
+        [
+          7,
+          2,
+          7
+        ]
+      ],
+      "trajectory_steps": 96,
+      "vertices": 48
+    }
+  ],
+  "infinite_time_translation": "written proof, not inferred from samples",
+  "isolated_endpoint": "written proof with half-infinite field tail",
+  "neutral_photon_sector": "absent: this hop law fixes every neutral state",
+  "old_photon_energy_bridge": "fails for the frozen endpoint extension",
+  "status": "PASS; NON-CANONICAL finite audit, not an elementary particle"
+}
