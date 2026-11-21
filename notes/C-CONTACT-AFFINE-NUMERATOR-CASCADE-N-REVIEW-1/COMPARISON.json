@@ -1,0 +1,303 @@
+{
+  "review": "phase-2 comparison of frozen /work/posudek/review.py vs PR #1865 verify.py and blindbreak.py",
+  "decision": "PASS S POZNAMKOU",
+  "diff_real_count": 0,
+  "quantities": [
+    {
+      "quantity": "frozen_phase1_hashes",
+      "mine": {
+        "PREREG.md": "26a091d8b550d96dbf0a0fd68bddfce21fe4cae1c21441864f960cb1a570db16",
+        "README.md": "a133f5c5016970d36b719a9a6a2d3cf494cbb265cec42594a20b128cde184e09",
+        "review.py": "df438b6268c9405e39930587df894a40d917b938910d7d791e9cb055aa7684db"
+      },
+      "author": {
+        "freeze_commit": "d5d9b3231a4086d75790cbd4f81cd212aaecf5cc",
+        "PREREG.md": "26a091d8b550d96dbf0a0fd68bddfce21fe4cae1c21441864f960cb1a570db16",
+        "README.md": "a133f5c5016970d36b719a9a6a2d3cf494cbb265cec42594a20b128cde184e09",
+        "review.py": "df438b6268c9405e39930587df894a40d917b938910d7d791e9cb055aa7684db"
+      },
+      "verdict": "MATCH",
+      "note": "measured in /work/posudek before any phase-2 run"
+    },
+    {
+      "quantity": "review_second_run_result",
+      "mine": "RESULT PASS, exit 0, stderr 0 bytes",
+      "author": "phase-1 run also RESULT PASS (same stdout content)",
+      "verdict": "MATCH",
+      "note": "RUN-REVIEW.txt sha256 6d26f41137bb10bdd0334591285afac81d1c217925b688e2fe8849ff737c682e"
+    },
+    {
+      "quantity": "author_verify_exit_and_cmp",
+      "mine": "not applicable (author program run by me on aarch64)",
+      "author": "verify.py exit 0, stdout 747 bytes, cmp vs EXPECTED.txt IDENTICAL",
+      "verdict": "MATCH",
+      "note": "RUN-VERIFY.txt sha256 6512d4a20ad6883de75378580b8404e0a66a82e209876fb783522ef76ef2047a, stderr sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "quantity": "author_blindbreak_exit_and_cmp",
+      "mine": "not applicable (author program run by me on aarch64)",
+      "author": "blindbreak.py exit 0, stdout 993 bytes, cmp vs BREAK-EXPECTED.txt DIFFER",
+      "verdict": "DIFF-CONVENTION",
+      "note": "field-wise JSON diff only: architecture x86_64->aarch64, python 3.12.14->3.12.3; all 23 other fields equal; RUN-BREAK.txt sha256 6397114cec48a2a69287328891f00c1fa41974eac2ff078c05344be8e6cd535e"
+    },
+    {
+      "quantity": "author_sha256sums_check",
+      "mine": "not applicable",
+      "author": "sha256sum -c SHA256SUMS: 12 files OK, exit 0",
+      "verdict": "MATCH",
+      "note": "run in author notes directory"
+    },
+    {
+      "quantity": "cases_q3_odd_to_4095",
+      "mine": 2048,
+      "author": 2048,
+      "verdict": "MATCH",
+      "note": "verify.py main loop line 181; blindbreak len(boundaries)"
+    },
+    {
+      "quantity": "cases_general_gain_q1_9",
+      "mine": 576,
+      "author": 576,
+      "verdict": "MATCH",
+      "note": "verify.py:187 loop 9*64; blindbreak counted general"
+    },
+    {
+      "quantity": "cases_occupied_archives",
+      "mine": 225,
+      "author": 225,
+      "verdict": "MATCH",
+      "note": "verify.py:191 loop 9*5*5; blindbreak counted occupied"
+    },
+    {
+      "quantity": "cases_outside_depth_witness",
+      "mine": 1,
+      "author": 1,
+      "verdict": "MATCH",
+      "note": "q=3,n=5461 DEPTH_LIMIT in all three programs"
+    },
+    {
+      "quantity": "full_native_inverses",
+      "mine": 2850,
+      "author": 2850,
+      "verdict": "MATCH",
+      "note": "mine: counted run_inverse per case; verify.py:212 prints hardcoded literal 2850 (loops fix 2850 audit calls, each asserts one inverse at :169-170); blindbreak.py:290 computes len(boundaries)+general+occupied+1"
+    },
+    {
+      "quantity": "primitive_word_applications",
+      "mine": 213750,
+      "author": 213750,
+      "verdict": "MATCH",
+      "note": "75 per case (15 forward + 60 inverse) * 2850; verify.py APPLICATIONS incremented in word() :88 incl. cache hits, pair audit :200 not counted; blindbreak Lane.calls incremented incl. cache hits :170"
+    },
+    {
+      "quantity": "distinct_primitive_pairs",
+      "mine": 48772,
+      "author": 48772,
+      "verdict": "MATCH",
+      "note": "mine: pairs seen in forward+inverse word replay; verify len(CACHE) after pair-audit closure :200-206,:212; blindbreak len(lane.cache) :292"
+    },
+    {
+      "quantity": "depth_histogram_q3",
+      "mine": {
+        "1": 1024,
+        "2": 512,
+        "3": 256,
+        "4": 128,
+        "5": 64,
+        "6": 32,
+        "7": 16,
+        "8": 8,
+        "9": 4,
+        "10": 2,
+        "11": 1,
+        "12": 1
+      },
+      "author": {
+        "1": 1024,
+        "2": 512,
+        "3": 256,
+        "4": 128,
+        "5": 64,
+        "6": 32,
+        "7": 16,
+        "8": 8,
+        "9": 4,
+        "10": 2,
+        "11": 1,
+        "12": 1
+      },
+      "verdict": "MATCH",
+      "note": "verify DEPTH_COUNTS and blindbreak q3_depth_histogram both equal mine; every depth 1..12 occurs (min count 1 at 11 and 12)"
+    },
+    {
+      "quantity": "depth_zero_general_cases",
+      "mine": 256,
+      "author": 256,
+      "verdict": "MATCH",
+      "note": "mine DEPTHS_B[0]; blindbreak general_depth_zero_cases; verify does not print this count"
+    },
+    {
+      "quantity": "word_edge_count_core_slots",
+      "mine": {
+        "contacts": 15,
+        "core_slots": 16
+      },
+      "author": {
+        "contacts": 15,
+        "core_slots": 16
+      },
+      "verdict": "MATCH",
+      "note": "edges (0,1)..(0,15) identical"
+    },
+    {
+      "quantity": "edge_fingerprint_raw",
+      "mine": "70209eab365e43fed18f875f25a76d57ac346f58bf06889aba3c7a14d9c42c09",
+      "author": "eb37b5b2b6918571a3498b6d0badc9188d61f4511cf891dd90d17d4b7bdcc0db",
+      "verdict": "DIFF-CONVENTION",
+      "note": "mine: '0>1;0>2;...;0>15' 65 bytes no final newline; author: '0,1\\n...0,15\\n' 66 bytes (verify.py:207)"
+    },
+    {
+      "quantity": "edge_fingerprint_converted",
+      "mine": "eb37b5b2b6918571a3498b6d0badc9188d61f4511cf891dd90d17d4b7bdcc0db",
+      "author": "eb37b5b2b6918571a3498b6d0badc9188d61f4511cf891dd90d17d4b7bdcc0db",
+      "verdict": "MATCH",
+      "note": "explicit parse of my edge payload and re-emit as author i,j\\n lines"
+    },
+    {
+      "quantity": "boundary_fingerprint_raw",
+      "mine": "9ed972dd4a26edeff22b0999e0a34cc2654a37e24b7f62037a5998749deb0f41",
+      "author": "e7aa8abf1acff43fcda83141b41ee238d854386d17e716d12c0d0a1a2c9e630e",
+      "verdict": "DIFF-CONVENTION",
+      "note": "mine: lines 'n=<n>|a0,a1,a2,a3;...' UTF-8 final newline, 379591 bytes; author: compact JSON [[n,state],...] no final newline, 449224 bytes (verify.py:208)"
+    },
+    {
+      "quantity": "boundary_fingerprint_converted",
+      "mine": "e7aa8abf1acff43fcda83141b41ee238d854386d17e716d12c0d0a1a2c9e630e",
+      "author": "e7aa8abf1acff43fcda83141b41ee238d854386d17e716d12c0d0a1a2c9e630e",
+      "verdict": "MATCH",
+      "note": "parse my lines -> author compact JSON; converted payload cmp IDENTICAL (449224 bytes) to blindbreak --boundaries-out payload, i.e. all 2048 final states equal state by state; verify.py reports same boundary hash"
+    },
+    {
+      "quantity": "source_account_q3",
+      "mine": "272*n^2+12 (R06 symbolic + per-case)",
+      "author": "272*n^2+12 (formula asserted per case; blindbreak prints q3_account string)",
+      "verdict": "MATCH",
+      "note": "general formula [40q(q-1)+32]n^2+12 all three"
+    },
+    {
+      "quantity": "normalized_active_account",
+      "mine": "Q(r)=5*m^2 for r=u*m (R02 per case)",
+      "author": "not printed/tested as such; Q/J accounts asserted",
+      "verdict": "MATCH",
+      "note": "no conflicting author value; mine from Q(u)=5 and homogeneity"
+    },
+    {
+      "quantity": "reload_bound_4352_and_272_m2_minus_n2",
+      "mine": "arithmetic checked: 2460->6812 gap 4352; identity 68*(5n^2+6n+1) symbolic; necessity only",
+      "author": "4352 and 272*(m^2-n^2)<=B appear only in PROOF.md:281-299 / REVIEW.md:190-192 text; neither verify.py nor blindbreak.py tests them (grep: no 4352/2460/6812/m^2-n^2)",
+      "verdict": "MATCH",
+      "note": "value agreement with PR text; no program tests attainability; BREAK-SCOPE.md:77-79: 'not an extra executable test'"
+    },
+    {
+      "quantity": "depth_limit_witness",
+      "mine": "DEPTH_LIMIT; active=2*u*J^14 even; 13 nonzero; inverse ok",
+      "author": "DEPTH_LIMIT; active even; 13 nonzero; inverse ok",
+      "verdict": "MATCH",
+      "note": "outside positive contract in all three"
+    },
+    {
+      "quantity": "architecture_of_runs",
+      "mine": "aarch64, Python 3.12.3",
+      "author": "author recorded runs x86_64, Python 3.12.14; my aarch64 replay of both author programs exit 0",
+      "verdict": "DIFF-CONVENTION",
+      "note": "environment metadata only; not by itself the canon two-architecture gate (not assessed here)"
+    }
+  ],
+  "checks_R01_R17": [
+    {
+      "check": "R01",
+      "verdict": "MATCH",
+      "note": "ring mul A/B cross-check mine; author verify single mul + rho_mul spot check, blindbreak cyclic mul + rho matrix per pair; same J inverse and identities pass everywhere"
+    },
+    {
+      "check": "R02",
+      "verdict": "MATCH",
+      "note": "Q dual implementation + Gram eigenvalues mine; author closed Q (verify) / Gram rho-basis Q (blindbreak); Q(u)=5,Q(J)=3 agree"
+    },
+    {
+      "check": "R03",
+      "verdict": "MATCH",
+      "note": "norms det(u)=5, det(J)=+-1 mine only by program; author asserts J*J_INV=1, u non-unit is PROOF text; no conflict"
+    },
+    {
+      "check": "R04",
+      "verdict": "MATCH",
+      "note": "pair sum/Q/eps, C^5=id, C^4 inverse on all distinct pairs in all three programs; count 48772 agrees"
+    },
+    {
+      "check": "R05",
+      "verdict": "MATCH",
+      "note": "symbolic-in-(q,n) prefix mine (general); author programs assert same prefix formulas numerically per corpus case (verify prefix snapshots, blindbreak apply_word)"
+    },
+    {
+      "check": "R06",
+      "verdict": "MATCH",
+      "note": "symbolic source Q/sum mine (general); author programs assert same formulas per case"
+    },
+    {
+      "check": "R07",
+      "verdict": "MATCH",
+      "note": "symbolic one cascade step C(2Y,0)=(JY,uY) mine; author programs realize it via primitive contacts on corpus only"
+    },
+    {
+      "check": "R08",
+      "verdict": "MATCH",
+      "note": "same 15-edge word; edge hash differs only by my serialization (see quantities)"
+    },
+    {
+      "check": "R09",
+      "verdict": "MATCH",
+      "note": "same corpora, closed forms, admissions (blindbreak explicit flags; verify does not record admissions separately), reader and arithmetic inverse"
+    },
+    {
+      "check": "R10",
+      "verdict": "MATCH",
+      "note": "histograms equal and equal to independent v2 count; depths 1..12 all occur; author verify asserts set(counts)==1..12"
+    },
+    {
+      "check": "R11",
+      "verdict": "MATCH",
+      "note": "2850 full inverses all restore complete initial state (see counting note)"
+    },
+    {
+      "check": "R12",
+      "verdict": "MATCH",
+      "note": "225 occupied archive cases preserve archives and accounts in all three"
+    },
+    {
+      "check": "R13",
+      "verdict": "MATCH",
+      "note": "n=5461 DEPTH_LIMIT witness identical disposition"
+    },
+    {
+      "check": "R14",
+      "verdict": "MATCH",
+      "note": "reader signature active+13 cascade only in all three (blindbreak read_current(active,cascade) :126; verify read_current selects slots 0,3:16); negative gap/shape reader probes are mine only and were rejected as preregistered"
+    },
+    {
+      "check": "R15",
+      "verdict": "MATCH",
+      "note": "leftovers retained and output != E_q(m) checked by me per case; author asserts leftover formulas final[1],final[2] and claims no reload (verify prints 'no reload claim'); eps 3->5 obstruction is PROOF text + my check"
+    },
+    {
+      "check": "R16",
+      "verdict": "MATCH",
+      "note": "bound arithmetic mine vs PROOF/REVIEW text values; no author program tests it; attainability untested by anyone"
+    },
+    {
+      "check": "R17",
+      "verdict": "DIFF-CONVENTION",
+      "note": "raw fingerprint serialization intentionally mine; converted payload byte-identical to author boundary payload (MATCH after conversion)"
+    }
+  ]
+}
