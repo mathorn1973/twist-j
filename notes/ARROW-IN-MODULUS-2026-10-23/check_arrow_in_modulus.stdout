@@ -1,0 +1,38 @@
+== A  the inverse step
+PASS A1 J * J^-1 = 1
+PASS A2 J^-1 = phi * conj(j)
+PASS A3 J^-1 = phi^2 * conj(J)
+PASS A4 J * phi = j
+PASS A5 J^5 * phi^5 = 1
+== B  Galois and the inverse
+PASS B1 sigma_1(J) != J^-1
+PASS B1 sigma_2(J) != J^-1
+PASS B1 sigma_3(J) != J^-1
+PASS B1 sigma_4(J) != J^-1
+   a=1  J^-1 / sigma_a(J) = [-1, -1, 0, 1]  in mu_10: False
+   a=2  J^-1 / sigma_a(J) = [0, 0, -1, 0]  in mu_10: True
+   a=3  J^-1 / sigma_a(J) = [0, -1, 0, 0]  in mu_10: True
+   a=4  J^-1 / sigma_a(J) = [1, 0, -1, -1]  in mu_10: False
+PASS B2 inversion up to torsion exactly for the place swap a in {2,3}
+PASS B3 J^-1 / sigma_2(J) = -j^2 = zeta_10^-1
+PASS B4 J^-1 / sigma_3(J) = -j = zeta_10^-3
+PASS B5 J^-1 / sigma_4(J) = phi^2 (not torsion)
+PASS B6 sigma_2 o sigma_2 = sigma_4 on J
+PASS B7 the only Galois element of order 2 (sigma_4) does not invert J up to torsion
+PASS B8 Tr(J) = 3 and Tr(J^-1) = 2, so M_J and M_J^-1 are not conjugate in GL_4(Q)
+== C  closed world: J periodic modulo rational m, ord_m(J) = lcm(5, ord_m(phi))
+   m= 2  ord(J)= 15  ord(phi)=  3  lcm(5,ord phi)= 15  True
+   m= 3  ord(J)= 40  ord(phi)=  8  lcm(5,ord phi)= 40  True
+   m= 4  ord(J)= 30  ord(phi)=  6  lcm(5,ord phi)= 30  True
+   m= 5  ord(J)= 20  ord(phi)= 20  lcm(5,ord phi)= 20  True
+   m= 7  ord(J)= 80  ord(phi)= 16  lcm(5,ord phi)= 80  True
+   m=11  ord(J)= 10  ord(phi)= 10  lcm(5,ord phi)= 10  True
+   m=13  ord(J)=140  ord(phi)= 28  lcm(5,ord phi)=140  True
+PASS C1 residue period law holds for m in {2,3,4,5,7,11,13}
+== D  integer size runs away in both time directions (no arrow in coefficient size)
+   n= 5  |J^n|_inf=    8  |J^-n|_inf=    5  (F_6, F_5)  True
+   n=10  |J^n|_inf=   89  |J^-n|_inf=   55  (F_11, F_10)  True
+   n=15  |J^n|_inf=  987  |J^-n|_inf=  610  (F_16, F_15)  True
+   n=20  |J^n|_inf=10946  |J^-n|_inf= 6765  (F_21, F_20)  True
+PASS D1 |J^n|_inf = F_(n+1), |J^-n|_inf = F_n for n in {5,10,15,20}: same rate phi both ways
+ALL PASS
