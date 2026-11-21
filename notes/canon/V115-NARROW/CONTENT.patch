@@ -1,0 +1,695 @@
+diff --git a/canon/CANON.md b/canon/CANON.md
+index 430923f32c59c789d1f3a7c38dbbee4cb9188b50..de695a41062bf1e6a2e7be583f97ba18f8599298 100644
+--- a/canon/CANON.md
++++ b/canon/CANON.md
+@@ -1,6 +1,6 @@
+-# TWIST-J Public Canon v114
++# TWIST-J Public Canon v115
+
+-**Release identity.** Public Canon v114. Normative authority and activation
++**Release identity.** Public Canon v115. Normative authority and activation
+ state are declared exclusively by [STATUS.md](../STATUS.md). An identical
+ tree on any other ref is a release candidate, not a second authority.
+
+@@ -17424,6 +17424,84 @@ prepared two-tick circuits. All statements are finite and conditional
+ on their specified preparations. A source for the preparation, an
+ arbitrary-input apparatus, and a physical reading remain open.
+
++### C-H3-RENEWED-WORD-CHOICE-N [C]
++
++On the same 85 four-wire H3 launches, define a locally repeated native B2
++by an earlier material-changing B2 on the same trajectory, writer and
++matching bit. At both emissions C changes the material pairs of the writer
++and its upstream donor. The episodes agree on all four pre-C writer rails,
++the ordered pre-C donor material, the post-C writer radiation and the
++ordered post-B writer material. The earliest such predecessor gives the
++source reference. A downstream encounter retains this provenance only while
++the emitted pair remains at the writer through every intervening C and B
++cut, including the pre-C cut of the encounter.
++
++On the unchanged rank-43 trajectory, edge 1 to 0 with matching bit zero
++carries the following ordered antipodal pairs, specified by their first
++rails in the integral j basis.
++
++| Earlier repeat reference | Writer 1 emission | Emitted rail | Read | Receiver material after C | Receiver B | Receiver material after B |
++| --- | --- | --- | --- | --- | --- | --- |
++| 330940 | 598058 B2 | (2,0,0,0) | 598060 | (-1,-1,-2,-2) | B1 | (-1,1,-1,-1) |
++| | 720019 B1 | (0,2,0,2) | 720028 | (-3,0,-1,-2) | B2 | (-1,0,0,-2) |
++
++Both contacts change the receiver material. All four pre-C receiver rails
++and both incoming post-C radiation rails agree between the encounters.
++The B2 emission has the locally repeated source specified above. The B1
++emission is a native comparator on the same trajectory. The complete
++histories differ outside the matched local inputs.
++
++The census covers all 32 sites on the 85 launches for 8192 ticks each
++except ranks 0 and 22 at 65536 and rank 43 at 1048576, totaling 1851392
++ticks. There are 104259 locally repeated B2 emissions. There are 60
++matched opposite-branch pairs with at least one locally repeated source.
++Eight have a material transfer on a repeated-source arm, including the
++sole pair with transfers on both arms. Four pairs have two repeated
++sources and each of those has a transfer on exactly one arm.
++
++Separately, the original compensated functional-write test at writer 28
++qualifies 842, 826 and 12938 later writes on ranks 0, 22 and 43. The 14,613
++contacts with continuously held words from these writes have zero
++material transfers during contact C and zero material-changing receiver
++operations during B. At all three 181-to-182 encounters the contact
++refuses both material rails and the receiver executes B0. The actual fields evolve without word
++exchange. A supplementary independent replay checks the four reported
++certificate encounters from launch. These counts apply to the stated
++family and horizons.
++
++### C-H3-DOUBLE-RENEWED-TRANSFER-N [C]
++
++Extend the preceding two-repeated-source, two-transfer test on the
++original launches. The search stops on its first launch, rank 43,
++through tick 9915383 of its 16777216-tick ceiling. At writer 1, two
++locally repeated B2 emissions retain their distinct ordered antipodal
++pairs through every intervening C and B cut to receiver 2 at matching
++bit one. The table again gives the first rail of each ordered pair.
++
++| Earlier B2 | Repeated B2 | Emitted rail | Read | Receiver material after C | Receiver B | Receiver material after B |
++| --- | --- | --- | --- | --- | --- | --- |
++| 7316785 | 7390473 | (0,0,0,2) | 7390475 | (0,0,1,2) | B1 | (1,-1,0,1) |
++| 8176761 | 9915381 | (0,-2,0,-2) | 9915383 | (2,-1,1,1) | B2 | (1,0,1,2) |
++
++Both contacts change both material rails. All four pre-C receiver rails
++and both incoming post-C radiation rails agree. Put s=j^2+j^3 and
++Theta=h(J)=2+s. The common radiation half-difference f has h(f)=4+s.
++The two post-C material half-differences d_1 and d_2 have h(d_1)=3-2s
++and h(d_2)=9+5s. The identities Theta h(d_1)=h(f) and
++h(d_2)=Theta h(f) select B1 and B2, respectively. The fields need only
++agree in the stated receiver coordinates. Both encounters occur without
++intervention on the same trajectory.
++
++Through the stop there are 784474 locally repeated B2 emissions and 3222
++encounters in which the held output changes the receiver's material during
++contact C and the following B operation changes it again. The full inverse recovers the
++launch field and matching bit. The default verifier independently
++checks both local certificates. A separate full five-coordinate replay
++from launch confirms both named earlier episodes, both emissions,
++both holding intervals and both reads. Both reads lie beyond the
++preceding rank-43 horizon of 1048576 ticks. This is a finite existence
++result on one trajectory. Q9 remains open.
++
+ ## 3. The kernel and the census
+
+ F_5^6, 15625 checkpoint states; the Klein-100 typology; 313
+diff --git a/canon/CHANGELOG.md b/canon/CHANGELOG.md
+index 86c41aebf5be4fba4c40f88c52049beab44468bb..055e7e434b40e53161aa333d0b9f63dc40c44ac6 100644
+--- a/canon/CHANGELOG.md
++++ b/canon/CHANGELOG.md
+@@ -1,12 +1,25 @@
+ # Canon changelog (public series)
+
+-## Public Canon v114
++## Public Canon v115
+
+ <!-- BEGIN GENERATED CURRENT COUNTS -->
+-Registry snapshot: 630 claims; 0 T-LOCK, 479 T, 62 D, 45 C, 2 H, 23 O, 19 F; 25 live H/O.
++Registry snapshot: 632 claims; 0 T-LOCK, 479 T, 62 D, 47 C, 2 H, 23 O, 19 F; 25 live H/O.
+ Reproduction witnesses: 43.
+ <!-- END GENERATED CURRENT COUNTS -->
+
++Add two finite H3 computations at L1. The first census records one
++matched two-transfer pair with a locally repeated B2 source and a
++native B1 comparator. It also records that the original functional
++renewals at writer 28 give no downstream material transfers within the
++registered windows. The extended rank-43 search finds a matched
++two-transfer pair with two locally repeated B2 sources beyond the
++earlier horizon. Q9 remains open.
++
++## Public Canon v114
++
++Registry snapshot: 630 claims; 0 T-LOCK, 479 T, 62 D, 45 C, 2 H, 23 O, 19 F; 25 live H/O.
++Reproduction witnesses: 43.
++
+ Add one finite-volume equilibrium theorem and two finite H3 computations.
+ The variance bound applies to the all-sector measure on the stated labeled
+ periodic lattice. The H3 results record an autonomously restored second
+diff --git a/canon/CORE.md b/canon/CORE.md
+index 07278dc8b31c6ed443927b0eb3996e55363cb49d..35707ba6e42169cd50758ba4fe19c3a8936e952f 100644
+--- a/canon/CORE.md
++++ b/canon/CORE.md
+@@ -1,6 +1,6 @@
+ # TWIST-J core
+
+-**Release identity:** Public Canon v114. Authority and activation are declared
++**Release identity:** Public Canon v115. Authority and activation are declared
+ exclusively by [STATUS.md](../STATUS.md). This orientation does not replace the
+ complete statements, evidence and falsifiers in [CANON.md](CANON.md) and
+ [REGISTRY.tsv](REGISTRY.tsv).
+@@ -10,7 +10,7 @@ system whose geometry, continuum, fields and probabilities are typed readings.
+ Its primitive algebraic axiom is `J = 1 + j^2`, with `j = zeta_5`. The axiom is
+ posited, not derived. The declared architecture has no fitted dimensionless
+ parameter and uses the electron mass as its single SI calibration anchor.
+-Public Canon v114 also declares a discrete architecture.
++Public Canon v115 also declares a discrete architecture.
+ A common coefficient ring or a common action-layer label does not identify two
+ state spaces, update laws, preparations or readings.
+
+diff --git a/canon/EVIDENCE.tsv b/canon/EVIDENCE.tsv
+index dfaca197ab2a24d456a73767a0118c005eecb42d..14d74617b4878e34d0603d4c2e6323b2c3a8b977 100644
+--- a/canon/EVIDENCE.tsv
++++ b/canon/EVIDENCE.tsv
+@@ -629,3 +629,5 @@ METRO-ENC4-NORMALIZATION	EV-METRO-ENC4-NORMALIZATION	INLINE_CANON	inline	3ea8f67
+ D3-FLUX-VARIANCE-BOUND	EV-D3-FLUX-VARIANCE-BOUND	PUBLIC_PROBE	probes/P-D3-ZWORK-VAR-BOUND-1	c31f8fee90f298257f65617111535c80cecccc20f6f643308bd1d68b60649389	bundle-manifest-sha256-v1	two-architecture
+ H3-SECOND-WORD-WRITE	EV-H3-SECOND-WORD-WRITE	PUBLIC_PROBE	probes/P-H3-SECOND-WRITE-1	3d7b9a1dc11babe4eb57d9d79b039b42affcb0b061619c9ec96cd952640ff226	bundle-manifest-sha256-v1	two-architecture
+ H3-WORD-BRANCH-CHOICE	EV-H3-WORD-BRANCH-CHOICE	PUBLIC_PROBE	probes/P-H3-THIRD-CELL-1	69d46966f94d49c09495ada4602d405cb51d60c66bbe14a9704bc06e11a84eb0	bundle-manifest-sha256-v1	two-architecture
++C-H3-RENEWED-WORD-CHOICE-N	EV-C-H3-RENEWED-WORD-CHOICE-N	PUBLIC_PROBE	probes/P-H3-RENEWED-WORD-CHOICE-1	9edff1d82f3dfb31f4f2212fa362b0e0a9156467973a10da662d5e839471290b	bundle-manifest-sha256-v1	two-architecture
++C-H3-DOUBLE-RENEWED-TRANSFER-N	EV-C-H3-DOUBLE-RENEWED-TRANSFER-N	PUBLIC_PROBE	probes/P-H3-DOUBLE-RENEWED-TRANSFER-1	dfb34e07f0538fd316240076b88e7c5b70d406229c94671640318cecc3308f45	bundle-manifest-sha256-v1	two-architecture
+diff --git a/canon/HISTORY.tsv b/canon/HISTORY.tsv
+index acb02295eaa7c8ffb534b2f1d8d3551dfa6b9ea3..36a7c0b9a03dcc59be0d9910805256bd210cb517 100644
+--- a/canon/HISTORY.tsv
++++ b/canon/HISTORY.tsv
+@@ -1180,3 +1180,5 @@ CANON113-STATUS-CHANGE-PHOTON-CONE-CONVERGENCE	4	2026-11-16	canon-v113	PHOTON-CO
+ CANON114-DECLARE-D3-FLUX-VARIANCE-BOUND	1	2026-11-21	canon-v114	D3-FLUX-VARIANCE-BOUND	DECLARE	-	T	cf1cce6118b5e9206ae3f186679e44e8b9613f3ff3b3afe2cbbc827cb63558f5	EV-D3-FLUX-VARIANCE-BOUND	probes/P-D3-ZWORK-VAR-BOUND-1	c31f8fee90f298257f65617111535c80cecccc20f6f643308bd1d68b60649389	Register the strict variance bound from the finite-volume proof and pinned audit.
+ CANON114-DECLARE-H3-SECOND-WORD-WRITE	1	2026-11-21	canon-v114	H3-SECOND-WORD-WRITE	DECLARE	-	C	57c9b0c6f65b6901be56b03c3bad59bfb97ce0dd1af05d4d42efc3bd0ad98107	EV-H3-SECOND-WORD-WRITE	probes/P-H3-SECOND-WRITE-1	3d7b9a1dc11babe4eb57d9d79b039b42affcb0b061619c9ec96cd952640ff226	Register the finite renewed write and its separately funded single-read control.
+ CANON114-DECLARE-H3-WORD-BRANCH-CHOICE	1	2026-11-21	canon-v114	H3-WORD-BRANCH-CHOICE	DECLARE	-	C	cdb820decc52709afbf06913fcf0af59908fb83f64cc5dffe10dda5e6e037070	EV-H3-WORD-BRANCH-CHOICE	probes/P-H3-THIRD-CELL-1	69d46966f94d49c09495ada4602d405cb51d60c66bbe14a9704bc06e11a84eb0	Register the two matched natural encounters and the separate controlled binary switch.
++CANON115-DECLARE-C-H3-RENEWED-WORD-CHOICE-N	1	2026-11-21	canon-v115	C-H3-RENEWED-WORD-CHOICE-N	DECLARE	-	C	562aa4af62fc076da783bec2d14507c8924148b9116208c2ffac5b5f49060563	EV-C-H3-RENEWED-WORD-CHOICE-N	probes/P-H3-RENEWED-WORD-CHOICE-1	9edff1d82f3dfb31f4f2212fa362b0e0a9156467973a10da662d5e839471290b	Register the two native material transfers with one repeated B2 source and the separately bounded zero-transfer census for the original functional renewals.
++CANON115-DECLARE-C-H3-DOUBLE-RENEWED-TRANSFER-N	1	2026-11-21	canon-v115	C-H3-DOUBLE-RENEWED-TRANSFER-N	DECLARE	-	C	514b45a009fe11f0237130b2f0405e7158d1465c8fa4d5c0e0006cbc9c215613	EV-C-H3-DOUBLE-RENEWED-TRANSFER-N	probes/P-H3-DOUBLE-RENEWED-TRANSFER-1	dfb34e07f0538fd316240076b88e7c5b70d406229c94671640318cecc3308f45	Register the finite matched receiver at two distinct native repeated B2 emissions on the one unchanged rank-43 trajectory.
+diff --git a/canon/NORMATIVE.tsv b/canon/NORMATIVE.tsv
+index 79f856db1ce1bd139414b450fb887d42351147d2..17e588f928c72c23dfdb353cda59d18055b9a031 100644
+--- a/canon/NORMATIVE.tsv
++++ b/canon/NORMATIVE.tsv
+@@ -694,3 +694,5 @@ METRO-ENC4-NORMALIZATION	DICTIONARY	METRO-ENC4-NORMALIZATION	D	L6	GATE-L5-L6-MET
+ D3-FLUX-VARIANCE-BOUND	THEOREM	D3-FLUX-VARIANCE-BOUND	T	L1		canon/CANON.md::D3-FLUX-VARIANCE-BOUND
+ H3-SECOND-WORD-WRITE	COMPUTATION	H3-SECOND-WORD-WRITE	C	L1		canon/CANON.md::H3-SECOND-WORD-WRITE
+ H3-WORD-BRANCH-CHOICE	COMPUTATION	H3-WORD-BRANCH-CHOICE	C	L1		canon/CANON.md::H3-WORD-BRANCH-CHOICE
++C-H3-RENEWED-WORD-CHOICE-N	COMPUTATION	C-H3-RENEWED-WORD-CHOICE-N	C	L1		canon/CANON.md::C-H3-RENEWED-WORD-CHOICE-N
++C-H3-DOUBLE-RENEWED-TRANSFER-N	COMPUTATION	C-H3-DOUBLE-RENEWED-TRANSFER-N	C	L1		canon/CANON.md::C-H3-DOUBLE-RENEWED-TRANSFER-N
+diff --git a/canon/REGISTRY.tsv b/canon/REGISTRY.tsv
+index 4109e19d92f96e8b040cc9cd57bc31371bc69641..1fa82f389818a0e92300f716b26e4160bcda83db 100644
+--- a/canon/REGISTRY.tsv
++++ b/canon/REGISTRY.tsv
+@@ -629,3 +629,5 @@ METRO-ENC4-NORMALIZATION	D	The explicitly adopted dimensionless L5-to-L6 tagged
+ D3-FLUX-VARIANCE-BOUND	T	At L1 on every finite even D3(L), L>=2, with direction-labeled periodic bonds and all winding sectors of the divergence-free Z[j] Gibbs ensemble at beta>0, M_x=sum_e d_e E_e/L, q(v)=v^T G v/2 and G=5I_4-11^T, the variance estimator beta <q(M_x)>/(8L) is strictly less than 1/4. The Poisson dual current gives an exact positive deficit. Fixed-sector free energy, dynamics, thermodynamic phase and physical coupling lie outside the claim.	9. The photon and the electron	probes/P-D3-ZWORK-VAR-BOUND-1	An exact in-domain violation of the flux normalization, twist Hessian, dual identity, positive deficit or bound rejects the statement. A finite sum approximation supplies no universal proof.
+ H3-SECOND-WORD-WRITE	C	At L1 in the specified prepared 85-launch 8 by 4 H3 family, ranks 0,22,43 qualify at 159 B and first qualify again at 181 B. On rank 43 native evolution restores word and local readiness, and a ledger-preserving reserve exchange changes 181 B2 to B0. After 159 the rank-43 run has 12938 qualifying writes through 1048576 ticks, 10331 at exact original worker readiness. The finite horizon supplies no general renewal period.	2. Time, space, and the decoder	probes/P-H3-SECOND-WRITE-1	An exact replay of the specified launches disagreeing with the qualifying ranks, first later tick, local rails, funded control, full accounts, inverses or stated counts rejects the affected finite claim.
+ H3-WORD-BRANCH-CHOICE	C	At L1 the unmodified prepared rank-43 H3 trajectory has the 28-to-31 encounters O at 135 and JO at 671, with equal pre-C receiving rails and equal post-C incoming radiation. The first material contact refuses and B1 acts; the second admits and B2 acts. The 181 B write also emits O. It supplies neither of these encounters. In the separate two prepared layouts on all 85 bare-clock inputs, the sole emitted-pair exchange reverses the second-tick branch in both directions with full accounts preserved.	2. Time, space, and the decoder	probes/P-H3-THIRD-CELL-1	A pinned witness that fails emitted-word provenance, equal receiver inputs in the stated coordinates, the two branch/output values, the funded swap in either prepared layout, or the declared accounts or inverse rejects the corresponding finite result.
++C-H3-RENEWED-WORD-CHOICE-N	C	At L1 on the unchanged prepared rank-43 H3 trajectory, the held native writes at site 1 on ticks 598058 B2 and 720019 B1 supply distinct ordered words to site 0 on ticks 598060 and 720028, both at bit 0. The receiver has identical complete pre-C rails and identical post-C radiation, both C contacts change its material, and its B1 and B2 branches have distinct material outputs. The 598058 B2 repeats the exact local episode at 330940, including the writer, bit, complete pre-C writer, ordered upstream donor material, incoming radiation and output material, with material change at both upstream contact endpoints. Within the pinned 85-launch scan of 1851392 native ticks there is one such matched pair with two material transfers and at least one repeated B2 source, and zero with two repeated B2 sources. All 14613 continuously held contacts from 14606 original functional renewals at writer 28 give zero receiver material transfers and zero material-changing receiver B operations in these horizons. The two-transfer witness is a later native pair on writer 1 and makes no claim beyond the scanned trajectories.	2. Time, space, and the decoder	probes/P-H3-RENEWED-WORD-CHOICE-1	An exact replay of the specified launches that contradicts the repeated B2 signature or upstream endpoint changes, the held writer words, equality of receiver readiness, the two changed receiver arrivals or distinct branch outputs, the finite counts, the declared accounts or full inverse rejects the affected finite result. Custody, runtime or stdout-byte failure without an exact contradiction is STOP.
++C-H3-DOUBLE-RENEWED-TRANSFER-N	C	At L1 on the unchanged prepared rank-43 H3 trajectory, native B2 writes at site 1 on ticks 7390473 and 9915381 repeat the respective exact local episodes at 7316785 and 8176761, with matching writer, bit, complete pre-C writer, ordered upstream donor material, incoming radiation and ordered material output. C changes material at both ends of each upstream contact and B2 changes the writer material. Both words are distinct and held intact through all intervening cuts. On directed edge 1 to 2 at bit 1, reads at 7390475 and 9915383 have identical complete pre-C receiver and post-C radiation; each C changes both receiver material rails, and the respective B1 and B2 branches give distinct material outputs. The finite native search stops on rank 43 at 9915383 with 784474 recurrent B2 writes and 3222 held recurrent-output encounters with receiver material change at both C and B. The full inverse recovers the original launch and bit. The other 84 launches are outside this executed search. The witness is separate from the original functional renewals at writer 28.	2. Time, space, and the decoder	probes/P-H3-DOUBLE-RENEWED-TRANSFER-1	An exact replay contradicting any of the four source episodes or their repeated signatures and upstream material changes, continuous word retention, common receiver readiness, either two-rail transfer or branch output, the declared stopping counts, account checks or recovery of launch and bit rejects the affected finite result. Custody, runtime or stdout-byte failure without an exact contradiction is STOP.
+diff --git a/canon/SHA256SUMS b/canon/SHA256SUMS
+index d0f238429f2895917bf98f284939108dfa78aa5b..cd10b0bd8db6452cd3f3741e2b7b3cb819655bfe 100644
+--- a/canon/SHA256SUMS
++++ b/canon/SHA256SUMS
+@@ -1,5 +1,5 @@
+-d920b1dfbda526f24336d97bfd9dfe33aa77923a4c33f0dca19c0dc38516d21e  canon/CANON.md
+-b9ba9855e98b360cddaa11a3cc4dff7c0d10c2a6e1d9562991da8c2e7e8cb3c8  canon/CORE.md
++38afba3f5c815aa1c623f8cec9992f0e5f89659e493e85dc61054e8fdfa253cf  canon/CANON.md
++8e97bfeac41bbcc50831736610f34463f85d0f9264eb83d06c73780fc2d13ef2  canon/CORE.md
+ 2720c8032a31a4a0c3a704b00ca462f6e5faad6696958c0e4e03e3b7b74658cd  canon/FRONTIER.md
+-2bf58e05aa53405ebf7e54bc58f4cfc98cf9eb01f7a771dc4514111a3302f6a5  canon/REGISTRY.tsv
+-52f8d25ddd1f3e9599dd28387d456394c7865aabe38b9ae344952c41dc80972d  canon/CHANGELOG.md
++86cd8571e35ae89e2eb6b4db1096b674c27d1c547eef826cf99a90d2db359d45  canon/REGISTRY.tsv
++360c2e9084d5fa7cb96263a7430e86fec659e9da879d0c1c79862ac37214b39f  canon/CHANGELOG.md
+diff --git a/canon/STATUS_COUNTS.tsv b/canon/STATUS_COUNTS.tsv
+index be0d06982333d45773a69c556ede29c25b0fff68..a7789ea632137b4abfa3c0d17dc1a7de82c999f2 100644
+--- a/canon/STATUS_COUNTS.tsv
++++ b/canon/STATUS_COUNTS.tsv
+@@ -1,9 +1,9 @@
+ metric	value
+-claims	630
++claims	632
+ status_T-LOCK	0
+ status_T	479
+ status_D	62
+-status_C	45
++status_C	47
+ status_H	2
+ status_O	23
+ status_F	19
+@@ -12,4 +12,4 @@ reproductions	43
+ evidence_none	201
+ evidence_one-architecture	9
+ evidence_recorded-audit	31
+-evidence_two-architecture	389
++evidence_two-architecture	391
+diff --git a/reproduce/status-separation/EXPECTED.txt b/reproduce/status-separation/EXPECTED.txt
+index eb32771314aebca558c96b0252d818d04e446e78..d598bf284a4687db645da12b53792950d268b563 100644
+--- a/reproduce/status-separation/EXPECTED.txt
++++ b/reproduce/status-separation/EXPECTED.txt
+@@ -1,5 +1,5 @@
+ TWIST-J theorem/dictionary separation audit
+-historical guards: exact reconstructed v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v114
++historical guards: exact reconstructed v114, v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v115
+ exact algebra and finite computations remain distinct from physical readings
+
+ PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
+@@ -252,5 +252,11 @@ PASS 247 V114-CLAIM-LEDGERS one finite-volume equilibrium theorem and two finite
+ PASS 248 V114-EVIDENCE all three declarations bind their exact two-architecture public probe bundles and scope hashes
+ PASS 249 V114-BOUNDARY the frontier, dependency and gate ledgers are byte-identical to v113 and the exact 43-directory reproduction inventory is preserved
+ PASS 250 V114-H3-EMISSION the pinned 181 B emission is O and supplies neither of the two natural encounters
++PASS 251 V115-PRIOR-BYTES the pinned reverse fold reconstructs exact v114 inputs before all 250 historical guards
++PASS 252 V115-CLAIM-LEDGERS two finite L1 H3 computations enter at C with all 630 prior claim rows unchanged
++PASS 253 V115-EVIDENCE the two declarations bind distinct public probe bundles, two-architecture requirements and exact scope hashes
++PASS 254 V115-BOUNDARY the v114 Frontier, dependency and gate bytes and all 43 reproduction directories are preserved
++PASS 255 V115-H3-RENEWED the shorter census separates the writer 28 negative boundary, one recurrent two-transfer pair and the default and supplementary Python checks
++PASS 256 V115-H3-DOUBLE the extended witness binds two recurrent words held at writer 1, both material transfers at receiver 2, and the local and complete Python checks
+
+-RESULT 250/250 ALL PASS
++RESULT 256/256 ALL PASS
+diff --git a/reproduce/status-separation/README.md b/reproduce/status-separation/README.md
+index 942bbc1de36b9d76c285884c9f75aa5b0487f14b..aa297c70fb14617ef65a43dcd998480f3f31ba20 100644
+--- a/reproduce/status-separation/README.md
++++ b/reproduce/status-separation/README.md
+@@ -1272,3 +1272,27 @@ The reverse fold needs no Git history. The audit reads evidence bytes and
+ does not run the scientific verifiers. The H3 additions have finite
+ computation status. The D3 statement concerns the specified finite-volume
+ equilibrium ensemble.
++
++## Public Canon v115 recurrent H3 transfers
++
++The v115 adapter reconstructs the exact v114 inputs before running the 250
++historical guards. Six new guards check the two finite L1 computations,
++their distinct public probe bundles and declaration records, the unchanged
++Frontier, dependency and gate ledgers, and the 43-directory reproduction
++inventory. The partition is T479/D62/C47/H2/O23/F19, totalling 632 claims.
++
++The shorter probe (#2047) gives one pair with both material transfers and
++one recurrent B2 source. Its finite census has zero such pairs with two
++recurrent sources. The 14,613 held contacts from the historical writer 28
++renewals give zero receiver material transfers and zero material-changing
++receiver operations. The extended probe (#2049) gives two recurrent B2
++sources on writer 1 of the same rank-43 trajectory. Both contacts move
++both receiver material rails with matched readiness and distinct B1/B2
++outcomes. It stops at the first pair on its first launch. Q9 stays open.
++
++The frozen default outputs report local Python checks of four events in
++#2047 and two in #2049, with zero full independent replays inside their
++respective default cutoffs. Separate supplementary records describe the
++complete five-coordinate forward replays from launch. The adapter audits
++those records and reads the frozen stdout. The architecture jobs replay the
++frozen default scientific verifiers separately.
+diff --git a/reproduce/status-separation/verify.py b/reproduce/status-separation/verify.py
+index 8c8ebe093da493a9683f5cbb676045e2a5a0fe00..24476b75e38fbf4a73e9d7e472e40cfd156af582 100644
+--- a/reproduce/status-separation/verify.py
++++ b/reproduce/status-separation/verify.py
+@@ -3490,6 +3490,339 @@ V112_STANDALONE_SOURCES = frozenset(('notes/canon/METRO-ENC4-CLOSURE-2026-11-13.
+
+
+
++# Byte-pinned inputs for v115 and their minimal inverse edits.
++V115_INPUT_PATCH = {'canon/CANON.md': {'current_bytes': 1565061,
++                    'current_sha256': '38afba3f5c815aa1c623f8cec9992f0e5f89659e493e85dc61054e8fdfa253cf',
++                    'prior_bytes': 1560551,
++                    'prior_sha256': 'd920b1dfbda526f24336d97bfd9dfe33aa77923a4c33f0dca19c0dc38516d21e',
++                    'restore': [(0, 1, '# TWIST-J Public Canon v114\n'),
++                                (2,
++                                 3,
++                                 '**Release identity.** Public Canon v114. Normative authority and '
++                                 'activation\n'),
++                                (17426, 17504, '')]},
++ 'canon/CHANGELOG.md': {'current_bytes': 224304,
++                        'current_sha256': '360c2e9084d5fa7cb96263a7430e86fec659e9da879d0c1c79862ac37214b39f',
++                        'prior_bytes': 223727,
++                        'prior_sha256': '52f8d25ddd1f3e9599dd28387d456394c7865aabe38b9ae344952c41dc80972d',
++                        'restore': [(1, 16, ''),
++                                    (19, 19, '<!-- BEGIN GENERATED CURRENT COUNTS -->\n'),
++                                    (21, 21, '<!-- END GENERATED CURRENT COUNTS -->\n')]},
++ 'canon/CORE.md': {'current_bytes': 17207,
++                   'current_sha256': '8e97bfeac41bbcc50831736610f34463f85d0f9264eb83d06c73780fc2d13ef2',
++                   'prior_bytes': 17207,
++                   'prior_sha256': 'b9ba9855e98b360cddaa11a3cc4dff7c0d10c2a6e1d9562991da8c2e7e8cb3c8',
++                   'restore': [(2,
++                                3,
++                                '**Release identity:** Public Canon v114. Authority and activation are '
++                                'declared\n'),
++                               (12, 13, 'Public Canon v114 also declares a discrete architecture.\n')]},
++ 'canon/CORE_SELECTION.tsv': {'current_bytes': 349,
++                              'current_sha256': '2ffc8234faea17b2ca6f9e96648515b68bc083bafb95434f0e4723ad3e8c2361',
++                              'prior_bytes': 349,
++                              'prior_sha256': '2ffc8234faea17b2ca6f9e96648515b68bc083bafb95434f0e4723ad3e8c2361',
++                              'restore': []},
++ 'canon/DEPENDENCIES.tsv': {'current_bytes': 207257,
++                            'current_sha256': 'f1a692670236ad92e2e8cd80e9903ab19c8a7037da4c5ce6e3f3e230a3c3e957',
++                            'prior_bytes': 207257,
++                            'prior_sha256': 'f1a692670236ad92e2e8cd80e9903ab19c8a7037da4c5ce6e3f3e230a3c3e957',
++                            'restore': []},
++ 'canon/EVIDENCE.tsv': {'current_bytes': 126707,
++                        'current_sha256': 'f04ce625b7b81eed708a8534dbd4d05e007e6c848012d25d11080cc0c7ef287d',
++                        'prior_bytes': 126271,
++                        'prior_sha256': '51eb70dc5cde88cf2c46e8d9052db39373b68424d08921445dbf1a24d0582e4c',
++                        'restore': [(631, 633, '')]},
++ 'canon/FRONTIER.md': {'current_bytes': 25630,
++                       'current_sha256': '2720c8032a31a4a0c3a704b00ca462f6e5faad6696958c0e4e03e3b7b74658cd',
++                       'prior_bytes': 25630,
++                       'prior_sha256': '2720c8032a31a4a0c3a704b00ca462f6e5faad6696958c0e4e03e3b7b74658cd',
++                       'restore': []},
++ 'canon/FRONTIER_PROGRAMS.tsv': {'current_bytes': 1444,
++                                 'current_sha256': '53fa7ded98facb495ed676f0ec6b20cd488150afdbf8734f3f436fead0ee0de7',
++                                 'prior_bytes': 1444,
++                                 'prior_sha256': '53fa7ded98facb495ed676f0ec6b20cd488150afdbf8734f3f436fead0ee0de7',
++                                 'restore': []},
++ 'canon/GATES.tsv': {'current_bytes': 13927,
++                     'current_sha256': '207c999f2e70538949fbdf434a8be2fb6ccf0d6190ed8cc2f0e4d1fd623562f2',
++                     'prior_bytes': 13927,
++                     'prior_sha256': '207c999f2e70538949fbdf434a8be2fb6ccf0d6190ed8cc2f0e4d1fd623562f2',
++                     'restore': []},
++ 'canon/HISTORY.tsv': {'current_bytes': 543823,
++                       'current_sha256': '2a21c71fa52e30c0217511cc57b9fe04e21a57d8a598934045136c35c2ec6111',
++                       'prior_bytes': 542925,
++                       'prior_sha256': '1e0050ef6150340b3f564605c552310e366d97ab0dbba20065dd3a4f92c2d871',
++                       'restore': [(1182, 1184, '')]},
++ 'canon/LEDGER.md': {'current_bytes': 5531,
++                     'current_sha256': 'da299b1b2bb4b6d038c278b729ddeda385e8a7b02a114f6dcfa6f096d2cd737c',
++                     'prior_bytes': 5531,
++                     'prior_sha256': 'da299b1b2bb4b6d038c278b729ddeda385e8a7b02a114f6dcfa6f096d2cd737c',
++                     'restore': []},
++ 'canon/NORMATIVE.tsv': {'current_bytes': 81474,
++                         'current_sha256': 'd45b3a52ec5b2bfdf8b459f6fb980ef8971c94af155b162e6fed24373b105b30',
++                         'prior_bytes': 81232,
++                         'prior_sha256': 'db77566e7330a6517fb7865af93db7bfb80052b56bdf463fcf59f6d0b1497e08',
++                         'restore': [(696, 698, '')]},
++ 'canon/REGISTRY.tsv': {'current_bytes': 615808,
++                        'current_sha256': '86cd8571e35ae89e2eb6b4db1096b674c27d1c547eef826cf99a90d2db359d45',
++                        'prior_bytes': 612606,
++                        'prior_sha256': '2bf58e05aa53405ebf7e54bc58f4cfc98cf9eb01f7a771dc4514111a3302f6a5',
++                        'restore': [(631, 633, '')]},
++ 'canon/SHA256SUMS': {'current_bytes': 415,
++                      'current_sha256': 'ee6aa36e6cea449486711043eeeed792f850cd355caaecedc96a80d1a57c34ab',
++                      'prior_bytes': 415,
++                      'prior_sha256': '1fa3c585cdad25e4de168688c8c40719e0ab3fb757b62ce7825cd5e051c652ef',
++                      'restore': [(0,
++                                   2,
++                                   'd920b1dfbda526f24336d97bfd9dfe33aa77923a4c33f0dca19c0dc38516d21e  '
++                                   'canon/CANON.md\n'
++                                   'b9ba9855e98b360cddaa11a3cc4dff7c0d10c2a6e1d9562991da8c2e7e8cb3c8  '
++                                   'canon/CORE.md\n'),
++                                  (3,
++                                   5,
++                                   '2bf58e05aa53405ebf7e54bc58f4cfc98cf9eb01f7a771dc4514111a3302f6a5  '
++                                   'canon/REGISTRY.tsv\n'
++                                   '52f8d25ddd1f3e9599dd28387d456394c7865aabe38b9ae344952c41dc80972d  '
++                                   'canon/CHANGELOG.md\n')]},
++ 'canon/STATUS_COUNTS.tsv': {'current_bytes': 244,
++                             'current_sha256': 'cbf7049fb5bb81a7c6d63ecbdb3f272c9935a4d5a08065515262372db1ba47dd',
++                             'prior_bytes': 244,
++                             'prior_sha256': 'e76d374eba8b687c0ee50e0667c6ee2ca3686117259d2189c00c28d847a5ed34',
++                             'restore': [(1, 2, 'claims\t630\n'),
++                                         (5, 6, 'status_C\t45\n'),
++                                         (14, 15, 'evidence_two-architecture\t389\n')]},
++ 'tools/test_architecture_map_report.py': {'current_bytes': 54456,
++                                           'current_sha256': 'ad5a4228ab7e1f160e2501699119396c53d56d8c22ab7b647ac1ff25ab3ac507',
++                                           'prior_bytes': 54481,
++                                           'prior_sha256': '818d285a99bfbc065cf34a91321a628d4c3432efd3735bd6f19d5da29a9e7482',
++                                           'restore': [(377,
++                                                        379,
++                                                        '        # v114 adds one equilibrium theorem and two '
++                                                        'finite computations.\n'
++                                                        '        self.assertEqual(self.report.claims, '
++                                                        '630)\n'),
++                                                       (381,
++                                                        382,
++                                                        '            {"C": 45, "D": 62, "F": 19, "H": 2, '
++                                                        '"O": 23, "T": 479},\n'),
++                                                       (389,
++                                                        390,
++                                                        '                "two-architecture": 389,\n'),
++                                                       (399,
++                                                        400,
++                                                        '        '
++                                                        'self.assertEqual(len(self.report.dependency_terminals), '
++                                                        '88)\n')]}}
++V115_PROBES = {
++    'C-H3-RENEWED-WORD-CHOICE-N': 'P-H3-RENEWED-WORD-CHOICE-1',
++    'C-H3-DOUBLE-RENEWED-TRANSFER-N': 'P-H3-DOUBLE-RENEWED-TRANSFER-1',
++}
++V115_CHECKS = (
++    ('V115-PRIOR-BYTES', 'the pinned reverse fold reconstructs exact v114 inputs before all 250 historical guards'),
++    ('V115-CLAIM-LEDGERS', 'two finite L1 H3 computations enter at C with all 630 prior claim rows unchanged'),
++    ('V115-EVIDENCE', 'the two declarations bind distinct public probe bundles, two-architecture requirements and exact scope hashes'),
++    ('V115-BOUNDARY', 'the v114 Frontier, dependency and gate bytes and all 43 reproduction directories are preserved'),
++    ('V115-H3-RENEWED', 'the shorter census separates the writer 28 negative boundary, one recurrent two-transfer pair and the default and supplementary Python checks'),
++    ('V115-H3-DOUBLE', 'the extended witness binds two recurrent words held at writer 1, both material transfers at receiver 2, and the local and complete Python checks'),
++)
++
++
++@lru_cache(maxsize=1)
++def v115_current_inputs():
++    """Validate the entire v115 input and the exact inverse into v114."""
++    if V115_INPUT_PATCH.keys() != V114_INPUT_PATCH.keys():
++        return None
++    current, previous = {}, {}
++    try:
++        for relative, contract in V115_INPUT_PATCH.items():
++            path = ROOT / relative
++            if not path.is_file() or path.is_symlink():
++                return None
++            content = path.read_bytes()
++            if (len(content) != contract['current_bytes']
++                    or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
++                return None
++            prior = v111_restore_bytes(content, contract)
++            if prior is None:
++                return None
++            current[relative], previous[relative] = content, prior
++    except (OSError, ValueError):
++        return None
++    return current, previous
++
++
++def v115_probe_records(claim):
++    directory = ROOT / 'probes' / V115_PROBES[claim]
++    raw = (directory / 'EXPECTED.txt').read_bytes()
++    records = [json.loads(line) for line in raw.decode('utf-8').splitlines()]
++    run = (directory / 'RUN.md').read_text(encoding='utf-8')
++    if f'stdout_sha256: {hashlib.sha256(raw).hexdigest()}' not in run:
++        raise ValueError('execution record does not bind the frozen stdout')
++    return records, run
++
++
++def v115_unique_record(records, section):
++    value, = (row['value'] for row in records if row['section'] == section)
++    return value
++
++
++def v115_h3_renewed(claim, text):
++    records, run = v115_probe_records(claim)
++    totals = v115_unique_record(records, 'pair_totals')
++    zero = {'ANY': 0, 'MARKED_MOVED': 0, 'BOTH_MOVED': 0}
++    if totals != {
++        'A': zero, 'AA': zero, 'A181': zero,
++        'R': {'ANY': 60, 'MARKED_MOVED': 8, 'BOTH_MOVED': 1},
++        'RR': {'ANY': 4, 'MARKED_MOVED': 4, 'BOTH_MOVED': 0},
++    }:
++        return False
++    inputs = v115_unique_record(records, 'inputs')
++    counts = [dict(zip(inputs['rank_fields'], row['value']['census']))
++              for row in records if row['section'] == 'rank']
++    certificate, = (row['value']['events'] for row in records
++                    if row['section'] == 'certificate'
++                    and (row['value']['class'], row['value']['transfer']) == ('R', 'BOTH_MOVED'))
++    events = sorted(certificate, key=lambda event: event['read'])
++    first, second = events
++    return (
++        len(counts) == 85 and {row['rank'] for row in counts} == set(range(85))
++        and {row['rank']: row['anchors'] for row in counts if row['anchors']}
++        == {0: 842, 22: 826, 43: 12938}
++        and tuple(sum(row[key] for row in counts)
++                  for key in ('ticks', 'repeats', 'anchors', 'anchor_contacts', 'anchor_moved', 'anchor_active'))
++        == (1851392, 104259, 14606, 14613, 0, 0)
++        and v115_unique_record(records, '181_to_182') == {'0': [0, 0, 0], '22': [0, 0, 0], '43': [0, 0, 0]}
++        and [(e['rank'], e['writer'], e['reader'], e['write'], e['read'], e['writer_tag'],
++              e['reader_tag'], e['prior']) for e in events]
++        == [(43, 1, 0, 598058, 598060, 2, 1, 330940), (43, 1, 0, 720019, 720028, 1, 2, 0)]
++        and first['reader_pre'] == second['reader_pre']
++        and first['reader_c'][2:] == second['reader_c'][2:]
++        and all(e['reader_pre'][:2] != e['reader_c'][:2] and not e['anchor'] for e in events)
++        and v115_unique_record(records, 'independent') == {'events': 4, 'full_replayed': 0}
++        and 'through tick 735779' in run and 'All four events passed' in run
++        and all(phrase in text for phrase in (
++            'writer 28', 'zero material transfers during contact c', 'zero material-changing receiver operations',
++            'a supplementary independent replay checks the four reported certificate encounters from launch',
++        ))
++        and all(tick in text.replace(',', '') for tick in ('14613', '598060', '720028'))
++    )
++
++
++def v115_h3_double(claim, text):
++    records, run = v115_probe_records(claim)
++    events = v115_unique_record(records, 'witness')
++    confirmation = v115_unique_record(records, 'confirmation')
++    first, second = events
++    return (
++        v115_unique_record(records, 'coverage') == [
++            {'limit': 16777216, 'moved_active_reads': 3222, 'rank': 43,
++             'repeats': 784474, 'ticks': 9915383}]
++        and [(e['rank'], e['writer'], e['reader'], e['bit'], e['prior'], e['write'], e['read'],
++              e['writer_tag'], e['reader_tag']) for e in events]
++        == [(43, 1, 2, 1, 7316785, 7390473, 7390475, 2, 1),
++            (43, 1, 2, 1, 8176761, 9915381, 9915383, 2, 2)]
++        and first['reader_pre'] == second['reader_pre']
++        and first['reader_c'][2:] == second['reader_c'][2:]
++        and [e['writer_b'][0] for e in events] == [[0, 0, 0, 2], [0, -2, 0, -2]]
++        and all(first[key][:2] != second[key][:2] for key in ('writer_b', 'reader_c', 'reader_b'))
++        and all(not e['anchor'] and all(pre != post for pre, post
++                in zip(e['reader_pre'][:2], e['reader_c'][:2])) for e in events)
++        and (confirmation['events'], confirmation['full_replayed']) == (2, 0)
++        and [arm['material_rails_moved'] for arm in confirmation['arms']] == [[True, True], [True, True]]
++        and [(arm['f'], arm['h_d'], arm['h_f']) for arm in confirmation['arms']]
++        == [([-1, 0, 1, -1], [3, 0, -2, -2], [4, 0, 1, 1]),
++            ([-1, 0, 1, -1], [9, 0, 5, 5], [4, 0, 1, 1])]
++        and 'through tick 9,915,383' in run and 'two events and two full replays' in run
++        and all(phrase in text for phrase in (
++            'writer 1', 'both contacts change both material rails', 'q9 remains open',
++            'the default verifier independently checks both local certificates',
++            'a separate full five-coordinate replay from launch',
++        ))
++        and all(tick in text.replace(',', '') for tick in ('7390475', '9915383'))
++    )
++
++
++def v115_current_checks():
++    failed = [(tag, description, False) for tag, description in V115_CHECKS]
++    inputs = v115_current_inputs()
++    if inputs is None:
++        return failed
++    current, prior = inputs
++    ids = V115_PROBES.keys()
++
++    def split_rows(name, key):
++        relative = 'canon/' + name
++        rows = v87_table_bytes(current[relative])
++        additions = [row for row in rows if row[key] in ids]
++        unchanged = [row for row in rows if row[key] not in ids]
++        by_id = v112_rows_by_id(additions, key)
++        return rows, by_id, (
++            len(additions) == len(ids) and by_id.keys() == ids
++            and unchanged == v87_table_bytes(prior[relative])
++        )
++
++    try:
++        registry, claims, unchanged_registry = split_rows('REGISTRY.tsv', 'claim_id')
++        _, normative, unchanged_normative = split_rows('NORMATIVE.tsv', 'item_id')
++        _, evidence, unchanged_evidence = split_rows('EVIDENCE.tsv', 'claim_id')
++        _, history, unchanged_history = split_rows('HISTORY.tsv', 'claim_id')
++        partition = {status: sum(row['status'] == status for row in registry) for status in 'TDCHOF'}
++        members = unchanged_registry and unchanged_normative and len(registry) == 632 and partition == {
++            'T': 479, 'D': 62, 'C': 47, 'H': 2, 'O': 23, 'F': 19,
++        }
++        provenance = unchanged_evidence and unchanged_history
++        canon = current['canon/CANON.md'].decode('utf-8')
++        statements = {}
++        for claim, probe in V115_PROBES.items():
++            row, definition = claims[claim], normative[claim]
++            heading = f'### {claim} [C]\n'
++            heading_at = canon.index(heading)
++            section_at = canon.rfind('\n## ', 0, heading_at)
++            section = canon[section_at + 4:].splitlines()[0]
++            statement = canon[heading_at + len(heading):].partition('\n### ')[0].partition('\n## ')[0]
++            statements[claim] = ' '.join((statement + ' ' + row['scope']).lower().split())
++            members = (
++                members and row['status'] == 'C' and canon.count(heading) == 1
++                and row['canon_section'] == section == '2. Time, space, and the decoder'
++                and (definition['item_type'], definition['claim_id'], definition['status'],
++                     definition['layer'], definition['gate_ids'], definition['statement_source'])
++                == ('COMPUTATION', claim, 'C', 'L1', '', f'canon/CANON.md::{claim}')
++            )
++            location = 'probes/' + probe
++            evidence_id = 'EV-' + claim
++            bundle = v114_probe_digest(probe)
++            ev, event = evidence[claim], history[claim]
++            provenance = (
++                provenance and bundle is not None and row['evidence'] == location
++                and (ev['evidence_id'], ev['evidence_kind'], ev['location'], ev['sha256'],
++                     ev['hash_mode'], ev['architecture_requirement'])
++                == (evidence_id, 'PUBLIC_PROBE', location, bundle,
++                    'bundle-manifest-sha256-v1', 'two-architecture')
++                and (event['event_id'], event['event_sequence'], event['event_date'], event['release'],
++                     event['event_type'], event['previous_status'], event['new_status'],
++                     event['scope_sha256'], event['evidence_id'], event['evidence_location'],
++                     event['evidence_sha256'])
++                == ('CANON115-DECLARE-' + claim, '1', '2026-11-21', 'canon-v115', 'DECLARE', '-', 'C',
++                    v112_scope_hash(row), evidence_id, location, bundle)
++            )
++        boundary = (
++            all(current['canon/' + name] == prior['canon/' + name] for name in (
++                'FRONTIER.md', 'FRONTIER_PROGRAMS.tsv', 'DEPENDENCIES.tsv', 'GATES.tsv',
++            ))
++            and not any(path.is_symlink() for path in REPRODUCE.iterdir())
++            and frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
++            == frozenset(V111_REPRODUCTIONS) | V112_ADDED_REPRODUCTIONS
++        )
++        renewed, double = V115_PROBES
++        renewed_ok = provenance and v115_h3_renewed(renewed, statements[renewed])
++        double_ok = provenance and v115_h3_double(double, statements[double])
++    except (OSError, KeyError, ValueError, IndexError, TypeError):
++        return failed
++    return [
++        (tag, description, ok) for (tag, description), ok in
++        zip(V115_CHECKS, (True, members, provenance, boundary, renewed_ok, double_ok))
++    ]
++
++
+ # Byte-pinned inputs for the v114 release and their minimal inverse edits.
+ V114_INPUT_PATCH = {'canon/CANON.md': {'current_bytes': 1560551,
+                     'current_sha256': 'd920b1dfbda526f24336d97bfd9dfe33aa77923a4c33f0dca19c0dc38516d21e',
+@@ -3641,15 +3974,13 @@ V114_CHECKS = (
+ @lru_cache(maxsize=1)
+ def v114_current_inputs():
+     """Validate the complete current v114 input and its exact v113 inverse."""
+-    if not V114_INPUT_PATCH:
++    latest = v115_current_inputs()
++    if latest is None:
+         return None
+     current, previous = {}, {}
+     try:
+         for relative, contract in V114_INPUT_PATCH.items():
+-            path = ROOT / relative
+-            if not path.is_file() or path.is_symlink():
+-                return None
+-            content = path.read_bytes()
++            content = latest[1][relative]
+             if (len(content) != contract['current_bytes']
+                     or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
+                 return None
+@@ -30871,9 +31202,10 @@ def run():
+     checks.extend(v112_current_checks())
+     checks.extend(v113_current_checks())
+     checks.extend(v114_current_checks())
++    checks.extend(v115_current_checks())
+
+     print("TWIST-J theorem/dictionary separation audit")
+-    print("historical guards: exact reconstructed v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v114")
++    print("historical guards: exact reconstructed v114, v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v115")
+     print("exact algebra and finite computations remain distinct from physical readings")
+     print()
+     passed = 0
+diff --git a/tools/test_architecture_map_report.py b/tools/test_architecture_map_report.py
+index f418355332de0c369da03b963e26131c1bab17e1..c2583036ceec631397aaf4e58e478b909bc54933 100644
+--- a/tools/test_architecture_map_report.py
++++ b/tools/test_architecture_map_report.py
+@@ -375,11 +375,11 @@ class ArchitectureMapReportTests(unittest.TestCase):
+
+     def test_current_counts_match_the_public_summary(self) -> None:
+         # audit(ROOT) reads this checkout, not the historical v10 map note.
+-        # v114 adds one equilibrium theorem and two finite computations.
+-        self.assertEqual(self.report.claims, 630)
++        # v115 adds two finite H3 computations.
++        self.assertEqual(self.report.claims, 632)
+         self.assertEqual(
+             self.report.status_counts,
+-            {"C": 45, "D": 62, "F": 19, "H": 2, "O": 23, "T": 479},
++            {"C": 47, "D": 62, "F": 19, "H": 2, "O": 23, "T": 479},
+         )
+         self.assertEqual(
+             self.report.evidence_counts,
+@@ -387,7 +387,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
+                 "none": 201,
+                 "one-architecture": 9,
+                 "recorded-audit": 31,
+-                "two-architecture": 389,
++                "two-architecture": 391,
+             },
+         )
+         self.assertFalse(self.report.count_mismatches)
+@@ -397,7 +397,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
+         self.assertEqual(
+             len(self.report.transitive_architecture_dependents), 389
+         )
+-        self.assertEqual(len(self.report.dependency_terminals), 88)
++        self.assertEqual(len(self.report.dependency_terminals), 90)
+         # v95 adds ten inline theorems (architecture_requirement=none).
+         # Their declared premise edges add four terminals and no path to
+         # DEF-ARCHITECTURE; this is a graph fact, not physical independence.
