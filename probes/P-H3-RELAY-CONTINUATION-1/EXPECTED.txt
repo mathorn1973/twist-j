@@ -1,0 +1,8 @@
+{"section":"launch","value":{"ordered_family_sha256":"8e65f16a2f545c566c3b2fa915fd993f3fd0e78644a17b12567a42ccc434c4cd","query_sha256":"d7edbbf3816819a7078c7f9b85da242fcb4d85dddd7b5b0c641b33b73a65b396","rank":43}}
+{"section":"prefix","value":{"B1":{"delivered":102,"overwritten_at_2":308,"pending":0,"reads":554,"returned_to_1":144},"B2":{"delivered":13,"overwritten_at_2":144,"pending":0,"reads":159,"returned_to_1":2},"end_tick":67108864,"recurrent_source_writes":153059}}
+{"section":"continuation","value":{"B1":{"delivered":702,"overwritten_at_2":5353,"pending":0,"reads":6940,"returned_to_1":885},"B2":{"delivered":188,"overwritten_at_2":2632,"pending":0,"reads":2852,"returned_to_1":32},"end_tick":1073741824,"recurrent_source_writes":3657170}}
+{"section":"fixed_B2","value":{"arrival":[[2,-1,1,1],[-2,1,-1,-1]],"delivery":36442234,"emitted":[[0,-2,0,-2],[0,2,0,2]],"moved_rails":2,"output":[[1,0,1,2],[-1,0,-1,-2]],"prior":8176761,"read":36442233,"readiness":[[2,2,2,2],[-2,-2,-2,-2],[4,2,4,2],[3,2,0,4],[4,2,4,2],[6,2,2,4]],"third_branch":0,"third_contact":[[0,1,0,2],[0,-1,0,-2]],"third_pre":[[-1,0,-1,0],[1,0,1,0]],"write":36442231}}
+{"section":"readiness","value":{"contacts":503316480,"full_six":0,"pre_four":0}}
+{"section":"compatible_pairs","value":{"fixed":0,"full":0,"historical":0}}
+{"section":"endpoint","value":{"account":[[-9,2,-2,-3],[19,7,5,19],[463,0,152,152],774],"field_sha256":"b05fee6196a0be63a6ab150a2db111114633a66a8c74dc76c8945964c1c7acfa","next_bit":1}}
+{"section":"retrospective_confirmation","value":true}
