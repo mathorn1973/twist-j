@@ -1,0 +1,76 @@
+{
+  "candidate": "C-TWIST-RELATIONAL-PHYSICS-1-N",
+  "status": "NON-CANONICAL",
+  "authority": {
+    "repository": "mathorn1973/twist-j",
+    "branch": "main",
+    "head": "a193e389fb1ddb0bdc89165b015c95a17eb1e425",
+    "canon": "Public Canon v106",
+    "tag": "canon-v106",
+    "content_commit": "9242db4f040d67d9417eacd06612230b74248cff"
+  },
+  "input_sources": [
+    {
+      "path": "canon/CANON.md",
+      "commit": "a193e389fb1ddb0bdc89165b015c95a17eb1e425",
+      "bytes": 1370107,
+      "sha256": "52302c640033dd15d4a7a075cad16fa48b1473b7396d1f7413536a9ec45422e7",
+      "git_blob": "f0c7dd42bd919d37367a0ad1eed472fb2b7a9dd7",
+      "url": "https://github.com/mathorn1973/twist-j/blob/a193e389fb1ddb0bdc89165b015c95a17eb1e425/canon/CANON.md"
+    },
+    {
+      "path": "notes/C-COMPACT-ENERGY-RECORD-N/COMPACT_MODEL.md",
+      "commit": "a193e389fb1ddb0bdc89165b015c95a17eb1e425",
+      "bytes": 19714,
+      "sha256": "4c5e59c361adc43ce74d546d65cefb520819dad58357ed6df91b35c9db2f16fc",
+      "git_blob": "381f32303b8233203bec0a64521cc29e389a0776",
+      "url": "https://github.com/mathorn1973/twist-j/blob/a193e389fb1ddb0bdc89165b015c95a17eb1e425/notes/C-COMPACT-ENERGY-RECORD-N/COMPACT_MODEL.md"
+    },
+    {
+      "path": "notes/C-ORIGINAL-PORT-SOURCE-PREPARATION-N/SOURCE_CIRCUIT.md",
+      "commit": "a193e389fb1ddb0bdc89165b015c95a17eb1e425",
+      "bytes": 17158,
+      "sha256": "3604955a750bb9c6475ed4588fcaa36e1dcad6867eb694976e4d26693130e14c",
+      "git_blob": "fea890cd90c5f1d6c14e477c51509e08da2e8ffa",
+      "url": "https://github.com/mathorn1973/twist-j/blob/a193e389fb1ddb0bdc89165b015c95a17eb1e425/notes/C-ORIGINAL-PORT-SOURCE-PREPARATION-N/SOURCE_CIRCUIT.md"
+    }
+  ],
+  "inherited_claims": [
+    "ACTIVE-ISOSPECTRAL-RECORD",
+    "COMPACT-ACTIVE-RECORD-APPARATUS"
+  ],
+  "prior_work": [
+    {
+      "title": "Evolution without evolution: Dynamics described by stationary observables",
+      "authors": "D. N. Page and W. K. Wootters",
+      "year": 1983,
+      "doi": "10.1103/PhysRevD.27.2885"
+    },
+    {
+      "title": "History states of systems and operators",
+      "authors": "A. Boette and R. Rossignoli",
+      "year": 2018,
+      "arxiv": "1806.00956v2",
+      "doi": "10.1103/PhysRevA.98.032108"
+    }
+  ],
+  "collision_review": {
+    "all_remote_heads_scanned": 326,
+    "exact_new_branch_collisions": 0,
+    "distinct_existing_lanes": [
+      {
+        "head": "e4d165c5c5471ea5746013f7f8f5c394512f9884",
+        "scope": "finite rotor energy clock; distinct Hamiltonian and protocol"
+      },
+      {
+        "head": "9d3e2b37960e0055c88c616bd0d21588e60ba328",
+        "scope": "finite source-stage-clock-archive construction; not used or modified"
+      },
+      {
+        "head": "99e9d9a7708b1b1147208c4b379fd2349bd8e4b9",
+        "scope": "rank-two entanglement wedge geometry; unrelated clock construction"
+      }
+    ]
+  },
+  "authority_boundary": "The two historical note files are complete construction inputs explicitly cited by the canonical compact apparatus theorem; their standalone headings do not confer independent canonical authority."
+}
