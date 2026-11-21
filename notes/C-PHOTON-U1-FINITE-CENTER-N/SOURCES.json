@@ -1,0 +1,70 @@
+{
+  "audit_contract_pin": "b7be3d00495330e4ac00441b865f9009e54a6299",
+  "audit_source_pin": "9a74d03fb8f2c8086eff0f326446352f0f628082",
+  "authority_content": "4a50e527d20018839f006ed312454b710e6486b4",
+  "authority_main": "e6240e2689bb22aab5f02bad90b75d3692bb96d9",
+  "candidate": "C-PHOTON-U1-FINITE-CENTER-N",
+  "external_data": "none; original derivation/code and identified public repository sources",
+  "files_at_authority_main": [
+    {
+      "bytes": 2391,
+      "path": "STATUS.md",
+      "sha256": "3704b1e222e3f4eee9c72624cbdad7ea8ea4b14b99194781e3d59e7c8fff6f5b"
+    },
+    {
+      "bytes": 17333,
+      "path": "POLICY.md",
+      "sha256": "da5d2cf5a021f4d069c471725e02b6d2c201e3acadd5ecfd4213a361184b7a5d"
+    },
+    {
+      "bytes": 21813,
+      "path": "AGENTS.md",
+      "sha256": "7363b83ca6d822ec35e8465fe64c1aa8cd0007bf8b99ae599c265cc49fcee6e1"
+    },
+    {
+      "bytes": 37109,
+      "path": "canon/CORE.md",
+      "sha256": "bce891d62b48aa95e2e124856e82bb16799ad930b422a8264542c84bfcb7fbf9"
+    },
+    {
+      "bytes": 27382,
+      "path": "canon/FRONTIER.md",
+      "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0"
+    },
+    {
+      "bytes": 415,
+      "path": "canon/SHA256SUMS",
+      "sha256": "cb1e1d6d4bfe0593b903b7ae9cc847b943b732a85230b76cf1f137c031092caf"
+    },
+    {
+      "bytes": 10584,
+      "path": "notes/C-CURRENT-PRIME-GATE-N/PROOF.md",
+      "sha256": "ad34c7e6c3247a13fc32bbe125540929ffe97ec1885d40a442e08e27649cdc09"
+    }
+  ],
+  "license": "Apache-2.0",
+  "related_issue_scope": [
+    {
+      "issue": 1196,
+      "scope": "inherited local degree-six incidence bound"
+    },
+    {
+      "issue": 1111,
+      "scope": "inherited binary-pair identity"
+    },
+    {
+      "issue": 1119,
+      "scope": "separate charge-five U1 Wilson-sector ratio"
+    },
+    {
+      "issue": 1217,
+      "scope": "separate Z5 seam-source relation"
+    },
+    {
+      "issue": 1116,
+      "scope": "separate reserved Z5 axis experiment; untouched"
+    }
+  ],
+  "source_manifest": "SOURCE-MANIFEST.json",
+  "status": "PUBLIC-source NON-CANONICAL"
+}

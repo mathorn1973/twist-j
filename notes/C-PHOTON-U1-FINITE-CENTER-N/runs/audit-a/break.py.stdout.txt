@@ -1,0 +1,10 @@
+INCIDENCE_WORDS [[0,1,0,0],[1,3,0,0],[2,9,0,0],[3,27,0,0],[4,81,0,0],[5,243,2,0],[6,729,12,2]]
+TORUS_WITNESSES L=4 [[2,256,256],[3,384,256],[4,512,256],[5,640,256],[6,768,256]]
+TOPOLOGY wrapping_sheets=6 cube_boundaries=1024 all_stacks=PASS
+TORUS_WITNESSES L=6 [[2,1296,1296],[3,1944,1296],[4,2592,1296],[5,3240,1296],[6,3888,1296]]
+CONDITIONAL_MASSES compositions=924 rows=6468 sha256=04ef99ab864b0240d3d8b0039e538eaf18d79d999aeadf89a8cb624ae84a4e5b
+ALGEBRA weights=7 scores=7 positive=PASS normalization=PASS
+TWO_TORUS sizes=2x2 assignments=343 partition=18 uniform_h=1/9 stack_h=1/9 twist_coefficients=[16,1,0] twist_denominator=18 winding_states=3
+TWO_TORUS sizes=3x2 assignments=16807 partition=66 uniform_h=1/33 stack_h=1/33 twist_coefficients=[64,1,0] twist_denominator=66 winding_states=3
+CUBE_DISK cube_states=3 cube_partition=66 disk_states=1 disk_partition=2
+BREAKER_RESULT PASS exact_tests=1-6 sampler_trajectory=NOT_RUN phase=NOT_ASSESSED

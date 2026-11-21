@@ -1,0 +1,47 @@
+{
+  "source_pin": "9a74d03fb8f2c8086eff0f326446352f0f628082",
+  "method": "public GitHub fetch_file at immutable ref, compared with local git ls-tree before scientific execution",
+  "all_git_blobs_match": true,
+  "files": [
+    {
+      "name": "PREREG.md",
+      "sha": "c85a19dbe805ac5673053f736bc0f263d3cb0977",
+      "bytes": 10129
+    },
+    {
+      "name": "z7_exact.py",
+      "sha": "1699b5154e4199c298a1ca45661546dd24d6615b",
+      "bytes": 15923
+    },
+    {
+      "name": "verify.py",
+      "sha": "54b2254ddd318bdf6531592df34f4b2cd59b4e44",
+      "bytes": 14870
+    },
+    {
+      "name": "break.py",
+      "sha": "c534987e3905a2365b33a150d0129e3d8db94a8f",
+      "bytes": 18652
+    },
+    {
+      "name": "exercise.py",
+      "sha": "f75c5f6975c0e5ce6b32cbac73f429283f29b76d",
+      "bytes": 2636
+    },
+    {
+      "name": "PROOF.md",
+      "sha": "8766183c913e25c013abfb5ec0d33efcd3026f23",
+      "bytes": 15634
+    },
+    {
+      "name": "MEASUREMENT.md",
+      "sha": "81d8f8af3d7e45e3efe5efb11b91b08e7c3a0b23",
+      "bytes": 10675
+    },
+    {
+      "name": "BREAKER_REVIEW.md",
+      "sha": "7f009305025ba4c40f6506eed1bb97507eec5d22",
+      "bytes": 5929
+    }
+  ]
+}
