@@ -1,0 +1,117 @@
+{
+  "candidate": "C-THERMAL-LAUNCH-CAPACITY-N",
+  "sources": [
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "STATUS.md",
+      "bytes": 2391,
+      "sha256": "24c115b808e61bf0be4efffec79af50bc7ca350dcc2c1d8dc5f91899d1fdb125"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "POLICY.md",
+      "bytes": 17333,
+      "sha256": "da5d2cf5a021f4d069c471725e02b6d2c201e3acadd5ecfd4213a361184b7a5d"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "AGENTS.md",
+      "bytes": 21813,
+      "sha256": "7363b83ca6d822ec35e8465fe64c1aa8cd0007bf8b99ae599c265cc49fcee6e1"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "canon/CORE.md",
+      "bytes": 38193,
+      "sha256": "5318823839f7f42c61cc5245166493b3cd9b641b849e288a12ec300ee60d1e9e"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "canon/FRONTIER.md",
+      "bytes": 27382,
+      "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "canon/REGISTRY.tsv",
+      "bytes": 560217,
+      "sha256": "460db26185e18ef684ebd9db2e2dd4163a18830a5b362489dc41eeb2526e82af"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "canon/EVIDENCE.tsv",
+      "bytes": 115937,
+      "sha256": "e7223862470764513b1f84da75c875137d7ac4adc0f17ecdae35649707aad184"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "canon/GATES.tsv",
+      "bytes": 13324,
+      "sha256": "a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "tools/check_reproduce.py",
+      "bytes": 3604,
+      "sha256": "2f1e5764abd5ff06e44a3131b4a2341b036a24d01c2e228f74a58846146d19cf"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "243379459e3c7493368473cbae1a17eb99ee8316",
+      "path": "notes/C-ENVIRONMENT-SOURCE-PREPARATION-N/ENVIRONMENT.md",
+      "bytes": 16897,
+      "sha256": "c6efdfae23d2fec2ea1ddcd7329a56e7cba04375741f099b3fa31581dd52975e"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "243379459e3c7493368473cbae1a17eb99ee8316",
+      "path": "notes/C-ENVIRONMENT-SOURCE-PREPARATION-N/HAMILTONIAN.md",
+      "bytes": 17580,
+      "sha256": "ffb7a49a64cb045f3b3f260a562f92e5dcd0d0d89ff4858e14b1ef7b43896f95"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "243379459e3c7493368473cbae1a17eb99ee8316",
+      "path": "notes/C-ENVIRONMENT-SOURCE-PREPARATION-N/PREPARATION.md",
+      "bytes": 15742,
+      "sha256": "589565c28fccf2892be0c3e7255a7741780b6a82a9fcc5204271b54d8c9d857a"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "243379459e3c7493368473cbae1a17eb99ee8316",
+      "path": "notes/C-ENVIRONMENT-SOURCE-PREPARATION-N/README.md",
+      "bytes": 7268,
+      "sha256": "23620fe11874629fb6c2564fc80b098c9b4dcb5fa8a52e7bef3920fbe0c38c9f"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "243379459e3c7493368473cbae1a17eb99ee8316",
+      "path": "notes/C-ENVIRONMENT-SOURCE-PREPARATION-N/NATIVE.md",
+      "bytes": 8237,
+      "sha256": "8fab9d2c034886237ac8cd429f264073627c88c0a5e26d79bc0f4271a11535a9"
+    },
+    {
+      "repository": "mathorn1973/twist-j",
+      "commit": "243379459e3c7493368473cbae1a17eb99ee8316",
+      "path": "notes/C-ENVIRONMENT-SOURCE-PREPARATION-N/VALIDATION.md",
+      "bytes": 8032,
+      "sha256": "d305b28f90e8154d9f9faa35b3841a58e3a39d152860a2d19783ccca3c6297c3"
+    }
+  ]
+}
