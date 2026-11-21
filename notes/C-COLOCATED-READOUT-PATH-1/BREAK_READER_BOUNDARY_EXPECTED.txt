@@ -1,0 +1,1 @@
+{"first_failure":{"check":"B total area trace","context":{"boundary":"B_source","case":"B:P27:immediate","cut":39},"expected":150,"observed":300},"status":"FAIL"}
