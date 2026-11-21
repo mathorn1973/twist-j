@@ -1,0 +1,11 @@
+mode group distinct first_word raw44_start/horizon/cut raw4_start/horizon/cut
+baseline written_class 0
+baseline post_write_cuts 10 (-1,-2,2,1) raw44/1000000/170948 raw4/3110/28
+ingress_active written_class 0
+ingress_active post_write_cuts 10 (-1,-2,2,1) raw44/1000000/215012 raw4/3110/60
+ingress_sham written_class 0
+ingress_sham post_write_cuts 5 (-1,-4,1,-1) raw44/1000000/6624 raw4/3110/175
+delayed_active written_class 0
+delayed_active post_write_cuts 14 (-1,-2,2,1) raw44/1000000/480424 raw4/3110/44
+delayed_sham written_class 0
+delayed_sham post_write_cuts 18 (-1,-2,2,1) raw44/1000000/170948 raw4/3110/28
