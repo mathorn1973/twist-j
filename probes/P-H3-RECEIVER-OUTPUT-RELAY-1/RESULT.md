@@ -11,7 +11,7 @@ The native trajectory began at the original rank-43 field, with its original mat
 | B1 | 554 | 102 | 452 | 0 |
 | B2 | 159 | 13 | 146 | 0 |
 
-### Where the matching failed
+### Site-2 readiness for deliveries to site 3
 
 A supplementary grouping of the 713 eligible reads located the first unmet pairing requirement. Across all reads, 44 different readiness states occurred with B1 and 48 with B2. Three states occurred on both branches. Among the reads whose words reached and changed site 3, the 102 B1 deliveries had 17 distinct readiness states and the 13 B2 deliveries had nine. These two sets were disjoint. This already accounts for the zero pairs before comparing distinct source words, arrivals or outputs. Readiness here is the six ordered rails observed at site 2. [Grouping method](RUN.md)
 
