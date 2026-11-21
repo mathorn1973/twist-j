@@ -1296,3 +1296,26 @@ respective default cutoffs. Separate supplementary records describe the
 complete five-coordinate forward replays from launch. The adapter audits
 those records and reads the frozen stdout. The architecture jobs replay the
 frozen default scientific verifiers separately.
+
+## Public Canon v116 third-cell relay and continuation
+
+The v116 adapter reconstructs the exact v115 inputs for the 256 historical
+guards. Six additional guards check both finite L1 computations, distinct
+probe and declaration records, and the unchanged Frontier, dependency and
+gate ledgers and 43-directory reproduction inventory. The partition is
+T479/D62/C49/H2/O23/F19, totalling 634 claims. The 25 live H/O entries and Q9
+remain open at their previous scopes.
+
+The original relay probe (#2053) records 102 successful B1 deliveries and
+13 successful B2 deliveries through tick 67108864. Both fixed #2049 words
+are refused at site 3 and then overwritten at site 2. The supplementary
+grouping records disjoint readiness sets among successful deliveries.
+
+The continuation (#2055) confirms the successful historical B2 and 702
+B1 and 188 B2 deliveries from reads in the later interval. It records zero
+instances of the fixed pre-C readiness in that interval. Its zero pair
+count compares successful new B1 reads against the fixed, historical and
+full B2 pools. That scope excludes old B1 reads paired with new B2 reads.
+
+The adapter reads the frozen records and checks their custody and stated
+boundaries. The separate architecture jobs run the scientific verifiers.

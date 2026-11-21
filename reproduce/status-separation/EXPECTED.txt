@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v114, v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v115
+historical guards: exact reconstructed v115, v114, v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v116
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -258,5 +258,11 @@ PASS 253 V115-EVIDENCE the two declarations bind distinct public probe bundles, 
 PASS 254 V115-BOUNDARY the v114 Frontier, dependency and gate bytes and all 43 reproduction directories are preserved
 PASS 255 V115-H3-RENEWED the shorter census separates the writer 28 negative boundary, one recurrent two-transfer pair and the default and supplementary Python checks
 PASS 256 V115-H3-DOUBLE the extended witness binds two recurrent words held at writer 1, both material transfers at receiver 2, and the local and complete Python checks
+PASS 257 V116-PRIOR-BYTES the pinned reverse fold reconstructs exact v115 inputs before all 256 historical guards
+PASS 258 V116-CLAIM-LEDGERS two finite L1 H3 computations enter at C with all 632 prior claim rows unchanged
+PASS 259 V116-EVIDENCE the two declarations bind distinct sealed public probes and their two-architecture evidence
+PASS 260 V116-BOUNDARY the v115 Frontier, dependency and gate bytes and all 43 reproduction directories are preserved
+PASS 261 V116-H3-RELAY the original interval has individual third-cell deliveries, two fixed refusals and zero compatible pairs
+PASS 262 V116-H3-CONTINUATION the later interval preserves the fixed positive B2, zero reference readiness and zero pairs with a new B1
 
-RESULT 256/256 ALL PASS
+RESULT 262/262 ALL PASS
