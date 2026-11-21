@@ -1,0 +1,15 @@
+G1 PASS exact_field_cases=64 transfer_flux_S_unitarity_free_limit_scalar_and_phase_formulas
+G2 PASS original_four_channel_stationary_equations=2560 left_and_right_incidence_no_truncation
+G3 PASS exact_transparency_lambda=j^2 lambda_squared=gamma cos_q=4-5phi/2 defect_inverse_free
+G4 PASS compact_A_commutator_basis_controls=12 zero_capture_from_orthogonal_input
+INTERVAL q=pi/6 eigenphase=+ 540043260/1000000000 <= R <= 540043261/1000000000
+INTERVAL q=pi/6 eigenphase=- 999422264/1000000000 <= R <= 999422265/1000000000
+INTERVAL q=pi/3 eigenphase=+ 165495405/1000000000 <= R <= 165495406/1000000000
+INTERVAL q=pi/3 eigenphase=- 997123437/1000000000 <= R <= 997123438/1000000000
+INTERVAL q=pi/2 eigenphase=+ 1416558/1000000000 <= R <= 1416559/1000000000
+INTERVAL q=pi/2 eigenphase=- 990968106/1000000000 <= R <= 990968107/1000000000
+INTERVAL q=5pi/6 eigenphase=+ 585936209/1000000000 <= R <= 585936210/1000000000
+INTERVAL q=5pi/6 eigenphase=- 936052225/1000000000 <= R <= 936052226/1000000000
+G5 PASS eight_stationary_reflection_enclosures sqrt_bits=80 width_at_most=2/1000000000
+G6 PASS prime_addresses_use_norm_minus_11_minus_19_and_mass_normalization_not_literal_O_plus
+STATUS NON-CANONICAL same-session exact audit; no independent review, occurrence or native-U claim
