@@ -1,0 +1,43 @@
+[
+  {
+    "candidate_commit": "262fa528968145ec8f501c8193aab946896997f6",
+    "source_sha256": "39aa493ee1a21e9a94d7decad3b20ad8a6f4311dcb87ea33a96169688dfb916f",
+    "source_bytes": 17948,
+    "command": "python3 -I -B notes/C-LOADED-CURRENT-WORK-PHASE-COMPATIBILITY-N/verify_receiver.py",
+    "platform": "Ubuntu 22.04.5 LTS",
+    "architecture": "x86_64",
+    "python": "3.10.12",
+    "started_utc": "2026-11-07T09:58:29.14912+01:00",
+    "elapsed_seconds": 0.8511417649999999,
+    "exit_code": 0,
+    "timeout": false,
+    "timeout_seconds": 300,
+    "memory_limit_bytes": 1073741824,
+    "stdout_bytes": 626,
+    "stdout_sha256": "a13b76b5dd5418b1a252914a19c43eac5ce71093fd87cc68230417fa884fabf3",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scope": "first prospective fixed receiver and native-clock audit; no full-field replay"
+  },
+  {
+    "candidate_commit": "262fa528968145ec8f501c8193aab946896997f6",
+    "source_sha256": "39aa493ee1a21e9a94d7decad3b20ad8a6f4311dcb87ea33a96169688dfb916f",
+    "source_bytes": 17948,
+    "command": "python3 -I -B verify_receiver.py",
+    "cwd": "notes/C-LOADED-CURRENT-WORK-PHASE-COMPATIBILITY-N",
+    "platform": "Debian GNU/Linux 12 (bookworm)",
+    "architecture": "aarch64",
+    "python": "3.11.2",
+    "started_utc": "2026-11-07T09:59:01.703975+01:00",
+    "elapsed_seconds": 2.4948031539970543,
+    "exit_code": 0,
+    "timeout": false,
+    "timeout_seconds": 300,
+    "memory_limit_bytes": 1073741824,
+    "stdout_bytes": 626,
+    "stdout_sha256": "a13b76b5dd5418b1a252914a19c43eac5ce71093fd87cc68230417fa884fabf3",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scope": "clean public-pin fixed receiver and native-clock audit; no full-field replay"
+  }
+]

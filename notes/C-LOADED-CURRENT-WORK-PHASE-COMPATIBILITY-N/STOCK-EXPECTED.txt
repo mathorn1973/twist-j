@@ -1,0 +1,18 @@
+NON-CANONICAL / L1; exact author-side fixed-word stock census
+external_informal_assertion_count=not_reproduced
+complete_coefficient_box=11^4=14641; Q_cutoff=32
+norm_bounded_candidates=1811
+successful_by_Q={"22":40,"28":40,"32":40}
+successful_total=120
+successful_records_sha256=a176b08e95b22febaf0e5edec05a6024a271cb08e26050ff6ad795134ecf142c
+minimum_record={"Q":22,"readings":[17,12,7,22,2],"stock":[-4,-2,-2,-3]}
+normalized_small_stock=1,2,0,-2; Q=22; readings=22,12,2,7,17
+alternative_small_stock=2,-2,1,0; Q=22; readings=12,7,22,2,17
+small_high_pair_accounts=26,48; small_two_pair_accounts=30,52
+unrestricted_small_box=5^4=625; successful=32
+small_box_successful_by_Q={"22":16,"28":8,"32":8}
+small_box_records_sha256=c09ba2caeb2c494642a664140ac8d8574268e7af120b59de68467e9061448cad
+relative_frame_tables={"Q22_S_ticks_1":[[12,7,22,2,17],[17,12,7,22,2],[2,17,12,7,22],[22,2,17,12,7],[7,22,2,17,12]],"Q22_S_ticks_13":[[22,12,2,7,17],[7,17,22,12,2],[12,2,7,17,22],[17,22,12,2,7],[2,7,17,22,12]],"Q22_T_ticks_1":[[22,12,2,7,17],[17,22,12,2,7],[7,17,22,12,2],[2,7,17,22,12],[12,2,7,17,22]],"Q22_T_ticks_13":[[2,22,7,12,17],[12,17,2,22,7],[22,7,12,17,2],[17,2,22,7,12],[7,12,17,2,22]],"Q32_ticks_1":[[32,17,2,7,27],[27,32,17,2,7],[7,27,32,17,2],[2,7,27,32,17],[17,2,7,27,32]],"Q32_ticks_13":[[2,32,7,17,27],[17,27,2,32,7],[32,7,17,27,2],[27,2,32,7,17],[7,17,27,2,32]]}
+simultaneous_units=10; raw_occupied_triples=125
+assertions=832913
+PASS
