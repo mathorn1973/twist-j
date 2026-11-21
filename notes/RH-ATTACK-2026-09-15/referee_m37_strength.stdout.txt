@@ -1,0 +1,6 @@
+REF-CHECK 01 PASS: G_{k,p}/G_{1,p} = 1/(1-2x) as formal series to x^12, and differs from the lane's (1-x)^2/(1-2x) [ratio coefficients 1,2,4,8,16,...; lane's 1,0,1,2,4,...]
+REF-CHECK 02 PASS: at p=11, s=2: G_k/G_1 = 121/119 = 1/(1-2x); lane's formula gives 14400/14399 [true 121/119, lane 14400/14399]
+REF-CHECK 03 PASS: a_sigma = b_1(1-sigma) = 5603/95780, b_sigma = b_0(2 sigma) = 5317/35280, nu = 7069361/33791184, beta_pole values as quoted [2nu = 7069361/16895592]
+REF-CHECK 04 PASS: sup-versus-L2 reading: U^{beta-1} = T^{-1/2} at U = T^{2-kappa} iff beta = (3-2kappa)/(4-2kappa), kappa in {0,1/2,49/50,99/100,1}
+REF-CHECK 05 PASS: (P7) at both endpoints of (x/2, x] requires x >= 1.6e10 (lane wrote 8e9); (P8) as printed needs Y >= 10^12 [x >= 16000000000]
+CHECKS: 5 of 5 PASS
