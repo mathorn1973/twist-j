@@ -1,0 +1,7 @@
+LOCAL_DIFF PASS checks=10
+GRAM PASS sources=125 link_fields=25 binary_chains=8
+GALOIS PASS checks=500
+REAL_SUBFIELD PASS checks=125 normalization_integer=YES
+DEFECT_GALOIS PASS checks=375
+INTEGER_COLLAPSE PASS controls=625 defects=375
+AUDIT PASS; discrete_defect_identity=EXACT; binary_pair_gram=EXACT; integer_two_mode_reduction=EXACT; thermodynamic_floor=OPEN; P1=OPEN
