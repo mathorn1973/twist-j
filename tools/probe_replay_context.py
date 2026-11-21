@@ -36,6 +36,13 @@ ADMITTED_CONTEXT_PATHS = {
         'canon/REGISTRY.tsv',
         'canon/CHANGELOG.md',
     }),
+    'P-INTEGER-RECIPROCAL-SOURCE-ACTION-1': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
     'P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3': frozenset({
         'canon/CANON.md',
         'canon/CORE.md',
@@ -143,6 +150,9 @@ ADMITTED_CONTEXT_PATHS = {
 ADMITTED_BUNDLE_PATHS = {
     'P-INTEGER-NONLINEAR-CONSTRAINT-PROPAGATION-1': frozenset({
         'probes/P-INTEGER-NONLINEAR-CONSTRAINT-PROPAGATION-1/breaker.py',
+    }),
+    'P-INTEGER-RECIPROCAL-SOURCE-ACTION-1': frozenset({
+        'probes/P-INTEGER-RECIPROCAL-SOURCE-ACTION-1/breaker.py',
     }),
     'P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3': frozenset({
         'probes/P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3/breaker.py',
