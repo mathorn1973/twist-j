@@ -1,0 +1,7 @@
+P-NEUTRAL-RING-MODAL-ACTION-1
+contact cases=200 matched=40 refused=160 pure_mode_states=10
+receiver_controls c=3:40,10,20 c=-3:10,40,20 c=-1:0,10,0 phases=5
+commutant 2:2,0 3:2,0 4:2,0 5:2,0
+darboux cases=625 half_integral_actions=250
+bank cases=1000 forward=20000 inverse=20000 explicit_controls=4
+RESULT PASS
