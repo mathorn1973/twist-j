@@ -1,0 +1,7 @@
+# Supplemental test of the original clock
+
+The primary census has finished. This follow-up uses its 18 strict worker-B designs on input 43 as parents. The exact arrangements and the known primary witnesses inform the search. The supplemental source is frozen before running the repaired launches. Other in-session exploratory constructions are outside this receipt.
+
+For each parent, restore the six original CORR words at launch on input 43. Sweep all radiation slots outside the restored port as possible single payers. If the restoration changes the sum of radiation by d, the new payer must be its old value minus d. Keep solutions preserving the entire M,U,H account, or the empty repair when no payer is needed. Also try restoring the whole port of coordinates which vary across the 85 predecessors together with those six clock words. For eligible six-word repairs, insert all 85 inputs by replacing the six words alone, or by adding each original input's differences from 43 on the rest of the variable port. Record every ineligible input explicitly. These rules can produce physically identical launch lists.
+
+Evolve each paid start to 164 B, using the frozen primary source, restore, contact and compensated-work tests. Use the primary endpoint priority, then smaller repair ID and rank, to select the Python replay. With the original clock a positive strict B write requires both the actual worker write and its failure in the two source and word controls for a compensated result. Count the original 85 inputs accepted by the same preparation separately.
