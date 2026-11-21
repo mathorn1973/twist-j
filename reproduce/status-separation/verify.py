@@ -3490,6 +3490,326 @@ V112_STANDALONE_SOURCES = frozenset(('notes/canon/METRO-ENC4-CLOSURE-2026-11-13.
 
 
 
+# Byte-pinned inputs for v116 and their minimal inverse edits.
+V116_INPUT_PATCH = {'canon/CANON.md': {'current_bytes': 1568802,
+                    'current_sha256': 'ea4f924dc02838fcfe47d9b983bc0be929da7378ee9278c48831f34a5c393695',
+                    'prior_bytes': 1565061,
+                    'prior_sha256': '38afba3f5c815aa1c623f8cec9992f0e5f89659e493e85dc61054e8fdfa253cf',
+                    'restore': [(0, 1, '# TWIST-J Public Canon v115\n'),
+                                (2,
+                                 3,
+                                 '**Release identity.** Public Canon v115. Normative authority and '
+                                 'activation\n'),
+                                (17504, 17573, '')]},
+ 'canon/CHANGELOG.md': {'current_bytes': 224809,
+                        'current_sha256': '2e03900a71752a782586982d78b548556a8a7fffb7dc66fb331ee2b5f9c69266',
+                        'prior_bytes': 224304,
+                        'prior_sha256': '360c2e9084d5fa7cb96263a7430e86fec659e9da879d0c1c79862ac37214b39f',
+                        'restore': [(1, 15, ''),
+                                    (18, 18, '<!-- BEGIN GENERATED CURRENT COUNTS -->\n'),
+                                    (20, 20, '<!-- END GENERATED CURRENT COUNTS -->\n')]},
+ 'canon/CORE.md': {'current_bytes': 17207,
+                   'current_sha256': 'f41407b96706513e772a09660b746e0cd0e5574e796f291698c9eccf66ddaa32',
+                   'prior_bytes': 17207,
+                   'prior_sha256': '8e97bfeac41bbcc50831736610f34463f85d0f9264eb83d06c73780fc2d13ef2',
+                   'restore': [(2,
+                                3,
+                                '**Release identity:** Public Canon v115. Authority and activation are '
+                                'declared\n'),
+                               (12, 13, 'Public Canon v115 also declares a discrete architecture.\n')]},
+ 'canon/CORE_SELECTION.tsv': {'current_bytes': 349,
+                              'current_sha256': '2ffc8234faea17b2ca6f9e96648515b68bc083bafb95434f0e4723ad3e8c2361',
+                              'prior_bytes': 349,
+                              'prior_sha256': '2ffc8234faea17b2ca6f9e96648515b68bc083bafb95434f0e4723ad3e8c2361',
+                              'restore': []},
+ 'canon/DEPENDENCIES.tsv': {'current_bytes': 207257,
+                            'current_sha256': 'f1a692670236ad92e2e8cd80e9903ab19c8a7037da4c5ce6e3f3e230a3c3e957',
+                            'prior_bytes': 207257,
+                            'prior_sha256': 'f1a692670236ad92e2e8cd80e9903ab19c8a7037da4c5ce6e3f3e230a3c3e957',
+                            'restore': []},
+ 'canon/EVIDENCE.tsv': {'current_bytes': 127134,
+                        'current_sha256': '3ed0f2eff146e6ef96608c55946b3ca8afc7c34176732dc50e61a6225083e4b7',
+                        'prior_bytes': 126707,
+                        'prior_sha256': 'f04ce625b7b81eed708a8534dbd4d05e007e6c848012d25d11080cc0c7ef287d',
+                        'restore': [(633, 635, '')]},
+ 'canon/FRONTIER.md': {'current_bytes': 25630,
+                       'current_sha256': '2720c8032a31a4a0c3a704b00ca462f6e5faad6696958c0e4e03e3b7b74658cd',
+                       'prior_bytes': 25630,
+                       'prior_sha256': '2720c8032a31a4a0c3a704b00ca462f6e5faad6696958c0e4e03e3b7b74658cd',
+                       'restore': []},
+ 'canon/FRONTIER_PROGRAMS.tsv': {'current_bytes': 1444,
+                                 'current_sha256': '53fa7ded98facb495ed676f0ec6b20cd488150afdbf8734f3f436fead0ee0de7',
+                                 'prior_bytes': 1444,
+                                 'prior_sha256': '53fa7ded98facb495ed676f0ec6b20cd488150afdbf8734f3f436fead0ee0de7',
+                                 'restore': []},
+ 'canon/GATES.tsv': {'current_bytes': 13927,
+                     'current_sha256': '207c999f2e70538949fbdf434a8be2fb6ccf0d6190ed8cc2f0e4d1fd623562f2',
+                     'prior_bytes': 13927,
+                     'prior_sha256': '207c999f2e70538949fbdf434a8be2fb6ccf0d6190ed8cc2f0e4d1fd623562f2',
+                     'restore': []},
+ 'canon/HISTORY.tsv': {'current_bytes': 544678,
+                       'current_sha256': '21cf01792441308828555d86350d33b7ae9794e0a860195cc7745f5c65fa3e64',
+                       'prior_bytes': 543823,
+                       'prior_sha256': '2a21c71fa52e30c0217511cc57b9fe04e21a57d8a598934045136c35c2ec6111',
+                       'restore': [(1184, 1186, '')]},
+ 'canon/LEDGER.md': {'current_bytes': 5531,
+                     'current_sha256': 'da299b1b2bb4b6d038c278b729ddeda385e8a7b02a114f6dcfa6f096d2cd737c',
+                     'prior_bytes': 5531,
+                     'prior_sha256': 'da299b1b2bb4b6d038c278b729ddeda385e8a7b02a114f6dcfa6f096d2cd737c',
+                     'restore': []},
+ 'canon/NORMATIVE.tsv': {'current_bytes': 81707,
+                         'current_sha256': '8ebf804e00c48adc955d4512b3c996ede7448edb3f25e086d02da113fc6d08ff',
+                         'prior_bytes': 81474,
+                         'prior_sha256': 'd45b3a52ec5b2bfdf8b459f6fb980ef8971c94af155b162e6fed24373b105b30',
+                         'restore': [(698, 700, '')]},
+ 'canon/REGISTRY.tsv': {'current_bytes': 618354,
+                        'current_sha256': '740774deb54a761b459a3dd09fd287646386f197adceada7f2194adab56ee058',
+                        'prior_bytes': 615808,
+                        'prior_sha256': '86cd8571e35ae89e2eb6b4db1096b674c27d1c547eef826cf99a90d2db359d45',
+                        'restore': [(633, 635, '')]},
+ 'canon/SHA256SUMS': {'current_bytes': 415,
+                      'current_sha256': '8d987a0b89f15f179e365726b910cb2b34dda9b686073de25fb59228a2673c9d',
+                      'prior_bytes': 415,
+                      'prior_sha256': 'ee6aa36e6cea449486711043eeeed792f850cd355caaecedc96a80d1a57c34ab',
+                      'restore': [(0,
+                                   2,
+                                   '38afba3f5c815aa1c623f8cec9992f0e5f89659e493e85dc61054e8fdfa253cf  '
+                                   'canon/CANON.md\n'
+                                   '8e97bfeac41bbcc50831736610f34463f85d0f9264eb83d06c73780fc2d13ef2  '
+                                   'canon/CORE.md\n'),
+                                  (3,
+                                   5,
+                                   '86cd8571e35ae89e2eb6b4db1096b674c27d1c547eef826cf99a90d2db359d45  '
+                                   'canon/REGISTRY.tsv\n'
+                                   '360c2e9084d5fa7cb96263a7430e86fec659e9da879d0c1c79862ac37214b39f  '
+                                   'canon/CHANGELOG.md\n')]},
+ 'canon/STATUS_COUNTS.tsv': {'current_bytes': 244,
+                             'current_sha256': '8b39ecb746c80c6af64a2e4ad416be5c153d2900529f8244b53cfc1e7ed00e4b',
+                             'prior_bytes': 244,
+                             'prior_sha256': 'cbf7049fb5bb81a7c6d63ecbdb3f272c9935a4d5a08065515262372db1ba47dd',
+                             'restore': [(1, 2, 'claims\t632\n'),
+                                         (5, 6, 'status_C\t47\n'),
+                                         (14, 15, 'evidence_two-architecture\t391\n')]},
+ 'tools/test_architecture_map_report.py': {'current_bytes': 54462,
+                                           'current_sha256': '39a51eb1487a0a2f4f1146bc504d1d1aefde54f3f01cae2c3be1b6a74b13511b',
+                                           'prior_bytes': 54456,
+                                           'prior_sha256': 'ad5a4228ab7e1f160e2501699119396c53d56d8c22ab7b647ac1ff25ab3ac507',
+                                           'restore': [(377,
+                                                        379,
+                                                        '        # v115 adds two finite H3 computations.\n'
+                                                        '        self.assertEqual(self.report.claims, '
+                                                        '632)\n'),
+                                                       (381,
+                                                        382,
+                                                        '            {"C": 47, "D": 62, "F": 19, "H": 2, '
+                                                        '"O": 23, "T": 479},\n'),
+                                                       (389,
+                                                        390,
+                                                        '                "two-architecture": 391,\n'),
+                                                       (399,
+                                                        400,
+                                                        '        '
+                                                        'self.assertEqual(len(self.report.dependency_terminals), '
+                                                        '90)\n')]}}
+V116_PROBES = {
+    'C-H3-RECEIVER-OUTPUT-RELAY-N': 'P-H3-RECEIVER-OUTPUT-RELAY-1',
+    'C-H3-RELAY-CONTINUATION-N': 'P-H3-RELAY-CONTINUATION-1',
+}
+V116_CHECKS = (
+    ('V116-PRIOR-BYTES', 'the pinned reverse fold reconstructs exact v115 inputs before all 256 historical guards'),
+    ('V116-CLAIM-LEDGERS', 'two finite L1 H3 computations enter at C with all 632 prior claim rows unchanged'),
+    ('V116-EVIDENCE', 'the two declarations bind distinct sealed public probes and their two-architecture evidence'),
+    ('V116-BOUNDARY', 'the v115 Frontier, dependency and gate bytes and all 43 reproduction directories are preserved'),
+    ('V116-H3-RELAY', 'the original interval has individual third-cell deliveries, two fixed refusals and zero compatible pairs'),
+    ('V116-H3-CONTINUATION', 'the later interval preserves the fixed positive B2, zero reference readiness and zero pairs with a new B1'),
+)
+
+
+@lru_cache(maxsize=1)
+def v116_current_inputs():
+    """Validate the v116 snapshot and reconstruct the exact v115 snapshot."""
+    if V116_INPUT_PATCH.keys() != V115_INPUT_PATCH.keys():
+        return None
+    current, previous = {}, {}
+    try:
+        for relative, contract in V116_INPUT_PATCH.items():
+            path = ROOT / relative
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            if (len(content) != contract['current_bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
+                return None
+            prior = v111_restore_bytes(content, contract)
+            if prior is None:
+                return None
+            current[relative], previous[relative] = content, prior
+    except (OSError, ValueError):
+        return None
+    return current, previous
+
+
+def v116_probe_records(claim, sections):
+    directory = ROOT / 'probes' / V116_PROBES[claim]
+    raw = (directory / 'EXPECTED.txt').read_bytes()
+    rows = [json.loads(line) for line in raw.decode('utf-8').splitlines()]
+    run = (directory / 'RUN.md').read_text(encoding='utf-8')
+    if (tuple(row['section'] for row in rows) != sections
+            or f'stdout_sha256: {hashlib.sha256(raw).hexdigest()}' not in run):
+        raise ValueError('source execution record does not match frozen stdout')
+    return {row['section']: row['value'] for row in rows}, run
+
+
+def v116_h3_relay(claim, text):
+    records, run = v116_probe_records(claim, ('input', 'scan', 'fixed', 'alternative', 'confirmation'))
+    fixed = records['fixed']
+    return (
+        records['input']['rank'] == 43
+        and records['scan'] == {
+            'limit': 67108864, 'ticks': 67108864, 'recurrent_B2_site1': 153059,
+            'reads_B1': 554, 'reads_B2': 159, 'relays_B1': 102, 'relays_B2': 13,
+            'pending_B1': 0, 'pending_B2': 0,
+        }
+        and not records['alternative']
+        and [(arm['event']['read'], arm['event']['reader_tag'], arm['relay']['stop_tick'],
+              arm['relay']['stop_stage'], arm['relay']['stop_site'], arm['relay']['attempts'],
+              arm['relay']['refused_rails'], arm['relay']['moved_rails']) for arm in fixed]
+        == [(7390475, 1, 7390476, 'B', 2, 1, 2, 0), (9915383, 2, 9915384, 'B', 2, 1, 2, 0)]
+        and all(arm['first3_admitted'] == arm['first3_moved'] == [False, False]
+                for arm in records['confirmation']['arms'].values())
+        and records['confirmation']['events'] == 2 and records['confirmation']['full_replayed'] == 0
+        and 'two events and two full replays' in run
+        and 'sizes 44 and 48 and intersection size 3' in run
+        and 'sizes 17 and 9 and intersection size 0' in run
+        and all(token in text for token in (
+            '67108864', '7390475', '9915383', '7390476', '9915384', '554', '159', '102', '13',
+        ))
+        and all(phrase in text for phrase in (
+            'there are 44 b1 keys and 48 b2 keys with three shared keys.',
+            'there are 17 b1 keys and nine b2 keys and their intersection is empty.',
+            'overwrites the held output later in each of those ticks.',
+            'at 36442233 b2 the read matches the local input arrival and output of 9915383 b2.',
+        ))
+    )
+
+
+def v116_h3_continuation(claim, text):
+    records, _ = v116_probe_records(claim, (
+        'launch', 'prefix', 'continuation', 'fixed_B2', 'readiness', 'compatible_pairs', 'endpoint',
+        'retrospective_confirmation',
+    ))
+    fixed, prefix, later = records['fixed_B2'], records['prefix'], records['continuation']
+    return (
+        records['launch']['rank'] == 43
+        and [prefix['end_tick'], later['end_tick']] == [67108864, 1073741824]
+        and [prefix['recurrent_source_writes'], later['recurrent_source_writes']] == [153059, 3657170]
+        and prefix['B1']['reads'] == 554 and prefix['B2']['reads'] == 159
+        and prefix['B1']['delivered'] == 102 and prefix['B2']['delivered'] == 13
+        and later['B1'] == {'reads': 6940, 'delivered': 702, 'returned_to_1': 885,
+                            'overwritten_at_2': 5353, 'pending': 0}
+        and later['B2'] == {'reads': 2852, 'delivered': 188, 'returned_to_1': 32,
+                            'overwritten_at_2': 2632, 'pending': 0}
+        and [fixed[key] for key in ('prior', 'write', 'read', 'delivery', 'moved_rails', 'third_branch')]
+        == [8176761, 36442231, 36442233, 36442234, 2, 0]
+        and fixed['readiness'] == [[2, 2, 2, 2], [-2, -2, -2, -2], [4, 2, 4, 2],
+                                   [3, 2, 0, 4], [4, 2, 4, 2], [6, 2, 2, 4]]
+        and fixed['third_pre'] == [[-1, 0, -1, 0], [1, 0, 1, 0]]
+        and fixed['third_contact'] == [[0, 1, 0, 2], [0, -1, 0, -2]]
+        and records['readiness'] == {'contacts': 503316480, 'pre_four': 0, 'full_six': 0}
+        and records['compatible_pairs'] == {'fixed': 0, 'historical': 0, 'full': 0}
+        and records['endpoint'] == {
+            'next_bit': 1, 'account': [[-9, 2, -2, -3], [19, 7, 5, 19], [463, 0, 152, 152], 774],
+            'field_sha256': 'b05fee6196a0be63a6ab150a2db111114633a66a8c74dc76c8945964c1c7acfa',
+        }
+        and records['retrospective_confirmation'] is True
+        and all(phrase in text for phrase in (
+            '67108864 < t <= 1073741824', '6940', '2852', '702', '188', '503316480',
+            'the comparison excludes old b1 reads paired with new b2 reads.', 'q9 remains open.',
+        ))
+    )
+
+
+def v116_current_checks():
+    failed = [(tag, description, False) for tag, description in V116_CHECKS]
+    inputs = v116_current_inputs()
+    if inputs is None:
+        return failed
+    current, prior = inputs
+    ids = V116_PROBES.keys()
+
+    def split_rows(name, key):
+        relative = 'canon/' + name
+        rows = v87_table_bytes(current[relative])
+        additions = [row for row in rows if row[key] in ids]
+        unchanged = [row for row in rows if row[key] not in ids]
+        by_id = v112_rows_by_id(additions, key)
+        return rows, by_id, (len(additions) == len(ids) and by_id.keys() == ids
+                              and unchanged == v87_table_bytes(prior[relative]))
+
+    try:
+        registry, claims, unchanged_registry = split_rows('REGISTRY.tsv', 'claim_id')
+        _, normative, unchanged_normative = split_rows('NORMATIVE.tsv', 'item_id')
+        _, evidence, unchanged_evidence = split_rows('EVIDENCE.tsv', 'claim_id')
+        _, history, unchanged_history = split_rows('HISTORY.tsv', 'claim_id')
+        partition = {status: sum(row['status'] == status for row in registry) for status in 'TDCHOF'}
+        members = unchanged_registry and unchanged_normative and len(registry) == 634 and partition == {
+            'T': 479, 'D': 62, 'C': 49, 'H': 2, 'O': 23, 'F': 19,
+        }
+        provenance = unchanged_evidence and unchanged_history
+        canon = current['canon/CANON.md'].decode('utf-8')
+        statements = {}
+        for claim, probe in V116_PROBES.items():
+            row, definition = claims[claim], normative[claim]
+            heading = f'### {claim} [C]\n'
+            heading_at = canon.index(heading)
+            section_at = canon.rfind('\n## ', 0, heading_at)
+            section = canon[section_at + 4:].splitlines()[0]
+            statement = canon[heading_at + len(heading):].partition('\n### ')[0].partition('\n## ')[0]
+            statements[claim] = ' '.join((statement + ' ' + row['scope']).lower().split()).replace(',', '')
+            members = (
+                members and row['status'] == 'C' and canon.count(heading) == 1
+                and row['canon_section'] == section == '2. Time, space, and the decoder'
+                and (definition['item_type'], definition['claim_id'], definition['status'],
+                     definition['layer'], definition['gate_ids'], definition['statement_source'])
+                == ('COMPUTATION', claim, 'C', 'L1', '', f'canon/CANON.md::{claim}')
+            )
+            location = 'probes/' + probe
+            evidence_id = 'EV-' + claim
+            bundle = v114_probe_digest(probe)
+            ev, event = evidence[claim], history[claim]
+            provenance = (
+                provenance and bundle is not None and row['evidence'] == location
+                and (ev['evidence_id'], ev['evidence_kind'], ev['location'], ev['sha256'],
+                     ev['hash_mode'], ev['architecture_requirement'])
+                == (evidence_id, 'PUBLIC_PROBE', location, bundle,
+                    'bundle-manifest-sha256-v1', 'two-architecture')
+                and (event['event_id'], event['event_sequence'], event['event_date'], event['release'],
+                     event['event_type'], event['previous_status'], event['new_status'],
+                     event['scope_sha256'], event['evidence_id'], event['evidence_location'],
+                     event['evidence_sha256'])
+                == ('CANON116-DECLARE-' + claim, '1', '2026-11-21', 'canon-v116', 'DECLARE', '-', 'C',
+                    v112_scope_hash(row), evidence_id, location, bundle)
+            )
+        boundary = (
+            all(current['canon/' + name] == prior['canon/' + name] for name in (
+                'FRONTIER.md', 'FRONTIER_PROGRAMS.tsv', 'DEPENDENCIES.tsv', 'GATES.tsv',
+            ))
+            and b'live_H_O\t25\n' in current['canon/STATUS_COUNTS.tsv']
+            and not any(path.is_symlink() for path in REPRODUCE.iterdir())
+            and frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+            == frozenset(V111_REPRODUCTIONS) | V112_ADDED_REPRODUCTIONS
+        )
+        relay, continuation = V116_PROBES
+        relay_ok = provenance and v116_h3_relay(relay, statements[relay])
+        continuation_ok = provenance and v116_h3_continuation(continuation, statements[continuation])
+    except (OSError, KeyError, ValueError, IndexError, TypeError):
+        return failed
+    return [
+        (tag, description, ok) for (tag, description), ok in
+        zip(V116_CHECKS, (True, members, provenance, boundary, relay_ok, continuation_ok))
+    ]
+
+
 # Byte-pinned inputs for v115 and their minimal inverse edits.
 V115_INPUT_PATCH = {'canon/CANON.md': {'current_bytes': 1565061,
                     'current_sha256': '38afba3f5c815aa1c623f8cec9992f0e5f89659e493e85dc61054e8fdfa253cf',
@@ -3629,15 +3949,13 @@ V115_CHECKS = (
 @lru_cache(maxsize=1)
 def v115_current_inputs():
     """Validate the entire v115 input and the exact inverse into v114."""
-    if V115_INPUT_PATCH.keys() != V114_INPUT_PATCH.keys():
+    latest = v116_current_inputs()
+    if latest is None or V115_INPUT_PATCH.keys() != V114_INPUT_PATCH.keys():
         return None
     current, previous = {}, {}
     try:
         for relative, contract in V115_INPUT_PATCH.items():
-            path = ROOT / relative
-            if not path.is_file() or path.is_symlink():
-                return None
-            content = path.read_bytes()
+            content = latest[1][relative]
             if (len(content) != contract['current_bytes']
                     or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
                 return None
@@ -31203,9 +31521,10 @@ def run():
     checks.extend(v113_current_checks())
     checks.extend(v114_current_checks())
     checks.extend(v115_current_checks())
+    checks.extend(v116_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v114, v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v115")
+    print("historical guards: exact reconstructed v115, v114, v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v116")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

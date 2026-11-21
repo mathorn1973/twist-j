@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v115
+# TWIST-J Public Canon v116
 
-**Release identity.** Public Canon v115. Normative authority and activation
+**Release identity.** Public Canon v116. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -17501,6 +17501,75 @@ from launch confirms both named earlier episodes, both emissions,
 both holding intervals and both reads. Both reads lie beyond the
 preceding rank-43 horizon of 1048576 ticks. This is a finite existence
 result on one trajectory. Q9 remains open.
+
+### C-H3-RECEIVER-OUTPUT-RELAY-N [C]
+
+Use the original rank-43 launch and the recurrent B2 source condition
+above. Scan native ticks 1 through 67108864. Site 1 supplies a held
+ordered word to cell 2 on the bit-1 contact. Each eligible read changes
+both material rails of cell 2 during contact C and changes its material again at
+B1 or B2. Follow that ordered B output through every subsequent C and B
+until its first material change. A delivery is a C contact with cell 3
+that changes the material there while the word is still held at cell 2.
+The local branch at cell 3 places no condition on delivery.
+
+There are 153059 recurrent source writes and 554 B1 and 159 B2 eligible
+reads. The respective delivery counts are 102 and 13. The other 452
+B1 holds and 146 B2 holds end on a C contact with cell 1 or by a local B
+overwrite at cell 2. No hold remains at the ceiling.
+
+The six-word readiness key at cell 2 comprises its four pre-C rails and
+its two incoming post-C radiation rails in order. Across all eligible
+reads, there are 44 B1 keys and 48 B2 keys, with three shared keys. Among
+successful deliveries there are 17 B1 keys and nine B2 keys, and their
+intersection is empty. Therefore no pair has equal readiness, opposite
+B branches, distinct source words, distinct arrivals and distinct
+outputs, and two deliveries to cell 3.
+
+The two fixed read outputs at 7390475 B1 and 9915383 B2 each face refusal
+on both material rails at the following contact with cell 3, at ticks
+7390476 and 9915384 respectively. Cell 2 overwrites the held output
+later in each of those ticks. At 36442233 B2 the
+read matches the local input, arrival and output of 9915383 B2. This
+later word delivers on 36442234 C, changing both rails of cell 3 from
+the ordered pair with first rail (-1,0,-1,0) and its negative to the
+pair with first rail (0,1,0,2) and its negative. Cell 3 then takes B0.
+The two B1 reads at that readiness, 7390475 and 7390687, both meet
+refusal and local overwrite. This is a finite census of the stated
+path and window.
+
+### C-H3-RELAY-CONTINUATION-N [C]
+
+Continue the same native rank-43 trajectory including its original
+prefix and source history. Classify new reads by the originating tick
+t in 67108864 < t <= 1073741824. There are 3657170 additional recurrent
+source writes. The table separates the terminal outcomes of the held
+site-2 words.
+
+| Branch | Eligible reads | Delivery to cell 3 | Ended on C contact with cell 1 | Local overwrite at B | Held at ceiling |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| B1 | 6940 | 702 | 885 | 5353 | 0 |
+| B2 | 2852 | 188 | 32 | 2632 | 0 |
+
+At site 1 the B2 emission at 36442231 repeats the source episode at
+8176761. Site 2 reads its word at 36442233 B2. The output changes both
+material rails at site 3 at 36442234 C. Across all 503316480
+bit-1 contacts from 1 to 2 in the new interval, the four pre-C rails at
+cell 2 match the fixed reference zero times and the full six-word
+readiness matches zero times. These two counts precede every source,
+transfer or branch filter.
+
+Each successful new B1 delivery is compared with the fixed B2 reference
+alone, with the 13 successful B2 reads in the prefix, and with all 201
+through tick 1073741824. The last comparison allows either read to come
+first. Each pool gives zero compatible pairs under the preceding
+readiness, distinctness and delivery predicates. The comparison excludes
+old B1 reads paired with new B2 reads. The endpoint has the launch
+account and matching bit one. Its 512-coefficient field in complete
+site and rail order, with single spaces and a final LF, has SHA-256
+`b05fee6196a0be63a6ab150a2db111114633a66a8c74dc76c8945964c1c7acfa`.
+The result covers the executed rank, window, path and pairing rule.
+Q9 remains open.
 
 ## 3. The kernel and the census
 

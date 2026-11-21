@@ -1,11 +1,23 @@
 # Canon changelog (public series)
 
-## Public Canon v115
+## Public Canon v116
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 632 claims; 0 T-LOCK, 479 T, 62 D, 47 C, 2 H, 23 O, 19 F; 25 live H/O.
+Registry snapshot: 634 claims; 0 T-LOCK, 479 T, 62 D, 49 C, 2 H, 23 O, 19 F; 25 live H/O.
 Reproduction witnesses: 43.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Add two finite H3 computations at L1 on the unchanged rank-43 trajectory.
+The first census records individual transfers to cell 3 and disjoint
+site-2 readiness among deliveries from B1 and B2. The continuation
+extends the scan to tick 1073741824. New B1 reads give zero compatible
+pairs against the fixed, historical or full successful B2 pools. Q9
+remains open.
+
+## Public Canon v115
+
+Registry snapshot: 632 claims; 0 T-LOCK, 479 T, 62 D, 47 C, 2 H, 23 O, 19 F; 25 live H/O.
+Reproduction witnesses: 43.
 
 Add two finite H3 computations at L1. The first census records one
 matched two-transfer pair with a locally repeated B2 source and a
