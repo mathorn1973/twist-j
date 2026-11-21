@@ -1,11 +1,24 @@
 # Canon changelog (public series)
 
-## Public Canon v114
+## Public Canon v115
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 630 claims; 0 T-LOCK, 479 T, 62 D, 45 C, 2 H, 23 O, 19 F; 25 live H/O.
+Registry snapshot: 632 claims; 0 T-LOCK, 479 T, 62 D, 47 C, 2 H, 23 O, 19 F; 25 live H/O.
 Reproduction witnesses: 43.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Add two finite H3 computations at L1. The first census records one
+matched two-transfer pair with a locally repeated B2 source and a
+native B1 comparator. It also records that the original functional
+renewals at writer 28 give no downstream material transfers within the
+registered windows. The extended rank-43 search finds a matched
+two-transfer pair with two locally repeated B2 sources beyond the
+earlier horizon. Q9 remains open.
+
+## Public Canon v114
+
+Registry snapshot: 630 claims; 0 T-LOCK, 479 T, 62 D, 45 C, 2 H, 23 O, 19 F; 25 live H/O.
+Reproduction witnesses: 43.
 
 Add one finite-volume equilibrium theorem and two finite H3 computations.
 The variance bound applies to the all-sector measure on the stated labeled

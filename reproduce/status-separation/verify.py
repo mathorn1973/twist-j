@@ -3490,6 +3490,339 @@ V112_STANDALONE_SOURCES = frozenset(('notes/canon/METRO-ENC4-CLOSURE-2026-11-13.
 
 
 
+# Byte-pinned inputs for v115 and their minimal inverse edits.
+V115_INPUT_PATCH = {'canon/CANON.md': {'current_bytes': 1565061,
+                    'current_sha256': '38afba3f5c815aa1c623f8cec9992f0e5f89659e493e85dc61054e8fdfa253cf',
+                    'prior_bytes': 1560551,
+                    'prior_sha256': 'd920b1dfbda526f24336d97bfd9dfe33aa77923a4c33f0dca19c0dc38516d21e',
+                    'restore': [(0, 1, '# TWIST-J Public Canon v114\n'),
+                                (2,
+                                 3,
+                                 '**Release identity.** Public Canon v114. Normative authority and '
+                                 'activation\n'),
+                                (17426, 17504, '')]},
+ 'canon/CHANGELOG.md': {'current_bytes': 224304,
+                        'current_sha256': '360c2e9084d5fa7cb96263a7430e86fec659e9da879d0c1c79862ac37214b39f',
+                        'prior_bytes': 223727,
+                        'prior_sha256': '52f8d25ddd1f3e9599dd28387d456394c7865aabe38b9ae344952c41dc80972d',
+                        'restore': [(1, 16, ''),
+                                    (19, 19, '<!-- BEGIN GENERATED CURRENT COUNTS -->\n'),
+                                    (21, 21, '<!-- END GENERATED CURRENT COUNTS -->\n')]},
+ 'canon/CORE.md': {'current_bytes': 17207,
+                   'current_sha256': '8e97bfeac41bbcc50831736610f34463f85d0f9264eb83d06c73780fc2d13ef2',
+                   'prior_bytes': 17207,
+                   'prior_sha256': 'b9ba9855e98b360cddaa11a3cc4dff7c0d10c2a6e1d9562991da8c2e7e8cb3c8',
+                   'restore': [(2,
+                                3,
+                                '**Release identity:** Public Canon v114. Authority and activation are '
+                                'declared\n'),
+                               (12, 13, 'Public Canon v114 also declares a discrete architecture.\n')]},
+ 'canon/CORE_SELECTION.tsv': {'current_bytes': 349,
+                              'current_sha256': '2ffc8234faea17b2ca6f9e96648515b68bc083bafb95434f0e4723ad3e8c2361',
+                              'prior_bytes': 349,
+                              'prior_sha256': '2ffc8234faea17b2ca6f9e96648515b68bc083bafb95434f0e4723ad3e8c2361',
+                              'restore': []},
+ 'canon/DEPENDENCIES.tsv': {'current_bytes': 207257,
+                            'current_sha256': 'f1a692670236ad92e2e8cd80e9903ab19c8a7037da4c5ce6e3f3e230a3c3e957',
+                            'prior_bytes': 207257,
+                            'prior_sha256': 'f1a692670236ad92e2e8cd80e9903ab19c8a7037da4c5ce6e3f3e230a3c3e957',
+                            'restore': []},
+ 'canon/EVIDENCE.tsv': {'current_bytes': 126707,
+                        'current_sha256': 'f04ce625b7b81eed708a8534dbd4d05e007e6c848012d25d11080cc0c7ef287d',
+                        'prior_bytes': 126271,
+                        'prior_sha256': '51eb70dc5cde88cf2c46e8d9052db39373b68424d08921445dbf1a24d0582e4c',
+                        'restore': [(631, 633, '')]},
+ 'canon/FRONTIER.md': {'current_bytes': 25630,
+                       'current_sha256': '2720c8032a31a4a0c3a704b00ca462f6e5faad6696958c0e4e03e3b7b74658cd',
+                       'prior_bytes': 25630,
+                       'prior_sha256': '2720c8032a31a4a0c3a704b00ca462f6e5faad6696958c0e4e03e3b7b74658cd',
+                       'restore': []},
+ 'canon/FRONTIER_PROGRAMS.tsv': {'current_bytes': 1444,
+                                 'current_sha256': '53fa7ded98facb495ed676f0ec6b20cd488150afdbf8734f3f436fead0ee0de7',
+                                 'prior_bytes': 1444,
+                                 'prior_sha256': '53fa7ded98facb495ed676f0ec6b20cd488150afdbf8734f3f436fead0ee0de7',
+                                 'restore': []},
+ 'canon/GATES.tsv': {'current_bytes': 13927,
+                     'current_sha256': '207c999f2e70538949fbdf434a8be2fb6ccf0d6190ed8cc2f0e4d1fd623562f2',
+                     'prior_bytes': 13927,
+                     'prior_sha256': '207c999f2e70538949fbdf434a8be2fb6ccf0d6190ed8cc2f0e4d1fd623562f2',
+                     'restore': []},
+ 'canon/HISTORY.tsv': {'current_bytes': 543823,
+                       'current_sha256': '2a21c71fa52e30c0217511cc57b9fe04e21a57d8a598934045136c35c2ec6111',
+                       'prior_bytes': 542925,
+                       'prior_sha256': '1e0050ef6150340b3f564605c552310e366d97ab0dbba20065dd3a4f92c2d871',
+                       'restore': [(1182, 1184, '')]},
+ 'canon/LEDGER.md': {'current_bytes': 5531,
+                     'current_sha256': 'da299b1b2bb4b6d038c278b729ddeda385e8a7b02a114f6dcfa6f096d2cd737c',
+                     'prior_bytes': 5531,
+                     'prior_sha256': 'da299b1b2bb4b6d038c278b729ddeda385e8a7b02a114f6dcfa6f096d2cd737c',
+                     'restore': []},
+ 'canon/NORMATIVE.tsv': {'current_bytes': 81474,
+                         'current_sha256': 'd45b3a52ec5b2bfdf8b459f6fb980ef8971c94af155b162e6fed24373b105b30',
+                         'prior_bytes': 81232,
+                         'prior_sha256': 'db77566e7330a6517fb7865af93db7bfb80052b56bdf463fcf59f6d0b1497e08',
+                         'restore': [(696, 698, '')]},
+ 'canon/REGISTRY.tsv': {'current_bytes': 615808,
+                        'current_sha256': '86cd8571e35ae89e2eb6b4db1096b674c27d1c547eef826cf99a90d2db359d45',
+                        'prior_bytes': 612606,
+                        'prior_sha256': '2bf58e05aa53405ebf7e54bc58f4cfc98cf9eb01f7a771dc4514111a3302f6a5',
+                        'restore': [(631, 633, '')]},
+ 'canon/SHA256SUMS': {'current_bytes': 415,
+                      'current_sha256': 'ee6aa36e6cea449486711043eeeed792f850cd355caaecedc96a80d1a57c34ab',
+                      'prior_bytes': 415,
+                      'prior_sha256': '1fa3c585cdad25e4de168688c8c40719e0ab3fb757b62ce7825cd5e051c652ef',
+                      'restore': [(0,
+                                   2,
+                                   'd920b1dfbda526f24336d97bfd9dfe33aa77923a4c33f0dca19c0dc38516d21e  '
+                                   'canon/CANON.md\n'
+                                   'b9ba9855e98b360cddaa11a3cc4dff7c0d10c2a6e1d9562991da8c2e7e8cb3c8  '
+                                   'canon/CORE.md\n'),
+                                  (3,
+                                   5,
+                                   '2bf58e05aa53405ebf7e54bc58f4cfc98cf9eb01f7a771dc4514111a3302f6a5  '
+                                   'canon/REGISTRY.tsv\n'
+                                   '52f8d25ddd1f3e9599dd28387d456394c7865aabe38b9ae344952c41dc80972d  '
+                                   'canon/CHANGELOG.md\n')]},
+ 'canon/STATUS_COUNTS.tsv': {'current_bytes': 244,
+                             'current_sha256': 'cbf7049fb5bb81a7c6d63ecbdb3f272c9935a4d5a08065515262372db1ba47dd',
+                             'prior_bytes': 244,
+                             'prior_sha256': 'e76d374eba8b687c0ee50e0667c6ee2ca3686117259d2189c00c28d847a5ed34',
+                             'restore': [(1, 2, 'claims\t630\n'),
+                                         (5, 6, 'status_C\t45\n'),
+                                         (14, 15, 'evidence_two-architecture\t389\n')]},
+ 'tools/test_architecture_map_report.py': {'current_bytes': 54456,
+                                           'current_sha256': 'ad5a4228ab7e1f160e2501699119396c53d56d8c22ab7b647ac1ff25ab3ac507',
+                                           'prior_bytes': 54481,
+                                           'prior_sha256': '818d285a99bfbc065cf34a91321a628d4c3432efd3735bd6f19d5da29a9e7482',
+                                           'restore': [(377,
+                                                        379,
+                                                        '        # v114 adds one equilibrium theorem and two '
+                                                        'finite computations.\n'
+                                                        '        self.assertEqual(self.report.claims, '
+                                                        '630)\n'),
+                                                       (381,
+                                                        382,
+                                                        '            {"C": 45, "D": 62, "F": 19, "H": 2, '
+                                                        '"O": 23, "T": 479},\n'),
+                                                       (389,
+                                                        390,
+                                                        '                "two-architecture": 389,\n'),
+                                                       (399,
+                                                        400,
+                                                        '        '
+                                                        'self.assertEqual(len(self.report.dependency_terminals), '
+                                                        '88)\n')]}}
+V115_PROBES = {
+    'C-H3-RENEWED-WORD-CHOICE-N': 'P-H3-RENEWED-WORD-CHOICE-1',
+    'C-H3-DOUBLE-RENEWED-TRANSFER-N': 'P-H3-DOUBLE-RENEWED-TRANSFER-1',
+}
+V115_CHECKS = (
+    ('V115-PRIOR-BYTES', 'the pinned reverse fold reconstructs exact v114 inputs before all 250 historical guards'),
+    ('V115-CLAIM-LEDGERS', 'two finite L1 H3 computations enter at C with all 630 prior claim rows unchanged'),
+    ('V115-EVIDENCE', 'the two declarations bind distinct public probe bundles, two-architecture requirements and exact scope hashes'),
+    ('V115-BOUNDARY', 'the v114 Frontier, dependency and gate bytes and all 43 reproduction directories are preserved'),
+    ('V115-H3-RENEWED', 'the shorter census separates the writer 28 negative boundary, one recurrent two-transfer pair and the default and supplementary Python checks'),
+    ('V115-H3-DOUBLE', 'the extended witness binds two recurrent words held at writer 1, both material transfers at receiver 2, and the local and complete Python checks'),
+)
+
+
+@lru_cache(maxsize=1)
+def v115_current_inputs():
+    """Validate the entire v115 input and the exact inverse into v114."""
+    if V115_INPUT_PATCH.keys() != V114_INPUT_PATCH.keys():
+        return None
+    current, previous = {}, {}
+    try:
+        for relative, contract in V115_INPUT_PATCH.items():
+            path = ROOT / relative
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            if (len(content) != contract['current_bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
+                return None
+            prior = v111_restore_bytes(content, contract)
+            if prior is None:
+                return None
+            current[relative], previous[relative] = content, prior
+    except (OSError, ValueError):
+        return None
+    return current, previous
+
+
+def v115_probe_records(claim):
+    directory = ROOT / 'probes' / V115_PROBES[claim]
+    raw = (directory / 'EXPECTED.txt').read_bytes()
+    records = [json.loads(line) for line in raw.decode('utf-8').splitlines()]
+    run = (directory / 'RUN.md').read_text(encoding='utf-8')
+    if f'stdout_sha256: {hashlib.sha256(raw).hexdigest()}' not in run:
+        raise ValueError('execution record does not bind the frozen stdout')
+    return records, run
+
+
+def v115_unique_record(records, section):
+    value, = (row['value'] for row in records if row['section'] == section)
+    return value
+
+
+def v115_h3_renewed(claim, text):
+    records, run = v115_probe_records(claim)
+    totals = v115_unique_record(records, 'pair_totals')
+    zero = {'ANY': 0, 'MARKED_MOVED': 0, 'BOTH_MOVED': 0}
+    if totals != {
+        'A': zero, 'AA': zero, 'A181': zero,
+        'R': {'ANY': 60, 'MARKED_MOVED': 8, 'BOTH_MOVED': 1},
+        'RR': {'ANY': 4, 'MARKED_MOVED': 4, 'BOTH_MOVED': 0},
+    }:
+        return False
+    inputs = v115_unique_record(records, 'inputs')
+    counts = [dict(zip(inputs['rank_fields'], row['value']['census']))
+              for row in records if row['section'] == 'rank']
+    certificate, = (row['value']['events'] for row in records
+                    if row['section'] == 'certificate'
+                    and (row['value']['class'], row['value']['transfer']) == ('R', 'BOTH_MOVED'))
+    events = sorted(certificate, key=lambda event: event['read'])
+    first, second = events
+    return (
+        len(counts) == 85 and {row['rank'] for row in counts} == set(range(85))
+        and {row['rank']: row['anchors'] for row in counts if row['anchors']}
+        == {0: 842, 22: 826, 43: 12938}
+        and tuple(sum(row[key] for row in counts)
+                  for key in ('ticks', 'repeats', 'anchors', 'anchor_contacts', 'anchor_moved', 'anchor_active'))
+        == (1851392, 104259, 14606, 14613, 0, 0)
+        and v115_unique_record(records, '181_to_182') == {'0': [0, 0, 0], '22': [0, 0, 0], '43': [0, 0, 0]}
+        and [(e['rank'], e['writer'], e['reader'], e['write'], e['read'], e['writer_tag'],
+              e['reader_tag'], e['prior']) for e in events]
+        == [(43, 1, 0, 598058, 598060, 2, 1, 330940), (43, 1, 0, 720019, 720028, 1, 2, 0)]
+        and first['reader_pre'] == second['reader_pre']
+        and first['reader_c'][2:] == second['reader_c'][2:]
+        and all(e['reader_pre'][:2] != e['reader_c'][:2] and not e['anchor'] for e in events)
+        and v115_unique_record(records, 'independent') == {'events': 4, 'full_replayed': 0}
+        and 'through tick 735779' in run and 'All four events passed' in run
+        and all(phrase in text for phrase in (
+            'writer 28', 'zero material transfers during contact c', 'zero material-changing receiver operations',
+            'a supplementary independent replay checks the four reported certificate encounters from launch',
+        ))
+        and all(tick in text.replace(',', '') for tick in ('14613', '598060', '720028'))
+    )
+
+
+def v115_h3_double(claim, text):
+    records, run = v115_probe_records(claim)
+    events = v115_unique_record(records, 'witness')
+    confirmation = v115_unique_record(records, 'confirmation')
+    first, second = events
+    return (
+        v115_unique_record(records, 'coverage') == [
+            {'limit': 16777216, 'moved_active_reads': 3222, 'rank': 43,
+             'repeats': 784474, 'ticks': 9915383}]
+        and [(e['rank'], e['writer'], e['reader'], e['bit'], e['prior'], e['write'], e['read'],
+              e['writer_tag'], e['reader_tag']) for e in events]
+        == [(43, 1, 2, 1, 7316785, 7390473, 7390475, 2, 1),
+            (43, 1, 2, 1, 8176761, 9915381, 9915383, 2, 2)]
+        and first['reader_pre'] == second['reader_pre']
+        and first['reader_c'][2:] == second['reader_c'][2:]
+        and [e['writer_b'][0] for e in events] == [[0, 0, 0, 2], [0, -2, 0, -2]]
+        and all(first[key][:2] != second[key][:2] for key in ('writer_b', 'reader_c', 'reader_b'))
+        and all(not e['anchor'] and all(pre != post for pre, post
+                in zip(e['reader_pre'][:2], e['reader_c'][:2])) for e in events)
+        and (confirmation['events'], confirmation['full_replayed']) == (2, 0)
+        and [arm['material_rails_moved'] for arm in confirmation['arms']] == [[True, True], [True, True]]
+        and [(arm['f'], arm['h_d'], arm['h_f']) for arm in confirmation['arms']]
+        == [([-1, 0, 1, -1], [3, 0, -2, -2], [4, 0, 1, 1]),
+            ([-1, 0, 1, -1], [9, 0, 5, 5], [4, 0, 1, 1])]
+        and 'through tick 9,915,383' in run and 'two events and two full replays' in run
+        and all(phrase in text for phrase in (
+            'writer 1', 'both contacts change both material rails', 'q9 remains open',
+            'the default verifier independently checks both local certificates',
+            'a separate full five-coordinate replay from launch',
+        ))
+        and all(tick in text.replace(',', '') for tick in ('7390475', '9915383'))
+    )
+
+
+def v115_current_checks():
+    failed = [(tag, description, False) for tag, description in V115_CHECKS]
+    inputs = v115_current_inputs()
+    if inputs is None:
+        return failed
+    current, prior = inputs
+    ids = V115_PROBES.keys()
+
+    def split_rows(name, key):
+        relative = 'canon/' + name
+        rows = v87_table_bytes(current[relative])
+        additions = [row for row in rows if row[key] in ids]
+        unchanged = [row for row in rows if row[key] not in ids]
+        by_id = v112_rows_by_id(additions, key)
+        return rows, by_id, (
+            len(additions) == len(ids) and by_id.keys() == ids
+            and unchanged == v87_table_bytes(prior[relative])
+        )
+
+    try:
+        registry, claims, unchanged_registry = split_rows('REGISTRY.tsv', 'claim_id')
+        _, normative, unchanged_normative = split_rows('NORMATIVE.tsv', 'item_id')
+        _, evidence, unchanged_evidence = split_rows('EVIDENCE.tsv', 'claim_id')
+        _, history, unchanged_history = split_rows('HISTORY.tsv', 'claim_id')
+        partition = {status: sum(row['status'] == status for row in registry) for status in 'TDCHOF'}
+        members = unchanged_registry and unchanged_normative and len(registry) == 632 and partition == {
+            'T': 479, 'D': 62, 'C': 47, 'H': 2, 'O': 23, 'F': 19,
+        }
+        provenance = unchanged_evidence and unchanged_history
+        canon = current['canon/CANON.md'].decode('utf-8')
+        statements = {}
+        for claim, probe in V115_PROBES.items():
+            row, definition = claims[claim], normative[claim]
+            heading = f'### {claim} [C]\n'
+            heading_at = canon.index(heading)
+            section_at = canon.rfind('\n## ', 0, heading_at)
+            section = canon[section_at + 4:].splitlines()[0]
+            statement = canon[heading_at + len(heading):].partition('\n### ')[0].partition('\n## ')[0]
+            statements[claim] = ' '.join((statement + ' ' + row['scope']).lower().split())
+            members = (
+                members and row['status'] == 'C' and canon.count(heading) == 1
+                and row['canon_section'] == section == '2. Time, space, and the decoder'
+                and (definition['item_type'], definition['claim_id'], definition['status'],
+                     definition['layer'], definition['gate_ids'], definition['statement_source'])
+                == ('COMPUTATION', claim, 'C', 'L1', '', f'canon/CANON.md::{claim}')
+            )
+            location = 'probes/' + probe
+            evidence_id = 'EV-' + claim
+            bundle = v114_probe_digest(probe)
+            ev, event = evidence[claim], history[claim]
+            provenance = (
+                provenance and bundle is not None and row['evidence'] == location
+                and (ev['evidence_id'], ev['evidence_kind'], ev['location'], ev['sha256'],
+                     ev['hash_mode'], ev['architecture_requirement'])
+                == (evidence_id, 'PUBLIC_PROBE', location, bundle,
+                    'bundle-manifest-sha256-v1', 'two-architecture')
+                and (event['event_id'], event['event_sequence'], event['event_date'], event['release'],
+                     event['event_type'], event['previous_status'], event['new_status'],
+                     event['scope_sha256'], event['evidence_id'], event['evidence_location'],
+                     event['evidence_sha256'])
+                == ('CANON115-DECLARE-' + claim, '1', '2026-11-21', 'canon-v115', 'DECLARE', '-', 'C',
+                    v112_scope_hash(row), evidence_id, location, bundle)
+            )
+        boundary = (
+            all(current['canon/' + name] == prior['canon/' + name] for name in (
+                'FRONTIER.md', 'FRONTIER_PROGRAMS.tsv', 'DEPENDENCIES.tsv', 'GATES.tsv',
+            ))
+            and not any(path.is_symlink() for path in REPRODUCE.iterdir())
+            and frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+            == frozenset(V111_REPRODUCTIONS) | V112_ADDED_REPRODUCTIONS
+        )
+        renewed, double = V115_PROBES
+        renewed_ok = provenance and v115_h3_renewed(renewed, statements[renewed])
+        double_ok = provenance and v115_h3_double(double, statements[double])
+    except (OSError, KeyError, ValueError, IndexError, TypeError):
+        return failed
+    return [
+        (tag, description, ok) for (tag, description), ok in
+        zip(V115_CHECKS, (True, members, provenance, boundary, renewed_ok, double_ok))
+    ]
+
+
 # Byte-pinned inputs for the v114 release and their minimal inverse edits.
 V114_INPUT_PATCH = {'canon/CANON.md': {'current_bytes': 1560551,
                     'current_sha256': 'd920b1dfbda526f24336d97bfd9dfe33aa77923a4c33f0dca19c0dc38516d21e',
@@ -3641,15 +3974,13 @@ V114_CHECKS = (
 @lru_cache(maxsize=1)
 def v114_current_inputs():
     """Validate the complete current v114 input and its exact v113 inverse."""
-    if not V114_INPUT_PATCH:
+    latest = v115_current_inputs()
+    if latest is None:
         return None
     current, previous = {}, {}
     try:
         for relative, contract in V114_INPUT_PATCH.items():
-            path = ROOT / relative
-            if not path.is_file() or path.is_symlink():
-                return None
-            content = path.read_bytes()
+            content = latest[1][relative]
             if (len(content) != contract['current_bytes']
                     or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
                 return None
@@ -30871,9 +31202,10 @@ def run():
     checks.extend(v112_current_checks())
     checks.extend(v113_current_checks())
     checks.extend(v114_current_checks())
+    checks.extend(v115_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v114")
+    print("historical guards: exact reconstructed v114, v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v115")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v114
+# TWIST-J Public Canon v115
 
-**Release identity.** Public Canon v114. Normative authority and activation
+**Release identity.** Public Canon v115. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -17423,6 +17423,84 @@ with the full ledger preserved. This controlled swap belongs to the
 prepared two-tick circuits. All statements are finite and conditional
 on their specified preparations. A source for the preparation, an
 arbitrary-input apparatus, and a physical reading remain open.
+
+### C-H3-RENEWED-WORD-CHOICE-N [C]
+
+On the same 85 four-wire H3 launches, define a locally repeated native B2
+by an earlier material-changing B2 on the same trajectory, writer and
+matching bit. At both emissions C changes the material pairs of the writer
+and its upstream donor. The episodes agree on all four pre-C writer rails,
+the ordered pre-C donor material, the post-C writer radiation and the
+ordered post-B writer material. The earliest such predecessor gives the
+source reference. A downstream encounter retains this provenance only while
+the emitted pair remains at the writer through every intervening C and B
+cut, including the pre-C cut of the encounter.
+
+On the unchanged rank-43 trajectory, edge 1 to 0 with matching bit zero
+carries the following ordered antipodal pairs, specified by their first
+rails in the integral j basis.
+
+| Earlier repeat reference | Writer 1 emission | Emitted rail | Read | Receiver material after C | Receiver B | Receiver material after B |
+| --- | --- | --- | --- | --- | --- | --- |
+| 330940 | 598058 B2 | (2,0,0,0) | 598060 | (-1,-1,-2,-2) | B1 | (-1,1,-1,-1) |
+| | 720019 B1 | (0,2,0,2) | 720028 | (-3,0,-1,-2) | B2 | (-1,0,0,-2) |
+
+Both contacts change the receiver material. All four pre-C receiver rails
+and both incoming post-C radiation rails agree between the encounters.
+The B2 emission has the locally repeated source specified above. The B1
+emission is a native comparator on the same trajectory. The complete
+histories differ outside the matched local inputs.
+
+The census covers all 32 sites on the 85 launches for 8192 ticks each
+except ranks 0 and 22 at 65536 and rank 43 at 1048576, totaling 1851392
+ticks. There are 104259 locally repeated B2 emissions. There are 60
+matched opposite-branch pairs with at least one locally repeated source.
+Eight have a material transfer on a repeated-source arm, including the
+sole pair with transfers on both arms. Four pairs have two repeated
+sources and each of those has a transfer on exactly one arm.
+
+Separately, the original compensated functional-write test at writer 28
+qualifies 842, 826 and 12938 later writes on ranks 0, 22 and 43. The 14,613
+contacts with continuously held words from these writes have zero
+material transfers during contact C and zero material-changing receiver
+operations during B. At all three 181-to-182 encounters the contact
+refuses both material rails and the receiver executes B0. The actual fields evolve without word
+exchange. A supplementary independent replay checks the four reported
+certificate encounters from launch. These counts apply to the stated
+family and horizons.
+
+### C-H3-DOUBLE-RENEWED-TRANSFER-N [C]
+
+Extend the preceding two-repeated-source, two-transfer test on the
+original launches. The search stops on its first launch, rank 43,
+through tick 9915383 of its 16777216-tick ceiling. At writer 1, two
+locally repeated B2 emissions retain their distinct ordered antipodal
+pairs through every intervening C and B cut to receiver 2 at matching
+bit one. The table again gives the first rail of each ordered pair.
+
+| Earlier B2 | Repeated B2 | Emitted rail | Read | Receiver material after C | Receiver B | Receiver material after B |
+| --- | --- | --- | --- | --- | --- | --- |
+| 7316785 | 7390473 | (0,0,0,2) | 7390475 | (0,0,1,2) | B1 | (1,-1,0,1) |
+| 8176761 | 9915381 | (0,-2,0,-2) | 9915383 | (2,-1,1,1) | B2 | (1,0,1,2) |
+
+Both contacts change both material rails. All four pre-C receiver rails
+and both incoming post-C radiation rails agree. Put s=j^2+j^3 and
+Theta=h(J)=2+s. The common radiation half-difference f has h(f)=4+s.
+The two post-C material half-differences d_1 and d_2 have h(d_1)=3-2s
+and h(d_2)=9+5s. The identities Theta h(d_1)=h(f) and
+h(d_2)=Theta h(f) select B1 and B2, respectively. The fields need only
+agree in the stated receiver coordinates. Both encounters occur without
+intervention on the same trajectory.
+
+Through the stop there are 784474 locally repeated B2 emissions and 3222
+encounters in which the held output changes the receiver's material during
+contact C and the following B operation changes it again. The full inverse recovers the
+launch field and matching bit. The default verifier independently
+checks both local certificates. A separate full five-coordinate replay
+from launch confirms both named earlier episodes, both emissions,
+both holding intervals and both reads. Both reads lie beyond the
+preceding rank-43 horizon of 1048576 ticks. This is a finite existence
+result on one trajectory. Q9 remains open.
 
 ## 3. The kernel and the census
 
