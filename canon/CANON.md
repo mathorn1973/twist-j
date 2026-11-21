@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v113
+# TWIST-J Public Canon v114
 
-**Release identity.** Public Canon v113. Normative authority and activation
+**Release identity.** Public Canon v114. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -17377,6 +17377,53 @@ Even the losslessly encoded pair and every listed account view are insufficient 
 
 The minimal reproduction is `reproduce/h3-referenced-record`. Its fixed horizon establishes finite stationary retention and its explicit unlock boundary. It supplies no indefinite record or reference isolation, native implementation of the trace reader, source-preparation circuit, arbitrary-input renewal, interacting long-wave error bound, physical probability, SI calibration or action interpretation.
 
+### H3-SECOND-WORD-WRITE [C]
+
+Use the supplied family of 85 four-wire launches on the 8 by 4 H3 torus,
+with site index 4x+y and initial matching bit one. Each tick applies C,
+then B, then flips the bit. The full field carries M=(-9,2,-2,-3),
+U=(19,7,5,19), H=(463,0,152,152) and Q=774. On the three qualifying
+ranks 0, 22 and 43 the worker at site 28 reads the ordered antipodal
+material word W with first rail (1,0,1,1) at site 31 and executes B2 on
+tick 159. Its first later qualifying write is at 181. On rank 43 the
+uninterrupted restoration of W leading to that read starts at 179 C.
+The worker's incident clock is restored at 180 C. Its four pre-C rails,
+two incoming post-C radiation rails and four post-B rails at 181 agree
+with the first write. Exchanging the stored material pair at 31 with the
+reserve pair at (4,1) immediately before 181 C preserves the full accounts
+and changes the worker outcome to B0. This is a reversible comparison
+copy. The original field evolves without replacement or external reset.
+
+The 82 other ranks are audited to 8192 ticks, ranks 0 and 22 to 65536, and
+rank 43 to 1048576. On rank 43 the count after tick 159 is 12938
+qualifying writes, of which 10331 also have the original worker readiness.
+The observed delay of 22 ticks refers to the first two qualifying events.
+This finite census has no all-input or periodic-write rate implication.
+
+### H3-WORD-BRANCH-CHOICE [C]
+
+On one unchanged rank-43 launch from the same family, worker 28 emits an
+antipodal pair with first rail O=(0,1,0,1) at 134 B and a second pair
+with first rail JO=(1,1,0,2) at 669 B. Their encounters at receiver 31
+have identical four pre-C rails and identical post-C incoming CLK and
+CORR. The O contact refuses at 135 C and the receiver executes B1, giving
+first rail (-1,-1,-1,-1). The JO contact admits at 671 C and B2 gives
+(-1,0,0,0). Equality applies to the stated receiver coordinates. Each
+event occurs in its own full-field state. The 181 B write also emits O.
+It supplies neither of these encounters. Its intended immediate neighbor stays idle at 182.
+
+A separate two-tick comparison uses two specified layouts in columns 5
+and 7. Each adds a writer, reader, encoded input and compensating bank to
+each of the 85 bare clock launches. At the first B the writer emits a
+pair with first rail O or rho^3 O according to the supplied bit, where
+rho=j^2. At the second B the same receiver executes B1 or B2 respectively,
+with matched pre-C receiver and post-C radiation. Swapping only the
+writer's emitted material pair reverses the decision in both directions
+with the full ledger preserved. This controlled swap belongs to the
+prepared two-tick circuits. All statements are finite and conditional
+on their specified preparations. A source for the preparation, an
+arbitrary-input apparatus, and a physical reading remain open.
+
 ## 3. The kernel and the census
 
 F_5^6, 15625 checkpoint states; the Klein-100 typology; 313
@@ -24871,6 +24918,46 @@ character averages are algebraic definitions and adopt no L6 probability law.
 No action, source, Gibbs state, physical carrier or reading is adopted, and no
 infinite-volume tail, covariance screening, correlation decay, phase, cone,
 propagator, polarization, apparatus or SI claim follows.
+
+### D3-FLUX-VARIANCE-BOUND [T]
+
+Take the even-coordinate-sum sites of (Z/LZ)^3 for finite even L >= 2.
+At every site retain one oriented bond for each of (1,1,0), (1,-1,0),
+(1,0,1), (1,0,-1), (0,1,1), (0,1,-1). The bond label includes the
+lifted direction even when multiple bonds have the same endpoints at L=2.
+Write d_e for the x-component of that direction. Give each bond a current
+E_e in Z^4, the power-basis coordinates of Z[j]. Put G=5I_4-11^T with
+1 the column of four ones, and q(v)=v^T G v/2. At beta>0 give each
+divergence-free field weight exp(-beta sum_e E_e^T G E_e), summed over
+all winding sectors. Put M_x=(sum_e d_e E_e)/L. Conservation gives the
+same net flux through each x-slice, so this normalized winding is integral.
+
+Then Z_work,cont^var = beta <q(M_x)>/(8L) < 1/4. To prove the bound,
+twist the partition sum by exp(i phi^T M_x) and enforce each site constraint
+with a compact four-angle theta. Poisson summation in each bond gives
+dual integers m_e and a positive weight at phi=0 with action
+
+    S(phi) = sum_e ||theta_v-theta_u-2 pi m_e+d_e phi/L||^2_(G^-1)/(4 beta).
+
+Here ||x||^2_A means x^T A x. The finite graph, compact angle domains and
+positive definite Gaussian give summable bounds also for the first two
+twist derivatives near zero. Each site has four entering and four leaving
+positive-x bonds, so sum_e d_e(theta_v-theta_u)=0 and sum_e d_e^2=2L^3.
+Consequently S''(0)=L G^-1/beta and S'(0)=-pi G^-1 U/(beta L), where
+U=sum_e d_e m_e. The first moments vanish by sign symmetry. The negative
+log-partition Hessian is both <M_x M_x^T> in the primal ensemble and
+S''(0)-Cov(S'(0)) in the dual ensemble. Contracting with beta G/(16L)
+and taking the trace gives
+
+    Z_work,cont^var = 1/4 - pi^2 <U^T G^-1 U>_dual/(16 beta L^3).
+
+G^-1=(I_4+11^T)/5. Taking one positive-x bond with m_e=(1,0,0,0)
+and all other m zero gives U^T G^-1 U=2/5 and strictly positive
+integrated weight. The deficit is therefore strictly positive for every
+stated beta and L. This is a variance of the all-sector equilibrium
+measure. Fixed-sector free-energy differences, dynamical phase rates,
+infinite-volume photon phases and the physical coupling require their
+own derivations.
 
 ## 10. Relativity as counting
 
