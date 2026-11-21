@@ -1,0 +1,16 @@
+CONTACT-FUNDED-TWO-PASS-REPLAY v1
+scope: n=64h+3,h>=0; supplied initial chart; depths (1,4)
+loader: four fixed integral affine donors; no T,v,m call; PASS
+dense h=0..1023: 4096 complete two-pass cases; PASS
+large h near 2^32,2^64,2^128,2^256: 64 complete cases; PASS
+native word: 34 powered contacts, 85 primitives, 33 core slots; PASS
+two ready boundaries: actual occupied-source renewal; PASS
+literal archives: both new batches and two occupied old slots; PASS
+Galois covariance: all 34 corresponding macro boundaries; PASS
+conservation: sum, real-quadratic account, Q, labelled residues; PASS
+complete native inverses: 4160; PASS
+primitive calls: 707200 enabled: 270400 refused: 436800
+h=0: 3->5->1; initial bank 14368; final bank 14798; records 1650
+complete-output fingerprint SHA-256: b1b4c85bc263651167cfe5cceb82e516175df8cfbb58ce4a2219267001272e7e
+scope: fixed itinerary compiled into loading and schedule; no autonomous selector
+scope: no indefinite renewal, minimum-funding or Collatz-convergence claim
