@@ -1,0 +1,62 @@
+== S. machinery self-test on toy groups ==
+PASS  S1 three point reflections: (5,5,5) HYPERBOLIC, |G| = 50, chi = -10, orientable genus 6
+PASS  S2 S4 by adjacent transpositions: (3,2,3) SPHERICAL-PLATONIC, |G| = 24, chi = 2, orientable genus 0
+PASS  S3a a third involution completing (2,3,5) exists in A5
+PASS  S3b A5 hemi-icosahedron: SPHERICAL-PLATONIC with orders {2,3,5}, |G| = 60, chi = 1, non-orientable genus 1
+PASS  S4 square lattice mirrors mod 5: (4,2,4) FLAT, |G| = 200, chi = 0, orientable genus 1
+PASS  S5 three commuting mirrors: (2,2,2) SPHERICAL-REDUCIBLE, |G| = 8, chi = 2, orientable genus 0
+PASS  S6 repeated mirror is DEGENERATE
+PASS  S7 type function on the classical list
+PASS  S8 det and rank helpers
+== G. consistency gates against registered rows ==
+PASS  G1 every letter has exact order two on all 15625 states
+PASS  G2 every letter is affine on all 15625 states (KERNEL-WEDGE-AFFINITY)
+PASS  G3 det M_g = 1 for every letter; a, b linear; c, d, e strictly affine (KERNEL-WEDGE-AFFINITY)
+PASS  G4 the five letters are pairwise distinct maps
+PASS  G5 fired commutators equal the registered translations (FIRED-COMMUTATOR-NOGO): [d,e] = T(0,0,0,0,3,0), [b,d] = T(0,0,0,0,3,3), [b,e] = T(0,0,0,0,1,3)
+PASS  G6 the silent control [a,c] is not a translation (FIRED-COMMUTATOR-NOGO)
+PASS  G7 linear image of the letter group has order 200 with exactly 24 elements of order five (NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION)
+PASS  G8 linear image of the fired subgroup <b,d,e> has order 4 (NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION)
+PASS  T1 explicit translation words yield six independent directions, h=cb and [d,h] have the stated affine forms
+PASS  E1 nonzero linear covector ell=(1,-1,1,-1,0,0) changes sign under all five linear parts; affine c contributes offset 2
+== B. pair orders (Coxeter matrix of the letters) ==
+      m_ab = 2
+      m_ac = 10
+      m_ad = 10
+      m_ae = 10
+      m_bc = 5
+      m_bd = 10
+      m_be = 10
+      m_cd = 10
+      m_ce = 10
+      m_de = 5
+== B. triples ==
+      abc  (m_ab,m_ac,m_bc)=(2,10,5)  excess=-1/5  HYPERBOLIC  |lin|=100  t=0  |G|=100  chi=-10  orientable  genus=6
+      abd  (m_ab,m_ad,m_bd)=(2,10,10)  excess=-3/10  HYPERBOLIC  |lin|=8  t=2  |G|=200  chi=-30  orientable  genus=16
+      abe  (m_ab,m_ae,m_be)=(2,10,10)  excess=-3/10  HYPERBOLIC  |lin|=8  t=2  |G|=200  chi=-30  orientable  genus=16
+      acd  (m_ac,m_ad,m_cd)=(10,10,10)  excess=-7/10  HYPERBOLIC  |lin|=40  t=3  |G|=5000  chi=-1750  orientable  genus=876
+      ace  (m_ac,m_ae,m_ce)=(10,10,10)  excess=-7/10  HYPERBOLIC  |lin|=40  t=3  |G|=5000  chi=-1750  orientable  genus=876
+      ade  (m_ad,m_ae,m_de)=(10,10,5)  excess=-3/5  HYPERBOLIC  |lin|=4  t=2  |G|=100  chi=-30  orientable  genus=16
+      bcd  (m_bc,m_bd,m_cd)=(5,10,10)  excess=-3/5  HYPERBOLIC  |lin|=20  t=3  |G|=2500  chi=-750  orientable  genus=376
+      bce  (m_bc,m_be,m_ce)=(5,10,10)  excess=-3/5  HYPERBOLIC  |lin|=20  t=3  |G|=2500  chi=-750  orientable  genus=376
+      bde  (m_bd,m_be,m_de)=(10,10,5)  excess=-3/5  HYPERBOLIC  |lin|=4  t=2  |G|=100  chi=-30  orientable  genus=16
+      cde  (m_cd,m_ce,m_de)=(10,10,5)  excess=-3/5  HYPERBOLIC  |lin|=4  t=2  |G|=100  chi=-30  orientable  genus=16
+== B. the full letter group ==
+      |linear image| = 200   t = 6   |<a,b,c,d,e>| = 3125000 = 200 * 5^6
+== A. the corollary of the registered linear order ==
+PASS  A1 |<a,b,c,d,e>| = 200 * 5^t with 0 <= t <= 6, a {2,5}-number
+PASS  A2 no element of the linear image has order divisible by 3
+PASS  A3 every pair order m_gh has only the prime factors 2 and 5
+PASS  A4 no triple is SPHERICAL-PLATONIC and no triple carries a 3
+PASS  A5 fired pair orders lie in {5, 10}
+PASS  A6 no triple is DEGENERATE
+PASS  V1 ten pair orders, ten complete triple rows and full group (200,6,3125000) equal the disclosed frozen targets
+PASS  X1 independent permutation, orbit-stabilizer and doubled-action implementation agrees on all 21 records and full orbit/stabilizer
+== H-B1. is every letter triple hyperbolic? ==
+      SPHERICAL-PLATONIC    0  
+      SPHERICAL-REDUCIBLE   0  
+      FLAT                  0  
+      HYPERBOLIC           10  abc abd abe acd ace ade bcd bce bde cde
+      DEGENERATE            0  
+H-B1 HOLDS  all ten triples are HYPERBOLIC
+RESULT  27/27 PASS  PART-A NO-PLATONIC-TRIPLE  FROZEN-TARGETS MATCH  CROSSCHECK AGREES  H-B1 HOLDS
