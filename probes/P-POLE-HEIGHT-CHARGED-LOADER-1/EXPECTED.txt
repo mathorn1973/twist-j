@@ -1,0 +1,47 @@
+P-POLE-HEIGHT-CHARGED-LOADER-1
+CONTROLS PASS pair_powers=300 known_catalyst=1
+SEARCH width=2000 layers_per_direction=20 visited_per_direction=20000 cache=200000
+ROOTS forward=1 reverse=3125 sha256=4eb78bc9c6cd77df13c007f2a4473440cb5ef7a741814b26be96e14c692269a6
+LAYER F 1 parents=1 attempts=60 nonidentity=24 retained=24 visited=25 sha256=afab36ced1e6371e385d309f8341bcb871363fec1bfe3b93fb65b353438ab647
+LAYER R 1 parents=3125 attempts=187500 nonidentity=63008 retained=2000 visited=5125 sha256=9431ad1142137d6bbdef8372623a150f9c7cdf778bac78b6f71f83598fa18229
+LAYER F 2 parents=24 attempts=1344 nonidentity=360 retained=312 visited=337 sha256=dcfb2584a240f6e9a126738f3728ed9c6d688fd683bd8a21b61f199f9579528f
+LAYER R 2 parents=2000 attempts=112000 nonidentity=39816 retained=2000 visited=7125 sha256=5a89818feedcece21f67f51cbbd6139d3095bb83ae7e376dce353db691335277
+LAYER F 3 parents=312 attempts=17472 nonidentity=4880 retained=2000 visited=2337 sha256=1af31016f1fd1808a1e5744464b1c62516037c5b0e147640a8845f8396e5bb29
+LAYER R 3 parents=2000 attempts=112000 nonidentity=43956 retained=2000 visited=9125 sha256=6aad72e6b841f975293c12e036ab430c09363da1448db6baf30d0c2802e3e592
+LAYER F 4 parents=2000 attempts=112000 nonidentity=34384 retained=2000 visited=4337 sha256=f0173b8004c7a9767775d2d79b3ca2a59d2a2a631059c8f8fcdc4cc16a23bbb2
+LAYER R 4 parents=2000 attempts=112000 nonidentity=41976 retained=2000 visited=11125 sha256=8f2ce2a08efdf6c56ed4dcdeca3407c71f55121e86f712958e117f2d052f998e
+LAYER F 5 parents=2000 attempts=112000 nonidentity=38328 retained=2000 visited=6337 sha256=ef385a3c0f939c3f39b269936a46002ffa83ab58d8a77534d7f234f1efbf5ba3
+LAYER R 5 parents=2000 attempts=112000 nonidentity=48464 retained=2000 visited=13125 sha256=81f600763319b380392722537633cda76a9847d52eff65331d13053c088ff9d5
+LAYER F 6 parents=2000 attempts=112000 nonidentity=43908 retained=2000 visited=8337 sha256=9dac3eb9755ca715c69c5edc63c4b6c4bfcbbcf484abc527977500ac60f9a7b5
+LAYER R 6 parents=2000 attempts=112000 nonidentity=48912 retained=2000 visited=15125 sha256=0e662d9f66eb783a87e5e5f1c066860728b6c0036206617113e504ba4fb7aa9a
+LAYER F 7 parents=2000 attempts=112000 nonidentity=42672 retained=2000 visited=10337 sha256=f58de6c9cd67c10386366d9ddccd322eb71c28de3965873f72ee18f3446d0fdf
+LAYER R 7 parents=2000 attempts=112000 nonidentity=48356 retained=2000 visited=17125 sha256=aa41168e2bef9a71a9c4d60d11ad2768050714323d3dcc958cc670051f74d1dd
+LAYER F 8 parents=2000 attempts=112000 nonidentity=46204 retained=2000 visited=12337 sha256=01ef34af63c321cf7c6b587775033f89e772999c4f8ee4ddb16ce512ee782cc3
+LAYER R 8 parents=2000 attempts=112000 nonidentity=49820 retained=2000 visited=19125 sha256=1398d5b9e0b1ccd79930f7d2a8205dcb5f34a4bc689c6e0863560853af21c6f0
+LAYER F 9 parents=2000 attempts=112000 nonidentity=48696 retained=2000 visited=14337 sha256=abd86e91afcb100c11522df5020e2beb0edced64c115f2f74d9f590fcce239da
+LAYER R 9 parents=2000 attempts=112000 nonidentity=50908 retained=2000 visited=20000 sha256=792ac1ad1721e57c37b49c9cec1378f5a9481f19c5f21891fe82efa8c15575be
+LAYER F 10 parents=2000 attempts=112000 nonidentity=53008 retained=2000 visited=16337 sha256=3a2bd587e992c6e11162295c8908344300871bf8e442797ea82077b0880c5f63
+LAYER R 10 parents=2000 attempts=112000 nonidentity=50672 retained=2000 visited=20000 sha256=6342286283579d396a1c7fb1b50f07e8630e4689f4e0b0ad91bea345014eef03
+LAYER F 11 parents=2000 attempts=112000 nonidentity=56128 retained=2000 visited=18337 sha256=e6dfb935ea55604f6850cc72839c5d7601c43c7111b9e9da708634bc4a60eb27
+LAYER R 11 parents=2000 attempts=112000 nonidentity=51616 retained=2000 visited=20000 sha256=4d7619b217ff40d20459cbf5a269870a7b4f3f752b7783fc336c99d15869d1d4
+LAYER F 12 parents=2000 attempts=112000 nonidentity=62080 retained=2000 visited=20000 sha256=5498b9d48af6f433c70230379fbc7d6a448fe30bd40dc0eb921316b964d9e789
+LAYER R 12 parents=2000 attempts=112000 nonidentity=51452 retained=2000 visited=20000 sha256=e4f64e8188a349c427366571342d323aa754c27a02559e20d627fa86877cd2af
+LAYER F 13 parents=2000 attempts=112000 nonidentity=62572 retained=2000 visited=20000 sha256=ca338b53a84000bce182ac0f20d19974e96df527b42866e96245593874c70a8f
+LAYER R 13 parents=2000 attempts=112000 nonidentity=51276 retained=2000 visited=20000 sha256=ba8d18f54ca854314048e746aac32da2982868da808355be495fe813cf33a727
+LAYER F 14 parents=2000 attempts=112000 nonidentity=61812 retained=2000 visited=20000 sha256=ac2a27898595d33e8471411e174c4df24406859c2a3cedca74ccc5ab872be185
+LAYER R 14 parents=2000 attempts=112000 nonidentity=50804 retained=2000 visited=20000 sha256=f85c1d7efe04b430ddad0e8c2e2d021d873ac95752da545a51da82c1afac6042
+LAYER F 15 parents=2000 attempts=112000 nonidentity=63652 retained=2000 visited=20000 sha256=3736ed6f6621bb2e0352d2b670ca63ae96be8c3f024f64f99a72aca0a1fccfdb
+LAYER R 15 parents=2000 attempts=112000 nonidentity=50776 retained=2000 visited=20000 sha256=2d47e4f2401f8be54a9bae9af1b265ca58f0fd51b2757c18f6a3f83afb4a64ab
+LAYER F 16 parents=2000 attempts=112000 nonidentity=62360 retained=2000 visited=20000 sha256=c23c721cbb42ab985d4a238244a62efed0f69651bc0a7a901c57bf8dbb5458f7
+LAYER R 16 parents=2000 attempts=112000 nonidentity=51024 retained=2000 visited=20000 sha256=bff5be6bdc19004a3f2a1f9ff5f596249e0f591d45c9370fb70b0476d080a9de
+LAYER F 17 parents=2000 attempts=112000 nonidentity=60808 retained=2000 visited=20000 sha256=1ef82d10aa12e08c02338bcf2fe138af431448c94d52406d5388c000546fef5b
+LAYER R 17 parents=2000 attempts=112000 nonidentity=50016 retained=2000 visited=20000 sha256=3f965362ecd363d9ccb25410011c609567fc7715925e3a3f04d1d9e8a1e8b894
+LAYER F 18 parents=2000 attempts=112000 nonidentity=61236 retained=2000 visited=20000 sha256=0f501bb3f7560b66b4ad3fd877cc82ba2f8ba2a83162498fd5033964c90b38dd
+LAYER R 18 parents=2000 attempts=112000 nonidentity=49624 retained=2000 visited=20000 sha256=a39d23b889ee9eb4b31e87b7c78048ddb8bda7e41207caaa53e855a284c35a75
+LAYER F 19 parents=2000 attempts=112000 nonidentity=63260 retained=2000 visited=20000 sha256=1d60765e615218a9818d9f629ca02ba38ddde71422174df7e516302711592bcb
+LAYER R 19 parents=2000 attempts=112000 nonidentity=50416 retained=2000 visited=20000 sha256=24110a343fd50ee95a6583b452e2f1a3f70e24d6f3433584348e52ce3ede1074
+LAYER F 20 parents=2000 attempts=112000 nonidentity=63036 retained=2000 visited=20000 sha256=d8358625d906a1bc43e12857cd0f7571dcfed43f4615a5609938a17a1e5aca44
+LAYER R 20 parents=2000 attempts=112000 nonidentity=52152 retained=2000 visited=20000 sha256=f1ab987b9f207d9c84de93ef0ce8e503a01cb642bfc3d53292fceb08d714ec8b
+SEARCH_NOT_FOUND attempts=4238376 bounded_heuristic_only
+CACHE hits=5296787 misses=1258 size=1258
+RESULT PASS
