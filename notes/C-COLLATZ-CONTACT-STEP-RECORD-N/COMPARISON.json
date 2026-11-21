@@ -1,0 +1,74 @@
+{
+  "author_V_macros": 794,
+  "author_boundary_sha256": "ca60bf44b6234819e41435a7032661b5cecb428f602fbeda2df00e406dcef1dd",
+  "author_primitive_applications": 9506290,
+  "breaker_all_macros_including_two_D": 796,
+  "breaker_primitive_applications": 9506425,
+  "comparison_after_both_frozen_executions": true,
+  "extra_breaker_applications_for_three_D_rows_and_inverses": 135,
+  "normalized_breaker_boundary_sha256": "ca60bf44b6234819e41435a7032661b5cecb428f602fbeda2df00e406dcef1dd",
+  "same_arithmetic_trajectory_table": true,
+  "same_complete_boundary_states_after_shape_normalization": true,
+  "same_contact_count": true,
+  "same_distinct_pair_count": true,
+  "same_literal_edge_digest": true,
+  "status": "PASS",
+  "trajectory_table": [
+    [
+      1,
+      1,
+      2,
+      1,
+      2
+    ],
+    [
+      3,
+      5,
+      1,
+      1,
+      4
+    ],
+    [
+      5,
+      1,
+      4,
+      1,
+      2
+    ],
+    [
+      7,
+      11,
+      1,
+      17,
+      1
+    ],
+    [
+      9,
+      7,
+      2,
+      11,
+      1
+    ],
+    [
+      11,
+      17,
+      1,
+      13,
+      2
+    ],
+    [
+      13,
+      5,
+      3,
+      1,
+      4
+    ],
+    [
+      15,
+      23,
+      1,
+      35,
+      1
+    ]
+  ]
+}
