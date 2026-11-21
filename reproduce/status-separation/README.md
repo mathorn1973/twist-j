@@ -1272,3 +1272,27 @@ The reverse fold needs no Git history. The audit reads evidence bytes and
 does not run the scientific verifiers. The H3 additions have finite
 computation status. The D3 statement concerns the specified finite-volume
 equilibrium ensemble.
+
+## Public Canon v115 recurrent H3 transfers
+
+The v115 adapter reconstructs the exact v114 inputs before running the 250
+historical guards. Six new guards check the two finite L1 computations,
+their distinct public probe bundles and declaration records, the unchanged
+Frontier, dependency and gate ledgers, and the 43-directory reproduction
+inventory. The partition is T479/D62/C47/H2/O23/F19, totalling 632 claims.
+
+The shorter probe (#2047) gives one pair with both material transfers and
+one recurrent B2 source. Its finite census has zero such pairs with two
+recurrent sources. The 14,613 held contacts from the historical writer 28
+renewals give zero receiver material transfers and zero material-changing
+receiver operations. The extended probe (#2049) gives two recurrent B2
+sources on writer 1 of the same rank-43 trajectory. Both contacts move
+both receiver material rails with matched readiness and distinct B1/B2
+outcomes. It stops at the first pair on its first launch. Q9 stays open.
+
+The frozen default outputs report local Python checks of four events in
+#2047 and two in #2049, with zero full independent replays inside their
+respective default cutoffs. Separate supplementary records describe the
+complete five-coordinate forward replays from launch. The adapter audits
+those records and reads the frozen stdout. The architecture jobs replay the
+frozen default scientific verifiers separately.

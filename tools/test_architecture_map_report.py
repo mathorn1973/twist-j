@@ -375,11 +375,11 @@ class ArchitectureMapReportTests(unittest.TestCase):
 
     def test_current_counts_match_the_public_summary(self) -> None:
         # audit(ROOT) reads this checkout, not the historical v10 map note.
-        # v114 adds one equilibrium theorem and two finite computations.
-        self.assertEqual(self.report.claims, 630)
+        # v115 adds two finite H3 computations.
+        self.assertEqual(self.report.claims, 632)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 45, "D": 62, "F": 19, "H": 2, "O": 23, "T": 479},
+            {"C": 47, "D": 62, "F": 19, "H": 2, "O": 23, "T": 479},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -387,7 +387,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 201,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 389,
+                "two-architecture": 391,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -397,7 +397,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertEqual(
             len(self.report.transitive_architecture_dependents), 389
         )
-        self.assertEqual(len(self.report.dependency_terminals), 88)
+        self.assertEqual(len(self.report.dependency_terminals), 90)
         # v95 adds ten inline theorems (architecture_requirement=none).
         # Their declared premise edges add four terminals and no path to
         # DEF-ARCHITECTURE; this is a graph fact, not physical independence.
