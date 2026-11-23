@@ -1,0 +1,14 @@
+{
+  "exit_code": 0,
+  "timeout": false,
+  "program": "verify.py",
+  "code_sha256": "19a1a8fdbefab7a7fe68062ca974e2a4bfb07f926f385b053f07463177deb805",
+  "frozen_remote_commit": "72ff97914a1b56ad616d8e603d9776364ae90968",
+  "first_run": true,
+  "budget_seconds": 180,
+  "elapsed_seconds": 3.2239662270003464,
+  "architecture": "x86_64",
+  "python": "3.12.14",
+  "stdout.txt_sha256": "70fb78fdc3bbbb3a6c250e7d9a2fa7fe07e32328a65e4084facce7cbdb76f4ae",
+  "stderr.txt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

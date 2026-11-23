@@ -1,0 +1,19 @@
+A/B field=2 target=2 sources=(1, 1) families=16 target_spaces_per_family=5 source_pairs_per_family=4 l1=64 l2=64
+A/B field=3 target=2 sources=(1, 1) families=81 target_spaces_per_family=6 source_pairs_per_family=4 l1=324 l2=128
+A/B field=2 target=2 sources=(1, 2) families=64 target_spaces_per_family=5 source_pairs_per_family=10 l1=256 l2=128
+A/B field=3 target=2 sources=(1, 2) families=729 target_spaces_per_family=6 source_pairs_per_family=12 l1=2916 l2=128
+A/B field=2 target=3 sources=(1, 1) families=64 target_spaces_per_family=16 source_pairs_per_family=4 l1=256 l2=128
+A/B field=3 target=3 sources=(1, 1) families=729 target_spaces_per_family=28 source_pairs_per_family=4 l1=2916 l2=128
+A/B field=2 target=3 sources=(1, 2) families=512 target_spaces_per_family=16 source_pairs_per_family=10 l1=2048 l2=128
+A/B field=2 target=3 sources=(2, 2) families=4096 target_spaces_per_family=16 source_pairs_per_family=25 l1=16384 l2=128
+A pass families=6291 target_subspace_visits=100424 source_pair_visits=120468
+B pass certificates=26124 l1=25164 l2=960
+C pass characters=3 character_rank=3 synthesis_rank=2 kernel_dimension=1 certificate_rank=5 defect=1/6
+D field=2 blocks=(1, 1) families=16 target_spaces_per_family=5 block_subspace_visits=48 semistable=16 balanced_semistable=16
+D field=3 blocks=(1, 1) families=81 target_spaces_per_family=6 block_subspace_visits=288 semistable=81 balanced_semistable=81
+D field=2 blocks=(1, 2) families=64 target_spaces_per_family=16 block_subspace_visits=396 semistable=28 balanced_semistable=0
+D field=3 blocks=(1, 2) families=729 target_spaces_per_family=28 block_subspace_visits=5616 semistable=441 balanced_semistable=0
+D field=2 blocks=(2, 2) families=256 target_spaces_per_family=67 block_subspace_visits=2400 semistable=49 balanced_semistable=49
+D pass families=1146 target_subspace_visits=39154 block_subspace_visits=8748 semistable=615 balanced_semistable=146
+E pass grid_cases=7168 grid_equalities=12 additional_equality_cases=1 equality_variation=1/3 marginal_table_pairs=1 joint_variation=1/2
+PASS C-RH-SEMISTABLE-FRAME-N round 8 finite opposition audit
