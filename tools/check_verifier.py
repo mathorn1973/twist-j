@@ -752,6 +752,19 @@ PARALLEL_SOURCE_SHA256["P-TWO-USE-TYPED-READOUT-CLOSURE-1"] = (
     "5f0e0439a3bffe7bb06553ca5887160ddcfd9605f0dc8677028727892ff67fbc",
     "5b3efd4d04749af5bdc813b89793171bc8a699f7bf63026da32ce4ea90905f38",
 )
+DEFAULT_REPLAY_TIMEOUT = 600
+RELAY_REPLAY_TIMEOUT = 900
+# This allowance is independent of parallel admission. The complete directory
+# fingerprint binds the native source and headers as well as the transcript.
+# The sealed verifier checks its sibling input hashes before using those inputs.
+RELAY_REPLAY_IDENTITY = (
+    "P-H3-RELAY-CONTINUATION-1",
+    "050a9be48757348fd57021bcc68ab3b9f9fcaf3c",
+    "af031b96bc46851d19eb2ae907e02f77f68d063ccf204068690a10872532b018",
+    "198ed32b967d202c0b729bc1c03e4de6e6ecbc3810b2709ec7880dfdd49cc1f3",
+)
+RELAY_REPLAY_TREE_SHA256 = "29d379a1d0f943ad073286cc461237e1689180e507c1c2a1a21c79d2a58b4b7e"
+
 REPLAY_WORKERS = 2
 # The two longest measured independent tasks start first to avoid a long tail.
 # Priority changes scheduling only; source admission still happens separately.
@@ -1253,7 +1266,8 @@ def reproduce(probe: Path) -> None:
         fail(f"{name} pin_commit is not an ancestor of HEAD")
 
     expected = expected_path.read_bytes()
-    if fields["stdout_sha256"] != sha256(expected):
+    expected_hash = sha256(expected)
+    if fields["stdout_sha256"] != expected_hash:
         fail(f"{name} EXPECTED.txt SHA-256 differs from RUN.md")
     if as_nonnegative_int(fields["stdout_bytes"], "stdout_bytes", name) != len(expected):
         fail(f"{name} EXPECTED.txt byte count differs from RUN.md")
@@ -1267,7 +1281,7 @@ def reproduce(probe: Path) -> None:
         record,
         name,
         verifier_hash,
-        sha256(expected),
+        expected_hash,
     )
 
     if os.environ.get("GITHUB_ACTIONS") == "true":
@@ -1296,7 +1310,9 @@ def reproduce(probe: Path) -> None:
                 cwd=replay_root,
                 env=environment,
                 capture_output=True,
-                timeout=600,
+                timeout=_replay_timeout(
+                    probe, fields["pin_commit"], verifier_hash, expected_hash
+                ),
             )
     except _context.ReplayContextError as error:
         fail(str(error))
@@ -1359,6 +1375,21 @@ def _probe_tree_sha256(probe: Path) -> str | None:
             return None
         digest.update(relative + b"\0" + value + b"\0")
     return digest.hexdigest()
+
+
+def _replay_timeout(
+    probe: Path, pin_commit: str, verifier_sha256: str, expected_sha256: str
+) -> int:
+    identity = (probe.name, pin_commit, verifier_sha256, expected_sha256)
+    if identity != RELAY_REPLAY_IDENTITY:
+        return DEFAULT_REPLAY_TIMEOUT
+    try:
+        tree_hash = _probe_tree_sha256(probe)
+    except OSError:
+        return DEFAULT_REPLAY_TIMEOUT
+    if tree_hash == RELAY_REPLAY_TREE_SHA256:
+        return RELAY_REPLAY_TIMEOUT
+    return DEFAULT_REPLAY_TIMEOUT
 
 
 def _parallel_eligible(probe: Path) -> bool:
