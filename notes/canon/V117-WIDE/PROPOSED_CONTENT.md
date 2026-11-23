@@ -299,6 +299,43 @@ note in pull request #2068 and the release gates described in the
 > permutation; the selector and the permutation are verified on all
 > inputs and all states.
 
+> ### QUADRATIC-L5-NATIVE-WORD-COUNT [T]
+>
+> Use C=K+0_2 of DEF-RESIDUAL-CONTACT-ARCHITECTURE and the marked reading
+> and target of DEF-QUADRATIC-MEMORY-L5. Let N be the group generated on
+> the pair of cells by the kernel generators a,b,c,d,e applied to either
+> cell and by the couplings P and Q.
+>
+> 1. The piston blocks of a and b commute. In their joint eigenbasis N
+>    consists exactly of the affine maps whose linear part acts on each of
+>    the four piston planes by a matrix of determinant 1 or -1, with the
+>    four determinants of product 1, acts on the q-plane and the t-plane
+>    by the matrix of the second piston plane, and has an arbitrary linear
+>    part from the t-plane into the first and third piston planes. Every
+>    translation occurs. The linear parts on the piston pair form a group
+>    of order 8*120^4.
+> 2. Any selection, by an arbitrary rule, among m fixed elements of N that
+>    satisfies the readout equation on the complete common-ready layer for
+>    one initialized step has m >= 25, already on the ready inputs of one
+>    radical value: on 15680 explicit inputs one element of N agrees at
+>    most 640 times.
+> 3. m = 65 is attained by an explicit list.
+> 4. The controls W_a, W_b and the couplings Ucal_i act at every input as
+>    elements of N. So item 2 applies to every fixed word of the residual
+>    contact alphabet: its data projection selects among at least 25
+>    elements of N on every ready slice, and the word contains n_W controls
+>    and n_U couplings with 2^(n_W) * 5^(n_U) >= 25.
+>
+> These statements concern one initialized step and the Gram identity
+> only. They say nothing about fibres, register writes or continuation,
+> and they are stated for generators applied to one cell at a time.
+>
+> **Proof.** The merged note of pull request #2072: the generators in the
+> eigenbasis, the determinant patterns, the commutator construction of SL2
+> on each plane, the three translation words; the splitting of the Gram
+> identity over two halves; and the count on the inputs with a zero vector
+> in one half and an anisotropic target in the other.
+
 ## Addition to QUADRATIC-MEMORY-NATIVE-CONTACT
 
 Append to the paragraph that lists what the data projection of a
@@ -310,8 +347,9 @@ successful binary contact must satisfy:
 > a selection among five or fewer affine maps. In the class of K+0_2 six
 > linear alternatives meet the three conditions above and admit a
 > continuation from occupied memory, so the count of affine alternatives
-> gives no further obstruction there. None of these statements closes
-> this owner.
+> gives no further obstruction there. By QUADRATIC-L5-NATIVE-WORD-COUNT a
+> selection among words in the kernel generators and couplings needs at
+> least 25 of them. None of these statements closes this owner.
 
 The registry scope and falsifier of the owner are unchanged.
 
@@ -401,28 +439,58 @@ The registry scope and falsifier of the owner are unchanged.
     `bundle-manifest-sha256-v1`, `two-architecture`. The proofs of items
     1 to 4 stand in the Canon text; the reproduction carries the finite
     checks of items 2, 4, 5 and 6.
+- **QUADRATIC-L5-NATIVE-WORD-COUNT**, status `T`, same section, layer
+  `L1`, `THEOREM`.
+  - **Scope** At L1 for C=K+0_2 of DEF-RESIDUAL-CONTACT-ARCHITECTURE,
+    the marked reading and the fixed quadratic target, and the group
+    generated on the pair of cells by the kernel generators applied to
+    either cell and the two couplings: the group is the stated class of
+    affine maps, with linear parts of order 8*120^4 on the piston pair
+    and all translations; any selection among m fixed elements that
+    satisfies the readout equation on the complete common-ready layer
+    for one initialized step has m at least 25, already for one radical
+    value, and 65 are attained; the registered controls and couplings
+    act at every input as elements of the group, so the bound applies
+    to every fixed word of the residual contact alphabet; no statement
+    is made about the selection rule, fibres, register writes,
+    reversibility or continuation, nor for generators applied to both
+    cells at once only.
+  - **Falsifier** A word outside the stated class or a map of the
+    class that is not a word; a map of the class agreeing with more
+    than 640 of the 15680 stated inputs; 24 or fewer elements whose
+    agreement sets cover the ready inputs of one radical value; or an
+    input served by none of the 65 listed maps.
+  - **Evidence** `EV-QUADRATIC-L5-NATIVE-WORD-COUNT`, kind
+    `REPRODUCTION` at `reproduce/quadratic-native-word-count`, built
+    from the exact verifier of the source note,
+    `bundle-manifest-sha256-v1`, `two-architecture`. The proofs of
+    items 1, 2 and 4 stand in the Canon text; the reproduction carries
+    the finite steps and the cover of item 3.
 - **Dependencies** `QUADRATIC-L5-SOURCE-SYMMETRY` REQUIRES
   `DEF-QUADRATIC-MEMORY-L5` and `QUADRATIC-L5-INITIALIZED-CAPACITY`.
   `QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT` REQUIRES
   `DEF-QUADRATIC-MEMORY-L5`. `QUADRATIC-MEMORY-NATIVE-CONTACT` is
-  BOUNDED_BY both new theorems, with the basis used for its existing
-  three edges. All of these items are at L1, so no gate is needed. The
-  QDD theorem has no dependency edge.
-- **History** Four `DECLARE` events with previous status `-`, release
+  BOUNDED_BY the three new quadratic theorems, with the basis used for its
+  existing three edges. `QUADRATIC-L5-NATIVE-WORD-COUNT` REQUIRES
+  `DEF-QUADRATIC-MEMORY-L5`, `DEF-RESIDUAL-CONTACT-ARCHITECTURE`,
+  `KERNEL-WEDGE-AFFINITY` and `KERNEL-WEDGE-COUPLING`; the two kernel
+  theorems carry no concrete layer. All other items are at L1, so no gate
+  is needed. The QDD theorem has no dependency edge.
+- **History** Five `DECLARE` events with previous status `-`, release
   `canon-v117`, the finalized scope hashes and the actual fold date.
 
 ## Build from the integrated sources
 
-Apply the four sections and the owner paragraph, append the ledger rows
+Apply the five sections and the owner paragraph, append the ledger rows
 and add a v117 changelog entry. Regenerate the Canon views and normative
 checksums. Keep the core selection, frontier and gate rows, and add the
-one reproduction directory. The inventory becomes 638 claims with 482 T
-and 50 C and 44 reproductions; `evidence_none` becomes 203 and
-`evidence_two-architecture` 395. Update
+two reproduction directories. The inventory becomes 639 claims with 483 T
+and 50 C and 45 reproductions; `evidence_none` becomes 203 and
+`evidence_two-architecture` 396. Update
 the assertions in `tools/test_architecture_map_report.py` accordingly.
 
 Extend the status-separation reverse-delta chain to reconstruct the exact
-v116 inputs from the final v117 files, and audit the four new
+v116 inputs from the final v117 files, and audit the five new
 registrations against the frozen sources. Then run policy, units, Canon,
 ledger, gate-contract and static activation checks before freezing and
 running the release candidate. The release-form commit carries the new
