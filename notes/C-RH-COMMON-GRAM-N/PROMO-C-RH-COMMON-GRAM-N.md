@@ -4,57 +4,68 @@ NON-CANONICAL. Candidate-D. No Canon authority.
 
 Owner: A. M. Thorn, session ChatGPT-Astra-Sol-20261123-RH-COMMON-GRAM.
 Public claim: https://github.com/mathorn1973/twist-j/issues/2065
+Public PR: https://github.com/mathorn1973/twist-j/pull/2067
 Action layer: NOT_APPLICABLE.
 
-## Candidate result
+## Corrected contribution
 
-For the exact finite-dimensional assumptions of FrameLA1, centered source
-and target projections give
+This package refines Jose Brox's centered frame comparison. His earlier
+notes already establish centered projections, optimal normalization,
+full-interval comparison, zero loss in the ideal case, and the
+actual-source bridge. SOURCE_MAP.md pins those notes and dates.
+The original attribution omission is corrected by an appended erratum
+in REVIEW.md, with the historical review retained.
 
-    (1-e)(p-r)^2 <= e*r*(1-r),
+The exact centered source defect is a^2=S*tr(T^2)/(tr(T))^2-1.
+For the same matrices and retained target, the centered constraints are
+
+    |p-r| <= a*sqrt(r*(1-r)),
     (z-b)^2 <= eta*z*(1-z),  0 <= b <= p.
 
-After the unchanged target-row projection, these give a concave monotone
-bound Phi for the missing fraction. Under the unchanged hypotheses of the
-pinned TheoremFSharp, full-distribution integration gives
+The refinement explicitly inverts the target quadratic and applies
+Jensen to the capped composition Psi. Under the unchanged arithmetic
+hypotheses of the pinned TheoremFSharp,
 
-    s-mu(C) <= (H+U)*Phi(U/(H+U))-U,
+    s-mu(C) <= (H+U)*Psi(U/(H+U))-U,
 
-with H=U=0 handled directly. The comparison loss is zero when
-e=eta=delta=0. The note provides a second explicit elementary upper bound,
-all endpoint cases and comparison to the original allowance.
+with H=U=0 handled directly. Evaluated at identical a, eta and delta,
+this allowance is no larger than Brox (3.2), the previous raw-e
+formula, or H. Bounds using further one-sided operator information
+are not included in that ordering. The original formula in the
+unchanged PREREG.md remains a corollary.
 
-## Evidence
+Other scoped work is the negative-threshold audit in the actual
+Lean source, elementary bound (8), and the least-eigenvalue example.
+The note claims no wider priority for these classical ingredients.
 
-- Self-contained paper derivation in PROOF.md.
-- Pinned external source correspondence and verified blob IDs in SOURCE_MAP.md.
-- Scope, inputs, systematic risks and falsifiers in PREREG.md.
-- Three source-exposed mathematical/scope reviews in REVIEW.md.
-- Administrative SHA256SUMS for the package.
+## Evidence and correction
 
-No numerical result is used to establish the universal theorem. No
-computational gate, cross-architecture result or formal Lean verification
-is claimed. Candidate-D is the only proposed status in this handoff.
+- PROOF.md: self-contained paper proof, source fit, edge cases, chord
+  comparator and like-for-like comparison with Brox.
+- SOURCE_MAP.md: prior work, pinned Lean blobs and interpretation limits.
+- PREREG.md: unchanged original scope, inputs and falsifiers.
+- REVIEW.md: historical reviews, external objection, appended erratum
+  and source-exposed correction review.
+- SHA256SUMS: administrative hashes of the current package.
 
-## Negative result preserved
+No numerical result establishes the universal theorem. No new
+computational gate, cross-architecture scientific result or Lean
+verification is claimed. Repository CI verifies repository contracts;
+it is not a formal proof of this mathematical replacement.
 
-A uniform positive least-eigenvalue conclusion does not follow from the
-abstract frame hypotheses. Exact semidefinite and strictly positive
-families in PROOF.md demonstrate this. They do not identify an actual
-automorphic family and do not falsify the stronger corank estimate.
+## Negative result and limits
 
-## Limits and next review gates
+The abstract hypotheses do not imply a uniformly positive least
+eigenvalue. The symbolic semidefinite and positive-definite examples
+remain; neither is asserted to be an actual automorphic theta family.
 
-1. A Lean implementation would need new frame lemmas and a finite-step
-   distribution/Jensen argument, with the same external assumptions.
-2. Any global error-budget replacement must distinguish the new comparison
-   term from the unchanged arithmetic terms preceding it. No new global
-   exponent is claimed, and the original x/m and m balance still has
-   independent sources in the current bookkeeping.
-3. Application to TWIST-J augmentation or physical carriers requires its
-   own exact carrier map and scope. None is asserted here.
-4. Promotion, if requested, must use the normal public protocol and a
-   separately reviewed fold. This note changes no Canon claim or status.
+A Lean implementation must extract the all-real hfilt count identity
+and prove finite-step Jensen/integration. The arithmetic inputs and
+other error suppliers remain unchanged. In particular, Brox's bridge
+already shows why no entire normalized x/m, xm/k, m or k/n^2 term
+is removed by this substitution alone.
 
-This package is reviewable mathematical incubation, not an activation,
-a public computation-grade T claim or a replacement for the full RH proof.
+Any TWIST-J carrier, semistability construction, common algebra or
+rapidity identification needs its own scoped work. None is established
+or opened by this correction. Promotion requires a separately reviewed
+public fold. Candidate-D is retained.

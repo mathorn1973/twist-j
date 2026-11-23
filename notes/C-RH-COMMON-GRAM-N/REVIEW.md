@@ -59,3 +59,67 @@ and source fit. It does not contain a new Lean verification receipt,
 numerical experiment, finite exact audit, independent architecture run,
 or a replay of the full RH proof. Source hashes and Git checks are only
 administrative integrity checks. Candidate-D is retained conservatively.
+
+
+## Appended erratum and correction review, 23 November 2026
+
+The historical reviews above are retained verbatim. Their mathematical
+checks do not establish completeness of the prior-work search.
+
+The external review at
+https://github.com/mathorn1973/twist-j/pull/2067#issuecomment-7101645879
+examined published head f9a864ddc9b9ffd422d2197e3f74454fc6036d8f.
+It found no mathematical error, but identified substantive earlier
+work by Jose Brox that this package and its attribution review missed.
+The authoring session accepts that objection. In particular, the
+earlier Sol 2 verdict about attribution was incomplete.
+
+### Accepted corrections
+
+1. Brox's three notes are now cited with full commit identifiers and
+   recorded dates in SOURCE_MAP.md. Centered projections, invariant
+   normalization, full-interval integration, the ideal zero-loss case,
+   and the actual-source bridge are attributed to that earlier work.
+   The contribution is narrowed to the exact quadratic envelope and
+   finite Jensen composition, the pinned all-threshold audit, elementary
+   bound (8), and the minor spectral counterexample.
+2. The main statement now retains the exact centered defect a.
+   It distinguishes actual raw error from an upper bound and proves
+   the original raw-e formula as a corollary. Comparison to Brox (3.2)
+   uses identical a, eta and delta on both sides; it does not cover
+   stronger one-sided data. The frozen PREREG.md is unchanged.
+3. Section 9 proves the chord bound and the below-s comparator.
+4. Rubinstein's "frame-comparison penalty" is explicitly identified
+   as this package's interpretation, not a quotation from his draft.
+5. The Lean-port obligation now explicitly includes extraction of the
+   all-real hfilt identity as well as finite-step Jensen/integration.
+
+The reviewer's finite tests are reported in the external comment.
+Their programs are not in this branch and were not run by this
+authoring session. This correction adopts no new computation receipt,
+architecture result, or computational status from that report.
+
+### Source-exposed review of the correction
+
+Reviewed corrected PROOF.md Git blob:
+5a77b839cb28dbbac614e678bb77f06e8098761c.
+
+Astra mathematical review: APPROVE at candidate-D. Checked the exact
+a/e_act/e distinction, concavity, endpoint cases, the finite real-weight
+CDF extremizer, like-for-like comparison, the chord argument, bound (8),
+and its original-theorem corollary. Two requested wording corrections
+were included: U*z<=U*H handles U=0 without division, and the field-degree
+rank cancellation is distinguished from the squared-norm factor two
+already included in the source threshold.
+
+Sol attribution/scope review: APPROVE after the README wording fix.
+Read the three Brox notes and their recorded history, and checked the
+corrected PROOF, SOURCE_MAP, README and promotion handoff. Confirmed
+that commit dates are not represented as independently observed first
+public-visibility times, and that no ordering against Brox's extra-input
+one-sided bounds is claimed. The README now states the nonzero-width
+condition and its separate zero-width case.
+
+These are exposed paper/source reviews of the correction. They do not
+constitute blind computational confirmation or a Lean verification.
+Status remains NON-CANONICAL, candidate-D.
