@@ -375,19 +375,19 @@ class ArchitectureMapReportTests(unittest.TestCase):
 
     def test_current_counts_match_the_public_summary(self) -> None:
         # audit(ROOT) reads this checkout, not the historical v10 map note.
-        # v116 adds two finite H3 relay computations.
-        self.assertEqual(self.report.claims, 634)
+        # v117 adds four L1 theorems and one finite H3 computation.
+        self.assertEqual(self.report.claims, 639)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 49, "D": 62, "F": 19, "H": 2, "O": 23, "T": 479},
+            {"C": 50, "D": 62, "F": 19, "H": 2, "O": 23, "T": 483},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 201,
+                "none": 203,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 393,
+                "two-architecture": 396,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -395,9 +395,9 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 203)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 389
+            len(self.report.transitive_architecture_dependents), 392
         )
-        self.assertEqual(len(self.report.dependency_terminals), 92)
+        self.assertEqual(len(self.report.dependency_terminals), 94)
         # v95 adds ten inline theorems (architecture_requirement=none).
         # Their declared premise edges add four terminals and no path to
         # DEF-ARCHITECTURE; this is a graph fact, not physical independence.
