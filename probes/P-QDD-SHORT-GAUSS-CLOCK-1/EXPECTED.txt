@@ -1,0 +1,4 @@
+PASS primitive identities and complex orientation analyzer with U-adjoint control
+PASS 20 signed columns, 100 matrix units and direction-sensitive probabilities
+PASS 25 initialized clock/data columns and altered-link control
+PASS conditional sequential timing and clock coupling bounds
