@@ -1,0 +1,4 @@
+H3 two-scale clock witness: 72/72 exact native cases
+Negative-bias donor stock: 727870 + 1164476 = 1892346
+Negative bias q=-1: offsets +1/5 at B19 and B29
+Negative bias q=+1: offsets -1/5 at B19 and B29
