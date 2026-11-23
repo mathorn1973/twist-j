@@ -519,3 +519,74 @@ introduced by a chosen reduction, but gives no independent upper bound
 for the generic defect itself. The actual first strict drop, the required
 small defect, and prescribed fixed-rational-type global visibility all
 remain O.
+
+## Round 17 continuation
+
+Session ChatGPT-Astra-Sol-20261124-R17 continues the same claim and draft.
+The public main basis remained ed3b1878d95825ab9473c16416c8db76cc152079;
+the preceding draft head was 8a7be0ef983421ed615e82a8cfaeef0c3a4c92a1.
+Authority, normative hashes, tag/content ancestry, required base checks,
+remote branches and relevant active lanes were checked before the R17
+owner/scope update. All mathematical source deductions remain pinned to
+40e56bab026552e089d7afcfeff08d2defb9c005. A limited declaration comparison
+with upstream c82871e6002287776ae8a7c9a1a79926f15c3c8e is explicitly scoped
+in round17/SOURCE.md; no full-current-head or Lean verification is claimed.
+
+44. Candidate-D: the actual full period maps intertwine multiplication by
+    finite determinant characters, with the explicit word scalar. The
+    finite double-class quotient is exactly the determinant class group;
+    every word has equal source dimension in every such class.
+45. Candidate-D: these multipliers permute the existing finite generic
+    Hecke projectors. Joint level-label orbit lengths have the stated
+    divisor |(A/red(mu(E)))^k|. Their common image-preserving algebra is
+    noncommutative and has explicit matrix factors. Both source and
+    target carry the same abstract crossed-product representation.
+46. Candidate-D under the strong diagonal and family suppliers: each
+    nonzero word has relative kernel at most exp(-a f L) in every full
+    ambient component, for each fixed a>0 eventually. The sharper
+    eF estimate absorbs the actual norm-one class index. This is not
+    a proof of exact integer injectivity or nonvanishing of every
+    individual automorphic constituent.
+47. Candidate-D: the source's refined near/far proof controls the integral
+    of the absolute kernel discrepancy. Partitioning it by determinant
+    classes, then applying the one-prime admissible replacement tests,
+    gives exponential source-target mass balance without a label-count
+    factor. It controls the range of every projection in the generated
+    noncommutative algebra, including noncentral projections. Relative
+    balance is uniform even on the smallest positive source type.
+48. Candidate-D: in every actual component, concatenating at most
+    Gamma^(2-delta) full words has exponentially small relative kernel,
+    for each fixed 0<delta<2. A separate selection using the aggregate
+    column loss and the common row loss gives large mixed ordinary
+    minors of the actual arithmetic B_k. These are not large auxiliary
+    blow-up minors or evaluated residues at a prescribed coefficient
+    prime.
+49. Candidate-D: the unrestricted maximizing subspace belongs to the
+    commutant and is an arbitrary subspace of each multiplicity factor.
+    The exact prior block budget isolates its weighted intrinsic defect.
+    Tensoring the sharp round 9 model with Fourier/clock matrix factors
+    preserves its positive defect while meeting the abstract new
+    symmetry, balance and constant-diagonal conditions. No automorphic
+    realization of this negative model is asserted.
+
+Two Astra workers developed and opposed the proofs, a Sol worker checked
+the exact source identities and growth, and root reviewed and consolidated
+the result. The delivered R15 reviewer counts are not R17 computations.
+There was no new scientific execution or Lean build. All previous
+scientific files and frozen first-run outputs remain unchanged.
+
+## Current target after round 17
+
+The actual common algebra, its simple matrix factors, individual component
+kernels and scalar mass discrepancies have the explicit controls in
+round17/REPORT.md. What remains is the weighted reduced-image defect
+E_mult on the actual multiplicity spaces. The controlled projections are
+Q tensor I; invariant extremizers use I tensor P_W. Confusing these is
+precisely the invalid inference excluded by the internal opposition.
+
+A useful next result must control the actual period ranks on every such W,
+or evaluate a sufficiently strong certificate for those remaining maps.
+Mixed ordinary minors already obtained here do not exhaust that requirement.
+The sharper two-sided cut estimate transfers a completed bound, but does
+not repair the missing bound. The all-subspace improvement and prescribed
+global rational-type visibility remain O. This package does not claim RH.

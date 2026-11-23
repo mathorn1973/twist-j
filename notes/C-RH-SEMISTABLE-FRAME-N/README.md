@@ -1,9 +1,53 @@
-# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 16
+# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 17
 
 **NON-CANONICAL. No authority. No Canon status changes.**
 
 Claim: [issue 2070](https://github.com/mathorn1973/twist-j/issues/2070).
 Alias used in the earlier discussion: C-RH-BK-CONCENTRATION-N.
+
+## Round 17 outcome
+
+Candidate-D under the full realized-source hypotheses: finite determinant
+character multipliers preserve every individual Poincare image and permute
+the finite generic Hecke labels. Together they give an actual noncommuting
+common algebra. The whole finite ambient double-class set is the determinant
+class group. Every word has exactly uniform source dimension on these classes.
+The explicit intertwiner is checked on columns, the seed and the fold.
+
+Candidate-D under the stronger diagonal and standing-family suppliers:
+every nonzero word is nearly injective on every ambient component. For
+each fixed a>0 its relative kernel is eventually at most exp(-a f L).
+The same near-independence holds simultaneously in every component for
+every subset of at most Gamma^(2-delta) words, for fixed 0<delta<2.
+A separate cut-accounted argument supplies actual mixed coefficient-field
+minors without assuming the cuts preserve those components.
+
+Candidate-D under the refined universal counting suppliers: retaining the
+absolute-integral estimate inside the source proof controls all determinant
+classes without multiplying the error by their number. Applying it to
+one-prime generic projectors gives exponentially small concentration on
+the range of every orthogonal projection in the new common algebra.
+Source and target weights also agree with uniform exponential relative
+error on every positive simple type, including very small weights.
+
+O: this does not control arbitrary subspaces of the remaining multiplicity
+spaces. The exact maximum is reduced to these spaces; its projection is
+in the commutant, whereas the newly controlled projections are in the
+algebra. A Fourier/clock tensor of the round 9 sharp model meets the
+abstract new symmetries and constant projected densities while retaining
+the square-root defect. It is not an automorphic counterexample.
+
+- [Consolidated result, hypotheses and exact remaining budget](round17/REPORT.md)
+- [Actual determinant action, rank and projection theorems](round17/DEVELOPMENT.md)
+- [Pinned-source audit and bounded comparison with the newer head](round17/SOURCE.md)
+- [Internal opposition, absolute kernel estimate and limitations](round17/OPPOSITION.md)
+
+This round used two Astra workers, one Sol source reader and root review.
+All new conclusions are paper deductions with their stated premises. The
+external report supplied in this session concerns R15, not R16 or R17.
+No new scientific computation, Lean build or external independent audit
+was performed. Earlier round 8-16 scientific files and frozen evidence
+are unchanged. The actual all-subspace improvement remains open.
 
 ## Round 16 outcome
 
