@@ -440,3 +440,82 @@ pattern. Good-place Hecke symmetry, the round 14 graph and the older
 noncommutative-rank certificates remain valid alternatives. No actual
 improvement of the concentration estimate or closure of fixed-rational-type
 global visibility is claimed in this round.
+
+## Round 16 continuation
+
+Session ChatGPT-Astra-Sol-20261124-R16 continues the same candidate,
+issue 2070 and draft PR 2071. The public main basis remained
+ed3b1878d95825ab9473c16416c8db76cc152079 after STATUS-first startup.
+The declared v116 tag/content ancestry, five normative hashes, exact-main
+architecture checks, current remote heads, relevant open claims and PR
+discussion were checked. The R16 scope and owner were recorded on the
+claim before authoring. The external source remains pinned to
+40e56bab026552e089d7afcfeff08d2defb9c005.
+
+39. Candidate-D: for primitive images in a common coefficient-place
+    target lattice, modification along the largest residual maximizer
+    never increases the upper defect. Strict drop is equivalent to
+    inconsistency of one linear system on the smallest old maximizer.
+    A strict drop is at least 1/lcm(R,D), with the original source
+    dimension R including all kernels. The system represents the actual
+    extension class in Ext^1 for two star-quiver representations.
+40. Candidate-D: iteration attains the generic defect at every prescribed
+    coefficient prime after finitely many modifications. The limiting
+    plateau argument works over the completion, while every finite
+    step uses the original residue field. No residue-degree condition
+    or extension of local fields is required. A finite plateau does
+    not itself establish optimality. Two primitive lines force
+    arbitrarily large depth in dimension two.
+41. Candidate-D: for a size-n auxiliary square map, an exhibited
+    nonzero s-minor of valuation t reaches the threshold eta=1-s/n in
+    at most t modifications, including noninjective words. The proof
+    bounds the decrease of the minimum s-minor valuation by
+    n*(U-eta). It applies coefficientwise to symbolic auxiliary
+    matrices over the Gauss valuation ring. A single coefficient
+    witness gives U_j <= eta + t/(n*(j+1)). A high-rank witness is a
+    substantive assumption; its existence for the actual family is O.
+42. Candidate-D: source lattice changes of full rank preserve each
+    generic image and its saturation in a fixed target. Two integral
+    plane arrangements have equal Smith forms for every subset
+    concatenation, equal individual singular values and cyclic word
+    symmetry, but respective defects 1/6 and zero. The example does
+    not satisfy asserted additional automorphic or frame hypotheses.
+    The opposition also gives the sharp dimension-only envelope under
+    full joint span and an exact dual-normal criterion for hyperplanes.
+43. Candidate-D under the stated source premises: the adjacent
+    KerEnt.kform identities and descended endpoint composition give a
+    coefficient-sensitive route to the actual B_k entries in common
+    row coordinates. Minimum-valuation pivot minors give a primitive
+    frame and an explicit next-coefficient class. Norm-one factors
+    inside weighted sums must be retained before normalization.
+    The source diagonal estimate separately gives a conditional
+    individual rank lower bound, with no control of joint directions.
+
+The development Astra, source Sol and opposition Astra completed internal
+paper review. Root checked the lattice index argument, the primitive
+frame formula, the counterexample, the central source identities and the
+primary quiver exact sequence and semistable extension theorem. The
+opposition additionally checked arbitrary minors, symbolic coefficient
+valuations and the step indexing. This is same-session review, not a
+new external referee report. No scientific computation, new first-run
+evidence, two-architecture result or Lean verification is supplied.
+All earlier round 8-15 scientific files remain unchanged.
+
+## Current target after round 16
+
+In the actual coefficient-field period pairing, evaluate a joint
+first-order class on a residual maximizer or exhibit a sufficiently
+large auxiliary minor with a controlled nonzero coefficient. The source
+note specifies the common row lifts, endpoint composition and normalized
+minor ratios needed for that extraction. The missing step is a
+noncancellation statement for those actual shared coordinates. Scalar
+valuation inequalities and source lattice lengths do not establish it.
+
+A single nonzero obstruction certifies one improvement. Enough such
+improvements or an appropriate minor witness would yield the desired
+small upper bound; the existing sharp cut inequality then transfers it
+back to the full periods. The present attainment theorem removes excess
+introduced by a chosen reduction, but gives no independent upper bound
+for the generic defect itself. The actual first strict drop, the required
+small defect, and prescribed fixed-rational-type global visibility all
+remain O.

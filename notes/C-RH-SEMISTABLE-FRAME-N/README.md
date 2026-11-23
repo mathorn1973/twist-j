@@ -1,9 +1,56 @@
-# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 15
+# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 16
 
 **NON-CANONICAL. No authority. No Canon status changes.**
 
 Claim: [issue 2070](https://github.com/mathorn1973/twist-j/issues/2070).
 Alias used in the earlier discussion: C-RH-BK-CONCENTRATION-N.
+
+## Round 16 outcome
+
+Candidate-D: at any prescribed coefficient prime, changing one common
+target lattice along the largest residual maximizer never increases the
+saturated upper bound. Strict improvement is equivalent to inconsistency
+of one linear system on the smallest old maximizer. Its right hand sides
+are the next coefficients of the actual primitive word images. Equivalently,
+the particular extension class of two star-quiver representations is
+nonzero. A nonzero Ext space by itself does not certify that class.
+
+Candidate-D: repeating these modifications attains the generic defect
+after finitely many steps, retaining all word kernels and the original
+dimension normalization. This is a scoped elementary form of the
+Langton semistable-reduction method. A finite plateau alone is not a
+stopping certificate. The depth is unbounded even for two lines in a
+two-dimensional target.
+
+Candidate-D: a coefficient of valuation t in a nonzero symbolic s-minor
+of the auxiliary square matrix of size n gives the upper threshold
+eta = 1-s/n after at most t modifications. The corresponding estimate
+is U_j <= eta + t/(n*(j+1)). This is conditional on the exhibited
+coefficient; no favorable coefficient for the actual periods is supplied.
+
+Candidate-D under the pinned source hypotheses: the finite-index and
+fractional-ideal changes of a full source lattice leave its generic
+image and its saturation in a fixed target unchanged. Even all subset
+concatenation Smith forms, individual singular values and cyclic word
+symmetry together do not determine concentration: the paper counterexample
+has defects zero and 1/6. It is not an automorphic counterexample.
+
+The source does contain exact coefficient identities, including the
+adjacent theta-block identity and the full endpoint composition. The
+source note gives their conditional passage to common row coordinates,
+then an explicit minimum-valuation-minor formula for primitive frames
+and their next coefficients. The unknown residues in the weighted sums
+must be retained; their valuation bounds do not decide noncancellation.
+
+- [Lattice modification, exact obstruction and conditional depth](round16/PROOF.md)
+- [Actual coefficient identities and the primitive-coordinate formula](round16/SOURCE.md)
+- [Internal opposition, counterexamples and arbitrary-minor review](round16/REVIEW.md)
+
+The development Astra, source Sol, opposition Astra and root completed
+paper review. No actual first strict drop, small period defect or fixed
+rational-type visibility has been proved. These remain O. All round
+8-15 scientific files and computation evidence are unchanged. No new
+scientific computation or Lean build was run.
 
 ## Round 15 outcome
 
