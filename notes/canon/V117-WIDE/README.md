@@ -44,7 +44,7 @@ The baseline is annotated tag `canon-v116` at activation
 | #2059 | `5bd84c79b58ca21ea2bb39d2a5aaa3b67f0e09e5` | The computation, the frozen files, the custody chain and the two-architecture run were confirmed. The review asks for narrower wording in RESULT.md; the entry here already uses it. |
 | #2061 | `d91453e6d6256320a8e51e0a164b0cbf9f4910a3` | Exact theorem, quantitative bound, real rotations and minimality hold. The review adds that the exact conclusion holds for every connected pair graph. |
 | #2063 | `5c47b58bd1fcd5702625b12f5766cfb150fc5414` | All three results hold; wording repairs only. |
-| #2068 | `2195c27a0e20d0b25019fd6f86b9e12d28041d4f` | Proofs and exact verifier by the session that wrote this proposal; an adversarial pass inside that session found no error. It still needs a review by another party before a fold. |
+| #2068 | `1a23e5cb8bf511cdda5bb9866eaf4022fc7af8ec` | Proofs and exact verifier by the session that wrote this proposal; two adversarial passes inside that session found no error. It still needs a review by another party before a fold. |
 
 The entry for the alternative count is conditional on that outside review.
 The other three entries rest on sources written by one party and reviewed
