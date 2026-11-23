@@ -5,8 +5,8 @@
 proposal's one finite computation, with corrected wording, and adds three
 theorem entries whose sources have been reviewed. The 634 entries of v116
 stay. The proposed registry has 638 entries with 482 T, 62 D, 50 C, 2 H,
-23 O and 19 F. The 25 live H and O claims and the 43 reproductions are
-unchanged. [Proposed text and ledger edits](PROPOSED_CONTENT.md)
+23 O and 19 F. The 25 live H and O claims are unchanged, and one
+reproduction is added to the 43. [Proposed text and ledger edits](PROPOSED_CONTENT.md)
 
 ## What the edition would change
 
@@ -15,7 +15,7 @@ unchanged. [Proposed text and ledger edits](PROPOSED_CONTENT.md)
 | `C-H3-ROW0-PULSE-RETURN-N` | C | [#2059](https://github.com/mathorn1973/twist-j/pull/2059) | One finite L1 orientation computation on a station frozen in its probe |
 | `QDD-PAIR-INTERVENTION-LOCALIZATION` | T | [#2061](https://github.com/mathorn1973/twist-j/pull/2061) | A channel-level certificate that an encoded five-level state sits on the logical levels at one cut, exactly when the addressed pairs form a connected graph |
 | `QUADRATIC-L5-SOURCE-SYMMETRY` | T | [#2063](https://github.com/mathorn1973/twist-j/pull/2063) | A source reflection every successful contact must break, and a minimal lift that keeps the common scalar symmetry |
-| `QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT` | T | [#2063](https://github.com/mathorn1973/twist-j/pull/2063) and [#2068](https://github.com/mathorn1973/twist-j/pull/2068) | Five affine alternatives never cover the common-ready layer; six cover it in the class of the registered $C=K\oplus0_2$ |
+| `QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT` | T | [#2063](https://github.com/mathorn1973/twist-j/pull/2063) and [#2068](https://github.com/mathorn1973/twist-j/pull/2068) | Five affine alternatives never cover the common-ready layer; six cover it in the class of the registered $C=K\oplus0_2$, with data fibres of size at most two |
 
 The existing theorem QUADRATIC-L5-NATIVE-OBSTRUCTIONS excludes one affine
 map and any selection between two, and says that it does not cover programs
@@ -25,9 +25,13 @@ to five and shows that it is sharp in the class of the registered $C$.
 No open owner closes. QUADRATIC-MEMORY-NATIVE-CONTACT gains two necessary
 conditions and stays open: a successful contact must break the source
 reflection at a named ready state, and its ready data projection is not a
-selection among at most five affine maps. The six-map cover is not a binary
-contact, because its selector has forced fibres of size four. The live
-total stays 25.
+selection among at most five affine maps. Six are enough for everything
+the Canon asks of the data projection: with suitable output isometries the
+six maps give fibres of size at most two, and the data map extends to a
+complete permutation that satisfies the readout equation on its whole
+reachable set and selects among 21 linear maps. Its selection and bit
+rules are tables derived from the target and none of its maps is shown to
+be native, so it is no realization. The live total stays 25.
 
 ## Review state of the sources
 
@@ -50,9 +54,12 @@ by another.
 
 1. Each source merges under its own record first: #2059 with the reviewed
    wording in RESULT.md, and #2061, #2063 and #2068 as notes.
-2. The three theorem entries carry `INLINE_CANON` evidence, so the fold
-   places their complete proofs in the Canon, as written in
+2. Two theorem entries carry `INLINE_CANON` evidence, so the fold places
+   their complete proofs in the Canon, as written in
    [the proposed text](PROPOSED_CONTENT.md) and in the merged source notes.
+   The count of affine alternatives includes exhaustive finite checks; the
+   fold places its proofs in the Canon and promotes the exact verifier of
+   #2068 to a reproduction.
 3. The release then follows the standing order described in #2062:
    content commit with regenerated views, release-form commit, one complete
    frozen pair of architecture checks with the aggregate, activation, tag

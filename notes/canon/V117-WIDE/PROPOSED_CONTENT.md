@@ -271,10 +271,22 @@ note in pull request #2068 and the release gates described in the
 >    nonsquare determinant, 29 for rank five and 25 for rank six. Its
 >    exact value is open there.
 >
-> The six-map selector of item 2 has forced fibres of size four. A binary
-> contact needs fibres of size at most two, so the cover is not the data
-> projection of a binary contact and supplies no realization for
-> QUADRATIC-MEMORY-NATIVE-CONTACT.
+> 5. With the identity as output isometry the six maps of item 2 force a
+>    data fibre of size four. Composed with six explicit output
+>    isometries, conjugations by quaternions, they give a selector whose
+>    data map satisfies the readout equation on the whole layer with all
+>    fibres of size at most two. Six is therefore the least number of
+>    affine alternatives of such a data map.
+> 6. A data map with fibres of size at most two extends to a complete
+>    permutation of the carrier with the readout equation on its whole
+>    reachable set exactly when a flow condition along the orbits of M on
+>    the Gram classes holds. It holds for the data map of item 5, and an
+>    explicit such permutation selects among the six linear maps on the
+>    ready layer and among fifteen linear maps on the occupied layer.
+>
+> The selection rules and bit rules of item 6 are tables derived from the
+> target, and no map is shown to be native. The construction supplies no
+> realization for QUADRATIC-MEMORY-NATIVE-CONTACT.
 >
 > **Proof.** The merged note of pull request #2068: the reduction of the
 > target to q(x')=q(x)+q(y), B(x',y')=B(x,y), q(y')=q(y); the
@@ -282,7 +294,10 @@ note in pull request #2068 and the release gates described in the
 > identically; the weighted zero count and the bound 4*5^(2r-2) for every
 > other affine map; the count in three cases; and the explicit cover.
 > Item 3 is its per-branch maximum, and the covers of item 4 are checked
-> exhaustively by its exact verifier.
+> exhaustively by its exact verifier. Items 5 and 6 are its statements on
+> fibres of size two, on abstract continuation and on the complete
+> permutation; the selector and the permutation are verified on all
+> inputs and all states.
 
 ## Addition to QUADRATIC-MEMORY-NATIVE-CONTACT
 
@@ -292,7 +307,10 @@ successful binary contact must satisfy:
 > By QUADRATIC-L5-SOURCE-SYMMETRY the complete transition must fail to
 > commute with the source reflection at the ready state (u,0,0). By
 > QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT the ready data projection is not
-> a selection among five or fewer affine maps. Neither statement closes
+> a selection among five or fewer affine maps. In the class of K+0_2 six
+> linear alternatives meet the three conditions above and admit a
+> continuation from occupied memory, so the count of affine alternatives
+> gives no further obstruction there. None of these statements closes
 > this owner.
 
 The registry scope and falsifier of the owner are unchanged.
@@ -365,15 +383,24 @@ The registry scope and falsifier of the owner are unchanged.
     determinant of the nondegenerate part, which includes K+0_2, six
     explicit linear maps cover it and one affine map agrees on at most
     29/125 of it; in the other classes of rank four to six the least
-    number is at least six and otherwise open; the six-map selector has
-    forced fibres of size four and is not a binary contact.
+    number is at least six and otherwise open; with explicit output
+    isometries the six maps give a data map with all fibres of size at
+    most two, which extends to a complete permutation selecting among
+    21 linear maps with the readout equation on its whole reachable
+    set; its selection and bit rules are derived from the target and
+    no map is shown to be native.
   - **Falsifier** Five affine maps covering every ready input for some
     C of rank three to six; an input of the stated class not covered by
-    the six listed maps; or an affine map agreeing on more than 29/125
-    of the layer in that class.
-  - **Evidence** `EV-QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT`,
-    `INLINE_CANON`, `inline`, `registry-scope-sha256-v1`, `none`. The
-    exact verifier of the source note is a supplementary audit.
+    the six listed maps; an affine map agreeing on more than 29/125 of
+    the layer in that class; an output of the stated selector with
+    three preimages; or a reachable state of the stated permutation at
+    which the readout equation fails.
+  - **Evidence** `EV-QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT`, kind
+    `REPRODUCTION` at `reproduce/quadratic-affine-alternatives`, built
+    from the exact verifier of the source note,
+    `bundle-manifest-sha256-v1`, `two-architecture`. The proofs of items
+    1 to 4 stand in the Canon text; the reproduction carries the finite
+    checks of items 2, 4, 5 and 6.
 - **Dependencies** `QUADRATIC-L5-SOURCE-SYMMETRY` REQUIRES
   `DEF-QUADRATIC-MEMORY-L5` and `QUADRATIC-L5-INITIALIZED-CAPACITY`.
   `QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT` REQUIRES
@@ -388,9 +415,10 @@ The registry scope and falsifier of the owner are unchanged.
 
 Apply the four sections and the owner paragraph, append the ledger rows
 and add a v117 changelog entry. Regenerate the Canon views and normative
-checksums. Keep the core selection, frontier, gate rows and reproduction
-directory count. The inventory becomes 638 claims with 482 T and 50 C;
-`evidence_none` becomes 204 and `evidence_two-architecture` 394. Update
+checksums. Keep the core selection, frontier and gate rows, and add the
+one reproduction directory. The inventory becomes 638 claims with 482 T
+and 50 C and 44 reproductions; `evidence_none` becomes 203 and
+`evidence_two-architecture` 395. Update
 the assertions in `tools/test_architecture_map_report.py` accordingly.
 
 Extend the status-separation reverse-delta chain to reconstruct the exact
