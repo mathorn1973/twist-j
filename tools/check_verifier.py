@@ -763,7 +763,7 @@ RELAY_REPLAY_IDENTITY = (
     "af031b96bc46851d19eb2ae907e02f77f68d063ccf204068690a10872532b018",
     "198ed32b967d202c0b729bc1c03e4de6e6ecbc3810b2709ec7880dfdd49cc1f3",
 )
-RELAY_REPLAY_TREE_SHA256 = "29d379a1d0f943ad073286cc461237e1689180e507c1c2a1a21c79d2a58b4b7e"
+RELAY_REPLAY_TREE_SHA256 = "9ccf7c1510090da316c419987fc4d88d2ae9003b97fc78466a1bfc5dcb919eae"
 
 REPLAY_WORKERS = 2
 # The two longest measured independent tasks start first to avoid a long tail.
@@ -1358,12 +1358,15 @@ def _replay_worker(probe: Path) -> ReplayOutcome:
                          time.monotonic() - started)
 
 
-def _probe_tree_sha256(probe: Path) -> str | None:
+def _probe_tree_sha256(probe: Path, *, portable_order: bool = False) -> str | None:
     """Bind all relative paths and bytes, including potential import shadows."""
     if probe.is_symlink() or not probe.is_dir():
         return None
     digest = hashlib.sha256()
-    for path in sorted(probe.rglob("*")):
+    # Older scheduler pins use the host Path ordering. The timeout pin uses
+    # case-sensitive path strings on every host.
+    sort_key = Path.as_posix if portable_order else None
+    for path in sorted(probe.rglob("*"), key=sort_key):
         if path.is_symlink():
             return None
         relative = path.relative_to(probe).as_posix().encode("utf-8")
@@ -1384,7 +1387,7 @@ def _replay_timeout(
     if identity != RELAY_REPLAY_IDENTITY:
         return DEFAULT_REPLAY_TIMEOUT
     try:
-        tree_hash = _probe_tree_sha256(probe)
+        tree_hash = _probe_tree_sha256(probe, portable_order=True)
     except OSError:
         return DEFAULT_REPLAY_TIMEOUT
     if tree_hash == RELAY_REPLAY_TREE_SHA256:
