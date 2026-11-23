@@ -1,0 +1,18 @@
+# Synthesis staging run (non-canonical)
+
+candidate_commit: 7a070d010809824df93096c8cfb71c3c15255c49
+run_base_commit: 7a070d010809824df93096c8cfb71c3c15255c49
+reproduction: quadratic-affine-alternatives
+verifier_sha256: bc1c3872a6f696fc88a3b818b0e34fb6d11028f6f92edbee3843a195249a147c
+expected_sha256: a4ef2e5ab3d6098012499e52ca1a2cbecc878b4c7b10379fa334c418fb49d325
+command: python3 reproduce/quadratic-affine-alternatives/verify.py
+platform: Debian 12
+architecture: aarch64
+python: 3.11.2
+exit_code: 0
+stdout_sha256: a4ef2e5ab3d6098012499e52ca1a2cbecc878b4c7b10379fa334c418fb49d325
+stdout_bytes: 6176
+stdout_lines: 48
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS
