@@ -1,9 +1,8 @@
 # Content for review
 
 **NON-CANONICAL.** The following entries are proposed for the first sealed
-fold after v116, subject to the source merges, the outside review of the
-note in pull request #2068 and the release gates described in the
-[proposal](README.md). The first entry replaces the text proposed in #2062.
+fold after v116, subject to the source merges and the release gates
+described in the [proposal](README.md). The first entry replaces the text proposed in #2062.
 
 ## Canon section 2, after the rank-43 relay continuation
 
@@ -277,12 +276,20 @@ note in pull request #2068 and the release gates described in the
 >    data map satisfies the readout equation on the whole layer with all
 >    fibres of size at most two. Six is therefore the least number of
 >    affine alternatives of such a data map.
-> 6. A data map with fibres of size at most two extends to a complete
->    permutation of the carrier with the readout equation on its whole
->    reachable set exactly when a flow condition along the orbits of M on
->    the Gram classes holds. It holds for the data map of item 5, and an
->    explicit such permutation selects among the six linear maps on the
->    ready layer and among fifteen linear maps on the occupied layer.
+> 6. Let a data map f satisfy G(f(z)) = M G(z) for every ready input z
+>    and have fibres of size at most two. It extends to a complete
+>    permutation satisfying the readout equation on its whole reachable
+>    set exactly when the following flow condition holds. Let F_j(g)
+>    count the data points in Gram class g with j preimages under f.
+>    There must be integers p(g) with
+>    p(M g) = p(g) + F_2(g) - F_0(M g) and
+>    0 <= p(g) <= F_0(g) + F_1(g) for every g. The condition holds for
+>    the data map of item 5. An explicit permutation selects among six
+>    linear maps on the ready layer and fifteen on reachable occupied
+>    states. On unreachable occupied states it uses the fallback induced
+>    by the identity in reduced coordinates. In Canon coordinates on
+>    the nondegenerate part its data map is (x,y) -> (x+2y, 2x+3y).
+>    The readout equation is required only on the reachable set.
 >
 > The selection rules and bit rules of item 6 are tables derived from the
 > target, and no map is shown to be native. The construction supplies no
@@ -321,15 +328,21 @@ note in pull request #2068 and the release gates described in the
 >    most 640 times.
 > 3. m = 65 is attained by an explicit list.
 > 4. The controls W_a, W_b and the couplings Ucal_i act at every input as
->    elements of N. So item 2 applies to every fixed word of the residual
->    contact alphabet: its data projection selects among at least 25
->    elements of N on every ready slice, and the word contains n_W controls
+>    elements of N. A ready slice consists of all ready inputs at one
+>    fixed value of the radical coordinates. Where a fixed word of the
+>    residual contact alphabet satisfies the Gram identity throughout a
+>    ready slice, its data projection selects among at least 25 elements
+>    of N on that slice. This
+>    applies on every ready slice to the fixed composition of
+>    RESIDUAL-STEP-RECORD. A word with this property contains n_W controls
 >    and n_U couplings with 2^(n_W) * 5^(n_U) >= 25.
-> 5. Selections among elements of N whose data map has all fibres of
->    size at most two exist, because every translation lies in N; 74
->    explicit elements suffice, and at least 25 are needed.
+> 5. Because every translation lies in N, there are selectors among
+>    elements of N whose data map satisfies the Gram identity on all
+>    common-ready inputs and has fibres of size at most two. The explicit
+>    capacity-two assignment uses 74 elements, and item 2 requires at
+>    least 25.
 >
-> Items 1 to 4 concern one initialized step and the Gram identity only.
+> The selector bounds concern one initialized step.
 > The selection of item 5 is a matching and no native primitive; register
 > writes and continuation by native words are not constructed. All
 > statements are for generators applied to one cell at a time.
@@ -427,10 +440,13 @@ The registry scope and falsifier of the owner are unchanged.
     29/125 of it; in the other classes of rank four to six the least
     number is at least six and otherwise open; with explicit output
     isometries the six maps give a data map with all fibres of size at
-    most two, which extends to a complete permutation selecting among
-    21 linear maps with the readout equation on its whole reachable
-    set; its selection and bit rules are derived from the target and
-    no map is shown to be native.
+    most two and satisfying the Gram identity on the ready layer. The
+    flow condition holds for this selector, which extends to a complete
+    permutation satisfying the readout equation on its reachable set.
+    It uses six alternatives on the ready layer and fifteen on reachable
+    occupied states, with a fallback on unreachable occupied states.
+    Its selection and bit rules are derived from the target and native
+    admissibility remains open.
   - **Falsifier** Five affine maps covering every ready input for some
     C of rank three to six; an input of the stated class not covered by
     the six listed maps; an affine map agreeing on more than 29/125 of
@@ -454,9 +470,12 @@ The registry scope and falsifier of the owner are unchanged.
     satisfies the readout equation on the complete common-ready layer
     for one initialized step has m at least 25, already for one radical
     value, and 65 are attained; the registered controls and couplings
-    act at every input as elements of the group, so the bound applies
-    to every fixed word of the residual contact alphabet; 74 elements
-    suffice for a selection with all data fibres of size at most two;
+    act at every input as elements of the group, so the bound applies on
+    all ready inputs at any fixed value of the radical coordinates where
+    a fixed residual-alphabet word satisfies the Gram identity throughout
+    those inputs; 74 elements suffice for a
+    selection satisfying the Gram identity on all common-ready inputs
+    with all data fibres of size at most two;
     no statement is made about the selection rule as a primitive,
     native register writes, reversibility or continuation, nor for
     generators applied to both cells at once only.
@@ -471,7 +490,8 @@ The registry scope and falsifier of the owner are unchanged.
     from the exact verifier of the source note,
     `bundle-manifest-sha256-v1`, `two-architecture`. The proofs of
     items 1, 2 and 4 stand in the Canon text; the reproduction carries
-    the finite steps and the cover of item 3.
+    the finite steps, the cover of item 3 and the capacity-two assignment
+    of item 5.
 - **Dependencies** `QUADRATIC-L5-SOURCE-SYMMETRY` REQUIRES
   `DEF-QUADRATIC-MEMORY-L5` and `QUADRATIC-L5-INITIALIZED-CAPACITY`.
   `QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT` REQUIRES
