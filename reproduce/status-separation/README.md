@@ -1319,3 +1319,18 @@ full B2 pools. That scope excludes old B1 reads paired with new B2 reads.
 
 The adapter reads the frozen records and checks their custody and stated
 boundaries. The separate architecture jobs run the scientific verifiers.
+
+## Public Canon v117 intervention and quadratic contact bounds
+
+The v117 adapter reconstructs the exact v116 inputs for all 262 historical
+guards. Six additional guards check the four L1 theorems and one finite L1
+computation, the reviewed source pins, the dependency edges and the 45
+reproduction directories. The partition is T483/D62/C50/H2/O23/F19,
+totalling 639 claims. The 25 live H/O scopes and the gate ledgers persist.
+
+The frozen H3 transcript distinguishes three rescued fresh intact
+positives from their three exchanged copies and records silent controls.
+The two new reproduction bundles independently replay the finite
+ingredients of the affine and native-word counts. Their boundaries
+distinguish the affine construction's reachable occupied continuation
+from the native lower bound on full ready slices.

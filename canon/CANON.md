@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v116
+# TWIST-J Public Canon v117
 
-**Release identity.** Public Canon v116. Normative authority and activation
+**Release identity.** Public Canon v117. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -5670,6 +5670,180 @@ wrong cyclic word/pair count; an admitted nondegenerate Bernoulli mixture;
 or a wrong permutation or ordered-prefix count. A changed observation or
 physical apparatus class is outside scope. Integrity failures are STOP.
 
+### QDD-PAIR-INTERVENTION-LOCALIZATION [T]
+
+Model. The input is C^5 with basis e_0,...,e_4. The physical subsystem P
+contains five corresponding orthonormal levels and may contain more.
+An isometry V: C^5 -> P tensor E represents everything up to one cut,
+with E holding all stocks, all memory and a purification of everything
+discarded. One isometry W: P tensor E -> R tensor F represents everything
+after the cut. J: C^5 -> R is an isometry. The same V, W and J are used
+in every trial. Fix 0<c<1 and s with c^2+s^2=1, s nonzero, and put
+U=cI+isX on C^2, where X exchanges the two coordinates. For a pair
+{a,b} of logical levels let L_ab: C^2 -> C^5 include the ordered pair,
+Q_ab project P onto its two levels, and G_ab act as U on Q_ab P and as
+the identity on the rest of P and on E. The idle trial applies W after
+V. The trial for {a,b} inserts G_ab at the cut. Received channels are
+the partial traces over F on the complete output R, with all coherences,
+leakage levels and loss flags.
+
+Let S be a set of logical pairs. For each pair in S, suppose the idle
+channel on its input equals the isometric channel of J L_ab and the
+intervention channel equals the isometric channel of J L_ab U.
+
+1. If the graph S on the five levels is connected, then V = I_P tensor eta
+   for one unit vector eta in E, where I_P includes the logical levels.
+   The same holds for inputs entangled with a passive reference.
+2. If S is disconnected, the conclusion can fail with every hypothesis
+   holding exactly, even if arbitrary unitaries on each pair of S may be
+   applied repeatedly and all channels are known completely. In
+   particular four pair settings are necessary, and four suffice exactly
+   when they form a spanning tree.
+3. For the star S={{0,k}: k=1,...,4} with c=4/5, s=3/5: if the
+   normalized Choi state of each of the five received channels, idle on
+   C^5 and the four pair settings, is within half trace distance t of
+   its ideal and t <= 1/16000, then some unit eta satisfies
+
+   ```
+   || V - I_P tensor eta ||_op <= sqrt(14160 t) + 1 - sqrt(1 - 2360 t/3).
+   ```
+
+   The interventions G_0k are exact in this statement. An independently
+   bounded pulse error must first be propagated into t. If each matrix
+   unit on an n-dimensional input has output trace-norm error at most
+   epsilon_n, the normalized Choi expansion gives a sufficient half trace
+   distance bound n epsilon_n/2.
+4. Items 1 to 3 hold with the real rotation [[c,-s],[s,c]] in place of U.
+
+**Proof of 1.** A received channel that equals an isometric channel has
+a pure Choi state, so the Choi vector of the complete branch map is a
+product: W V L_ab = J L_ab tensor z_0 and W G_ab V L_ab = J L_ab U tensor
+z_ab for unit vectors z_0, z_ab in F. The idle vector may depend on the
+pair. If the idle hypothesis holds on C^5, all pairs share the same idle
+vector. Put V_ab = V L_ab. Since W is an isometry,
+
+```
+M = V_ab^* G_ab V_ab = (W V_ab)^* (W G_ab V_ab) = lambda U,
+lambda = <z_0, z_ab>.
+```
+
+The Hermitian part of G_ab is cI+(1-c)(I-Q_ab). Taking real traces,
+
+```
+2c + (1-c) || (I-Q_ab) V_ab ||_HS^2 = 2c Re lambda.
+```
+
+As 0<c<1 and |lambda| <= 1, the leakage term vanishes and lambda=1.
+Hence z_ab=z_0, and injectivity of W gives G_ab V_ab = V_ab U. Zero
+leakage puts V e_a and V e_b into span{e_a,e_b} tensor E. A connected
+graph on five vertices has a vertex v on two edges {v,a} and {v,b};
+the two spans meet in e_v tensor E, so V e_v = e_v tensor eta with eta
+a unit vector. If V e_x = e_x tensor eta and {x,y} is in S, the column
+of G_xy V_xy = V_xy U belonging to x reads
+
+```
+(c e_x + i s e_y) tensor eta = c V e_x + i s V e_y,
+```
+
+in either ordering of the pair because X is symmetric. As s is nonzero,
+V e_y = e_y tensor eta. Connectivity carries this to every level. A
+passive reference tensors every operator with an identity.
+
+**Proof of 2.** Let C(j) be the connected component of j and let f_C be
+orthonormal flags in E. Put V e_j = e_j tensor f_C(j), and let W send
+e_j tensor f_C(j) to J e_j tensor g for one unit g. Extend W to an isometry by choosing
+F large enough. Every unitary on a pair of S acts inside one component, so it
+preserves the range of V and acts there as V G, with G the corresponding
+logical unitary. Each received map is therefore J G tensor g exactly,
+for the idle trial and for every finite sequence of such unitaries. Two
+components give two orthogonal flags, so || V - I_P tensor eta ||_op is
+at least 1/sqrt(2) for every eta, by the triangle inequality between
+the two flags. Three or fewer edges on five vertices are disconnected.
+
+**Proof of 3.** Let f=<p,tau p> for the ideal Choi vector p and the
+received Choi state tau of a branch on an n-dimensional input. The
+difference |p><p|-tau is traceless Hermitian with trace norm at most
+2t, so its operator norm is at most t and f >= 1-t. Split the branch
+isometry A = C_z tensor z + C_perp, where z is the unit environment
+direction of the component of the vectorized A along p and C_perp is
+supported on the complement of z. The vectorized C_z has component
+sqrt(f) along p. Its transverse component is (I-|p><p|) tau p divided
+by sqrt(f), so its norm is at most t/sqrt(f). The vectorized C_perp has
+squared norm at most 1-f. Normalized vectorization divides the
+Hilbert-Schmidt norm by sqrt(n), and the parallel error multiplies the
+ideal isometry J_A, whose operator norm is one. Thus
+
+```
+|| C_z - J_A ||_op <= 1 - sqrt(f) + sqrt(n) t / sqrt(f),
+|| C_perp ||_op <= sqrt(n t).
+```
+
+For a pair k let lambda=<z_0,z_k> and h=1-Re lambda. Expanding
+M_k=(W V_k)^*(W G_k V_k) in aligned and perpendicular parts with n=5
+for idle and n=2 for the pair, and using t <= 1/4, the aligned product
+differs from lambda U by at most (2+(sqrt(5)+sqrt(2))/sqrt(3/4)) t. This
+is the sum of the two aligned errors, since each aligned compression and
+each ideal isometry has norm at most one. In either mixed product the
+environment projection onto the other branch's perpendicular space
+has norm sqrt(1-|lambda|^2) <= sqrt(2h). Thus each mixed product is
+bounded by sqrt(2h) sqrt(n t), with n the dimension for its perpendicular
+component. The perpendicular product is at most sqrt(10) t. Using
+sqrt(5)+sqrt(2)<4 gives
+
+```
+|| M_k - lambda U ||_op <= 10 t + 4 sqrt(2 t h).
+```
+
+With l_k = ||(I-Q_k)V_k||_HS^2 the exact real trace identity gives
+c h + (1-c) l_k/2 <= 10 t + 4 sqrt(2 t h). From
+4 sqrt(2 t h) <= (2/5) h + 20 t follows h <= 75 t. As 4 sqrt(150) < 49,
+put a=59 t; then || M_k - lambda U ||_op <= a, l_k <= 10 a, c h <= a,
+and D_k = G_k V_k - V_k U satisfies
+
+```
+|| D_k ||_HS^2 = 4 - 2 Re Tr(U^* M_k) <= 4 h + 4 a <= 9 a.
+```
+
+Write v_rj for the E-component of V e_j at physical level r, v=v_00,
+A_0 for the squared norm of column zero outside row zero, and B for the
+squared norm of the columns k>0 outside rows 0 and k. A wrong logical
+row of column zero is counted in three leakage sums and an extra row in
+four, so 3 A_0 + B <= 40 a. Rows k and 0 of the first column of D_k are
+i s (v - v_kk) and i s (v_k0 - v_0k), so
+
+```
+sum_k ( ||v_kk - v||^2 + ||v_0k||^2 ) <= 2 A_0 + (2/s^2) sum_k ||D_k||_HS^2
+                                      <= 2 A_0 + 200 a.
+```
+
+Adding A_0+B bounds the squared Hilbert-Schmidt error of V - I_P tensor v
+by 240 a = 14160 t. Since ||v||^2 = 1-A_0 >= 1-40a/3 > 0, replacing v by
+eta=v/||v|| costs at most 1-sqrt(1-2360t/3) in operator norm. Operator
+norm is bounded by Hilbert-Schmidt norm, giving the stated estimate.
+Tensoring with the identity on a passive reference preserves the
+operator-norm distance.
+
+**Proof of 4.** For a connected graph choose the two colors of a spanning tree
+and assign the diagonal entries 1 and i of D to its two colors. On P
+extend D by the identity on extra levels. On R take the unitary D_R with
+D_R J = J D and the identity on the orthogonal complement of the range of
+J. The transformed maps are (D tensor I_E) V D^* and
+(D_R tensor I_F) W (D^* tensor I_E). This turns each real rotation on the
+tree into cI+i s X or cI-i s X, according to its ordering. The exact proof
+uses only its Hermitian part and the nonzero coefficient of X, so
+applies with either sign. The disconnected construction works for real
+rotations directly. For the quantitative star take D=diag(1,i,i,i,i)
+with 0 first in each ordered pair. Each real rotation then becomes U.
+These unitary coordinate changes preserve the Choi distances and the
+final operator-norm distance.
+
+The theorem certifies the encoded state at one cut inside this model.
+Physical addressing of the pairs, the shared coordinate frame, the
+common preparation and receiver process, and the identification of any
+apparatus with the model are separate obligations. QDD-INSTRUMENT-APPARATUS,
+QDD-INSTRUMENT-CLASS-COMPLETENESS and QDD-TERMINAL-EVENT-SEMANTICS remain
+open.
+
 ### QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY [T]
 
 Let `V=F^4`, `F=R` or `C`, with `G=I_4-11^T/5`, and define the marked
@@ -9745,6 +9919,855 @@ complete input domain. They do not exclude other nonlinear reversible
 contacts or independently prepared subsets. They do not identify the
 external drive bit with a writable memory register.
 
+### QUADRATIC-L5-SOURCE-SYMMETRY [T]
+
+Use the carrier, marked reading and target of DEF-QUADRATIC-MEMORY-L5
+with symmetric C of rank at least four, and
+G(x,y)=(x^T C x, x^T C y, y^T C y), M(a,b,c)=(3b, 4a+4b+4c, 3b+3c).
+
+1. C has a vector u with u^T C u=1. Put R(v)=2(u^T C v)u-v and let S
+   act by R on both cells and trivially on ignored memory. S is a
+   C-isometric involution with fixed space span(u) in each cell. Every
+   complete transition T that commutes with S fails at the ready state
+   z=(u,0,0): its image is S-fixed, so both output cells are multiples
+   of u and the output Gram has rank at most one, while the required
+   Gram M(1,0,0)=(0,4,0) has rank two. The argument allows nonlinear T,
+   arbitrary full-state words and any ignored register on which S acts
+   trivially, and needs no reversibility. Hence every contact that
+   succeeds at z satisfies S(Tz) != T(Sz), and no alphabet whose complete
+   primitive maps all commute with S realizes the target.
+2. There is a complete permutation T of the carrier that commutes with
+   the common scalar action s(x,y,eta)=(sx,sy,eta) of F5^*, satisfies the
+   readout equation on its reachable set from the ready layer, and has
+   the minimum reachable size of QUADRATIC-L5-INITIALIZED-CAPACITY. It
+   has T^20=I, and T^10 acts as -1 on the chosen nonzero orbits. The matching that defines T is derived from the target and establishes
+   abstract existence.
+
+**Proof of 1.** Diagonalize C. If a nonzero diagonal entry is square,
+rescale its basis vector to give a vector of norm one. Otherwise rescale two
+entries to 2 and add their two basis vectors after multiplying each
+by 2. The resulting norm is 2*4+2*4 = 1 modulo five.
+
+Put R(v) = 2(u^T C v)u - v. This is a C-isometric involution, including
+when C has a radical. Writing v = (u^T C v)u + w with w perpendicular to u
+gives R(v) = (u^T C v)u - w. It is the negative of the reflection fixing
+the orthogonal complement of u pointwise. Its fixed space is span(u).
+Let S act diagonally by R on the two cells and trivially on ignored
+memory. This complete action depends only on C and u.
+
+Every complete transition T commuting with S fails on the ready state
+z = (u,0,0). Since S(z) = z, its image is S-fixed, so both output cells
+are multiples of u. Their Gram matrix therefore has rank at most one.
+But the required Gram value is M(1,0,0) = (0,4,0), with determinant
+-4^2 = 4 in F5, hence rank two. The argument permits nonlinearity,
+arbitrary full-state words, and any ignored register cardinality on which
+S acts trivially. Reversibility is unnecessary for the contradiction.
+
+Consequently an independent alphabet whose complete primitive maps commute
+with this S cannot realize the target. This applies in particular to a
+diagonally O(C)-equivariant alphabet with trivial action on memory. More
+locally, every contact that succeeds at z satisfies S(Tz) != T(Sz).
+The required symmetry breaking concerns the full maps of gates and
+register controls, so a control can break the condition even where the
+underlying data moves preserve it.
+
+**Proof of 2.** Let H = F5* act by s(x,y,eta) = (sx,sy,eta), so
+G(sz) = s^2 G(z), where G ignores the bit.
+For each nonzero Gram point g, write n(g) for its data fibre size.
+The scalar -1 acts freely within a nonzero Gram fibre, so n(g) is even.
+The scalar 2 is a bijection from the fibre of g to the fibre of -g, so
+n(g)=n(-g). Each H-orbit over {g,-g} meets each of the two Gram fibres in
+exactly two states, since the scalar action is free there and the square
+map has kernel {1,-1}. The nonzero sign-pairs form M-orbits of length d = 1
+or 5, by M^5 = -I. For each such orbit, take the lexicographically least
+Gram point in its union as g_0 and set g_j = M^j g_0 for 0 <= j < d.
+Then M^d g_0 = -g_0, since M^5 g_0 = -g_0 and 5/d is odd.
+
+For this orbit put k = max_j n(g_j)/2. At sign-pair j, choose k distinct
+H-orbits of full states, with all ready H-orbits included. This is possible
+because there are n(g_j)/2 ready orbits and n(g_j) total orbits there,
+and the orbit inequality max_h n(g_h) <= 2 min_h n(g_h) from
+QUADRATIC-L5-INITIALIZED-CAPACITY gives k <= n(g_j). Specify the order
+by ready first, then the lexicographically least state in each H-orbit.
+For each chosen orbit i, let v_{j,i} be its least complete state above
+g_j. Define T by the matching index on successive sign-pairs and by a
+common scalar at the wrap:
+$$
+T(sv_{j,i}) =
+\begin{cases}
+s v_{j+1,i}, & j<d-1,\\
+2s v_{0,i}, & j=d-1 .
+\end{cases}
+$$
+On unchosen orbits and the zero-Gram states use the identity.
+
+The representation sv_{j,i} is unique, and all designated representatives
+lie over the declared g_j. T is a complete permutation. Its inverse steps
+back at fixed i and s, except that crossing from j=0 to d-1 replaces s by
+3s. It commutes with the common scalar action on all states. At the wrap,
+the Gram is multiplied by 2^2 = -1, so the required equation holds on
+every chosen orbit and every zero-Gram state. The actual reachable set
+consists of exactly the chosen nonzero orbits and the ready zero-Gram
+states. In each nonzero sign-pair orbit, some j has n(g_j)/2 = k, so all
+chosen orbits there are ready. Iterating forward covers all their
+corresponding chosen states at every sign-pair index. The unchosen orbits are fixed.
+
+Each nonzero Gram point in this reachable set therefore has exactly
+2k = max_j n(g_j) states. The zero fibre contributes n(0). This is the
+unrestricted minimum reachable size in the Canon, now attained subject
+to the common scalar symmetry. The map has T^20 = I on the full carrier
+and T^10 acts as simultaneous multiplication by -1 on the chosen nonzero
+orbits because a traversal of a sign-pair orbit multiplies both cells by
+2 and 10/d equals 2 modulo 4. The Gram orbit still returns within ten steps.
+The index and scalar in the formula are coordinates assigned to existing
+states. Neither is a separate run-time register.
+
+Native use would require a permitted transition in an independently
+admitted alphabet and an occupied-memory continuation certificate.
+
+### QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT [T]
+
+Use the carrier, marked reading and target of DEF-QUADRATIC-MEMORY-L5.
+Let C be symmetric of rank r. Its nondegenerate part is the induced form
+on the quotient by its radical. Let the ready data projection select, by
+any rule, among m affine maps f_i(z)=A_i z+t_i on V^2. An input z is
+covered when some f_i satisfies G(f_i(z))=M G(z).
+
+1. For 3 <= r <= 6, no five affine maps cover the complete common-ready
+   layer. This holds for singular and translated maps, for arbitrary
+   selection rules and for any ignored memory.
+2. If r=4 and the nondegenerate part of C has square determinant, six
+   linear maps cover the layer, so six is the least number. This class
+   contains C=K+0_2 of DEF-RESIDUAL-CONTACT-ARCHITECTURE. For C=I_4+0_2
+   the six maps are
+
+   ```
+   f(x,y) = ( x + 2y + psi(3x+4y),  2x + 3y + psi(4x+2y) ),
+   psi = alpha L_i + beta L_j,
+   (alpha,beta) in {(3,0),(0,1),(1,1),(2,3),(4,2),(4,3)},
+   L_i = [[0,4,0,0],[1,0,0,0],[0,0,0,4],[0,0,1,0]],
+   L_j = [[0,0,4,0],[0,0,0,1],[1,0,0,0],[0,4,0,0]],
+   ```
+
+   acting on the nondegenerate coordinates, with any action on the
+   radical.
+3. In the class of item 2 one affine map agrees on at most 29/125 of
+   the layer, and (x,y) -> (x+2y, 2x+3y) attains this.
+4. For the other classes of rank four, five and six the least number is
+   at least six, and explicit covers give at most 25 for rank four with
+   nonsquare determinant, 29 for rank five and 25 for rank six. Its
+   exact value is open there.
+
+5. For identity output isometries and the identity action on the radical,
+   every selector using the six maps of item 2 has a data fibre with at
+   least four preimages. Composing the six maps with explicit output
+   isometries given by quaternion conjugation yields a selector whose
+   data map satisfies the readout equation on the whole layer with all
+   fibres of size at most two. Six is therefore the least number of
+   affine alternatives of such a data map.
+6. A data map satisfying the ready-layer Gram equation with fibres of size
+   at most two extends to a complete permutation of the carrier with the readout equation on its whole
+   reachable set exactly when a flow condition along the orbits of M on
+   the Gram classes holds. It holds for the data map of item 5, and an
+   explicit such permutation selects among the six linear maps on the
+   ready layer and among fifteen linear maps on the reachable occupied states.
+   On the unreachable occupied states the constructed permutation uses
+   (x,y) -> (x+2y,2x+3y) on the nondegenerate coordinates.
+
+The selection and bit rules of item 6 are derived from the target.
+QUADRATIC-MEMORY-NATIVE-CONTACT remains open.
+
+**Reduction.** Work over F5. Decompose the carrier into a complement W of
+the radical and the radical. Congruence transports branches by
+conjugation, because P^T C P = C_0 implies G_C(Px, Py) = G_{C_0}(x, y).
+On every fixed radical slice, projecting an affine branch to W^2 gives
+an affine branch of W^2. A cover on W^2 lifts by extending every map
+with the identity on the radical. The same transport preserves fibre
+sizes and reachable-set claims for the constructed permutations.
+
+A matrix g with rows (p,q) and (s,u) acts on the pair of cells by scalar
+linear combinations. Its action on Gram triples is
+
+```text
+Sym2(g) = [[p^2,2pq,q^2],[ps,pu+qs,qu],[s^2,2su,u^2]].
+g_out = [[0,1],[2,1]],   g_in = [[1,1],[3,1]].
+Sym2(g_out) M Sym2(g_in) = M0,   M0(a,b,c) = (a+c,b,c).
+```
+
+The identity follows by multiplication. Replace f by g_out f g_in
+to pass to the reduced equation, with a bijection of input points.
+Write q(x)=x^T C x and B(x,y)=x^T C y on W. For an affine branch with
+output (x',y'), the residuals of the reduced equation are
+
+```text
+rho_a = q(x') - q(x) - q(y),   rho_b = B(x',y') - B(x,y),
+rho_c = q(y') - q(y).
+```
+
+Each residual has degree at most two. Such a polynomial vanishes as a
+function on F5^(2r) exactly when it vanishes as a polynomial. This follows
+by applying the univariate root bound in each variable.
+
+**Branches preserving the second and third Gram entries (Lemma 2).**
+rho_b and rho_c are both identically zero if and only if
+
+```text
+f(x,y) = (k(x + psi y), k y),   k in O(C),   psi C-skew.
+```
+
+For such f ("tangent type") the agreement set is
+
+```text
+Z_psi = { (x,y) : 2 B(x, psi y) + q(psi y) = q(y) }.
+```
+
+Over a fixed y it is an affine hyperplane of x (5^(r-1) points) if
+psi y != 0. If psi y = 0 it is the whole slice when q(y) = 0 and empty when
+q(y) != 0. Consequently
+
+```text
+|Z_psi| = 5^(r-1) (5^r - |ker psi|) + 5^r #{ y in ker psi : q(y) = 0 }.
+```
+
+*Proof.* Write x' = A11 x + A12 y + t1 and y' = A21 x + A22 y + t2.
+Suppose rho_c = 0. Its quadratic part gives q(A21 x) = 0,
+B(A21 x, A22 y) = 0 and q(A22 y) = q(y) for all x, y. Hence
+A22^T C A22 = C, so k := A22 is invertible and lies in O(C). Then A21 x is
+orthogonal to all of W, so A21 = 0 because C is nondegenerate. The linear
+part gives 2 B(k y, t2) = 0, so t2 = 0. Suppose in addition rho_b = 0, that
+is B(A11 x + A12 y + t1, k y) = B(x,y). The part bilinear in (x,y) gives
+B(A11 x, k y) = B(x,y) = B(kx, ky), so A11 = k. The part quadratic in y
+gives B(A12 y, k y) = 0, so psi := k^(-1) A12 satisfies B(psi y, y) = 0 for
+all y, which by polarization is C-skewness. The linear part gives t1 = 0.
+The converse is a direct substitution. For f of this form,
+rho_a = q(x + psi y) - q(x) - q(y) = 2 B(x, psi y) + q(psi y) - q(y). For
+fixed y this is an affine function of x whose linear part x -> 2 B(x, psi y)
+is nonzero exactly when psi y != 0, since C is nondegenerate.
+
+Here a C-skew map psi satisfies B(psi y,y')=-B(y,psi y'). Its rank is even
+since C psi is alternating and C is invertible. In particular, if psi is
+nonzero then its kernel has at most 5^(r-2) points.
+
+**Weighted polynomial bound (Lemma A).** Let P be a nonzero
+polynomial in N variables over F5 of total degree at most d. For a in F5^N
+put w_P(a) = 0 if P(a) != 0, w_P(a) = 2 if P and all its formal first
+partial derivatives vanish at a, and w_P(a) = 1 otherwise. Then the sum of
+w_P(a) over all a in F5^N is at most d 5^(N-1).
+
+*Proof.* Induction on N. For N = 1, if P(a) = P'(a) = 0 then (u - a)^2
+divides P: writing P = (u - a) Q gives P'(a) = Q(a). So the sum of the
+weights is at most the number of roots counted with multiplicity, at most d.
+For N >= 2 write u = (u', s) with s the last variable and
+P = sum_{j=0..t} P_j(u') s^j with P_t != 0. Then deg P_t <= d - t. Let
+w_t be the weight function of P_t on F5^(N-1). For every a' the claim is
+
+```text
+sum over s in F5 of w_P(a', s)  <=  t + 5 w_t(a').
+```
+
+If w_t(a') = 0, then P(a', s) is a polynomial in s of exact degree t, and
+w_P(a', s) is at most the multiplicity of s as a root of it (weight 2
+requires that P and dP/ds vanish). If w_t(a') = 2, the left side is at most
+10. If w_t(a') = 1, some dP_t/du_i with i < N is nonzero at a'. The
+polynomial dP/du_i = sum_j (dP_j/du_i) s^j, evaluated at u' = a', has exact
+degree t in s and vanishes at every s with w_P(a', s) = 2. There are at most
+t such s, so the left side is at most 5 + t. Summing the claim over a' and
+using the induction hypothesis for P_t gives
+t 5^(N-1) + 5 (d - t) 5^(N-2) = d 5^(N-1).
+
+**Other affine branches (Lemma 3).** If f is an affine
+branch that is not of tangent type, then |Z(f)| <= 4 * 5^(2r-2).
+
+*Proof.* Put n = 2r and let A be the linear part of f.
+
+*Step 1. The polynomial rho_a is irreducible of degree 2.* Its quadratic part has the
+symmetric matrix S_a = A_x^T C A_x - diag(C, C), where A_x = (A11 A12) is
+the r by 2r matrix of the x'-rows and diag(C, C) is the block-diagonal
+matrix of q(x) + q(y). Since rank diag(C, C) = 2r and
+rank(A_x^T C A_x) <= r, the rank of S_a is at least r >= 3. A product of
+two polynomials of degree 1 has a quadratic part of rank at most 2. So
+rho_a has degree 2 and no factorization over F5.
+
+*Step 2. Both rho_b and rho_c can be multiples of rho_a only if
+both are zero.* Suppose rho_b = beta rho_a and rho_c = gamma rho_a with
+(beta, gamma) != (0,0). For la = (la_a, la_b, la_c) in F5^3 put
+rho_la = la_a rho_a + la_b rho_b + la_c rho_c
+= (la_a + beta la_b + gamma la_c) rho_a. Directly from the definitions,
+rho_la(z) = la.G(f(z)) - (la M0).G(z). The quadratic form z -> la.G(z) has
+the symmetric matrix L(la) (x) C, the Kronecker product with
+
+```text
+L(la) = [[la_a, la_b/2], [la_b/2, la_c]],      rank(L(la) (x) C) = r rank L(la),
+la M0 = (la_a, la_b, la_a + la_c) =: la',      det L(la') = det L(la) + la_a^2.
+```
+
+On the plane Pi: la_a + beta la_b + gamma la_c = 0 the polynomial rho_la is
+zero, in particular its quadratic part:
+
+```text
+A^T (L(la) (x) C) A = L(la') (x) C        for all la in Pi.              (*)
+```
+
+(i) If la in Pi is nonzero with det L(la) = 0, the left side of (*) has
+rank at most r, so rank L(la') <= 1, det L(la') = 0, hence la_a = 0. Then
+det L(la) = -la_b^2/4 = 0 gives la_b = 0. So la is a multiple of (0,0,1).
+
+(ii) If gamma = 0, then beta != 0 and la = (4 beta^2, beta, 1) lies in Pi
+with det L(la) = 4 beta^2 - beta^2/4 = 0 and la_a != 0, contradicting (i).
+
+(iii) If gamma != 0, take la1 = (0, gamma, -beta) in Pi. Then la1' = la1
+and L1 := L(la1) has determinant -gamma^2/4 != 0, so (*) for la1 shows that
+A is invertible. Take la2 in Pi with first coordinate 1, and put
+L2 = L(la2), L2' = L(la2'). Dividing (*) for la2 by (*) for la1 gives
+
+```text
+A^(-1) ((L1^(-1) L2) (x) I_r) A = (L1^(-1) L2') (x) I_r.
+```
+
+The two sides have the same characteristic polynomial, so
+det(t - L1^(-1) L2)^r = det(t - L1^(-1) L2')^r in F5[t]. Both bases are
+monic, and unique factorization gives det(t L1 - L2) = det(t L1 - L2').
+Since la -> la' and L are linear and la1' = la1, the right side is
+det L((t la1 - la2)'), and the polynomial identity
+det L(la') = det L(la) + la_a^2 at la = t la1 - la2, whose first coordinate
+is -1, gives det(t L1 - L2') = det(t L1 - L2) + 1. This is a contradiction.
+
+*Step 3.* Since f is not of tangent type, rho_b and rho_c are not both
+zero. By step 2 there is rho' in {rho_b, rho_c} that is nonzero and not a
+scalar multiple of rho_a. Z(f) is contained in X = {rho_a = 0 = rho'}.
+
+*Step 4. The bound is |X| <= 4 * 5^(n-2).* Since S_a != 0 and 2 is invertible, there is
+a vector d with S_a(d,d) != 0. Complete d to a basis and use coordinates
+(u, t) in F5^(n-1) times F5, z = sum u_i b_i + t d. This linear bijection
+preserves degrees and zero counts. Then
+
+```text
+rho_a = alpha t^2 + p1(u) t + p0(u),    alpha = S_a(d,d) != 0, deg p1 <= 1, deg p0 <= 2,
+rho'  = alpha' t^2 + r1(u) t + r0(u),   alpha' in F5,          deg r1 <= 1, deg r0 <= 2.
+```
+
+Put rho'' = rho' - (alpha'/alpha) rho_a = b(u) t + c(u), with deg b <= 1
+and deg c <= 2. Then rho'' != 0 because rho' is not a multiple of rho_a,
+and X = {rho_a = 0 = rho''}. Define
+
+```text
+R(u) = alpha c^2 - p1 b c + p0 b^2,      deg R <= 4.
+```
+
+Expanding the product gives the polynomial identity
+
+```text
+b^2 rho_a = rho'' (alpha b t + p1 b - alpha c) + R.                    (**)
+```
+
+R is not the zero polynomial. If b = 0 then R = alpha c^2 and c != 0. If
+b != 0 and R = 0, then by (**) and unique factorization in F5[u,t] the
+irreducible rho_a divides rho'' or alpha b t + p1 b - alpha c. Both are
+nonzero of degree at most 1 in t, while rho_a has degree 2 in t.
+
+For u in F5^(n-1) let m(u) be the number of t with (u,t) in X. Then
+m(u) <= w_R(u) in each of the three possible cases:
+
+1. b(u) != 0. Then rho''(u,t) = 0 only for t = -c(u)/b(u), so m(u) <= 1,
+   and if m(u) = 1 then (**) at that point gives R(u) = 0, so w_R(u) >= 1.
+2. b(u) = 0 and c(u) != 0. Then rho''(u,t) = c(u) != 0 and m(u) = 0.
+3. b(u) = c(u) = 0. Then m(u) <= 2 because rho_a(u,t) has exact degree 2
+   in t. Moreover R(u) = 0, and by the product rule every first partial
+   derivative of alpha c^2 - p1 b c + p0 b^2 is a sum of terms each of which
+   contains a factor b or c. So all of them vanish at u and w_R(u) = 2.
+
+Summing over u and applying Lemma A to R, with N = n-1 and d = 4, gives
+|X| <= 4 * 5^(n-2).
+
+**Proof of item 1.** Let N_r(0) be the number of
+y in W with q(y) = 0, let T = {(x,y) : q(y) != 0}, and let
+theta = |T| / 5^(2r) = 1 - N_r(0)/5^r. The norm counts of QUADRATIC-L5-INITIALIZED-CAPACITY give
+
+| class | (3,1), (3,2) | (4,1) | (4,2) | (5,1), (5,2) | (6,1) | (6,2) |
+|---|---|---|---|---|---|---|
+| N_r(0) | 25 | 145 | 105 | 625 | 3225 | 3025 |
+| theta | 4/5 | 96/125 | 104/125 | 4/5 | 496/625 | 504/625 |
+
+so theta >= 96/125 in every class. A list of fewer than five can be padded by repeating branches.
+Suppose five branches cover W^2, and
+let k of them be of tangent type, with skew maps psi_i. By Lemma 2:
+
+- a tangent branch with psi_i = 0 agrees exactly on {q(y) = 0}, which is
+  disjoint from T.
+- a tangent branch with psi_i != 0 agrees on at most 5^(r-1) points of each
+  slice, except on slices over the at most 5^(r-2) vectors y with
+  psi_i y = 0.
+- by Lemma 3 a branch not of tangent type agrees on at most
+  4 * 5^(2r-2) = (4/25) 5^(2r) points.
+
+*Case A: some psi_i = 0.* That branch covers nothing of T. The other
+tangent branches cover at most |T|/5 points of T each, so T would need
+
+```text
+((k-1)/5) theta + (5-k) (4/25) >= theta,   i.e.   theta <= 4(5-k) / (5(6-k)).
+```
+
+For k = 1,..., 5 the right side is 16/25, 3/5, 8/15, 2/5, 0, always below
+96/125. Contradiction.
+
+*Case B: no psi_i = 0 and k <= 4.* On a slice over y the tangent branches
+cover at most k 5^(r-1) points if psi_i y != 0 for all i, and at most 5^r
+points in any case. At most k 5^(r-2) vectors y are killed by some psi_i.
+The tangent branches therefore cover at most
+k 5^(2r-1) + k (5-k) 5^(2r-3) points, and all five branches at most
+
+```text
+5^(2r) ( k/5 + k(5-k)/125 + 4(5-k)/25 ) = 5^(2r) (100 + 10k - k^2) / 125,
+```
+
+which for k = 0,..., 4 is 100/125, 109/125, 116/125, 121/125, 124/125 of
+the domain. Contradiction.
+
+*Case C: k = 5 and no psi_i = 0.* Fix y with q(y) != 0. The slice has 5^r
+points and each branch covers a hyperplane or nothing, so the five
+hyperplanes H_i = {x : 2 B(x, n_i) + q(n_i) = q(y)}, n_i = psi_i y, are
+pairwise disjoint, hence pairwise parallel: n_i = s_i n with s_i in
+{1,2,3,4}. Two of the five s_i coincide, so two of the n_i are equal, and
+H_i is determined by n_i. Two of the hyperplanes coincide. Contradiction.
+QED
+
+**Proof of item 2.** The two displayed matrices satisfy
+Li^2=Lj^2=-I, Li Lj+Lj Li=0 and Li^T=-Li, Lj^T=-Lj.
+Thus psi^T psi=(alpha^2+beta^2)I and the reduced branch
+(x,y) -> (x+psi y,y) agrees exactly when
+
+```text
+alpha (2 B(x,Li y)+q(y)) + beta (2 B(x,Lj y)) = 0,
+```
+
+since alpha^2+beta^2-1=alpha for each of the six displayed pairs.
+They represent all six lines through the origin of F5^2, so one pair is
+orthogonal to the vector of the two bracketed coefficients. Applying
+g_in^(-1)=[[2,3],[4,2]] to the input and
+g_out^(-1)=[[2,3],[1,0]] to the output gives the displayed Canon
+branches. For K=antidiag(3,2,2,3), the matrix
+
+```text
+P = [[1,2,0,0],[0,0,1,2],[0,0,4,2],[1,3,0,0]]
+```
+
+satisfies P^T K P=I_4. This proves the class assertion and transports
+the six maps by conjugation.
+
+**Proof of item 3.** In dimension four with square determinant, let H
+be the kernel of a C-skew psi, let h be the dimension of the radical of
+the restricted form on H, and let d be its nondegenerate dimension. Put
+E(H)=#{y in H:q(y)=0}-|H|/5. The norm counts give E(H)=0 for odd d,
+E(H)=4 chi 5^(h+d/2-1) for positive even d of determinant character
+chi, and E(H)=4*5^(h-1) when d=0. In the positive even-d case with chi=1,
+the nondegenerate component admits a totally isotropic subspace of
+dimension d/2, by normalizing to I_d and taking the vectors
+e_(2i-1)+2 e_(2i). Adjoining the radical gives a totally isotropic
+subspace of W of dimension h+d/2. For d=0, H itself is totally
+isotropic. Every totally isotropic subspace of W has dimension at most
+two, because it is contained in its orthogonal complement. Thus
+E(H)<=20. Lemma 2 bounds the number of agreements by
+5^7+5^4 E(H)<=90625=5^8*29/125. Lemma 3 gives a smaller bound on
+every other branch. The branch psi=0 attains the bound because its
+agreement slices are precisely the 145 isotropic y. Averaging the
+same bound over fixed radical slices proves the bound for all affine
+branches on V^2.
+
+**Proof of item 4.** The exact finite covers are encoded by
+`cover_rank4_delta2` and `pencil_setup` in
+[quadratic-affine-alternatives](../reproduce/quadratic-affine-alternatives/).
+For each fixed y, the verifier forms the union over the listed
+branches of the sets of x solving the linear equation of Lemma 2.
+Checks C30 through C34 exhaust every y and test that this union is
+the full x slice, with direct evaluation of the Gram equations on
+the complete rank-four nonsquare domain and on selected higher-rank
+slices. The reduction transports these covers to M and to the full
+carrier.
+
+**Proof of item 5.** The six projective directions give exactly one
+agreeing branch whenever the coefficient vector in the proof of item 2
+is nonzero. The exhaustive count C12 gives 369600 such reduced inputs
+out of 390625, and C13 counts 12000 outputs each forced by four of those
+inputs, before composing any branch with an output isometry.
+
+Identify W for C=I_4 with quaternions over F5 in coordinates (1,i,j,k),
+where i^2=j^2=-1 and ij=k=-ji. The sum-of-squares norm is
+q(v)=v conjugate(v), is multiplicative, and is preserved by conjugation
+by an invertible quaternion. In the listed branch order use output
+conjugations by
+
+```text
+1, i+2j+k, i+3j+k, i+4j+2k, 1+4k, 1+2i+k.
+```
+
+Their norms are nonzero. Conjugate both cells of each branch output. This preserves its agreement set. Choose the agreeing branch of least
+index, and leave the radical coordinates unchanged. Checks C41, C44
+and C45 of the exact reproduction verify the isometries and enumerate
+every reduced ready input, applying the chosen branch and counting
+the preimages of each output in Canon coordinates. The Gram identity
+holds and the fibre-size histogram for sizes 0, 1 and 2 is
+(136800,117025,136800), with every other size absent. The lower bound
+of item 1 also applies under the fibre constraint, so the minimum is six.
+
+**Proof of item 6.** Let X=V^2, or W^2 for the reduced-size
+carrier in Canon coordinates. Let F_j(g) be the number of data
+points over Gram class g having exactly j preimages under the ready
+data map f. The condition is the existence of integers p(g) with
+
+```text
+p(Mg) = p(g) + F_2(g) - F_0(Mg),
+0 <= p(g) <= F_0(g) + F_1(g).
+```
+
+If a permutation T exists, the reachable set from the ready layer R
+is T-invariant by finiteness. Both bit states over an output with two
+preimages are in T(R). Let b(g) count occupied states in T(R) over
+outputs with one preimage, and let a(g) count occupied reachable
+states outside T(R) over g. The occupied reachable states over g
+number F_2(g)+b(g)+a(g). They map bijectively to the reachable states
+over Mg outside T(R), of which F_0(Mg)+b(Mg) are ready and a(Mg) are
+occupied. Thus p=a+b satisfies the recurrence. These a(g)+b(g)
+occupied states lie over data with at most one preimage, giving the bounds.
+
+Conversely give bit 0 to the first preimage of an output and bit 1 to
+the second. Select p(g) occupied states over data with at most one
+preimage and add the F_2(g) occupied states already in T(R) over g.
+Map this occupied set bijectively onto the selected occupied states
+over Mg together with the ready states over Mg that lie outside
+T(R). The recurrence gives equal cardinalities. This defines a
+permutation on the ready layer and the occupied sets just described.
+Extend by the identity on the complement. The union is invariant
+and the Gram equation holds there, hence it holds on the reachable
+set. Along each M-orbit, the recurrence determines p up to one
+constant, since the sums of F_0 and F_2 on the orbit coincide by
+counting f-preimages. Checking the two bounds for those constants
+is the finite flow test C46.
+
+For the explicit permutation with linear alternatives, in reduced
+coordinates write the selector of item 5 as Phi. On the ready layer
+use Phi, giving bit 0 to the lower-index branch at a shared output
+and bit 1 to the higher-index branch. Each branch is invertible
+so there is no tie at a shared output. For an occupied input with
+q(y) nonzero, use the pure part theta of x y^(-1) as the key for
+the shear table `OCC_SHEAR_WORDS`. Each entry prescribes one of
+thirteen shears (x,y) -> (x+a y,y). Give its output bit 0 exactly
+when the data have no ready preimage and no occupied input with
+lexicographically smaller a is assigned the same data, and bit 1
+otherwise. If y is nonzero and q(y)=0, the key for
+`OCC_CONJ_WORDS` is the line of pure c with c y=0 and the pure
+part of x conjugate(y). Use the indicated common conjugation by
+1+i+j or 1+i+j+4k, with output bit 0. Take the identity on
+reduced occupied inputs without a table entry. Apply g_in^(-1)
+before each step and g_out^(-1) after it to obtain the Canon
+permutation. The two changes of coordinates apply at each step.
+Check C47 verifies that the reduced map permutes the ready and
+occupied table states. Extending it by the identity gives a
+permutation of all 781250 states, and composing with the two
+invertible coordinate maps preserves bijectivity. C47 computes
+the reachable set in Canon coordinates and checks the Gram
+identity at every reachable state. Every reachable occupied
+state lies in a table and their count equals the number of
+occupied states represented by the two tables. There are 585025 reachable states on W^2 times {0,1},
+including 194400 occupied states. The tables specify thirteen
+shears and two conjugations on those occupied states. The fixed
+linear input and output maps preserve linearity. Conjugation
+transports the permutation to K, and the product with the
+identity on the four radical coordinates gives the full-carrier
+result. The tables and the bit rule implement target-derived
+matchings.
+
+### QUADRATIC-L5-NATIVE-WORD-COUNT [T]
+
+Use C=K+0_2 of DEF-RESIDUAL-CONTACT-ARCHITECTURE and the marked reading
+and target of DEF-QUADRATIC-MEMORY-L5. Let N be the group generated on
+the pair of cells by the kernel generators a,b,c,d,e applied to either
+cell and by the couplings P and Q. A complete ready radical slice is
+the set of all piston pairs with the radical coordinates fixed and
+the memory bit ready.
+
+1. The piston blocks of a and b commute. In their joint eigenbasis N
+   consists exactly of the affine maps whose linear part acts on each of
+   the four piston planes by a matrix of determinant 1 or -1, with the
+   four determinants of product 1, acts on the q-plane and on the t-component of the t-plane image
+   by the matrix of the second piston plane, and has an arbitrary linear
+   part from the t-plane into the first and third piston planes. Every
+   translation occurs. The linear parts on the piston pair form a group
+   of order 8*120^4.
+2. Any selection, by an arbitrary rule, among m fixed elements of N that
+   satisfies the readout equation on the complete common-ready layer for
+   one initialized step has m >= 25, already on the ready inputs of one
+   radical value. On 15680 explicit inputs one element of N agrees at
+   most 640 times.
+3. An explicit list of 65 maps induced by native words covers the layer.
+4. The controls W_a, W_b and the couplings Ucal_i act at every input as
+   elements of N. Any fixed word of the residual contact alphabet that
+   satisfies the Gram equation on a complete ready radical slice
+   requires at least 25 elements of N as alternatives for its data
+   projection. For n_W controls and n_U couplings in that word,
+   2^(n_W) * 5^(n_U) >= 25.
+5. A selector f among elements of N can satisfy G(f(z))=M G(z) on
+   the complete common-ready layer with all data fibres of size at
+   most two. An explicit list of 74 elements suffices for both
+   conditions, and any such list has at least 25 elements.
+
+The cover and fibre bounds concern one initialized step from the ready
+layer. Item 5 uses a target-derived matching to select the native word.
+Native bit writes and occupied-memory continuation for the 74-word selector remain open. The
+single-cell generators always act on one cell at a time.
+
+**Proof of item 1.** All arithmetic is in F5. Let W=F5^4 be the piston space, and write the
+radical coordinates in each cell as (q,t), with t the coordinate r of
+DEF-RESIDUAL-CONTACT-ARCHITECTURE. For a single-cell generator g, write
+g_x and g_y for its actions on the first and second cell. Write
+products in order from right to left. The couplings are P(x,y)=(x,y+x)
+and Q(x,y)=(x+y,y). The five single-cell maps are involutions and
+P and Q have order five, so inverses give words in the same alphabet.
+
+**Generators.** Put alpha(p1,p4,p1p,p4p) = (p4,p1,p4p,p1p),
+beta(p1,p4,p1p,p4p) = (-p1p,-p4p,-p1,-p4) and u = (0,1,0,-1). The kernel generator definitions give
+
+```text
+a: (p, q, t) -> ( alpha p,                    q,      t     )
+b: (p, q, t) -> ( beta p,                    -q,     -t     )
+c: (p, q, t) -> ( beta p + t u + (2,1,2,1),   1 - q,  -t     )
+d: (p, q, t) -> ( -p + (2,1,3,4),             1 - q,  1 - t )
+e: (p, q, t) -> ( -p + (2,1,3,4),             2 - q,  1 - t )
+```
+
+alpha and beta commute and square to 1. Their joint eigenvectors are
+
+```text
+e_++ = (1,1,4,4),   e_+- = (1,1,1,1),   e_-+ = (1,4,4,1),   e_-- = (1,4,1,4),
+```
+
+the signs being the eigenvalues of alpha and beta. In the coordinates
+x = x_1 e_++ + x_2 e_+- + x_3 e_-+ + x_4 e_-- the form K is antidiag(3,2,2,3)
+again, that is q_K(x) = x_1 x_4 - x_2 x_3, and u = 3 e_++ + 2 e_-+ (C03, C04).
+
+**Six planes.** For j = 1..4 let Pi_j be the plane with coordinates
+(x_j, y_j), the j-th eigen-coordinate of cell x and of cell y. Let Pi_q
+have the coordinates (q_x, q_y) and Pi_t the coordinates (t_x, t_y). With
+chi_a = (+,+,-,-) and chi_b = (+,-,+,-) the linear parts of the generators are
+
+```text
+            on Pi_j, j = 1..4            on Pi_q and Pi_t        further part
+a_x         diag(chi_a(j), 1)            diag(1, 1)              none
+b_x         diag(chi_b(j), 1)            diag(-1, 1)             none
+c_x         diag(chi_b(j), 1)            diag(-1, 1)             t_x -> t_x u in cell x
+d_x, e_x    diag(-1, 1)                  diag(-1, 1)             none
+g_y         as g_x with the two diagonal entries exchanged, and t_y u in cell y for c_y
+P           [[1,0],[1,1]]                [[1,0],[1,1]]           none
+Q           [[1,1],[0,1]]                [[1,1],[0,1]]           none
+```
+
+On Pi_q and on Pi_t every generator acts by the same matrix as on Pi_2, the
+plane of e_+-: the sign of a is + and the signs of b, c, d, e are -, on R
+and on e_+- alike.
+
+Let Lambda denote the allowed piston matrix tuples. The affine group
+described in item 1 has only one possible off-diagonal block, from
+Pi_t to Pi_1+Pi_3. On Pi_t the component of the image in Pi_t is g_2.
+
+Step 1. The affine maps described in the theorem form a group,
+and by the table the twelve generators belong to it: the determinants of
+the generators on (Pi_1,..., Pi_4) are
+
+```text
+a_x, a_y: (1,1,-1,-1),    b_x, b_y, c_x, c_y: (1,-1,1,-1),    d_x, d_y, e_x, e_y: (-1,-1,-1,-1),    P, Q: (1,1,1,1),
+```
+
+each of product 1. So N is contained in that group, and the determinant
+patterns that occur are exactly the eight patterns of product 1 (C05). The
+pattern (-1,-1,-1,-1) comes from d or e applied to one cell.
+
+Step 2. The group Lambda_N of the 4-tuples (g_1,..., g_4) that occur as
+linear parts of elements of N contains SL2(F5)^4. By step 1, Lambda_N lies
+in Lambda. Write its elements as 4-tuples.
+Let t = [[1,0],[1,1]] and t' = [[1,1],[0,1]]. They generate SL2(F5), of
+order 120 (C06). Since P and Q act by t and t' on every plane, Lambda_N
+contains Delta(s) = (s,s,s,s) for all s in SL2(F5). Let h = diag(-1,1). The
+components of a_x, b_x and a_x b_x are (1,1,h,h), (1,h,1,h) and (1,h,h,1).
+With [g,s] = g s g^(-1) s^(-1), c = [h,t] = [[1,0],[3,1]] and
+c' = [h,t'] = [[1,3],[0,1]], Lambda_N therefore contains
+
+```text
+a_x Delta(t) a_x^(-1) Delta(t)^(-1) = (1,1,c,c),     b_x Delta(t) b_x^(-1) Delta(t)^(-1) = (1,c,1,c),
+b_x Delta(t') b_x^(-1) Delta(t')^(-1) = (1,c',1,c'),  (a_x b_x) Delta(t') (a_x b_x)^(-1) Delta(t')^(-1) = (1,c',c',1),
+```
+
+and hence the commutators
+
+```text
+[(1,1,c,c), (1,c',1,c')] = (1,1,1,y),   [(1,1,c,c), (1,c',c',1)] = (1,1,y,1),   [(1,c,1,c), (1,c',c',1)] = (1,y,1,1),
+```
+
+with y = [c,c'] = [[2,2],[3,1]], which is not 1 or -1. Conjugation by
+Delta(r) replaces y by r y r^(-1). The conjugates of y generate SL2(F5) by the finite count C06. The exact reproduction enumerates the conjugates
+and closes them under multiplication, giving 120 elements. Thus Lambda_N contains (1,1,1,s), (1,1,s,1) and
+(1,s,1,1) for all s, and
+then also (s,1,1,1) = Delta(s) (1,s^(-1),1,1) (1,1,s^(-1),1) (1,1,1,s^(-1)).
+Together with the eight determinant patterns of step 1, Lambda_N is all of
+Lambda, the set of the 4-tuples with determinants +-1 of product 1, of
+order 8 * 120^4.
+
+Step 3. Construct the part Nu. The word c_x b_x has the linear part 1 + n_0, where
+n_0 sends t_x to a nonzero multiple of u in cell x and vanishes on all
+other coordinates. It has nonzero components n_1 into Pi_1 and n_3 into
+Pi_3 (C07). Conjugation by an element of N with linear part Lin replaces n_0
+by Lin n_0 Lin^(-1), that is n_j by g_j n_j g_2^(-1) for j = 1, 3. The matrices
+g - 1, g in SL2(F5), span all 2 by 2 matrices. The elementary
+unipotents give the two off-diagonal units, and diag(2,3) and diag(3,2)
+give two independent diagonal differences. The elements 1 + n with n
+a linear map from Pi_t to Pi_1 + Pi_3 commute and multiply by adding the
+n, so the n that occur form a subspace. Varying g_1 alone and subtracting
+n_0 gives all (A n_1, 0). Varying g_2 afterwards gives all (A n_1 B, 0),
+which is every linear map from Pi_t to Pi_1 because n_1 has rank one. The
+same holds for Pi_3. So every Nu occurs with g_j = 1, and then with every
+element of Lambda (C07: the conjugates span a space of dimension 8).
+
+Step 4. Generate the translations. The translations in N form a subspace T of F5^12
+that is stable under the linear parts. Three words are translations (C08,
+by direct evaluation of the generator functions):
+
+```text
+e_x d_x         translation by the unit vector of q_x,
+d_x P d_x P     translation by (2,1,3,4,1,1) in cell y,
+(c_x d_x)^2     translation by (4,3,4,1,0,3) in cell x.
+```
+
+In the six planes their components are
+
+```text
+e_x d_x:       Pi_q: (1,0)
+d_x P d_x P:   Pi_1: (0,4),  Pi_3: (0,3),  Pi_q: (0,1),  Pi_t: (0,1)
+(c_x d_x)^2:   Pi_1: (3,0),  Pi_2: (3,0),  Pi_3: (2,0),  Pi_4: (1,0),  Pi_t: (3,0)
+```
+
+For a nonzero vector a of a plane, the vectors (g - 1) a, g in SL2(F5),
+span the plane. The first word therefore gives Pi_q inside T (use
+elements with g_2 arbitrary). Subtracting the Pi_q part of the second
+word leaves a vector with a nonzero Pi_t component. Applying 1 + Nu and
+subtracting gives all of Pi_1 + Pi_3 inside T, then the Pi_t component
+itself and hence Pi_t. The third word then leaves (3,0) in Pi_2 plus (1,0)
+in Pi_4. Elements with only g_4 different from 1 give Pi_4, and then Pi_2
+follows. So T = F5^12. The dimensions after the three words are 2, 8, 12
+(C08).
+
+Step 5. By steps 2 to 4 every map described in the theorem is a product
+of elements of N.
+
+**Proof of item 2.** At any fixed radical value the induced piston
+map has an arbitrary translation and a linear part in Lambda.
+Conversely every such piston map has a lift with Nu=0 and hence
+with piston output independent of the radical. The reduction of
+QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT uses g_out and g_in on each
+piston plane, changing each of the four determinants by the common
+factor det(g_out) det(g_in)=-1. This preserves Lambda and bijects
+the induced affine maps to the induced affine maps in the reduced
+coordinates, with target M0(a,b,c)=(a+c,b,c).
+
+Write v_j=(x_j,y_j) for a point of Pi_j and define
+
+```text
+S((x,y),(x',y')) = (xx', (xy'+yx')/2, yy').
+G = S(v_1,v_4) - S(v_2,v_3).
+```
+
+The triple S(v,v') is the binary form (xX+yY)(x'X+y'Y), under the
+identification (a,b,c) with a X^2+2bXY+c Y^2. The form for M0 S adds
+c X^2. Call (v_1,v_4) and (v_2,v_3) the two halves. An induced
+piston map acts by an affine bijection v_j -> g_j v_j+tau_j on each
+plane. If h_d and h_a are its half maps and F_h=S(h(u))-M0 S(u),
+linearity of M0 gives agreement exactly when the two half
+residuals F_{h_d} and F_{h_a} coincide.
+
+In a half let c=yy' and w=yx'-xy'. The coefficient discriminant
+b^2-(a+c)c of M0 S is (w^2-4c^2)/4. Let B' be the half inputs
+with c nonzero and w=±c. The discriminant is then a nonsquare,
+so M0 S cannot be any product of two linear forms. Therefore
+F_h is nonzero on B' for every half map. Choosing y,y' nonzero
+in 16 ways, choosing w from the two distinct values +/-c, and
+choosing x in five ways uniquely determines x', so |B'|=160.
+
+Let E_z consist of the 49 half inputs with at least one of the
+two vectors zero. The test set O consists of E_z  x  B' and
+B'  x  E_z and has 2*49*160=15680 inputs. Fix an input from B'
+in one half and require one specified vector in the other half
+to vanish. The residual on that other half is S(tau,V), with
+tau the fixed output of the zero vector and V the affine image
+of the other vector. If tau=0, the residual is zero, so no point
+agrees. For tau nonzero, multiplication by its linear form is
+injective, and V runs bijectively through F5^2. Thus at most one
+point agrees. There are four choices of the zero position and
+160 choices of the opposite half, giving at most 640 agreements
+for one map. Since 24*640<15680, the minimum is at least 25 on
+every complete ready radical slice. Checks C13 and C15 reproduce
+the test set and an example attaining 640.
+
+**Proof of item 3.** The list `COVER_WORDS` in the
+[quadratic-native-word-count reproduction](../reproduce/quadratic-native-word-count/)
+gives 65 maps. An entry `sr:t1t2t3t4` encodes the map
+
+```text
+(x,y) -> (x+psi y+t,y),   psi=diag(s,r,-r,-s)
+```
+
+on the reduced piston inputs, with t=(t1,t2,t3,t4) in the joint
+eigenbasis. Each plane has determinant one before undoing the
+reduction, so the transformed piston map lies in Lambda. It
+lifts to a native word with Nu=0 by item 1. Check C22 applies the
+transformed maps in Canon coordinates and verifies on all 5^8
+piston pairs that some map satisfies the three Gram equations.
+The lift covers every radical slice.
+
+**Proof of item 4.** Each W_a or W_b either leaves the data
+unchanged or applies the corresponding kernel letter to both
+cells, with at most two elements of N for its data action.
+A registered coupling Ucal_i changes the t coordinate of one
+cell and leaves the other data coordinates fixed, so each
+input sees one of the five translations of that coordinate.
+The selected sequence of branch maps composes to an element of
+N, even when the choice depends on the bit or intermediate data.
+A fixed word therefore selects among at most
+2^(n_W) * 5^(n_U) elements. Applying item 2 to a complete ready
+radical slice gives the claimed bound. The ready set S0 of
+DEF-RESIDUAL-CONTACT-ARCHITECTURE has both t coordinates zero
+and arbitrary pistons and q coordinates. It is a union of such
+slices. The residual step V of RESIDUAL-STEP-RECORD satisfies
+the Gram equation on every such slice in S0.
+
+**Proof of item 5.** Any selector on W^2 with the required
+Gram equation can use at each input z the translation by the
+displacement from z to its chosen output. All these translations
+lift by item 1, with radical action the identity. In particular
+the selector of QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT proves
+existence with fibres of size at most two.
+
+For the smaller list `FIB_WORDS` in the reproduction, the
+first four digits encode the diagonal psi and the final four
+encode t, with the same reduced map (x+psi y+t,y). Again these
+maps lift with Nu=0. The Gram equation in reduced coordinates
+is B(t,y)=0 and
+2 B(x,psi y+t)+q(psi y+t)=q(y), because psi is K-skew.
+For each y separately, give each possible output two ordered
+places. Process the 625 x inputs in lexicographic order.
+To place one input, try agreeing maps in list order, marking
+the outputs already examined in this attempt. Take the first
+free place. When both places are occupied, try recursively
+relocating the first occupant and then the second, reusing the
+marked outputs for this attempt. If one relocation succeeds,
+use the vacated place. The finite check C24 runs this rule and
+places every input. It then re-evaluates the selected map in
+Canon coordinates and directly checks the three Gram equations
+and the fibre counts. On the piston pair there are 107714
+outputs with no preimage, 175197 with one and 107714 with two.
+All 74 alternatives are used. The rule depends only on the
+piston input and a chosen word acts on the two radical planes
+by its invertible g_2. For each piston preimage and each radical
+output there is exactly one corresponding radical preimage.
+The fibre bound therefore holds on V^2. Item 2 gives the lower
+bound of 25 under the same fibre constraint.
+
 ### DEF-RESIDUAL-CONTACT-ARCHITECTURE
 
 Action layer: L1. Fix the piston reshape of DEF-PISTON-2X2-RESHAPE and
@@ -10257,6 +11280,19 @@ The last condition follows because an injection X->X is a permutation,
 excluded by QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION. Hence some two distinct
 initial data states must meet at one data output with different register
 values. This specifies a required reversible write, not just two labels.
+
+By QUADRATIC-L5-SOURCE-SYMMETRY the complete transition must fail to
+commute with the source reflection at the ready state (u,0,0).
+By QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT an affine selector realizing
+the ready data projection requires at least six alternatives. For
+K+0_2, six linear alternatives meet the three conditions above and
+admit an abstract continuation on occupied memory. By
+QUADRATIC-L5-NATIVE-WORD-COUNT a selector among words in the kernel
+generators and couplings realizing the initialized Gram identity on a
+complete ready slice at fixed radical coordinates needs at least 25
+alternatives. Constructing the native transition and its occupied-memory
+continuation certificate remains open.
+
 The abstract capacity theorem supplies T^10=I as one possible construction;
 it does not require every native realization to have period ten. A
 ten-periodic readout can coexist with a longer full-state cycle. No Thue-Morse
@@ -17570,6 +18606,56 @@ site and rail order, with single spaces and a final LF, has SHA-256
 `b05fee6196a0be63a6ab150a2db111114633a66a8c74dc76c8945964c1c7acfa`.
 The result covers the executed rank, window, path and pairing rule.
 Q9 remains open.
+
+### C-H3-ROW0-PULSE-RETURN-N [C]
+
+Use the periodic 288 by 2 H3 station defined in the frozen code of
+P-H3-ROW0-PULSE-RETURN-1, with scattering receivers at x12 and x13, the
+common reference at x23, and the predecessor reader with its
+exact-control veto and row-1 onset correction as frozen there. Observe
+at the x13 to x14 port both transfer words on even ticks 98 through 256,
+reducing each word by the positive gcd of its integer coefficients and
+preserving its sign and zero. For an abstention that passes the veto,
+add a positive decision at tick 256 if the row-0 activity on even ticks
+98 through 120 spells `000111110001`.
+
+In the two preregistered fresh panels the predecessor correctly signs
+1597 of 1600 intact packets and abstains on three positives. The rule
+recovers all three, each directed 0 to 1 at mask phase 2, at signed
+gains -1216, +1088 and +1216. Every prior sign is kept, by construction
+of the rule. Each of the 20 directed intact groups scores 80 of 80. The
+1600 exchanged tails score 1600 correct donor signs. The 3200 isolated
+presentations and 20 quiet controls receive no write.
+
+Of the 3226 fresh abstentions before the rule, 224 pass the veto: the
+three intact packets, their three exchanged copies and 218 isolated
+tails. The six eligible intact or exchanged cases receive the six new
+writes. No control matches the pattern and no true negative abstains, so
+the forecast against a new plus on a negative had no opportunity. Among
+intact packets the pattern occurs on 120 of 800 positives and on 0 of
+800 negatives.
+
+All six silent positives of the opened and fresh panels share one raw
+late row-0 sequence. Each fresh rescue pairs with an opened rescue whose gain
+has the opposite sign and differs by exactly 2048. Each pair has the
+same first late row-1 tick: -1216 with +832 at 144, +1088 with -960 at 186, +1216 with -832
+at 238. The three full two-row primitive projections differ from one
+another and fall outside the 735 distinct projections from the 6420
+presentations in the two opened panels. They differ from their opened
+counterparts only in row 1, which the added rule does not read. Of the
+600 fresh stress intact presentations with an opened counterpart of the
+same direction and phase and gain congruent modulo 2048, 536 repeat the
+complete raw two-row port trace at all 123 recorded ticks.
+
+The rule, the verifier and the fresh rosters were public before the
+result was published. The reader is deterministic, so the committed
+answer order is a custody check. The opening audit checked all 6420
+answers against the committed bytes and matched the canonical answer
+hash produced by the verifier. All eleven registered predicates pass.
+The reader preserves signed calls and enforces the veto by construction.
+Complete correctness on intact and exchanged presentations implies zero
+wrong additions in those arms. This is finite L1 orientation decoding for
+this station and these rosters. Q9 remains open.
 
 ## 3. The kernel and the census
 
