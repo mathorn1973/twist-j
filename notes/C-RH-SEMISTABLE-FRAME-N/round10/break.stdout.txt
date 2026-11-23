@@ -1,0 +1,13 @@
+A orbit: elements=62 ordered=920 diagonal=62 off_diagonal=858
+B neighbors: neighbors=290 ordered=21614 diagonal=290 off_diagonal=21324
+C Gram: cases=35
+D GL_2(F_2): considered=16 retained=6 dimensions=(1, 2)
+D GL_3(F_2): considered=512 retained=168 dimensions=(1, 6)
+D GL_2(F_3): considered=81 retained=48 dimensions=(1, 3, 4)
+D GL_3(F_3): considered=19683 retained=11232 dimensions=(1, 12, 13)
+D totals: considered=20292 retained=11454
+E F_2^4: subspaces=65
+E F_3^4: subspaces=210
+E F_2^5: subspaces=372
+E total: subspaces=647
+Round 10 exact audit passed (candidate-C).

@@ -5,7 +5,7 @@ NON-CANONICAL. No authority. This is an incubation handoff, not promotion.
 ## Identity and basis
 
 - Owner: A. M. Thorn.
-- Sessions: ChatGPT-Astra-Sol-20261123-R8 and continuing R9.
+- Sessions: ChatGPT-Astra-Sol-20261123-R8 and continuing R9 and R10.
 - Public claim: issue 2070.
 - Public main basis: 93c36089db57032a6cbca482ff62c95884567d0f.
 - External source pin: 40e56bab026552e089d7afcfeff08d2defb9c005.
@@ -92,7 +92,7 @@ b83250a7db82d2a27de932617fb39f61cf6af823. Both were read back before execution.
 The recorded driver preflight transcription stop did not execute or change
 the development scientific program; details are preserved in round9/CUSTODY.md.
 
-## Next mathematically meaningful target
+## Target recorded after round 9
 
 For the chosen concrete family and a selected one-prime block alpha, bound
 the dimension of the periodization kernel inside every direct product of
@@ -102,3 +102,52 @@ to specify the remaining local test spaces. Then evaluate the actual Bessel
 tests, including the conjugated row, source character, translate and outer
 integral. This targets the unresolved quantity directly. Merely recounting
 block dimensions or testing independent abstract matrices cannot close it.
+
+## Round 10 continuation
+
+The same candidate now separates complete Fourier rank from the selected
+global period. See round10/PROOF.md for all realization hypotheses.
+
+10. Candidate-D: exact coarse-level source counts and bounds on the old
+    part, with an explicit source-deletion budget. Deleting the all-old
+    part leaves a conductor-one factor at at least one split word-prime
+    place; requiring it at all places has a different, larger cost.
+11. Candidate-D: the actual compact coset orbit has two Gram eigenoperators,
+    a strictly positive constant block and an exactly identified SL-fixed
+    exceptional part. The classical Hee Oh bound gives a quantitative
+    gap before the period without assuming temperedness.
+12. Candidate-D: for r_S>0 the full Fourier rank on the compact orbit is
+    (q^k-1) times the visible input dimension, and the product version is
+    (T_u^k-1)^f times that dimension. No selected-period rank is inferred.
+13. Candidate-D: if the ambient spherical Satake interval count is below
+    2*r_S+1 at one suitable split place, the full Bessel Jacquet module
+    vanishes for every word. A local h=2 unitary spherical example defeats
+    universal nonvanishing; its global occurrence is not asserted.
+14. Candidate-D: under the absolute-fold and actual-realization hypotheses,
+    an actually occurring excluded target slice V_bad forces defect at
+    least dim(V_bad)/D. Counting that slice remains open.
+15. Candidate-D: the word-prime character's incoming uniformizer and the
+    distinct NH evaluation orbits must be retained. Normalizing them away
+    without transporting the tests gives invalid cancellations or rank
+    conclusions.
+
+Both round 10 programs passed every frozen first-run check on one x86_64
+architecture. The contract pin is 4c3ff7a6c3003b8c102ce44eac6e1891b5a8c728;
+the execution pin is e4b7ee04b10e227fa7362b6578c9046dd1613b22.
+Both were remotely read back before execution. There was no failed run,
+retry or code repair. Exact counts, bytes and hashes are in
+round10/RESULTS.md; internal opponent dispositions are in round10/REVIEW.md.
+
+## Current mathematically meaningful target
+
+First determine the actual globally occurring target mass in the excluded
+local Satake types, or prove those types absent. This addresses only a
+common blind subspace. Then establish lower ranks for the specified
+finite period matrices on every surviving target subspace, with the
+actual column lines, source character, translated row and outer integral.
+
+The full-Fourier rank theorem removes a local source of uncertainty but
+does not control this later loss. The original proof needs a sufficiently
+small concentration defect; neither exact semistability nor an exponential
+intrinsic improvement has been proved. The round 9 sharp abstract
+square-root obstruction remains in force.

@@ -1,9 +1,43 @@
-# C-RH-SEMISTABLE-FRAME-N, rounds 8 and 9
+# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 10
 
 **NON-CANONICAL. No authority. No Canon status changes.**
 
 Claim: [issue 2070](https://github.com/mathorn1973/twist-j/issues/2070).
 Alias used in the earlier discussion: C-RH-BK-CONCENTRATION-N.
+
+## Round 10 outcome
+
+Candidate-D: the actual split word-prime compact orbit has only two Gram
+eigenoperators. For r_S>0, after the complete Fourier coefficient, its
+rank is exactly (q^k-1) times the visible input dimension, with the product
+formula over split places. This is a statement about the full Fourier
+function, before selected restrictions and period integrals.
+
+Candidate-D: a spherical ambient local type with Satake height-interval
+count below 2*r_S+1 at one suitable split place has zero Bessel Jacquet
+module for every word. A
+concrete noncharacter unitary spherical local example is therefore blind
+despite full compact orbit rank. Its occurrence in the global target is
+not inferred.
+
+Candidate-D: coarse-level counting bounds the all-old source fraction by
+(k/(T_u^k-1))^f and gives an explicit deletion budget. The actual character
+normalization and distinct evaluation orbits prevent two false reductions.
+
+Candidate-C: both blind, separately authored programs passed every fixed
+first-run test: 920 orbit pairs, 21,614 lattice-neighbor pairs, 35 Gram
+cases, four complete finite groups and 647 target subspaces. One x86_64
+architecture only. The actual selected global period-rank bound remains open.
+
+- [Round 10 proof and scope](round10/PROOF.md)
+- [Round 10 source map and primary references](round10/SOURCE_MAP.md)
+- [Round 10 first-run results](round10/RESULTS.md)
+- [Round 10 development and opposition review](round10/REVIEW.md)
+- [Round 10 preregistration](round10/PREREG.md) and [custody](round10/CUSTODY.md)
+- [Round 10 verifier](round10/verify_r10.py) and [blind opponent](round10/break_r10.py)
+
+Round 10 execution pin: e4b7ee04b10e227fa7362b6578c9046dd1613b22.
+All prior frozen scientific evidence is unchanged.
 
 ## Round 9 outcome
 
