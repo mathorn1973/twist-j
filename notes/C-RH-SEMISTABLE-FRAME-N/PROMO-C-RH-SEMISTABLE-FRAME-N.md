@@ -202,3 +202,63 @@ An unrestricted existence theorem or a nonzero model on each local
 representation cannot replace that subspace inequality. The round 9
 sharp square-root counterexample still limits deductions from the
 audited abstract Gram and symmetry information alone.
+
+## Round 12 continuation
+
+Session ChatGPT-Astra-Sol-20261123-R12 continues the same owned item and
+draft PR. Round12/SOURCE_MAP.md records the refreshed public authority,
+immutable mathematical basis and selected live-source comparison.
+Every frozen round 8-11 scientific file remains unchanged.
+
+20. Candidate-D: on the full genuine row space, the actual relative
+    Bessel vector W and the Schur projector construct a normalized
+    reference local model. Archimedean uniqueness makes the exact
+    outer integrand a fixed global scalar times norm(W(y)) squared.
+    The source's positive quotient measure factor and absolute seed
+    unfolding justify this identity for every full row, without an
+    unproved global boundedness assumption.
+21. Candidate-D: one common infinity translate for all words, rows and
+    columns of a fixed finite instance replaces each actual P_u by a
+    nonzero scalar multiple Q_u given by a single unaveraged Bessel
+    period. Real analyticity, not continuity alone, permits the common
+    point. Every restricted adjoint rank and the defect are identical.
+    All finite tests, including x_u, are retained. There is no effective
+    choice or uniform lower scalar estimate.
+22. Candidate-D: after rational transport, actual words have pairwise
+    inequivalent compact types. One smooth archimedean vector can
+    prescribe arbitrary outputs in all these types simultaneously.
+    This is distinct from the common literal translate; no product,
+    minimal-type or uniform norm condition on that vector is asserted.
+23. Candidate-D: the real row annihilator variety has type
+    (2*r_S+2,1^(k-1)); the next odd hook is excluded. The rational Witt
+    index is r_S+1, but a specified cuspidal realization has first
+    occurrence at most r_S. Nonzero target coefficient requires equality
+    and the prescribed rational norm class. Identical real signs do not
+    fix that class. No actual global counterexample is claimed.
+24. Candidate-D: the full global Fourier kernel on the finite row cut
+    has dimension sum_pi d_pi*dim(K_pi), where K_pi is its subspace in
+    the automorphic multiplicity space. This does not assume multiplicity
+    one. For r_S=0, N is trivial and the full Fourier kernel is zero.
+
+Two Astra paper readers and one Sol source/literature reader returned
+scoped approval with the dispositions in round12/REVIEW.md. There was
+no new scientific computation, candidate-C record or Lean build.
+
+## Current mathematically meaningful target after round 12
+
+Use the single-value maps Q_u of round12/PROOF.md. For D=dim(HH) and
+R=sum_u dim(C_u), establish
+
+sum_u rank(Q_u^* restricted to V)>=R*(dim(V)/D-epsilon_*)
+
+for every V<=HH. This is exactly the original concentration condition.
+The outer archimedean integral has been removed; the finite translates,
+source characters and selected columns remain essential.
+
+For r_S>0 the dimension of the fixed rational full-Fourier kernel also
+remains to be controlled. At higher automorphic multiplicity its budget
+is a kernel dimension in each multiplicity space, not a count of chosen
+copies. A permitted positive defect only requires the corresponding
+small dimension fraction as a necessary condition, not exact zero.
+Neither an unrestricted period existence theorem nor equality of local
+model dimensions gives the remaining selected-subspace rank bound.

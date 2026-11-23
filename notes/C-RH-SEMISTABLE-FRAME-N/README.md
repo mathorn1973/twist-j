@@ -1,9 +1,44 @@
-# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 11
+# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 12
 
 **NON-CANONICAL. No authority. No Canon status changes.**
 
 Claim: [issue 2070](https://github.com/mathorn1973/twist-j/issues/2070).
 Alias used in the earlier discussion: C-RH-BK-CONCENTRATION-N.
+
+## Round 12 outcome
+
+Candidate-D, for the genuine realized family with its absolute-fold
+suppliers: the outer archimedean integral is exactly a norm-square
+normalization. The actual W supplies a nonzero local Bessel model, and
+archimedean multiplicity one identifies the global period with a scalar
+multiple of it. One common infinity translate for the whole finite
+instance replaces every P_u by an explicitly tested, unaveraged period
+Q_u that is a nonzero word scalar times P_u. All restricted adjoint ranks
+and the concentration defect are exactly preserved. No lower bound on
+those global ranks or uniform scalar estimate is inferred.
+
+Candidate-D: the real row annihilator orbit is the closure of
+(2*r_S+2,1^(k-1)), so the next odd Bessel hook is excluded. Cuspidal
+first occurrence is at most r_S; equality and the prescribed rational
+norm class still have to be established where nonvanishing is needed.
+The full Fourier kernel admits an exact multiplicity-space dimension
+budget. At r_S=0 this Fourier kernel is zero because N is trivial.
+
+The separate common-smooth-vector result uses the actual distinct
+compact word types. It gives no uniform norm bound. These reductions
+are paper-only, with development, opposition and a separate source/type
+reader. No new scientific computation or Lean build was run.
+
+- [Round 12 main reduction and complete hypotheses](round12/PROOF.md)
+- [Real orbit and global kernel budget](round12/GLOBAL_OBSTRUCTIONS.md)
+- [Word types, rational orbits and global scope](round12/TYPE_AND_ORBIT_CHECKS.md)
+- [Round 12 source map](round12/SOURCE_MAP.md)
+- [Round 12 paper opposition](round12/REVIEW.md)
+
+The historical round 11 target retained the outer integral. Under the
+explicit round 12 hypotheses it can now be removed. The selected finite
+global period-rank inequality is still open. All round 8-11 scientific
+files remain unchanged.
 
 ## Round 11 outcome
 
