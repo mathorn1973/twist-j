@@ -49,7 +49,7 @@ The baseline is annotated tag `canon-v116` at activation
 | #2061 | `d91453e6d6256320a8e51e0a164b0cbf9f4910a3` | Exact theorem, quantitative bound, real rotations and minimality hold. The review adds that the exact conclusion holds for every connected pair graph. |
 | #2063 | `5c47b58bd1fcd5702625b12f5766cfb150fc5414` | All three results hold; wording repairs only. |
 | #2068 | `1a23e5cb8bf511cdda5bb9866eaf4022fc7af8ec` | Proofs and exact verifier by the session that wrote this proposal; two adversarial passes inside that session found no error. It still needs a review by another party before a fold. |
-| #2072 | `f182c7f2ef5037d1a76e784ca2ed2496c0f1f725` | Proofs and exact verifier by the session that wrote this proposal; the group, the test sets and the bounds were re-derived by two further implementations inside that session, and the text was refereed there. It still needs a review by another party before a fold. |
+| #2072 | `16bfe6eeda21622e3b309a076b9369b8e970fe2f` | Proofs and exact verifier by the session that wrote this proposal; the group, the test sets and the bounds were re-derived by two further implementations inside that session, and the text was refereed there. It still needs a review by another party before a fold. |
 
 The entries for the alternative count and for the native word count are
 conditional on such outside reviews. The other three entries rest on

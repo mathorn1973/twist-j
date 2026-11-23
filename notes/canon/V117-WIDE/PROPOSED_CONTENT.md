@@ -325,10 +325,14 @@ note in pull request #2068 and the release gates described in the
 >    contact alphabet: its data projection selects among at least 25
 >    elements of N on every ready slice, and the word contains n_W controls
 >    and n_U couplings with 2^(n_W) * 5^(n_U) >= 25.
+> 5. Selections among elements of N whose data map has all fibres of
+>    size at most two exist, because every translation lies in N; 74
+>    explicit elements suffice, and at least 25 are needed.
 >
-> These statements concern one initialized step and the Gram identity
-> only. They say nothing about fibres, register writes or continuation,
-> and they are stated for generators applied to one cell at a time.
+> Items 1 to 4 concern one initialized step and the Gram identity only.
+> The selection of item 5 is a matching and no native primitive; register
+> writes and continuation by native words are not constructed. All
+> statements are for generators applied to one cell at a time.
 >
 > **Proof.** The merged note of pull request #2072: the generators in the
 > eigenbasis, the determinant patterns, the commutator construction of SL2
@@ -451,15 +455,17 @@ The registry scope and falsifier of the owner are unchanged.
     for one initialized step has m at least 25, already for one radical
     value, and 65 are attained; the registered controls and couplings
     act at every input as elements of the group, so the bound applies
-    to every fixed word of the residual contact alphabet; no statement
-    is made about the selection rule, fibres, register writes,
-    reversibility or continuation, nor for generators applied to both
-    cells at once only.
+    to every fixed word of the residual contact alphabet; 74 elements
+    suffice for a selection with all data fibres of size at most two;
+    no statement is made about the selection rule as a primitive,
+    native register writes, reversibility or continuation, nor for
+    generators applied to both cells at once only.
   - **Falsifier** A word outside the stated class or a map of the
     class that is not a word; a map of the class agreeing with more
     than 640 of the 15680 stated inputs; 24 or fewer elements whose
-    agreement sets cover the ready inputs of one radical value; or an
-    input served by none of the 65 listed maps.
+    agreement sets cover the ready inputs of one radical value; an
+    input served by none of the 65 listed maps; or the absence of a
+    capacity-two assignment for the 74 listed maps.
   - **Evidence** `EV-QUADRATIC-L5-NATIVE-WORD-COUNT`, kind
     `REPRODUCTION` at `reproduce/quadratic-native-word-count`, built
     from the exact verifier of the source note,
