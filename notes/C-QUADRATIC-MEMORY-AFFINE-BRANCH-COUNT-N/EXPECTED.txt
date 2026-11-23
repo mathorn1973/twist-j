@@ -1,0 +1,41 @@
+[PASS] C01 marked reading: B M = L5 B, (1,1,2)B = (1,2,1), (1,1,2)L5 B = (3,4,1)
+[PASS] C02 reduction: Sym2(g_out) M Sym2(g_in) = M0, with the stated inverses
+[PASS] C03 Gram action G((g x 1)z) = Sym2(g) G(z): exhaustive on F5^4 for the four g
+[PASS] C04 Lemma 3 identity: lambda M0 = (la, lb, la+lc), det L' = det L + la^2, all 125 lambda
+[PASS] C05 Lemma A, all univariate P of degree <= 4 and all bivariate P of degree <= 2: bivariate cases with equality: 1984
+[PASS] C06 Li, Lj antisymmetric, Li^2 = Lj^2 = -I, Li Lj + Lj Li = 0
+[PASS] C07 six pairs: alpha^2 + beta^2 - 1 = alpha (mod 5); six distinct points of P1(F5)
+[PASS] C08 D+ = Li + 2 Lj, D- = Li + 3 Lj: squares 0, D+ D- + D- D+ = I; the six pairs are a D+ + b D- with (a,b) on the cross through (4,4)
+[PASS] C09 Canon formula equals (g_out^-1 x 1)(x + psi y, y)(g_in^-1 x 1) for the six psi
+[PASS] C10 C = I4, Canon target M, all 5^8 inputs: the six linear branches cover: uncovered 0, agreement sizes [78625, 78625, 78625, 78625, 90625, 90625]
+[PASS] C11 C = I4: no five of the six branches cover: left uncovered [57600, 57600, 57600, 57600, 69600, 69600]
+[PASS] C12 C = I4: every input agrees with exactly one or with all six branches: one branch 369600, six branches 21025
+[PASS] C13 C = I4: outputs forced by inputs with one agreeing branch reach multiplicity 4: outputs by multiplicity [(1, 213600), (2, 36000), (3, 12000), (4, 12000)]
+[PASS] C14 C = I4, reduced target M0, branches (x + psi y, y): same cover, b and c preserved
+[PASS] C15 K = antidiag(3,2,2,3): det K = 1 (a square) and P^T K P = I4 for the stated P
+[PASS] C16 C = K, Canon target M, all 5^8 inputs: the six transported branches cover, no five do: uncovered 0, drop-one [57600, 57600, 57600, 57600, 69600, 69600]
+[PASS] C17 Lemma 3 sanity (not a proof): 13 non-tangent affine branches, |Z| <= 4*5^6 = 62500: sizes [15625, 3750, 30625, 28125, 18125, 20125, 15500, 3125, 28525, 28125, 18625, 18625, 34375]
+[PASS] C18 isotropic counts N_r(0) by enumeration: (3,1):25 (3,2):25 (4,1):145 (4,2):105 (5,1):625 (5,2):625 (6,1):3225 (6,2):3025
+[PASS] C19 theta = 1 - N_r(0)/5^r >= 96/125 in every class: 100/125 100/125 480/625 520/625 2500/3125 2500/3125 12400/15625 12600/15625
+[PASS] C20 case table (100 + 10k - k^2)/125 < 1 for k = 0..4: 100/125 109/125 116/125 121/125 124/125
+[PASS] C21 thresholds 4(5-k)/(5(6-k)) < 96/125 for k = 1..5: 16/25 12/20 8/15 4/10 0/5
+[PASS] C22 rank 4, delta = 1: slice counts #{x: q(x+n) = q(x) + c} are 125 (n != 0), 625 [c = 0] (n = 0)
+[PASS] C23 rank 4, delta = 1: |Z_psi| = 125 (625 - |ker|) + 625 #iso(ker), all 15625 skew psi; maximum 5^7 + 4*5^(3+w): sizes [(75625, 800), (78125, 576), (78625, 12400), (80625, 1800), (90625, 49)]
+[PASS] C24 rank 4, delta = 2: slice counts #{x: q(x+n) = q(x) + c} are 125 (n != 0), 625 [c = 0] (n = 0)
+[PASS] C25 rank 4, delta = 2: |Z_psi| = 125 (625 - |ker|) + 625 #iso(ker), all 15625 skew psi; maximum 5^7 + 4*5^(3+w): sizes [(65625, 1), (75625, 1300), (78125, 624), (78625, 12400), (80625, 1300)]
+[PASS] C26 rank 3: maximal |Z_psi| over all 125 skew psi is 5^5 + 4*5^3 = 3625, both delta: 3625 3625
+[PASS] C27 explicit tangent branches attain 5^(2r-1) + 4*5^(r+w-1) for ranks 5 and 6: (5,1):2015625 (5,2):2015625 (6,1):50390625 (6,2):49140625
+[PASS] C28 5^(2r-1) + 4*5^(r+w-1) exceeds the non-tangent bound 4*5^(2r-2) in every class
+[PASS] C29 pencil points (1,t), t in F5, and (0,kappa): six directions, ab + kappa = kappa a + b
+[PASS] C30 rank 5, delta = 1: 29 tangent branches cover all 5^10 inputs: uncovered 0, redundant branches 0, 25 slices re-evaluated directly
+[PASS] C31 rank 5, delta = 2: 29 tangent branches cover all 5^10 inputs: uncovered 0, redundant branches 0, 25 slices re-evaluated directly
+[PASS] C32 rank 6, delta = 1: 25 tangent branches cover all 5^12 inputs: uncovered 0, redundant branches 0, 12 slices re-evaluated directly
+[PASS] C33 rank 6, delta = 2: 25 tangent branches cover all 5^12 inputs: uncovered 0, redundant branches 0, 12 slices re-evaluated directly
+[PASS] C34 rank 4, delta = 2: the 25 listed tangent branches cover all 5^8 inputs: uncovered 0 (level sets), 0 (direct evaluation), redundant branches 0
+[PASS] C35 cross-check of the cover routine on the six branches of rank 4, delta = 1
+[PASS] C36 plane lemma, all 12500 conics Q + L - c of F5^2 with c != 0: 960 meet all six directions; each has exactly two isotropic zeros
+[PASS] C37 covers of F5^2 by at most six lines: a complete parallel class or six concurrent lines: 156 with a parallel class, 25 pencils
+[PASS] C38 rank 4, delta = 2: at most 105 non-isotropic y with q(psi y) = 0; 6*105 < 2*520: maximum found 104 (for delta = 1: 480)
+[PASS] C39 rank 3: at most 25 non-isotropic y with q(psi y) = 0; 6*25 < 2*100: maxima found 20 20
+[PASS] C40 rank 5 and (6,2): 6*25*N_3(0) < 2*2500 and 6*max(N_6(0), 625*N_2(0)) < 2*12600: 3750 < 5000, 18150 < 25200
+ALL CHECKS PASS (40 checks)
