@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v115, v114, v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v116
+historical guards: exact reconstructed v116, v115, v114, v113, v112, v111, v110, v109, v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v117
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -264,5 +264,11 @@ PASS 259 V116-EVIDENCE the two declarations bind distinct sealed public probes a
 PASS 260 V116-BOUNDARY the v115 Frontier, dependency and gate bytes and all 43 reproduction directories are preserved
 PASS 261 V116-H3-RELAY the original interval has individual third-cell deliveries, two fixed refusals and zero compatible pairs
 PASS 262 V116-H3-CONTINUATION the later interval preserves the fixed positive B2, zero reference readiness and zero pairs with a new B1
+PASS 263 V117-PRIOR-BYTES the pinned reverse fold reconstructs exact v116 inputs before all 262 historical guards
+PASS 264 V117-CLAIM-LEDGERS four L1 theorems and one finite L1 computation extend 634 prior registry rows unchanged
+PASS 265 V117-EVIDENCE the five declarations bind the reviewed source bytes, inline scopes and both promoted exact verifiers
+PASS 266 V117-BOUNDARY the 25 live owners and gate ledgers persist, with ten explicit edges and two additional reproduction directories
+PASS 267 V117-H3-PULSE-RETURN the frozen fresh transcript distinguishes three intact rescues from their three exchanged copies and silent controls
+PASS 268 V117-QUADRATIC-COUNTS the promoted finite checks distinguish affine occupied continuation from the ready-slice native word bound
 
-RESULT 262/262 ALL PASS
+RESULT 268/268 ALL PASS

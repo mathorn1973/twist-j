@@ -1245,3 +1245,13 @@ METRO-ENC4-TRANSLATED-BOX	METRO-COMMON-BLOCKING	REQUIRES	The already proved poin
 METRO-ENC4-NORMALIZATION	METRO-ENC4-TRANSLATED-BOX	REQUIRES	The exact common ENC4 decision, total tagged result and uniform effective modulus provide the mathematical source of this adopted L5-to-L6 dictionary.
 METRO-ENC4-NORMALIZATION	DEF-ACTION-LAYERS	REQUIRES	The complete raw L5 stream and dimensionless tagged L6 endpoint retain their distinct protocol types.
 METRO-ADMISSIBILITY-DIM	METRO-ENC4-TRANSLATED-BOX	BOUNDED_BY	The exact common ENC4 theorem delimits the discharged subdomain C_ENC4; the open obligation retains only C_dim minus that subdomain and keeps the full C_dim for R1/R6 ownership.
+QUADRATIC-L5-SOURCE-SYMMETRY	DEF-QUADRATIC-MEMORY-L5	REQUIRES	The registered carrier, Gram reading and target specify the transition equation.
+QUADRATIC-L5-SOURCE-SYMMETRY	QUADRATIC-L5-INITIALIZED-CAPACITY	REQUIRES	The scalar-equivariant lift attains the established minimum reachable cardinality.
+QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT	DEF-QUADRATIC-MEMORY-L5	REQUIRES	The registered Gram reading and target specify agreement on the ready layer.
+QUADRATIC-L5-NATIVE-WORD-COUNT	DEF-QUADRATIC-MEMORY-L5	REQUIRES	The registered Gram reading and target specify the ready-slice equation.
+QUADRATIC-L5-NATIVE-WORD-COUNT	DEF-RESIDUAL-CONTACT-ARCHITECTURE	REQUIRES	The native alphabet and registered C specify the fixed words and full radical slices.
+QUADRATIC-L5-NATIVE-WORD-COUNT	KERNEL-WEDGE-AFFINITY	REQUIRES	The single-cell kernel generators supply their exact affine maps.
+QUADRATIC-L5-NATIVE-WORD-COUNT	KERNEL-WEDGE-COUPLING	REQUIRES	The registered two-cell couplings supply the exact maps P and Q.
+QUADRATIC-MEMORY-NATIVE-CONTACT	QUADRATIC-L5-SOURCE-SYMMETRY	BOUNDED_BY	abstract reader/capacity and subclass obstructions leave native admission and full occupied continuation open
+QUADRATIC-MEMORY-NATIVE-CONTACT	QUADRATIC-L5-AFFINE-ALTERNATIVE-COUNT	BOUNDED_BY	abstract reader/capacity and subclass obstructions leave native admission and full occupied continuation open
+QUADRATIC-MEMORY-NATIVE-CONTACT	QUADRATIC-L5-NATIVE-WORD-COUNT	BOUNDED_BY	abstract reader/capacity and subclass obstructions leave native admission and full occupied continuation open
