@@ -138,7 +138,7 @@ Both were remotely read back before execution. There was no failed run,
 retry or code repair. Exact counts, bytes and hashes are in
 round10/RESULTS.md; internal opponent dispositions are in round10/REVIEW.md.
 
-## Current mathematically meaningful target
+## Target recorded after round 10
 
 First determine the actual globally occurring target mass in the excluded
 local Satake types, or prove those types absent. This addresses only a
@@ -151,3 +151,54 @@ does not control this later loss. The original proof needs a sufficiently
 small concentration defect; neither exact semistability nor an exponential
 intrinsic improvement has been proved. The round 9 sharp abstract
 square-root obstruction remains in force.
+
+## Round 11 continuation
+
+The referee's proposed local equivalence is accepted and its global
+weight argument is strengthened under the genuine realization.
+This paper-only continuation changes no frozen scientific record.
+
+16. Candidate-D: the actual source pair is neutral for the hook
+    (2*r_S+1,1^k). Classical GL wavefront theory and highest derivatives
+    prove that its twisted Jacquet module is nonzero if and only if
+    h_v>=2*r_S+1. The case r_S=0 is included explicitly.
+17. Candidate-D, conditional on the full geometric realization and the
+    source's actual parameter family: all adjacent Harish-Chandra gaps
+    exceed one, including the join. The bounded convolution's entire
+    finite-dimensional range lies in finitely many discrete automorphic
+    summands. Labesse transfers these at the actual split places.
+    All nontrivial Speh lengths are excluded, and the strict
+    Jacquet-Shalika annulus forbids finite-place adjacency across every
+    cuspidal factor. Therefore h_v=n_G and the round 10 V_bad is zero.
+18. Candidate-D: on an individual embedded smooth automorphic row, a
+    nonzero full coefficient of the fixed rational type is equivalent to
+    a nonzero period against some unrestricted smaller automorphic
+    representation when its quotient is compact. This does not select a
+    member of the source's finite word family.
+19. Scope correction: global GGP gives an equivalence for a given pair
+    with a central-value condition and existential Hermitian form/member.
+    Its refined formula has additional temperedness and test-vector
+    requirements. Neither closes the selected global period-rank problem.
+
+Two Astra paper lanes and one Sol global-period reader challenged the
+normalizations, spectral argument, base-change scope and global
+quantifiers. No new finite computation, blind code audit or Lean build
+was performed. Source checks are documented in round11/SOURCE_MAP.md;
+opponent dispositions and conditions are in round11/REVIEW.md.
+
+## Current mathematically meaningful target after round 11
+
+For the fixed rational Fourier type set K_glob=HH intersect ker(F_psi).
+The local-type argument excludes the specified V_bad but does not make
+K_glob zero. Absolute unfolding gives the necessary bound
+epsilon(P)>=dim(K_glob)/D. For a permitted epsilon_* the first necessary
+target is dim(K_glob)/D<=epsilon_*, not necessarily injectivity.
+
+The exact remaining target is
+sum_u rank(P_u^* restricted to V)>=R*(dim(V)/D-epsilon_*) for every
+V<=HH, with all selected columns, translated rows and outer integrals
+retained. This is equivalent to the required concentration bound.
+An unrestricted existence theorem or a nonzero model on each local
+representation cannot replace that subspace inequality. The round 9
+sharp square-root counterexample still limits deductions from the
+audited abstract Gram and symmetry information alone.

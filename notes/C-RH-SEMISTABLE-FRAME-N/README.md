@@ -1,9 +1,43 @@
-# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 10
+# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 11
 
 **NON-CANONICAL. No authority. No Canon status changes.**
 
 Claim: [issue 2070](https://github.com/mathorn1973/twist-j/issues/2070).
 Alias used in the earlier discussion: C-RH-BK-CONCENTRATION-N.
+
+## Round 11 outcome
+
+Candidate-D: the actual odd-hook character is a neutral Whittaker pair.
+Classical wavefront and derivative theory make the round 10 local
+criterion an equivalence: the Bessel Jacquet module is nonzero exactly
+when the Satake interval count is at least 2*r_S+1.
+
+Candidate-D, for the genuine full geometric realization with its
+parameter-family suppliers: every adjacent archimedean row-parameter gap,
+including the join, is larger than one. Labesse's discrete base change,
+the GL discrete-spectrum classification and the strict Jacquet-Shalika
+bound then give h_v=n_G at every split finite place where the row is
+spherical. Thus the locally excluded V_bad of round 10 is zero in this
+setting. The full global Fourier kernel remains a different question.
+
+The global period theorems do not automatically provide a smaller
+representation, a nonzero central value, the required rational form or
+the selected test-vector ranks. The remaining exact condition is a lower
+sum-of-ranks inequality on every target subspace. For the necessary
+common-kernel condition, a positive error budget requires a small kernel
+fraction; exact injectivity is stronger than needed.
+
+This is paper-only work with two Astra review lanes and one Sol
+global-period reader. No new finite computation or Lean build was run.
+The supplied referee's check counts are not adopted as our own evidence.
+
+- [Round 11 proof and hypotheses](round11/PROOF.md)
+- [Round 11 source map and primary references](round11/SOURCE_MAP.md)
+- [Round 11 opponent dispositions and evidence boundary](round11/REVIEW.md)
+
+The round 10 historical target of counting locally excluded types is
+resolved under these explicit realization hypotheses. All frozen
+scientific evidence from rounds 8-10 remains unchanged.
 
 ## Round 10 outcome
 
