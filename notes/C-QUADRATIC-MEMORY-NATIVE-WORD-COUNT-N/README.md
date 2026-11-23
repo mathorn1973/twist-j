@@ -30,7 +30,14 @@ G(z) = (p_x^T K p_x,  p_x^T K p_y,  p_y^T K p_y) = (a, b, c),        M(a,b,c) = 
 ```
 
 where p_x, p_y are the pistons of the two cells. The whole layer V^2 is
-ready once, as in DEF-QUADRATIC-MEMORY-L5.
+ready once, as in DEF-QUADRATIC-MEMORY-L5. The Canon writes a cell as
+(p, q, r); its r is the coordinate t here, and its shear Q_cs is Q. The
+ready set S0 of DEF-RESIDUAL-CONTACT-ARCHITECTURE has r = 0 in both cells
+and arbitrary pistons and q, so it is a union of radical slices; the lower
+bound below holds on every slice, and the cover of section 8 does not
+depend on the radical, so both bounds hold there unchanged. Several
+letters (c, t, P, u, e, h) are reused locally; each use is introduced where
+it occurs.
 
 **Native words.** KERNEL-WEDGE-AFFINITY supplies five affine bijections
 a, b, c, d, e of one cell; KERNEL-WEDGE-COUPLING supplies the couplings
@@ -51,19 +58,21 @@ that allows only diagonal letters (the same generator on both cells at
 once), or that drops P and Q, gives a different group and is not covered.
 
 **Native selectors.** A native selector with m alternatives is a map of V^2
-whose value at every z is one of w_1(z), ..., w_m(z), for fixed native
-words w_1, ..., w_m. The same m words serve all inputs; nothing is assumed
+whose value at every z is one of omega_1(z), ..., omega_m(z), for fixed
+native words omega_1, ..., omega_m. The same m words serve all inputs;
+nothing is assumed
 about the rule that selects among them. Its data output satisfies the
 readout equation on every ready input, for one initialized step, exactly
 when the agreement sets
 
 ```text
-Z(w_i) = { z in V^2 : G(w_i(z)) = M G(z) }
+Z(omega_i) = { z in V^2 : G(omega_i(z)) = M G(z) }
 ```
 
 cover V^2. Let m_nat be the least m for which such words exist. The Canon
 excludes m = 1 and m = 2; pull request #2068 excludes m <= 5 for arbitrary
-affine maps.
+affine maps and shows that six linear maps of tangent type suffice for
+C = K + 0_2. By Theorem L below those six cannot all be native.
 
 | Statement | Status |
 |---|---|
@@ -122,15 +131,17 @@ plane of e_+-: the sign of a is + and the signs of b, c, d, e are -, on R
 and on e_+- alike.
 
 **Theorem S (the native group).** *Status: proved here; the finite steps
-are verified (C01 to C09).* N consists exactly of the maps z -> M z + v of
-F5^12 with v arbitrary and M of the following form.
+are verified (C01 to C09).* N consists exactly of the maps z -> Lin z + v
+of F5^12 with v arbitrary and Lin of the following form.
 
-1. M maps every plane Pi_j to itself and acts on it by a matrix g_j of
+1. Lin maps every plane Pi_j to itself and acts on it by a matrix g_j of
    GL2(F5) with det g_j = +-1 and det g_1 det g_2 det g_3 det g_4 = 1.
    Every such 4-tuple occurs. These 4-tuples form a group Lambda of order
    8 * 120^4 = 1658880000.
-2. M maps Pi_q and Pi_t to themselves and acts on both by g_2.
-3. The only further part of M is a linear map Nu from Pi_t to Pi_1 + Pi_3.
+2. Lin maps Pi_q to itself and acts on it by g_2; the Pi_t-component of
+   Lin restricted to Pi_t is g_2 as well.
+3. The only further part of Lin is a linear map Nu from Pi_t to
+   Pi_1 + Pi_3.
    Every Nu occurs, independently of (g_1, ..., g_4).
 
 Consequently the group of linear parts has order 5^8 * 8 * 120^4, and N
@@ -148,13 +159,15 @@ each of product 1. So N is contained in that group, and the determinant
 patterns that occur are exactly the eight patterns of product 1 (C05). The
 pattern (-1,-1,-1,-1) comes from d or e applied to one cell.
 
-Step 2: Lambda contains SL2(F5)^4. Write elements of Lambda as 4-tuples.
+Step 2: the group Lambda_N of the 4-tuples (g_1, ..., g_4) that occur as
+linear parts of elements of N contains SL2(F5)^4. By step 1, Lambda_N lies
+in Lambda. Write its elements as 4-tuples.
 Let t = [[1,0],[1,1]] and t' = [[1,1],[0,1]]; they generate SL2(F5), of
-order 120 (C06). Since P and Q act by t and t' on every plane, Lambda
+order 120 (C06). Since P and Q act by t and t' on every plane, Lambda_N
 contains Delta(s) = (s,s,s,s) for all s in SL2(F5). Let h = diag(-1,1). The
 components of a_x, b_x and a_x b_x are (1,1,h,h), (1,h,1,h) and (1,h,h,1).
 With [g,s] = g s g^(-1) s^(-1), c = [h,t] = [[1,0],[3,1]] and
-c' = [h,t'] = [[1,3],[0,1]], Lambda therefore contains
+c' = [h,t'] = [[1,3],[0,1]], Lambda_N therefore contains
 
 ```text
 a_x Delta(t) a_x^(-1) Delta(t)^(-1) = (1,1,c,c),     b_x Delta(t) b_x^(-1) Delta(t)^(-1) = (1,c,1,c),
@@ -170,17 +183,19 @@ and hence the commutators
 with y = [c,c'] = [[2,2],[3,1]], which is not 1 or -1. Conjugation by
 Delta(r) replaces y by r y r^(-1). The conjugates of y generate SL2(F5):
 they generate a normal subgroup that is not contained in the centre
-{1,-1}, and the verifier confirms by enumeration that it has 120 elements
-(C06). So Lambda contains (1,1,1,s), (1,1,s,1) and (1,s,1,1) for all s, and
+{1,-1}, the only normal subgroups of SL2(F5) are 1, {1,-1} and the whole
+group, and the verifier confirms by enumeration that it has 120 elements
+(C06). So Lambda_N contains (1,1,1,s), (1,1,s,1) and (1,s,1,1) for all s, and
 then also (s,1,1,1) = Delta(s) (1,s^(-1),1,1) (1,1,s^(-1),1) (1,1,1,s^(-1)).
-Together with step 1, Lambda is the set of all 4-tuples with determinants
-+-1 of product 1, and its order is 8 * 120^4.
+Together with the eight determinant patterns of step 1, Lambda_N is all of
+Lambda, the set of the 4-tuples with determinants +-1 of product 1, of
+order 8 * 120^4.
 
 Step 3: the part Nu. The word c_x b_x has the linear part 1 + n_0, where
 n_0 sends t_x to a nonzero multiple of u in cell x and vanishes on all
 other coordinates; it has nonzero components n_1 into Pi_1 and n_3 into
-Pi_3 (C07). Conjugation by an element of N with linear part M replaces n_0
-by M n_0 M^(-1), that is n_j by g_j n_j g_2^(-1) for j = 1, 3. The matrices
+Pi_3 (C07). Conjugation by an element of N with linear part Lin replaces n_0
+by Lin n_0 Lin^(-1), that is n_j by g_j n_j g_2^(-1) for j = 1, 3. The matrices
 g - 1, g in SL2(F5), span all 2 by 2 matrices. The elements 1 + n with n
 a linear map from Pi_t to Pi_1 + Pi_3 commute and multiply by adding the
 n, so the n that occur form a subspace. Varying g_1 alone and subtracting
@@ -265,10 +280,10 @@ part in Lambda whose agreement sets cover W^2. If m native words cover
 V^2, their induced maps at one radical value cover W^2; conversely maps
 of W^2 with linear part in Lambda lift to native words with Nu = 0, whose
 agreement sets do not depend on the radical. In particular a lower bound
-needs only one radical value. m_nat is finite: all 125 Gram values are
-attained on W^2, and for every input z, every L in Lambda and every z'
-with G(z') = M G(z) there is exactly one translation tau with
-L z + tau = z'.
+needs only one radical value. A native cover exists: all 125 Gram values
+are attained on W^2, so for every input z of W^2, every L in Lambda and
+every z' with G(z') = M G(z) there is exactly one translation tau with
+L z + tau = z', and that map agrees at z.
 
 ## 4. Halves, tangent words, and two sets of hard inputs
 
@@ -283,14 +298,15 @@ A triple (a,b,c) is read as the binary form a X^2 + 2b XY + c Y^2; then
 S(v, v') is the product of the linear forms x X + y Y and x' X + y' Y, and
 M0 adds c X^2. The diagonal half of an input is u = (v_1, v_4), the
 antidiagonal half is w = (v_2, v_3). (The letter w is used for the wedge
-of a half and for the antidiagonal half; the meaning is clear from the
-context.)
+of a half, for the antidiagonal half and for a point of a half, as in
+"w in B'"; native words are written omega.)
 
-**Proposition H (halves).** *Status: proved here; the resulting counts are
-verified against direct evaluation (C11 to C22).* G = S(v_1, v_4) -
+**Proposition H (halves).** *Status: proved here; it underlies the counts
+of C11 to C22, which are obtained by direct evaluation.* G = S(v_1, v_4) -
 S(v_2, v_3). A map with linear part in Lambda acts on the two halves
-separately, v_j -> g_j v_j + tau_j. For a half-map h(v, v') =
-(g v + tau, g' v' + tau') put F_h(u) = S(h(u)) - M0 S(u). Then
+separately, v_j -> g_j v_j + tau_j. A half-map is h(v, v') =
+(g v + tau, g' v' + tau') with det g and det g' in {1, -1}; put
+F_h(u) = S(h(u)) - M0 S(u). Then
 f = (h_d, h_a) agrees at (u, w) if and only if F_{h_d}(u) = F_{h_a}(w).
 The two halves are coupled only by det g_1 det g_4 = det g_2 det g_3.
 
@@ -299,7 +315,11 @@ statement. G(f(z)) = M0 G(z) reads
 S(h_d(u)) - S(h_a(w)) = M0 S(u) - M0 S(w), because M0 is linear. QED
 
 **Proposition T (tangent words).** *Status: proved here; verified (C10,
-C11).* For a half-map h the components F_h^b and F_h^c are constant if
+C11).* A map f = (h_d, h_a) is of tangent type when its second and third
+residuals vanish identically, that is F^b and F^c of the two halves agree
+identically; the halves use disjoint variables, so each of these
+components is then constant. For a half-map h the components F_h^b and
+F_h^c are constant if
 and only if tau = tau' = 0, g = m [[1,psi],[0,1]] and
 g' = m^(-1) [[1,-psi],[0,1]]; then F_h = (psi w - (1 + psi^2) c, 0, 0).
 Hence the maps of tangent type (in the sense of #2068) with linear part in
@@ -363,7 +383,7 @@ c = w = 0 and the other has c nonzero and no root of
 c psi^2 - w psi + c, that is (w/c)^2 - 4 a non-square, that is w = +-c.
 QED
 
-**Proposition O (inputs missed by all native words of zero translation).**
+**Proposition O (inputs missed by all linear maps with linear part in Lambda).**
 *Status: proved here; verified (C13, C14).* An input of W^2 agrees with no
 map p -> L p, L in Lambda, if and only if it lies in O.
 
@@ -416,7 +436,8 @@ Remarks.
   the total weight 16000 = 25 * 640, while the argument still bounds the
   weight collected by one map by 640. So a native selector with exactly 25
   alternatives would have to cover every input of O exactly once, with
-  every word reaching 640.
+  every word reaching the weight 640 (inputs with u = 0 or w = 0 counted
+  twice).
 
 ## 6. A second test set
 
@@ -456,8 +477,10 @@ because a binary quadratic form is divisible by a linear form exactly
 when it vanishes at its root, and F_h(u) is the form of
 (g v + tau_h, g' v' + tau'_h) minus the form of (v, v') minus y y' X^2.
 
-Lemma 2 (finite, C16). For each of the six root points P, up to scalars,
-and all 24 * 5 * 24 * 5 values of (A, alpha, A', alpha'), the number of
+Lemma 2 (finite, C16). The equation of Lemma 1 is homogeneous of degree
+two in P, so P matters only up to scalars. For each of the six root
+points P and all 24 * 5 * 24 * 5 values of (A, alpha, A', alpha'), the
+number of
 points of B' satisfying the equation of Lemma 1 is at most 64, with one
 exception: for P = (0,1), that is tau on the x-axis, and
 (A, alpha, A', alpha') = ((0,m), 0, (0,1/m), 0) it is 160. The exception
@@ -483,8 +506,8 @@ vanishes; C1 = 0 if t_1 = 0. Likewise for C2, C3, C4. Hence
 
 with k_d the number of nonzero t_1, t_4 and k_a the number of nonzero
 t_2, t_3. By Lemma 3, z >= 30 for a half with two nonzero translations.
-The cases (k_d, k_a) = (2,2), (2,1), (2,0), (1,1) give at most 520, 450,
-320, 320 (C18). The value 520 is reached by the map that is
+Up to exchanging the halves, the cases (k_d, k_a) = (2,2), (2,1), (2,0),
+(1,1), (1,0), (0,0) give at most 520, 450, 320, 320, 160, 0 (C18). The value 520 is reached by the map that is
 (x + nu y + t, y) in reduced coordinates with nu = diag(0,0,1,1) and
 t = e_++ + e_+- + e_-+ + e_--; its agreement set has 18125 inputs (C19).
 QED
@@ -501,7 +524,8 @@ attainment verified (C21).* The largest agreement set of a map with linear
 part in Lambda that is not of tangent type has 40625 = 13 * 5^5 inputs.
 It is reached by (x + nu y, y) in reduced coordinates with nu the
 projector onto one eigenline, which lies in A but is not K-skew. Together
-with Proposition T, no native word has an agreement set of a size
+with Proposition T, no map of W^2 with linear part in Lambda, that is no
+native word at a fixed radical value, has an agreement set of a size
 strictly between 40625 and 78625. The general bound of #2068 for affine
 maps not of tangent type is 62500.
 
@@ -522,7 +546,7 @@ products, with pruning by the Cauchy-Schwarz inequality for M1 and by row
 and column maxima for M2. The same computations give 520 on U1 and 640
 on O, in agreement with Proposition W and Theorem L. One of them reports
 in addition that a map with a nonzero translation agrees on at most 30625
-inputs, so that every map reaching 32625 or more is linear.
+inputs, so that every map agreeing on more than 30625 inputs is linear.
 
 ## 8. An explicit cover
 
@@ -608,14 +632,14 @@ preregistration or a probe.
 - Theorem S is refuted by a native word outside the stated class, or by a
   map of the stated class that is not a native word; the verifier would
   report a wrong generator table, pattern or translation word.
-- Theorem L is refuted by 24 native words whose agreement sets cover V^2,
-  or by one map with linear part in Lambda that agrees with more than 640
-  inputs of O.
+- Theorem L is refuted by 24 native words whose agreement sets cover the
+  ready inputs of one radical value, or by one map with linear part in
+  Lambda that agrees with more than 640 inputs of O.
 - Proposition W is refuted by a map with linear part in Lambda that
   agrees with more than 520 inputs of U1.
-- Statements M1 and M2 are refuted by a native word, not of tangent type,
-  with more than 40625 agreeing inputs of W^2, respectively by a native
-  word agreeing with more than 880 inputs of U.
+- Statements M1 and M2 are refuted by a map of W^2 with linear part in
+  Lambda, not of tangent type, with more than 40625 agreeing inputs,
+  respectively by such a map agreeing with more than 880 inputs of U.
 - Proposition C is refuted by an input at which none of the 65 listed
   maps satisfies G(f(z)) = M G(z); the verifier would report it.
 
@@ -633,12 +657,29 @@ more. If the declared gate alphabet is the slotwise word class of
 QUADRATIC-L5-NATIVE-OBSTRUCTIONS and the data projection on the ready
 layer is a selection among fixed words of that class, then at least 25
 distinct words must be selected among, and 65 suffice for the Gram
-identity alone. The independent admission of C and of the reading, the
-selection rule, the bit write and the continuation are not addressed, and
-no admitted permutation is supplied. The item stays open. The registered
-controls W_a, W_b and the couplings Ucal_i of
-DEF-RESIDUAL-CONTACT-ARCHITECTURE are not words of this class and are
-outside the scope of this note.
+identity alone, with an unrestricted selection rule. The independent
+admission of C and of the reading, the selection rule, the bit write and
+the continuation are not addressed, and no admitted permutation is
+supplied. The item stays open.
+
+The registered controls W_a, W_b and the couplings Ucal_i of
+DEF-RESIDUAL-CONTACT-ARCHITECTURE are not elements of N: W_i acts on
+F5^12 times {0,1} and applies the identity or I_i, that is a_x a_y or
+b_x b_y, depending on the cross-Gram component and on the bit, and Ucal_i
+permutes the coordinate t of one cell depending on its q. At every input,
+however, each of them acts on F5^12 as an element of N: as I_i, as the
+identity, or as a translation of that coordinate t. Hence every fixed word
+of the extended alphabet, applied from one bit value, has a data
+projection that selects among finitely many native maps, at most two for
+every occurrence of a control W_i and five for every occurrence of a
+coupling Ucal_i, and Theorem L applies to it. In particular the
+composition V = A_y T_alg A_x of RESIDUAL-STEP-RECORD, which satisfies
+G(V z) = M G(z) on S0, selects among at least 25 distinct native maps on
+every slice of S0 with fixed q, and any word of that alphabet with this
+property contains n_W controls and n_U couplings with
+2^(n_W) * 5^(n_U) >= 25. This is consistent with the Canon, whose word
+T_alg is very long. Nothing here concerns the records, the bit or the
+fibres of that construction.
 
 The statements depend on the word class as fixed in section 1. For
 diagonal letters only, or without the couplings, the group is different
