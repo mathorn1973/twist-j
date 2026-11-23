@@ -735,5 +735,252 @@ check("upper bound: the %d listed maps are induced by native words and their agr
       "covered %d, tangent members %d, largest part of O %d, of U1 %d"
       % (sum(covered), sum(1 for wd in COVER_WORDS if wd[3:] == "0000"), most_o, most_u1))
 
+# ------------------------------------------------ 10. fibres of size at most two
+# words "n1n2n3n4:t1t2t3t4": reduced map (u, v) -> (u + nu v + t, v) with nu = diag(n1, n2, n3, n4)
+# and t = t1 e_++ + t2 e_+- + t3 e_-+ + t4 e_--
+FIB_WORDS = (
+    "0000:0000 1144:0000 2233:0000 4411:0000 3412:0000 2003:0000 0230:0000 0320:0000 "
+    "3002:0000 1414:0000 4141:0000 1234:0000 0000:1111 0000:1122 0000:1133 0000:1144 "
+    "0000:2211 0000:2222 0000:2233 0000:2244 0000:3311 0000:3322 0000:3333 0000:3344 "
+    "0000:4411 0000:4422 0000:4433 0000:4444 0230:1312 0230:1324 0230:1331 0230:1343 "
+    "0320:4212 0320:4224 0320:4231 0320:4243 2413:3300 1144:2413 1144:2421 1144:2434 "
+    "1144:2442 1324:3300 3002:3113 3002:3121 3002:3134 3002:3142 2003:2413 2003:2421 "
+    "2003:2434 2003:2442 1144:1312 1144:1324 1144:1331 1144:1343 1144:1414 1144:1423 "
+    "1144:1432 1144:1441 0140:1100 4411:4114 4411:4123 4411:4132 4411:4141 0410:3000 "
+    "0000:0033 4321:0110 0000:0011 3322:1100 3002:0140 0000:0022 2143:2200 3002:2000 "
+    "0140:3102 0000:0044 "
+).split()
+FIB_MAPS = [(tuple(int(ch) for ch in wd[:4]), tuple(int(ch) for ch in wd[5:])) for wd in FIB_WORDS]
+COVER_MAPS = [((int(wd[0]), int(wd[1]), (-int(wd[1])) % P, (-int(wd[0])) % P),
+               tuple(int(ch) for ch in wd[3:])) for wd in COVER_WORDS]
+
+agree_count = bytearray(N8)
+for nu, t in FIB_MAPS:
+    agree_count = bytearray(a + b for a, b in zip(agree_count, canon_agreement(ONES, nu, ONES, t)))
+check("the %d maps of section 9 are of the form (u + nu v + t, v) with nu K-skew, so they are "
+      "induced by native words; in the original coordinates with K and M every input agrees "
+      "with at least one of them" % len(FIB_MAPS),
+      len(FIB_MAPS) == 74 and len(set(FIB_WORDS)) == 74 and native_induced(ONES, ONES)
+      and all(nu[2] == (-nu[1]) % P and nu[3] == (-nu[0]) % P for nu, t in FIB_MAPS)
+      and min(agree_count) >= 1,
+      "agreeing maps per input: least %d, most %d" % (min(agree_count), max(agree_count)))
+
+
+def q_eig(x):
+    return (x[0] * x[3] - x[1] * x[2]) % P
+
+
+def b2_eig(x, y):
+    return (x[0] * y[3] + x[3] * y[0] - x[1] * y[2] - x[2] * y[1]) % P
+
+
+Q_EIG = [q_eig(v) for v in VEC4]
+HYPER = {}
+
+
+def hyperplane(di, need):
+    """the u (indices in lexicographic order) with 2 B(u, d) = need, in eigen-coordinates."""
+    key = di * P + need
+    h = HYPER.get(key)
+    if h is None:
+        d = VEC4[di]
+        h = [i for i, u in enumerate(VEC4) if b2_eig(u, d) == need]
+        HYPER[key] = h
+    return h
+
+
+def capacity_two(maps):
+    """The selection rule of section 9, slice by slice (reduced eigen-coordinates).
+    Returns (number of inputs placed, CH, OUT) with CH[v][u] the index of the chosen map (or -1)
+    and OUT[v][u] the index of the output u + nu v + t."""
+    placed = 0
+    ch_all = []
+    out_all = []
+    for vi, v in enumerate(VEC4):
+        cand = [[] for _ in range(625)]
+        for k, (nu, t) in enumerate(maps):
+            if b2_eig(t, v):
+                continue                              # B(t, v) != 0: the map agrees nowhere in the slice
+            d = tuple((n * c + s) % P for n, c, s in zip(nu, v, t))
+            di = IDX4[d]
+            need = (Q_EIG[vi] - Q_EIG[di]) % P        # agreement: 2 B(u, d) + q(d) = q(v)
+            if di == 0:
+                if need == 0:
+                    for u in range(625):
+                        cand[u].append((u, k))
+                continue
+            row = ADD[di]
+            for u in hyperplane(di, need):
+                cand[u].append((row[u], k))
+        occ = [[] for _ in range(625)]                # the at most two inputs placed at an output
+        chosen = [-1] * 625
+        target = [-1] * 625
+
+        def place(u, visited):
+            for o, k in cand[u]:
+                if o in visited:
+                    continue
+                visited.add(o)
+                lst = occ[o]
+                if len(lst) < 2:
+                    lst.append(u)
+                    chosen[u] = k
+                    target[u] = o
+                    return True
+                for pos in (0, 1):
+                    if place(lst[pos], visited):
+                        lst[pos] = u
+                        chosen[u] = k
+                        target[u] = o
+                        return True
+            return False
+
+        for u in range(625):
+            if place(u, set()):
+                placed += 1
+        ch_all.append(chosen)
+        out_all.append(target)
+    return placed, ch_all, out_all
+
+
+PLACED, CH, OUTE = capacity_two(FIB_MAPS)
+# re-evaluation in the original coordinates: Canon input (x, y), reduced data (2x + 3y, 4x + 2y),
+# eigen-coordinates by E^-1, chosen map, Canon output (2X + 3V, X) of the reduced output (X, V)
+EIDX = [IDX4[e] for e in EIGC]                        # piston index -> index of its eigen-coordinates
+PIDX = [IDX4[mv(E4, v)] for v in VEC4]                # index of eigen-coordinates -> piston index
+MULT = bytearray(N8)
+rule_ok = PLACED == N8
+used = set()
+if rule_ok:
+    for i in range(625):
+        tg = TARGET[i]
+        for j in range(625):
+            ur = ADD[SC[2][i]][SC[3][j]]
+            vr = ADD[SC[4][i]][SC[2][j]]
+            ve = EIDX[vr]
+            ue = EIDX[ur]
+            xo = PIDX[OUTE[ve][ue]]                   # reduced output X in piston coordinates
+            ox = ADD[SC[2][xo]][SC[3][vr]]
+            if Q25[ox] + B5[ox][xo] + QQ[xo] != tg[j]:
+                rule_ok = False
+            MULT[ox * 625 + xo] += 1
+            used.add(CH[ve][ue])
+FIB_HIST = [sum(1 for m in MULT if m == k) for k in range(4)]
+check("Proposition F: the selection rule places every input; the selected map satisfies "
+      "G(f(z)) = M G(z) at every input (original coordinates) and no output has more than two "
+      "preimages",
+      rule_ok and max(MULT) == 2 and FIB_HIST[1] + 2 * FIB_HIST[2] == N8 and len(used) == 74,
+      "outputs with 0, 1, 2 preimages: %d, %d, %d; maps used %d"
+      % (FIB_HIST[0], FIB_HIST[1], FIB_HIST[2], len(used)))
+
+
+def continuation(mult):
+    """Proposition 6 of the note in #2068 for the Canon target: integers p on the Gram classes with
+    p(M g) = p(g) + F2(g) - F0(M g) and 0 <= p <= F0 + F1; least solution."""
+    f = [[0] * 125 for _ in range(3)]
+    for i in range(625):
+        qi = Q25[i]
+        bi = B5[i]
+        base = i * 625
+        for j in range(625):
+            f[mult[base + j]][qi + bi[j] + QQ[j]] += 1
+    seen = set()
+    total = 0
+    feasible = True
+    lengths = {}
+    for g0 in range(125):
+        if g0 in seen:
+            continue
+        orb = [g0]
+        seen.add(g0)
+        h = MCODE[g0]
+        while h != g0:
+            orb.append(h)
+            seen.add(h)
+            h = MCODE[h]
+        lengths[len(orb)] = lengths.get(len(orb), 0) + 1
+        dd = [0]
+        for s in range(len(orb) - 1):
+            dd.append(dd[-1] + f[2][orb[s]] - f[0][orb[s + 1]])
+        feasible &= dd[-1] + f[2][orb[-1]] - f[0][orb[0]] == dd[0]
+        lo = max(0, max(-x for x in dd))
+        hi = min(f[0][o] + f[1][o] - x for o, x in zip(orb, dd))
+        feasible &= lo <= hi
+        total += sum(lo + x for x in dd)
+    return feasible, total, sum(f[2]), sorted(lengths.items())
+
+
+FLOW = continuation(MULT)
+check("continuation (Proposition 6 of the note in #2068): the integers p exist on every orbit of "
+      "M on the Gram classes",
+      rule_ok and FLOW[0],
+      "orbit lengths %s, outputs with two preimages %d, further occupied states %d, least "
+      "reachable set %d of 781250" % (FLOW[3], FLOW[2], FLOW[1], N8 + FLOW[2] + FLOW[1]))
+
+PLACED65 = capacity_two(COVER_MAPS)[0]
+check("the 65 maps of section 8 alone do not suffice for fibres of size two: the largest "
+      "assignment with at most two inputs per output serves fewer than 390625 inputs",
+      PLACED65 < N8, "largest assignment %d, unserved %d" % (PLACED65, N8 - PLACED65))
+
+# the selector of Theorem 3 of the note in #2068, transported to C = K
+LI = [[0, 4, 0, 0], [1, 0, 0, 0], [0, 0, 0, 4], [0, 0, 1, 0]]
+LJ = [[0, 0, 4, 0], [0, 0, 0, 1], [1, 0, 0, 0], [0, 4, 0, 0]]
+P_K = [[1, 2, 0, 0], [0, 0, 1, 2], [0, 0, 4, 2], [1, 3, 0, 0]]
+P_KI = inv(P_K)
+SIX = [(3, 0), (0, 1), (1, 1), (2, 3), (4, 2), (4, 3)]
+K_T3 = [
+    [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+    [[1, 0, 0, 0], [0, 1, 4, 2], [0, 4, 2, 4], [0, 2, 4, 1]],
+    [[1, 0, 0, 0], [0, 1, 1, 2], [0, 1, 2, 1], [0, 2, 1, 1]],
+    [[1, 0, 0, 0], [0, 1, 3, 4], [0, 3, 1, 1], [0, 4, 1, 2]],
+    [[1, 0, 0, 0], [0, 0, 1, 0], [0, 4, 0, 0], [0, 0, 0, 1]],
+    [[1, 0, 0, 0], [0, 4, 3, 4], [0, 2, 1, 1], [0, 4, 4, 3]],
+]
+
+
+def comb(c0, c1, mat):
+    return [[(c0 * (1 if r == c else 0) + c1 * mat[r][c]) % P for c in range(4)] for r in range(4)]
+
+
+T3_TABLES = []
+for (al, be), kk in zip(SIX, K_T3):
+    psi = [[(al * LI[r][c] + be * LJ[r][c]) % P for c in range(4)] for r in range(4)]
+    blocks = [mm(mm(P_K, mm(kk, comb(c0, c1, psi))), P_KI) for c0, c1 in ((1, 3), (2, 4), (2, 4), (3, 2))]
+    T3_TABLES.append([table(b) for b in blocks])
+pattern = bytearray(N8)
+for bit, (a11, a12, a21, a22) in enumerate(T3_TABLES):
+    mask = 1 << bit
+    for i in range(625):
+        r1 = ADD[a11[i]]
+        r2 = ADD[a21[i]]
+        tg = TARGET[i]
+        base = i * 625
+        for j in range(625):
+            ox = r1[a12[j]]
+            oy = r2[a22[j]]
+            if Q25[ox] + B5[ox][oy] + QQ[oy] == tg[j]:
+                pattern[base + j] |= mask
+WHICH = {1: 0, 2: 1, 4: 2, 8: 3, 16: 4, 32: 5, 63: 0}
+NEG = [IDX4[tuple((-c) % P for c in v)] for v in VEC4]
+t3_ok = all(p in WHICH for p in pattern)
+MULT3 = bytearray(N8)
+displacements = set()
+if t3_ok:
+    for i in range(625):
+        base = i * 625
+        ni = NEG[i]
+        for j in range(625):
+            a11, a12, a21, a22 = T3_TABLES[WHICH[pattern[base + j]]]
+            ox = ADD[a11[i]][a12[j]]
+            oy = ADD[a21[i]][a22[j]]
+            MULT3[ox * 625 + oy] += 1
+            displacements.add(ADD[ox][ni] * 625 + ADD[oy][NEG[j]])
+T3_HIST = [sum(1 for m in MULT3 if m == k) for k in range(4)]
+check("the selector of Theorem 3 of the note in #2068, for C = K: fibres of size at most two, "
+      "and as a selection among translations it uses 238985 distinct displacements",
+      t3_ok and T3_HIST == [136800, 117025, 136800, 0] and len(displacements) == 238985,
+      "outputs with 0, 1, 2 preimages: %d, %d, %d; distinct displacements %d"
+      % (T3_HIST[0], T3_HIST[1], T3_HIST[2], len(displacements)))
+
 print("%s (%d checks)" % ("ALL CHECKS PASS" if not FAILED else "CHECKS FAILED", COUNT[0]))
 sys.exit(1 if FAILED else 0)

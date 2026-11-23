@@ -15,7 +15,7 @@ selectors among arbitrary affine maps.
 
 Companion files: [`verify.py`](verify.py), an exact audit that uses only
 the Python standard library, and [`EXPECTED.txt`](EXPECTED.txt), its exact
-output. Labels C01 to C22 below refer to the lines of that output.
+output. Labels C01 to C27 below refer to the lines of that output.
 
 ## 1. Setting and results
 
@@ -83,7 +83,9 @@ C = K + 0_2. By Theorem L below those six cannot all be native.
 | Proposition W: a second test set of 12800 inputs on which no native word agrees more than 520 times | proved here, with three finite steps carried out by the verifier (C16 to C18); attained (C19) |
 | Statements M1, M2: the largest agreement set of a native word not of tangent type has 40625 inputs; no native word agrees with more than 880 of the 20800 inputs missed by the tangent words | obtained by separate exhaustive exact computations (two independent implementations), not reproduced by the verifier; attainment verified (C20, C21) |
 | Proposition C: m_nat <= 65 | verified by the exact verifier (C22) |
-| The exact value of m_nat; fibres, register writes and continuation for native selectors | open |
+| Existence of native selectors whose data map has all fibres of size at most two: by native translations, and by the Canon's word T_alg | proved here from Corollary 1 and the cited Canon results; one count verified (C27) |
+| Proposition F: 74 maps induced by native words and an explicit selection rule give a native selector whose data map has all fibres of size at most two; this data map admits the abstract continuation of #2068 | verified by the exact verifier (C23 to C25) |
+| The exact value of m_nat; the least number of native alternatives for fibres of size at most two, between 25 and 74; register writes, reversibility and a continuation carried by native words | open |
 
 ## 2. The native group
 
@@ -588,14 +590,160 @@ Theorem S. A mechanical construction of such products is reported to give
 words of about two thousand letters each; they are not reproduced and not
 verified here.
 
-## 9. The verifier
+## 9. Fibres of size at most two
+
+QUADRATIC-MEMORY-NATIVE-CONTACT [O] records that the data projection of a
+successful binary contact has fibres of size at most two. For native
+selectors the existence of such a data map is immediate; what is not
+immediate is the number of alternatives.
+
+**Existence.** *Status: proved here from Corollary 1 and from the Canon
+results cited; the count in (1) is verified (C27).* There are native
+selectors whose data map has all fibres of size at most two, for two
+independent reasons.
+
+(1) By Corollary 1 every translation of W^2 is induced by a native word.
+Hence every map Phi of W^2 with G(Phi(z)) = M G(z) for all z is the data
+map of a native selector: at z it uses the translation by Phi(z) - z, and
+the number of alternatives is the number of distinct displacements. For
+the selector of Theorem 3 of the note in #2068, transported to C = K, all
+fibres have size at most two and there are 238985 distinct displacements
+(C27).
+
+(2) By
+[ALGEBRAIC-RESIDUAL-REALIZATION](https://github.com/mathorn1973/twist-j/blob/93c36089db57032a6cbca482ff62c95884567d0f/canon/CANON.md#algebraic-residual-realization-t)
+the word T_alg of the extended alphabet acts on the factor, that is on the
+pistons, the two coordinates r and the bit eta, by a permutation
+Pi_alg(p, r, eta) = (R(p, eta), r), with R independent of r.
+[RESIDUAL-STEP-RECORD](https://github.com/mathorn1973/twist-j/blob/93c36089db57032a6cbca482ff62c95884567d0f/canon/CANON.md#residual-step-record-t)
+states that the domain of T_alg is the reachable closure from the entire
+layer eta = 0 and that the step V = A_y T_alg A_x satisfies
+G(V z) = M G(z) on S0 ("its global factor action changes g to Mg"); the
+two readers preserve the pistons and the bit
+at their endpoints, so for z in S0 with pistons p the pistons of V z are
+the piston component of R(p, 0). The same result gives the reachable
+closure of T_alg from the layer eta = 0, with 450625 piston and bit
+states. Because R is a permutation of the 2 * 5^8 pairs (p, eta), the map
+that sends p to the piston component of R(p, 0) has fibres of size at most
+two. T_alg contains the controls W_a and W_b, which are not native, but by
+the paragraph on the registered controls in section 11 its data projection
+from one bit value selects among finitely many native maps. So the piston
+map of the Canon's residual step on the ready layer is, for every radical
+value, a selection among finitely many maps of W^2 induced by native
+words, with fibres of size at most two. The number of alternatives of that
+selection is not determined here.
+
+**Proposition F (74 native alternatives).** *Status: verified by the exact
+verifier on all 5^8 inputs, in the original coordinates with K and M (C23,
+C24).* The 74 maps of W^2 listed below are induced by native words, and
+the selection rule stated below chooses at every input a listed map that
+agrees there, in such a way that no output has more than two preimages:
+107714 outputs have none, 175197 have one and 107714 have two. All 74 maps
+are used. Lifted to V^2 with Nu = 0, and with the rule applied to the
+pistons, this is a native selector with 74 alternatives that satisfies the
+readout equation on every ready input for one initialized step and whose
+data map on V^2 has all fibres of size at most two.
+
+Each word "n1n2n3n4:t1t2t3t4" stands for the map that is, in reduced
+eigen-coordinates,
+
+```text
+(u, v) -> (u + nu v + t, v),     nu = diag(n1, n2, n3, n4),     t = t1 e_++ + t2 e_+- + t3 e_-+ + t4 e_--.
+```
+
+Every nu is K-skew, n3 = -n2 and n4 = -n1. The maps are of the kind used
+in section 8, with the same Canon form and the same agreement condition:
+B(t, v) = 0 and 2 B(u, nu v + t) + q(nu v + t) = q(v).
+
+```text
+0000:0000 1144:0000 2233:0000 4411:0000 3412:0000 2003:0000 0230:0000 0320:0000
+3002:0000 1414:0000 4141:0000 1234:0000 0000:1111 0000:1122 0000:1133 0000:1144
+0000:2211 0000:2222 0000:2233 0000:2244 0000:3311 0000:3322 0000:3333 0000:3344
+0000:4411 0000:4422 0000:4433 0000:4444 0230:1312 0230:1324 0230:1331 0230:1343
+0320:4212 0320:4224 0320:4231 0320:4243 2413:3300 1144:2413 1144:2421 1144:2434
+1144:2442 1324:3300 3002:3113 3002:3121 3002:3134 3002:3142 2003:2413 2003:2421
+2003:2434 2003:2442 1144:1312 1144:1324 1144:1331 1144:1343 1144:1414 1144:1423
+1144:1432 1144:1441 0140:1100 4411:4114 4411:4123 4411:4132 4411:4141 0410:3000
+0000:0033 4321:0110 0000:0011 3322:1100 3002:0140 0000:0022 2143:2200 3002:2000
+0140:3102 0000:0044
+```
+
+*Selection rule.* Use reduced eigen-coordinates (u, v). The 625 inputs
+with the same v form a slice, and every listed map sends each slice to
+itself. The slices are treated separately. In a slice every output has two
+places, a first and a second, and the inputs are taken in lexicographic
+order of u = (u_1, u_2, u_3, u_4), with u_1 the leading coordinate. An
+input u is placed as follows.
+
+1. Go through the listed maps in list order. A map that does not agree at
+   (u, v) is skipped. For a map that agrees let o be its output. If o has
+   already been examined since the placing of the current input of the
+   lexicographic order began, the map is skipped; otherwise o counts as
+   examined from now on.
+2. If o has a free place, u takes the first free place of o, by this map,
+   and is placed.
+3. If both places of o are taken, the input in the first place of o is
+   placed anew by steps 1 to 4, with the same record of examined outputs;
+   if that succeeds, u takes over its place at o, by this map. Otherwise
+   the same is tried with the input in the second place of o. If both
+   fail, the list of step 1 is continued with the next map.
+4. If the list is exhausted, the attempt for u fails.
+
+At the end every input holds a place, and the selector sends it by the map
+with which it holds that place. On V^2 the output radical is g_2 r, with
+g_2 the invertible matrix of the chosen word on Pi_2, so an output of V^2
+has as many preimages as its piston part.
+
+This is the usual augmenting-path procedure for an assignment with at most
+two inputs per output. By the standard theorem on augmenting paths it
+places the largest possible number of inputs, so it places every input
+whenever an assignment of all inputs exists. The verifier does not rely on
+that theorem for Proposition F: it runs the rule and then evaluates
+G(f(z)) = M G(z) and the number of preimages directly (C24).
+
+*Continuation.* *Status: verified by the exact verifier (C25).* The data
+map of the rule satisfies the hypothesis of Proposition 6 of the note in
+#2068 for the Canon target: integers p with
+p(M g) = p(g) + F_2(g) - F_0(M g) and 0 <= p(g) <= F_0(g) + F_1(g) exist
+on every orbit of M on the Gram classes (orbit lengths 1, 2 and 10). So
+the data map extends to a permutation of W^2 times {0,1} that satisfies
+the readout equation on its whole reachable set. In the least solution
+107714 occupied states are created in the first step and 40866 further
+occupied states are passed through; the reachable set then has
+390625 + 107714 + 40866 = 539205 of the 781250 states. The minimum in
+QUADRATIC-L5-INITIALIZED-CAPACITY, which T_alg attains, is 450625. This
+continuation is abstract: on the occupied layer it uses matchings, not
+native words.
+
+*Bounds.* Let m_2 be the least number of alternatives of a native selector
+whose data map has all fibres of size at most two. By Theorem L and
+Proposition F,
+
+```text
+25 <= m_nat <= m_2 <= 74.
+```
+
+Remarks.
+
+- The 65 maps of section 8 do not suffice for fibres of size at most two:
+  with at most two inputs per output they serve at most 388985 of the
+  390625 inputs (C26, by the same procedure and the theorem on augmenting
+  paths).
+- The list and the rule were found by search and are not claimed to be
+  optimal. The numbers 107714, 175197, 107714 and 539205 belong to the
+  rule as stated; a different order of augmentation is reported to give
+  107702, 175221, 107702 and a least reachable set of 539075 states.
+- The selection rule is an assignment computed from the target. It is not
+  a native primitive and is not given by a formula.
+
+## 10. The verifier
 
 `python3 verify.py` uses only the Python standard library and exact
 integer arithmetic modulo 5. It is deterministic, writes no file, prints
 one line per check and exits with status 1 if a check fails. Its output
 must equal [`EXPECTED.txt`](EXPECTED.txt) byte for byte
-(`python3 verify.py | cmp - EXPECTED.txt`). It runs in about ten seconds
-on one core.
+(`python3 verify.py | cmp - EXPECTED.txt`). It runs in about fifteen
+seconds on one core.
 
 The four constants and the five generators are restated verbatim from
 `reproduce/kernel-connectivity/verify.py` (its lines 41 to 73); that file
@@ -623,11 +771,27 @@ is not imported.
   section 7 themselves are not checked.
 - C22: the cover of section 8, by direct evaluation of G(f(z)) and
   M G(z) at every input for each of the 65 maps.
+- C23: the 74 maps of section 9; every input agrees with at least one of
+  them, by direct evaluation in the original coordinates.
+- C24: the selection rule of section 9 is run slice by slice in reduced
+  eigen-coordinates. The result is then re-evaluated in the original
+  coordinates: for every Canon input the selected map is applied, the
+  three Gram equations for K and M are tested, and the preimages of
+  every output are counted.
+- C25: the integers of Proposition 6 of the note in #2068 for the Canon
+  target, on all 125 Gram classes, and the size of the least reachable
+  set.
+- C26: the same procedure on the 65 maps of section 8; the number of
+  inputs it places is the largest possible by the theorem on
+  augmenting paths.
+- C27: the selector of Theorem 3 of the note in #2068, rebuilt from its
+  six maps psi_i and six isometries and transported to C = K; its
+  fibres and its distinct displacements.
 
 This verifier is a local audit. It is not a formal evidence directory, a
 preregistration or a probe.
 
-## 10. Falsifiers and boundary
+## 11. Falsifiers and boundary
 
 - Theorem S is refuted by a native word outside the stated class, or by a
   map of the stated class that is not a native word; the verifier would
@@ -642,25 +806,35 @@ preregistration or a probe.
   respectively by such a map agreeing with more than 880 inputs of U.
 - Proposition C is refuted by an input at which none of the 65 listed
   maps satisfies G(f(z)) = M G(z); the verifier would report it.
+- Proposition F is refuted by an input at which the map selected by the
+  rule of section 9 violates G(f(z)) = M G(z), or by an output with
+  three preimages; the verifier would report either (C24). The bound
+  m_2 <= 74 is refuted only together with Proposition F.
 
-Boundary. The result concerns one property only: at every ready input
+Boundary. Sections 2 to 8 concern one property only: at every ready input
 some alternative satisfies the Gram identity for one initialized step,
 with C = K + 0_2 and the Canon target M. The selection rule is arbitrary.
 Theorem L is therefore a lower bound on any data-dependent multibranch
 control over this word class; it is not a construction of an admitted
-contact. Nothing is said about the fibres of the data map, about register
-writes, about reversibility or about occupied-memory continuation for
-native selectors.
+contact. Section 9 adds a second property of the data map: with 74
+native alternatives and one explicit selection rule all fibres have size
+at most two, and this data map admits the abstract continuation of
+#2068. What is not said: the selection rule of section 9 is an
+assignment computed from the target, not a native primitive; the
+register write is not constructed; the maps of the continuation on the
+occupied layer are matchings, not native words; and no reversible
+native realization of the selector is given.
 
 For QUADRATIC-MEMORY-NATIVE-CONTACT [O] this gives the following and no
 more. If the declared gate alphabet is the slotwise word class of
 QUADRATIC-L5-NATIVE-OBSTRUCTIONS and the data projection on the ready
 layer is a selection among fixed words of that class, then at least 25
-distinct words must be selected among, and 65 suffice for the Gram
-identity alone, with an unrestricted selection rule. The independent
-admission of C and of the reading, the selection rule, the bit write and
-the continuation are not addressed, and no admitted permutation is
-supplied. The item stays open.
+distinct words must be selected among, 65 suffice for the Gram identity
+alone, and 74 suffice for the Gram identity together with fibres of size
+at most two, in each case with an unrestricted selection rule. The
+independent admission of C and of the reading, the selection rule, the
+bit write and a continuation by native words are not addressed, and no
+admitted permutation is supplied. The item stays open.
 
 The registered controls W_a, W_b and the couplings Ucal_i of
 DEF-RESIDUAL-CONTACT-ARCHITECTURE are not elements of N: W_i acts on
@@ -678,24 +852,29 @@ G(V z) = M G(z) on S0, selects among at least 25 distinct native maps on
 every slice of S0 with fixed q, and any word of that alphabet with this
 property contains n_W controls and n_U couplings with
 2^(n_W) * 5^(n_U) >= 25. This is consistent with the Canon, whose word
-T_alg is very long. Nothing here concerns the records, the bit or the
-fibres of that construction.
+T_alg is very long. Section 9 uses of that construction only that the
+piston map of T_alg from the layer eta = 0 has fibres of size at most
+two; nothing here concerns its records or its bit.
 
 The statements depend on the word class as fixed in section 1. For
 diagonal letters only, or without the couplings, the group is different
 and none of the counts above is claimed.
 
-## 11. Open
+## 12. Open
 
 - The exact value of m_nat, between 25 and 65. By the last remark of
   section 5 a selector with 25 alternatives would have to cover O exactly
   once.
 - Whether test sets other than O and U1, or weights on a larger set of
   inputs, give a lower bound above 25.
-- Whether the data map of a native selector can have all fibres of size
-  at most two, and whether a native selector admits a continuation on
-  occupied memory. Nothing is known here. A native selector with 81
-  alternatives that was built separately as explicit generator products
-  has data fibres of size up to eight; this is an observation about one
-  selector, not a bound.
+- The least number m_2 of native alternatives of a native selector whose
+  data map has all fibres of size at most two. By section 9 it lies
+  between 25 and 74.
+- A lower bound specific to fibres. The only lower bound for m_2 used
+  here is Theorem L, which does not use the fibre condition.
+- Whether the continuation on occupied memory can be carried by native
+  words, and with how many, and whether the selection and the register
+  write can be realized natively. Section 9 gives the abstract
+  continuation only; the Canon's T_alg realizes a continuation in the
+  extended alphabet with the controls W_a and W_b.
 - The same questions for the diagonal word class.

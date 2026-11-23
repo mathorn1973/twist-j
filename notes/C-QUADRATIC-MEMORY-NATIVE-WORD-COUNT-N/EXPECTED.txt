@@ -20,4 +20,9 @@
 [PASS] C20 the translation word of the check for Theorem L agrees on 880 inputs of U: inside U 880
 [PASS] C21 nu = diag(0,0,1,0) lies in A and is not K-skew; the map with reduced form (x + nu y, y) is induced by a native word, is not of tangent type and agrees on 40625 inputs: agreement set 40625, inside U 0
 [PASS] C22 upper bound: the 65 listed maps are induced by native words and their agreement sets cover all 390625 inputs (C = K, Canon target M): covered 390625, tangent members 14, largest part of O 630, of U1 480
-ALL CHECKS PASS (22 checks)
+[PASS] C23 the 74 maps of section 9 are of the form (u + nu v + t, v) with nu K-skew, so they are induced by native words; in the original coordinates with K and M every input agrees with at least one of them: agreeing maps per input: least 1, most 53
+[PASS] C24 Proposition F: the selection rule places every input; the selected map satisfies G(f(z)) = M G(z) at every input (original coordinates) and no output has more than two preimages: outputs with 0, 1, 2 preimages: 107714, 175197, 107714; maps used 74
+[PASS] C25 continuation (Proposition 6 of the note in #2068): the integers p exist on every orbit of M on the Gram classes: orbit lengths [(1, 1), (2, 2), (10, 12)], outputs with two preimages 107714, further occupied states 40866, least reachable set 539205 of 781250
+[PASS] C26 the 65 maps of section 8 alone do not suffice for fibres of size two: the largest assignment with at most two inputs per output serves fewer than 390625 inputs: largest assignment 388985, unserved 1640
+[PASS] C27 the selector of Theorem 3 of the note in #2068, for C = K: fibres of size at most two, and as a selection among translations it uses 238985 distinct displacements: outputs with 0, 1, 2 preimages: 136800, 117025, 136800; distinct displacements 238985
+ALL CHECKS PASS (27 checks)
