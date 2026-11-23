@@ -262,3 +262,53 @@ copies. A permitted positive defect only requires the corresponding
 small dimension fraction as a necessary condition, not exact zero.
 Neither an unrestricted period existence theorem nor equality of local
 model dimensions gives the remaining selected-subspace rank bound.
+
+## Round 13 continuation
+
+Session ChatGPT-Astra-Sol-20261123-R13 continues the same owned candidate
+and draft PR. The source/status boundary and exact primary references
+are in round13/REVIEW.md. All round 8-12 scientific files are unchanged.
+
+25. Candidate-D, under the genuine round 11 hypotheses: every occurring
+    row constituent is cuspidal and has multiplicity one. Chen-Zou
+    Theorem 2.1 assigns its actual elliptic Arthur parameter. A length
+    d_i>=2 forces a pair of Satake values with ratio q_v at a split
+    unramified place outside the exceptional set, contrary to round 11.
+    Thus the parameter is generic. Theorem 2.6 and Proposition 5.1 give
+    m_cusp=m_disc=1. No everywhere-tempered or global Whittaker-generic
+    assertion is inferred.
+26. Candidate-D: the multiplicity-space kernel budget specializes to
+    the sum of dimensions of the entire blind constituent row cuts.
+    Cuspidal first occurrence now applies to every irreducible row
+    constituent, but its proved inequality remains ell_0<=r_S. Positive-rank visibility on
+    the prescribed rational orbit is still open.
+27. Candidate-D: the round 12 auxiliary smooth vector is evaluated
+    through each original row intertwiner; membership of this auxiliary
+    vector in HH is unnecessary. Surjectivity of its compact-type
+    outputs does not constrain the ranks of the global scalar forms.
+28. Candidate-D: four explicit positive integer columns in dimension
+    three have distinct image lines, full joint span and injective
+    aggregate analysis, yet exact concentration defect 1/12. Every
+    coordinate subspace passes the zero-defect rank inequality; a mixed
+    line detects the failure. No realization as source arithmetic maps
+    is asserted. The derivation is by target dimensions, not computation.
+
+The rational norm clarification uses the valid all-place Hasse norm
+theorem for the quadratic extension. Agreement only at real places
+does not satisfy that theorem's hypotheses. It does not establish a
+global period from local models.
+
+## Current target after round 13
+
+For the fixed rational character, determine which actual multiplicity-one
+cuspidal row constituents have zero full Fourier coefficient, or bound
+their total row dimension by the permitted defect budget. The potential
+ambiguity from higher automorphic multiplicity is removed under the
+stated source hypotheses.
+
+Then prove the existing all-subspace rank inequality for the selected
+single-value maps Q_u of round 12. Visibility of each constituent, even
+together with a zero common kernel, does not by itself imply it. A
+separate valid symmetry reduction would be needed to restrict the
+subspaces that must be tested. The actual finite translates, source
+characters and selected column spaces remain part of this problem.

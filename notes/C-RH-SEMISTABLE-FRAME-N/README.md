@@ -1,9 +1,41 @@
-# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 12
+# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 13
 
 **NON-CANONICAL. No authority. No Canon status changes.**
 
 Claim: [issue 2070](https://github.com/mathorn1973/twist-j/issues/2070).
 Alias used in the earlier discussion: C-RH-BK-CONCENTRATION-N.
+
+## Round 13 outcome
+
+Candidate-D, under the genuine round 11 realization and parameter
+hypotheses: every contributing row representation is cuspidal and has
+automorphic multiplicity one. Chen-Zou's actual elliptic Arthur
+parameter cannot have any length at least two, since that would force
+Satake adjacency at a suitable unramified split place. Their published
+generic multiplicity and cuspidality theorems then apply. This uses
+neither Ramanujan nor everywhere local temperedness.
+
+The full Fourier kernel is consequently a direct sum of row cuts from
+entire blind constituents; there is no additional kernel between
+multiple isomorphic automorphic copies in this actual setting.
+The prescribed rational-type nonvanishing and selected-subspace rank
+bound remain open.
+
+Candidate-D: the auxiliary smooth infinity vector of round 12 does not
+need to lie in the finite row cut. The exact global scalar forms are
+still the unknowns. A four-column integer example has aggregate
+injectivity and visible multiplicity-one labels but exact defect 1/12,
+detected on a mixed target line. This is a paper counterexample to an
+abstract implication, not an arithmetic example from the source.
+
+- [Multiplicity one, cuspidality and the remaining kernel](round13/PROOF.md)
+- [Auxiliary vectors, norm classes and the rank counterexample](round13/TEST_SPACE.md)
+- [Primary sources, internal opposition and scope](round13/REVIEW.md)
+
+This paper-only continuation resolves the previous multiplicity and
+cuspidality caveats under the named hypotheses. It neither establishes
+ell_0=r_S for the prescribed coefficient nor removes the need to test
+arbitrary target subspaces. Every round 8-12 scientific file is unchanged.
 
 ## Round 12 outcome
 
