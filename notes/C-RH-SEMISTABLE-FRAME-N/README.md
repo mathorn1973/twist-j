@@ -1,9 +1,47 @@
-# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 13
+# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 14
 
 **NON-CANONICAL. No authority. No Canon status changes.**
 
 Claim: [issue 2070](https://github.com/mathorn1973/twist-j/issues/2070).
 Alias used in the earlier discussion: C-RH-BK-CONCENTRATION-N.
+
+## Round 14 outcome
+
+Candidate-D, under the genuine earlier realization and source hypotheses:
+a finite set of good split Hecke tests separates the generic Arthur
+parameters occurring in the actual row space. Ramakrishnan's isobaric
+degree-one-place theorem supplies the required separation. This does not
+establish a unique actual packet member at every exceptional local level.
+
+The two previously proved residue-prime decompositions can be used
+simultaneously. Combine their labels with the Arthur parameters. Join two
+nonzero cells when an actual orthogonal period-image projector has a
+nonzero block between them. Candidate-D: the part of this represented
+diagonal Hecke algebra preserving every image is exactly the functions
+constant on the connected components. A canonical extremal subspace
+splits across those components. The graph has not been evaluated for the
+actual periods.
+
+Candidate-D: for any finer proposed decomposition, testing only split
+subspaces misses at most the normalized sum of the smaller inner/outer
+image-splitting costs. These are exact ranks. The coefficient one is
+sharp even for integer columns spanning the target and an arbitrarily
+small fixed total cost. Small operator norms do not control this rank
+budget. No actual improved concentration bound is inferred.
+
+A source-specific check prevents overreading raw support: a central
+split Hecke translate moves every nonzero seed off its original shell,
+but a positive power of the same translate acts by a scalar on all HH
+after folding. Image preservation must therefore be checked modulo the
+folding kernel. Both statements are candidate-D under the stated data.
+
+- [Exact symmetry graph and sharp mixed-subspace budget](round14/PROOF.md)
+- [Hecke separation, actual supports and the folding criterion](round14/HECKE_SOURCE.md)
+- [Internal opposition and the central-power check](round14/REVIEW.md)
+
+This is a paper-only continuation. All round 8-13 scientific files,
+programs, thresholds and first-run evidence are unchanged. Fixed-orbit
+global visibility and the actual all-subspace rank bound remain open.
 
 ## Round 13 outcome
 

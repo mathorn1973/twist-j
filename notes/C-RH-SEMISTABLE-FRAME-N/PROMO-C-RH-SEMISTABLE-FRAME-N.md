@@ -312,3 +312,61 @@ together with a zero common kernel, does not by itself imply it. A
 separate valid symmetry reduction would be needed to restrict the
 subspaces that must be tested. The actual finite translates, source
 characters and selected column spaces remain part of this problem.
+
+## Round 14 continuation
+
+Session ChatGPT-Astra-Sol-20261123-R14 continues the same owned candidate
+and draft PR. All round 8-13 scientific files remain unchanged. The new
+notes contain paper deductions and explicitly scoped source applications;
+there is no new computation or Lean build.
+
+29. Candidate-D under the actual spectral hypotheses: finitely many good
+    split spherical Hecke operators separate the distinct generic Arthur
+    parameters in HH. Ramakrishnan's Theorem A applies to the isobaric
+    transfers over the quadratic extension. The remaining identification
+    of individual packet members is confined to the source's exceptional
+    local level types and is not assumed here.
+30. Candidate-D: the two proved residue-prime actions commute and give
+    joint image-preserving projectors. Their known mass bounds remain
+    marginal. On the combined cells of these labels and Arthur parameters,
+    the exact graph with edges e_c Pi_u e_d != 0 computes the largest
+    image-preserving subalgebra of the represented diagonal Hecke algebra.
+    It consists of functions constant on connected components. Canonical
+    primal maximizers are invariant under the full common image algebra;
+    dual rank maximizers use the adjoint algebra.
+31. Candidate-D, for arbitrary finite complex matrices and a proposed
+    orthogonal target decomposition: let J_u^- be the sum of intersections
+    of im P_u with the blocks and J_u^+ the sum of its block projections.
+    Set ell_u^- = dim im P_u - dim J_u^- and
+    ell_u^+ = dim J_u^+ - dim im P_u. Then
+
+    0 <= eps(P)-eps_split(P) <= sum_u min(ell_u^-,ell_u^+)/R.
+
+    The same original normalization and kernel contribution are retained.
+    The coefficient one is sharp even with full image span and arbitrarily
+    small fixed cost. Exact compressed-image rank formulas compute both
+    costs; small commutator norms do not make the ranks small.
+32. Candidate-D, in the genuine source: at a good split place a central
+    uniformizer translate moves a nonzero raw seed to a disjoint support
+    shell. Nevertheless a positive power acts as one unit-modulus scalar
+    on all HH, by the ideal class group and the fixed finite/real central
+    characters. Hence raw support escape does not prove failure of actual
+    image invariance. The exact criterion is image containment modulo the
+    kernel of the convergent folding map on the enlarged translate span.
+
+## Current target after round 14
+
+Use the existing joint residue-prime blocks, and determine whether the
+actual projected period images split further by Arthur parameter. A
+proposed Hecke element must preserve those actual images, equivalently
+respect the wordwise seed quotient by the folding kernel. For the
+combined represented diagonal algebra the overlap graph gives a finite
+exact criterion; the required entries have not been supplied or bounded.
+
+Alternatively establish a small exact total splitting cost and the
+original rank inequality on split subspaces. The new cost then bounds
+all mixed subspaces without assuming exact additional symmetry. The
+earlier noncommutative-rank certificates remain another valid route.
+No method here has yet furnished the required bound for the actual
+period family. Positive-index fixed-rational-type visibility is still
+a separate open obligation.
