@@ -1,0 +1,27 @@
+Round 9 blind opposition. NON-CANONICAL finite audit, status ceiling candidate-C.
+A t=2, m=11: D=2420, d=880, R=9680, pair=320, variance=7/44, defect=7/44
+A t=2, m=17: D=9248, d=2176, R=36992, pair=512, variance=13/68, defect=13/68
+A t=2, m=29: D=47096, d=6496, R=188384, pair=896, variance=25/116, defect=25/116
+A t=3, m=19: D=12996, d=6156, R=116964, pair=2916, variance=10/171, defect=5/57
+A t=3, m=37: D=98568, d=23976, R=887112, pair=5832, variance=28/333, defect=14/111
+A t=4, m=37: D=98568, d=42624, R=1577088, pair=18432, variance=21/592, defect=21/296
+A t=4, m=67: D=592548, d=141504, R=9480768, pair=33792, variance=51/1072, defect=51/536
+A t=5, m=53: D=292136, d=137800, R=7303400, pair=65000, variance=28/1325, defect=14/265
+A PASS: 34134 atom labels, 270 sources, 5689 pairs
+B PASS: |G|=22528, orbit=11, all 2725888 translated-character values, norm squared=1/11, projection coefficient=1/11
+C t=2, m=11: source and target weights 1/3, 2/3, weighted defect=7/44
+C t=2, m=17: source and target weights 1/3, 2/3, weighted defect=13/68
+C t=2, m=29: source and target weights 1/3, 2/3, weighted defect=25/116
+C t=3, m=19: source and target weights 1/3, 2/3, weighted defect=5/57
+C t=3, m=37: source and target weights 1/3, 2/3, weighted defect=14/111
+C t=4, m=37: source and target weights 1/3, 2/3, weighted defect=21/296
+C t=4, m=67: source and target weights 1/3, 2/3, weighted defect=51/536
+C t=5, m=53: source and target weights 1/3, 2/3, weighted defect=14/265
+C PASS: E rank 3, block ranks (1, 2), commuting corner span=2
+D k=1, p=2: candidates=4, invertible=2, ambient integral=2
+D k=1, p=3: candidates=9, invertible=6, ambient integral=3
+D k=1, p=5: candidates=25, invertible=20, ambient integral=5
+D k=2, p=2: candidates=256, invertible=96, ambient integral=32
+D k=2, p=3: candidates=6561, invertible=3888, ambient integral=486
+D PASS: 6855 candidates, 4012 invertible, 528 ambient integral
+Round 9 blind opposition PASS: A, B, C and D

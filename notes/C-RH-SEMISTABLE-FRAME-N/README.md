@@ -1,11 +1,39 @@
-# C-RH-SEMISTABLE-FRAME-N, round 8
+# C-RH-SEMISTABLE-FRAME-N, rounds 8 and 9
 
 **NON-CANONICAL. No authority. No Canon status changes.**
 
 Claim: [issue 2070](https://github.com/mathorn1973/twist-j/issues/2070).
 Alias used in the earlier discussion: C-RH-BK-CONCENTRATION-N.
 
-## Outcome
+## Round 9 outcome
+
+Candidate-D: in the concrete primitive split Hida realization, the actual
+word-prime level is conjugate to K_1 of exponent one. Every irreducible
+local constituent has zero fixed space for conductor at least two, dimension
+one for conductor one, and an exact Satake-interval count between one and k
+for conductor zero. This does not require genericity.
+
+Candidate-D: a family with exact pairwise Gram bounds, exact Hecke balance,
+literal finite-group averaging, independent raw seeds and injective Fourier
+projections in the active orbit still has defect (1-rho)*sqrt(sigma)/2.
+These properties alone cannot give a uniform o(sqrt(sigma)) estimate.
+The actual source's diagonal bound already gives kappa<=e0 exponentially.
+
+Candidate-C: both separately authored, prospectively frozen programs passed
+all round 9 checks on one x86_64 architecture. The actual exponential
+intrinsic period-rank improvement remains open.
+
+- [Round 9 proof and precise scope](round9/PROOF.md)
+- [Round 9 source map and primary references](round9/SOURCE_MAP.md)
+- [Round 9 first-run results](round9/RESULTS.md)
+- [Round 9 opposition and dispositions](round9/REVIEW.md)
+- [Round 9 preregistration](round9/PREREG.md) and [custody](round9/CUSTODY.md)
+- [Round 9 development program](round9/verify_r9.py) and [blind opponent](round9/break_r9.py)
+
+Round 9 execution pin: b83250a7db82d2a27de932617fb39f61cf6af823.
+The round 8 frozen programs, contract and first-run evidence below are unchanged.
+
+## Round 8 outcome
 
 Candidate-D, conditional on the explicit geometric and counting premises:
 the one-prime Hecke decomposition has exactly balanced source dimensions
@@ -30,7 +58,7 @@ retained and explicitly corrected in RESULTS.md.
 The actual intrinsic period-rank bound remains open. No RH conclusion,
 joint two-prime balance, Lean verification or Canon promotion is claimed.
 
-## Package
+## Round 8 package
 
 - [Proof and exact assumptions](PROOF.md)
 - [Source map and literature](SOURCE_MAP.md)

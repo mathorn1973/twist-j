@@ -5,7 +5,7 @@ NON-CANONICAL. No authority. This is an incubation handoff, not promotion.
 ## Identity and basis
 
 - Owner: A. M. Thorn.
-- Session: ChatGPT-Astra-Sol-20261123-R8.
+- Sessions: ChatGPT-Astra-Sol-20261123-R8 and continuing R9.
 - Public claim: issue 2070.
 - Public main basis: 93c36089db57032a6cbca482ff62c95884567d0f.
 - External source pin: 40e56bab026552e089d7afcfeff08d2defb9c005.
@@ -65,10 +65,40 @@ There is no external independent review or new Lean proof. Computation is
 one architecture only. Any public computation-grade promotion needs the
 repository's prescribed procedure; this package does not substitute for it.
 
+## Round 9 continuation
+
+The same candidate and owner continued on the same branch and PR. No second
+candidate was created and round 8 frozen scientific evidence is unchanged.
+
+6. Candidate-D: the existing diagonal bound yields individual-kernel mass
+   kappa<=e0, hence exponential under the source's MatSF hypothesis.
+7. Candidate-D: a sharp incidence/finite-group model satisfies each audited
+   pairwise bound, exact Hecke balance and injective active Fourier projections,
+   yet retains defect (1-rho)*sqrt(sigma)/2. This excludes a general
+   o(sqrt(sigma)) deduction from those properties.
+8. Candidate-D: at a split word-prime place with valuation-one norm, the
+   actual primitive Hida level is conjugate to K_1. Classical newform theory
+   gives the all-irreducible local dimension rule r/1/0 by conductor 0/1/>=2,
+   with r determined exactly by the spherical Satake interval count.
+9. Candidate-D: the necessary period-rank obstruction is stated with actual
+   constituent and character hypotheses; no sufficient graph criterion or
+   nonvanishing inference for selected tests is claimed.
+
+The independent round 9 programs passed their first runs in all fixed domains.
+Their scope is candidate-C on one x86_64 architecture. See round9/RESULTS.md
+and round9/REVIEW.md. The public preregistration pin is
+d598aedb1658f00af9196aedba8944dd6205f533 and execution pin is
+b83250a7db82d2a27de932617fb39f61cf6af823. Both were read back before execution.
+The recorded driver preflight transcription stop did not execute or change
+the development scientific program; details are preserved in round9/CUSTODY.md.
+
 ## Next mathematically meaningful target
 
 For the chosen concrete family and a selected one-prime block alpha, bound
 the dimension of the periodization kernel inside every direct product of
 column subspaces, or exhibit a high-rank certificate for actual matrices.
-This targets the unresolved quantity directly. Merely recounting block
-dimensions or testing independent abstract matrices cannot close it.
+Use the exact word-prime rule to exclude impossible local constituents and
+to specify the remaining local test spaces. Then evaluate the actual Bessel
+tests, including the conjugated row, source character, translate and outer
+integral. This targets the unresolved quantity directly. Merely recounting
+block dimensions or testing independent abstract matrices cannot close it.

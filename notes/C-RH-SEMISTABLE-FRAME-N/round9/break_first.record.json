@@ -1,0 +1,20 @@
+{
+  "architecture": "x86_64",
+  "candidate": "C-RH-SEMISTABLE-FRAME-N",
+  "elapsed_nanoseconds": 1031044409,
+  "execution_pin": "b83250a7db82d2a27de932617fb39f61cf6af823",
+  "exit_code": 0,
+  "lane": "one architecture only",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "round": 9,
+  "script": "break_r9.py",
+  "script_executions": 1,
+  "script_sha256": "4abf263516945c9b3bc131299b18f9cbd98e03194ce7fe27942697964ae71b14",
+  "started_utc": "2026-11-23T19:19:55.966446+00:00",
+  "status_ceiling": "candidate-C",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "15001949264b65a0789d9bb93e61da7b72fa7d028bbadac51b59cd51bf955bcb",
+  "timed_out": false,
+  "wall_timeout_seconds": 180
+}

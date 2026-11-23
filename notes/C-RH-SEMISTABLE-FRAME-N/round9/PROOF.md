@@ -12,7 +12,7 @@ Source pin: leanprover-community/riemann-hypothesis at 40e56bab026552e089d7afcfe
 There are two distinct advances.
 
 1. In the concrete primitive split Hida realization, the smaller group's actual level at a word prime is conjugate to K_1 of exponent one. Consequently every irreducible local constituent has an explicitly bounded test space: zero for conductor at least two, one for conductor one, and an exactly computable integer between one and k for conductor zero. Genericity is not needed for this statement.
-2. An explicit family simultaneously has injective maps, full target span, exact Hecke block balance, literal finite-group averaging of independent raw seeds, a single orbit of Fourier characters, injective full Fourier coefficients, and equality in every relevant off-diagonal pairwise Gram bound. Its concentration defect is still asymptotically one half of the square root of the density parameter.
+2. An explicit family simultaneously has injective maps, full target span, exact Hecke block balance, literal finite-group averaging of independent raw seeds, a single orbit of Fourier characters, injective full Fourier projections for every character in that active orbit, and equality in every relevant off-diagonal pairwise Gram bound. Its concentration defect is still asymptotically one half of the square root of the density parameter.
 
 The second statement isolates the limitation of the audited information. It does not identify the constructed family with the actual automorphic family. The first statement supplies genuine additional information about that family, but it is an upper bound and a selection rule for local test spaces, not a lower bound for global period ranks.
 
@@ -24,7 +24,7 @@ Write A_u=P_u/sqrt(c_0(u)) for the source's positive normalization, d_u=dim C_u,
 
     ||A_u^* A_u - I||_HS^2 <= e_0 d_u.
 
-Every vector in ker A_u is a zero eigenvector of A_u^* A_u and contributes one to this squared norm. Therefore
+Every member of an orthonormal basis of ker A_u is a zero eigenvector of A_u^* A_u and contributes one to this squared norm. Therefore
 
     dim ker P_u <= e_0 d_u,
     kappa := sum_u dim ker P_u / R <= e_0.                 (2.1)
@@ -40,7 +40,7 @@ For the intertwined Hecke blocks let p_alpha=d_alpha/R be the source mass, q_alp
     max(kappa,beta) <= B <= kappa+beta,
     B <= eps(A) <= B + sum_alpha min(q_alpha,b_alpha) e_alpha.       (2.3)
 
-Here e_alpha is the intrinsic reduced-image defect within the block, with zero-weight terms omitted. Thus the individual-kernel term is no longer an unidentified obstruction under these analytic inputs. The unknown is the weighted intrinsic term, after accounting for the separately supplied target counting error beta.
+Here e_alpha is the intrinsic reduced-image defect within the block, with zero-weight terms omitted. Thus the individual-kernel term is no longer an unidentified obstruction under these analytic inputs. The unknown is an exponential improvement for the weighted intrinsic term, after accounting for the separately supplied target counting error beta. A coarser square-root estimate from the existing Gram bounds is already available.
 
 Credit boundary: the centered frame estimates and their comparison with Brox's formulation belong to issue #2065 / PR #2067. We use that information; we do not claim to replace it by (2.1).
 
@@ -48,7 +48,7 @@ Credit boundary: the centered frame estimates and their comparison with Brox's f
 
 ### 3.1 Incidence construction
 
-Choose integers t>=2 and m>=2t^2. Put s=t^2 and rho=s/m. First consider a rational probability space of subsets S of {0,...,m-1}. Its cardinality K has distribution
+Choose integers t>=2 and m>=2t^2. This auxiliary word count m is unrelated to the source's rank parameter R.m in Section 4. Put s=t^2 and rho=s/m. First consider a rational probability space of subsets S of {0,...,m-1}. Its cardinality K has distribution
 
     P(K=s-t)=P(K=s+t)=(1-rho)/2,
     P(K=s)=rho.
@@ -121,7 +121,7 @@ For every v, the full N-character projection on this target is
 
     y tensor b -> y tensor f_v/m.
 
-It is injective. Thus the common Fourier-blind target kernel is zero; in fact every one of these full coefficients is injective. The remaining rank loss comes from testing these coefficients only against the selected subspaces I_u. Nonvanishing of complete Fourier coefficients does not give the needed ranks after that restriction.
+It is injective. Thus the common Fourier-blind target kernel for the active orbit is zero; every one of these m full projections is injective. Projections for other characters of N vanish on this target and are not part of the claim. The remaining rank loss comes from testing the active coefficients only against the selected subspaces I_u. Nonvanishing of these complete Fourier coefficients does not give the needed ranks after that restriction.
 
 This rules out a stronger shortcut than the earlier averaging example: even removing the common Fourier-blind kernel does not control the intrinsic defect.
 
@@ -143,7 +143,7 @@ In each block the family remains I_u tensor V_alpha. Its normalized occupancy op
 
 The exact audit uses G=S_3=GL_2(F_2), whose nontrivial unipotent-character corner has block dimensions one and two. The paper construction also permits the full finite residue groups appearing in the source.
 
-**Scope of the negative result, candidate-D:** the conjunction of the properties in Sections 3.1-3.5 cannot imply an exponential intrinsic-defect estimate. Additional properties of the actual period maps are required. This is a statement about a proposed inference, not a refutation of the RH claim or of its other hypotheses.
+**Scope of the negative result, candidate-D:** the conjunction of the properties in Sections 3.1-3.5 cannot imply a uniform o(sqrt(sigma)) intrinsic-defect estimate. In particular it cannot alone give an exponential bound in a large parameter when sigma is allowed to decay only polynomially in that parameter. Additional properties of the actual period maps are required. This is a statement about a proposed inference, not a refutation of the RH claim or of its other hypotheses.
 
 ## 4. The actual local word-prime level
 
@@ -245,7 +245,7 @@ This is a local dimension calculation. If every place above T_u is split, the pr
 
 ### 6.1 The actual matrix coefficient is a weighted period
 
-The source's perLaw_holds identifies the pairing against P_u with an outer integral of Bessel periods of translated row forms against evaluated column forms. The inner period is attached to the pair U(k) inside U(k+2r_S+1). Rescaling the hermitian form by -1/T_u normalizes the distinguished vector without changing either unitary group; the hyperbolic dual vectors and additive character must be rescaled consistently.
+Under its SBes realization, character tie, row-representative and convergence inputs, the source's perLaw_holds identifies the pairing against P_u with an outer integral of Bessel periods of translated row forms against evaluated column forms. The inner period is attached to the pair U(k) inside U(k+2r_S+1). Rescaling the hermitian form by -1/T_u normalizes the distinguished vector without changing either unitary group; the hyperbolic dual vectors and additive character must be rescaled consistently. The conjugations in EvalAll and PerLaw must be tracked: the relevant row constituent may be the contragredient/conjugate of the initially named row representation. One cannot select a central L-value before fixing that convention and the exact character.
 
 The whole P_u coefficient is not automatically a single unweighted scalar Bessel functional. A theorem producing some nonzero test vector does not identify the source's selected vector or prevent cancellation in its outer integral.
 
@@ -253,7 +253,7 @@ The whole P_u coefficient is not automatically a single unweighted scalar Bessel
 
 Beuzart-Plessis and Chaudouard's 2025 unitary Gan-Gross-Prasad theorem concerns cuspidal data with the stated discrete Hermitian weak base-change hypotheses. Its nonvanishing criterion implies that a vanishing central Rankin-Selberg value kills the full relevant Bessel functional under those hypotheses. Their refined formula additionally assumes everywhere local temperedness and evaluates factorizable tests through local factors.
 
-For this application, a vanishing full functional also kills the outer average. The reverse inference needs the correct packet member, the actual local tests and their outer averaging. The reviewed source interfaces do not by themselves establish all these hypotheses for every counted row or supply all the required central values.
+For this application, a vanishing full functional also kills the outer average. The reverse inference needs the correct packet member, the actual local tests and their outer averaging. The refined formula gives pointwise squared moduli, so these alone do not resolve the relative phases in the outer integral; a further coherent evaluation or polarization argument would be needed. The reviewed source interfaces do not by themselves establish all these hypotheses for every counted row or supply all the required central values.
 
 The new local result (5.2) resolves the size and conductor support of the word-prime test space. It does not supply its Bessel functional values. Even a one-dimensional test space may be annihilated by the relevant functional.
 
@@ -263,7 +263,7 @@ The dual concentration identity, valid for arbitrary finite-dimensional maps, is
 
     eps(P)=max_{V<=HH} [dim V/D - sum_u rank(P_u^*|V)/R].    (6.1)
 
-Suppose an actual automorphic decomposition has been supplied. For a selected sum V_I of row constituent slices, let N_u(I) contain the column constituent slices still allowed to pair with them, after ONLY proved exclusions. Such exclusions may come from a zero local Hom-space, conductor cutoff (5.2), a vanishing full global period under an applicable theorem, or a verified zero on the actual selected test.
+Suppose an actual orthogonal automorphic decomposition has been supplied. For a selected sum V_I of row constituent slices, let N_u(I) contain the column constituent slices still allowed to pair with them, after ONLY proved exclusions. Such exclusions may come from a zero local Hom-space, conductor cutoff (5.2), a vanishing full global period under an applicable theorem, or a verified zero on the actual selected test.
 
 Then the image of P_u^*|V_I lies in those surviving column slices, so
 
@@ -275,7 +275,9 @@ Therefore
               - (1/R) sum_u min(dim V_I,
                          sum_{Sigma in N_u(I)} dim C_(u,Sigma)).   (6.2)
 
-This is an obstruction certificate if its right-hand side is positive. No missing actual row constituent is claimed to have been found. Passing this necessary test would not prove the opposite rank inequality: the surviving periods may still be dependent.
+This is an obstruction certificate if its right-hand side is positive. Without orthogonality the same dimension bound follows by taking the annihilator of the excluded direct-sum column slices instead of identifying it literally with the surviving slices. No missing actual row constituent is claimed to have been found. Passing this necessary test would not prove the opposite rank inequality: the surviving periods may still be dependent.
+
+The gap is visible already in Section 3. Choose the discrete Fourier basis in C^Y for the row lines, and the coordinate basis in each I_u for the column lines. Every matrix entry is nonzero. The resulting complete nonzero-entry graph passes (6.2) for every sum of a row lines, since its right-hand side is a/D-min(a,d)/d<=0. Nevertheless the defect remains (3.3). These artificial line labels are not claimed to be actual automorphic constituents; the example shows why a nonzero-entry graph alone cannot certify all-subspace rank lower bounds.
 
 For an upper bound on the intrinsic defect one needs a uniform lower bound on the ranks in (6.1), for all subspaces in the retained block. Counting nonzero scalar periods alone is insufficient. Local multiplicity one is an upper bound on the space of functionals, not a lower bound on these finite-dimensional ranks.
 
