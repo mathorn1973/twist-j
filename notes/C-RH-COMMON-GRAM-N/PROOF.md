@@ -316,7 +316,11 @@ The new loss also does not exceed the earlier below-threshold bound
  \qquad D_0=\frac{UH}{U+H},
 \]
 
-and hence, for e<=1/4, it does not exceed
+To see this directly, set z=f_eta(p). Its quadratic relation implies
+z<=p+sqrt(eta*z)<=p+(eta+z)/2, hence f_eta(p)<=2p+eta. Combine this
+with g_e(r)<=r+sqrt(e*r/(1-e)), Hr0=D0, and the preceding exact saving.
+
+For e<=1/4, it therefore does not exceed
 [eta H+4 D_0+4 sqrt(e)H]/(1-delta). Finally
 D_0<=U log(1+H/U) for U>0, so it improves the original displayed
 `TheoremFSharp` allowance. At U=0 use the separate expression above.

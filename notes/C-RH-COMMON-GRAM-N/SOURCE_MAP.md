@@ -37,9 +37,9 @@ contains the following obligations and their proofs.
 | Source item | Used here |
 | --- | --- |
 | thmF_place | Arbitrary source subspaces, not only whole-map deletions; full ambient rows followed by projection |
-| hN_tau and hT rank equalities in thmF_place | Complex coordinate changes preserve the field ranks |
+| hNτ and hT rank equalities in thmF_place | Complex coordinate changes preserve the field ranks |
 | hSdim, hPS, hkerP | Projection cannot increase absolute missing dimension |
-| theta, Nt, hrkNt, hfilt inside theoremFSharp_of | Exact relation between source slope counts and discarded source rank for every real threshold |
+| θ, Nt, hrkNt, hfilt inside theoremFSharp_of | Exact relation between source slope counts and discarded source rank for every real threshold |
 | hx/hs and hmax | Adjusted source mean at least s and each adjusted slope at most s+U |
 | hMle : forall tau, M tau <= St tau | Every retained image lies in the target HN step; no sign condition on tau |
 | hrkM and hcnt's rank-to-count identity | Target low-slope fraction is bounded by the image corank |
