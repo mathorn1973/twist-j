@@ -1,9 +1,56 @@
-# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 14
+# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 15
 
 **NON-CANONICAL. No authority. No Canon status changes.**
 
 Claim: [issue 2070](https://github.com/mathorn1973/twist-j/issues/2070).
 Alias used in the earlier discussion: C-RH-BK-CONCENTRATION-N.
+
+## Round 15 outcome
+
+Candidate-D: the arithmetic cut B_k has a common number-field model in
+the pinned source. Its defect is bounded above by a residue-field test
+at any coefficient prime, using either the literal integral matrices or
+the sharper saturated image directions with the generic kernel mass.
+For each fixed tuple this comparison is equality outside finitely many
+prime ideals. No uniform exceptional set for the varying family follows.
+
+Candidate-D: a common source/target cut satisfies
+
+    |eps(full) - alpha eps(cut)| <= max(source loss, target loss),
+
+where alpha is the retained source fraction. The constant is sharp for
+every pair of rational retained fractions. Applied to the actual Bessel
+identification, a residue certificate U_w gives
+
+    eps(P) <= max(1-alpha, delp) + alpha U_w.
+
+Only the actual cut needs an arithmetic model. A useful small U_w for
+this family has not been established.
+
+Candidate-D: any four of the five j-translates of a base-defined subspace
+in a quartic cyclotomic field are balanced, over Q or an inert prime
+field and after geometric extension. A target filtration transfers layer
+bounds without requiring the original images to split. On a four-dimensional
+layer arbitrary image incidences admit an exact finite rank/Pluecker
+criterion, even without a cyclotomic action. Three translates, several
+quartic copies or changed geometric seeds need not satisfy the theorem.
+
+The inert-prime comparison keeps its carriers distinct. A rational
+four-dimensional block cannot carry the stated q-power Jacobian
+Frobenius relations. For the CM5 Jacobian the invariant restricted
+q-power on the Lie algebra has rank one and square zero: the universal
+vanishing is at q^2, while a single line is killed at q. No theta
+valuation or period-rank bound is inferred from this comparison.
+
+- [Modular, filtration and sharp cut comparisons](round15/PROOF.md)
+- [Actual arithmetic B_k and source identifications](round15/SOURCE.md)
+- [Inert-prime carriers, derivative depth and Euler comparison](round15/FROBENIUS.md)
+- [Internal opposition and sharp counterexamples](round15/REVIEW.md)
+
+All round 8-14 scientific files remain unchanged. This is paper-only
+incubation, with no new scientific computation or Lean build. The actual
+small residual/graded defect and prescribed rational-type visibility
+remain open.
 
 ## Round 14 outcome
 

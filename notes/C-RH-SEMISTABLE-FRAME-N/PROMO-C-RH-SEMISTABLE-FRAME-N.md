@@ -370,3 +370,73 @@ earlier noncommutative-rank certificates remain another valid route.
 No method here has yet furnished the required bound for the actual
 period family. Positive-index fixed-rational-type visibility is still
 a separate open obligation.
+
+## Round 15 continuation
+
+Session ChatGPT-Astra-Sol-20261123-R15 continues the same candidate and
+draft PR. The PUBLIC basis remained ed3b1878d95825ab9473c16416c8db76cc152079
+after STATUS-first startup. The declared v116 tag/content ancestry, all
+five normative hashes, exact-main architecture checks, remote heads,
+relevant registry rows and current PR discussion were checked again.
+The new scope was claimed in issue 2070 before authoring. The external
+mathematical source remains the same pinned commit.
+
+33. Candidate-D: any four of the five cyclotomic translates of a
+    base-defined subspace in a degree-four cyclotomic field are
+    semistable. The proof includes planes. Unequal multiplicities have
+    an explicit overweight cost; the uniform cap of one quarter is
+    sharp. Three translates or several copies can fail with full span.
+34. Candidate-D: the unrestricted concentration maximum descends to a
+    finite or number base field. A common integral model specializes
+    its defect upwards. Saturating each generic image in one common
+    target lattice gives a sharper bound with the generic kernel mass.
+    For a fixed number-field tuple equality holds at almost all prime
+    ideals, with no uniform bound for varying tuples. Restriction of
+    scalars preserves the normalized maximum but creates no image orbit.
+35. Candidate-D: grading the actual images by any common target flag
+    bounds the original defect from above, retaining all dimensions.
+    Layer imbalance and layer defects have an explicit additive budget.
+    Four-dimensional layers admit an exact finite incidence procedure
+    using ordinary linear systems and the Klein quadratic relation.
+    This is a paper algorithm, with no implementation or actual matrix run.
+36. Candidate-D: for retained fractions alpha and beta, the exact
+    two-sided cut error is bounded by max(1-alpha,1-beta). This improves
+    the earlier sum-of-losses upper bound and is sharp for every pair
+    of positive rational retained fractions.
+37. Candidate-D under the pinned source hypotheses: the actual B_k is
+    number-field linear and integral on the named twisted lattices.
+    One common row change, wordwise source changes and a possible common
+    conjugation identify it with the genuine cut period family. Hence
+    eps(P) <= max(1-alpha,delp) + alpha U_w for a certified residual
+    bound U_w. The full analytic P_u needs no new arithmetic model.
+38. Candidate-D, scoped comparisons: the same-prime Jacobian Frobenius
+    relation has no four-dimensional rational cyclotomic realization;
+    its semilinear determinant forces dimension divisible by eight.
+    The CM5 invariant Lie algebra has nonzero restricted q-power of
+    rank one and second iterate zero. The supplied inert-only Mobius
+    obstruction is rechecked by its odd zero order at one. None of
+    these comparisons proves a period-rank or augmentation bound.
+
+The development Astra, source Sol and opposition Astra completed internal
+paper review. Root checked the central source identifications and the
+primary Cartier and CM5 references. No new scientific computation,
+first-run record, two-architecture claim or Lean proof is supplied.
+Earlier round 8-14 scientific evidence remains unchanged.
+
+## Current target after round 15
+
+At one coefficient prime of the genuine arithmetic B_k, determine the
+primitive residual image arrangement in a common target lattice. Produce
+either its small defect certificate directly or a common filtration
+whose layer masses and incidence defects give the required bound. The
+explicit cut inequality then returns that bound to the full periods.
+At inert primes the source controls lattice valuation and length, which
+do not determine these primitive directions or their intersections.
+
+Four-dimensional cyclotomic packages are one sufficient layer pattern,
+not an assumed pattern of the actual words. Coefficient-field scalar j
+preserves each field-linear image and therefore does not create that
+pattern. Good-place Hecke symmetry, the round 14 graph and the older
+noncommutative-rank certificates remain valid alternatives. No actual
+improvement of the concentration estimate or closure of fixed-rational-type
+global visibility is claimed in this round.
