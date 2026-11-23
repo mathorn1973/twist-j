@@ -2,7 +2,7 @@
 
 **NON-CANONICAL.** The following entries are proposed for the first sealed
 fold after v116, subject to the source merges, the outside review of the
-alternative-count note and the release gates described in the
+note in pull request #2068 and the release gates described in the
 [proposal](README.md). The first entry replaces the text proposed in #2062.
 
 ## Canon section 2, after the rank-43 relay continuation
@@ -267,19 +267,22 @@ alternative-count note and the release gates described in the
 > 3. In the class of item 2 one affine map agrees on at most 29/125 of
 >    the layer, and (x,y) -> (x+2y, 2x+3y) attains this.
 > 4. For the other classes of rank four, five and six the least number is
->    at least six. Its exact value is open there.
+>    at least six, and explicit covers give at most 25 for rank four with
+>    nonsquare determinant, 29 for rank five and 25 for rank six. Its
+>    exact value is open there.
 >
 > The six-map selector of item 2 has forced fibres of size four. A binary
 > contact needs fibres of size at most two, so the cover is not the data
 > projection of a binary contact and supplies no realization for
 > QUADRATIC-MEMORY-NATIVE-CONTACT.
 >
-> **Proof.** The merged alternative-count note: the reduction of the
+> **Proof.** The merged note of pull request #2068: the reduction of the
 > target to q(x')=q(x)+q(y), B(x',y')=B(x,y), q(y')=q(y); the
 > classification of the maps whose second and third residuals vanish
-> identically; the bound 4*5^(2r-2) for every other affine map; the count
-> in three cases; and the explicit cover. The bound of item 3 is the
-> scalar count of the source note of QUADRATIC-L5-SOURCE-SYMMETRY.
+> identically; the weighted zero count and the bound 4*5^(2r-2) for every
+> other affine map; the count in three cases; and the explicit cover.
+> Item 3 is its per-branch maximum, and the covers of item 4 are checked
+> exhaustively by its exact verifier.
 
 ## Addition to QUADRATIC-MEMORY-NATIVE-CONTACT
 
