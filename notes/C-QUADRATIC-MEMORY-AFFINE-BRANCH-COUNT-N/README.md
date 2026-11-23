@@ -425,7 +425,7 @@ which do not depend on (a,b). Six pairwise non-proportional vectors (a,b)
 represent all six lines through the origin of F5^2, and one of these lines
 is orthogonal to (s_1, s_2). QED
 
-For a_0 != 0 the points (a_0, t), t in F5, and (0, b_0) are six such
+For a_0 != 0 and b_0 != 0 the points (a_0, t), t in F5, and (0, b_0) are six such
 points.
 
 **Theorem 2.** *Status: proved here; the cover is also verified on all 5^8
