@@ -17,7 +17,7 @@ alternatives open.
 
 Companion files: [`verify.py`](verify.py), an exact audit that uses only
 the Python standard library, and [`EXPECTED.txt`](EXPECTED.txt), its exact
-output. Labels C01 to C40 below refer to the lines of that output.
+output. Labels C01 to C47 below refer to the lines of that output.
 
 ## 1. Problem and results
 
@@ -62,7 +62,10 @@ for r = 1 and 0 or delta times a nonzero square for r = 2. For r >= 3 all
 | Proposition 3: the largest agreement set of one affine branch has 5^(2r-1) + 4 * 5^(r+w-1) elements of the reduced domain, w as in section 7 | upper bound proved here; attainment verified (C23, C25, C26, C27) |
 | Proposition 4: m* <= 25 for (4,2), m* <= 29 for (5,1) and (5,2), m* <= 25 for (6,1) and (6,2) | verified by the exact verifier (C30 to C34) |
 | Proposition 5: in the classes (3,1), (3,2), (4,2), (5,1), (5,2), (6,2) no six branches of tangent type cover | proved here; two finite lemmas verified (C36, C37) |
-| The exact value of m* outside rank 4 with square determinant | open |
+| Theorem 3: for rank 4 with square determinant the six branches of Theorem 2, each composed with a suitable output isometry, admit a selector whose data map has all fibres of size at most two | verified by the exact verifier on all 5^8 inputs (C44, C45); reduction to two finite maps, tau on F5^3 and sigma on 150 isotropic classes, proved here (C42, C43) |
+| Proposition 6: the data map of Theorem 3 extends to a complete permutation of the carrier with the readout equation on its reachable set | criterion proved here; hypothesis verified (C46) |
+| Proposition 7: the data map of Theorem 3 has a complete permutation that selects among six linear maps on the ready layer and among 15 linear maps on its reachable occupied states, with the readout equation on its reachable set; which map is applied on the occupied layer is given by tables derived from the target | verified by the exact verifier: bijectivity on all 781250 states and the readout equation at every reachable state (C47) |
+| The exact value of m* outside rank 4 with square determinant; the least number of occupied-layer alternatives and the least reachable set of such a permutation | open |
 
 Sections 2 to 4 prepare the proofs. Every statement carries one of the
 labels "proved here", "verified by the exact verifier" or "open".
@@ -101,8 +104,10 @@ f_i gives the cover of V^2 by (w + rho) -> f_i(w) + rho.
 G((g_out x 1) f (g_in x 1) z') = Sym2(g_out) M Sym2(g_in) G(z') = M0 G(z').
 All maps involved are invertible, so the converse holds as well. QED
 
-From here to the end of section 9, W = F5^r with 3 <= r <= 6, C is
-nondegenerate, and the target is M0. A branch is written
+From here to the end of section 10, W = F5^r with 3 <= r <= 6, C is
+nondegenerate, and the target is M0, except where the Canon target M is
+named (Propositions 6 and 7 concern iteration and are stated for M). A
+branch is written
 f(x,y) = (x', y') and its residuals are
 
 ```text
@@ -578,7 +583,7 @@ explanation here and no branch of it is redundant (C34).
 
 In all five classes the verifier enumerates every y, forms for every branch
 the level set of x given by Lemma 2 as a bit mask over all x, and checks
-that the union is everything; section 10 lists the additional direct
+that the union is everything; section 11 lists the additional direct
 evaluations. No branch of the five covers is redundant, but no minimality
 is claimed for them.
 
@@ -654,7 +659,283 @@ is 200, 1040, 5000, 25200 (C18, C38, C39, C40). Contradiction. QED
 In class (4,2) the direct enumeration of all skew psi gives at most 104
 non-isotropic y with q(psi y) = 0 (C38), in agreement with the bound 105.
 
-## 10. The verifier
+## 10. Fibres of size at most two
+
+QUADRATIC-MEMORY-NATIVE-CONTACT [O] records that the data projection of a
+successful binary contact has fibres of size at most two. With the six maps
+of Theorem 2 as stated, 369600 of the 390625 reduced inputs agree with
+exactly one branch and some output is the forced image of four of them
+(C12, C13). Composing each branch with its own output isometry removes this
+obstruction.
+
+Identify W = F5^4 with the quaternions over F5 in the basis 1, i, j, k, so
+that q is the norm, B(x,y) is the scalar part of x conj(y), and Li, Lj are
+left multiplication by i and j (C41). Then psi_i is left multiplication by
+the pure quaternion a_i = alpha_i i + beta_i j, with norm
+N_i = alpha_i^2 + beta_i^2. Pure quaternions are identified with F5^3 and
+carry the dot product. For a quaternion u of nonzero norm, x -> u x u^(-1)
+is an isometry of q; it fixes 1 and acts on F5^3 by a rotation rho_u.
+
+**Theorem 3 (fibres of size two).** *Status: verified by the exact verifier
+by direct evaluation at all 5^8 inputs (C44, C45); also proved here through
+the reduction below together with the two finite checks C42 and C43.*
+Let C = I_4, let psi_1, ..., psi_6 be the maps of Theorem 2 in the order
+(3,0), (0,1), (1,1), (2,3), (4,2), (4,3), and let k_i be conjugation by
+
+```text
+u_1 = 1,  u_2 = i + 2j + k,  u_3 = i + 3j + k,  u_4 = i + 4j + 2k,  u_5 = 1 + 4k,  u_6 = 1 + 2i + k,
+```
+
+that is k_i = 1 (+) rho_i with rho_1 the identity and
+
+```text
+rho_2 = [[1,4,2],[4,2,4],[2,4,1]],   rho_3 = [[1,1,2],[1,2,1],[2,1,1]],   rho_4 = [[1,3,4],[3,1,1],[4,1,2]],
+rho_5 = [[0,1,0],[4,0,0],[0,0,1]],   rho_6 = [[4,3,4],[2,1,1],[4,4,3]].
+```
+
+The rho_i are written in the basis i, j, k and act on column vectors.
+
+Consider the six linear branches, in reduced and in Canon coordinates,
+
+```text
+(x,y) -> ( k_i(x + psi_i y),  k_i y )                                        (target M0),
+F_i(x,y) = ( k_i(x + 2y + psi_i(3x + 4y)),  k_i(2x + 3y + psi_i(4x + 2y)) )    (target M),
+```
+
+and the selector Phi(z) = F_i(z) for the unique i with G(F_i(z)) = M G(z),
+and Phi(z) = F_1(z) if all six branches agree at z. Then
+G(Phi(z)) = M G(z) for every z, and every output state has at most two
+preimages under Phi: 136800 outputs have none, 117025 have one and 136800
+have two (C44). The same holds on V = F5^6 for C = diag(1,1,1,1,0,0), with
+all counts multiplied by 625, when every branch acts as the identity on the
+radical coordinates, and for the
+Canon's C = K + 0_2 after conjugating the branches by the matrix P of
+section 6 (C45). By Theorem 1 no selector with fewer than six affine
+alternatives exists at all, so six is also the least number of affine
+alternatives of a selector with fibres of size at most two.
+
+*Reduction to F5^3.* Work in reduced coordinates. The branches are those of
+Theorem 2 composed with the isometry k_i on both cells, so the agreement
+sets are unchanged: every input agrees with exactly one branch or with all
+six.
+
+(a) Slices with q(y) != 0. Write x y^(-1) = s + theta with s in F5 and
+theta pure. For pure a, B(x, a y) = q(y) (theta . a), so by Lemma 2 branch
+i agrees exactly when theta . a_i = (1 - N_i)/2. These are six planes of
+F5^3 through the line l = {(2,0,z)}, and every theta off l lies on exactly
+one of them (C42). Since (x + a_i y) y^(-1) = s + theta + a_i and
+conjugation by u_i is multiplicative, branch i sends the input with
+coordinates (y, s, theta) to the output with coordinates
+(u_i y u_i^(-1), s, rho_i(theta + a_i)). Let tau(theta) = rho_i(theta + a_i)
+with i the branch of theta, and i = 1 on l. An output (y', s, theta') has
+exactly one preimage for every theta with tau(theta) = theta', namely
+(k_i^(-1) y', s, theta). So the fibres of Phi over non-isotropic slices are
+the fibres of the map tau of the 125 points of F5^3. They have at most two
+elements: 46 points have no preimage, 33 have one, 46 have two (C42).
+
+(b) Slices with q(y) = 0, y != 0. The pure c with c y = 0 form an
+isotropic line e, and with m the pure part of x conj(y) one has
+B(x, c y) = c . m for pure c, hence m . e = 0. By Lemma 2 branch i agrees
+exactly when a_i . m = 0; this holds for exactly one i unless m is a
+multiple of (0,0,1), when it holds for all six. The inputs with given
+(e, m) form a class of 600 points, and branch i maps the class (e, m)
+bijectively onto the class (rho_i e, rho_i m). So the fibre of an output in
+the class (e', m') has as many elements as there are classes mapped to
+(e', m') by sigma(e, m) = (rho_i e, rho_i m), i the branch of the class.
+The map sigma of the 150 classes has fibres of at most two elements: 44
+classes have no preimage, 62 have one, 44 have two (C43).
+
+(c) Slice y = 0. All six branches agree, the first branch sends (x, 0) to
+(x, 0), and outputs with y' = 0 arise only from y = 0.
+
+The counts agree: 2400 * 46 + 600 * 44 = 136800 outputs with two preimages,
+where 2400 is the number of pairs (y', s) with q(y') != 0. The passage to
+Canon coordinates, to the radical coordinates and to C = K + 0_2 is by the
+bijections of Lemma 1 and of section 6, which preserve fibre sizes. QED
+
+The rotations rho_i were found by a computer search. No structural reason
+for this particular choice is given here.
+
+**Proposition 6 (abstract continuation).** *Status: the criterion is proved
+here; its hypothesis is verified for the selector of Theorem 3 (C46).*
+Let X be the data set (W^2 or V^2), let f be a map of X with
+G(f(z)) = M G(z) for all z and with fibres of size at most two, and for a
+Gram class g let F_m(g) be the number of data points o with G(o) = g and
+exactly m preimages under f. There is a permutation T of X times {0,1} with
+data projection f on the ready layer, T(z,0) = (f(z), bit), that satisfies
+the readout equation on its whole reachable set if and only if there are
+integers p(g) with
+
+```text
+p(M g) = p(g) + F_2(g) - F_0(M g),      0 <= p(g) <= F_0(g) + F_1(g)       for all g.
+```
+
+For every such T the numbers p(g) can be chosen so that F_2(g) + p(g) is
+the number of occupied reachable states over g; the reachable set then has
+|X| plus the sum of all F_2(g) + p(g) states. Here M is the Canon target
+and f is a data map in Canon coordinates; the proof uses only that M
+permutes the Gram classes.
+
+On every cycle of M on the Gram classes the sums of F_0 and of F_2 are
+equal, because the inputs over g are the preimages of the outputs over
+M g. So the recurrence always has solutions, unique on each cycle up to an
+additive constant, and the condition is that some constant satisfies the
+two bounds.
+
+For the selector of Theorem 3 such p exist. In the least solution
+136800 occupied states are created on the first step and 45600 further
+occupied states are passed through, so that the reachable set has
+390625 + 136800 + 45600 = 573025 of the 781250 states of the carrier
+W^2 times {0,1} of the nondegenerate part (C46). This is the least reachable set of any such permutation
+with this data map; the minimum over all permutations in
+QUADRATIC-L5-INITIALIZED-CAPACITY is 281640625 / 625 = 450625.
+
+*Proof.* Necessity. Let T be such a permutation, R the ready layer and
+Omega its reachable set. Omega is finite and T maps it into itself, so T
+permutes Omega. The data point o carries as many states of T(R) as it has
+preimages under f. For a class g let b(g) be the number of data points o
+over g with a single preimage whose image is (o,1), and let p'(g) be the
+number of occupied states of Omega over g that are not in T(R). The
+occupied states of Omega over g number F_2(g) + b(g) + p'(g), and the ready
+states over g outside T(R) number F_0(g) + b(g). A state of Omega outside
+T(R) has its preimage among the occupied states of Omega, and by the
+readout equation this preimage lies over the class mapped to g by M. Hence T
+maps the occupied states of Omega over g bijectively onto the states of
+Omega over M g outside T(R):
+F_2(g) + b(g) + p'(g) = F_0(M g) + b(M g) + p'(M g). So p = p' + b
+satisfies the recurrence, and p(g) <= F_0(g) + F_1(g) because the occupied
+states counted by p(g) lie over data points with at most one preimage:
+an occupied state of Omega outside T(R) cannot lie over an output with two
+preimages, because the bit-1 state of that output is in T(R).
+
+Sufficiency. Give bit 0 to the only or the first preimage of an output and
+bit 1 to the second. For every class g choose p(g) occupied states over
+data points with at most one preimage, and let E(g) consist of them and of
+the F_2(g) states (o,1) over the outputs o with two preimages. By the
+recurrence E(g) has as many elements as the set of the ready states (o',0)
+over M g with o' not in the image of f together with the chosen occupied
+states over M g; let T map E(g) bijectively onto that set. Then T is a
+bijection of the union of R and all E(g), it respects the Gram classes
+there, and this union contains the reachable set. On all other states let T
+be the identity. The numbers belonging to the reachable set of this T form
+a solution that is at most p everywhere, so for the least solution p the
+union is the reachable set. QED
+
+The maps on the occupied layer in this proof are matchings chosen from the
+target. The maps applied there can be taken to be linear maps of tangent
+type; which map is applied at which state is still given by tables derived
+from the target.
+
+For a pure quaternion a, the shear (x,y) -> (x + a y, y) is the branch of
+tangent type with k = 1 and psi = left multiplication by a. It leaves
+B(x,y) and q(y) unchanged and adds 2 B(x, a y) + N(a) q(y) to q(x), which
+is q(y) (2 theta . a + N(a)) when q(y) != 0. On such a slice it satisfies
+the Gram identity exactly at the inputs with 2 theta . a + N(a) = 1, that
+is N(theta + a) = N(theta) + 1, and in the coordinates of part (a) it is
+(y, s, theta) -> (y, s, theta + a). On a slice with q(y) = 0 the target M0
+fixes the Gram value, so every isometry applied to both cells satisfies the
+Gram identity there; this is the branch of tangent type with psi = 0.
+Conjugation by u acts on the classes of part (b) by
+(e, m) -> (rho_u e, rho_u m).
+
+**Proposition 7 (a complete permutation built from linear maps).** *Status:
+verified by the exact verifier, bijectivity on all 781250 states and the
+readout equation at every reachable state (C47); the passage to
+C = K and to V = F5^6 is proved here.* Let C = I_4. Let
+Phi_0(x,y) = (k_i(x + psi_i y), k_i y) be the selector of Theorem 3 in
+reduced coordinates, where i = beta(z) is the unique branch that agrees at
+z = (x,y), and beta(z) = 1 where all six agree. In reduced coordinates
+define T on W^2 times {0,1} as follows.
+
+- Ready layer: T(z,0) = (Phi_0(z), b), with b = 1 if Phi_0(z') = Phi_0(z) for
+  some z' with beta(z') < beta(z), and b = 0 otherwise.
+- Occupied layer, q(y) != 0: if theta, the pure part of x y^(-1), has an
+  entry theta:a in the first table below, then
+  T((x,y),1) = ((x + a y, y), b).
+- Occupied layer, q(y) = 0 and y != 0: if the class (e, m) of (x,y) has an
+  entry em:n in the second table, then
+  T((x,y),1) = ((u x u^(-1), u y u^(-1)), b) with u = w_n, where
+  w_0 = 1 + i + j and w_1 = 1 + i + j + 4k.
+- In the shear case b = 0 if the new data point is not a value of Phi_0
+  and no occupied state with a lexicographically smaller shear vector a is
+  sent to the same data point; otherwise b = 1. In the conjugation case
+  b = 0.
+- T is the identity on all other states.
+
+Vectors of F5^3 are written as three digits, the coefficients of i, j, k.
+The line e is given by its vector whose first nonzero coordinate is 1; m is
+not normalised.
+
+```text
+first table, theta:a (70 entries, 13 different a)
+001:103 002:433 003:201 004:324 011:433 012:304 013:111 014:130 021:421
+022:111 023:311 024:402 030:324 031:111 032:304 033:201 034:433 041:311
+042:421 043:301 044:402 101:201 104:103 110:301 111:201 112:111 114:324
+122:031 134:311 140:130 141:130 144:130 200:402 202:421 203:031 213:002
+214:201 220:130 222:031 223:421 230:402 232:103 233:433 234:111 301:304
+302:130 303:433 310:311 320:103 321:304 322:031 323:402 330:433 332:421
+333:402 340:421 343:002 400:433 401:402 403:031 410:031 411:301 414:304
+420:421 430:311 431:301 434:031 440:201 441:301 443:002
+
+second table, em:n (44 entries)
+012012:0 012024:0 012031:0 012043:0 013013:0 013021:0 013034:0 013042:0
+013121:1 013134:1 013142:0 013213:1 013234:0 013242:1 013313:1 013321:0
+013342:1 013413:0 013421:1 013434:1 102132:0 102142:0 102214:0 102234:0
+102321:0 102341:0 102413:0 102423:0 120121:1 120242:1 120313:1 120434:1
+130130:0 130132:0 130134:1 130210:0 130213:1 130214:0 130340:0 130341:0
+130342:1 130420:0 130421:1 130423:0
+```
+
+The first table lists the 46 points with two preimages under tau together
+with 24 further points. The second lists the 44 classes with two
+preimages under sigma, and its conjugations map them bijectively onto the
+44 classes with none.
+
+Let T_M be T in Canon coordinates: (g_in x 1)^(-1) is applied to the data
+before T and (g_out x 1)^(-1) after it, on both layers. Lemma 1(b) carries
+over one step, not the iteration: between two consecutive steps of T_M the
+reduced data are changed by (g_in x 1)^(-1) (g_out x 1)^(-1), which is
+(x,y) -> (2x + y, 2y). It fixes theta and e and replaces m by -m, and the
+set of classes in the second table is invariant under it. All statements
+below are therefore checked for T_M itself. T and T_M are permutations of
+the carrier. The reachable set of the ready layer under
+T_M consists of the ready layer and of the occupied states whose data fall
+under the two tables after (g_in x 1)^(-1) has been applied. T_M maps this
+set bijectively to itself, and G(pi T_M(s)) = M G(pi s) for every reachable
+state s, where pi is the data projection. Of the 781250 states, 585025
+are reachable and 194400 of these are occupied. On the reachable set T_M
+has 4021 cycles, the longest of length 500 (C47).
+
+On the ready layer T_M selects among the six linear maps F_i of Theorem 3.
+On its reachable occupied states it selects among the 13 linear maps
+
+```text
+(x,y) -> ( x + 2y + a(3x + 4y),  2x + 3y + a(4x + 2y) ),
+```
+
+one for each a of the first table, and the two linear maps
+(x,y) -> (u(x + 2y)u^(-1), u(2x + 3y)u^(-1)); theta and the class are those
+of the pair (2x + 3y, 4x + 2y). These 21 maps correspond under
+Lemma 1(b) to branches of tangent type. The occupied states outside the
+two tables are exactly the unreachable ones; there the identity of T
+becomes the linear map (x,y) -> (x + 2y, 2x + 3y) in Canon coordinates, and
+the readout equation is neither required nor satisfied in general.
+
+For C = K the conjugate of T_M by P, with P acting on both cells, has the
+same properties and the same cycle structure, because
+G_K(Px, Py) = G_I(x, y). On V = F5^6, for C = diag(1,1,1,1,0,0) and for
+C = K + 0_2, the product of the permutation with the identity on the four
+radical coordinates has the same properties; its reachable set has
+625 * 585025 = 365640625 states.
+
+The two tables were found by a computer search, the first one with an
+integer programming solver as a search aid. Only the exact verification
+C47 is claimed for them. Neither the number of occupied-layer alternatives
+nor the size of the reachable set is claimed to be least possible; by
+Proposition 6 no such permutation with the data map of Theorem 3 has a
+reachable set below 573025.
+
+## 11. The verifier
 
 `python3 verify.py` uses only the Python standard library and exact
 integer arithmetic modulo 5. It is deterministic, writes no file, prints
@@ -673,7 +954,13 @@ forced fibres (C12, C13); the constants of Theorem 1 (C18 to C21); the
 slice counts and the size formula of Lemma 2 for all 15625 skew psi of
 rank 4, both classes (C22 to C25); the maxima of Proposition 3 (C23, C25
 to C28); the covers of Proposition 4 over all 5^8, 5^10 and 5^12 inputs
-(C30 to C35); the finite lemmas and counts of Proposition 5 (C36 to C40).
+(C30 to C35); the finite lemmas and counts of Proposition 5 (C36 to C40);
+the isometries, the two finite models and the selector of Theorem 3 on all
+5^8 inputs, for C = I_4 and for the Canon's K (C41 to C45); the flow of
+Proposition 6 (C46); the permutation of Proposition 7 on all 781250 states
+of the carrier of the nondegenerate part, in Canon coordinates and for the
+target M, by
+direct evaluation of every reachable step (C47).
 
 Sanity checks that are not proofs: Lemma A in small cases (C05) and
 Lemma 3 on 13 explicit branches (C17). Lemma 3, Theorem 1 and the upper
@@ -694,7 +981,7 @@ the level sets (C35).
 This verifier is a local audit. It is not a formal evidence directory, a
 preregistration or a probe.
 
-## 11. Falsifiers and boundary
+## 12. Falsifiers and boundary
 
 - Theorem 1 is refuted by five explicit affine maps of F5^12 whose
   agreement sets cover the ready layer for some C of rank 3 to 6. Its proof
@@ -708,6 +995,14 @@ preregistration or a probe.
 - Proposition 4 is refuted by an input not covered by the listed branches.
 - Proposition 5 is refuted by six branches of tangent type covering W^2 in
   one of the six named classes.
+- Theorem 3 is refuted by a ready input at which the selected branch
+  violates the Gram identity, or by an output state with three preimages;
+  the verifier would report either (C44, C45).
+- Proposition 6 is refuted by a permutation extending a data map whose flow
+  conditions (recurrence and bounds) have no solution, or by a solvable flow without an extension.
+- Proposition 7 is refuted by a reachable state at which the stated map
+  violates the Gram identity, or by two reachable states with the same
+  image; the verifier would report either (C47).
 
 Boundary. The covering number concerns one property only: at every ready
 input some alternative satisfies the Gram identity for one initialized
@@ -715,17 +1010,38 @@ step. It says nothing about reversibility, about writing the ignored
 register, about occupied-memory continuation or about native admissibility
 of the alternatives or of the selection rule.
 
-In particular the six-branch selector of Theorem 2 is not the data
-projection of a binary contact. For C = I_4, 369600 of the 390625 reduced
-ready inputs agree with exactly one of the six branches, so their outputs
-are forced, and 12000 output states are the forced image of four inputs
-each (C12, C13; with the identity on radical coordinates the same holds on
-V^2). Every selector built from these six maps therefore has a data fibre of
-size at least four, whereas QUADRATIC-MEMORY-NATIVE-CONTACT [O] requires
-fibres of size at most two for the data projection of a successful binary
-contact. Whether other six-branch covers, for instance with a different
-output isometry k on each branch, avoid this was not examined. The result
-supplies nothing for QUADRATIC-MEMORY-NATIVE-CONTACT [O], which stays open.
+The six maps of Theorem 2 as stated, with the identity as output isometry
+on every branch, are not the data projection of a binary contact: for
+C = I_4, 369600 of the 390625 reduced ready inputs agree with exactly one of
+the six branches, so their outputs are forced, and 12000 output states are
+the forced image of four inputs each (C12, C13). With the output isometries
+of Theorem 3 the same six psi_i give a selector whose data map has fibres
+of size at most two, and by Proposition 6 this data map extends to a
+complete permutation of the carrier that satisfies the readout equation on
+its reachable set. By Proposition 7 the permutation can be chosen so that
+both bit layers select among finitely many linear maps of tangent type,
+with the choice on the occupied layer given by tables derived from the
+target.
+
+For QUADRATIC-MEMORY-NATIVE-CONTACT [O] this gives the following and no
+more. The three necessary properties of the data projection named there,
+non-affinity, fibres of size at most two and failure of injectivity, are
+met by a ready-layer map that selects among six linear maps. For C = I_4,
+for C = K and for their extensions by a radical there is an explicit
+permutation of the carrier that satisfies the readout equation on its
+whole reachable set, occupied-memory continuation included, and that
+selects among six linear maps on the ready layer and among 15 linear
+maps on its reachable occupied states (Proposition 7).
+
+Not addressed are: the independent admission of C and of the reading; the
+native admissibility of the linear maps; the selection rules, which
+evaluate the Gram identity of each branch on the ready layer and look up
+theta or the class (e, m) in a table on the occupied layer; and the bit
+writes, which depend on which other state is sent to the same data point.
+The two tables of Proposition 7 were obtained from the target by search.
+They are fibre matchings of a reduced model, and that item does not accept
+target-derived fibre matchings as native primitives. No gate alphabet is
+declared and no admitted permutation is supplied. The item stays open.
 
 The result sharpens only the bounded affine-alternative class of
 QUADRATIC-L5-NATIVE-OBSTRUCTIONS and of the note in pull request #2063: for
@@ -735,7 +1051,7 @@ four with square determinant five is the exact threshold. These are
 analytical statements conditional on the marked reader and on C. They do
 not select C, admit a gate alphabet or supply a native realization.
 
-## 12. Open
+## 13. Open
 
 - The exact value of m* for the classes (4,2), (5,1), (5,2), (6,1), (6,2),
   where 6 <= m* <= 25, 29, 29, 25, 25, and for rank 3, where
@@ -745,5 +1061,16 @@ not select C, admit a gate alphabet or supply a native realization.
   type, except possibly in class (6,1).
 - A sharp bound for branches that are not of tangent type. The largest
   agreement set found for such a branch is far below the bound of Lemma 3.
-- Whether a six-branch cover in rank four with square determinant can have
-  all data fibres of size at most two.
+- The least number of affine alternatives on the occupied layer of a
+  complete permutation whose ready layer is a six-branch selector. For the
+  data map of Theorem 3 it lies between 3 and 15: the upper bound is
+  Proposition 7, and at least 182400 occupied data points must be served
+  while one affine branch agrees on at most 90625 inputs (Proposition 3).
+- Whether the selection rule and the bit rule on the occupied layer can be
+  given by formulas instead of the tables of Proposition 7.
+- Whether a six-branch selector with fibres of size at most two can reach
+  the minimal reachable set of QUADRATIC-L5-INITIALIZED-CAPACITY, which has
+  450625 reduced states. The selector of Theorem 3 needs at least 573025,
+  and the permutation of Proposition 7 uses 585025.
+- Whether, for rank four with square determinant, a cover by six affine
+  branches can contain a branch that is not of tangent type.

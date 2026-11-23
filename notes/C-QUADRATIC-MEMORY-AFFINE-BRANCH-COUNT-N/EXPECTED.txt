@@ -38,4 +38,11 @@
 [PASS] C38 rank 4, delta = 2: at most 105 non-isotropic y with q(psi y) = 0; 6*105 < 2*520: maximum found 104 (for delta = 1: 480)
 [PASS] C39 rank 3: at most 25 non-isotropic y with q(psi y) = 0; 6*25 < 2*100: maxima found 20 20
 [PASS] C40 rank 5 and (6,2): 6*25*N_3(0) < 2*2500 and 6*max(N_6(0), 625*N_2(0)) < 2*12600: 3750 < 5000, 18150 < 25200
-ALL CHECKS PASS (40 checks)
+[PASS] C41 Theorem 3: k_i = conjugation by u_i are the listed isometries; left multiplication by i, j on quaternions is Li, Lj
+[PASS] C42 Theorem 3, model on F5^3 (non-isotropic slices): the piecewise map tau has fibres <= 2: points with 0, 1, 2 preimages: 46, 33, 46
+[PASS] C43 Theorem 3, model on the 150 classes (isotropic slices): the map sigma has fibres <= 2: classes with 0, 1, 2 preimages: 44, 62, 44
+[PASS] C44 Theorem 3: C = I4, Canon target M, all 5^8 inputs: the selector satisfies the Gram identity and every output has at most two preimages: outputs with 0, 1, 2 preimages: 136800, 117025, 136800
+[PASS] C45 Theorem 3: C = K, Canon target M, all 5^8 inputs: the transported selector has fibres <= 2: outputs with 0, 1, 2 preimages: 136800, 117025, 136800
+[PASS] C46 Proposition 6: the flow p(Mg) = p(g) + F2(g) - F0(Mg), 0 <= p <= F0 + F1, has a solution on every orbit of Gram classes: orbit lengths [(1, 1), (2, 2), (10, 12)], fibre-2 outputs 136800, pass-through states 45600, reachable set 573025
+[PASS] C47 Proposition 7: Canon target M, all 781250 states: T built from the six branches (bit 0) and from shears and conjugations (bit 1) permutes its reachable set, Gram identity on it: reachable 585025, occupied 194400, cycles 4021, longest 500, shears 13, conjugations 2
+ALL CHECKS PASS (47 checks)
