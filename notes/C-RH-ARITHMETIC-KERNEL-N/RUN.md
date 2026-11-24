@@ -350,3 +350,77 @@ content checks pass. All 75 earlier non-index files match the previous
 candidate byte for byte. Main and the preceding draft head were freshly
 read back unchanged before committing. Final exact-head workflow and
 remote-file custody are recorded in the draft after publication.
+
+## Complete-power continuation, round eight, 24 November 2026
+
+The same owner continues from exact candidate
+`6649670532e4d69858bc92994a55a54682f5d619`. STATUS was read first
+through the GitHub connector. Public main remains
+`6f2e112aafc4f3aca4222bb4bf3dced1d79fe2ed`, Canon v117. The annotated
+tag `63ff3d2f7edc0c921a6c8ddd033badb59b632436` peels to that main;
+content `d65e32c4b8e9a14496d3b7aba46fc384f51f81dc` is its ancestor.
+All five normative hashes and the declared 1624192-byte Canon matched.
+Exact-main workflow 45388050270 has successful aarch64 job 138424069994,
+x86_64 job 138424070625 and aggregate 138424717642. Required public and
+private startup instructions were read before delegation; private
+operational details are not part of this paper package.
+
+The explicit remote scan contained 400 branch heads. Its captured text
+has SHA-256
+`e7cd82046a91e82f99693047c6613ae98889c52d95d28781c13abeea9641239d`.
+Related open issues, registry, evidence, gates and probe paths were
+checked for collisions. No sealed probe is reopened. The prospective
+round-eight scope was appended to the same issue 2087 and read back
+exactly before research authoring. This is continued non-canonical
+incubation under the same owner and draft 2089.
+
+The neighboring draft 2093 was read at
+`ceb77e3632ec4617c54d8e1fd504d3b1c99dd106`. Its complete thirty-file
+package and twenty-nine manifest entries matched the fetched Git bytes.
+The new full-coupled, full-level and lowest-mode papers were examined
+for arithmetic transfer and its limits. That candidate keeps its own
+owner and coefficient sequence. Personal-context lookup was used only
+for discovery; it did not establish authority.
+
+An Astra derived proper-divisor transfer, the actual upper and interior
+three-prime comparisons, and the normalized determinant deletion. One
+Sol derived the actual all-prime regroup, the repeated-pair contraction
+and the inverse-weight negative-square formula. Another Sol derived
+moving residue-zero bounds, exact smooth proper-frequency annihilation
+and then the full sharp-cap common-window extension. The latter is a
+separate frozen proof; its earlier reviewed source was not replaced.
+Root reconstructed the decisive arguments and fixed one complete Q8.
+There are four proof files, four prospective scope records, seven review
+records, the report and the promotion handoff in round8.
+
+The same-session opposition checked primitive means, reflection
+symmetry, both periodic endpoints, denominator coincidences, resonant
+terms, sharp-cap sums on all original shells, fixed-time versus frozen
+moving masks, actual nonzero cofactor examples, signed determinant
+progressions, repeated-prime multiplicity, dilation constants, critical
+and positive-epsilon quantifiers, signed short-rectangle errors and both
+negative squares. The root's single successor received a separate Astra
+review. Each lane then checked its new report sections. Final scope
+clarifications distinguish the specified large interior family from the
+union of all triples and distinguish the sufficient one-sided route
+from the equivalent complete criterion. The four author proofs retain
+their reviewed bytes.
+
+Root reopened the primary fixed-modulus prime-count statement and the
+already attributed maximal short-sum and Lee--Leong version 5 sources.
+No scientific executable, numerical enumeration, symbolic computation,
+external-source computation or formal proof build ran in this round.
+All new deductions are candidate-D. The complete all-epsilon bound for
+Q8, equivalently Q7, remains O. The reviews are in one research session
+with the proofs visible, not blind or independent external confirmation.
+Repository delivery checks do not promote this mathematical status.
+
+Before the content commit, local POLICY PASS and CANON PASS v117
+claims=639 were observed. The complete package has 108 manifest entries;
+all match. All 88 earlier non-index files match the preceding candidate
+byte for byte. The 21 changed files comprise 17 new round-eight files
+and the four package indices. Relative links and anchors, paired math
+delimiters, whitespace and public content checks pass. All four frozen
+author proofs retain their reviewed SHA-256 values. The exact remote
+content readback, head-specific workflow and final unchanged-main check
+are recorded in the existing draft after delivery.

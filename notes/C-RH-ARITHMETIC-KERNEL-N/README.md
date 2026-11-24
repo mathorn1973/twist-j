@@ -1,4 +1,4 @@
-# Arithmetic cancellation: further conductor deletion and a joint slow estimate
+# Arithmetic cancellation: common zero windows and the remaining joint estimate
 
 **NON-CANONICAL, no authority. Candidate-D paper deductions; candidate-C finite audits.**
 Owner: A. M. Thorn / ChatGPT arithmetic-kernel session, 24 November 2026.
@@ -6,11 +6,45 @@ Claim: [#2087](https://github.com/mathorn1973/twist-j/issues/2087).
 Action layer: NOT_APPLICABLE. No Canon promotion or independent RH proof.
 
 The first result bounds the moving support d^3 <= n^2 unconditionally.
-The latest continuation removes additional families from the remaining
-three-prime-or-more conductor core at the required error scale. It also
-improves the unconditional bound for a specified slow observation of the
-core jointly with its exact prime correction. The full signed estimate
+The latest continuation removes complete original numerator packets on
+specified periodic time windows, including conductors with a fixed small
+prime factor. A separate arithmetic regroup absorbs repeated large-prime
+squares by a strict contraction. The full jointly signed power estimate
 remains open.
+
+## Common zero windows and the complete power-saving gap
+
+**Candidate-D, paper only.** The [round-eight report](round8/REPORT.md)
+records four proofs, seven review records and one complete successor.
+All earlier mathematical and finite-audit files retain their bytes.
+
+| Actual object | Proved estimate or boundary | Proof |
+|---|---|---|
+| All original conductors and retained numerators, at common zero times | On each conductor's windows \(n=5kr+u\), \(-\lfloor X^{2/3}\rfloor\le u<\lfloor X^{2/3}\rfloor\), squared removal cost is \(O_\varepsilon(X^{2+\varepsilon})\). No proper-divisor ceiling is needed. The complement of those windows remains. | [PERIODIC-SHARP-CAP](round8/PERIODIC-SHARP-CAP.md) |
+| Smooth packets with any fixed number \(\ell\ge3\) of balanced prime factors | Proper-divisor frequencies vanish exactly. On the specified robust zero times, squared norm is \(O_{\ell,\varepsilon}(X^\varepsilon)\). Constants do not apply uniformly to a growing \(\ell\). | [MOVING-RESIDUE-ZEROS](round8/MOVING-RESIDUE-ZEROS.md) |
+| Above-taper three-prime conductors and smallest normalized determinants | Complete above-taper packets and the absolute determinant subtotal are removable at the target scale. An actual interior three-prime packet has squared norm \(\gg X^3/\log^6X\), excluding a uniform small bound for arbitrary three-prime subfamilies. | [PROPER-DIVISORS-AND-DETERMINANTS](round8/PROPER-DIVISORS-AND-DETERMINANTS.md) |
+| Repeated large-prime squares in the actual arithmetic profile | The exact regrouping cancels inert repeats. Split repeats form a strictly contracting lower-argument operator, with critical limiting factor \(\sqrt2\log(3/2)<1\). The remaining small-prime and distinct-prime expression is still unbounded at the requested power scale. | [COUPLED-CUTS](round8/COUPLED-CUTS.md) |
+| Actual inverse-weight factor cut | Two explicit negative squares have the original coefficients, with \(O(\sqrt X)\) remainder. The complete signed linear form still requires its power bound. | [Coupled cuts](round8/COUPLED-CUTS.md) |
+
+The report defines \(G_*=G_7-V_{\rm out}\), the common-window packet
+\(V_0\) over that fixed complement, and the original restricted pair
+sum \(\widehat P\) after the absolute small-determinant deletion. Its
+single successor is
+
+\[
+ Q_8=\widehat P+2\operatorname{Re}\langle G_*,C_z\rangle_w+\|C_z\|_w^2
+      -2\operatorname{Re}\langle V_0,G_*+C_z\rangle_w+\|V_0\|_w^2.
+\]
+
+It equals \(\|G_*-V_0+C_z\|_w^2+O_\varepsilon(X^{2+\varepsilon})\).
+Its all-epsilon positive-part bound is equivalent to the old complete
+criterion. Every cross term and the original repeated-prime correction
+remain. The moving spectrum receives no unsupported fixed-mask pair
+identity. **O:** the complete bound is not proved. The
+[root audit](round8/REVIEW-SYNTHESIS.md),
+[successor review](round8/REVIEW-FINAL-SUCCESSOR.md) and
+[promotion handoff](round8/PROMO-C-RH-ARITHMETIC-KERNEL-N.md) retain the
+same-session candidate-D ceiling.
 
 ## Further conductor deletion and the joint low-frequency estimate
 

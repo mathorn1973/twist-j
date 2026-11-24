@@ -305,6 +305,53 @@ are derived in the new proofs. No external code or numerical dataset is
 copied. Source computations are not rerun. These source checks and
 same-session opposition do not supply independent mathematical acceptance.
 
+### Round-eight complete-power continuation
+
+Input is the unchanged arithmetic-kernel head
+`6649670532e4d69858bc92994a55a54682f5d619`. Its primitive Fourier
+identity, finite taper, original numerator and height cuts, Jackson
+kernel moments, square-root unit count, signed cubic unit estimate,
+two arithmetic moments and the complete one-sided window criterion are
+used with their existing quantifiers. No earlier threshold or scientific
+file is amended.
+
+The neighboring draft 2093 was fetched at
+`ceb77e3632ec4617c54d8e1fd504d3b1c99dd106`. Its thirty-file package and
+twenty-nine manifest entries were checked. The new
+[FULL-COUPLED-ENERGY](https://github.com/mathorn1973/twist-j/blob/ceb77e3632ec4617c54d8e1fd504d3b1c99dd106/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/FULL-COUPLED-ENERGY.md)
+supplies the large-factor orientation and the overlap-square comparison
+for its own coefficients. Its
+[FULL-LEVELS](https://github.com/mathorn1973/twist-j/blob/ceb77e3632ec4617c54d8e1fd504d3b1c99dd106/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/FULL-LEVELS.md),
+[FULL-ENERGY-REVIEW](https://github.com/mathorn1973/twist-j/blob/ceb77e3632ec4617c54d8e1fd504d3b1c99dd106/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/FULL-ENERGY-REVIEW.md)
+and [LOWEST-MODES](https://github.com/mathorn1973/twist-j/blob/ceb77e3632ec4617c54d8e1fd504d3b1c99dd106/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/LOWEST-MODES.md)
+were read to check scope and the remaining same-scale correlations.
+The actual inverse weights for t, short-rectangle errors and entire
+Fourier transfer are derived separately in round8/COUPLED-CUTS.md.
+No change to the neighboring owner, candidate or coefficient sequence is
+implied. Personal-context lookup was used for discovery; pinned Git
+content supplies the evidence.
+
+Root reopened the primary fixed-modulus prime-count statement in
+[Yamada, arXiv:1306.5322v4, Section 1](https://arxiv.org/html/1306.5322v4#S1),
+the already attributed Lee--Leong version 5 Mertens result and the exact
+published short-interval statement identified above. The new counts
+use fixed-ratio prime intervals only. The critical contraction uses
+partial summation of split-prime counts at modulus five. The all-prime
+drift uses cumulative prime counts with fixed inverse-logarithmic
+precision. No finite table is extrapolated beyond its stated exponents,
+and no count in a shrinking prime interval is assumed. The other two
+external results remain inherited analytic premises at their old scopes.
+
+New paper arguments are the primitive/raw transposition, normalized
+determinant count, reflection cancellation, arithmetic spacing after
+periodic masking, exact proper-frequency annihilation, common divisor
+zero windows, complete quadratic successor, all-prime regroup,
+repeated-pair induction and the actual inverse-weight factor cut.
+Proof reviews had the authors' arguments available within the same
+session. No source computation, scientific executable or formal proof
+build was run. New results are candidate-D; the complete power estimate
+remains O.
+
 ### Status ceiling
 
 All new proof statements remain candidate-D pending external review. The
