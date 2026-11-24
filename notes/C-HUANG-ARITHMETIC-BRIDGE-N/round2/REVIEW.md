@@ -9,7 +9,7 @@ test or formal proof assistant was used.
 | Reviewed input | Commit |
 | --- | --- |
 | Round-two scope | `51c7bc9024ca601d4d21511a2b88ffcacc9f84fe` |
-| SIGNED-INTERVALS.md | `cb9c2c6413624d0bc775ffdd4f4f0f20325a8405` |
+| SIGNED-INTERVALS.md | `bd2eae68aebeebd5d7a16d113a367b6693699cfa` |
 | MIXED-BOUNDARIES.md | `652b068179d5c277022fdb6d05ac4f4cb8617ddc` |
 | PRIME-SCALE-CANCELLATION.md | `4bd0bd8442ae2a95dd32cd9f06d10419f18829a7` |
 | Prior complete-window arithmetic | `ceb77e3632ec4617c54d8e1fd504d3b1c99dd106` |
@@ -128,6 +128,51 @@ norms. These costs describe unrestricted tests. The real square of
 the summed scalar readout uses the tensor, all pairs of shifts and
 floor layers, the affine cross term and its square. The positive
 energy additionally requires the sign of that scalar.
+
+## The diagonal on a complete time window
+
+**Candidate-D.** Let \(A=Y\), \(B=\lceil Y^{3/2}\rceil\) for integer
+\(Y\ge11\), and use \(w(N)=1/[N(N+1)]\). Specialize the one-prime
+formula to \(p=2\) and the actual Möbius sum. Each odd squarefree
+label \(d\) contributes \(\mu(d)\) on \([d,2d)\). For two odd labels
+\(a<b\), their window overlap has weight
+\[
+ K(a,b)=
+ \begin{cases}
+ l^{-1}-u^{-1},&l<u,\\
+ 0,&l\ge u,
+ \end{cases}
+ \qquad l=\max(A,b),\quad u=\min(B,2a).
+\]
+In particular, a nonzero overlap requires \(a<b<2a\). Expanding the
+two-sided squared norm gives \(E_M=D+C\), where
+\[
+ C=2\sum_{\substack{a<b<B\\a,b\ {\rm odd}}}\mu(a)\mu(b)K(a,b),
+ \qquad D=\sum_{A\le N<B}w(N)r_N.
+\]
+Here \(r_N\) is the number of odd squarefree labels in \((N/2,N]\),
+which is the total harmonic dimension at that cut with unit weights.
+All terms with a nonsquarefree label vanish. Counting the odd
+integers already gives \(r_N\le N/4+1\). Consequently
+\[
+ 0\le D\le\tfrac14\log(B/A)+1/A,
+\]
+since \(\sum_{A\le N<B}(N+1)^{-1}\le\log(B/A)\) and
+\(\sum_{A\le N<B}w(N)=1/A-1/B\). Thus the actual diagonal fits
+a logarithmic bound on every such window by elementarily counting
+labels.
+
+The remaining \(C\) is signed and satisfies \(C\ge-D\) by \(E_M\ge0\).
+Since \(Q_M\le E_M\le D+C_+\), a bound \(C_+\le Y^\epsilon\) on
+arbitrarily late original windows for every \(\epsilon>0\) would
+suffice for the positive-energy target. Choose a smaller exponent
+to absorb the logarithm and the inherited weighted norm error in
+passing to \(R_{1/36}\). For exact one-sided energy, insert
+\(g_N=\mathbf1_{M(N)>0}\) in every overlap sum and the diagonal,
+giving \(Q_M=D_g+C_g\) and \(0\le D_g\le D\). This gate is determined
+by the same coefficients as the pair products. The reduction gives
+no bound on their signed correlations. Their shifts \(b-a\) are even
+and may grow with the window.
 
 ## Prime filters across scales
 
