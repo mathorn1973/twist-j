@@ -171,8 +171,9 @@ is at most \(N\) and every product of three distinct selected primes
 exceeds \(N\). Let \(t\) count selected pairs with product at most
 \(N\). Then \(m=1-r+t\). If \(t<r-1\), every selected crossing edge
 has a prime \(p_i\) below the cutoff and a semiprime \(p_ip_j\) above
-it. Each upper vertex has degree exactly two, since both its prime
-factors lie below the cutoff. Thus the matching gives at least
+it. Each upper endpoint of a selected edge has degree exactly two,
+since both its prime factors lie below the cutoff. Upper vertices
+with four or more factors are isolated. Thus the matching gives at least
 \(r-1-t\) distinct primes \(p_i\), each admitting at least
 \(\lceil r/2\rceil\) distinct selected prime multipliers \(p_j\)
 with \(p_ip_j>N\). The selected pairs can be chosen with distinct
