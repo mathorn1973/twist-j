@@ -7,9 +7,11 @@ Claim: [#2091](https://github.com/mathorn1973/twist-j/issues/2091).
 
 The three-task comparison produced a usable slope-bound synthesis, exact
 local transfer limits and a stronger obstruction to norm-only augmentation
-estimates. It also supplies an anchored character reconstruction with an
-explicit norm. None of these supplies the remaining signed cancellation
-estimate or an independent TWIST-J proof of RH.
+estimates. Its signed-pairing continuation now supplies at most N^2 ordinary
+Dirichlet samples, exact optimal reconstruction cost and a sharp threshold
+for discarding smooth direction supports. The remaining signed window
+estimate is O. These deductions do not supply an independent TWIST-J proof
+of RH.
 
 ## 1. What each side actually supplies
 
@@ -19,7 +21,7 @@ estimate or an independent TWIST-J proof of RH.
 | Local arithmetic | Specified CM models, integral normalized kernels, formal logarithms and a derivative-to-period pairing. | Exact O=Z[zeta_5] arithmetic and a specified CM5 Jacobian, with registered T statements at those scopes. | Residue Frobenius transfers exactly to named torsion, but iteration does not deepen the defect. A direct tangent-injective formal-group identification fails at the real-field inert primes. |
 | Combined images | One arithmetic pairing with its lattices, height metrics, common complex realization and cuts. | Exact Gram and lattice carriers; existing centered-frame and actual-period candidate notes. | On matched supplier data, the integrated source-loss chord is stronger than the logarithmic weakening. The exact earlier centered bound is stronger still. |
 | Signed arithmetic | A smoothed prime-power observable and arithmetic bounds throughout arbitrarily late complete windows. | Integral rapidity lift, neutral coefficient, exact augmentation to Mobius, moving support decompositions. | The two current tails have different kernels. The actual coefficient span has evaluation norm of order sqrt(N), and its top band defeats every positive diagonal Cauchy bound even after aggregation. |
-| Reconstruction | Matched maps and normalizations are part of the proof, not inferred from dimension alone. | Independent rapidity coordinates permit finite product-character measurements. | Removing the trivial fourth-root sample still allows exact reconstruction. The signed pairing, rather than the reconstruction, is the open arithmetic task. |
+| Reconstruction | Matched maps and normalizations are part of the proof, not inferred from dimension alone. | Independent rapidity coordinates permit finite product-character measurements and the ordinary Dirichlet samples in Section 3. | A dyadic modulus and cubic twist give at most N^2 samples, all different from augmentation, with minimum squared readout norm D(N). The signed window estimate remains open. |
 
 The external statement and current sources are documented in
 [SOURCES.md](SOURCES.md). Dashboard compression ratios measure specified
@@ -101,15 +103,80 @@ sqrt(N)-strength estimate by that sole method requires the diagonal
 comparison condition number to grow nearly linearly. Poor conditioning
 is necessary here, not sufficient for success.
 
-## 3. What to do next
+## 3. Concrete signed-pairing continuation
+
+**Candidate-D.** [DIRICHLET-READOUT.md](DIRICHLET-READOUT.md) fixes the least
+power of two m>N^2 and a cubic character theta modulo seven with
+theta(11)=zeta_3. Every sample psi=theta chi, for chi modulo m, differs from
+augmentation on E_11. Distinct oriented monomials give distinct rational
+residues modulo m. Character orthogonality therefore gives an exact
+isometry and the anchored readout
+
+\[
+ M(N)=\frac1h\sum_{\chi\bmod m}B_N(\theta\chi)
+              \overline{K_N(\theta\chi)},\qquad
+ h=\varphi(m)\le N^2,\qquad
+ \frac1h\sum_{\chi\bmod m}|K_N(\theta\chi)|^2=D(N).
+\]
+
+One family works throughout a full window by choosing m from its upper
+cutoff X. The same note expresses the square of each sampled Dirichlet
+series as a ratio of four ordinary Dirichlet L functions and L(s,chi_5)^2,
+times an Euler unit whose absolute coefficient norms and inverse norms
+are uniform in the sample modulus for each real part greater than 1/2.
+This statement continues the square and proves no zero-free region.
+
+**Candidate-D.** [LOCAL-AVERAGES.md](LOCAL-AVERAGES.md) and the sharp converse
+in [ROUND2-REVIEW.md](ROUND2-REVIEW.md) prove
+
+\[
+ \sum_{\substack{d\le N,\ d\in\mathcal D\\P^+(d)\le c(\log N)^2}}
+       |\gamma_d(N)|=O_c(\sqrt N)
+ \quad\Longleftrightarrow\quad 0<c<\frac1{4e^2}
+ \qquad(c>0\text{ fixed}).
+\]
+
+At the endpoint the ratio is unbounded along an unbounded integer
+sequence, using the actual top-band coefficients. This concerns absolute
+support removal; the signed whole-window estimate can still benefit from
+cancellation between those supports. A concrete allowed choice is c=1/36.
+
+For that choice, retain d>N^(1/4) with P^+(d)>(log N)^2/36. The sum of
+their E_d is an exact readout kernel K_c,N on the same raw samples.
+Its minimum squared norm is the explicitly known retained mass D_c(N),
+with D(N)-D_c(N)=O(sqrt(N)). Its scalar output R_c satisfies
+M(N)-R_c(N)=O(sqrt(N)) on every sufficiently late integer.
+Thus the original arbitrarily late whole-window criterion is equivalent
+to the same criterion for this fully specified residual. That criterion
+remains **O**.
+
+The other continuation notes expose the signs and the limitations of norm
+changes. [SIGNED-SAMPLES.md](SIGNED-SAMPLES.md) groups equal-cofactor
+large-prime samples without discarding their arithmetic cross terms.
+[LOCAL-AVERAGES.md](LOCAL-AVERAGES.md) identifies the original orientation
+projection with the previously derived positive N/(log N)^2 prime tail
+of #2087/#2089 and derives the compensating negative row contribution.
+The signs must be combined before taking a positive part.
+[MIXING.md](MIXING.md) proves the actual coefficient energy is of order N
+and calculates the exact effect of a positive form with prescribed
+condition number. A target-anchored norm can move the unknown overlap
+into the measured component, without estimating it.
+
+The prospective continuation was recorded in the same owner issue before
+paper authoring; see [PAIRING-SCOPE.md](PAIRING-SCOPE.md). The sampling
+construction and sharp endpoint argument include contributions from the
+Astra reviewer, checked separately within the same session. They are joint
+internal work, with no external-referee or scientific-execution claim.
+
+## 4. Next bounded obligations
 
 1. **Most immediate proof simplification:** port the integrated-chord lemma
    into the actual HN supplier, before the scalar tail weakening. Keep its
    complete hypotheses and compare the exact centered bound on the same
    data. Verify that one downstream H8 consumer accepts the replacement.
-2. **Most relevant independent arithmetic problem:** preserve the signed
-   pairing with the augmentation vector on arbitrarily late whole windows.
-   Use the explicit reconstruction/residual contract. A uniformly
+2. **Active independent arithmetic problem:** prove the signed whole-window
+   estimate for the exact residual R_c of DIRICHLET-READOUT.md, Section 5.
+   Its sampling and square-root deletion error are specified. A uniformly
    diagonal-comparable positive norm, by itself, cannot supply the target.
 3. **Smallest meaningful local bridge:** one specified required place, one
    actual normalized kernel, and one admitted integral generator pair whose
@@ -121,7 +188,7 @@ These are distinct next obligations. The optional stronger all-subspace
 period-concentration target of #2070 remains O; it is not an omitted
 premise of the already checked external RH proof.
 
-## 4. Evidence boundary
+## 5. Evidence boundary
 
 Three Sol agents developed the separate tasks. Root Astra inspected the
 critical arguments and pinned sources; a separate Astra wrote the internal

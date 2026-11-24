@@ -103,3 +103,45 @@ paper proofs and bibliographic links do not require such a code transfer.
 Only original derivations, source correspondence and references are authored
 in this directory. No third-party source implementation or full exposition
 is copied into the package.
+
+## Signed-pairing continuation inputs
+
+The same PUBLIC main was read back before the continuation and before its
+delivery. The continuation uses the first package commit
+`c7bf6ec1014b7d6bdc0e75de95054f2aa58ae84e` for its base definitions.
+The prospective scope was exposed in owner issue #2091 before new authoring.
+
+- The large-prime asymptotic is inherited from #2087/#2089,
+  [LARGE-PRIME-TAIL.md, Section 4, equation (7)](https://github.com/mathorn1973/twist-j/blob/09ae5168191eed9cee484c08c5d65f58b31494d1/notes/C-RH-ARITHMETIC-KERNEL-N/round3/LARGE-PRIME-TAIL.md)
+  at commit `09ae5168191eed9cee484c08c5d65f58b31494d1`, file Git blob
+  `24793f2ca47dd618cca46ea0d6fac5863ced5337`. That source derives
+  the leading N/(log N)^2 term and leaves identification with the
+  original orientation projection to the reader. LOCAL-AVERAGES.md gives
+  that exact identification and distinguishes the row mask from the
+  direction-support projection. The earlier owner keeps the asymptotic.
+- [NIST DLMF, Section 27.8, equation 27.8.6](https://dlmf.nist.gov/27.8.E6)
+  records orthogonality over the Dirichlet characters of a finite unit
+  group. DIRICHLET-READOUT.md proves the needed orthogonality by the
+  explicit dyadic character sums as well. This is a construction on the
+  current finite carrier, with no claim of historical priority for
+  finite Fourier reconstruction.
+- Yamada, [Explicit formulae for primes in arithmetic progressions, I](https://arxiv.org/abs/1306.5322),
+  version 4, introduction, records the classical prime-count estimate
+  with every fixed logarithmic saving at fixed modulus. The use here is
+  solely modulus five. The arbitrary-saving statement is not inferred
+  from a finite table of explicit constants.
+- Thorner and Zaman, [Refinements to the prime number theorem for arithmetic progressions](https://arxiv.org/abs/2108.10878),
+  Corollary 1.4, is another primary reference for the fixed-modulus input
+  used in LOCAL-AVERAGES.md. The sharp endpoint proof needs the classical
+  estimate to any fixed inverse-logarithmic accuracy.
+- Lee and Leong, [New explicit bounds for the Mertens function and the reciprocal of the Riemann zeta-function](https://arxiv.org/abs/2208.06141),
+  version 4, Theorem 1.1 and introduction, provide an unconditional
+  Mertens bound stronger than every fixed logarithmic saving. No explicit
+  numerical constant or finite threshold from that paper is imported.
+
+The new Dirichlet identity is proved locally at every prime, including
+2, 5 and 7. Its Euler-unit estimates are uniform in the sampling modulus;
+no uniform zero-free statement for the denominator L functions is used.
+The smooth-support theorem concerns the actual absolute sector sum.
+Neither its sharp cutoff nor the inherited logarithmic large-prime
+expansion supplies the open signed whole-window estimate.
