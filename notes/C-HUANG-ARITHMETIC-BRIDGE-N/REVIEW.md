@@ -75,6 +75,41 @@ For \(r=2\) the hypothesis forces \(t=0\) and a single pair suffices.
 For \(r=1\) the hypothesis is empty. This finite graph argument uses
 the given product count and gives no estimate for how often it occurs.
 
+## Size of the positive matching majorant
+
+**Candidate-D.** Fix exactly the primes through \(N\ge2\). Use the
+even-inside, odd-outside set \(H_+\) for both signs of \(M(N)\). Write
+\(\nu_+(N)\) for the maximum matching size after retaining its edges
+whose endpoint degrees in the original \(H_+\) have product at least
+\(r=\pi(N)\). The majority argument gives \(M(N)_+\le\nu_+(N)\).
+
+For every prime \(q>3\) in \((N/6,N/3]\), the even vertex \(3q\)
+lies in \((N/2,N]\). Every one of its \(r-2\) possible prime additions
+crosses the cutoff. The odd vertex \(6q>N\) has the three lower
+neighbors \(3q,2q,6\), all at most \(N\). Hence the edge joining
+\(3q\) and \(6q\) has degree product \(3(r-2)\ge r\). Distinct \(q\)
+give disjoint edges because their lower vertices are distinct and
+their upper vertices are distinct, on opposite sides of the cutoff.
+Consequently
+\[
+ \nu_+(N)\ge\pi(N/3)-\pi(N/6)-2.
+\]
+For \(N\ge18\) the subtraction of two is unnecessary. By the prime
+number theorem the resulting lower bound is asymptotic to
+\(N/(6\log N)\). On the integers in \([Y^{3/2}/2,Y^{3/2})\), contained
+in the full window for late \(Y\), each summand below is then
+\(\gg 1/(\log Y)^2\). Thus
+\[
+ \sum_{N\in I(Y)}\frac{\nu_+(N)^2}{N(N+1)}
+       \gg \frac{Y^{3/2}}{(\log Y)^2}.
+\]
+The majorant's energy eventually exceeds \(Y\) on every such window
+and therefore fails even the required exponent one. The proved lower
+bound concerns the size of the qualifying matching. Inferring any
+lower bound for \(M(N)_+\) or the energy of \(R_{1/36}\) would reverse
+the comparison. This rules out proving the target simply by substituting
+that unsigned matching size for the positive Möbius sum.
+
 ## What the boundary trace sees
 
 **Candidate-D.** The positive spectra of \(G^*G\) and \(GG^*\) pair
