@@ -1,0 +1,48 @@
+{
+  "review": "Independent blind review phase 2 of PR #1862 (C-COLLATZ-CONTACT-STEP-RECORD-N)",
+  "reviewer": "Emmy (Muse Wonder Full)",
+  "machine_this_run": "aarch64, Python 3.12.3",
+  "freeze_commit": "6e49bc03a848911aea4cf4a063033ac84ca399cd",
+  "decision": "PASS S POZNAMKOU",
+  "quantities": [
+    {"name": "freeze_sha256_PREREG.md", "mine": "55d2738dba5d63a0119f6850ac600facaa909b2dd45240a46c621b6b9b616a12", "author": "55d2738dba5d63a0119f6850ac600facaa909b2dd45240a46c621b6b9b616a12", "status": "MATCH"},
+    {"name": "freeze_sha256_README.md", "mine": "c942e642bc2e34d7440c292c31dd1a506f1cb090bafd42965eabfe8af1ea29d8", "author": "c942e642bc2e34d7440c292c31dd1a506f1cb090bafd42965eabfe8af1ea29d8", "status": "MATCH"},
+    {"name": "freeze_sha256_review.py", "mine": "fbffb36fde1cf430fdc2779a1c570a0fb17305d476e906ffb055db2350756d17", "author": "fbffb36fde1cf430fdc2779a1c570a0fb17305d476e906ffb055db2350756d17", "status": "MATCH"},
+    {"name": "my_second_run_exit_code", "mine": 0, "author": 0, "status": "MATCH", "note": "RUN-REVIEW.txt sha256 56ff86da31ad9169b7dc7253637a4bce3b0f05d7ef6ee11ec5da249a508c98ef, 1255 bytes, stderr 0 bytes"},
+    {"name": "author_verify_exit_code_on_aarch64", "mine": 0, "author": 0, "status": "MATCH", "note": "my run of author verify.py per RUN.md repo-root replay command; stdout 757 bytes sha256 4a234a7878fa307167be727a75cf6b6b2d4568972d7b896697468a240ee345e7"},
+    {"name": "author_verify_stdout_vs_EXPECTED.txt_cmp", "mine": "MATCH (byte-identical on aarch64)", "author": "EXPECTED.txt (recorded on x86_64)", "status": "MATCH"},
+    {"name": "author_break_exit_code_on_aarch64", "mine": 0, "author": 0, "status": "MATCH", "note": "one earlier invocation by me exited 2 due to my wrong relative path from the notes directory; preserved in RUN-BREAK-FAILED-CWD-STDERR.txt; correct repo-root run exited 0, stderr 0 bytes"},
+    {"name": "author_break_stdout_vs_BREAK-EXPECTED.txt_cmp", "mine": "DIFF at char 526 (aarch64 run)", "author": "BREAK-EXPECTED.txt (recorded on x86_64)", "status": "DIFF-CONVENTION", "note": "fieldwise JSON comparison: only machine (aarch64 vs x86_64) and python (3.12.3 vs 3.12.14) differ; every other field identical"},
+    {"name": "author_SHA256SUMS_check", "mine": "12/12 OK (sha256sum -c in the notes directory)", "author": "SHA256SUMS as committed", "status": "MATCH"},
+    {"name": "V_macros", "mine": 794, "author": 794, "status": "MATCH"},
+    {"name": "D_macros_selector_swaps", "mine": 2, "author": 2, "status": "MATCH", "note": "verify.py adds the two dword selector swaps directly to the word (verify.py:127-128) and reports macros=794 (V only); break.py stores them as macros (break.py:158-159) and reports macro_count=796; I report 794 V + 2 D separately"},
+    {"name": "contacts_word_length", "mine": 18280, "author": 18280, "status": "MATCH"},
+    {"name": "edge_sha256", "mine": "56cd991a694d08176cc2fd0fb5dd859b872b77b2c6fa5c322ab03682ce4a48fd", "author": "92fcd3f9f267dd5ff5be76327680bbe02d39e87f58bed0c395e3e03904722460", "status": "DIFF-CONVENTION", "note": "raw hashes differ only by serialization: mine K6 = 2 raw bytes per edge; conversion parse byte pairs -> ASCII 'i,j\\n' (106364 bytes) reproduces author sha256 92fcd3f9... exactly; my chronological edge list is identical to author compile_circuit() word"},
+    {"name": "boundary_sha256", "mine": "fb53da77b270fff7784d87f8a5e3a0749d7459aa3ec7dbd23c72f1e33ff9e6dd", "author": "ca60bf44b6234819e41435a7032661b5cecb428f602fbeda2df00e406dcef1dd", "status": "DIFF-CONVENTION", "note": "mine K7 = 24 lines 'n|k|slot;...'; conversion parse K7 -> author compact JSON [[n,[s1,s2,s3]],...] (12316 bytes) reproduces ca60bf44... exactly; breaker shape [[n,s1,s2,s3],...] (12300 bytes) reproduces c8786d11... and is byte-identical to RUN-BREAK-BOUNDARIES.json produced here by break.py"},
+    {"name": "distinct_ordered_primitive_pairs", "mine": 53, "author": 15, "status": "DIFF-CONVENTION", "note": "author counts len(CACHE) (verify.py:256; CACHE filled in primitive() verify.py:56, incl. final C^5 closure loop :244-249); breaker len(lane.cache) (break.py:387). My set after C1 already has 15 pairs and equals author set exactly (author minus mine-after-C8 = empty, mine-after-C8 minus author = 0); remaining 38 pairs arise only in my extra C12 halving cascade on raw values 3n+1, a scope author runtime does not replay"},
+    {"name": "primitive_applications", "mine": 9945340, "author": 9506290, "status": "DIFF-CONVENTION", "note": "accounting scope, derived from code structure: mine = C1 960 (V 690 + D rows 270) + C6 438720 + C7 2193600 + C8 7312000 + C12 60; author verify = V rows 690 + trajectories 2193600 + occupied 7312000 = 9506290; difference 439050 = 438720 (my C7 replays the forward 3W before inverting; author inverts from s3 directly) + 270 (my D rows) + 60 (my C12). Breaker 9506425 = verify + 135 = 3 D rows x (9 + 9*4)"},
+    {"name": "trajectory_table", "mine": [[1,1,2,1,2],[3,5,1,1,4],[5,1,4,1,2],[7,11,1,17,1],[9,7,2,11,1],[11,17,1,13,2],[13,5,3,1,4],[15,23,1,35,1]], "author": [[1,1,2,1,2],[3,5,1,1,4],[5,1,4,1,2],[7,11,1,17,1],[9,7,2,11,1],[11,17,1,13,2],[13,5,3,1,4],[15,23,1,35,1]], "status": "MATCH"},
+    {"name": "total_Q_boundary", "mine": 98, "author": 98, "status": "MATCH"},
+    {"name": "slots", "mine": 49, "author": 49, "status": "MATCH"}
+  ],
+  "checks_C0_C12": [
+    {"check": "C0", "mine": "PASS (ring identities, rho^5=1, Q(u)=5, Q(w)=3, eps)", "author": "partial: asserts account(U)=5, account(W)=3 (verify.py:181); order/eps enforced via pair audits", "status": "MATCH", "note": "shared quantities agree; extra ring identities are mine only"},
+    {"check": "C1", "mine": "PASS (6 D rows incl. helper 1+rho^2, 6 V rows, native inverses)", "author": "verify: 6 V rows (verify.py:185-196); breaker: 6 V + 3 D rows (break.py:236-267)", "status": "DIFF-CONVENTION", "note": "shared V rows agree; D-row scope differs (verify exercises D only inside V)"},
+    {"check": "C2", "mine": "PASS (53 pairs: C^5, C^4 inverse, sum, Q, eps per slot)", "author": "PASS (15 pairs; same properties asserted/cycle-checked)", "status": "DIFF-CONVENTION", "note": "pair sets identical on shared scope; my extra 38 from C12"},
+    {"check": "C3", "mine": "PASS (table from 3n+1 definition, injective, inverse formula)", "author": "PASS (table() verify.py:81-87 / collatz() break.py:65-72, same definition)", "status": "MATCH"},
+    {"check": "C4", "mine": "PASS (794 V + 2 D, 18280 contacts, K6 hash)", "author": "PASS (18280 contacts, edge sha256 after serialization conversion identical)", "status": "MATCH"},
+    {"check": "C5", "mine": "PASS (prepared states: sum 19u+w, Q=98)", "author": "PASS (boundary() verify.py:155-164 asserts Q=98 and total (20,0,-18,0) = 19u+w in j basis)", "status": "MATCH"},
+    {"check": "C6", "mine": "PASS (8x3 boundaries exact)", "author": "PASS (verify.py:200-223; boundary sha256 after conversion identical)", "status": "MATCH"},
+    {"check": "C7", "mine": "PASS (full primitive 3W inverse restores initial states)", "author": "PASS (verify.py:213-216)", "status": "MATCH"},
+    {"check": "C8", "mine": "PASS (80 occupied-A continuations + inverses)", "author": "PASS (verify.py:225-232)", "status": "MATCH"},
+    {"check": "C9", "mine": "PASS (4096 skip cases at abstract macro level, labelled)", "author": "PASS (4096 abstract-token skip cases, same labelling, verify.py:234-241)", "status": "MATCH"},
+    {"check": "C10", "mine": "PASS (inverse formula recovers 8 inputs)", "author": "PASS (verify.py:217-220; break.py inverse_arithmetic :75-81)", "status": "MATCH"},
+    {"check": "C11", "mine": "PASS ((1,5)->1 depths 2,4; (3,13)->5 depths 1,3)", "author": "PASS (verify asserts table(1),table(5) :250; breaker same_output_different_depth lists both pairs)", "status": "MATCH"},
+    {"check": "C12", "mine": "PASS (finite instances: J inverse, halving cascade for 3n+1, n in D)", "author": null, "status": "DIFF-CONVENTION", "note": "no author runtime counterpart; PROOF.md sec.8 is a text lemma. Extra scope of my preregistration, not a disagreement"}
+  ],
+  "unverified": [
+    "General proofs in PROOF.md sec.7 (obstructions) and general statement of sec.8 beyond my finite C12 instances: not machine-checked (no Lean used).",
+    "Repository CI was not run by me; RUN.md:35 and README.md:70-71 state CI does not replay these scientific verifiers (text claim, not my measurement).",
+    "No conclusion about origin of the 3n+1 rule from J, unbounded Collatz algorithm, convergence, native U, physical apparatus, or any Canon status."
+  ]
+}
