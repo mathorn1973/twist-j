@@ -1,0 +1,14 @@
+NON-CANONICAL / L1; exact finite receiver and native-clock audit
+stock_Q=32; receiver_contacts=10; literal_inverse_contacts=40
+high_digit_stock_Q=32,17,2,7,27
+physical_reencoding_labels=13,3,18,8,23
+physical_reencoding_stock_Q=2,32,7,17,27
+fixed_physical_state_stock_Q=2,2,2,2,2
+native_clock_stock_Q=32,17,2,7,27
+native_clock_thirteen_tick_stock_Q=2,32,7,17,27
+witness_stock_work=-30,0,-25,-15,-5
+clock_account=4; clock_plus_stock_account=36; encoded_plus_stock_account=40
+padded_tick_contacts=23; padded_tick_slot_swaps=8
+raw_receiver_triples=729; clock_neutral_fixtures_per_m=53; raw_clock_fixtures=9
+assertions=184018
+PASS

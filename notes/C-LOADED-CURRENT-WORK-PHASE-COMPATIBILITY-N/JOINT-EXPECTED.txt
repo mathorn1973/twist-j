@@ -1,0 +1,19 @@
+NON-CANONICAL / L1; exact joint-preparation author audit
+main_map=(r,s)->(s,2s-r); relative_phase_retained=r-s
+main_contacts=25; literal_inverse=100; compressed_inverse=40
+main_account=8; with_untouched_bank=28; prepared_period_divides=5
+main_phase_cases=25; records_sha256=e38c33bb766cccb5f0fe14f70ecf64916130ed9c47b084567f86693991f6d815
+independent_donor_bank_cases=125; reading=s-v; records_sha256=a45e10614a61af468b61bf17c86ab46c2b132e1804b9a11a1ff9b5ae760909ab
+equal_length_family_cases=125; contacts=30; inverse=120; account=8; with_bank=28
+family_records_sha256=68716f148b3d04bea0b95d9fb040c57e3857cca757ac37829c17a45da3013301
+secondary_contacts=8; inverse=32; account=20; with_bank=40
+secondary_hit_counts=0,2,4,1,3; cases=25; records_sha256=19ba736be5d53a6f92840d2a9bc2db6125701446a7a573b8fb5cfc6039faee7e
+independent_configurations=3125; distinct_outputs=3125
+independent_output_source_counts=625,625,625,625,625
+independent_input_and_output_aligned=256
+independent_mapping_sha256=6dce4881923a8bdcc76a027975533f3b50dd1280f611d5bd3e94544cf471880c
+residue_pair_controls=6561; equal_Q24_histograms=10,1,0,0,1|0,1,0,0,11
+whole_frame_units=10; raw_ten_slot_controls=32; donor_swap_cases=25
+no_native_clock_or_field_replay; no_attractor_or_erasure_claim
+assertions=1243372
+PASS
