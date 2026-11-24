@@ -92,6 +92,13 @@ ADMITTED_CONTEXT_PATHS = {
         'canon/REGISTRY.tsv',
         'canon/CHANGELOG.md',
     }),
+    'P-INTEGER-SECOND-ORDER-NOETHER-CLOSURE-2': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
     'P-RELATIONAL-MASS-JOINT-ACTION-1': frozenset({
         'canon/CANON.md',
         'canon/CORE.md',
@@ -167,6 +174,9 @@ ADMITTED_BUNDLE_PATHS = {
     }),
     'P-RELATIONAL-MASS-METRIC-RESPONSE-1': frozenset({
         'probes/P-RELATIONAL-MASS-METRIC-RESPONSE-1/breaker.py',
+    }),
+    'P-INTEGER-SECOND-ORDER-NOETHER-CLOSURE-2': frozenset({
+        'probes/P-INTEGER-SECOND-ORDER-NOETHER-CLOSURE-2/breaker.py',
     }),
     'P-RELATIONAL-MASS-JOINT-ACTION-1': frozenset({
         'probes/P-RELATIONAL-MASS-JOINT-ACTION-1/breaker.py',
