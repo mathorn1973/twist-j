@@ -1,0 +1,41 @@
+# Exact execution
+
+A clean public checkout was checked against all fourteen blob IDs in the remote Git tree before the Linux run. The verifier emitted six deterministic JSON records.
+
+```text
+pin_commit: aa1842905d0a7236e6fcc72b426468cd685ac9a8
+command: python3 probes/P-H3-DIFFERENTIAL-PHASE-1/verify.py
+platform: Ubuntu 22.04.5 LTS
+architecture: x86_64
+python: 3.10.12
+verifier_sha256: 764cd1e793150761e43871baf579aa2376bd26a6c95edf5c1f280de7b9f391de
+started_utc: 2026-11-18T18:18:51.617536+00:00
+ended_utc: 2026-11-18T18:18:55.532539+00:00
+exit_code: 0
+stdout_bytes: 943924
+stdout_lines: 6
+stdout_sha256: d85b954d561ec2df2235fc9af16d53e0776f54a09819b221c96e3912e41af07b
+stderr_bytes: 0
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+```
+
+## Frozen inputs
+
+```text
+0babec4468e5221f5585491d7872b5f754e46591279c1dd5dd770d0cde127a20  PREREG.md
+3fdf1a48a94341f7ac5530fbd3dd39ca877cc99c9fc3c2c42609d2ee6a3bf111  anchored.md
+f83644130b6555150caea6a990f4ef78f3a70dd871af91b5b5a97e79536a6394  anchored.py
+0c8bfc8b34d3b5b7cb97959a9c38d7a394c42a27294abe91a2a7bf5fc939cbbf  d3_read.md
+756239c70047a34b31b5e094762df52428626ec039b51aaf1be2693871503582  d3_read.py
+cb413b18f5d3e9a4d4eebd6585cbbad3b7d5684f967915a0284a1298620c51f2  emitter.py
+43993ffb88ba678df0b4ca75fc5ec3549943276aa9872eb88438449eee294b09  native.py
+5d002e99521293e0329f1f47b4c0ae1e26bdf9db2940ed63d05774a26908d280  native_read.md
+298d7a2f06d67acffc0882be5fbffab8e51563e5e0d9fc438cdf8e452ee1506f  native_read.py
+85d69445eb9282bd52ecd374269e77cecfa690ac5dc4d3c25a9621281b2e0cce  quadrature.md
+e5f16353cbb1668e9087fc4146743c7fd611d728c46f9b55f864b60fcec60379  quadrature.py
+064bb57045708188deeab89b5fefcc96a5e15e1af479f5a09ef9bbdbce142356  shell.py
+18e3b78363ea8dcb53b38dce20f66b06230e71b910dccb7e6ae2bcf620ec6637  source_cycle.py
+764cd1e793150761e43871baf579aa2376bd26a6c95edf5c1f280de7b9f391de  verify.py
+```
+
+The preserved records distinguish finite measurements, symbolic coefficient checks and conditional physical interpretations.
