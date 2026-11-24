@@ -1,0 +1,449 @@
+{
+  "alias_witnesses": [
+    {
+      "L": 4,
+      "N": 2,
+      "current_support": 256,
+      "edges": 1024,
+      "support": 256,
+      "triple": [
+        0,
+        0,
+        2
+      ],
+      "vertices": 256
+    },
+    {
+      "L": 4,
+      "N": 3,
+      "current_support": 256,
+      "edges": 1024,
+      "support": 384,
+      "triple": [
+        0,
+        1,
+        2
+      ],
+      "vertices": 256
+    },
+    {
+      "L": 4,
+      "N": 4,
+      "current_support": 256,
+      "edges": 1024,
+      "support": 512,
+      "triple": [
+        0,
+        2,
+        2
+      ],
+      "vertices": 256
+    },
+    {
+      "L": 4,
+      "N": 5,
+      "current_support": 256,
+      "edges": 1024,
+      "support": 640,
+      "triple": [
+        1,
+        2,
+        2
+      ],
+      "vertices": 256
+    },
+    {
+      "L": 4,
+      "N": 6,
+      "current_support": 256,
+      "edges": 1024,
+      "support": 768,
+      "triple": [
+        2,
+        2,
+        2
+      ],
+      "vertices": 256
+    },
+    {
+      "L": 6,
+      "N": 2,
+      "current_support": 1296,
+      "edges": 5184,
+      "support": 1296,
+      "triple": [
+        0,
+        0,
+        2
+      ],
+      "vertices": 1296
+    },
+    {
+      "L": 6,
+      "N": 3,
+      "current_support": 1296,
+      "edges": 5184,
+      "support": 1944,
+      "triple": [
+        0,
+        1,
+        2
+      ],
+      "vertices": 1296
+    },
+    {
+      "L": 6,
+      "N": 4,
+      "current_support": 1296,
+      "edges": 5184,
+      "support": 2592,
+      "triple": [
+        0,
+        2,
+        2
+      ],
+      "vertices": 1296
+    },
+    {
+      "L": 6,
+      "N": 5,
+      "current_support": 1296,
+      "edges": 5184,
+      "support": 3240,
+      "triple": [
+        1,
+        2,
+        2
+      ],
+      "vertices": 1296
+    },
+    {
+      "L": 6,
+      "N": 6,
+      "current_support": 1296,
+      "edges": 5184,
+      "support": 3888,
+      "triple": [
+        2,
+        2,
+        2
+      ],
+      "vertices": 1296
+    }
+  ],
+  "candidate": "C-PHOTON-U1-FINITE-CENTER-N",
+  "field_and_conditionals": {
+    "comparison_lines": 6468,
+    "compositions": 924,
+    "conditional_mass_sha256": "04ef99ab864b0240d3d8b0039e538eaf18d79d999aeadf89a8cb624ae84a4e5b",
+    "weights": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        3,
+        -1,
+        -1
+      ],
+      [
+        3,
+        -1,
+        -1
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        0
+      ]
+    ]
+  },
+  "implementation": "primary",
+  "local_words": [
+    {
+      "alias_5": 0,
+      "alias_6": 0,
+      "degree": 0,
+      "integer_zero": 1,
+      "words": 1
+    },
+    {
+      "alias_5": 0,
+      "alias_6": 0,
+      "degree": 1,
+      "integer_zero": 1,
+      "words": 3
+    },
+    {
+      "alias_5": 0,
+      "alias_6": 0,
+      "degree": 2,
+      "integer_zero": 3,
+      "words": 9
+    },
+    {
+      "alias_5": 0,
+      "alias_6": 0,
+      "degree": 3,
+      "integer_zero": 7,
+      "words": 27
+    },
+    {
+      "alias_5": 0,
+      "alias_6": 0,
+      "degree": 4,
+      "integer_zero": 19,
+      "words": 81
+    },
+    {
+      "alias_5": 2,
+      "alias_6": 0,
+      "degree": 5,
+      "integer_zero": 51,
+      "words": 243
+    },
+    {
+      "alias_5": 12,
+      "alias_6": 2,
+      "degree": 6,
+      "integer_zero": 141,
+      "words": 729
+    }
+  ],
+  "phase_decision_weight": 0,
+  "small_complexes": {
+    "cube_fields": 729,
+    "cube_partition": 66,
+    "cube_survivors": 3,
+    "disk_partition": 2
+  },
+  "status": "PASS",
+  "topology": {
+    "L": 4,
+    "cube_boundaries": 1024,
+    "fundamental_sheets": [
+      {
+        "orientation": [
+          0,
+          1
+        ],
+        "support": 16,
+        "winding": 1
+      },
+      {
+        "orientation": [
+          0,
+          2
+        ],
+        "support": 16,
+        "winding": 1
+      },
+      {
+        "orientation": [
+          0,
+          3
+        ],
+        "support": 16,
+        "winding": 1
+      },
+      {
+        "orientation": [
+          1,
+          2
+        ],
+        "support": 16,
+        "winding": 1
+      },
+      {
+        "orientation": [
+          1,
+          3
+        ],
+        "support": 16,
+        "winding": 1
+      },
+      {
+        "orientation": [
+          2,
+          3
+        ],
+        "support": 16,
+        "winding": 1
+      }
+    ]
+  },
+  "two_dimensional": [
+    {
+      "assignments": 343,
+      "boundary_only_partition": 16,
+      "lengths": [
+        2,
+        2
+      ],
+      "partition": [
+        [
+          18,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "shifted_partition": [
+        [
+          16,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "source_ratio": [
+        [
+          8,
+          9
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stack_hessian": [
+        [
+          1,
+          9
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "uniform_hessian": [
+        [
+          1,
+          9
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "assignments": 16807,
+      "boundary_only_partition": 64,
+      "lengths": [
+        3,
+        2
+      ],
+      "partition": [
+        [
+          66,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "shifted_partition": [
+        [
+          64,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "source_ratio": [
+        [
+          32,
+          33
+        ],
+        [
+          1,
+          66
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stack_hessian": [
+        [
+          1,
+          33
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "uniform_hessian": [
+        [
+          1,
+          33
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    }
+  ]
+}
