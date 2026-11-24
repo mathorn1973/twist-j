@@ -3,10 +3,14 @@
 
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
 from contextlib import redirect_stdout
 import hashlib
 from io import StringIO
+import os
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -80,6 +84,104 @@ class AbandonedProbeIntegrationTests(unittest.TestCase):
             ):
                 check_verifier.reproduce(probe)
             self.assertIn("lacks RUN.md", output.getvalue())
+
+
+class ReplayTimeoutTests(unittest.TestCase):
+    """Keep the exception tied to one exact probe and normal CLI execution."""
+
+    probe = ROOT / "probes" / "P-H3-RELAY-CONTINUATION-1"
+    pin = "050a9be48757348fd57021bcc68ab3b9f9fcaf3c"
+    source_hash = "af031b96bc46851d19eb2ae907e02f77f68d063ccf204068690a10872532b018"
+    expected_hash = "198ed32b967d202c0b729bc1c03e4de6e6ecbc3810b2709ec7880dfdd49cc1f3"
+
+    def test_exact_probe_has_extended_timeout(self) -> None:
+        self.assertEqual(
+            check_verifier._replay_timeout(self.probe, self.pin, self.source_hash,
+                                           self.expected_hash),
+            900,
+        )
+
+    def test_name_pin_source_and_expected_must_all_match(self) -> None:
+        cases = (
+            ("name", self.probe.with_name("P-OTHER"), self.pin, self.source_hash,
+             self.expected_hash),
+            ("pin", self.probe, "0" * 40, self.source_hash, self.expected_hash),
+            ("source", self.probe, self.pin, "0" * 64, self.expected_hash),
+            ("expected", self.probe, self.pin, self.source_hash, "0" * 64),
+        )
+        for label, probe, pin, source_hash, expected_hash in cases:
+            with self.subTest(label=label):
+                self.assertEqual(
+                    check_verifier._replay_timeout(probe, pin, source_hash, expected_hash),
+                    600,
+                )
+
+    def test_cpp_and_header_drift_restore_default_timeout(self) -> None:
+        read_bytes = Path.read_bytes
+        for filename in ("continuation.cpp", "dynamics.hpp"):
+            changed_path = self.probe / filename
+
+            def read(path: Path) -> bytes:
+                data = read_bytes(path)
+                if path == changed_path:
+                    return data + b"\n// modified input\n"
+                return data
+
+            with self.subTest(filename=filename), patch.object(Path, "read_bytes", read):
+                self.assertEqual(
+                    check_verifier._replay_timeout(self.probe, self.pin, self.source_hash,
+                                                   self.expected_hash),
+                    600,
+                )
+
+    def test_cli_uses_the_bound_timeout_and_fails_when_it_expires(self) -> None:
+        expected = (self.probe / "EXPECTED.txt").read_bytes()
+        verifier = self.probe / "verify.py"
+        verifier_bytes = verifier.read_bytes()
+        relative_verifier = verifier.relative_to(ROOT).as_posix()
+        git_show = ["git", "show", f"{self.pin}:{relative_verifier}"]
+        git_ancestor = ["git", "merge-base", "--is-ancestor", self.pin, "HEAD"]
+
+        for expires in (False, True):
+            with self.subTest(expires=expires):
+                replay_timeouts = []
+
+                def run(command, **kwargs):
+                    if command == git_show:
+                        return subprocess.CompletedProcess(command, 0, verifier_bytes, b"")
+                    if command == git_ancestor:
+                        return subprocess.CompletedProcess(command, 0)
+                    self.assertEqual(command, [sys.executable, relative_verifier])
+                    timeout = kwargs["timeout"]
+                    replay_timeouts.append(timeout)
+                    if expires:
+                        raise subprocess.TimeoutExpired(command, timeout)
+                    return subprocess.CompletedProcess(command, 0, expected, b"")
+
+                output = StringIO()
+                with (
+                    patch.dict(os.environ, {"TWISTJ_EVIDENCE_DIR": ""}),
+                    patch.object(sys, "argv", ["check_verifier.py"]),
+                    patch.object(check_verifier, "changed_probes", return_value=[self.probe]),
+                    patch.object(check_verifier, "ProcessPoolExecutor",
+                                 side_effect=lambda max_workers, mp_context:
+                                 ThreadPoolExecutor(max_workers=max_workers)),
+                    patch.object(subprocess, "run", side_effect=run),
+                    redirect_stdout(output),
+                ):
+                    if expires:
+                        with self.assertRaises(SystemExit) as stopped:
+                            check_verifier.main()
+                        self.assertEqual(stopped.exception.code, 1)
+                    else:
+                        check_verifier.main()
+
+                self.assertEqual(replay_timeouts, [900], output.getvalue())
+                if expires:
+                    self.assertIn("TimeoutExpired", output.getvalue())
+                    self.assertNotIn(f"VERIFY PASS {self.probe.name}", output.getvalue())
+                else:
+                    self.assertIn(f"VERIFY PASS {self.probe.name}", output.getvalue())
 
 
 def replace_last(text: str, old: str, new: str) -> str:

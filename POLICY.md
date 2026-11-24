@@ -399,7 +399,7 @@ readback. Retain original artifacts through release acceptance.
 
 The sole workflow has read-only contents, actions and pull-request permissions
 (the latter reads merge provenance), immutable action pins, no
-persisted checkout credential, a 60-minute architecture limit, a 60-minute
+persisted checkout credential, a 90-minute architecture limit, a 60-minute
 publication limit, and a 5-minute aggregate limit. Its pull-request gate uses
 one x86_64 and one
 aarch64 standard GitHub-hosted runner. Its tag trigger covers `canon-v*`, but
@@ -457,16 +457,24 @@ the approved controller SHA and exact successful recovery run/attempt, including
 all mandatory steps. A printed marker or an earlier review is insufficient.
 Preserve all earlier cancellations as cancellations.
 
-The revised 60-minute architecture/publication budgets address observed whole-job
-cancellations at the former 45/40-minute limits, including completed scientific
-replay interrupted during final cleanup. They do not retroactively change the
-workflow or conclusions of earlier immutable attempts. Sixty minutes is an
-execution allowance, not a mathematical runtime guarantee. All individual
-verifier limits and complete-inventory requirements remain unchanged.
+The architecture jobs have 90 minutes for the complete inventory. Both
+aarch64 attempts on the v117 candidate exhausted the previous 60-minute
+job budget. The second x86_64 attempt finished in 56 minutes 46 seconds.
+The 60-minute publication and 5-minute aggregate budgets continue to apply.
+[First attempt](https://github.com/mathorn1973/twist-j/actions/runs/45269010116/attempts/1)
+and [second attempt](https://github.com/mathorn1973/twist-j/actions/runs/45269010116/attempts/2).
 
-These are whole-job execution budgets for the complete replay inventory.
-They do not change any verifier's time limit, exact-output requirement,
-preregistered threshold, or requirement that both architecture jobs succeed.
+Each individual probe verifier has 600 seconds, with one 900-second
+allowance for the sealed `P-H3-RELAY-CONTINUATION-1` replay. The runner
+requires the registered probe name, pin commit, verifier and expected-output
+digests, and the digest of the complete probe directory to match. The
+sealed verifier checks the digests of its external source inputs. The
+original Linux run took 706 seconds. The first v117 x86_64 attempt reached
+600 seconds and the second produced the exact output in 549 seconds.
+A different binding uses the ordinary 600-second limit. An expired
+deadline fails the replay. Both architectures must still reproduce the
+complete inventory and match all expected outputs byte for byte within
+one workflow attempt. [Original run and input commitments](https://github.com/mathorn1973/twist-j/blob/ed3b1878d95825ab9473c16416c8db76cc152079/probes/P-H3-RELAY-CONTINUATION-1/RUN.md)
 
 `pull_request_target` is forbidden. Any new workflow or runner topology requires
 an explicit policy change.
