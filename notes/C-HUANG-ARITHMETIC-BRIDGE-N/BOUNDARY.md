@@ -84,7 +84,7 @@ or independent arithmetic control of the unmatched eigenspaces.
 
 ## A single product cutoff
 
-Take the prime list to contain all primes at most \(N\), with
+Take the prime list to consist exactly of the primes at most \(N\), with
 \(N\ge2\). Identify \(S\) with \(d=\prod_{i\in S}p_i\).
 The retained vertices \(d\le N\) are precisely the squarefree
 positive integers through \(N\), including \(1\). Their grading

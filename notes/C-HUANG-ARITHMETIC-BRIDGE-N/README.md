@@ -56,8 +56,8 @@ This rule does not require both ends of an edge to have degree at least
 centered at \(1\), with the selected primes as leaves. Its edge degree
 products are \(r\), with leaf degree one.
 
-**Candidate-D. Localization.** If \(N\ge2\) and the prime list contains
-all primes at most \(N\), then \(m=M(N)\) and \(r=\pi(N)\).
+**Candidate-D. Localization.** If \(N\ge2\) and the prime list consists
+exactly of the primes at most \(N\), then \(m=M(N)\) and \(r=\pi(N)\).
 At an upper endpoint \(d_+=pd_-\), with \(d_-\le N\),
 \[
  b(d_+)\le\omega(d_+)\le1+\lfloor\log_2N\rfloor.
@@ -146,12 +146,14 @@ set. Its compression and exit defect are
 The defect \(B\) is positive semidefinite. Nevertheless its signed trace
 is a difference of two parity contributions. If \(E,O\) count retained
 even and odd vertices, the positive spectra of the two parity blocks
-of \(D^2\) pair exactly. Hence for every scalar function on the spectrum,
+of \(D^2\) pair exactly. Hence for every scalar function defined on
+\(\operatorname{spec}(B)\cup\{s\}\),
 \[
  \operatorname{str}f(B)=f(s)(E-O).                           \tag{3}
 \]
 In particular every scalar graded power or spectral projection of this
-one defect returns the same index. It supplies no separate upper bound
+one defect returns an explicit multiple of the same index. A projection
+excluding \(s\) has graded trace zero. This supplies no separate upper bound
 on the parity imbalance. Off-diagonal entries can retain additional
 arithmetic boundary information, so (3) does not exclude all operator
 methods.
