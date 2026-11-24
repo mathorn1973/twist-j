@@ -187,3 +187,51 @@ deepening the same remote history made the unchanged checker report
 delimiters, earlier-file byte preservation, whitespace and all 48 package
 manifest entries also passed before the content commit. This was a local
 history-resolution repair, not a changed authority or scientific result.
+
+## Signed-estimate continuation, round five, 24 November 2026
+
+The same owner and candidate continue from exact published head
+`d26ca6caab5dda3875333f9d2ba73b74b55ba674`. Fresh STATUS-first readback
+and the required private startup confirm the unchanged PUBLIC main,
+declared v117 tag and content, all five normative hashes and content
+ancestry. The exact-main architecture pair and aggregate in workflow
+`45388050270` are successful. All 400 remote heads and current related
+issues were inspected before the prospective scope was appended to
+issue #2087. The neighboring #2093 update is read at
+`853237620bc2be69026168f32bb0ad871f668950` and retains its owner.
+
+This round adds five detailed paper notes, their report, four scope
+records, five opposition records and a PROMO handoff. No new scientific
+program, numerical enumeration, finite audit or proof-assistant build
+was executed. No source computation in the external papers was rerun.
+Root and the three helpers comprise two Astra and two Sol participants
+within the same session. This is not external independent confirmation.
+
+The numerator opposition checked the exact character-bearing sum before
+conductor absolute values, the n plus/minus j divisor count including
+the zero multiple, variable interval endpoints, three-rectangle coverage
+of threshold-crossing pairs, and the actual absolute lower witness.
+The short-sum opposition checked the primary theorem and exceptional
+measure, exact real/integer grid identity, arithmetic progression
+quotients, critical coefficient tail and lengths below one. It requested
+an explicit distinction between a K-dependent gcd cutoff and a single
+cutoff serving all fixed logarithmic exponents; the note now gives both.
+
+The smooth-support review reconstructed the saddle expansion, the
+positive endpoint coefficient, concentration and parameter-shift errors,
+terminal residue slab and same-window transfer. The full-estimate review
+checked the latest pinned source statement, exact rational rewritings
+of its constants, the unit norm, preservation of the decay constant
+and both sides of the signed bound. Root read every proof and source
+statement, and a separate Sol reviewed the final combined cuts and
+the first-harmonic prefix implication. That review verifies the norm
+argument without assuming a bound on the deleted mixed pair term.
+
+Assembly changes only links, local working-path references and review
+wording where needed for the public package. Separate same-session
+review is never described as external independent evidence. Earlier
+mathematical files and all finite-audit bytes remain unchanged. Final
+static and remote integrity results are recorded at the new exact head
+in draft #2089. The required architecture workflow checks the notes
+delivery and existing repository gates; it does not turn these paper
+deductions into computation-grade mathematical evidence.

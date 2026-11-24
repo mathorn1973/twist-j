@@ -53,9 +53,10 @@ not needed for the present T-tail theorem and are not copied.
   uniform theorem in a growing modulus or GRH assumption is used.
 - E. S. Lee and N. Leong, *New explicit bounds for Mertens function and
   the reciprocal of the Riemann zeta-function*, arXiv:2208.06141v4,
-  Theorem 1.1, https://arxiv.org/html/2208.06141v4#Thmtheorem1.1 . The classical
-  unconditional rate suffices. No numerical constant from their computations
-  is imported. A later v5 exists; the cited theorem is explicitly pinned to v4.
+  Theorem 1.1, https://arxiv.org/html/2208.06141v4#Thmtheorem1.1 . In rounds
+  one to four the classical unconditional rate suffices and no numerical
+  constant is imported. Those uses remain explicitly pinned to v4; the
+  separate round-five quantitative statement uses the v5 input below.
 - A. Hildebrand and G. Tenenbaum, *On a class of differential-difference
   equations arising in number theory*, Journal d'Analyse Mathematique 61
   (1993), 145-179, https://tenenb.perso.math.cnrs.fr/PPP/Diff-diff_eqns.pdf .
@@ -72,6 +73,56 @@ not needed for the present T-tail theorem and are not copied.
   background. The coefficientwise lifting argument is given explicitly.
 
 ## Scientific boundaries
+
+### Signed estimates, round five
+
+This continuation starts at exact candidate head
+`d26ca6caab5dda3875333f9d2ba73b74b55ba674`. Fresh authority readback,
+the required private startup, all 400 remote heads and current related
+claims were checked. The same public main, declared content and tag,
+normative hashes and successful authority jobs remain the basis.
+
+The neighboring draft #2093 advanced to
+`853237620bc2be69026168f32bb0ad871f668950`. Its
+[DIRICHLET-READOUT](https://github.com/mathorn1973/twist-j/blob/853237620bc2be69026168f32bb0ad871f668950/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/DIRICHLET-READOUT.md),
+[LOCAL-AVERAGES](https://github.com/mathorn1973/twist-j/blob/853237620bc2be69026168f32bb0ad871f668950/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/LOCAL-AVERAGES.md)
+and [ROUND2-REVIEW](https://github.com/mathorn1973/twist-j/blob/853237620bc2be69026168f32bb0ad871f668950/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/ROUND2-REVIEW.md)
+were read with the earlier absolute-mass result. That owner supplies
+ordinary-character sampling, the original orientation support deletion
+and its sharp strict constant. The current note does not duplicate its
+claim: it treats the distinct residue kernel and Fourier conductors,
+proves their exact error costs and refines the shared weighted saddle.
+The sample family's finite reconstruction does not supply the signed
+estimate needed here. No external RH proof is imported as a premise.
+
+New primary inputs, read at their actual stated scopes:
+
+- Matomaki, Radziwill, Shao, Tao and Teravainen, *Higher uniformity of
+  arithmetic functions in short intervals II. Almost all intervals*,
+  Inventiones Mathematicae 244 (2026), 967--1091,
+  [Theorem 1.1(i) and equation (1.4)](https://doi.org/10.1007/s00222-026-01408-6).
+  Only the unconditional Mobius assertion is used, with a fixed circle,
+  all linear phases and progressions, and its controlled exceptional
+  measure. The length range and the integration step are explicit.
+- Lee and Leong, arXiv:2208.06141v5, 9 September 2026,
+  [Theorem 1.1, equation (12)](https://arxiv.org/html/2208.06141v5#Thmtheorem1.1).
+  Its stated unconditional Mertens bound and starting argument are the
+  quantitative input to FULL-ESTIMATE. Source decimals are rewritten as
+  exact rationals. Their finite computations are attributed, not rerun
+  or claimed as fresh evidence. The unit transfer preserves the chosen
+  exponent constant without inferring any new zero-free region.
+- The fixed-modulus prime-count input in Yamada's pinned introduction,
+  linked below, is used for the smooth-support expansion to any prescribed
+  finite inverse-logarithmic order. It is not extrapolated from a finite
+  numerical table or applied in a growing modulus.
+
+The numerator proof itself uses only finite sums, divisor bounds and the
+earlier analytic kernel, with the inherited split-mass asymptotic only
+for its absolute lower witness. The first-harmonic prefix implication
+uses the fixed Euler identity. No third-party code or full source text
+is copied. All new estimates remain candidate-D after same-session
+opposition; neither repository CI nor the external input's status
+promotes these deductions.
 
 ### Finite-time continuation and fresh neighboring work
 

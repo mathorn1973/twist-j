@@ -1,4 +1,4 @@
-# Arithmetic cancellation: finite time, determinant pairs and coupled prime counts
+# Arithmetic cancellation: signed estimates and the surviving low-height sum
 
 **NON-CANONICAL, no authority. Candidate-D paper deductions; candidate-C finite audits.**
 Owner: A. M. Thorn / ChatGPT arithmetic-kernel session, 24 November 2026.
@@ -6,11 +6,51 @@ Claim: [#2087](https://github.com/mathorn1973/twist-j/issues/2087).
 Action layer: NOT_APPLICABLE. No Canon promotion or independent RH proof.
 
 The first result bounds the moving support `d^3 <= n^2` unconditionally.
-The latest continuation narrows the signed correlation to close determinant
-pairs with a small common divisor, using a time weight of finite support.
-It also identifies the cancellation still required between actual prime
-families and the exact logarithmic cost of the coefficient-unit transfer.
-The arithmetic good-window estimate remains open.
+The latest continuation proves a signed power saving for growing numerators,
+all-fixed-logarithmic savings for the actual short smoothing error, and a
+quantitative unconditional estimate for the complete determinant remainder.
+The joint low-height, rough-conductor power estimate remains open.
+
+## Signed-estimate continuation
+
+**Candidate-D, paper only.** The [current report](round5/REPORT.md) contains
+the full synthesis, the fixed combined cuts and their precise limitation.
+All original coefficients and earlier finite evidence are retained.
+
+| Actual object | Proved estimate or boundary | Proof |
+|---|---|---|
+| All retained pairs whose larger height `X abs(a)/r` is at least `Y` | Absolute value of their signed sum is `O_epsilon(X^epsilon (X^3/Y^2+X^2))` for `640 ceil(3 log_2 X)<=Y<=10 sqrt X`, including threshold-crossing pairs. At `Y=X^delta` this saves a power against their genuine absolute mass. | [NUMERATOR-ESTIMATE](round5/NUMERATOR-ESTIMATE.md) |
+| Original triangular smoothing error | `sum abs(T-Tcal_H)^2 << XH^2/log^A X` for every fixed `A`, throughout `X^(1/3+eta)<=H<=X^(1-eta)`. Thus every fixed logarithmic widening of `sqrt X` costs less than `X^2/log^K X` for each fixed `K`. This does not estimate `Tcal_H` itself. | [SHORT-SUM-TRANSFER](round5/SHORT-SUM-TRANSFER.md) |
+| Complete signed remainder | Two-sided estimate with lower error `-O_epsilon(X^(2+epsilon))` and upper `O(X^3 log^2 X exp(-2 eta (log X)^(3/5)/(log log X)^(1/5)))+O_epsilon(X^(2+epsilon))`, using the stated classical Mertens input. The exponent reduction tends to zero. | [FULL-ESTIMATE](round5/FULL-ESTIMATE.md) |
+| Smooth original supports and, separately, smooth Fourier conductors | Each cutoff `P^+ <= (log X)^(2+o(1))` has square-root-with-epsilon deletion error. The strict absolute `O(sqrt X)` boundary and superquadratic-logarithm obstruction are proved for the actual kernel, crediting the neighboring owner. | [SMOOTH-SUPPORT](round5/SMOOTH-SUPPORT.md) |
+| Uniform initial intervals of the first harmonic | The separate all-prefix power bound also excludes zeros of `L(s,chi_5)` to the right of the stated line. It is a stronger obligation than the zeta-only joint criterion. | [PREFIX-PANEL-SCOPE](round5/PREFIX-PANEL-SCOPE.md) |
+
+One fixed combined target retains only conductors with
+`P^+(r)>(log X)^2` and heights
+`X abs(a)/r<sqrt X exp(-sqrt(log X))`, in addition to every original
+numerator, determinant-strip and small-gcd condition. Its signed pair sum
+`P_X^star` satisfies
+
+\[
+ \mathrm{RH}\quad\Longleftrightarrow\quad
+ (P_X^\star)_+\ll_\varepsilon X^{2+\varepsilon}
+ \quad\text{for every fixed }\varepsilon>0
+ \text{ on all sufficiently late dyadic blocks}.
+\]
+
+**O:** prove this remaining joint bound. The deleted packets have proved
+square-norm costs; their mixed pair contribution is not bounded separately
+without justification. A genuine same-sign positive subtotal of order
+`X^3` survives both cuts. The proof and the exact scope of each estimate
+are in the [report](round5/REPORT.md).
+
+The new scope records cover the [complete bound](round5/PREREG-FULL.md),
+[numerators](round5/PREREG-NUMERATOR.md),
+[short sums](round5/PREREG-SHORT.md) and
+[smooth supports](round5/PREREG-SUPPORT.md). Internal reviews and the
+[promotion handoff](round5/PROMO-C-RH-ARITHMETIC-KERNEL-N.md) retain
+candidate-D status. No new scientific computation or external independent
+confirmation is claimed.
 
 ## Finite-time continuation
 
