@@ -98,6 +98,33 @@ elementary degree-count and Hall proof of this specialization. It is a
 conditional rule about a dense graph of given prime pairs; it gives no
 new estimate for the distribution of primes.
 
+### The matching majorant is already too large
+
+**Candidate-D.** Let \(\nu_+(N)\) be the largest matching of qualifying
+edges in \(H_+\), using degrees in the original \(H_+\) and exactly
+the primes at most \(N\). Define it for either sign of \(M(N)\).
+The majority theorem gives \(M(N)_+\le\nu_+(N)\). However, for every
+prime \(q\in(N/6,N/3]\), once \(N\ge18\), the pair
+\[
+ 3q\longleftrightarrow6q
+\]
+is a qualifying crossing. Its lower degree is \(\pi(N)-2\), because
+\(3q>N/2\); its upper degree is three, from the neighbors \(3q,2q,6\).
+These edges are pairwise vertex-disjoint. Consequently
+\[
+ \nu_+(N)\ge\pi(N/3)-\pi(N/6)\gg N/\log N,
+ \qquad
+ \sum_{N\in I(Y)}\frac{\nu_+(N)^2}{N(N+1)}
+       \gg \frac{Y^{3/2}}{(\log Y)^2}.
+\]
+The last two bounds use only the classical prime number theorem and
+hold at every sufficiently late integer or complete window, respectively.
+The energy of this unsigned majorant therefore eventually exceeds even
+the target for exponent one. This is an obstruction to using the
+matching count as the needed small upper bound. It supplies no lower
+bound for the actual signed residual. Full proofs are in
+[PRIME-RULES.md](PRIME-RULES.md) and [REVIEW.md](REVIEW.md).
+
 ## 2. The Galois connection and its exact reconstruction cost
 
 **Candidate-D, with registered identities attributed.** In the real
@@ -203,7 +230,8 @@ Cauchy--Schwarz gives the upper bound, and \(h=Z_+/\|Z_+\|\)
 attains it when the norm is nonzero. A useful boundary argument must
 control this signed readout on the required windows, including the
 affine square, or give a quantitatively equivalent estimate. Scalar
-graded moments (3) do not do so. Information about particular boundary
+graded moments (3) do not do so, and the unsigned matching majorant
+above provably has excessive energy. Information about particular boundary
 matrix elements or the relation between cutoffs at different arguments
 remains a possible subject of further work; no such estimate is claimed
 here.

@@ -22,6 +22,13 @@ deductions from those published inputs; no claim of original priority is
 made. External papers are referenced and summarized. No third-party PDF,
 figure, source code or long quotation is redistributed in this package.
 
+Bjorner's Theorem 2.3(b), at k=1, also records the classical prime
+counting asymptotic. The final matching-majorant obstruction uses this
+input only after the exact pair construction: primes in (N/6,N/3]
+give the disjoint edges 3q to 6q. It converts their count to a lower
+bound of order N/log N. That lower bound concerns an unsigned matching
+majorant, not the signed Mobius sum or the original residual energy.
+
 ## Existing public scope
 
 The basis is public main

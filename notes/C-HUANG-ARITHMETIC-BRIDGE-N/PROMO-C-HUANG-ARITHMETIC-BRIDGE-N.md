@@ -13,6 +13,7 @@ Public basis: `6f2e112aafc4f3aca4222bb4bf3dced1d79fe2ed`.
 | --- | --- | --- | --- |
 | Parity selection realizes half plus M_P(N); weighted degree-product matching has size at least its absolute imbalance | candidate-D | PRIME-RULES.md and REVIEW.md | Conditional boundary structure, with no new prime-distribution estimate |
 | For the full prime list, the matching gives distinct lower integers with many cutoff-crossing prime multipliers | candidate-D | REVIEW.md and README.md | Lower integers may be composite; no identification with a restricted energy range |
+| The qualifying positive-splice matching itself has complete-window energy at least order Y^(3/2)/(log Y)^2 | candidate-D | PRIME-RULES.md and REVIEW.md | Obstructs this unsigned majorant; supplies no lower bound for actual signed energy |
 | Native quadratic multiplication and Galois conjugation form an anticommuting pair in the trace metric | candidate-D for the named interpretation | GALOIS.md | Registered L, K and Gauss-sum identities are attributed; native prime updates commute with each other |
 | Doubled coefficient record and full Z readout have exact trace reconstruction cost | candidate-D | GALOIS.md | Linear coordinatewise construction; the companion is not a bound on the original coordinate |
 | Graded defect on the complete two-factor region retains upper and lower exits and the full signed floor sum | candidate-D | BOUNDARY.md | The affine negative square remains part of the target |
@@ -43,7 +44,10 @@ A further paper argument must obtain a quantitative bound for the actual
 signed first-coordinate boundary readout on the original complete windows.
 The exact positive dual formulation is README.md equation (4). A scalar
 graded power of the single defect cannot supply an additional constraint,
-by BOUNDARY.md equation (2). Possible use of off-diagonal entries or of
+by BOUNDARY.md equation (2). The unsigned matching majorant already has
+power-sized energy on every late window, as witnessed by the actual
+prime pairs 3q and 6q; using it alone also cannot meet the target.
+Possible use of off-diagonal entries or of
 relations between different cutoffs requires a separately specified
 observable and a proved connection to that dual form. Its signs, weights,
 affine subtraction and reconstruction cost must all remain explicit.
