@@ -217,7 +217,7 @@ orthogonal projectors. A gap or diagonal Gram estimate proved in an earlier
 metric does not automatically transfer to a new one.
 
 Spectral gaps and near balance have also been used to study operator
-scaling, including convergence and capacity in Theorem 1.5 of
+scaling, including convergence in Theorem 1.5 and capacity in Theorem 1.8 of
 [Kwok, Lau and Ramachandran](https://cs.uwaterloo.ca/~lapchi/papers/spectral-scaling.pdf).
 The elementary incidence deductions above invoke no scaling convergence
 theorem and make no priority claim. No estimate on the missing actual

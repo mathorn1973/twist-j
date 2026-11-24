@@ -43,6 +43,16 @@ The source's `frame_at_of` sets $s$ to the rank-weighted mean of $\mu(N_i)-h_i$.
 
 ## 4. Independent reading and validation scope
 
+**Attribution.** The centered two-projection inequality used in BRIDGE,
+Section 4, is Brox's equation (2.1) in [frame-degree-compatibility][brox-centered].
+Taking complementary subspaces and solving its quadratic gives the
+displayed corank envelope. This round matches the resulting affine
+envelope to the current source's actual threshold integral. Brox's
+separate centered slope bound (3.2), with square-root target-variance
+dependence, is complementary. Neither frame comparison by itself
+supplies an absolute geometric degree bound in prescribed arithmetic
+metrics.
+
 **Observed source reports.** The Lean FRO and Mathlib Initiative report exact comparison against [Mathlib's RH predicate][mathlib-rh] by Comparator and con-leche, and acceptance of the exported proof by several kernels. Andrew Sutherland's 23 November 23:45 UTC verification record separately reports comparison of all five headline statements by con-leche and con-ron, official Lean and independent kernel acceptances, replay of all original modules, and a sandboxed rebuild reproducing the export byte for byte. These checks concern the released proof and its declared statements. The new concentration estimate, the identification of geometric data between two revisions, and the stronger endomorphism-space supplier are separate mathematical questions. [Lean FRO and Mathlib statement][lean-blog] · [Sutherland verification record][sutherland]. Issue 41 concerns a proposed alternate dynamical stability formulation and classical axioms and is closed as not planned. It supplies no estimate used here. [Issue 41][issue41].
 
 **O.** At [Brox commit fd38313e5c7018c3c988ba20510e6b0b3bca0519][brox], the averaged theta energy identity `tr(Q²) = Ω + 2M − R + Δ` uses the total off-diagonal pair energy. The compression result and weighted frame penalties are conditional on the actual normalized maps and the specified energy or averaged bounds. The note pins its separate Lean reading at `jsmorph/rh@ecd09ff9b4aaf6c08f2b5ef17dc49ca9648a77de` and records the conditional Bessel and common-basis bridge. The normalized far-return bound is for the original projector kernel. The bounded comparison identifies range conditions for the period maps, with the projector-to-period-Gram transfer still open. Its Whittaker covariance obstruction explains why a full-group decay bound for that vector cannot supply the transfer. The embedded-isometry genus mean and fixed-normal-form weighted sum cover separate counting statements. The original weighted fibre correspondence `PerRowC` and the full global norm step remain open in that distillation. [Averaged frame energies][brox-energy] · [Projector and Whittaker comparison][brox-projector] · [Genus mean][brox-genus] · [Weighted normal forms][brox-normal].
@@ -83,6 +93,7 @@ The comparison used repository metadata, selected source text and published veri
 [sutherland]: https://math.mit.edu/~drew/grh/
 [issue41]: https://github.com/leanprover-community/riemann-hypothesis/issues/41
 [brox]: https://github.com/JoseBrox/GRH_distillation/tree/fd38313e5c7018c3c988ba20510e6b0b3bca0519
+[brox-centered]: https://github.com/JoseBrox/GRH_distillation/blob/fd38313e5c7018c3c988ba20510e6b0b3bca0519/notes/frame-degree-compatibility.md
 [brox-energy]: https://github.com/JoseBrox/GRH_distillation/blob/fd38313e5c7018c3c988ba20510e6b0b3bca0519/notes/averaged-theta-energy.md
 [brox-projector]: https://github.com/JoseBrox/GRH_distillation/blob/fd38313e5c7018c3c988ba20510e6b0b3bca0519/notes/projector-kernel-tail.md#3-why-the-whittaker-transfer-is-a-separate-step
 [brox-genus]: https://github.com/JoseBrox/GRH_distillation/blob/fd38313e5c7018c3c988ba20510e6b0b3bca0519/notes/embedded-isometry-genus-count.md#the-next-precise-frontier

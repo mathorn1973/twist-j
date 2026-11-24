@@ -208,7 +208,9 @@ the geometric cycle formula.
 The original linear-algebra interface concerns the span after a small
 **total source loss**. Its bounds do not require the new gap test. The
 following is the centered compression argument already familiar from
-the Brox reading; the derivation is included to fix the quantifiers.
+the Brox reading: it is the complementary-subspace form of his
+`frame-degree-compatibility.md`, equation (2.1), solved for the missing
+target fraction. The derivation is included to fix the quantifiers.
 The precise current source and literature interfaces are in [SOURCE.md](SOURCE.md).
 
 Choose retained source spaces $E'_u\le E_u$, and write
