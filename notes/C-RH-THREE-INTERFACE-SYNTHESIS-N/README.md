@@ -12,8 +12,12 @@ Dirichlet samples, exact optimal reconstruction cost and a sharp threshold
 for discarding smooth direction supports. The whole-window continuation
 proves vanishing deletion energy, finite global energy through direction
 support N^(1/3), and a balanced bilinear reduction with quantified Fourier
-removal costs. The native positive-energy estimate for the full remaining
-sum is O. These deductions do not supply an independent TWIST-J proof of RH.
+removal costs. Its low-frequency continuation now proves coupled affine
+cancellation, actual signed numerator bounds, double cancellation on a
+smooth central band and inverse-logarithmic comparison of complete
+narrowed carriers. The native positive-energy estimate for the full
+remaining sum is O. These deductions do not supply an independent
+TWIST-J proof of RH.
 
 ## 1. What each side actually supplies
 
@@ -270,7 +274,140 @@ surviving long, low-frequency sum together with its negative square, or
 the corresponding mixed character moment. See [WINDOW-SCOPE.md](WINDOW-SCOPE.md)
 for the prospective scope and internal review boundary.
 
-## 5. Next bounded obligations
+## 5. Estimates on the actual long low-frequency sum
+
+**Candidate-D; full native target O.** The next continuation keeps the
+original T_low fixed and names its compared carriers separately.
+The prospective scope is recorded in [LOW-ENERGY-SCOPE.md](LOW-ENERGY-SCOPE.md).
+The four complete new papers supply the following deductions.
+
+### A coupled sector cancels with its own affine terms
+
+[BILINEAR-LOW.md](BILINEAR-LOW.md) removes the padding explicitly.
+With u_a=mu(a) for a<=A, b^u=u*u, m=M(A) and h_u=sum u_a/a, it gives
+
+\[
+ T_{\rm low}
+ =P_X(b^u)-L_Xh_u^2+\frac{m^2}{2}+2m-E_X,
+ \qquad L_X=N+\tfrac12+J(H-1)/2.
+\]
+
+Here P_X is exactly the original smoothed spectral projection, and the
+error has weighted slab norm O((1+log X)^(3/2)). The positive term m^2/2
+must remain. The nonpositive square of the balanced formula alone
+does not measure the benefit of balancing.
+
+Put B_X=2X+J(H-1). Every raw denominator d>=B_X has zero floor throughout
+every translated argument. For z supported on those denominators,
+
+\[
+ P_X(z)-L_X\sum_d z_d/d+\tfrac12\sum_d z_d=-E_X(z).
+\]
+
+Thus their complete coupled contribution has O((log Y)^2) norm cost
+on the original whole window. A genuine primitive prime-pair family
+inside this sector has isolated positive and negative weighted energies
+of order at least X/log^4(X) on separate slab subintervals. Its own
+allocated affine terms cancel those contributions. This is no lower
+bound for the full positive energy.
+
+The remaining unpadded object is
+
+\[
+ W_X^{<}=P_X(b^u\mathbf1_{d<B_X})-L_XA_X+C_X/2,\quad
+ A_X=\sum_{d<B_X}b_d^u/d,\quad C_X=\sum_{d<B_X}b_d^u.
+\]
+
+Both affine coefficients are signed. The note factors every remaining
+divisor-multiple coefficient into finite Mobius sums with an explicit
+product cutoff, and writes the exact nonnegative-test supremum for
+the remaining positive norm.
+
+### Actual numerator cancellation and crossing pairs
+
+[LOW-FREQUENCY-PAIRS.md](LOW-FREQUENCY-PAIRS.md) adapts the attributed
+neighboring numerator argument to the present coefficients. At primitive
+theta=a/q its cofactor is independent of a. Summing signed numerators
+before taking conductor absolute values gives an amplitude bound
+O_epsilon(X^(1+epsilon)/U) for a height interval
+lambda=X|a|/q>=U.
+
+For the specified compact time taper, the actual ordered unequal-denominator near pairs
+whose larger height reaches U, including pairs crossing that threshold,
+have signed sum
+
+\[
+ O_\epsilon\!\left(X^\epsilon(X^3/U^2+X^2)\right),
+ \qquad U\ge128\lceil3\log_2 X\rceil.
+\]
+
+The proof retains the exact divisor-multiple coefficients, primitive
+conditions and all time translates. At U=sqrt(X)/log^2(X), the separate
+amplitude bound above permits a subpower whole-window one-sided norm
+comparison; that comparison is not inferred from the crossing-pair bound
+alone. A separate box estimate removes
+dyadic numerator boxes B>=max(1,R^3/X^2) at denominator scale q~R.
+No bound on their individual mixed energy with the retained boxes is
+inferred from that norm comparison.
+
+The review checks the same estimates after the raw mask d<B_X. They
+therefore give a joint carrier
+\(F^{<}=G_X^{*,<}-L_X A_X+C_X/2\) with
+|sqrt(Q_(F^<))-sqrt(Q_R)|<<_epsilon Y^epsilon on every late whole
+window. All-epsilon exponent slack preserves the original quantifiers.
+The central-band theorem below is not automatically transported through
+this sharp raw-denominator mask.
+
+### A direct energy bound on a smooth central band
+
+The Astra derivation in [LOW-ENERGY-REVIEW.md](LOW-ENERGY-REVIEW.md)
+keeps the original balanced carrier. For a fixed smooth even cutoff
+w, equal to one on [-1,1] and supported in [-2,2], let L_(X,K)
+multiply its oscillatory frequencies by w(X theta/K).
+For 1<=K<=X^(1/10),
+
+\[
+ \sum_{X\le N<2X}\frac{|L_{X,K}(N)|^2}{N(N+1)}
+ \ll_w X(1+K)^4\log^6(2X)
+       \exp[-4c\Phi(X/(8AK))].                              \tag{5}
+\]
+
+The proof unfolds the actual b=c*c before grouping equal frequencies
+and applies partial summation in both integer factors. The two
+cancellations use the stated unconditional classical Mertens bound.
+Exact balancing removes the upper boundary faces; the smooth cutoff
+removes the lower ones. The theorem includes growing
+K=exp(kappa Phi(sqrt(X))) for every fixed 0<kappa<c.
+It also applies to each fixed logarithmically narrowed balanced carrier
+below. Even at K=1 the displayed upper bound is X^(1-o(1)), so this
+estimate cannot be treated as a target-scale deletion of the central band.
+
+### Logarithmic narrowing has a vanishing price for the entire carrier
+
+[ONE-SIDED-LOW.md](ONE-SIDED-LOW.md) defines T_h by the complete frozen
+formula with H replaced by h in the average, cutoff and affine shift.
+For each fixed B>=1 put H_B=ceil(sqrt(X)(log X)^B). Then, for every
+fixed K>0,
+
+\[
+ \left\|T_{H_B}-T_{\rm low}\right\|_Y
+ \ll_{B,K}(\log Y)^{-K}.                                   \tag{6}
+\]
+
+This compares the full signed expressions including their affine terms.
+It uses the published maximal short-Mobius theorem at its exact uniformity,
+with unit-cell integration to include all integer starts. The multiplier
+difference on the shared discarded modes supplies an additional power
+gain; the discarded high frequencies use the uniform bound 2/5 for one
+average. Both incomplete end slabs are included. Each B and K is fixed;
+no simultaneous uniform assertion for growing B is made.
+
+Equation (6) does not bound the size of either carrier. The original
+full positive-energy estimate from Section 4 is still the available
+unconditional full bound. Proving the target for T_(H_B), or for the
+joint signed carrier \(F^{<}\) with both affine terms retained, remains O.
+
+## 6. Next bounded obligations
 
 1. **Most immediate proof simplification:** port the integrated-chord lemma
    into the actual HN supplier, before the scalar tail weakening. Keep its
@@ -279,10 +416,11 @@ for the prospective scope and internal review boundary.
 2. **Active independent arithmetic problem:** prove the signed whole-window
    estimate for the exact residual R_c of DIRICHLET-READOUT.md, Section 5.
    Its sampling cost and vanishing window deletion error are specified.
-   The equivalent residual T_low in PRIME-CANCELLATION.md keeps the
-   negative square and the remaining long frequencies. Separate norm
-   bounds and the lower-argument recurrence's X^(5/12) allowance do not
-   supply the needed cancellation.
+   The equivalent logarithmically narrowed balanced carrier keeps the
+   negative square. The separately proved joint unpadded carrier keeps
+   its two signed affine terms and the exact hyperbolic coefficient sums.
+   Bound one of their complete positive energies. The central-band
+   estimate and controlled changes between carriers do not yet supply it.
 3. **Smallest meaningful local bridge:** one specified required place, one
    actual normalized kernel, and one admitted integral generator pair whose
    derivative is proved to equal the source period in its normalization.
@@ -293,7 +431,7 @@ These are distinct next obligations. The optional stronger all-subspace
 period-concentration target of #2070 remains O; it is not an omitted
 premise of the already checked external RH proof.
 
-## 6. Evidence boundary
+## 7. Evidence boundary
 
 Three Sol agents developed the separate tasks. Root Astra inspected the
 critical arguments and pinned sources; a separate Astra wrote the internal

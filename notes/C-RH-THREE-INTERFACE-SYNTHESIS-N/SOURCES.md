@@ -190,3 +190,53 @@ All four new notes are original paper deductions and same-session review.
 No new scientific executable, enumeration, empirical input or formal
 verification was run. Their status remains NON-CANONICAL candidate-D;
 the native full positive-energy estimate remains O.
+
+## Long low-frequency signed-energy continuation
+
+The fixed starting package is
+2147cba363d90d2772c3d5f883d79c326260d9c9. Its T_low, actual coefficient
+normalization, affine shift and integer-window quantifiers are preserved
+as the reference object. New carriers are separately named and compared.
+The owner-issue scope was exposed and read back before authoring.
+
+- The neighboring #2087/#2089 input is now pinned at
+  f55cbcd1bf0eff6de99449c37ac8c03916b8acfe. Root read its
+  [round-5 report](https://github.com/mathorn1973/twist-j/blob/f55cbcd1bf0eff6de99449c37ac8c03916b8acfe/notes/C-RH-ARITHMETIC-KERNEL-N/round5/REPORT.md),
+  [NUMERATOR-ESTIMATE.md](https://github.com/mathorn1973/twist-j/blob/f55cbcd1bf0eff6de99449c37ac8c03916b8acfe/notes/C-RH-ARITHMETIC-KERNEL-N/round5/NUMERATOR-ESTIMATE.md)
+  and
+  [SHORT-SUM-TRANSFER.md](https://github.com/mathorn1973/twist-j/blob/f55cbcd1bf0eff6de99449c37ac8c03916b8acfe/notes/C-RH-ARITHMETIC-KERNEL-N/round5/SHORT-SUM-TRANSFER.md).
+  The rational finite taper remains from its
+  [FINITE-TAPER.md](https://github.com/mathorn1973/twist-j/blob/f55cbcd1bf0eff6de99449c37ac8c03916b8acfe/notes/C-RH-ARITHMETIC-KERNEL-N/round4/FINITE-TAPER.md).
+  The actual carriers differ. The geometric numerator argument is
+  transported here with the present cofactor and forward-average multiplier;
+  the short-sum theorem is applied directly to mu. The adjacent owner
+  retains its original arguments and results.
+- Matomaki, Radziwill, Shao, Tao and Teravainen,
+  [Higher uniformity of arithmetic functions in short intervals II. Almost all intervals](https://link.springer.com/article/10.1007/s00222-026-01408-6),
+  Inventiones mathematicae 244 (2026), 967-1091, Theorem 1.1(i) and
+  definition (1.4). Root read the full main statement. The fixed circle
+  with constant function one admits interval prefixes through the starred
+  arithmetic-progression maximum. The source supplies each prescribed
+  fixed logarithmic saving outside an exceptional set of controlled measure
+  for lengths between X^(1/3+eta) and X^(1-eta). Unit-cell integration
+  and the trivial bound account for all integer starts in the square norm.
+  No pointwise all-start theorem, fixed-shift cancellation, power saving
+  at a larger smoothing width, or uniformity for growing logarithmic
+  orders is imported.
+- Lee and Leong, version 4, Theorem 1.2, was read again for the exact
+  unconditional Mertens input used twice in the central-band derivation.
+  That argument proves an estimate for a smooth part of the actual
+  balanced spectrum. The complement and affine term remain, and the
+  estimate itself does not reach square-root scale.
+- The prime-pair diagnostic uses the classical prime number theorem.
+  The original reference is
+  [Hadamard (1896)](https://www.numdam.org/item/BSMF_1896__24__199_1/).
+  Root also read the explicit prime-count asymptotic and error statement
+  in [NIST DLMF 27.12](https://dlmf.nist.gov/27.12).
+  Subtracting the two fixed-ratio prime-count asymptotics gives the
+  stated interval count. No finite numerical prime census was performed.
+
+The three Sol papers and Astra derivation/opposition are original
+NON-CANONICAL candidate-D notes. Root and another Sol reconstructed the
+central-band proof separately within this session. No scientific executable,
+empirical input, enumeration or formal-verifier run was used.

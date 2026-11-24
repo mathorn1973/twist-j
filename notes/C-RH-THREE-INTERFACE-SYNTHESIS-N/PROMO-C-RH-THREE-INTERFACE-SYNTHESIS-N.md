@@ -24,6 +24,10 @@ Action layer: NOT_APPLICABLE, pure mathematics and source-interface audit.
 | PRIME-CANCELLATION.md | Finite weighted square energy of the large-prime square-correction error; balanced integer bilinear identity with a nonpositive square; exact Fourier removals at O((log Y)^2) whole-window norm cost | Signed control of the remaining long low frequencies together with the negative square; the separate lower-argument norm sum loses X^(5/12) |
 | CHARACTER-WINDOW.md | One frozen window reader, alias-aware fourth moments, growing-conductor accounting and exact finite Mellin formula with endpoint terms | A sufficiently small mixed moment or the exact one-sided positive-test bound; separate Holder products remain too large |
 | ROUND3-REVIEW.md | Internal opposition; finite global absolute energy for direction supports d<=N^(1/3); strengthened frozen-reader error; larger reduced-denominator removal at logarithmic norm cost | The complete native positive-window estimate remains O; critical global energy gives no tail decay rate |
+| BILINEAR-LOW.md | Exact unpadding cost; coupled cancellation of raw d>=2X+J(H-1) with their affine terms; actual large primitive family with individually large sign energies; explicit gcd/product-cut coefficient formula | Signed positive energy of the remaining hyperbolic sums together with both affine terms; the truncated slope has no inherited square sign |
+| LOW-FREQUENCY-PAIRS.md | Actual signed numerator bound and near-pair crossing estimate; high-height and dyadic-box removals with full-window subpower norm cost | Positive energy of the low-height remainder; no separate cross-energy conclusion from a packet norm estimate |
+| ONE-SIDED-LOW.md | Complete balanced carriers narrowed by any fixed logarithmic factor differ in weighted norm by every fixed inverse logarithmic order | Neither the smoothing error nor the carrier difference bounds the retained amplitude; the full target remains O |
+| LOW-ENERGY-REVIEW.md | Double signed cancellation and direct weighted energy bound on a smooth central band, including growing width parameter; opposition to all three lanes and justified joint unpadded carrier | Central-band scale still exceeds the target; no automatic transfer of the smooth argument through a sharp raw-denominator mask |
 
 The original ingredients of #2065/#2070 and the signed kernel of #2087
 retain their owners and source status. The package makes no historical
@@ -59,6 +63,17 @@ opposition preserves the original R and distinguishes every controlled
 error from the remaining signed residual, whose native subpower
 whole-window estimate is open.
 
+The next user selection was the explicit long low-frequency signed energy.
+LOW-ENERGY-SCOPE.md records the prospective owner-issue extension. Three
+Sol lanes developed bilinear/affine cancellation, numerator/near-pair
+estimates and one-sided short-sum transfer. A separate Astra coordinated
+and opposed them and contributed the smooth central-band derivation.
+Root and the one-sided author separately reconstructed that derivation.
+All four final papers were read and checked by root. The review explicitly
+limits the artificial cosine example to positivity-only reasoning, keeps
+actual cross-energy costs separate from packet norms, and preserves both
+affine terms after the sharp raw mask.
+
 No scientific executable, numerical enumeration, new empirical input,
 formal-verifier invocation or Lean build was used. No computation-grade T
 or two-architecture scientific result is claimed. Administrative source
@@ -86,14 +101,15 @@ also permits a separately named N^(1/3) cutoff with finite global error
 energy, without changing the original definition.
 
 The original target in DIRICHLET-READOUT.md, Section 5, is equivalent
-to the target for T_low in PRIME-CANCELLATION.md. On each dyadic slab
-this retains the actual averaged negative square and only low frequencies
-of long raw denominators with large reduced denominator. The precisely
-controlled whole-window norm cost is logarithmic. Bound their coupled
-positive part, or establish the mixed character estimate with the endpoints
-and conductor growth of CHARACTER-WINDOW.md. Separate absolute estimates
-do not meet this remaining obligation. Importing the external RH theorem
-does imply the target, but is recorded solely as an imported consequence.
+to the target for T_low and for every fixed logarithmically narrowed
+balanced T_(H_B). The complete signed difference T_(H_B)-T_low has
+every fixed inverse-logarithmic norm saving. A second justified route uses the
+unpadded, raw-truncated and numerator-reduced F^< in LOW-ENERGY-REVIEW.md,
+with both signed affine terms retained and a subpower norm transfer.
+Bound one of these complete positive energies, or the exact corresponding
+positive-test supremum. The direct smooth central-band energy bound is
+unconditional but still too large for the desired scale. Importing the
+external RH theorem implies the target and remains separately labeled.
 
 Separate earlier obligations remain: port the HN source-loss chord before
 the scalar tail weakening, with one unchanged downstream H8 consumer;
