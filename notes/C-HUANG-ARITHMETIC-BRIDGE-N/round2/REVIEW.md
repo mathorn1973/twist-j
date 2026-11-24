@@ -238,3 +238,10 @@ The one-prime short support is bounded above by \(pT\). Its multi-prime
 identity uses \(n\ge P_XT_X\). The uniform growing-product estimate
 above is proved for \(P_XT_X\le X^{1/3}\), as guaranteed on late slabs
 by budget (12). The positive-energy estimate remains **O**.
+
+The report revision `4ab65a3b8d094e5a5f0253cef923e50161fedaac`
+states all three domain qualifications above. Its diff from the
+reviewed synthesis limits the short support by \(pT\), makes the
+argument and product ranges explicit in the multi-prime transfer,
+and requires the full prime list through the larger cutoff for the
+arithmetic rank comparison. These edits resolve the review findings.
