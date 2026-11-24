@@ -639,3 +639,52 @@ their phase-weighted cycles. The one-character Mobius bound proposed in the
 owner's note is an additional open arithmetic target, equivalent to the
 critical-line hypothesis for that one L-function. Neither target is closed.
 The complete R18 report is round18/REPORT.md.
+
+## Round 19 continuation
+
+Session ChatGPT-Astra-Sol-20261124-R19 continues the same candidate and
+draft from e7a1bc2910330bf41222dbf689db789860e7e095. Public main
+ed3b1878d95825ab9473c16416c8db76cc152079 and Public Canon v116 remain the
+verified authority basis. The current issue claim was extended before
+authoring. This round returns to RH; the owner's Fibonacci return note
+is peripheral reference and was not audited as a separate assignment.
+
+55. Candidate-D: the exact centered corank envelope for a surviving span
+    yields the affine bound (2 epsilon + eta + sqrt(e)/(1-sqrt(e)))/(1+eta).
+    The original source uses the same post-ramified source normalization
+    and threshold loss u/(u+tau). Substitution through its layer-cake proof
+    reduces the logarithmic coefficient from four to two, with the target
+    cut denominator and word-count loss retained. It leaves the polynomial
+    eta H order unchanged and was not implemented in Lean.
+56. Candidate-D: the principal-angle trace loss pays a double-commutator
+    form. A gap covering the frame diameter gives proportional incidence
+    for every subspace. Simple-block tests leave exactly the kernel and
+    central mass imbalance. Rational nontight data can pass strictly;
+    a semistable four-line arrangement fails the exact test in every metric.
+57. Candidate-D: the averaged diagonal defect transfers the spectral test
+    to A_u A_u* with dimension-independent loss sqrt(e)+e/2, explicit
+    weighted trace tails and the existing cut budget. A uniform gap and
+    tail estimate on the actual multiplicity maps remains O.
+58. Candidate-D: equal summed frame operators, and therefore all their
+    moments, need not give equal concentration. The two-copy operator on
+    row endomorphisms instead uses absolute squares of ordered cycle traces.
+    Its source expansion pairs actual closed chains and retains their
+    relative additive phase. No new cancellation bound is asserted.
+
+Current target after R19: the original rank-to-slope step now has the
+explicit sharper paper bound on matched source inputs. Its role is
+small-total-loss spanning, not exponential semistability of every target
+subspace. The latter remains an optional stronger route whose concrete
+open supplier is the multiplicity commutator gap versus frame diameter
+or a suitable weighted trace tail. Refining by the full image algebra
+also requires new central mass bounds. No inference between controlled
+projections in an algebra and arbitrary projections in its commutant is
+made. The released proof's kernel validation has its separate external
+record and is not an open premise of this note.
+
+See round19/REPORT.md, PROOF.md, BRIDGE.md, SOURCE.md and OPPOSITION.md.
+Two Astra workers and a Sol source reader cross-reviewed the arguments;
+root checked the current FrameLA1 and actual threshold proof. Same-session
+review is not external independent acceptance. No scientific computation,
+Lean build, Canon edit, merge or release. All earlier scientific files
+and evidence remain unchanged.

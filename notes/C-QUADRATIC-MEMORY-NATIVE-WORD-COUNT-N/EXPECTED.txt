@@ -1,0 +1,28 @@
+[PASS] C01 the five generators, restated verbatim, are affine involutions on all 15625 cell states: translations a (0, 0, 0, 0, 0, 0), b (0, 0, 0, 0, 0, 0), c (2, 1, 2, 1, 1, 0), d (2, 1, 3, 4, 1, 1), e (2, 1, 3, 4, 2, 1)
+[PASS] C02 slotwise generators and couplings: the radical output never depends on the pistons; P and Q have order 5
+[PASS] C03 W-blocks of a and b commute, square to 1, c has the W-block of b; joint eigenvectors (1,1,4,4), (1,1,1,1), (1,4,4,1), (1,4,1,4); K = antidiag(3,2,2,3) again in that basis
+[PASS] C04 adapted basis (planes ++, +-, -+, --, q, t): every generator acts on each plane by the tabulated 2x2 matrix, on the q- and t-planes as on the plane +-, and the only coupling is t -> planes ++ and -+ in c (u = 3 e_++ + 2 e_-+)
+[PASS] C05 determinant patterns of the generators on the four eigenlines generate exactly the 8 patterns of product 1: a (1, 1, 4, 4), b (1, 4, 1, 4), d (4, 4, 4, 4), P (1, 1, 1, 1)
+[PASS] C06 Lambda contains SL2(F5)^4: P, Q generate a diagonal SL2 of order 120; explicit commutator words give (1,1,1,y), (1,1,y,1), (1,y,1,1) with y not central, and the conjugates of y generate SL2: y = ((2, 2), (3, 1)); hence |Lambda| = 8 * 120^4 = 1658880000
+[PASS] C07 c_x b_x^-1 is unipotent with a t -> W part only; its conjugates span all linear maps from the t-plane to the planes ++ and -+: dimension 8
+[PASS] C08 the words e_x d_x, d_x P d_x P, (c_x d_x)^2 (applied right to left) are the translations by (q_x unit), (2,1,3,4,1,1) in cell y, (4,3,4,1,0,3) in cell x; closures under the linear parts: dimensions [2, 8, 12]
+[PASS] C09 Lemma 1(b) of the earlier note: det g_out det g_in = 4, and the pattern (4,4,4,4) has product 1, so the reduction maps Lambda onto itself
+[PASS] C10 K-skew maps in A: 25, all of the form diag(s, r, -r, -s) in the eigenbasis, no nonzero one nilpotent; isometries of K in A: 16
+[PASS] C11 Proposition T/U, C = K, Canon target M, all 5^8 inputs: agreement sets of the 25 tangent words have sizes 90625, 80625 (8 times), 78625 (16 times); their union misses 20800 inputs: covered 369825, missed 20800
+[PASS] C12 Proposition U: the missed inputs are exactly E x B' u B' x E in reduced eigen-coordinates (pointwise); |E0| = 25, |E12| = 40, |B'| = 160: |U| = 20800
+[PASS] C13 test sets: O (one half with a zero vector, the other in B') has 15680 inputs, U1 (one half in E12, the other in B') has 12800, and U1 lies in O, O in U: |O| = 15680, |U1| = 12800, Gram values on O: 20
+[PASS] C14 Proposition O: the 25 tangent words and 30 further maps induced by native words of zero translation agree with every input outside O and with no input of O: covered 374945, missed 15680
+[PASS] C15 Theorem L: 15680 > 24 * 640, and 640 inputs of O are reached by the translation word (x,y) -> (x + 2y + 2t, 2x + 3y + t), t = e_++ + e_+- + 4 e_-+ + e_--: agreement set 15625, inside O 640
+[PASS] C16 Lemma 2: for the six root points P the count psi_P(A, alpha, A', alpha') on B' is at most 64, except for P = (0,1) and the four tuples ((0,m), 0, (0,1/m), 0), where it is 160: largest other value 64 over 86400 tuples
+[PASS] C17 Lemma 3: on the 10000 half-maps with g, g' upper triangular, g22 g'22 = 1 and translations on the x-axis, F^c vanishes on B' and F^b vanishes at 30 points of B' or more when both translations are nonzero: least number of zeros by number of nonzero translations: [0, 0, 30]
+[PASS] C18 Proposition W, arithmetic: no map with linear part in Lambda agrees on more than 520 inputs of U1, and 12800 > 24 * 520: one half outside the family: at most 448; both inside: at most 520
+[PASS] C19 520 is attained: the map with reduced form (x + nu y + t, y), nu = diag(0,0,1,1), t = e_++ + e_+- + e_-+ + e_--, is induced by a native word and agrees on 520 inputs of U1: agreement set 18125, inside U1 520, inside O 630, inside U 820
+[PASS] C20 the translation word of the check for Theorem L agrees on 880 inputs of U: inside U 880
+[PASS] C21 nu = diag(0,0,1,0) lies in A and is not K-skew; the map with reduced form (x + nu y, y) is induced by a native word, is not of tangent type and agrees on 40625 inputs: agreement set 40625, inside U 0
+[PASS] C22 upper bound: the 65 listed maps are induced by native words and their agreement sets cover all 390625 inputs (C = K, Canon target M): covered 390625, tangent members 14, largest part of O 630, of U1 480
+[PASS] C23 the 74 maps of section 9 are of the form (u + nu v + t, v) with nu K-skew, so they are induced by native words; in the original coordinates with K and M every input agrees with at least one of them: agreeing maps per input: least 1, most 53
+[PASS] C24 Proposition F: the selection rule places every input; the selected map satisfies G(f(z)) = M G(z) at every input (original coordinates) and no output has more than two preimages: outputs with 0, 1, 2 preimages: 107714, 175197, 107714; maps used 74
+[PASS] C25 continuation (Proposition 6 of the note in #2068): the integers p exist on every orbit of M on the Gram classes: orbit lengths [(1, 1), (2, 2), (10, 12)], outputs with two preimages 107714, further occupied states 40866, least reachable set 539205 of 781250
+[PASS] C26 the 65 maps of section 8 alone do not suffice for fibres of size two: the largest assignment with at most two inputs per output serves fewer than 390625 inputs: largest assignment 388985, unserved 1640
+[PASS] C27 the selector of Theorem 3 of the note in #2068, for C = K: fibres of size at most two, and as a selection among translations it uses 238985 distinct displacements: outputs with 0, 1, 2 preimages: 136800, 117025, 136800; distinct displacements 238985
+ALL CHECKS PASS (27 checks)

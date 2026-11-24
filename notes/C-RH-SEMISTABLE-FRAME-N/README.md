@@ -1,9 +1,48 @@
-# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 18
+# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 19
 
 **NON-CANONICAL. No authority. No Canon status changes.**
 
 Claim: [issue 2070](https://github.com/mathorn1973/twist-j/issues/2070).
 Alias used in the earlier discussion: C-RH-BK-CONCENTRATION-N.
+
+## Round 19 outcome
+
+Candidate-D: the original proof's small-source-loss span bound is sharpened
+on its actual matrix hypotheses. Centering both traces gives the exact
+quadratic corank envelope and the affine bound
+`w <= (2 epsilon + eta + sqrt(e)/(1-sqrt(e)))/(1+eta)`.
+Matching the actual Harder--Narasimhan threshold normalization reduces the
+integrated logarithmic coefficient from four to two, retains the target
+cut denominator and word-count loss, and improves the diagonal error term.
+The polynomial isotropy-error order is unchanged. This is a paper
+improvement; no Lean theorem or final arithmetic endpoint was modified.
+
+Candidate-D: a separate finite certificate proves proportional incidence
+for every subspace of a block when its double-commutator gap covers its
+frame spectral diameter. It can pass for nontight data, and can fail in
+every metric for a semistable family. It is sufficient, not equivalent.
+The averaged diagonal error transfers the test to actual positive Gram
+operators without polar inversion. Kernel, block and cut budgets remain.
+
+Candidate-D: all aggregate moments of the summed frame can agree while
+incidence defects differ. The relevant two-copy operator retains the
+absolute square of each ordered Gram-cycle trace and the relative
+additive phase of two actual closing chains. Its uniform multiplicity
+gap remains O. This stronger route is optional for the original
+small-source-loss slope argument, not a missing premise of the released
+formally checked RH proof.
+
+- [Results and scope of the original improvement](round19/REPORT.md)
+- [Finite spectral certificate and Gram-only construction](round19/PROOF.md)
+- [Actual-map transfer, paired cycles and improved slope bound](round19/BRIDGE.md)
+- [Fresh source audit and matched threshold normalization](round19/SOURCE.md)
+- [Counterexamples and internal paper opposition](round19/OPPOSITION.md)
+
+Two Astra workers, one Sol source reader and root cross-reviewed the
+paper results. No new scientific computation, Lean build, external
+independent audit or promotion was performed. Earlier scientific files
+and frozen evidence remain unchanged. The peripheral Fibonacci return
+note was not a second assignment and was not used as an RH premise.
 
 ## Round 18 outcome
 
