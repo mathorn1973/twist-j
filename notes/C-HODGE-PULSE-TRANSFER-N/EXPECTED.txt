@@ -1,0 +1,11 @@
+01 pulse unitarity and frozen boundary regrouping: PASS
+02 full boundary transfer is flux-preserving and involutory: PASS
+03 positive polar factor eigenvalues: phi, phi^-1
+04 Hermitian polar action: (v^2-3v+1)(v-1)^2; signature 1,3
+05 full transfer is NOT the Hodge loxodrome: PASS
+06 capture contact has polar eigenvalues 2,1/2, not phi,phi^-1
+07 alternative port grouping yields phi^3,phi^-3: nonuniqueness retained
+08 reduction at sqrt5: Bbar=2X; adjoint splits 1+2
+09 explicit W5/sl2 conjugacy gives the published Phi grading, NOT D
+ALL 9 EXACT CHECK GROUPS PASS
+NON-CANONICAL; one local lane; no physical or canonical bridge asserted
