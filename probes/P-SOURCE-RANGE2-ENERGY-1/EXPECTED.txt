@@ -1,0 +1,19 @@
+probe=P-SOURCE-RANGE2-ENERGY-1
+arithmetic=Z[zeta5]; fixed coin gauge G=diag(1,i,i,1)
+parameters=rho:2,ell:2,N:8,seed_power:12
+carrier_projection=c<=90 or c>=104
+source_Z=(39521+154*sqrt(5))/15625
+remainder=1/15840
+norm_threshold=71/79200
+squared_threshold=5041/6272640000
+common_denominator=26435852050781250000000
+positive_support_counts=2,10,72,308,944,1958,3484,5518,8556,12326,17064,22894,29708
+negative_support_counts=2,8,28,85,302,722,1672,3048,4906,7704,11218,15672,21174
+integrity=PASS
+plus_norm_squared=(78528199745274604061507737570049654784+(2970736380666141011876915666864963584)*sqrt(5))/4263532100619551101772231049835681915283203125
+plus_comparison=LT
+plus_disposition=INCONCLUSIVE
+minus_norm_squared=(34308575708192801632564975453994614784+(1166135837836318555548930117389123584)*sqrt(5))/4263532100619551101772231049835681915283203125
+minus_comparison=LT
+minus_disposition=INCONCLUSIVE
+overall_disposition=INCONCLUSIVE
