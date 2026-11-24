@@ -49,9 +49,9 @@ of \(K\) of eigenvalue \(+\sqrt5\), then \((v,Sv)\) is trace-orthonormal.
 In this basis \(K/\sqrt5\) is \(Z=\operatorname{diag}(1,-1)\) and \(S\)
 is \(X=\begin{pmatrix}0&1\\1&0\end{pmatrix}\).
 Both \(S\) and \(K/\sqrt5\) are trace isometries because they are
-self-adjoint involutions. Any two nonzero anticommuting real
-self-adjoint operators squaring to positive scalar multiples of
-\(I\) can be normalized and put in this form: the second involution
+self-adjoint involutions. On this real two-dimensional space, any two
+nonzero anticommuting self-adjoint operators squaring to positive scalar
+multiples of \(I\) can be normalized and put in this form: the second involution
 exchanges the first one's two eigenspaces. A third self-adjoint
 operator anticommuting with \(Z\) must be a scalar multiple of \(X\).
 Anticommutation with \(X\) then forces it to vanish. This capacity
@@ -125,7 +125,12 @@ denominator mask \(m(d)\in\{0,1\}\), set
 For each pair \(ab=d\), the companion coefficient is
 \((\eta(a)u_a)(\eta(b)v_b)\). Thus the first coordinate is exactly
 the original sum and the second is exactly the product-twisted
-convolution on the same mask. In field notation the first readout
+convolution on the same mask. The construction transports
+coordinatewise convolution through the linear encoding
+\((x,y)\mapsto x+\tau y\). Field multiplication uses
+\((x+\tau y)(x'+\tau y')=(xx'+5yy')+\tau(xy'+x'y)\), so multiplying
+encoded factor values in the field would give a different result.
+In field notation the first readout
 is \(x\mapsto \operatorname{Tr}_{F/\mathbb Q}(x)/2\), and the second
 is \(x\mapsto\operatorname{Tr}_{F/\mathbb Q}(\tau x)/10\). For a squarefree
 factor, adding a new prime \(p\) to its divisor cube applies
@@ -165,6 +170,41 @@ each coordinate with the same order. This equality describes a
 linear readout of the entire signed carrier. In particular a positive
 part of either coordinate alone cannot be substituted for the
 positive part of an arbitrary readout.
+
+
+The same record applies to the full coupled large-factor sequence of
+[the pinned floor-sum note](https://github.com/mathorn1973/twist-j/blob/ceb77e3632ec4617c54d8e1fd504d3b1c99dd106/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/FULL-COUPLED-ENERGY.md).
+On each slab keep its \(T=\lfloor X^{1/4}\rfloor\) and define
+\[
+ C_T^\eta(n)=\sum_{\substack{a,b>T\\ab\le n}}
+      \mu(a)\eta(a)\mu(b)\eta(b)\left\lfloor\frac n{ab}\right\rfloor,
+ \qquad h_T^\eta=\sum_{a\le T}\frac{\mu(a)\eta(a)}a.
+\]
+With \(C_T,h_T,U_H^J,L_X\) as in that note, the two coordinates give
+\[
+ \mathbf Z_X=
+    \big(U_H^JC_T-L_Xh_T^2\big)
+     +\tau\big(U_H^JC_T^\eta-L_X(h_T^\eta)^2\big).
+\]
+The two squares are formed coordinatewise from the complete small
+factor ranges. First-coordinate readout returns exactly \(Z_X\)
+before taking a positive part and on every integer in each slab.
+With the same piecewise choice, the pinned comparison
+\(\|Z-R_{1/36}\|_{I(Y)}\ll_K(\log Y)^{-K}\) for every fixed \(K>0\)
+holds on each sufficiently late complete window. The comparison
+concerns the original coordinate.
+
+The trace metric gives the exact cost of first-coordinate readout:
+\[
+ \operatorname{Tr}\big((x+\tau y)^2\big)=2x^2+10y^2,\qquad
+ \|\ell_0\|=1/\sqrt2,\qquad
+ \operatorname{Tr}(\mathbf b_d^2)=12b_d^2 .
+\]
+The norm of the functional is attained at \(y=0\), and it holds for
+the associated weighted window norms by summing squares. The native
+conjugation \(S\) fixes the first coordinate and reverses the second.
+The doubled energy contains the entire original two-sided energy
+with factor two, plus the second coordinate's energy with factor ten.
 
 ## 3. Obstruction and the remaining boundary contract
 
