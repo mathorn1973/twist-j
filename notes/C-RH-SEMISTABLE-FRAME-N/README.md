@@ -1,9 +1,51 @@
-# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 17
+# C-RH-SEMISTABLE-FRAME-N, rounds 8 through 18
 
 **NON-CANONICAL. No authority. No Canon status changes.**
 
 Claim: [issue 2070](https://github.com/mathorn1973/twist-j/issues/2070).
 Alias used in the earlier discussion: C-RH-BK-CONCENTRATION-N.
+
+## Round 18 outcome
+
+Candidate-D: the owner's conductor-five prime pattern has compatible Gauss,
+Galois, scaling and Fibonacci readings. The source note needs the precise
+distinction between a five-cell register and a field basis, and between an
+operator with both square-root eigenvalues and one chosen scalar embedding.
+Existing canonical identities are credited at their established scope.
+
+Candidate-D, elementary: the squarefree character sum is bounded by
+floor(sqrt(x))-floor(floor(sqrt(x))/5). The ordinary prime number theorem
+improves it to o(sqrt(x)). On the same squarefree support, the character
+counts inert-factor parity, whereas its Mobius twist counts split-factor
+parity. Their Dirichlet series place L(s,chi_5) on opposite sides of a
+quotient, so the first estimate is not the second.
+
+Candidate-D: the same polynomial gives a positive Mellin kernel and hence
+L(s,chi_5)>0 for real s>0. For the existing split-factor polynomial,
+Q_x(1)=o(sqrt(x)), while the classical prime number theorem in progressions
+gives Q'_x(1) asymptotic to sqrt(5) log(phi) x/(pi^2 log(x)).
+This rules out a uniform sublinear power bound in a fixed complex
+neighborhood of the balanced evaluation. It leaves isolated target
+values and their conjectured cancellation open.
+
+Candidate-D under the full period-realization and unfolding premises:
+the actual Gram trace has a cyclic expansion whose finite phase is the
+level character of one closing element. At the actual two-prime level the
+rational closing element is special unitary. Determinant phase ratios
+multiply to one, so their averages retain every supported cycle.
+The source's existing pair bounds
+do not supply the remaining phase-weighted cyclic estimate or the
+intrinsic defect bound on the actual multiplicity spaces.
+
+- [Consolidated results, proofs and remaining obligations](round18/REPORT.md)
+- [Squarefree balance, derivative boundary and Fibonacci torus](round18/DEVELOPMENT.md)
+- [Mellin positivity, derivative asymptotic and internal opposition](round18/OPPOSITION.md)
+- [Actual-source cycle formula and convergence conditions](round18/SOURCE.md)
+
+Two Astra workers, one Sol source reader and root cross-review completed
+this paper round. There was no new scientific computation or Lean run.
+All earlier scientific files and frozen evidence remain unchanged.
+The twisted Mobius critical-line target and actual period estimate remain O.
 
 ## Round 17 outcome
 

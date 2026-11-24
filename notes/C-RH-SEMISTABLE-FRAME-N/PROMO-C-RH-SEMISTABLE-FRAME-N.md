@@ -590,3 +590,52 @@ Mixed ordinary minors already obtained here do not exhaust that requirement.
 The sharper two-sided cut estimate transfers a completed bound, but does
 not repair the missing bound. The all-subspace improvement and prescribed
 global rational-type visibility remain O. This package does not claim RH.
+
+## Round 18 continuation
+
+Session ChatGPT-Astra-Sol-20261124-R18 continues the same owner, candidate
+and draft from 8217fff0cb08129bc12e8cc0cf6e5737ca0529b3. Public main
+ed3b1878d95825ab9473c16416c8db76cc152079 and Public Canon v116 remain the
+verified basis. The issue-2070 claim was updated and read back before the
+new files were authored. The supplied conductor-five note is reviewed as
+an arithmetic pattern in its own right; no necessary RH bridge is assumed.
+
+50. Candidate-D: exact square-divisor inversion gives an explicit
+    square-root bound for the squarefree chi_5 sum. Ordinary PNT gives
+    little-o of the square root. The Mobius twist instead measures the
+    parity of split prime factors on the same squarefree support.
+51. Candidate-D: the factored five-symbol polynomial supplies a positive
+    Mellin kernel, hence positivity on the entire positive real axis for
+    L(s,chi_5). Its special-value calculation agrees with the registered
+    logarithmic scale. The functional equation alone gives no complex
+    zero-location conclusion.
+52. Candidate-D: for the already registered polynomial Q_x, the evaluation
+    at one is o(sqrt(x)), but the first derivative is asymptotic to
+    sqrt(5) log(phi) x/(pi^2 log(x)), using the classical fixed-modulus PNT
+    in arithmetic progressions. A shorter Abel argument already excludes
+    any sublinear power bound for that derivative. Uniform Taylor-neighborhood
+    power control fails, without excluding an isolated target evaluation.
+53. Candidate-D: the Fibonacci zero index is the order of -h in the full
+    quadratic algebra, with an exact modulus-four half-power refinement.
+    At five its order is retained by the nilpotent part and lost in the
+    residue field. The full Fibonacci pair period is a different invariant.
+54. Candidate-D under the actual period-realization, level and unfolding
+    premises: the ordered Gram trace has an absolutely justified cyclic
+    expansion. The finite phase telescopes to one special-unitary closing
+    element at the actual two-prime level. Determinant multipliers disappear
+    on cycles; a formal additive-character-power average does not itself
+    represent the original period family or give its needed bound.
+
+The same-session development and opposition routes cross-reviewed these
+proofs. Root read the decisive actual-source definitions and convergence
+argument. There was no scientific computation, external independent audit,
+Lean build, Canon edit or promotion. Existing canonical Gauss, ideal-count,
+Mobius-descent and rapidity results and the separate research owners retain
+their scope and custody.
+
+Current target after R18: control the weighted intrinsic defect of the
+actual multiplicity maps, or establish a genuinely sufficient estimate on
+their phase-weighted cycles. The one-character Mobius bound proposed in the
+owner's note is an additional open arithmetic target, equivalent to the
+critical-line hypothesis for that one L-function. Neither target is closed.
+The complete R18 report is round18/REPORT.md.
