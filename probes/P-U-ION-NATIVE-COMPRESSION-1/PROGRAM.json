@@ -1,0 +1,39 @@
+{
+  "schema": "ion-native-compression-v1",
+  "ions": 17,
+  "angle_unit": "pi/4",
+  "chronological": true,
+  "gamma_edges": [[14, 2, 4], [14, 3, 4], [14, 4, 16], [14, 5, 16], [14, 6, 20], [14, 7, 4]],
+  "operations": [
+    ["exchange", 6, 14, 1],
+    ["exchange", 6, 14, 2],
+    ["exchange", 6, 14, 3],
+    ["exchange", 6, 14, 4],
+    ["carrier", 2, 2, "y", 4],
+    ["mask", 14, 2, 2, [0, 1], -2],
+    ["carrier", 3, 1, "y", 4],
+    ["mask", 14, 3, 1, [0, 1], -2],
+    ["single", 14, 4, 2, 2],
+    ["mask", 14, 4, 3, [3, 4], 2],
+    ["single", 14, 5, 1, 2],
+    ["mask", 14, 5, 4, [3, 4], 2],
+    ["mask", 14, 6, 4, [1, 2], 2],
+    ["mask", 14, 6, 3, [3, 4], 2],
+    ["mask", 14, 7, 1, [3, 4], 2],
+    ["carrier", 14, 1, "x", 8],
+    ["carrier", 14, 2, "x", 8],
+    ["carrier", 14, 3, "x", 8],
+    ["carrier", 14, 4, "x", 8],
+    ["carrier", 12, 3, "y", 4],
+    ["carrier", 15, 1, "y", 4],
+    ["carrier", 16, 1, "y", 4]
+  ],
+  "bounds": {
+    "g_blocks": 64,
+    "ls_loops": 32000,
+    "carrier_pulses": 3917023,
+    "carrier_angle_pi": 3916995,
+    "switching_boundaries": 3949024,
+    "omitted_ls_success": 0
+  }
+}

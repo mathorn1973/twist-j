@@ -1,0 +1,11 @@
+P-U-ION-NATIVE-COMPRESSION-1
+STATUS NON-CANONICAL CONDITIONAL IDEAL 64-BLOCK CANDIDATE
+MODEL 17 Ca40 ions; unchanged six edges and 500-loop equality blocks
+HELPERS full exchange sectors and controlled columns; both geometric signs
+TARGET 25 full outputs with amplitude +1; retained memory and finite counter
+COUNTS {"actual_inputs":25,"carrier_angle_pi":"3916903","carrier_pulses":3916931,"echo_rows":500,"exchange_columns":200,"g_blocks":64,"gamma_exponents":[4,4,16,16,20,4],"ls_loops":32000,"mask_columns":600,"omitted_ls_success":0,"single_columns":100,"switching_boundaries":3948932}
+INVERSE algebraic primitive adjoints only; physical reverse program NOT CLAIMED
+OMITTED_LS same carrier schedule and prescribed waits: 0/25
+DEVICE ERROR / PRACTICAL FIDELITY / FULL HISTORY NOT CERTIFIED
+INDEPENDENT_SHA256 2da764ca2ecf7b3e6241d99986782467066dd9daf3ca9e3653214fc978d67241
+NATIVE COMPRESSION AUDIT PASS
