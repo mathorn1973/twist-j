@@ -15,9 +15,12 @@ support N^(1/3), and a balanced bilinear reduction with quantified Fourier
 removal costs. Its low-frequency continuation now proves coupled affine
 cancellation, actual signed numerator bounds, double cancellation on a
 smooth central band and inverse-logarithmic comparison of complete
-narrowed carriers. The native positive-energy estimate for the full
-remaining sum is O. These deductions do not supply an independent
-TWIST-J proof of RH.
+narrowed carriers. The complete-energy continuation adds an inverse-log
+additive energy projection onto weighted block means, exact two-large-factor
+and asymmetric-rectangle transfers, and scoped obstructions to closing
+the resulting recursion from positive levels and ordinary short increments
+alone. The native positive-energy estimate for the full remaining sum is O.
+These deductions do not supply an independent TWIST-J proof of RH.
 
 ## 1. What each side actually supplies
 
@@ -407,7 +410,145 @@ full positive-energy estimate from Section 4 is still the available
 unconditional full bound. Proving the target for T_(H_B), or for the
 joint signed carrier \(F^{<}\) with both affine terms retained, remains O.
 
-## 6. Next bounded obligations
+## 6. The complete positive energy and the remaining level estimate
+
+**Candidate-D; native closure O.** The user asked to find the full energy
+at the required scale. The three author lanes and separate opposition did
+not establish that bound. They obtained the following complete-expression
+transfers and tests of specific proposed closure steps.
+
+### An additive error for the actual positive energy
+
+On every complete \(I(Y)\), partition each intersecting dyadic slab into
+integer blocks of length \(\lfloor\sqrt X(\log X)^B\rfloor\), with fixed
+\(B\ge1\), keeping every partial endpoint block. With
+\(w_N=1/[N(N+1)]\), let \(m_I(F)\) be the weighted mean on a block and
+\(S_F(Y)=\sum_I w(I)m_I(F)_+^2\). Then, for every fixed \(K>0\),
+\[
+ 0\le Q_F(Y)-S_F(Y)\ll_{B,K}(\log Y)^{-K},
+ \qquad F=M\ \hbox{or}\ F=R.
+\]
+This is an additive error in the energy itself, independent of its size.
+The exact inequality is
+\[
+ 0\le Q_F-S_F\le\|(1-P)F\|^2,
+\]
+where \(P\) is weighted block projection. Convexity and the Lipschitz
+derivative of \(x_+^2\) give this inequality after the linear terms cancel
+on every block. The published short-prefix theorem controls the variance
+using every forward and backward integer start; no sparse-start
+exceptional-set inference is made. The small norm of \(M-R\) transfers
+the variance estimate to the actual residual.
+
+For blocks \([a,b]\), the retained mean is explicitly
+\[
+ w(I)m_I(M)=w(I)M(a-1)+
+       \sum_{a\le n\le b}\mu(n)\left(\frac1n-\frac1{b+1}\right).
+\]
+Thus the large signed boundary level remains. Normalize by
+\(d_I=m_I(M)/\sqrt a\), \(q_I=a w(I)\), and let
+\(D_Y(t)=\sum_{d_I>t}q_I\). With \(V(Y)=\sup_{t\ge1}t^2D_Y(t)\),
+\[
+ V(Y)\le S_M(Y)\ll(1+V(Y))\log Y.
+\]
+The required statement is therefore equivalent to a subpower upper-tail
+bound, simultaneously at all \(t\ge1\) on arbitrarily late complete
+windows. It is not a bound holding on separately chosen windows for
+different heights. [Proof and exact positive dual](FULL-LEVELS.md).
+
+### Two large factors with the negative square retained
+
+For \(T=\lfloor X^{1/4}\rfloor\), set
+\[
+ C_T(n)=\sum_{\substack{a,b>T\\ab\le n}}\mu(a)\mu(b)
+                  \lfloor n/(ab)\rfloor,\qquad
+ h_T=\sum_{a\le T}\mu(a)/a.
+\]
+The exact convolution identity
+\(\mu=2u_T-u_T*u_T*\mathbf1+(\mu-u_T)*(\mu-u_T)*\mathbf1\)
+eliminates both mixed rectangles. The remaining short rectangle has
+weighted slab norm \(O(X^{-1/4}\log^{3/2}X)\); its entire constant
+boundary costs \(O(1)\) in that norm. Consequently
+\[
+ Z_X(N)=U_H^J C_T(N)-L_X(N)h_T^2.
+\]
+Here \(L_X=N+1/2+J(H-1)/2\), with no square already included in \(L_X\).
+The formula preserves the negative slope because the short rectangle
+is complete. At a cutoff as large as \(X^{1/3}\), the intercept must
+be retained under this proof's estimates.
+
+For the fourth-root choice there is a stronger direct comparison.
+The classical Mertens estimate makes the intercept's norm smaller
+than every inverse logarithmic power. The maximal short-sum theorem
+does the same for \(U_H^JM-M\), and the small rectangle has the power
+saving just stated. Hence for every fixed \(K>0\),
+\[
+ \|Z-R\|_{I(Y)}\ll_K(\log Y)^{-K}.
+\]
+The positive square-root energies satisfy the same comparison.
+Each of \(Z,M,R\) also has its own additive block-energy approximation;
+an additive difference between different carriers' energies does not
+follow from the small norm difference alone.
+
+Hyperbola symmetry further gives
+\[
+ C_T(n)=
+ 2\sum_j D_T(n,j)\bigl(M(\lfloor n/j\rfloor)-M(T)\bigr)
+ -\sum_{k\le n/(T+1)^2}
+       \bigl(M(\lfloor\sqrt{n/k}\rfloor)-M(T)\bigr)^2,
+\]
+where \(D_T(n,j)=\sum_{a\mid j,\ T<a\le n/j}\mu(a)\).
+For primes \(T<p\le\sqrt n\), the genuine coefficient is \(-1\).
+The additional negative squares therefore do not justify replacing
+the larger prefix arguments by their positive parts.
+[Proof and quantified operator test](FULL-COUPLED-ENERGY.md).
+
+### A larger compensated row cut, with its accumulation cost
+
+Let \(B_X=2X+J(H-1)\) and keep the original \(A=\lceil\sqrt{3X}\rceil\).
+An entire row satisfies
+\[
+ \sum_{b\le A}\mu(b)\lfloor n/(ab)\rfloor
+ =1-\sum_{A<b\le n/a}\mu(b)
+\]
+in the stated boundary range. This allows replacing the unpadded
+square by the actual asymmetric rectangle
+\[
+ a\le C=\left\lfloor B_X/A-X^{3/10}\right\rfloor,\qquad b\le A,
+\]
+with its own two affine coefficients, at \(O((1+\log Y)^2)\)
+whole-window norm cost. Its largest raw product is below \(B_X\)
+by order \(X^{4/5}\).
+
+The cumulative norm allowance for a deeper row cut of depth \(U\) is
+\(O(A^{1/2}(U+1)^{5/2}/X)\), apart from the known projection cost.
+Breaking the cut into bands gives the same order; its time supports
+are nested. A fixed fractional depth \(U\asymp A\) leaves an
+\(X^{1/2}\) norm allowance. This is a loss in the proved upper
+estimate, not a lower bound on the actual cancellation.
+[Proof and exact remaining rectangle identity](LOWEST-MODES.md).
+
+### What the unsuccessful closure tests exclude
+
+The level paper supplies one integer partial-sum model with recurring
+sign changes, the classical envelope and all-start ordinary short-prefix
+savings, yet positive energy \(Y^{3/2-o(1)}\) on every late window.
+The corner paper keeps the genuine divisor coefficients but varies the
+prefix state: nonpositive separated pulses can produce positive corner
+energy at least \(X^{1/4-o(1)}\), surviving smoothing and block means.
+The slowed pulses obey the ordinary short-prefix bounds as well.
+These tests do not impose coherence with the actual Mobius increments,
+and do not impose the source theorem's twisted-sum conclusions.
+The latter lower bound is before subtraction of the actual arithmetic
+drift; it is not a lower bound for the complete \(Z_X\) or \(R\).
+
+The opposition also displays a fixed floor kernel of both signs on
+balanced coefficient vectors under the same nonnegative dual test.
+Thus coefficient balance and positive tests do not supply the missing
+sign. The actual upper-tail estimate or the fully coupled corner
+estimate remains O. [Internal opposition](FULL-ENERGY-REVIEW.md).
+
+## 7. Next bounded obligations
 
 1. **Most immediate proof simplification:** port the integrated-chord lemma
    into the actual HN supplier, before the scalar tail weakening. Keep its
@@ -419,8 +560,12 @@ joint signed carrier \(F^{<}\) with both affine terms retained, remains O.
    The equivalent logarithmically narrowed balanced carrier keeps the
    negative square. The separately proved joint unpadded carrier keeps
    its two signed affine terms and the exact hyperbolic coefficient sums.
-   Bound one of their complete positive energies. The central-band
-   estimate and controlled changes between carriers do not yet supply it.
+   Bound one of their complete positive energies, equivalently the
+   simultaneous upper-tail mass of the actual weighted block means in
+   FULL-LEVELS.md. The exact corner recursion must keep the relationship
+   between its divisor coefficients and the same Mobius prefix state.
+   The central-band estimate, short-increment inputs and controlled
+   changes between carriers do not yet supply this full level bound.
 3. **Smallest meaningful local bridge:** one specified required place, one
    actual normalized kernel, and one admitted integral generator pair whose
    derivative is proved to equal the source period in its normalization.
@@ -431,7 +576,7 @@ These are distinct next obligations. The optional stronger all-subspace
 period-concentration target of #2070 remains O; it is not an omitted
 premise of the already checked external RH proof.
 
-## 7. Evidence boundary
+## 8. Evidence boundary
 
 Three Sol agents developed the separate tasks. Root Astra inspected the
 critical arguments and pinned sources; a separate Astra wrote the internal

@@ -240,3 +240,45 @@ The three Sol papers and Astra derivation/opposition are original
 NON-CANONICAL candidate-D notes. Root and another Sol reconstructed the
 central-band proof separately within this session. No scientific executable,
 empirical input, enumeration or formal-verifier run was used.
+
+## Complete positive-energy continuation
+
+The parent is eac05e3cde56d0fb3e429b91aa7129087e5da4db. The original
+R_(1/36), its reconstruction norm and complete-window quantifiers remain
+fixed. The round-five scope was exposed in owner issue #2091 before
+new result authoring; FULL-ENERGY-SCOPE.md records that chronology.
+
+- Root read the current adjacent
+  [round-six report](https://github.com/mathorn1973/twist-j/blob/4e098f9742a72a128bfb61a10c429bced78fe17e/notes/C-RH-ARITHMETIC-KERNEL-N/round6/REPORT.md).
+  Its marked-prime, cube-root and balanced-unit results concern its
+  separate split-prime carrier. The report's open estimate is not
+  imported as a proved bound for this residual. The author-level
+  source comparisons retain #2087/#2089 ownership and candidate status.
+- The root reread the
+  [MRSTT theorem](https://link.springer.com/article/10.1007/s00222-026-01408-6),
+  including the arithmetic-progression supremum in (1.4) and the full
+  Theorem 1.1(i). As in ONE-SIDED-LOW.md, only the stated fixed-order,
+  all-start mean-square consequence for ordinary prefixes is used in
+  FULL-LEVELS.md. Backward differences use two such prefixes.
+- The root reread
+  [Lee and Leong, version 4](https://arxiv.org/html/2208.06141v4),
+  Theorem 1.2, for the classical envelope and the inherited whole-window
+  comparison. No improvement of the full unconditional power scale is
+  claimed by the new argument.
+- The separated prime-column model uses the same fixed-ratio prime
+  counting consequence of [DLMF 27.12](https://dlmf.nist.gov/27.12)
+  already checked for BILINEAR-LOW.md. This is an asymptotic paper
+  argument; no prime enumeration is performed.
+
+The new block, factor-rectangle, hyperbola and row identities are
+derived in the included papers. The artificial examples test only
+their explicitly stated premises. They do not contradict a statement
+about actual Mobius coefficients, and the fixed-coefficient corner
+model does not retain the arithmetic relation between its coefficients
+and the substituted prefix state. Its positive lower bound does not
+survive subtraction of the true drift by inference alone.
+
+Three Sol authors, separate Astra opposition and root checked the final
+paper arguments, including the strengthened ordinary-prefix model.
+This is internal same-session review. No external proof-verifier,
+scientific executable, finite experiment or enumeration was run.

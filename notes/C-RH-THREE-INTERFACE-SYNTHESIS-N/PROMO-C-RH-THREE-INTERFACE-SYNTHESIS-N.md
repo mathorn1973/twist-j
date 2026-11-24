@@ -28,6 +28,10 @@ Action layer: NOT_APPLICABLE, pure mathematics and source-interface audit.
 | LOW-FREQUENCY-PAIRS.md | Actual signed numerator bound and near-pair crossing estimate; high-height and dyadic-box removals with full-window subpower norm cost | Positive energy of the low-height remainder; no separate cross-energy conclusion from a packet norm estimate |
 | ONE-SIDED-LOW.md | Complete balanced carriers narrowed by any fixed logarithmic factor differ in weighted norm by every fixed inverse logarithmic order | Neither the smoothing error nor the carrier difference bounds the retained amplitude; the full target remains O |
 | LOW-ENERGY-REVIEW.md | Double signed cancellation and direct weighted energy bound on a smooth central band, including growing width parameter; opposition to all three lanes and justified joint unpadded carrier | Central-band scale still exceeds the target; no automatic transfer of the smooth argument through a sharp raw-denominator mask |
+| FULL-LEVELS.md | Additive inverse-log positive-energy projection for the actual M and R, power precision for shorter M blocks, exact upper-tail criterion and nonnegative dual with boundary plateau | The absolute signed block levels and their simultaneous upper-tail mass; short increments and recurrent signs do not control them |
+| FULL-COUPLED-ENERGY.md | Exact mixed-rectangle elimination; fourth-root two-large-factor carrier with negative drift differs from the full R by every inverse-log norm order; hyperbola negative squares and fixed-coefficient model obstruction | Coupled actual Mobius prefix levels; the model corner lower bound excludes the actual drift and is not a lower bound for the residual |
+| LOWEST-MODES.md | Asymmetric full-row cancellation shaving order X^(4/5) from raw support at logarithmic window cost; explicit accumulation allowance for deeper cuts | Remaining signed corner and affine terms; nested end supports prevent an automatic disjoint-error gain |
+| FULL-ENERGY-REVIEW.md | Internal opposition on additive projection, integer endpoints, row costs and the strengthened prefix model; floor kernel of both signs under one nonnegative test | Full native target O; model coefficients and states cannot be silently identified with the actual coherent arithmetic |
 
 The original ingredients of #2065/#2070 and the signed kernel of #2087
 retain their owners and source status. The package makes no historical
@@ -74,6 +78,23 @@ limits the artificial cosine example to positivity-only reasoning, keeps
 actual cross-energy costs separate from packet norms, and preserves both
 affine terms after the sharp raw mask.
 
+The user then requested the complete positive energy at the required
+scale. FULL-ENERGY-SCOPE.md records the prospective round-five extension.
+Three Sol lanes studied coupled factor sums, absolute block levels and
+the lowest modes. A separate Astra proposed and audited the level
+projection and opposed the final papers. Root checked the complete
+proofs and proposed strengthening the prefix obstruction by slowing
+and flooring the separated pulses; the author proved it and the
+reviewer checked it. The final text explicitly limits the operator
+lower bound to the model corner before the actual drift is subtracted.
+All author handoffs used local Git commits. Root integrated named
+files and corrected scope wording and mathematical typesetting.
+Root then derived the stronger direct vanishing comparison of the
+two-large-factor carrier with R; the separate Astra checked the exact
+identity, classical intercept estimate, short-sum range and complete
+window summation. This additional deduction is included in the final
+coupling paper and review.
+
 No scientific executable, numerical enumeration, new empirical input,
 formal-verifier invocation or Lean build was used. No computation-grade T
 or two-architecture scientific result is claimed. Administrative source
@@ -110,6 +131,17 @@ Bound one of these complete positive energies, or the exact corresponding
 positive-test supremum. The direct smooth central-band energy bound is
 unconditional but still too large for the desired scale. Importing the
 external RH theorem implies the target and remains separately labeled.
+
+FULL-LEVELS.md now approximates the full positive energy of each of
+M and R additively by its own weighted block means, with every fixed
+inverse-log error order. The same-window target is equivalent to the
+uniform upper-tail criterion for those actual Mobius means.
+FULL-COUPLED-ENERGY.md supplies an alternative two-large-factor corner
+minus its actual negative slope, and LOWEST-MODES.md supplies an
+asymmetric rectangle with both signed affine terms. Their controlled
+transfers and the scoped model obstructions do not prove the target.
+The strongest full native power scale recorded in WINDOW-BOUND.md is
+unchanged in this continuation.
 
 Separate earlier obligations remain: port the HN source-loss chord before
 the scalar tail weakening, with one unchanged downstream H8 consumer;
