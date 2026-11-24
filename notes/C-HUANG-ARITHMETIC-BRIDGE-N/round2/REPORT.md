@@ -146,8 +146,8 @@ factors. In Dirichlet convolution let
  u'=e_p*(\nu_p\mathbf1_{d\le T}),\qquad
  g=e_p*(\nu_p\mathbf1_{d>T}).
  \]
-Then \(\mu=u'+g\), \(|u'(d)|\le1\), the support of \(u'\) ends
-at \(pT\), and
+Then \(\mu=u'+g\), \(|u'(d)|\le1\), the support of \(u'\) is
+contained in \(d\le pT\), and
 \[
                          \sum_d u'(d)=0.                      \tag{8}
 \]
@@ -200,8 +200,9 @@ of primes, fixed throughout a slab \([X,2X)\). Put
 Use \(u'=e_{S_X}*(\nu_{S_X}\mathbf1_{d\le T_X})\) and
 \(g=\mu-u'\). Uniqueness of the selected-prime part and coprime
 core gives \(|u'|\le1\), support at most \(P_XT_X\), and
-\(\sum u'=0\). The same identity (9) holds with these coefficients,
-their own \(h'_X=\sum_d u'(d)/d\), and their own long sum \(C'_X\).
+\(\sum u'=0\). For \(n\ge P_XT_X\), the same identity (9) holds
+with these coefficients, their own \(h'_X=\sum_d u'(d)/d\), and
+their own long sum \(C'_X\).
 
 Write the original averaging operator as
 \(U_X f(N)=\sum_s\lambda_{X,s}f(N+s)\), and keep
@@ -211,9 +212,10 @@ Write the original averaging operator as
  Z'_X=U_X C'_X-L_X(h'_X)^2.
  \]
 The weights and shifts are precisely those of the inherited carrier.
-The small rectangle has support \(d\le(P_XT_X)^2\) and coefficients
-bounded by \(\tau(d)\). The inherited short raw-denominator estimate
-therefore yields
+In the range \(P_XT_X\le X^{1/3}\), every averaged argument is at
+least \(P_XT_X\). The small rectangle has support
+\(d\le(P_XT_X)^2\) and coefficients bounded by \(\tau(d)\).
+The inherited short raw-denominator estimate therefore yields
 \[
  \|U_XM-Z'_X\|_X^2
  \ll\frac{(X+(P_XT_X)^4)(P_XT_X)^2}{X^2}
@@ -277,8 +279,10 @@ parity, counts the corresponding labels in \(M/p<d\le N\).
 cycles and states the fixed-list and weight assumptions. The
 single-cut counts agree with Björner's Theorems 2.1 and 3.1.
 
-For \(p=2\), the total rank at one cutoff is exactly \(r_N\)
-in (3). Across two cutoffs the sum of the two parity ranks recovers
+For \(p=2\), when the fixed list contains every prime through the
+larger cutoff in the comparison, the total rank at one cutoff
+is exactly \(r_N\) in (3). Across two cutoffs the sum of the two
+parity ranks recovers
 the diagonal in the product of the two signed interval sums.
 The difference of those ranks instead equals the coefficient
 of \(c_p^4\) in the mixed graded defect trace.

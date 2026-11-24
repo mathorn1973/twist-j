@@ -13,6 +13,54 @@ cutoff. It yields a conditional matching rule for prime multiplications.
 The Galois and graded-boundary descriptions preserve the original arithmetic
 readout. Neither description yet supplies a new bound on its positive energy.
 
+## Continuation: the two boundary signs across time
+
+The [round-two report](round2/REPORT.md) carries out the requested next
+step under a separate prospective [paper scope](round2/SCOPE.md).
+It keeps both endpoint signs and their dependence on the integer cutoff.
+
+**Candidate-D.** A prime pairing is the exact signed interval sum
+\[
+ M(N)=\sum_{p\nmid d}\mu(d)\mathbf1_{[d,pd)}(N).
+\]
+For \(p=2\), expanding its energy on the entire original window gives
+a diagonal \(D_Y\) and a signed sum over distinct odd labels
+\(a<b<2a\), with exact reciprocal endpoint weights. The diagonal has
+the elementary bound
+\[
+ D_Y\le\tfrac14\log\!\left(\frac{\lceil Y^{3/2}\rceil}{Y}\right)+\frac1Y.
+\]
+With the actual condition \(M(N)>0\) kept inside the overlaps, the
+off-diagonal sum \(\mathcal C_{Y,g}\) satisfies
+\[
+        0\le Q_M(Y)-(\mathcal C_{Y,g})_+\le D_Y.
+\]
+The condition depends on the same Möbius coefficients; this identity
+does not bound their signed correlations.
+
+**Candidate-D.** In the two-factor carrier, both lower strips can be
+absorbed into a short coefficient sequence of total mass zero.
+The constant intercept then vanishes exactly, while the negative
+affine square remains. For a selected prime product \(P_X\), fixed
+within each slab, the new carrier \(Z'_X\) has reconstruction error
+\[
+ \|U_H^J M-Z'_X\|_X\ll P_X^3X^{-1/4}(1+\log X)^{3/2}
+\]
+in the stated support range. Thus \(P_X\le X^{1/12-\delta}\), with
+fixed \(0<\delta<1/12\), permits a growing selection with power-saving
+error. The inherited comparisons imply
+\(\|Z'-R_{1/36}\|_{I(Y)}\ll_{\delta,K}(\log Y)^{-K}\) on every late
+complete original window.
+
+The [mixed-boundary note](round2/MIXED-BOUNDARIES.md) computes the
+persistent harmonic ranks and distinguishes mixed matrix traces
+from the scalar products used by the energy. The
+[prime-scale note](round2/PRIME-SCALE-CANCELLATION.md) exhibits the
+actual opposite leading terms from prime and composite cores.
+The [Astra review](round2/REVIEW.md) checks these paper deductions.
+**O:** the signed off-diagonal estimate, or equivalently the original
+positive-dual bound with its full quantifiers, still needs a proof.
+
 ## 1. An exact rule for prime multiplications
 
 Choose distinct primes \(p_1,\ldots,p_r\), with \(r\ge1\), and put
