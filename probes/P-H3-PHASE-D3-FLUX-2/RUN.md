@@ -1,0 +1,46 @@
+# Exact execution
+
+A clean public checkout was checked against all nineteen blob IDs in the remote Git tree before the Linux run. The verifier emitted eight deterministic JSON records.
+
+```text
+pin_commit: 8c926233425617088825b3cfbe4f8f99160f5697
+command: python3 probes/P-H3-PHASE-D3-FLUX-2/verify.py
+platform: Ubuntu 22.04.5 LTS
+architecture: x86_64
+python: 3.10.12
+verifier_sha256: 449c2537060c027dc197396d63d8673f8822ad51119f9dd99ee4f303192187e2
+started_utc: 2026-11-18T18:01:43.653735+00:00
+ended_utc: 2026-11-18T18:01:47.488786+00:00
+exit_code: 0
+stdout_bytes: 112942
+stdout_lines: 8
+stdout_sha256: 36cd84bf76aeced8cac66f687d54ee42bf59e25c4970f31e97a36e4e991e960c
+stderr_bytes: 0
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+```
+
+## Frozen inputs
+
+```text
+d1e94a8697b0e66b34d29df3fba58fbee68549e4d7c736c33c6bda8e1e4e44e5  PREREG.md
+bafcf9eec8d9306690954d85ae72797101a07390c53bf53f5a4a28eb8d833f11  axis.md
+090e57e213196d22657dbc55facb14d4cdf84bf6c9144c2998bcbefaf9a8daae  axis.py
+a35d7208e2723123df8d3f0308f57c9e3eba1b9dfecd00aed1f105e3aa728d39  coupling.md
+3b91c06aac3305516eee3cf9db4d42de3ea435864fd614be820b30f686f24ff3  coupling.py
+140abcc214983a28ed1d18a4208a8b584a62226b7af28257c7c5d45b39e9dfed  matter.md
+5577ebbf802a9ea0659df1c535e1b4bf6eba1dbeff9b137377d082be259298a3  matter.py
+43993ffb88ba678df0b4ca75fc5ec3549943276aa9872eb88438449eee294b09  native.py
+9eeab1d9aeef0913438154ad6b7d20772fb2264eefb449a0e2a91d014b654293  phase.md
+3f78245a56e06e4a8598fa7be65234e521ba88f27f632d61ec31d637b8f910c8  phase.py
+1c854081d976bcdc46eb4adefd6a5294f13ecd5178070e248614fb7718369ed4  shell.md
+064bb57045708188deeab89b5fefcc96a5e15e1af479f5a09ef9bbdbce142356  shell.py
+b896430b28f8380ff1713a69c375e26f3c81f7507d23018861d4499a644b6663  signed.md
+769f4618a2428f516da59b0430838a336f7e4843fde0155780c79983152a4fc8  signed.py
+f992d260f4f7a169160ba4cb5f7ff06321730997af30185b1c304cceef917159  tail.md
+242ebd4f78a8bc70baf629243171eaf971bf9b9d8fd24019bc44de4c02c9fe30  tail.py
+bb757570e3d436615df630877a52d9ef86eb7f160950dad4551b84f3b77ce200  transient.md
+7d01e65c603ab6d2eb336a7cf397baa5760f068a3d93e6540d6e15ee9c1b6796  transient.py
+449c2537060c027dc197396d63d8673f8822ad51119f9dd99ee4f303192187e2  verify.py
+```
+
+The preserved records distinguish finite measurements, symbolic coefficient checks and conditional physical interpretations.
