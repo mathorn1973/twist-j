@@ -48,3 +48,22 @@ not independent external scientific confirmation.
 This is one aarch64 scientific execution lane. Repository policy checks on
 two architectures do not execute these notes programs and cannot replace
 an additional scientific run. No public computation-grade T is claimed.
+
+## Exposed nonvacuity certificate
+
+Separate source pin: `28d870698e0e3e30a2bbeb19a25ae71dd7e0b4a4`.
+Both source files were read back byte-for-byte before execution.
+
+| Source | Bytes | SHA-256 |
+| --- | ---: | --- |
+| NONVACUITY_PREREG.md | 2375 | 90c9ea698417bd7294e9444f88ddb696477963ec35c9722b59e9096b401a8301 |
+| check_nonvacuity.py | 1242 | bd116e253febe97b9234e7b3794f645837df71ad127a52d79a7a6627aea3f10a |
+
+Same Linux/aarch64/Python 3.11.2 lane and deterministic environment.
+Command: `python3 notes/C-J-AURIFEUILIAN-INTERNAL-SEPARATION-N/round2/check_nonvacuity.py`.
+The preregistered process limit was 60 seconds. Exit 0, empty stderr,
+604 stdout bytes, SHA-256
+`65fd5a200ac9ea083938ed1920e1727827ff6222c37a74ea152b61247faa3638`.
+Output: NONVACUITY_EXPECTED.txt. Both exact products and both Bezout
+identities passed. This was an exposed certificate audit, not a blind
+factor search or a primality proof.

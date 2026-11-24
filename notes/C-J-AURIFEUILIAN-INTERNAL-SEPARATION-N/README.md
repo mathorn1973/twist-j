@@ -11,6 +11,32 @@ All authority files, declared immutable basis and required successful
 checks were verified on that unchanged public basis. Uploaded snapshots
 are references, not authority.
 
+## Round two: four units are insufficient at the next index
+
+**Paper results: candidate-D. Finite obstruction: candidate-C.** The
+continuation proves that the complete Lucas menu already detects every
+separation possible with four signed units, including arbitrary exponents
+and fifth-root phases, with full prime-power multiplicities.
+
+The newly frozen menu at m=125 returns no proper gcd on either side:
+781246 unit gcds and four whole-input gcds on each side. Both independently
+authored programs agree on all 1562500 tests. Separate exposed product and
+Bezout certificates prove that each side contains at least two distinct
+prime divisors. Thus four units, optimal for the earlier index-25 pair,
+are insufficient for internal separation at index 125. Whether five units
+attain separation there remains open.
+
+A second paper theorem bounds the entire proper gcd for every fixed weight
+even with unrestricted exponents. Its exact integer threshold grows
+subexponentially in m at fixed weight. Large-prime flags remain locked
+under any such menu; a universal bound on weight remains unresolved.
+
+[Round-two results and sources](round2/README.md),
+[complete four-unit proof](round2/FOUR_UNIT_COMPLETENESS.md),
+[unrestricted-exponent bound](round2/GROWING_WEIGHT.md),
+[exact audit record](round2/RUN.md), [internal opposition](round2/OPPOSITION.md).
+The original frozen index-25 source and output files below are unchanged.
+
 ## What this continues
 
 Write $j=\zeta_5$, $\mathcal O=\mathbb Z[j]$, $J=1+j^2$,
@@ -195,9 +221,12 @@ the finite audit remains one-architecture candidate-C.
 
 For arbitrary two distinct primes within the same side, does some universal
 constant unit weight suffice if the exponents can be chosen without the
-factorization, and how large a prescribed menu is needed? This work settles
+factorization, and how large a prescribed menu is needed? The first round settles
 one optimal four-unit instance and rules out specified broad classes of
-eventual fixed prescriptions. It does not settle that universal question.
+eventual fixed prescriptions. Round two excludes universal weight four
+by the actual composite index-125 sides and gives a bound for all
+unrestricted-exponent proper outputs at each fixed weight. It does not
+settle the universal constant-weight question.
 The next useful scope must allow exponent offsets or denominator resolution
 to grow beyond the quantitative obstruction, and separately control the
 number and cost of tests. It must be prospectively specified before a new

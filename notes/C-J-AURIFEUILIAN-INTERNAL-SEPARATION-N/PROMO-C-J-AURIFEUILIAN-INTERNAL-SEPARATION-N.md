@@ -1,51 +1,86 @@
 # Handoff: C-J-AURIFEUILIAN-INTERNAL-SEPARATION-N
 
-NON-CANONICAL. NO AUTHORITY. L1. Promotion is not requested or performed.
-Owner: A. M. Thorn, ChatGPT-Astra-Sol-20261124-Internal-Separation.
-Claim: https://github.com/mathorn1973/twist-j/issues/2090
-Base: main 6f2e112aafc4f3aca4222bb4bf3dced1d79fe2ed, Public Canon v117.
+**NON-CANONICAL. NO AUTHORITY. L1.** Promotion is not requested or performed.
+Owner: A. M. Thorn. Original session:
+ChatGPT-Astra-Sol-20261124-Internal-Separation.
+Continuation: ChatGPT-Astra-20261124-Internal-Separation-R2.
+Claim #2090, draft PR #2092, same branch and scientific directory.
+PUBLIC basis: main 6f2e112aafc4f3aca4222bb4bf3dced1d79fe2ed,
+verified Public Canon v117.
 
-## Earned scope
+## Current result
 
-**candidate-D:** explicit factor-free four-coordinate description of the
-whole quotient modulo either A_sigma(5^k), including repeated prime powers;
-exact fixed affine-template dichotomy; quantitative full-gcd bound for
-rational affine exponents whose denominator five-part divides m; universal
-three-unit blindness at each fixed order in the power-of-five tower; and
-one optimal four-unit internal split with its complete all-index law.
+**candidate-D:** all previous paper deductions retain their scope. Round
+two adds a complete finite menu for every four-unit separation in the
+power-of-five tower, an exact reflected menu of (h^2-1)/2 entries, and a
+factor-independent integer bound on the entire proper gcd at every fixed
+unit weight, even with unrestricted exponents and adaptive menus.
 
-**candidate-C:** the fixed 31250-test trace search at m=25, exact primality
-and order audit of its published pair, and the full normalized two/three-unit
-relation-set comparison. Two separate exact implementations, one local
-x86_64 architecture. No architecture-independent science status claimed.
+**candidate-C:** the prospective complete menu at m=125 returned only gcd
+1 or the whole input on both individual sides. Each had 781246 unit gcds
+and four whole-input gcds, among 781250 tests. Both separate source
+implementations agree on all 1562500 comparisons. The completeness proof
+therefore excludes every internal four-unit split at this index, including
+arbitrary exponents, phases and all prime-power multiplicities.
 
-The witness is gcd(A_plus(25),L_103+L_2)=251. The norm 251 explains why the
-extension L_(4m+3)+3 hits exactly that side/index and no other one.
+Separate exposed product and Bezout certificates establish coprime proper
+factors on both sides, so each really has at least two distinct prime
+divisors. No primality assertion is needed. Thus the old minimum-four
+example at m=25 does not extend to m=125: internal separation there needs
+at least five units. Attainment at five is not established.
 
-## Scientific custody
+[Round-two overview](round2/README.md),
+[completeness](round2/FOUR_UNIT_COMPLETENESS.md),
+[unrestricted-exponent theorem](round2/GROWING_WEIGHT.md),
+[opposition](round2/OPPOSITION.md), [execution](round2/RUN.md).
 
-Public source pin: dab860c8c51ecc76da24a6960051340ad2e5d2cb.
-Frozen files: PREREG.md, verify.py, break.py. Their hashes and the exact
-pre-execution readback are in RUN.md. Both output files have 965 bytes and
-SHA-256 7d75b21b46803c47154a254361ecd41ff4d4fa3183efbef4656d0aba04cc05a1.
-The two implementations agree. No fired falsifier and no moved threshold.
-All frozen source files remain byte-identical to the public pin.
+## Custody and review
 
-Paper review was shared-context construction/opposition, as recorded in
-REVIEW.md. The breaker authorship was independent at source-code level from
-the frozen specification. Neither fact is represented as external review.
+The original index-25 pin remains
+dab860c8c51ecc76da24a6960051340ad2e5d2cb. Its PREREG.md, verify.py,
+break.py, EXPECTED.txt, BREAK_EXPECTED.txt and RUN.md are unchanged.
+Its 31250-test and minimality audit remains candidate-C on x86_64.
 
-## Boundaries and next question
+The new index-125 source pin is
+7b50c67e16e712d5653d9f594d506eacff2d0ba7. Its three source files were
+read back before execution and remain unchanged. The two outputs have
+1032 bytes each and SHA-256
+e90991f9b8c2f98b03170e5270ed85894871f1cbf69242898e49d60550f88ea3.
+This is one aarch64 execution lane. The earlier x86_64 run tested a
+different index and is not its second-architecture counterpart.
 
-No universal constant arity for arbitrary within-side prime pairs is proved.
-No infinitude of individual sides containing two distinct primes is assumed.
-The number of tests and their computational cost remain separate resources
-from unit weight. The successful four-unit prescription has a proved finite
-exceptional support, so repeating that prescription cannot solve the next
-indices. Any next search must select a new prospective domain outside the
-proved resource obstruction and retain negative outcomes.
+The separate exposed factor-certificate source pin is
+28d870698e0e3e30a2bbeb19a25ae71dd7e0b4a4. Both files were read back
+before execution. The resulting 604-byte JSON has SHA-256
+65fd5a200ac9ea083938ed1920e1727827ff6222c37a74ea152b61247faa3638.
+It checks four published integer factors and outputs exact Bezout
+coefficients. This is not blind factor discovery or a primality test.
 
-Only this notes directory changes. Canon, registry, formal gates, workflows,
-sealed probes, prior candidate ownership, RH and physical status are unchanged.
-Any later formal promotion requires the public repository procedure and its
-independently satisfied gates; this draft alone supplies none of that authority.
+Both mathematical drafts received root review and separate same-session
+paper opposition. This is internal review, not external peer review. The
+two main executable sources were authored independently from the frozen
+specification and only cross-read after both source hashes were fixed.
+
+Repository checks test delivery and repository contracts. Ordinary CI does
+not execute these notes-only scientific programs. Their passing jobs do
+not promote any result to computation-grade T.
+
+## Remaining questions
+
+1. Does a new prescribed five-unit family separate distinct primes within
+   either individual index-125 side? The lower bound five is proved only
+   as a consequence of the exact negative four-unit audit and its paper
+   completeness theorem; no five-unit success is claimed.
+2. Is there one universal constant weight for every same-side pair at all
+   power-of-five indices? Four is excluded. The general question remains O.
+3. Are there infinitely many sides with two sufficiently large distinct
+   prime factors to activate the growing-weight lower bound? No such
+   infinitude is assumed or proved.
+
+The number and cost of tests remain distinct from their unit weight.
+The universal proper-output bound does not bound a product of many
+separately extracted small factors. No efficient general factoring method,
+physical decoder, RH conclusion, Canon change, merge or promotion follows.
+
+Any further finite search needs a new prospective specification; neither
+completed source pin may be extended or silently reinterpreted.
