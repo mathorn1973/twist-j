@@ -73,6 +73,39 @@ not needed for the present T-tail theorem and are not copied.
 
 ## Scientific boundaries
 
+### Signed-continuation source readback
+
+The continuation starts from this candidate's exact published head
+`59a41b28b9c6cedaf2fa3ef4a0a23e197a87d1cd`. Fresh remote-head and PR
+readback found #2071 and #2088 at the same pins listed above. The private
+operating context was read through authorized access and is not copied.
+
+T. Yamada, *Explicit formulae for primes in arithmetic progressions, I*,
+arXiv:1306.5322v4, [Introduction](https://arxiv.org/html/1306.5322v4#S1),
+states the classical prime error used for every fixed inverse-logarithmic
+order. Only modulus five and asymptotic constants are used here. The
+all-order assertion is not inferred from the finite table in Theorem 1.2.
+The Bennett–Martin–O'Bryant–Rechnitzer and pinned Lee–Leong inputs above
+were read again in their primary sources. No external source is copied
+into the package, and no computation underlying an external paper is
+claimed as a new execution here.
+
+A neighboring conversation named the local rapidity branch and abbreviated
+revision recorded in [LARGE-PRIME-TAIL](round3/LARGE-PRIME-TAIL.md), but no
+public commit or complete source files were available. Its reported
+Mertens formula is proved anew by the displayed prime-averaging lemma.
+That reconstruction does not certify the unavailable files or their other
+support-count statements. The new `T` formula differs by the analytic
+unit `U`, which is explicitly retained in its leading constant.
+
+The new primitive conductor projection, positive smoothing and exact pair
+identity are proved in the package from finite Fourier algebra and the
+already proved additive large sieve. The inverse bound and positive-slice
+exponent are proved by Dirichlet convolution, Rankin's inequality and the
+fixed-modulus prime theorem. No historical priority is asserted.
+
+### Status ceiling
+
 All new proof statements remain candidate-D pending external review. The
 recorded finite checks are candidate-C only. Source checks and repository CI
 do not promote them. The root and helpers share one research session and

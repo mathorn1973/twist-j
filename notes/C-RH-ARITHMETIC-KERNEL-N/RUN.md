@@ -87,3 +87,51 @@ The public issue owns the result-exposed incubation scope. No formal
 preregistration chronology is claimed for the later public transport.
 Repository policy and whitespace checks are recorded in the pull request;
 their success is distinct from proof of the mathematical statements.
+
+## Signed continuation, 24 November 2026
+
+The same candidate, owner, issue and draft continue from the published head
+`59a41b28b9c6cedaf2fa3ef4a0a23e197a87d1cd`. Public main, the declared tag
+and private operating-context revision were unchanged on fresh readback.
+The declared content is an ancestor of main, the five normative hashes
+match, and exact-main workflow `45388050270` has successful x86_64,
+aarch64 and aggregate jobs. The declared annotated tag peels to main.
+
+This continuation contains five paper derivations and four cross-reviews.
+No new scientific checker, numerical experiment, finite audit, proof-assistant
+build or two-architecture mathematical receipt was run. The earlier audit
+sources, preregistrations, expected bytes and scientific thresholds remain
+unchanged. Repository static checks establish delivery integrity only.
+
+Root read all five derivations and all four reviews. A Sol checked the
+signed Fourier inversion, exact smoothing normalization, short-window
+energy, same-window quantifiers and localized pair formula. The second
+Astra checked the smooth inverse, uniform growing-threshold bound, exact
+positive-slice exponent, conditional transfer and two-coordinate moving
+cut. The other Sol checked the exact large-prime partition, jump-aware
+prime replacement, Mellin signs, reciprocal-unit constant and complement
+cancellation. Root checked the later Mertens comparison and energy
+asymptotic directly from the same proof. All review is internal to this
+session, and no independent external confirmation is claimed.
+
+Root then challenged the extra time tails in the positive close-pair
+majorant. The second Astra proved its additional zero-free consequence for
+`L(s,chi_5)` in real part above `2/3`. Root and the other Sol checked that
+implication. The primary target was consequently stated using the exact
+finite Dirichlet kernel on the original block. Its all-epsilon signed
+cross-term condition is equivalent to RH; the all-time close-pair bound
+is retained only as an optional sufficient target, with its additional
+consequence. No logical separation or impossibility theorem is claimed.
+
+One scope repair was made before publication: the Jordan norm formula
+requires a conductor coprime to five. This holds for every conductor used
+by the candidate. The reviewed statement now names it explicitly. The
+frozen older files and finite thresholds were not changed.
+
+The initial local Canon check could not resolve the content ancestor in a
+shallow checkout. The GitHub ancestry comparison succeeded; fetching the
+missing public history then made the unmodified local checker pass:
+`CANON PASS v117 claims=639`. No evidence or checker rule was changed.
+
+The new scope is in [round3/PREREG.md](round3/PREREG.md). The remaining
+signed estimate stays O; the new paper deductions stay candidate-D.

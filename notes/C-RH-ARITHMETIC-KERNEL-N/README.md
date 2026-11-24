@@ -1,16 +1,80 @@
-# Arithmetic cancellation: an unconditional short part and a signed long tail
+# Arithmetic cancellation: signed frequencies, paired tails and moving cuts
 
 **NON-CANONICAL, no authority. Candidate-D paper deductions; candidate-C finite audits.**
 Owner: A. M. Thorn / ChatGPT arithmetic-kernel session, 24 November 2026.
 Claim: [#2087](https://github.com/mathorn1973/twist-j/issues/2087).
 Action layer: NOT_APPLICABLE. No Canon promotion or independent RH proof.
 
-The concrete advance is an unconditional fourth-logarithm bound for the
-moving support `d^3 <= n^2` in the exact signed split-residue sum. Its
-complement is now isolated by an integer boundary. Splitting that complement
-at any fixed power of the least prime creates opposite main terms of size
-`n/log n`; their cancellation must be retained in a proof of the remaining
-window estimate.
+The first result bounds the moving support `d^3 <= n^2` unconditionally.
+The signed continuation now isolates an explicit remaining Fourier sum,
+pairs the rough and mixed contributions at the same integer argument, and
+proves a positive second-order term after the leading large-prime terms
+cancel. The arithmetic good-window estimate remains open.
+
+## Signed continuation
+
+All statements in this section are **candidate-D**, with the conditional
+premise and the open bound explicitly retained. The continuation is paper
+work only; its [scope contract](round3/PREREG.md) and internal reviews make
+no new finite-execution claim.
+
+| Result | Exact gain and boundary | Proof |
+|---|---|---|
+| Actual signed spectrum | An explicit real sequence `G` has weighted squared error from `T` at most `O((1+log Y)^6)` on every window. Small conductors and high numerator modes are removed with that proved cost. The same-window good property transfers both ways. | [SIGNED-SPECTRUM](round3/SIGNED-SPECTRUM.md) |
+| Exact finite-block target | RH is equivalent to the positive signed cross-conductor term being `O_epsilon(X^(2+epsilon))` for every positive epsilon and all sufficiently late dyadic `X`. The full finite Dirichlet kernel retains all pair distances. | [Section 4.1](round3/SIGNED-SPECTRUM.md) |
+| Unmasked complete energy | The complete-period mean of the squared truncated sum is of order `D log D`, and its true minimum frequency gap is of order `D^-2`. Signs do not improve these two global quantities enough to extend the old large-sieve expression. This is not an incomplete-interval lower bound. | [Sections 1–2](round3/SIGNED-SPECTRUM.md) |
+| Joint large-prime slice | For each fixed `2/3 <= a < 1`, the part of the actual tail with greatest prime above `X^a` is `X/(U(1) log^2 X) + O_a(X/log^3 X)`. Its complement has the opposite expansion through every fixed logarithmic order. | [LARGE-PRIME-TAIL](round3/LARGE-PRIME-TAIL.md) |
+| Smooth inverse | Both full rough and mixed sums contain the same smaller-argument terms with opposite signs. A uniform bound treats a growing threshold independently of the earlier fixed-u asymptotic. | [SMOOTH-INVERSE](round3/SMOOTH-INVERSE.md) |
+| Exact termwise threshold | At `z=(log X)^A`, the positive inverse slice `X/2<e<=X` has exponent `max(log(2)/log(11),1-1/A)`. For `A>2` it forbids a termwise absolute square-root bound; for `A<=2` a globally assumed square-root bound for `T` transfers to both full pieces. The premise is not proved. | [Sections 3–4](round3/SMOOTH-INVERSE.md) |
+| Arbitrary moving rough cut | The short rough and mixed corrections have total weighted squared size `O((1+log Y)^6)`, uniformly over every real threshold function `z(n)`. | [MOVING-ROUGH-MASK](round3/MOVING-ROUGH-MASK.md) |
+
+The spectral reduction uses the exact fact
+
+\[
+ T(n)-T(n-1)=(s*\chi_5)(n)\in\{-1,0,1\}.
+\]
+
+For each dyadic scale `X`, the retained modes have primitive frequencies
+`a/(5r)` with `r>X^(2/3)` and the stated small-numerator cutoff.
+The diagonal and pairs with the same conductor have controlled energy.
+The primary remaining target is the exact signed sum `D_X` of all
+cross-conductor contributions on `X <= n < 2X`:
+
+\[
+ \mathrm{RH}\quad\Longleftrightarrow\quad
+ (D_X)_+\ll_\varepsilon X^{2+\varepsilon}
+ \quad\text{for every }\varepsilon>0
+ \text{ and all sufficiently large dyadic }X.
+\]
+
+**O:** establish that bound arithmetically, or prove the equivalent
+one-sided good windows of `G` directly. The equivalence itself supplies
+neither estimate. The original `T` window test is exactly rational;
+the numerator-cut sequence `G` is an analytical aid. Keeping entire
+conductor blocks gives a separate exactly rational reduction.
+
+An optional positive majorant over all integer times leaves only close
+pairs with `1 <= |as-br| <= 5rs/(2X)`. Its proposed polylogarithmic bound
+would additionally exclude zeros of `L(s,chi_5)` with real part above
+`2/3`. That further consequence was found during opposition and proved in
+[MAJORANT-SCOPE](round3/MAJORANT-SCOPE.md). No contradiction to this
+sufficient target is shown, and its necessity for RH is not claimed.
+The exact finite-block criterion above includes distant pairs and avoids
+this extension of the time interval.
+
+The neighboring Mertens prime average was reconstructed from its reported
+formula. Its coefficient is `1`, whereas the present residue-weighted
+statistic has coefficient `1/U(1)`. The unavailable local rapidity files
+are not treated as verified evidence. See the exact comparison in
+[LARGE-PRIME-TAIL](round3/LARGE-PRIME-TAIL.md).
+
+Internal review: [spectrum](round3/REVIEW-SPECTRUM.md),
+[inverse and moving cut](round3/REVIEW-INVERSE.md), and
+[large-prime term](round3/REVIEW-LARGE-PRIME.md), followed by the
+[majorant and finite-block review](round3/REVIEW-MAJORANT-SCOPE.md).
+The prime-five scope in
+the norm formula was corrected during review. All contributing conductors
+are coprime to five, so the application is unchanged.
 
 ## Main arithmetic statement
 
