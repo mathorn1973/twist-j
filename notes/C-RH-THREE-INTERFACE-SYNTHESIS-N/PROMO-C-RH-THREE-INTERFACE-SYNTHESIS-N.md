@@ -20,6 +20,10 @@ Action layer: NOT_APPLICABLE, pure mathematics and source-interface audit.
 | LOCAL-AVERAGES.md and ROUND2-REVIEW.md | Exact conditional readers; sharp absolute smooth-support threshold c<1/(4e^2), including failure at the endpoint; identification and signed recombination of the inherited large-prime tail | Cancellation at square-root scale after all remaining signed terms are recombined |
 | SIGNED-SAMPLES.md | Aggregation of equivalent large-prime samples with the correct group variance and reconstruction corner | Arithmetic estimate for the retained cross terms |
 | MIXING.md | Actual coefficient energy of order N; exact condition-number optimization and target-only rank-one form; finite and moving block costs | A bound for the measured target component or a useful growing-block energy estimate |
+| WINDOW-BOUND.md | Finite neutral mean square on the critical line 1/4; quantitative vanishing deletion energy for the original R; full positive-energy bounds with classical inputs stated | The unconditional classical bound has scale Y^(3/2-o(1)); the target remains O without importing RH |
+| PRIME-CANCELLATION.md | Finite weighted square energy of the large-prime square-correction error; balanced integer bilinear identity with a nonpositive square; exact Fourier removals at O((log Y)^2) whole-window norm cost | Signed control of the remaining long low frequencies together with the negative square; the separate lower-argument norm sum loses X^(5/12) |
+| CHARACTER-WINDOW.md | One frozen window reader, alias-aware fourth moments, growing-conductor accounting and exact finite Mellin formula with endpoint terms | A sufficiently small mixed moment or the exact one-sided positive-test bound; separate Holder products remain too large |
+| ROUND3-REVIEW.md | Internal opposition; finite global absolute energy for direction supports d<=N^(1/3); strengthened frozen-reader error; larger reduced-denominator removal at logarithmic norm cost | The complete native positive-window estimate remains O; critical global energy gives no tail decay rate |
 
 The original ingredients of #2065/#2070 and the signed kernel of #2087
 retain their owners and source status. The package makes no historical
@@ -45,6 +49,16 @@ identity and sharp endpoint proof. Root and Sol agents checked these
 contributions; the Astra reviewer separately checked the final combined
 residual. This is joint internal research and opposition.
 
+The user next requested the positive part of the complete pairing on
+arbitrarily late whole windows. WINDOW-SCOPE.md records the prospective
+extension of the same owner issue, exposed before the three new Sol paper
+lanes. The separate Astra reviewer also derived the finite global energy
+bound through support exponent 1/3 and refined the Fourier averaging.
+Root and the window author separately checked that derivation. The final
+opposition preserves the original R and distinguishes every controlled
+error from the remaining signed residual, whose native subpower
+whole-window estimate is open.
+
 No scientific executable, numerical enumeration, new empirical input,
 formal-verifier invocation or Lean build was used. No computation-grade T
 or two-architecture scientific result is claimed. Administrative source
@@ -64,14 +78,22 @@ of exact claim scopes and evidence. This handoff itself promotes nothing.
 
 ## Next bounded work
 
-The active signed task now has a concrete reduced kernel. Fix c=1/36 and
-retain direction supports d>N^(1/4) with P^+(d)>c(log N)^2. Their sum of
-E_d is read exactly from the same ordinary Dirichlet samples throughout
-each window. Its squared norm D_c(N) is known exactly and differs from
-D(N) by O(sqrt(N)); its output R_c(N) differs from M(N) by O(sqrt(N)).
-The unresolved assertion is the whole-window signed condition stated
-with all quantifiers in DIRICHLET-READOUT.md, Section 5. Both deletion
-estimates and the reconstruction must remain in scope when applying it.
+Keep the original c=1/36 residual with direction supports d>N^(1/4)
+and P^+(d)>c(log N)^2. The exact reconstruction norm is unchanged.
+WINDOW-BOUND.md now bounds its squared deletion norm on every late window
+by O(Y^(-1/8)+exp(-(log(3)-1)log(Y)/log(log(Y)))). ROUND3-REVIEW.md
+also permits a separately named N^(1/3) cutoff with finite global error
+energy, without changing the original definition.
+
+The original target in DIRICHLET-READOUT.md, Section 5, is equivalent
+to the target for T_low in PRIME-CANCELLATION.md. On each dyadic slab
+this retains the actual averaged negative square and only low frequencies
+of long raw denominators with large reduced denominator. The precisely
+controlled whole-window norm cost is logarithmic. Bound their coupled
+positive part, or establish the mixed character estimate with the endpoints
+and conductor growth of CHARACTER-WINDOW.md. Separate absolute estimates
+do not meet this remaining obligation. Importing the external RH theorem
+does imply the target, but is recorded solely as an imported consequence.
 
 Separate earlier obligations remain: port the HN source-loss chord before
 the scalar tail weakening, with one unchanged downstream H8 consumer;

@@ -9,9 +9,11 @@ The three-task comparison produced a usable slope-bound synthesis, exact
 local transfer limits and a stronger obstruction to norm-only augmentation
 estimates. Its signed-pairing continuation now supplies at most N^2 ordinary
 Dirichlet samples, exact optimal reconstruction cost and a sharp threshold
-for discarding smooth direction supports. The remaining signed window
-estimate is O. These deductions do not supply an independent TWIST-J proof
-of RH.
+for discarding smooth direction supports. The whole-window continuation
+proves vanishing deletion energy, finite global energy through direction
+support N^(1/3), and a balanced bilinear reduction with quantified Fourier
+removal costs. The native positive-energy estimate for the full remaining
+sum is O. These deductions do not supply an independent TWIST-J proof of RH.
 
 ## 1. What each side actually supplies
 
@@ -168,7 +170,107 @@ construction and sharp endpoint argument include contributions from the
 Astra reviewer, checked separately within the same session. They are joint
 internal work, with no external-referee or scientific-execution claim.
 
-## 4. Next bounded obligations
+## 4. Positive energy on complete late windows
+
+**Candidate-D; native final target O.** The continuation preserves the
+original R=R_(1/36), including its N^(1/4) direction cutoff. Put
+
+\[
+ Q_F(Y)=\sum_{Y\le N<Y^{3/2}}\frac{F(N)_+^2}{N(N+1)},
+ \qquad
+ \|F\|_Y^2=\sum_{Y\le N<Y^{3/2}}\frac{|F(N)|^2}{N(N+1)}.
+\]
+
+The target quantifiers are: for every integer r>=1 and every Y0, there
+is an integer Y>=max(11,Y0) with Q_R(Y)^r<=Y. All deletions and comparisons
+below hold on each sufficiently late complete window, not selected rows.
+
+[WINDOW-BOUND.md](WINDOW-BOUND.md) proves, from unconditional fixed-modulus
+Dirichlet mean-square and reciprocal-zeta estimates, that
+
+\[
+ \int_1^\infty |C_0(u)|^2u^{-3/2}\,du<\infty.
+\]
+
+Using the actual sector formula and retaining all square-power corrections,
+this gives the quantitative same-window comparison
+
+\[
+ |\sqrt{Q_R(Y)}-\sqrt{Q_M(Y)}|^2
+ \le \|M-R\|_Y^2
+ \ll Y^{-1/8}+
+ \exp\left(-\frac{(\log3-1)\log Y}{\log\log Y}\right).       \tag{1}
+\]
+
+The separate Astra derivation in [ROUND3-REVIEW.md](ROUND3-REVIEW.md),
+Section 2, strengthens the critical support estimate to
+
+\[
+ \sum_{N\ge1}\frac{1}{N(N+1)}
+ \left(\sum_{d\le N^{1/3}}|\gamma_d(N)|\right)^2<\infty.    \tag{2}
+\]
+
+The smooth absolute block has finite global energy as well. Therefore a
+separate residual R^(1/3), with the stronger direction cutoff N^(1/3),
+differs from M by a globally square-summable error in this weight. Its
+positive-energy square root differs by o(1) on every late window. This
+does not redefine the original R. No decay rate is asserted for the
+critical tail in (2).
+
+[PRIME-CANCELLATION.md](PRIME-CANCELLATION.md) bounds the large-prime square
+corrections by O(sqrt(N)/log(N)), with finite global error energy. On each
+dyadic slab X<=N<2X it also constructs finitely supported integers c_a,
+equal to mu(a) through ceil(sqrt(3X)), with |c_a|<=1 and sum c_a=0.
+With b=c*c, h_X=sum c_a/a and the centered midpoint sawtooth psi_d, the
+complete same-argument identity is
+
+\[
+ M(N)=\sum_d b_d\psi_d(N)-(N+1/2)h_X^2.                    \tag{3}
+\]
+
+The square term is nonpositive. Removing raw denominators d<=X^(2/3),
+averaging over a controlled short interval, removing high frequencies,
+and then removing reduced denominators
+q<=X^(2/3)/(log X)^2 leaves a precisely defined real T_low with
+
+\[
+ |\sqrt{Q_R(Y)}-\sqrt{Q_{T_{\rm low}}(Y)}|
+ \ll (\log Y)^2.                                         \tag{4}
+\]
+
+The affine negative term is averaged and retained. ROUND3-REVIEW.md also
+allows removal of all reduced q<=X^(2/3), at the larger whole-window norm
+cost O((log Y)^4). These changes preserve the target with all its
+quantifiers. The exponent 2/3 here concerns the bilinear denominator,
+not the direction-support cutoff in (2). The earlier periodic covariance
+and generic cutoff method of #2087/#2089 retain attribution.
+
+[CHARACTER-WINDOW.md](CHARACTER-WINDOW.md) fixes one reader for the whole
+window and proves an exact finite Mellin energy formula with both endpoint
+terms. Its distant coefficient aliases begin beyond the window. The
+high-height integral costs O((log Y)^4). The separate character norms,
+including fourth-moment control with aliases, still give no cancellation
+of the signed pairing; their Holder products are at least N^(1-epsilon).
+Many of the actual sample conductors grow like Y^3. ROUND3-REVIEW.md
+strengthens the frozen-reader error to the vanishing bound (1).
+
+The complete positive energy currently inherits the classical bound
+
+\[
+ Q_R(Y)\le (C^2+o(1))Y^{3/2}
+ \exp\left(-2c\,\Phi(Y^{3/2})\right),
+ \quad \Phi(x)=(\log x)^{3/5}(\log\log x)^{-1/5}.
+\]
+
+Its scale is Y^(3/2-o(1)), which does not prove the target. Explicitly
+importing RH instead gives Q_R(Y)<<_epsilon Y^(3 epsilon) and hence the
+target on every sufficiently late window. That is a consequence of an
+external premise. The native proof still needs signed control of the
+surviving long, low-frequency sum together with its negative square, or
+the corresponding mixed character moment. See [WINDOW-SCOPE.md](WINDOW-SCOPE.md)
+for the prospective scope and internal review boundary.
+
+## 5. Next bounded obligations
 
 1. **Most immediate proof simplification:** port the integrated-chord lemma
    into the actual HN supplier, before the scalar tail weakening. Keep its
@@ -176,8 +278,11 @@ internal work, with no external-referee or scientific-execution claim.
    data. Verify that one downstream H8 consumer accepts the replacement.
 2. **Active independent arithmetic problem:** prove the signed whole-window
    estimate for the exact residual R_c of DIRICHLET-READOUT.md, Section 5.
-   Its sampling and square-root deletion error are specified. A uniformly
-   diagonal-comparable positive norm, by itself, cannot supply the target.
+   Its sampling cost and vanishing window deletion error are specified.
+   The equivalent residual T_low in PRIME-CANCELLATION.md keeps the
+   negative square and the remaining long frequencies. Separate norm
+   bounds and the lower-argument recurrence's X^(5/12) allowance do not
+   supply the needed cancellation.
 3. **Smallest meaningful local bridge:** one specified required place, one
    actual normalized kernel, and one admitted integral generator pair whose
    derivative is proved to equal the source period in its normalization.
@@ -188,7 +293,7 @@ These are distinct next obligations. The optional stronger all-subspace
 period-concentration target of #2070 remains O; it is not an omitted
 premise of the already checked external RH proof.
 
-## 5. Evidence boundary
+## 6. Evidence boundary
 
 Three Sol agents developed the separate tasks. Root Astra inspected the
 critical arguments and pinned sources; a separate Astra wrote the internal

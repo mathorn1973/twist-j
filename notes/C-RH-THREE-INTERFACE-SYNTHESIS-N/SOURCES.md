@@ -137,7 +137,9 @@ The prospective scope was exposed in owner issue #2091 before new authoring.
 - Lee and Leong, [New explicit bounds for the Mertens function and the reciprocal of the Riemann zeta-function](https://arxiv.org/abs/2208.06141),
   version 4, Theorem 1.1 and introduction, provide an unconditional
   Mertens bound stronger than every fixed logarithmic saving. No explicit
-  numerical constant or finite threshold from that paper is imported.
+  numerical constant or finite threshold from that paper was imported in
+  the signed-pairing stage. The whole-window stage below additionally
+  records a stated example from Theorem 1.2.
 
 The new Dirichlet identity is proved locally at every prime, including
 2, 5 and 7. Its Euler-unit estimates are uniform in the sampling modulus;
@@ -145,3 +147,46 @@ no uniform zero-free statement for the denominator L functions is used.
 The smooth-support theorem concerns the actual absolute sector sum.
 Neither its sharp cutoff nor the inherited logarithmic large-prime
 expansion supplies the open signed whole-window estimate.
+
+## Whole-window continuation inputs
+
+The continuation starts from package commit
+`853237620bc2be69026168f32bb0ad871f668950`. The PUBLIC authority above,
+its normative hashes, required checks and tag/content ancestry were
+refreshed before the prospective owner-issue extension. The original
+R_(1/36) and its complete integer windows remain fixed.
+
+- Katsurada and Matsumoto,
+  [A weighted integral approach to the mean square of Dirichlet L-functions](https://www.math.nagoya-u.ac.jp/~kohjimat/L-functions5.pdf),
+  Theorem 1, gives the mean square needed for the primitive quadratic
+  character of prime modulus five. Here it supplies the bound O(T log T)
+  at fixed conductor. It is not used as a uniform assertion for the
+  growing character conductors in CHARACTER-WINDOW.md.
+- Lee and Leong,
+  [version 4](https://arxiv.org/html/2208.06141v4), Theorem 3.1,
+  supplies the reciprocal-zeta logarithmic bound on real part one.
+  Theorem 1.2 supplies the Korobov-Vinogradov-shaped Mertens estimate.
+  Its stated example has C=70179/12500 and c=319/100000 for
+  log(x)>=100000. These are rational representations of the published
+  admissible constants, not new computations. The later o(1) window
+  comparison has no numerical effective threshold claimed here.
+- The fixed-modulus prime-count inputs cited above control the smooth
+  absolute block, including the second-order saving at c=1/36.
+- The rational-field RH/Mertens equivalence in Fujisawa and Minamide,
+  Theorem 1.3, is used only in the explicitly external-RH branch of the
+  whole-window bound. Root refreshed the Lean FRO/Mathlib joint statement;
+  no local verification or new independent RH proof is inferred.
+- The adjacent owner #2087/#2089 at
+  `d26ca6caab5dda3875333f9d2ba73b74b55ba674` supplies the inspected
+  [FINITE-TAPER.md](https://github.com/mathorn1973/twist-j/blob/d26ca6caab5dda3875333f9d2ba73b74b55ba674/notes/C-RH-ARITHMETIC-KERNEL-N/round4/FINITE-TAPER.md)
+  and
+  [LARGE-PRIME-HIERARCHY.md](https://github.com/mathorn1973/twist-j/blob/d26ca6caab5dda3875333f9d2ba73b74b55ba674/notes/C-RH-ARITHMETIC-KERNEL-N/round4/LARGE-PRIME-HIERARCHY.md).
+  Its periodic covariance and generic separated-frequency cutoff through
+  exponent 2/3 are attributed. PRIME-CANCELLATION.md uses a distinct
+  balanced bilinear carrier, retains its nonpositive square and proves
+  its own exact complete-period covariance and finite-window bounds.
+
+All four new notes are original paper deductions and same-session review.
+No new scientific executable, enumeration, empirical input or formal
+verification was run. Their status remains NON-CANONICAL candidate-D;
+the native full positive-energy estimate remains O.
