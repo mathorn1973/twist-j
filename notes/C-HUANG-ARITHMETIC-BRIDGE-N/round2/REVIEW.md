@@ -209,3 +209,39 @@ supremum for the joint signed expression, for every required exponent
 on arbitrarily late original windows. Opposite leading terms in the
 prime and composite sectors, the persistent ranks, and a small
 reconstruction error each leave this supremum undetermined.
+
+## Final synthesis check
+
+**Candidate-D.** For the synthesis at
+`3f41fc8938ff2246a36c724e766e1f4dfc276dfd`, set
+\(V_Y=(\mathcal C_{Y,g})_+\) with the actual gate
+\(g_N=\mathbf1_{M(N)>0}\). If the gated correlation is nonnegative,
+\(Q_M-V_Y=D_{Y,g}\). If it is negative, \(V_Y=0\) and
+\(0\le Q_M\le D_{Y,g}\). Thus equation (7) gives
+\(0\le Q_M-V_Y\le D_Y\). Combining this with the inherited full
+comparison gives on every sufficiently late complete window
+\[
+ \big|\sqrt{Q_R(Y)}-\sqrt{V_Y}\big|
+ \le \|R-M\|_{I(Y)}+\sqrt{D_Y}
+ \ll 1+\sqrt{\log Y}.
+\]
+For fixed integer \(q\ge1\), arbitrarily late witnesses at exponent
+\(2q\) on either side have square root at most \(Y^{1/(4q)}\).
+Adding the displayed error still gives at most \(Y^{1/(2q)}\)
+eventually. This establishes the two directions with the original
+starting-cutoff quantifier. It gives no bound on the gate or on the
+correlation itself.
+
+The arithmetic rank comparison requires the fixed list to contain all
+primes through the cutoffs being identified with actual Möbius sums.
+The one-prime short support is bounded above by \(pT\). Its multi-prime
+identity uses \(n\ge P_XT_X\). The uniform growing-product estimate
+above is proved for \(P_XT_X\le X^{1/3}\), as guaranteed on late slabs
+by budget (12). The positive-energy estimate remains **O**.
+
+The report revision `4ab65a3b8d094e5a5f0253cef923e50161fedaac`
+states all three domain qualifications above. Its diff from the
+reviewed synthesis limits the short support by \(pT\), makes the
+argument and product ranges explicit in the multi-prime transfer,
+and requires the full prime list through the larger cutoff for the
+arithmetic rank comparison. These edits resolve the review findings.
