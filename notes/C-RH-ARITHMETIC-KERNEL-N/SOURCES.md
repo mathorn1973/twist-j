@@ -73,6 +73,61 @@ not needed for the present T-tail theorem and are not copied.
 
 ## Scientific boundaries
 
+### Finite-time continuation and fresh neighboring work
+
+The next continuation starts at exact candidate head
+`09ae5168191eed9cee484c08c5d65f58b31494d1`. Public main remains the same
+verified v117 object. Fresh remote branches, the existing claim, recent
+issues and drafts were inspected before extending the same ownership.
+The two directly relevant new public packages are:
+
+- [Draft #2093, MOBIUS](https://github.com/mathorn1973/twist-j/blob/c7bf6ec1014b7d6bdc0e75de95054f2aa58ae84e/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/MOBIUS.md)
+  and its [review](https://github.com/mathorn1973/twist-j/blob/c7bf6ec1014b7d6bdc0e75de95054f2aa58ae84e/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/REVIEW.md),
+  read in full at the stated head. Its section 1 proves the matched
+  absolute split-support mass used in the finite-taper positive-panel
+  estimate. The elementary proof needed here is also provided in our note.
+  Its orientation sector, cutoff and formal character reconstruction are
+  different from the periodic kernel used here. Its limitation on positive
+  diagonal norm methods is prior neighboring work, not a new result of
+  this continuation. No theorem about its external proof source is used
+  as a premise for the new arithmetic deductions.
+- [Draft #2092, README](https://github.com/mathorn1973/twist-j/blob/0b81796c01d4bee47eceb6e451670ea0d233610b/notes/C-J-AURIFEUILIAN-INTERNAL-SEPARATION-N/README.md)
+  and the current draft description were read at the stated head. They
+  report an optimal four-unit internal split and fixed-template bounds,
+  with their own candidate-D proofs and candidate-C finite evidence.
+  We did not rerun or independently recertify that finite evidence. These
+  additive readers do not estimate our signed cofactor or determinant
+  sums. Its owner and unrestricted-exponent question remain separate.
+
+The earlier conversation-only support-count report still has no inspected
+complete shared source. It is not used. The present two-large-prime
+hierarchy is proved directly for this candidate's actual sharp tail and
+its exact residue kernel.
+
+The additional classical input in FINITE-TAPER section 5 is Davenport's
+unconditional uniform additive-twist bound for the Mobius function,
+*On some infinite series involving arithmetical functions (II)*,
+Quarterly Journal of Mathematics os-8 (1937), 313–320,
+[DOI](https://doi.org/10.1093/qmath/os-8.1.313).
+Its exact all-fixed-logarithm statement was verified in the primary
+research paper of X. He and B. Huang,
+*Exponential sums involving the Mobius function*, Acta Arithmetica
+175 (2016), 201–210,
+[equation (1.2)](https://www.impan.pl/shop/en/publication/transaction/download/product/91740?download.pdf=).
+Their later conditional GRH results are not consumed. The period-five
+twist follows by finite Fourier expansion.
+
+The rational smoothing obstruction uses only a macroscopic prime count.
+The fixed-modulus input was checked against Bennett, Martin, O'Bryant and
+Rechnitzer, [Theorem 1.2 in version 3](https://arxiv.org/html/1802.00085v3).
+Partial summation gives the required prime count; the short-bin argument
+is elementary and invokes no theorem about primes in short intervals.
+The two-prime hierarchy retains the all-fixed-order classical input
+from Yamada's introduction and the earlier Mertens estimate, both read
+again at the versions cited below. The critical-unit calculation uses
+only the already fixed Euler factors, exact convolution and partial
+summation. No external numerical constants or copied source code enter.
+
 ### Signed-continuation source readback
 
 The continuation starts from this candidate's exact published head

@@ -1,4 +1,4 @@
-# Arithmetic cancellation: signed frequencies, paired tails and moving cuts
+# Arithmetic cancellation: finite time, determinant pairs and coupled prime counts
 
 **NON-CANONICAL, no authority. Candidate-D paper deductions; candidate-C finite audits.**
 Owner: A. M. Thorn / ChatGPT arithmetic-kernel session, 24 November 2026.
@@ -6,12 +6,81 @@ Claim: [#2087](https://github.com/mathorn1973/twist-j/issues/2087).
 Action layer: NOT_APPLICABLE. No Canon promotion or independent RH proof.
 
 The first result bounds the moving support `d^3 <= n^2` unconditionally.
-The signed continuation now isolates an explicit remaining Fourier sum,
-pairs the rough and mixed contributions at the same integer argument, and
-proves a positive second-order term after the leading large-prime terms
-cancel. The arithmetic good-window estimate remains open.
+The latest continuation narrows the signed correlation to close determinant
+pairs with a small common divisor, using a time weight of finite support.
+It also identifies the cancellation still required between actual prime
+families and the exact logarithmic cost of the coefficient-unit transfer.
+The arithmetic good-window estimate remains open.
 
-## Signed continuation
+## Finite-time continuation
+
+All new deductions below are **candidate-D**. This is paper research with
+internal same-session opposition. The existing finite audits are unchanged.
+The scope records are [finite time](round4/PREREG-FINITE.md),
+[local coefficients](round4/PREREG-LOCAL.md),
+[prime counts](round4/PREREG-HIERARCHY.md) and
+[critical coefficient unit](round4/PREREG-CRITICAL.md).
+
+| Result | Proved gain and remaining boundary | Proof |
+|---|---|---|
+| Compact time taper | A nonnegative rational weight equals one on the dyadic block and is supported inside `[7X/8,17X/8]`. Removing all frequency pairs farther than `64 k/X`, with `k=ceil(3 log_2 X)`, costs `O(X^-6 (1+log X)^4)` in total absolute value. | [FINITE-TAPER, sections 1–2](round4/FINITE-TAPER.md) |
+| Large common divisors | On shells `r~R`, `s~S`, the close pairs with `gcd(r,s)>=max(1,RS min(R/abs(a),S/abs(b))/X^2)` cost `O_epsilon(X^(2+epsilon))` absolutely. The remaining pairs lie on explicit primitive integer progressions. | [Section 3](round4/FINITE-TAPER.md) |
+| Actual positive and negative terms | The fixed numerator pair `a=b=1` on `3X<r,s<=4X` has positive contributions at least `cX^3`, even after that pruning. Its full signed sum is `O_B(X^3/log^B X)` for every fixed `B`, from a classical unconditional input. A power saving for the full remaining sum is open. | [Sections 4–5](round4/FINITE-TAPER.md) |
+| Rational finite smoothing | At width `H`, diagonal error costs `O(XH)` and common divisors at least `G` cost `O(XH^2/G)`. For `H=X^(1/2+delta)` the choice `G=ceil(H^2/X)` leaves a low-gcd signed target. Actual coprime prime pairs defeat entrywise positive control. | [TRIANGULAR-SMOOTHING](round4/TRIANGULAR-SMOOTHING.md) |
+| Dilation correlations | For each reduced ratio `a:b`, the multiplier average has an exact periodic formula and an explicit error. Any finite choice of prescribed prime-power factors also admits a bounded multiplicative sequence with positive mean, so that limited data alone cannot force cancellation. | [DILATION-CORRELATION](round4/DILATION-CORRELATION.md) |
+| Two large primes | For fixed `1/3<a<1/2`, the tail splits into exactly zero, one or two prime factors above `X^a`. A unique fixed cutoff cancels the union's `X/log^2 X` term, but leaves a strictly negative `X/log^3 X` term paired with the no-large-prime part. | [LARGE-PRIME-HIERARCHY](round4/LARGE-PRIME-HIERARCHY.md) |
+| Critical transfer cost | Both absolute coefficient series equal `zeta(2s)` times a series converging absolutely for `Re s>1/3`. Their weighted critical norms grow as a positive constant times `log x`. Termwise square-root/logarithm transfer therefore costs one logarithm in each direction. | [CRITICAL-UNIT](round4/CRITICAL-UNIT.md) |
+
+For the frozen round-three coefficients `z_theta`, the new primary target is
+the real signed sum `P_X^rem` of
+
+\[
+ z_{a/(5r)}\overline{z_{b/(5s)}}
+ \sum_n w_X(n)e\!\left(n\left(\frac a{5r}-\frac b{5s}\right)\right)
+\]
+
+over ordered unequal conductors, the original numerator cutoffs, and exactly
+
+\[
+ 0<|as-br|\le\frac{320krs}{X},\qquad
+ \gcd(r,s)<\max\left(1,\frac{RS}{X^2}
+                 \min\left(\frac R{|a|},\frac S{|b|}\right)\right).
+\]
+
+Here `r` and `s` belong to their fixed shells `(R,2R]` and `(S,2S]`.
+The theorem is
+
+\[
+ \mathrm{RH}\quad\Longleftrightarrow\quad
+ (P_X^{\mathrm{rem}})_+\ll_\varepsilon X^{2+\varepsilon}
+ \quad\text{for every }\varepsilon>0
+ \text{ and all sufficiently large dyadic }X.
+\]
+
+**O:** prove this signed arithmetic estimate. Both removals have proved
+costs; the remaining coefficient sums and signs stay intact. The finite
+support of `w_X` lies where the same frozen arithmetic sum agrees with `T`.
+Thus this reduction needs no separate zero statement for `L(s,chi_5)`.
+It does not assert that distant terms in the original sharp Dirichlet
+kernel can simply be deleted.
+
+The independently owned [draft #2093](https://github.com/mathorn1973/twist-j/pull/2093)
+supplies the matched absolute-mass input and a comparison with the distinct
+rapidity augmentation carrier. Its signed pairing remains a separate
+obligation. The new [draft #2092](https://github.com/mathorn1973/twist-j/pull/2092)
+has an optimal four-unit separator in one return-factor case; that readout
+does not supply the needed whole-block arithmetic estimate. Exact pins and
+read scope are in [SOURCES](SOURCES.md).
+
+Reviews: [finite taper](round4/REVIEW-FINITE-TAPER.md),
+[prime hierarchy](round4/REVIEW-HIERARCHY.md),
+[local correlations](round4/REVIEW-LOCAL-CORRELATIONS.md) and
+[critical unit](round4/REVIEW-CRITICAL-UNIT.md).
+The [promotion handoff](round4/PROMO-C-RH-ARITHMETIC-KERNEL-N.md) states
+what is proved and the remaining arithmetic question. Nothing here changes
+the public Canon or claims an independent proof of RH.
+
+## Earlier signed continuation
 
 All statements in this section are **candidate-D**, with the conditional
 premise and the open bound explicitly retained. The continuation is paper
@@ -37,7 +106,7 @@ The spectral reduction uses the exact fact
 For each dyadic scale `X`, the retained modes have primitive frequencies
 `a/(5r)` with `r>X^(2/3)` and the stated small-numerator cutoff.
 The diagonal and pairs with the same conductor have controlled energy.
-The primary remaining target is the exact signed sum `D_X` of all
+The earlier exact target is the signed sum `D_X` of all
 cross-conductor contributions on `X <= n < 2X`:
 
 \[
@@ -60,7 +129,9 @@ would additionally exclude zeros of `L(s,chi_5)` with real part above
 [MAJORANT-SCOPE](round3/MAJORANT-SCOPE.md). No contradiction to this
 sufficient target is shown, and its necessity for RH is not claimed.
 The exact finite-block criterion above includes distant pairs and avoids
-this extension of the time interval.
+this extension of the time interval. The finite-time continuation now also
+removes distant pairs after replacing the sharp time weight by the specified
+compact taper; its enlarged local support is fully controlled.
 
 The neighboring Mertens prime average was reconstructed from its reported
 formula. Its coefficient is `1`, whereas the present residue-weighted

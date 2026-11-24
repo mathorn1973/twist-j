@@ -135,3 +135,55 @@ missing public history then made the unmodified local checker pass:
 
 The new scope is in [round3/PREREG.md](round3/PREREG.md). The remaining
 signed estimate stays O; the new paper deductions stay candidate-D.
+
+## Finite-time continuation, 24 November 2026
+
+The same owner, issue and draft continue from exact published candidate
+`09ae5168191eed9cee484c08c5d65f58b31494d1`. STATUS, POLICY, AGENTS, CORE,
+FRONTIER and the required private operating context were freshly read.
+Public main remains `6f2e112aafc4f3aca4222bb4bf3dced1d79fe2ed`; the
+annotated v117 tag peels to that commit and the declared content is its
+ancestor. All five normative file hashes and the Canon byte count match.
+The exact-main architecture pair and aggregate in workflow `45388050270`
+are successful. Explicit remote branches and recent public claims were
+checked; new neighboring #2090/#2092 and #2091/#2093 retain their owners.
+
+Five paper files and four retained opposition records are added. Four
+scope records describe the paper questions and exposed status. No new
+scientific program, exact finite audit or numerical search ran. Root and
+three collaborators, two Astra and two Sol in total, developed and read
+the arguments within one session. Both Sol collaborators reconstructed
+the finite-taper count; the retained full record is
+[REVIEW-FINITE-TAPER](round4/REVIEW-FINITE-TAPER.md). The other Astra
+reviewed the two-prime hierarchy, both local-correlation notes and the
+critical-unit calculation. Root read all five proofs and their source
+inputs. This is internal review, not external independent acceptance.
+
+The checks emphasized total Fourier leakage after summing all pairs,
+the full enlarged time range, the nonzero determinant count without an
+extra endpoint term, and the exact numerator/gcd summation. In the prime
+hierarchy, both split-density factors, the unordered-pair factor,
+repeated-prime subtraction and the third-order sign were reconstructed.
+The local smoothing review checked the index shift, the H^3 boundary,
+and the macroscopic prime count behind the binning argument. The unit
+review verified the positive leading products and the factor one half
+in the logarithmic critical norm.
+
+Assembly made two clarity changes: the finite-factor countermodel's
+support means integers composed of its chosen primes, and the critical
+table headings use words instead of Markdown separator characters.
+The remaining finite-taper sum is named explicitly after the proved
+large-gcd removal. None changes a mathematical threshold or previous
+scientific evidence. Earlier proof files and all audit files remain
+byte unchanged. The repository integrity and final remote readbacks are
+reported at the exact new head in draft #2089; repository CI does not
+promote these paper deductions or rerun the notes-only scientific audits.
+
+The first local Canon integrity invocation in this continuation again
+encountered a shallow candidate-history boundary. GitHub comparison
+confirmed the declared content ancestor with zero commits behind;
+deepening the same remote history made the unchanged checker report
+`CANON PASS v117 claims=639`. Policy, changed-document links and math
+delimiters, earlier-file byte preservation, whitespace and all 48 package
+manifest entries also passed before the content commit. This was a local
+history-resolution repair, not a changed authority or scientific result.
