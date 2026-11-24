@@ -1,20 +1,51 @@
-# Arithmetic cancellation: low heights and the cube-root conductor transfer
+# Arithmetic cancellation: further conductor deletion and a joint slow estimate
 
 **NON-CANONICAL, no authority. Candidate-D paper deductions; candidate-C finite audits.**
 Owner: A. M. Thorn / ChatGPT arithmetic-kernel session, 24 November 2026.
 Claim: [#2087](https://github.com/mathorn1973/twist-j/issues/2087).
 Action layer: NOT_APPLICABLE. No Canon promotion or independent RH proof.
 
-The first result bounds the moving support `d^3 <= n^2` unconditionally.
-The latest continuation proves opposing main terms inside the actual
-low-height pair sum and replaces all conductors with a prime factor above
-`(4X)^(1/3)` by an exact arithmetic function at smaller arguments. The
-remaining Fourier conductors have at least three distinct split prime
-factors. Their joint contribution with the exact replacement is still open.
+The first result bounds the moving support d^3 <= n^2 unconditionally.
+The latest continuation removes additional families from the remaining
+three-prime-or-more conductor core at the required error scale. It also
+improves the unconditional bound for a specified slow observation of the
+core jointly with its exact prime correction. The full signed estimate
+remains open.
+
+## Further conductor deletion and the joint low-frequency estimate
+
+**Candidate-D, paper only.** The [round-seven report](round7/REPORT.md)
+defines one fixed successor and gives all error and observation scopes.
+All previous proofs and finite evidence remain unchanged.
+
+| Actual object or method | Proved estimate or boundary | Proof |
+|---|---|---|
+| Core conductors with a large product of small prime divisors | A shellwise density bound controls the complete packet. The fixed union using primes through \(\log X\) and \((\log X)^2\) has squared deletion error \(O_\varepsilon(X^{2+\varepsilon})\), including all original numerators. Both classes contain additional actual nonzero modes. | [SMOOTH-DIVISOR-AND-TRANSFER](round7/SMOOTH-DIVISOR-AND-TRANSFER.md) |
+| Cube-root correction and its mixed term | \(C_z(n)\) has leading term \(\kappa(\log2-1/2)n/\log^2n\). Core energy, both mixed orders and correction energy have leading coefficients \(1,-2,1\); the exact mixed term stays. | [PRIME-PUSHFORWARD](round7/PRIME-PUSHFORWARD.md) |
+| Balanced carrier for the actual \(t\) coefficients | Exact allocation of both affine terms permits raw denominators at most \(4X\). A longer unit cutoff removes the complete unit tail with inverse-all-logarithmic norm error. | [COMPACT-BALANCED-BAND](round7/COMPACT-BALANCED-BAND.md) |
+| Smooth time observation of the joint core and correction | Double coefficient cancellation and the signed unit give a strictly larger saving constant than the inherited Mertens envelope on this observation. The proved bound holds throughout the block, including its endpoints, but remains above the square-root scale. | [Balanced scope](round7/COMPACT-BALANCED-BAND.md#6-exact-scope-of-the-comparison) |
+| Absolute pair bounds below the cube-root transfer | Actual positive pairs have subtotal at least \((D/z)^3/\log^8X\) for \(z=D^\beta\), \(1/4<\beta<1/3\), and a corresponding bound for every fixed \(0<\beta<1/3\). This excludes an absolute majorization, not signed cancellation. | [Divisor section 2](round7/SMOOTH-DIVISOR-AND-TRANSFER.md#2-the-actual-below-cube-root-discrepancy-has-a-large-positive-subtotal) |
+| Generic induction from smaller arguments | Integer unit-step sequences with square-root size, bounded weighted energy and any fixed number of zero Mellin moments still give prime-correction energy \(X^{5/2}/\log^{2k+2}X\) on input scale \(\sqrt X\). These sequences are not the actual \(T\). | [Prime section 4](round7/PRIME-PUSHFORWARD.md#4-a-power-loss-even-with-finitely-many-exact-moment-cancellations) |
+
+For the fixed remaining spectrum \(G_7\) and its original restricted pair
+sum \(P_7\), the precise outstanding target is
+
+\[
+ (Q_7)_+\ll_\varepsilon X^{2+\varepsilon},\qquad
+ Q_7=P_7+2\operatorname{Re}\langle G_7,C_z\rangle_w+\|C_z\|_w^2,
+\]
+
+for every fixed positive epsilon and all sufficiently late dyadic blocks.
+**O:** this complete jointly signed bound is not proved here. The
+[report](round7/REPORT.md) gives the equivalent criterion and the exact
+conductors still present. The three proof reviews, synthesis review and the
+[promotion handoff](round7/PROMO-C-RH-ARITHMETIC-KERNEL-N.md) retain
+candidate-D status; same-session review and repository CI supply no
+external mathematical confirmation.
 
 ## Low-height continuation
 
-**Candidate-D, paper only.** The [current report](round6/REPORT.md)
+**Candidate-D, paper only.** The [round-six report](round6/REPORT.md)
 gives the actual cancellations, exact replacement and remaining criterion.
 All earlier proofs and finite evidence are preserved.
 

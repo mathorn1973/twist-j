@@ -284,3 +284,69 @@ candidate-D; the final Q_core positive-part estimate is O. CI and
 repository integrity checks are not mathematical promotion or external
 independent confirmation. Exact delivery and required workflow results
 are recorded on the same draft PR.
+
+## Core continuation, round seven, 24 November 2026
+
+The same owner continues from exact published candidate
+4e098f9742a72a128bfb61a10c429bced78fe17e. STATUS was freshly read
+first. Public main remains 6f2e112aafc4f3aca4222bb4bf3dced1d79fe2ed,
+Canon v117. The declared annotated tag and content ancestry, all five
+normative hashes and successful exact-main architecture jobs and aggregate
+in workflow 45388050270 were verified. The current private startup
+instructions were read separately. All 400 remote heads, open related
+claims and the relevant registry, evidence, gate and probe sources were
+inspected before the prospective continuation was appended to issue 2087
+and read back exactly.
+
+The related draft 2093 had advanced to
+eac05e3cde56d0fb3e429b91aa7129087e5da4db. Its current balanced
+low-frequency papers were read and attributed. The context lookup supplied
+no newer authoritative arithmetic evidence than the pinned Git work.
+The neighboring owner and the original public authority remain separate.
+
+This round adds three paper proofs, four prospective scope records, a
+report and promotion handoff. An Astra derived the smooth-divisor deletion
+and actual unsigned obstruction. A Sol derived the exact cube-root
+pushforward, its signed main terms and integer finite-moment obstruction.
+Another Sol derived the compact balanced spectrum and improved joint slow
+observation. Root reconstructed the proofs, fixed the two-family successor
+in the report, proposed the longer compact carrier without a unit tail,
+and supplied the second family's additional nonzero-conductor example.
+Both additions are proved in the author files.
+
+The separate same-session proof reviews checked the two density counts
+and all numerator sums, primitive discrepancy coefficient and original
+gcd pruning, prime-count endpoints and repeated-prime weight, integer
+dilation supports and moments, signed-unit bounds and the failure of an
+all-epsilon pointwise bound for its absolute majorant, both masked affine
+terms, the longer cutoff and the complete buffered time convolution.
+The prime review also supplied the exceptional-derivative extension of
+the generic power obstruction; the public proof states the changed
+logarithmic exponent explicitly. This remains one research session, with
+no external independent or blind confirmation.
+
+Root read the primary fixed-modulus prime-count statement, the exact
+published maximal short-sum hypotheses and Lee--Leong version 5,
+Theorem 1.1 equation (12). No numerical constant is inferred from a table
+outside its stated scope. No scientific executable, numerical enumeration,
+finite audit, external-source computation or formal proof build was run.
+All earlier mathematical and finite-audit files remain unchanged.
+
+Public-copy adjustments concern the corresponding scope link, source
+precision and the nonzero-cofactor wording. All new deductions are
+candidate-D. The target (Q_7)_+ at the all-epsilon power scale remains O.
+The repository checks and exact remote delivery are recorded on the same
+draft and do not promote these mathematical statuses.
+
+A separate Sol synthesis review checked the fixed two-family union, both
+nonzero-conductor examples, the unchanged prime correction, transfers to
+G_7, the generic probe at input scale sqrt(X), and the final status
+ceiling. Its four-part conclusion is retained in round7/REVIEW-SYNTHESIS.md.
+
+Before the content commit, POLICY PASS and CANON PASS v117 claims=639
+were observed. All 91 package manifest entries, changed relative links
+and anchors, paired math delimiters, whitespace, file sizes and public
+content checks pass. All 75 earlier non-index files match the previous
+candidate byte for byte. Main and the preceding draft head were freshly
+read back unchanged before committing. Final exact-head workflow and
+remote-file custody are recorded in the draft after publication.

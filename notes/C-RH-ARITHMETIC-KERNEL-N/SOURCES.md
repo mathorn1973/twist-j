@@ -255,6 +255,56 @@ already proved additive large sieve. The inverse bound and positive-slice
 exponent are proved by Dirichlet convolution, Rankin's inequality and the
 fixed-modulus prime theorem. No historical priority is asserted.
 
+### Round-seven core and low-frequency continuation
+
+Candidate input is the unchanged head
+4e098f9742a72a128bfb61a10c429bced78fe17e. In particular the
+round-six cube-root transfer, uniform conductor-mask height estimate,
+signed cubic unit and balanced identity are mathematical premises.
+The current public authority and all startup checks are recorded in RUN.
+
+The current neighboring draft 2093 was materialized at
+eac05e3cde56d0fb3e429b91aa7129087e5da4db, with its complete
+twenty-four-file paper package and manifest. Its
+[BILINEAR-LOW](https://github.com/mathorn1973/twist-j/blob/eac05e3cde56d0fb3e429b91aa7129087e5da4db/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/BILINEAR-LOW.md)
+gives exact raw-affine allocation,
+[LOW-FREQUENCY-PAIRS](https://github.com/mathorn1973/twist-j/blob/eac05e3cde56d0fb3e429b91aa7129087e5da4db/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/LOW-FREQUENCY-PAIRS.md)
+the numerator-box method, and
+[LOW-ENERGY-REVIEW](https://github.com/mathorn1973/twist-j/blob/eac05e3cde56d0fb3e429b91aa7129087e5da4db/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/LOW-ENERGY-REVIEW.md)
+the smooth central-band double partial summation. Its
+[ONE-SIDED-LOW](https://github.com/mathorn1973/twist-j/blob/eac05e3cde56d0fb3e429b91aa7129087e5da4db/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/ONE-SIDED-LOW.md)
+retains the earlier complete-carrier logarithmic narrowing at its own
+Mertens scope. The present coefficient sequence, unit, time taper and
+window remain distinct. Our balanced proof supplies their transfer and
+all associated costs; no coefficient-family identity is inferred.
+
+Primary analytic inputs read again:
+
+- T. Yamada, [arXiv:1306.5322v4, Introduction](https://arxiv.org/html/1306.5322v4#S1):
+  the classical fixed-modulus prime-number theorem with arbitrary fixed
+  logarithmic error. Only modulus five is needed. The finite numerical
+  table in Theorem 1.2 is not extrapolated to all exponents. Cumulative
+  counts, partial summation and fixed-relative-interval counts suffice;
+  no relative asymptotic in the later short bins is assumed.
+- K. Matomaki, M. Radziwill, X. Shao, T. Tao and J. Teravainen,
+  [Higher uniformity of arithmetic functions in short intervals II,
+  Inventiones mathematicae 244 (2026), Theorem 1.1(i)](https://link.springer.com/article/10.1007/s00222-026-01408-6):
+  the maximal progression statement with its exceptional-measure bound
+  and fixed polynomial length margins. The already proved transfer to
+  t and integer starting points is retained.
+- E. S. Lee and N. Leong,
+  [arXiv:2208.06141v5, Theorem 1.1, equation (12)](https://arxiv.org/html/2208.06141v5):
+  the unconditional Mertens envelope used through round5/FULL-ESTIMATE.
+  The fixed exponential coefficient is preserved in that unit transfer.
+  The new improvement applies only to the explicitly specified slow
+  balanced component and joint finite-time observation.
+
+The Rankin counts, local strip degree, exact discrepancy coefficients,
+integer moment-cancelling sequences and signed-unit partial summations
+are derived in the new proofs. No external code or numerical dataset is
+copied. Source computations are not rerun. These source checks and
+same-session opposition do not supply independent mathematical acceptance.
+
 ### Status ceiling
 
 All new proof statements remain candidate-D pending external review. The
