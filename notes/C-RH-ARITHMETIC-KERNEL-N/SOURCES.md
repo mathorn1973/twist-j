@@ -21,10 +21,11 @@ The local checkout was fetched from Git, not from an uploaded snapshot.
 | Actual period-map program | [PR 2071](https://github.com/mathorn1973/twist-j/pull/2071), `948ddd240340e14d6bbac96baade3039e8b9f263` | Still rounds 8-19 at readback; no imported proof of this signed tail estimate |
 | Two-place Frobenius | [PR 2081](https://github.com/mathorn1973/twist-j/pull/2081), `bddd14b4eb684f613db3ec51df56527eea2dd480` | Prior return-content identities and native observation limits |
 | Signed return gaps | [PR 2083](https://github.com/mathorn1973/twist-j/pull/2083), `4875cad870dcf59d44a9d859455fcdec8e1468a3` | Prior periodic divisibility and the distinction from analytic cancellation |
-| Growing return windows | [PR 2085](https://github.com/mathorn1973/twist-j/pull/2085), `edfcb59a13ae8bdeaaeb26d6d6e0a8e68fa4f397` | Latest inspected related line; return-window classification and equal-order prime witnesses |
+| Growing return windows | [PR 2085](https://github.com/mathorn1973/twist-j/pull/2085), `edfcb59a13ae8bdeaaeb26d6d6e0a8e68fa4f397` | Return-window classification and equal-order prime witnesses |
+| Prescribed additive separators | [PR 2088](https://github.com/mathorn1973/twist-j/pull/2088), `1f2e9028d745b6018cd3d092c9f0103712c62722` | Final parallel readback; its six-unit rule explicitly separates the tail witness after adding a stronger observation |
 
 The return comparison inspected the actual proof and side-note review at the
-last pin. The sharp general return-window result uses a primitive-divisor
+2085 pin, and the README and SIX_UNIT_SPLIT.md at the 2088 pin. The sharp general return-window result uses a primitive-divisor
 theorem; this candidate does not use that theorem to infer a signed sum bound.
 The exact five-residue covariance and moving support application are distinct
 from the period-map work. Generic positive-frame bounds do not identify the

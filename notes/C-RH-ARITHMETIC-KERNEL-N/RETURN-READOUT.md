@@ -31,6 +31,12 @@ The same obstruction occurs wholly inside the complementary range `d^3>N^2`. The
 
 The signed transform itself retains these coefficients. With `T(0)=0` and `a(n)=T(n)-T(n-1)`, the step kernel has a jump `chi(n/d)` precisely at multiples of `d`, so `a=s_5*chi` as Dirichlet convolution. The inverse of `chi` is `mu chi`, since complete multiplicativity gives `chi*(mu chi)` equal to the convolution identity, including at numbers divisible by five. Consequently `s_5=a*(mu chi)`. Thus the exact aggregate, given for all integer arguments, preserves the full signed information. This is a statement about recovering coefficients, without any assertion that a bound for the aggregate requires a coefficientwise decoder. The collision tests the proposed replacement of each signed row by its return-order label, without asserting indistinguishability when the integer label `d` itself is provided.
 
+### Late parallel readback: the additive test separates the tail witness
+
+PR [#2088](https://github.com/mathorn1973/twist-j/pull/2088), read after the initial package, gives a prescribed six-unit rule on the blocks `B_r=L_(5r)/L_r=A_-A_+`, `r=5^k`, with `A_±=5F_r^2±5F_r+1`. Its actual [SIX_UNIT_SPLIT.md](https://github.com/mathorn1973/twist-j/blob/1f2e9028d745b6018cd3d092c9f0103712c62722/notes/C-J-SHORT-ADDITIVE-SEPARATORS-N/SIX_UNIT_SPLIT.md) was read at the immutable head. The identity `S_sigma=sqrt(5)(F_r+sigma)A_(-sigma)` gives the selected coprime factor, including its prime powers. This is an additional additive observation, outside the Boolean return-stream contract above.
+
+At `r=5`, its negative test has content `F_15-F_5-1=610-5-1=604=4*151`. Thus `gcd(24341,604)=1`, while `gcd(3675491,604)=151`. The new test directly separates the two actual long-tail rows in our example and identifies the extra prime that changes their weights from `+4` to `-8`. The result therefore sharpens the scope of the obstruction rather than contradicting it. The general prescribed rule separates the two displayed factors; neither factor need be prime. It supplies neither all signs inside a composite factor nor cancellation across the variable quotient weights in `T(N)`. Ownership of the six-unit construction remains with #2088.
+
 ## 3. Vertical order reveals what the horizontal quotient forgets
 
 Now let `d>1` be odd and prime to five, with arbitrary prime exponents. Write `h=ord_d(alpha)`, `B=B(h,+1)`, and `H_k=ord_(d^k)(alpha)`. Then for every `k>=1`,

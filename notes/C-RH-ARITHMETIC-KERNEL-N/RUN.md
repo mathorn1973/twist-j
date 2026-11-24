@@ -70,6 +70,9 @@ quotient and cutoff risks had already been covered by the helper audits.
   the lemma and coefficient unit and restates the rational criterion.
 - Root checked the return-order proof, the Boolean versus numeric-input
   qualification, and the paper witness inside the actual long support.
+- The late parallel PR #2088 was read at its immutable head. Sol read its
+  actual six-unit proof; root checked the resulting exact gcd separation of
+  the two long-tail rows. The scope qualification is appended explicitly.
 
 These reviews share the same conversation and files. They are internal
 mathematical review, not blind independent confirmation or formal proof

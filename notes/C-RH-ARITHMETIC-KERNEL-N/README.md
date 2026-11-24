@@ -150,6 +150,14 @@ window bound. See [RETURN-READOUT](RETURN-READOUT.md). Source ownership remains
 with [PR #2085](https://github.com/mathorn1973/twist-j/pull/2085) for its
 return contents, windows and equal-order witnesses.
 
+The later [PR #2088](https://github.com/mathorn1973/twist-j/pull/2088) supplies
+a genuinely stronger additive input. Its prescribed six-unit rule has content
+`604=4*151` at the relevant parameter, so its gcd is `1` on `24341` and `151`
+on `3675491`. It directly separates our two long-tail rows. This is outside
+the Boolean-stream contract and is an explicit usable connection between
+the parallel lines. It still supplies no whole-window cancellation estimate.
+The actual pinned six-unit proof was checked during final readback.
+
 ## Review, evidence and reading order
 
 Root read all proof files. A separate Sol read the complete kernel proof,
