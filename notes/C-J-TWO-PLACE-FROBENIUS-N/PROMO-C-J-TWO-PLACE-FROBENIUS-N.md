@@ -10,6 +10,8 @@ Conversation alias: C-J-TWO-PLACE-FROBENIUS-1.
 Owner: A. M. Thorn, ChatGPT-Astra-Sol-20261124-Two-Place.
 Claim: [#2080](https://github.com/mathorn1973/twist-j/issues/2080).
 Public basis: 26bd3b935272ac6ff35591f50be616473a54ef7a.
+Round-two publication basis: 6f2e112aafc4f3aca4222bb4bf3dced1d79fe2ed,
+Public Canon v117, with the inherited scientific inputs unchanged.
 Branch: codex/j-two-place-frobenius-2026-11-24.
 
 ## Candidate statements suitable for separate review
@@ -33,6 +35,21 @@ Branch: codex/j-two-place-frobenius-2026-11-24.
 6. The composite 252601 satisfies the universal correctly twisted
    Frobenius law on O/(252601); additional tests of the same equality
    cannot make it a primality certificate.
+7. Round two resolves the fixed-seed case: every finite synchronized
+   native window can be copied on that same seed into every odd residue
+   class while preserving any prescribed dyadic phase. Periodic window
+   outputs are exactly the functions of their dyadic part, on the
+   admitted classes. The negative direction extends to finite adaptive
+   relative-query transcripts under the stated observation contract.
+8. For the inert defect flag, an observer updated at every native tick
+   needs exactly fifteen reachable additional persistent states, even
+   with a fixed finite decorated window. The lower bound holds for
+   a single fixed seed. The attaining four-bit register is multiplication
+   by J modulo two, initialized with the correct origin phase.
+9. The fifteen-state register together with the registered dyadic
+   history reader realizes the arithmetic decoder at every fixed
+   precision. This is a declared observer extension, not a newly
+   identified memory resource in the original native checkpoint.
 
 ## Evidence and acceptance state
 
@@ -42,18 +59,25 @@ No new scientific executable or finite census was run.
 No external independent review, formal Lean proof or public computation
 gate is claimed.
 
-No files under canon/, probes/, tools/, workflows or an existing
-candidate were changed. All old statuses, thresholds and ownership
+No scientific edits under canon/, probes/, tools/, workflows or another
+candidate were made. The branch incorporates the separately published
+v117 main by a non-forced merge. All old statuses, thresholds and ownership
 remain in force. The draft is an incubation artifact only.
 
-## Next scoped question
+## Round-two continuation and next scoped question
 
-Specify a concrete growing information carrier for the arithmetic digit
-lift and a declared map from native state or retained history to it.
-Prove its update law and factorization before assigning a decoder
-interpretation. A fixed bounded history cannot supply the missing
-odd-period information uniformly over all seeds, so a proposal must
-state which premise of that obstruction changes.
+[round2/REPORT.md](round2/REPORT.md), its two proof files and its
+source/review record give the completed fixed-seed classification and
+sharp persistent-state cost. They preserve the first-round scientific
+files and explicitly close that round's fixed-seed open case.
+
+The arithmetic observer now has a concrete update and readout law.
+The remaining question is its permitted native realization: specify a
+memory carrier, preparation and update law for the fifteen-state odd
+phase and retained dyadic history. Prove the physical/native
+factorization at the declared scope. A finite unmarked native history
+alone cannot provide the odd phase, even on a single fixed seed. A
+proposal must state the additional resource that changes this premise.
 
 Separately, arithmetic information recovery is now exact at every
 refinement of ten. To obtain a prime recognizer, an additional property

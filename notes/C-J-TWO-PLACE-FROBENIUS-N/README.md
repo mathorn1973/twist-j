@@ -7,6 +7,8 @@ Date: 2026-11-24. Action layer: L1.
 Claim: [#2080](https://github.com/mathorn1973/twist-j/issues/2080).
 Conversation alias: C-J-TWO-PLACE-FROBENIUS-1.
 Public basis: 26bd3b935272ac6ff35591f50be616473a54ef7a, Public Canon v116.
+Round-two publication basis: 6f2e112aafc4f3aca4222bb4bf3dced1d79fe2ed,
+Public Canon v117; all inherited inputs used here were rechecked unchanged.
 
 ## Outcome
 
@@ -40,7 +42,11 @@ ramified flag, whereas no fixed finite decorated history can recover the
 inert flag uniformly over all origin-zero seeds and unit indices.
 More precisely, among functions of time modulo sixty, exactly those
 factoring through time modulo four admit such a uniform finite window.
-The negative history result does not settle one separately prescribed seed.
+The first-round argument did not settle one separately prescribed seed.
+The [round-two continuation](round2/REPORT.md) now resolves that case:
+the obstruction holds on every fixed seed. It also proves that exactly
+fifteen added persistent observer states are necessary and sufficient
+for the inert flag, even when a fixed finite native window is available.
 
 **Candidate-D.** On positive odd indices not divisible by five, the exact
 integer norm \(N(\Delta(n))\) already determines the complete index \(n\).
@@ -50,6 +56,13 @@ every element of its cyclotomic quotient. Information recovery and primality
 certification are different questions.
 
 ## Reading order
+
+For the latest result, start with [round2/REPORT.md](round2/REPORT.md),
+then its [fixed-seed proof](round2/PROOF.md),
+[observer-state proof](round2/OBSERVER.md), and
+[source/review record](round2/SOURCE_REVIEW.md).
+
+First-round bundle:
 
 1. [PROOF.md](PROOF.md): the two characters, the all-sixty residue reader,
    all refinements, arithmetic digit lifting, and the Fibonacci/Lucas formulas.

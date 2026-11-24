@@ -1,11 +1,25 @@
 # Canon changelog (public series)
 
-## Public Canon v116
+## Public Canon v117
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
+Registry snapshot: 639 claims; 0 T-LOCK, 483 T, 62 D, 50 C, 2 H, 23 O, 19 F; 25 live H/O.
+Reproduction witnesses: 45.
+<!-- END GENERATED CURRENT COUNTS -->
+
+Add one finite L1 computation and four L1 theorems. The frozen H3
+station recovers three silent fresh positive intact packets at the
+row-0 port. Exact pair interventions localize the five logical levels
+of the isometric QDD preparation at one cut when the pair graph is
+connected. The quadratic theorems give a source reflection obstruction,
+an affine-alternative count with an abstract continuation, and a
+native-word count on full ready slices. The two counts carry exact
+reproduction bundles. The 25 live owners retain their registered scopes.
+
+## Public Canon v116
+
 Registry snapshot: 634 claims; 0 T-LOCK, 479 T, 62 D, 49 C, 2 H, 23 O, 19 F; 25 live H/O.
 Reproduction witnesses: 43.
-<!-- END GENERATED CURRENT COUNTS -->
 
 Add two finite H3 computations at L1 on the unchanged rank-43 trajectory.
 The first census records individual transfers to cell 3 and disjoint
