@@ -133,7 +133,7 @@ further information on \(M(N)\).
 ## The full two-factor region and both boundary signs
 
 Use the arithmetic notation of
-[FULL-COUPLED-ENERGY.md](../C-RH-THREE-INTERFACE-SYNTHESIS-N/FULL-COUPLED-ENERGY.md).
+[FULL-COUPLED-ENERGY.md](https://github.com/mathorn1973/twist-j/blob/ceb77e3632ec4617c54d8e1fd504d3b1c99dd106/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/FULL-COUPLED-ENERGY.md).
 For integers \(T\ge1\), \(n\ge T\) write
 \[
  C_T(n)=\sum_{\substack{a,b>T\\ab\le n}}
@@ -210,13 +210,21 @@ identity additionally gives the exact intercept
 reconstructing \(U_H^J M\). The intercept costs \(O(1)\) in
 weighted slab norm, and the small-rectangle correction costs
 \(O(X^{-1/4}(1+\log X)^{3/2})\) in that norm. No such terms are
-discarded inside (5). The earlier same-window comparison yields
+discarded inside (5). The cited paper's vanishing comparison uses the
+classical Mertens envelope for the intercept, the maximal Möbius
+short-sum bound for the difference between the forward average and
+\(M\), and the direct comparison of \(M\) with \(R_{1/36}\). It gives,
+for every fixed \(K>0\),
 \[
+ \|Z-R_{1/36}\|_{I(Y)}\ll_K(\log Y)^{-K},\qquad
  \left|\sqrt{Q_Z(Y)}-\sqrt{Q_{R_{1/36}}(Y)}\right|
-       \ll (1+\log Y)^2,\qquad
- Q_Z(Y)=\sum_{Y\le N<Y^{3/2}}\frac{Z_X(N)_+^2}{N(N+1)} .
+       \ll_K (\log Y)^{-K} .
 \]
-The sum is over integers and \(X\) is the dyadic slab of \(N\).
+Here \(\|\cdot\|_{I(Y)}\) uses weights \(1/[N(N+1)]\) and
+\(Q_Z(Y)=\sum_{N\in I(Y)}Z_X(N)_+^2/[N(N+1)]\), with \(X\) the dyadic
+slab of \(N\). The second inequality follows by the Lipschitz bound for
+the positive part. Both bounds are inherited from the previous analytic
+inputs. The boundary representation supplies no stronger estimate.
 The positive part follows the complete signed sum, including
 the affine term. The comparison holds on each sufficiently late
 complete window, with the two outer slab fragments included.
