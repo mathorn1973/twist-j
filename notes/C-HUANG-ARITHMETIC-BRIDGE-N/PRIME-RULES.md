@@ -224,3 +224,47 @@ is \(r=\pi(N)\). The ambient cube now includes divisors as large as
 multiplications of those divisors. Any bound confined to a restricted
 factor range needs a separate localization argument. A full-window
 estimate of \(R_{1/36}\) remains O.
+
+## Size of the positive-splice matching on complete windows
+
+**Candidate-D.** Take all primes at most \(N\), with \(N\) an integer,
+and set \(r=\pi(N)\). Let \(\nu_+(N)\) be the maximum size of a matching
+of edges of \(H_+\) whose endpoint degree product in \(H_+\), with
+unit weights, is at least \(r\). The definition uses \(H_+\) for every
+\(N\), independently of the sign of \(M(N)\). The matching bound above
+gives \(M(N)_+\le\nu_+(N)\), since for \(M(N)\le0\) the left side is zero.
+
+For \(N\ge6\) and any prime \(q>3\) in \((N/6,N/3]\), the distinct primes
+\(2,3,q\) are all in the list. Set \(d=3q\) and \(e=6q\). Then
+\(N/2<d\le N<e\le2N\), \(\mu(d)=+1\), and \(\mu(e)=-1\). Thus
+\(d\leftrightarrow e\) is an edge of \(H_+\). The degree of \(d\) is
+exactly \(r-2\), since every one of the \(r-2\) available primes
+takes it above \(N\). The degree of \(e\) is exactly \(3\), since
+its three removals give \(3q,2q,6\), all at most \(N\).
+The degree product is \(3(r-2)\ge r\) when \(r\ge3\).
+As \(q\) varies, the lower endpoints are distinct, the upper endpoints
+are distinct, and the two endpoint sets lie on opposite sides of \(N\).
+The resulting matching therefore proves
+\[
+ \nu_+(N)\ge\#\{q\text{ prime}:N/6<q\le N/3,\ q>3\}
+ \gg \frac{N}{\log N}
+\]
+for all sufficiently large \(N\). The last step uses
+\(\pi(N/3)-\pi(N/6)\sim N/(6\log N)\), from the \(k=1\) case of
+the prime counting asymptotic recorded by Björner.
+[Björner, Theorem 2.3(b)](https://arxiv.org/pdf/1101.5704).
+
+Use the complete windows \(I(Y)=[Y,Y^{3/2})\cap\mathbf Z\) and
+weights \(1/(N(N+1))\) of the pinned arithmetic input. On every sufficiently
+late complete window,
+\[
+ Q_{\nu_+}(Y)=\sum_{N\in I(Y)}\frac{\nu_+(N)^2}{N(N+1)}
+ \gg \frac{Y^{3/2}}{(\log Y)^2}.
+\]
+Indeed \(\log N\le(3/2)\log Y\), \(N/(N+1)\ge1/2\), and the window
+contains \(\gg Y^{3/2}\) integers. Thus substituting \(\nu_+\) for
+\(M_+\) in the window energy produces a majorant with power growth
+on every sufficiently late window. The obstruction concerns the
+size of that majorant. The signed residual estimate and the
+corresponding arithmetic cancellation remain O.
+[Pinned window definition](https://github.com/mathorn1973/twist-j/blob/ceb77e3632ec4617c54d8e1fd504d3b1c99dd106/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/WINDOW-BOUND.md).
