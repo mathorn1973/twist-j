@@ -153,9 +153,7 @@ for invariant in (
     "if: needs.architecture.result != 'success'",
     "  publication:\n    if: github.ref_type == 'tag' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'\n    runs-on: ubuntu-latest",
     "if: github.ref_type == 'tag' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'\n    runs-on: ubuntu-latest\n    timeout-minutes: 60",
-    "actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5",
     "persist-credentials: false",
-    "actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
     "python tools/check_policy.py",
     "python tools/check_canon.py",
     "python tools/check_ledger.py",
@@ -179,7 +177,15 @@ if workflow.count(upload_token) != 2:
     fail("workflow must have one architecture receipt and one tag manifest upload step")
 publication_at = workflow.find("\n  publication:")
 architecture = workflow[workflow.index("\n  architecture:"):workflow.index("\n  check:")]
-if architecture.count(upload_token) != 1 or workflow[publication_at:].count(upload_token) != 1:
+publication = workflow[publication_at:]
+for job_name, job in (("architecture", architecture), ("publication", publication)):
+    for pin in (
+        "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    ):
+        if not re.search(rf"^      - uses: {re.escape(pin)}[ \t]*(?:#.*)?$", job, re.MULTILINE):
+            fail(f"{job_name} must use {pin}")
+if architecture.count(upload_token) != 1 or publication.count(upload_token) != 1:
     fail("receipt and activation manifest uploads must remain in their respective jobs")
 if '--full' in workflow:
     fail("ordinary publication reuses a complete pair; manual v107 has its own fixed replay steps")
@@ -197,7 +203,6 @@ if hashlib.sha256(source.encode()).hexdigest() != 'b9c96884ad2c72d09f725f733adf9
 for forbidden in ('continue-on-error:', 'workflow_call:', '  inputs:', 'contents: write', 'actions: write', 'pull-requests: write'):
     if forbidden in workflow:
         fail('forbidden recovery capability: ' + forbidden)
-publication = workflow[publication_at:]
 if '--base' in publication:
     fail('publication must not select changed paths')
 ordered = ('Pin manual postpublication readback to immutable v107', 'python -u tools/check_verifier.py',
