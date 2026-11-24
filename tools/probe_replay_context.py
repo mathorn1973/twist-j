@@ -78,6 +78,13 @@ ADMITTED_CONTEXT_PATHS = {
         'canon/REGISTRY.tsv',
         'canon/CHANGELOG.md',
     }),
+    'P-INTEGER-RECIPROCAL-SOURCE-ACTION-2': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
     'P-INTEGER-FIXED-DURATION-BOUNDARY-1': frozenset({
         'canon/CANON.md',
         'canon/CORE.md',
@@ -161,6 +168,9 @@ ADMITTED_BUNDLE_PATHS = {
     }),
     'P-INTEGER-SCALAR-LAPSE-RIGIDITY-1': frozenset({
         'probes/P-INTEGER-SCALAR-LAPSE-RIGIDITY-1/breaker.py',
+    }),
+    'P-INTEGER-RECIPROCAL-SOURCE-ACTION-2': frozenset({
+        'probes/P-INTEGER-RECIPROCAL-SOURCE-ACTION-2/breaker.py',
     }),
     'P-INTEGER-FIXED-DURATION-BOUNDARY-1': frozenset({
         'probes/P-INTEGER-FIXED-DURATION-BOUNDARY-1/breaker.py',
