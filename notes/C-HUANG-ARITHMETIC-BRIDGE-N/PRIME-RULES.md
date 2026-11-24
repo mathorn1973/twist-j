@@ -176,8 +176,18 @@ factors lie below the cutoff. Thus the matching gives at least
 \(r-1-t\) distinct primes \(p_i\), each admitting at least
 \(\lceil r/2\rceil\) distinct selected prime multipliers \(p_j\)
 with \(p_ip_j>N\). The selected pairs can be chosen with distinct
-upper products as well. The input is a count of prime products in
-a finite, specified range.
+upper products as well.
+
+The graph of prime pairs with product above \(N\) has all but
+\(t<r-1\) of the \(\binom r2\) possible edges. For \(r\ge2\), a
+prime with degree below \(\lceil r/2\rceil\) in this graph is missing
+at least \(\lfloor r/2\rfloor\) of its \(r-1\) possible neighbors.
+The sum of missing degrees is \(2t\), so the number of such primes is
+at most \(\lfloor 2t/\lfloor r/2\rfloor\rfloor\). This elementary
+count can give more qualifying primes than \(r-1-t\). Both counts
+concern a fixed set of primes under a density premise on their pairs.
+A prime distribution conclusion would require arithmetic control
+of that premise.
 
 ## Coordinate counts and the squared trace
 
