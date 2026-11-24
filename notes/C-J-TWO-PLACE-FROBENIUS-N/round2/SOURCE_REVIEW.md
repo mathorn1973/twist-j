@@ -91,6 +91,7 @@ blind confirmation.
 | Unit-only correctness weakens the fifteen-state bound | Every distinct phase difference has a common shift to two admissible times with opposite flags; updates at intervening ticks are essential |
 | The four-bit construction imports an unexplained recurrence | It is exactly multiplication by J modulo two in the J-power basis, with g^4=g^3+1 and g^12=g+1 |
 | A later reset can discover the initial odd phase | It cannot; the construction explicitly requires c_T=g^T when initialized at T |
+| The fifteen-state bound applies even when the full native counter is available | It does not: Pi(n,psi)=g^n is an exact clock factor and needs no extra persistent state; the restricted observer contract excludes that input |
 | Growing precision is advertised as a sharp window optimum | Only the registered sufficient length is used; no sharp per-precision minimum is claimed |
 
 ## 4. Evidence and remaining boundary
@@ -111,3 +112,5 @@ The physical/native realization of the extra observer memory remains O.
 In particular, the word "state" in the fifteen-state theorem means a
 declared persistent observer state. It does not identify a new coordinate,
 record, write law or apparatus in the original native U.
+The explicit whole-state counter factor is retained as a comparison,
+so no loss of information from the entire canonical state is asserted.

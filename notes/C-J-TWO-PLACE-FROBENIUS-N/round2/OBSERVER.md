@@ -182,3 +182,19 @@ length grows with precision. The fifteen-state result counts only the
 additional persistent odd phase; it is not a total apparatus-memory
 bound. A native carrier for both retained resources remains an open
 and separately scoped task.
+
+## 6. The whole-state clock is a different admitted input
+
+**Candidate-D.** The canonical full state is
+\(\Omega=\mathbb N_0\times\mathbb F_5^6\). If its counter is directly
+available, define \(\Pi(n,\psi)=g^n\). Since the native update increments
+\(n\) by one, \(\Pi\circ U=g\Pi\). This is an onto factor to the
+fifteen-state multiplication orbit. Equation (4.3) then reads the flag
+from the full state without any additional persistent observer state.
+
+This observation does not contradict Theorem 3.1: its input contract
+explicitly excludes the absolute counter. The theorem measures the
+persistent state needed in that more restricted observation class,
+not information missing from the whole canonical state. Transient
+arithmetic work and the physical cost of accessing the counter or
+building the register are separate questions in both cases.

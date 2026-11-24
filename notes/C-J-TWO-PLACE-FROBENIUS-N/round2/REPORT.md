@@ -99,6 +99,16 @@ It does not locate these fifteen persistent states inside the original
 six-coordinate checkpoint. The retained input window, if physically
 stored, has its own cost and is not counted among these fifteen states.
 
+**Candidate-D, full-state comparison.** The entire canonical state is
+\(\Omega=\mathbb N_0\times\mathbb F_5^6\), including the counter \(n\).
+If that counter is an admitted observation, then
+\(\Pi(n,\psi)=g^n\) already satisfies \(\Pi(U(n,\psi))=g\Pi(n,\psi)\).
+The flag can therefore be read without an additional persistent state.
+The fifteen-state bound is the sharp cost within the declared class
+that lacks direct counter access; it is not a lower bound for every
+reader of the whole native state. Neither comparison determines the
+physical cost of reading the counter or constructing a register.
+
 ## 4. Relation to the refined arithmetic decoder
 
 **Inherited T.** The registered finite-history reader recovers every
@@ -123,8 +133,9 @@ each precision is claimed.
 
 ## 5. Remaining question and evidence boundary
 
-**O.** Give a permitted native memory carrier, preparation and update law
-that realizes the persistent odd phase and the retained dyadic history.
+**O.** For the observation class without direct counter access, give a
+permitted native memory carrier, preparation and update law that realizes
+the persistent odd phase and the retained dyadic history.
 The current proof specifies what the observer must retain and provides
 an exact arithmetic construction. It does not establish that an unchanged
 native checkpoint supplies that carrier, or that such an apparatus has
