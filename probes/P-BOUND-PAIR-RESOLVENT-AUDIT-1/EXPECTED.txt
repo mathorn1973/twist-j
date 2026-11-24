@@ -1,0 +1,28 @@
+P-BOUND-PAIR-RESOLVENT-AUDIT-1
+arithmetic: rational Laurent polynomials; no floating point
+original symbol unitarity: PASS
+raw adjugate left and right: PASS
+free determinant and Schur factors: PASS
+adjugate relative Laurent support: PASS
+physical radical polynomial identities: PASS
+full even contact inverse left and right: PASS
+odd separation and direct BB cofactor: PASS
+complete free odd Caratheodory function: PASS
+all-coin contact determinant and A cofactor: PASS
+complete interacting odd function: PASS
+even continuum density numerator: PASS
+full gap H/G representation: PASS
+compact A branch v=-1: PASS
+compact A branch v=1: PASS
+direct original-walk return moments: PASS
+small exterior root through second order: PASS
+resolvent moments on exterior sheet: PASS
+negative control wrong radical sheet: PASS
+negative control omitted contact phase: PASS
+rank-two scattering determinant and transition: PASS
+complete on-shell transition unitarity: PASS
+complete denominator positive identity: PASS
+original pulse determinant trace and unitarity: PASS
+groups=23; exact conditions=130
+status: CERTIFIED
+scope: algebraic resolvent audit; not a new probability integration
