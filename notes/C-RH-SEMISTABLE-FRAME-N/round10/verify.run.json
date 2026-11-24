@@ -1,0 +1,38 @@
+{
+  "status": "candidate-C finite first run; no public promotion",
+  "execution_pin": "e4b7ee04b10e227fa7362b6578c9046dd1613b22",
+  "contract_pin": "4c3ff7a6c3003b8c102ce44eac6e1891b5a8c728",
+  "program": "notes/C-RH-SEMISTABLE-FRAME-N/round10/verify_r10.py",
+  "program_sha256": "4dd909dfcd5dbe7715a1c20e0b49a7e57873248f894b371e771643870eb87dbe",
+  "program_bytes": 15778,
+  "contract_sha256": "7f8190d05f4269f8c9d43c6138a1812a5b82b1fae6a742f9ff777b67b3f8b5c9",
+  "contract_bytes": 8966,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "notes/C-RH-SEMISTABLE-FRAME-N/round10/verify_r10.py"
+  ],
+  "cwd": "repository root at execution pin",
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "LC_ALL": "C.UTF-8",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "platform": "Debian GNU/Linux 13 (trixie)",
+  "architecture": "x86_64",
+  "python_version": "3.12.14",
+  "started_utc": "2026-11-23T20:14:09.530391+00:00",
+  "elapsed_nanoseconds": 752608721,
+  "timeout_seconds": 240,
+  "timed_out": false,
+  "exit_code": 0,
+  "stdout_bytes": 226,
+  "stdout_sha256": "b1e9a39607a644c53ab2e7ba0bce109d66a7d061ea334196bbb9778f6bba1ce3",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "clean_before": true,
+  "clean_after": true,
+  "first_run": true,
+  "blind_code_authorship": true,
+  "external_independent_review": false,
+  "two_architecture_gate": false
+}

@@ -1,0 +1,22 @@
+{
+  "architecture": "x86_64",
+  "candidate": "C-RH-SEMISTABLE-FRAME-N",
+  "elapsed_nanoseconds": 4909722359,
+  "execution_pin": "b83250a7db82d2a27de932617fb39f61cf6af823",
+  "exit_code": 0,
+  "lane": "one architecture only",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "pre_execution_driver_stops": 1,
+  "pre_execution_stop_explanation": "Malformed 65-character hash transcription; no scientific execution; see CUSTODY.md.",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "round": 9,
+  "script": "verify_r9.py",
+  "script_executions": 1,
+  "script_sha256": "73f36c06df3084af2bfd012a85b1e3bf9a2e938959e3be7752863f2e8eb5f37d",
+  "started_utc": "2026-11-23T19:20:55.219720+00:00",
+  "status_ceiling": "candidate-C",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "0cb0452c896eb12ddff1cceb8acde56a0766724bad2d81fa104c34972e2779a9",
+  "timed_out": false,
+  "wall_timeout_seconds": 180
+}

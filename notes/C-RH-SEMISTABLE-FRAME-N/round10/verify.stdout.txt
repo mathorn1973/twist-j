@@ -1,0 +1,5 @@
+A orbit_elements=62 ordered_pairs=920 diagonal=62 off_diagonal=858
+B neighbors=290 ordered_pairs=21614 diagonal=290 off_diagonal=21324
+C gram_cases=35
+D considered=20292 invertible=11454
+E subspaces=647 case_counts=65,210,372

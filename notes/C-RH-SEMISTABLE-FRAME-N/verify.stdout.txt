@@ -1,0 +1,6 @@
+A: 6291 exhaustive map families satisfy the kernel formula
+B: 25164 level-1 and 960 level-2 rank bounds hold
+C: rational character Gram 4I, synthesis rank 2, certificate rank 5/6, epsilon 1/6
+D: 1146 exhaustive block budgets hold, including 615 zero-defect and 146 balanced zero-defect cases
+E: 7168 normalization bounds hold, sharp variation 1/3, joint variation 1/2
+PASS: round 8 finite audit, NON-CANONICAL candidate-C
