@@ -54,8 +54,11 @@ pair would end. Omitting it changes the carrier.
 On a slab \(X\le N<2X\), use the given forward average \(U_H^J\).
 Write \(\lambda_s\) for the probability that its total shift is \(s\),
 \(0\le s\le J(H-1)\), and \(I-s=\{N:N+s\in I\}\).
-For any slab-window intersection \(\mathcal W=[A,B)\) the Gram
-kernel of two averaged interval functions is
+For integer \(Y\) and each nonempty slab-window intersection, take
+\(A_X=\max(X,Y)\), \(B_X=\min(2X,\lceil Y^{3/2}\rceil)\), and
+\(\mathcal W=[A_X,B_X)\cap\mathbb Z\). These integer endpoints also
+apply when \(Y^{3/2}\) is itself an integer. The Gram kernel of two
+averaged interval functions is
 \[
  {\cal G}^{\,U}_{\mathcal W}(I,I')
    =\sum_{s,t}\lambda_s\lambda_t{\cal G}_{\mathcal W}(I-s,I'-t).
