@@ -74,6 +74,51 @@ not needed for the present T-tail theorem and are not copied.
 
 ## Scientific boundaries
 
+### Low-height cancellation, round six
+
+This continuation starts at exact candidate head
+`f55cbcd1bf0eff6de99449c37ac8c03916b8acfe`, with the same freshly
+verified v117 public authority. All 400 remote heads, current claims
+and the same owner issue were checked before repository authoring.
+The latest relevant neighboring draft is #2093 at
+`2147cba363d90d2772c3d5f883d79c326260d9c9`. Its
+[PRIME-CANCELLATION](https://github.com/mathorn1973/twist-j/blob/2147cba363d90d2772c3d5f883d79c326260d9c9/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/PRIME-CANCELLATION.md)
+and the package's whole-window scope were inspected. In particular
+sections 2 and 3 supply the balanced Mertens construction and the
+centered sawtooth covariance. That owner retains its orientation
+carrier and window convention. The round-six t-balance, signed cubic
+unit asymptotic and controlled correction are derived here.
+
+The low-height marked-prime main term uses this candidate's own
+[LARGE-PRIME-TAIL](round3/LARGE-PRIME-TAIL.md), with the cutoff now
+checked uniformly on the finite taper. Root reread Yamada's pinned
+introduction at [arXiv:1306.5322v4](https://arxiv.org/html/1306.5322v4#S1).
+Only the classical fixed-modulus prime theorem to each fixed
+inverse-logarithmic order is consumed. No growing-modulus assertion,
+explicit source constant or finite computation is imported.
+
+The compact-spectrum smoothing proof uses the already established
+actual t short-sum transfer. Root reread the primary
+[MRSTT Theorem 1.1(i), with equation (1.4)](https://doi.org/10.1007/s00222-026-01408-6),
+including the maximal progression norm, exceptional-set measure and
+length interval. All rescaled arithmetic work remains in the pinned
+round-five proof; round six only applies it on admissible comparable
+integer start blocks. Its alternative compact cap is wider than the
+existing star cap. The artificial local model is solely a limitation
+of those inputs and does not have the actual arithmetic coefficients.
+
+The exact primitive projector identity, its short-support discrepancy,
+the repeated-prime correction, the cube-root sufficient threshold,
+the translated divisor mean-square bound and the signed cubic unit
+calculation are given with proofs in round6. No historical priority
+is asserted. No external RH proof, new zero-free assertion, numerical
+experiment or third-party implementation enters the package.
+
+Two Astra and two Sol participants, including root, supplied paper
+derivations and opposition. Same-session review is not external
+independent confirmation. The final mixed Q_core estimate remains O;
+all new deductions remain candidate-D.
+
 ### Signed estimates, round five
 
 This continuation starts at exact candidate head

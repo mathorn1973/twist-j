@@ -1,4 +1,4 @@
-# Arithmetic cancellation: signed estimates and the surviving low-height sum
+# Arithmetic cancellation: low heights and the cube-root conductor transfer
 
 **NON-CANONICAL, no authority. Candidate-D paper deductions; candidate-C finite audits.**
 Owner: A. M. Thorn / ChatGPT arithmetic-kernel session, 24 November 2026.
@@ -6,14 +6,59 @@ Claim: [#2087](https://github.com/mathorn1973/twist-j/issues/2087).
 Action layer: NOT_APPLICABLE. No Canon promotion or independent RH proof.
 
 The first result bounds the moving support `d^3 <= n^2` unconditionally.
-The latest continuation proves a signed power saving for growing numerators,
-all-fixed-logarithmic savings for the actual short smoothing error, and a
-quantitative unconditional estimate for the complete determinant remainder.
-The joint low-height, rough-conductor power estimate remains open.
+The latest continuation proves opposing main terms inside the actual
+low-height pair sum and replaces all conductors with a prime factor above
+`(4X)^(1/3)` by an exact arithmetic function at smaller arguments. The
+remaining Fourier conductors have at least three distinct split prime
+factors. Their joint contribution with the exact replacement is still open.
+
+## Low-height continuation
+
+**Candidate-D, paper only.** The [current report](round6/REPORT.md)
+gives the actual cancellations, exact replacement and remaining criterion.
+All earlier proofs and finite evidence are preserved.
+
+| Actual object | Proved estimate or boundary | Proof |
+|---|---|---|
+| Largest-prime conductor classes above and below `sqrt(4X)` | Each within-class signed sum has leading term `+kappa^2 M_X`; both mixed orders give `-2kappa^2 M_X`, where `M_X` has order `X^3/log^4 X`. This persists for heights at most `log^14 X`. The two classes cannot separately meet the square-root target. | [MARKED-PRIME-CANCELLATION](round6/MARKED-PRIME-CANCELLATION.md) |
+| Exact large-prime arithmetic profile | Its difference from the actual marked low-height packet has squared norm `O_epsilon(X^(2+epsilon))`. The resulting centered signed square is controlled at this scale, using exact prime counts and smaller actual coefficients. | [Marked-prime section 5](round6/MARKED-PRIME-CANCELLATION.md#5-replacing-the-marked-family-by-an-exact-smaller-argument-profile) |
+| Primitive conductor cut versus original support cut | Their exact discrepancy has support at most `D/z`; finite large-sieve control pays the transfer for `z>=D^(1/3)`. The smaller-argument replacement includes single primes and unordered prime pairs, including `p=q`. | [CUBE-ROOT-TRANSFER](round6/CUBE-ROOT-TRANSFER.md) |
+| Remaining conductor domain | After also deleting `r<=D^(2/3)`, every remaining conductor has at least three distinct split primes, all at most `D^(1/3)`. Its mixed term with the exact replacement remains in the equivalent target. | [Cube-root section 3](round6/CUBE-ROOT-TRANSFER.md#3-every-remaining-fourier-conductor-has-at-least-three-distinct-split-prime-factors) |
+| Compact-spectrum smoothing | Actual short sums pay every fixed logarithmic saving at `H=ceil(sqrt X log^B X)`. This controls the error and smooth annuli; its frequency cap is wider than the already frozen star cap and is not a further removal from that spectrum. | [SHORT-SPECTRAL-SCALES](round6/SHORT-SPECTRAL-SCALES.md) |
+| Signed coefficient unit and balanced carrier | `sum_(k<=x)u(k)=C_U x^(1/3)+O_sigma(x^sigma)`, with positive `C_U` and `log 2/log 11<sigma<1/3`. The negative square, cubic correction and long affine terms give a balanced comparison with finite total late error. | [BALANCED-UNIT-TAIL](round6/BALANCED-UNIT-TAIL.md) |
+
+With `D=4X`, `z=D^(1/3)`, let `G_core` be exactly the original star
+spectrum restricted to `D^(2/3)<r<=D` and
+`(log X)^2<P^+(r)<=D^(1/3)`. The explicit replacement is
+
+\[
+ C_z(n)=-2\sum_{z<p\le n}T(\lfloor n/p\rfloor)
+        -4\sum_{\substack{z<p\le q\\pq\le n}}
+                   T(\lfloor n/(pq)\rfloor),
+\]
+
+with split primes throughout and the diagonal `p=q` retained. All T
+arguments have size `O(X^(2/3))`. The bound
+`||T-(G_core+C_z)||_w^2 <<_epsilon X^(2+epsilon)` transfers the target to
+
+\[
+ Q_{\rm core}=P_{\rm core}
+       +2\operatorname{Re}\langle G_{\rm core},C_z\rangle_w
+       +\|C_z\|_w^2.
+\]
+
+**O:** establish `(Q_core)_+ <<_epsilon X^(2+epsilon)` for every fixed
+positive epsilon on all sufficiently late dyadic blocks. The exact
+profile and mixed term are required. Smaller arguments do not by
+themselves close an induction. Four same-session opposition records,
+the paper scope records and the
+[promotion handoff](round6/PROMO-C-RH-ARITHMETIC-KERNEL-N.md) retain
+candidate-D status. No new scientific computation or external independent
+confirmation is claimed.
 
 ## Signed-estimate continuation
 
-**Candidate-D, paper only.** The [current report](round5/REPORT.md) contains
+**Candidate-D, paper only.** The [round-five report](round5/REPORT.md) contains
 the full synthesis, the fixed combined cuts and their precise limitation.
 All original coefficients and earlier finite evidence are retained.
 

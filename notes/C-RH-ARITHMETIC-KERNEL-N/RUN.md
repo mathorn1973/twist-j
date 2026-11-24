@@ -235,3 +235,52 @@ static and remote integrity results are recorded at the new exact head
 in draft #2089. The required architecture workflow checks the notes
 delivery and existing repository gates; it does not turn these paper
 deductions into computation-grade mathematical evidence.
+
+## Low-height continuation, round six, 24 November 2026
+
+The same owner continues from candidate head
+`f55cbcd1bf0eff6de99449c37ac8c03916b8acfe`. Fresh STATUS-first public
+readback, private startup, all 400 public remote heads and current
+claims were checked. Main remains
+`6f2e112aafc4f3aca4222bb4bf3dced1d79fe2ed`, Public Canon v117; the
+declared tag, content ancestry, five normative hashes and exact-main
+architecture pair and aggregate were verified again. The prospective
+continuation was appended to the existing issue before authoring new
+repository material. No new claim owner or formal probe was created.
+
+The four new proof files contain low-height marked-prime cancellation,
+the cube-root conductor transfer, compact-spectrum short-sum estimates,
+and the signed cubic unit with a balanced comparison. Their initial
+paper scope records are preserved. The narrower transposition record
+honestly identifies its result-exposed timing. There was no scientific
+computation, numerical sum, finite audit, external-source execution or
+formal verifier in this continuation.
+
+An Astra derived the actual conductor identities and low-height
+estimates; two Sol participants developed the short-spectral and
+balanced-unit arguments. A Sol reviewed the marked-prime proof, another
+Sol reviewed the cube-root transfer including the final three-prime
+consequence, the Astra reviewed the signed unit and balanced carrier,
+and root reviewed all four proofs and the other opposition records.
+Root supplied the further deletion through D^(2/3). Root's short-scale
+review required clarification that its compact frequency cap is wider
+than the existing star cap. The corrected paper makes only the proved
+improvement to the smoothing error. No threshold or computed outcome
+changed. Root's final scope review covers the report and handoff.
+
+The neighboring draft #2093 was read at
+`2147cba363d90d2772c3d5f883d79c326260d9c9`. Its balanced Mertens
+construction and covariance are credited. The current package proves
+the separate transfer to t, includes the cubic correction, and keeps
+the distinct carriers and window conventions explicit. Root reread
+the primary fixed-modulus prime-count input and the exact published
+short-interval statement used through round five.
+
+Assembly changes only the package indexes and the new round-six files.
+Public-copy adjustments concern working-path references, links and
+same-session review wording. Earlier proofs, finite evidence and
+preregistration bytes remain unchanged. All new deductions are
+candidate-D; the final Q_core positive-part estimate is O. CI and
+repository integrity checks are not mathematical promotion or external
+independent confirmation. Exact delivery and required workflow results
+are recorded on the same draft PR.

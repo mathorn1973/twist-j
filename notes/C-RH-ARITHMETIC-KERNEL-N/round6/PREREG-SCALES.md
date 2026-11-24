@@ -1,0 +1,9 @@
+# C-RH-ARITHMETIC-KERNEL-N / short sums and time scales
+
+NON-CANONICAL. No authority. Candidate-D after proof. Prospective paper-only scope under issue #2087 and draft #2089 head `f55cbcd1bf0eff6de99449c37ac8c03916b8acfe`. Use the actual `t=s*chi` and `T` of the coefficient unit, the finite dyadic taper and the rounded short sums in `SHORT-SUM-TRANSFER`. No scientific computation, verifier, or Git or remote changes.
+
+1. Seek a quantitative local smoothing or frequency-shell estimate for the genuine finite Fourier sum from short sums of `t`. Fix scale parameters and give exact time boundary and smoothing tail allowances. An estimate for an individual spectral projection must not be inferred from a signed bound for a larger sum without a proved operator estimate.
+2. Track how the actual available short-sum rate and the absolute coefficient unit bounds constrain the resulting errors. Determine the frequency range removed at the original `X^(2+epsilon)` squared-block scale, or provide a precise limitation if the known short-sum range yields only logarithmic improvement or changes no exponent. Distinguish fixed logarithmic improvements, a power saving, and all-epsilon quantifiers.
+3. Any finer error from a multiscale decomposition must retain the original sign and smoothness of the kernels, account for near-zero modes and the finite localized window, and preserve the existing proof scope. A model on which a short-sum control cannot estimate the lowest modes may be used only with explicit hypotheses and no assertion about the true signed remainder.
+
+Falsifiers include an unproved spectral inversion, a zero of the averaging multiplier in the retained shell, extrapolation beyond the imported short interval range, or cancellation borrowed from a changed carrier. The general low-height bound remains open unless a new argument actually attains it.
