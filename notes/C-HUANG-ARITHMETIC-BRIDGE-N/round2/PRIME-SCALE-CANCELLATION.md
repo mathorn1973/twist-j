@@ -199,12 +199,69 @@ prime \(p\). The strip thresholds and the negative square in
 squares apply to its own prefix and inverse coefficients.
 [Neighboring coupled cuts, Sections 1–2 and 4](https://github.com/mathorn1973/twist-j/blob/6a91ef48f6454743797614503aa5863dde54befb/notes/C-RH-ARITHMETIC-KERNEL-N/round8/COUPLED-CUTS.md).
 
-**O.** With \(T_X=\lfloor X^{1/4}\rfloor\) a sufficient estimate
-is the original subpower bound, for every required exponent
-and on its arbitrarily late complete windows, for the positive
-energy of the *joint averaged sum* in (8). The inherited comparison
-to \(R_{1/36}\) transfers this estimate with the original
-weights. The inverse filter estimate controls an unsigned norm
-cost, and (2)–(3) exhibit cancellation at a coarser scale.
-Neither yields that bound for (8).
+## A growing common cutoff by exact reallocation
+
+**Candidate-D.** The one-prime reallocation of
+[SIGNED-INTERVALS.md](SIGNED-INTERVALS.md) absorbs both lower strips
+into its short factor and compensates with a different negative
+square. For several selected primes, put
+\(e_S=\sum_{s\mid P}\mu(s)\delta_s\) in Dirichlet convolution and
+\(\nu_S=\mu\mathbf1_{(\cdot,P)=1}\). Then \(\mu=e_S*\nu_S\).
+Take a nonempty \(S\) and use the reallocated short and long
+coefficients
+\[
+ u'=e_S*(\nu_S\mathbf1_{d\le T}),\qquad
+ g=e_S*(\nu_S\mathbf1_{d>T}).
+\]
+As in the one-prime case, \(\sum_d u'(d)=0\), since
+\(\sum_{s\mid P}\mu(s)=0\). The support of \(u'\) is at most \(B=PT\)
+and \(|u'(d)|\le1\) by uniqueness of the selected-prime divisor
+and coprime core. The exact convolution identity of that
+reallocation then gives, for \(n\ge B\),
+\[
+ M(n)=C'_T(n)-(n+1/2)(h'_T)^2
+       +\sum_{d\le B^2}(u'*u')(d)\psi_d(n),\qquad
+ h'_T=\prod_{p\in S}(1-1/p)\,h_T^{(P)} ,
+\]
+where \(\psi_d(n)=\{(n+1/2)/d\}-1/2\) and \(C'_T\) is the prefix
+of \(g*g*\mathbf1\). Here one common core cutoff is valid:
+\[
+ C'_T(n)=\prod_{p\in S}(I-T_p)^2 C^{(P)}_{T,T}(n).
+\]
+The coefficients in \(C'_T\) differ from (7) through the exact
+reallocation, and the square uses \(h'_T\). Both changes enter
+the same identity for \(M\).
+
+This reallocation admits a growing selection on the original
+slabs. Let \(T=\lfloor X^{1/4}\rfloor\) and
+\(S=\{p:p\le\kappa\log X\}\) with fixed \(0<\kappa<1/12\).
+Partial summation of the prime number theorem gives
+\(\log P=\sum_{p\le\kappa\log X}\log p
+=\kappa\log X+o(\log X)\), so \(B\le X^{1/3-\eta}\) eventually
+for some \(\eta>0\). The inherited short-rectangle norm estimate
+applies to the final sum above. Its hypotheses use support
+\(d\le B^2\) and \(|(u'*u')(d)|\le \tau(d)\), giving squared
+slab norm after the original forward average at most
+\[
+ \ll \frac{(X+B^4)B^2}{X^2}(1+\log X)^3.
+\]
+The two powers \(B^2/X\) and \(B^6/X^2\) both give a power
+saving for this choice. Thus the reallocated amplitude
+\(U_H^J C'_T-L_X(h'_T)^2\) differs from \(U_H^J M\) by a
+power-saving slab norm. The original centered amplitude differs
+from \(U_H^J M\) by \(O(1)\) in slab norm by the inherited
+transfer. The two centered amplitudes therefore differ by
+\(O(1)\) in slab norm.
+[Pinned short-rectangle estimate](https://github.com/mathorn1973/twist-j/blob/ceb77e3632ec4617c54d8e1fd504d3b1c99dd106/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/FULL-COUPLED-ENERGY.md).
+
+**O.** A sufficient estimate is the original subpower bound for the
+positive energy of either joint averaged centered amplitude, for
+every required exponent on its arbitrarily late complete windows.
+For the reallocated amplitude the per-slab norm comparison sums
+in square over the original window intersections, yielding
+\(O(1+\log Y)\) squared error and retaining the all-exponent
+criterion. The inherited comparison to \(R_{1/36}\) uses the same
+weights. The filter norm gives a two-sided operator cost, and
+(2)–(3) exhibit actual cancellation at a coarser scale. These
+results leave the stated positive energy estimate open.
 [Inherited signed transfer](https://github.com/mathorn1973/twist-j/blob/ceb77e3632ec4617c54d8e1fd504d3b1c99dd106/notes/C-RH-THREE-INTERFACE-SYNTHESIS-N/FULL-COUPLED-ENERGY.md).
