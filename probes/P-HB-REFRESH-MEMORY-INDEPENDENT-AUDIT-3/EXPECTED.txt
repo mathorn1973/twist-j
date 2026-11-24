@@ -1,0 +1,9 @@
+PROBE P-HB-REFRESH-MEMORY-INDEPENDENT-AUDIT-3
+SCOPE PUBLIC NON-CANONICAL L1 independent-code-audit
+STAGE custody PASS files=7 sources=20
+STAGE geometry_and_operators PASS sites=705 amp_dim=1426 stencil=60 directed_edges=28954 h=1/324,1/54,1/54,0 kappa=-145483/10497600,-173653/10497600
+STAGE refresh_identities_target1 PASS basis_inputs=1426 refresh_coefficients=7130 inverse_compositions=2852
+STAGE rank_minors_and_criteria_target2 PASS rank_02=3 det3=-1/1749600 rank_012=4 det4=1/5668704000 guard_separations=18
+STAGE far_counterexample_target3 PASS far_rho2_plus=-1/1049760 far_work_plus=419903/1049760 far_work_minus=83981/209952 near_rho1_plus=-1/3240
+STAGE finite_contact_predictor_target4 PASS single_cases=2000 two_cases=480 single_ZeroPosNegLowUp=80,970,100,750,100 two_AA_AR_RA_RR=139,157,24,160
+VERDICT PASS
