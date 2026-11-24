@@ -1,0 +1,9 @@
+PASS q=3: 2048 exact source/synthesis/cascade/read/inverse cases
+PASS q=1..9: 576 supplied-gain cases, including depth zero
+PASS 225 literal occupied-archive extensions and complete inverses
+PASS outside-depth witness n=5461: DEPTH_LIMIT; native inverse retained
+WORD contacts=15 core_slots=16 sha256=eb37b5b2b6918571a3498b6d0badc9188d61f4511cf891dd90d17d4b7bdcc0db
+BOUNDARY q=3 sha256=e7aa8abf1acff43fcda83141b41ee238d854386d17e716d12c0d0a1a2c9e630e
+DEPTH_COUNTS [[1,1024],[2,512],[3,256],[4,128],[5,64],[6,32],[7,16],[8,8],[9,4],[10,2],[11,1],[12,1]]
+COUNTS forward_cases=2850 native_inverses=2850 primitive_word_applications=213750 distinct_pair_inputs=48772
+PASS C-CONTACT-AFFINE-NUMERATOR-CASCADE-N; selected coherent source, no reload claim
