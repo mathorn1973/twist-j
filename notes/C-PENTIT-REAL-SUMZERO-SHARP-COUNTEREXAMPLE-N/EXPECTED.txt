@@ -1,0 +1,10 @@
+C-REAL-SUMZERO-SHARP-COUNTEREXAMPLE
+exact_checks=148 status=PASS
+density=POSITIVE_HERMITIAN_RANK1_PROJECTOR
+wigner_support=zero:11 positive:12 negative:2
+negative_points=(1,0),(4,0)
+sign_basis=EXPOSED_ANALYTIC_FIRST_QUADRANT
+negativity=sqrt(5+2*sqrt(5))/10
+negativity_squared=(5+2*sqrt(5))/100
+old_bound_squared_gap=1/100
+scope=ALL_REAL_SUMZERO_CONJECTURE_ONLY
