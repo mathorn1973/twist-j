@@ -32,7 +32,13 @@ all       156   46   53    255
 
 - 162 of 255 rows (V7 and V8) cannot be stated until the TWIST vocabulary exists in Lean: the native update on N0 x F5^6, its counter and checkpoint, readouts, records, ports and energy accounts. Writing those definitions is the statement surface; it is where a wrong formalization would silently prove the wrong thing, so it needs owner review before any proof work.
 - 93 rows (V0 to V6) need only Mathlib plus a small kernel: Z[zeta_5], Q(sqrt5), F_5 linear algebra, arithmetic functions. These are the first proof wave.
-- Section 1 of the Canon (the axiom and the two projections) is partly covered by the layer-0 kernel: J-GOLDEN-BRIDGE fully (J phi = j, (J-1)^3 = j, J^5 phi^5 = 1); the ring-level parts of J-STEP (step formula, characteristic polynomial), J-MODULUS-CHORD (J Jbar = 2 - phi, (2 - phi) phi^2 = 1) and J-TENTH-ROOT ((1-J)^5 = -1). Open there: det and trace of M_J as a matrix, exact order ten, Algebra.norm, the archimedean statements of J-PROJECTIONS, and O_K^x = mu_10 x phi^Z.
+- Section 1 of the Canon (the axiom and the two projections) is partly covered by the layer-0 kernel: J-GOLDEN-BRIDGE fully (J phi = j, (J-1)^3 = j, J^5 phi^5 = 1); the ring-level parts of J-STEP (step formula, characteristic polynomial), J-MODULUS-CHORD (J Jbar = 2 - phi, (2 - phi) phi^2 = 1) and J-TENTH-ROOT ((1-J)^5 = -1). Open there, each a separate obligation:
+  1. det M_J = 1 and trace M_J = 3 for the 4 x 4 integer matrix (J-STEP);
+  2. Algebra.norm J = 1 and Algebra.trace J = 3 in Q(zeta_5) (J-UNIT, J-STEP);
+  3. the tie det M_J = Algebra.norm J, which the Canon states in one line but which joins two different objects and must not absorb either of them;
+  4. 1 - J has exact order ten, i.e. primitivity, not only (1 - J)^10 = 1 (J-TENTH-ROOT);
+  5. the archimedean statements of J-PROJECTIONS;
+  6. O_K^x = mu_10 x phi^Z.
 - Not in this triage: the 228 T rows whose scope does not name L1. Most carry a physical dictionary or a higher layer and are outside a first Lean wave.
 
 ## Files

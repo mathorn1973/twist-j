@@ -67,7 +67,9 @@ cyclotomic witness. Reviewed manually on Debian 13, x86_64: build exit 0, no
 ## Layer 0: the axiom
 
 `TwistJ/Kernel.lean` proves, in an arbitrary commutative ring, from the single
-hypothesis `Phi5 j : j^4 + j^3 + j^2 + j + 1 = 0`:
+hypothesis `Phi5 j : j^4 + j^3 + j^2 + j + 1 = 0`. The hypothesis cannot be
+weakened to `j^5 = 1`: at `j = 1` in `ℤ` most of the identities fail.
+
 
 ```text
 j^5 = 1
@@ -91,11 +93,14 @@ Coverage against section 1 of the Canon, as a translation check, not a status:
 
 ```text
 J-GOLDEN-BRIDGE    all three displayed equations
-J-STEP             step formula and characteristic polynomial; det and trace
-                   of M_J as a matrix are open
+J-STEP             step formula and characteristic polynomial; open, as
+                   separate obligations: det and trace of M_J as a matrix,
+                   Algebra.norm and Algebra.trace of J, and the tie between
+                   the two
 J-MODULUS-CHORD    J Jbar = 2 - phi and 2 - phi = phi^-2 in the ring
-J-TENTH-ROOT       1 - J = -j^2 with (1 - J)^5 = -1; exact order ten and the
-                   archimedean value e^(-i pi/5) are open
+J-TENTH-ROOT       1 - J = -j^2 with (1 - J)^5 = -1 and (1 - J)^10 = 1, a
+                   necessary condition only; primitivity (exact order ten)
+                   and the archimedean value e^(-i pi/5) are open
 J-UNIT             unit with explicit inverse, ring-level norm product; the
                    Mathlib Algebra.norm statement is open
 J-PROJECTIONS      open (archimedean embedding)
