@@ -7,6 +7,22 @@ This file is the frozen statement surface of `TwistJ/Kernel.lean`: the same
 definitions and the same theorem types, every proof replaced by `sorry`. A
 proof is accepted only if it proves exactly these statements.
 
+Pairing, recorded here so a checker need not infer it from prose:
+
+```text
+proof file          notes/lean/TwistJ/Kernel.lean
+proof file sha256   a9e4afcd7685ca0f7ae76a8c9140d05658c287c9915891be96c0f4f3fc958f0a
+                    (at freeze; a later proof edit changes this value, a
+                    statement edit requires a new challenge file)
+statements          18 = 16 ring identities + 2 Mathlib witness statements
+```
+
+The sixteen ring identities hold in every commutative ring satisfying
+`Phi5`. The two witness statements, `phi5_of_isPrimitiveRoot` and
+`phi5_cyclotomicField`, are claims about Mathlib's `IsPrimitiveRoot` and
+`CyclotomicField 5 ℚ`; they show the hypothesis is inhabited and are not
+counted among the identities.
+
 # TWIST-J kernel, layer 0: the axiom J = 1 + zeta_5^2
 
 Every identity below is proved in an arbitrary commutative ring `R` from the
@@ -94,7 +110,8 @@ theorem J_charpoly (h : Phi5 j) :
 
 end TwistJ.Kernel
 
-/-! ## The hypothesis is inhabited: Mathlib's fifth cyclotomic field. -/
+/-! ## Witness statements (2), not ring identities.
+The hypothesis is inhabited: Mathlib's fifth cyclotomic field. -/
 
 namespace TwistJ.Kernel
 
