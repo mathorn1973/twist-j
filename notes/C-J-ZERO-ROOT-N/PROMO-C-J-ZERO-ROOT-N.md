@@ -6,11 +6,13 @@ This package is a reviewable candidate under owner reservation #2097.
 It changes only notes/C-J-ZERO-ROOT-N/ and does not edit Canon, registry,
 frontier, gates, sealed probes, reproductions or workflows.
 
-The proposed analytical contributions are the coefficient-contrast
-reconstruction, the exact ideal/code correspondence, the parity-dependent
-Hermitian kernel and precision refinement, and a fully specified 25-input
-native write using the unchanged U, with a fixed current-state reader
-from retained phase references and the native readiness sum. Its explicit
+The package proves the coefficient-contrast reconstruction, the exact
+ideal/code correspondence, the parity-dependent Hermitian kernel and
+precision refinement. The specified 25-input native write uses unchanged
+U with a supplied correlated preparation, followed by a fixed full-state
+reader. Its synchronization and invariant retention instantiate existing
+canonical theorems. One input digit is already in reference r, and the
+counter-free reader also uses source reference pistons. Its explicit
 negative controls distinguish prepared zero from arbitrary raw absence
 and show why the four-piston projection alone cannot report readiness.
 Candidate-T refers to the attached
@@ -25,6 +27,12 @@ absence/zero distinction. A code classification is not a physical error
 mechanism; a written mathematical reader is not an implemented decoder.
 No existing physical obligation or broader native apparatus owner is
 closed by this package.
+
+RECON-REVIEW.md adds written preparation counts, common-receiver split
+capacity bounds, the exact zero-record fibre and a receiver-only reading
+obstruction. It records no new scientific execution and does not replay
+the missing source archive. Its bounds do not claim a native archive,
+repeated acquisition, general absence test or physical realization.
 
 The original audit intake is explicitly incomplete. Original authorship,
 script bytes and checked range must be recovered before that audit can be
