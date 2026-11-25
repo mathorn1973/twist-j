@@ -1,0 +1,4 @@
+Exact CRT residue identities: 29 scales; 841 complete pair correlations.
+Full divisor cube for primes 11,19: exact mean square 9282/1045
+Positive prime mask: 5 of 23 primes; start 11847 height 10 for 151 successive integers.
+Moving integer cutoff and exact complementary quotient formula: 512 integers.

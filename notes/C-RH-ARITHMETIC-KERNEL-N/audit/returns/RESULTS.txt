@@ -1,0 +1,5 @@
+Full signed periods checked for 50 odd squarefree moduli up to 150, and for 101, 151, 15251.
+At N=15251, d=101 and d=15251 have descriptor (25, false), residue 101 mod 150, and kernel 1.
+Their signed contributions are respectively -2 and +4. At depth two their orders are 2525 and 381275.
+Vertical order identities checked for 9 moduli at three levels.
+Exact vertical quotients checked at the preregistered four multipliers for each of Q_2, Q_3.

@@ -1,0 +1,3 @@
+# Low-height signed conductor audit
+
+NON-CANONICAL. No authority. Candidate-D, paper only. The round 4/5 conclusions including the numerator-one positive panel, all-logarithmic cancellation, the uniform-prefix zero barrier, and growing-numerator power estimate are exposed. Test prospective removals or compression of the actual low-height conductor sum with full coprime cofactors. Investigate harmonic amplitude cancellation within complete shell pairs, and uniform implications of stronger single-harmonic estimates. Falsifiers include wrong dependence on X or heights, loss of the cofactor condition, omission of mixed rectangles or reliance on unproved character zero-free assertions. No scientific computation. No change of prior results.

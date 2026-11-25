@@ -1,0 +1,3 @@
+PASS independent factorization/product census and B,H,R through 8192
+FIRE omitted outer cutoff, d=19, N=114, signed support shift -2
+FIRE nonstrict least-prime cutoff, d=209, N=1331, signed support shift +4
