@@ -182,8 +182,10 @@ q_(i-1)->q_(i-1)+e and q_i->q_i-e. A raw anchor error at i=0
 changes all four nonzero r coordinates by -e. Consequently the standard
 independent-symbol guarantee of the q code cannot be applied to errors
 introduced upstream in F. A decoder using the structured propagated-error
-model can still correct one raw error; differencing has not created a
-stronger independent-raw-error guarantee.
+model can still recover a,b and the position and amplitude of one raw
+error. If only q was retained, the common lift constant c and hence the
+complete absolute F word cannot be recovered. Differencing has not
+created a stronger independent-raw-error guarantee.
 
 For raw quadratic readings a simple one-error syndrome is
 
@@ -241,10 +243,13 @@ is injective for every m. The exact identity
 
     2*Delta*x = A(x)+Delta*H_1(x)
 
-recovers x modulo ell^m by exact division. For even m this detects the
-previous last-layer ambiguity with one more ell layer of precision;
-same-depth Hermitian readings cannot do so. No physical mechanism for
-that deeper observation is inferred.
+recovers x modulo ell^m. More precisely, multiplication by Delta
+identifies R_m with ell R_(m+1). Cancel Delta in this isomorphism and
+then multiply by the inverse of 2 in R_m. Arbitrary integral lifts of
+the observed residue classes need not be divisible by 2*Delta in O.
+For even m this detects the previous last-layer ambiguity with one more
+ell layer of precision; same-depth Hermitian readings cannot do so.
+No physical mechanism for that deeper observation is inferred.
 
 ## 7. What the native residue port discards
 
@@ -323,9 +328,11 @@ The first four b_n invert by a unit-triangular binomial matrix to
 q_0,...,q_3, and q_4 is fixed by their zero sum. On N, the first two
 b_n determine the linear q polynomial. This is a complete conditional
 observability statement for a specified J multiplier and sensor.
-Canon U-J-POWER-CHECKPOINT-NOGO forbids identifying that multiplier
-with a nonzero fixed checkpoint reading of unchanged native U.
-No such identification is made here.
+Canon U-J-POWER-CHECKPOINT-NOGO forbids a nonzero fixed checkpoint-only
+reading X in O/(5^m) that obeys X_(n+1)=J*X_n at every step of unchanged
+native U from the origin n=0. It does not assert a delayed-only no-go.
+No identification of the conditional J multiplier with native U is
+made here.
 
 ## 10. Scope of the result
 
