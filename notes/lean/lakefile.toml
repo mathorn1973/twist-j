@@ -17,3 +17,4 @@ name = "TwistJ"
 # Not a default target; built on request with `lake build Challenge`.
 [[lean_lib]]
 name = "Challenge"
+roots = ["Challenge.Kernel"]

@@ -31,9 +31,16 @@ proof surface       untrusted; any author or agent; accepted only if the
                     with no sorryAx and no project axiom
 ```
 
-Layer 0, `TwistJ/Kernel.lean`, is small enough that both surfaces live in one
-file. From the TWIST vocabulary onward (native update, counter, readout,
-records) the statement files are separate.
+The statement surface lives under `Challenge/`, one file per library file:
+the same definitions and theorem types with every proof replaced by `sorry`.
+`Challenge/Kernel.lean` is the surface of `TwistJ/Kernel.lean` (eighteen
+statements, eighteen `sorry`). It is built only on request:
+
+```bash
+lake build Challenge
+```
+
+From layer 1 onward no proof file is accepted without its challenge file.
 
 ## Pin
 
