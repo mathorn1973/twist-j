@@ -1,0 +1,6 @@
+Polynomial targets and distinct literal write words: 25
+Complete native cuts and edges: 1625, 1600
+Tail readings and whole-state reconstructions: 1550, 1550
+Complete inverse edges and complete inverse words: 1600, 25
+Natural coefficient control: 25 inputs, 65 cuts, one common port history
+PASS
