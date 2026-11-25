@@ -12,3 +12,8 @@ rev = "0df444a360eaa60ab8c11dca51a86af692955474"
 
 [[lean_lib]]
 name = "TwistJ"
+
+# Statement surface only: same definitions and theorem types, proofs `sorry`.
+# Not a default target; built on request with `lake build Challenge`.
+[[lean_lib]]
+name = "Challenge"
