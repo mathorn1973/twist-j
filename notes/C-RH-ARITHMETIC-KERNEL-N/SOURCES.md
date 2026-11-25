@@ -366,3 +366,59 @@ a new RH proof, an improvement to the full Mertens exponent, a native TWIST-J
 physical mechanism, or any cross-layer lift. The masked `2/3` obstruction
 does not apply to the full unmasked sum; the fixed-`u` asymptotics do not
 apply uniformly to `u` increasing with the argument.
+
+
+## Round-nine joint cancellation sources
+
+The mathematical basis is the complete incoming arithmetic-kernel
+head `6a91ef48f6454743797614503aa5863dde54befb`, especially FOUNDATION,
+round-six BALANCED-UNIT-TAIL and the original numerator estimate,
+and round-eight COUPLED-CUTS, REPORT and PERIODIC-SHARP-CAP.
+The full note and manifest bytes were read from Git.
+
+Adjacent public work was read at immutable pins:
+
+- C-RH-THREE-INTERFACE-SYNTHESIS-N:
+  `ceb77e3632ec4617c54d8e1fd504d3b1c99dd106`, including the full
+  coupled-energy and common-level arguments. Its thirty-file
+  package and twenty-nine manifest entries matched.
+- C-HUANG-ARITHMETIC-BRIDGE-N:
+  `fd6232aa10da26a374e421d6d46538b36b41aafb`, including signed
+  intervals and prime-scale reallocation. Its fifteen-file
+  package and fourteen manifest entries matched. No boundary,
+  inverse or square identity for its Mobius carrier is imported
+  into the present t without the stated local proof.
+
+Primary external inputs used at their stated scopes:
+
+- [G. H. Hardy, Sur les zeros de la fonction zeta(s) de Riemann,
+  C. R. Acad. Sci. Paris 158 (1914), 1012--1014](https://fr.wikisource.org/wiki/Page:Comptes_rendus_hebdomadaires_des_s%C3%A9ances_de_l%E2%80%99Acad%C3%A9mie_des_sciences,_tome_158,_1914.djvu/1014).
+  Only existence of critical-line zeros is used to verify the
+  nonreal-pole hypothesis of the inherited signed-window lemma.
+- [P. Erdos and P. Turan, On a problem in the theory of uniform
+  distribution, I, Theorem III](https://users.renyi.hu/~p_erdos/1948-02.pdf),
+  with [Part II](https://users.renyi.hu/~p_erdos/1948-03.pdf).
+  The finite discrepancy bound is applied to the actual fractional
+  parts of y/d^2 in each fixed residue class.
+- [S. W. Graham and G. Kolesnik, Van der Corput's Method of
+  Exponential Sums, Theorem 2.2](https://assets.cambridge.org/97805213/39278/excerpt/9780521339278_excerpt.pdf).
+  The second-derivative bound applies on the stated truncated
+  residue-class interval, not to an unproved t short-sum estimate.
+- [Tomohiro Yamada, Explicit formulae for primes in arithmetic
+  progressions, I, Theorem 1.2(4)](https://arxiv.org/html/1306.5322v4#S1).
+  A sufficient fixed listed exponent, such as (alpha_1,A)=(1,3),
+  gives the uniform reciprocal-prime error in the critical
+  correction norm. No arbitrary-A claim is inferred from its
+  finite table.
+- [Jesse Thorner and Asif Zaman, Refinements to the prime number
+  theorem for arithmetic progressions, Corollary 1.4 and Remark
+  1.5](https://arxiv.org/pdf/2108.10878v2).
+  At fixed modulus five the possible fixed exceptional exponent
+  is absorbed asymptotically. This supplies all fixed inverse-log
+  orders for the separate log-share diagnostic and the inherited
+  prime counting. No changing-modulus uniformity or relative
+  short-interval error is assumed.
+
+All new claims and limitations are paper deductions in the retained
+round-nine files. The classical analytic inputs are attributed;
+no historical priority or independent external confirmation is claimed.

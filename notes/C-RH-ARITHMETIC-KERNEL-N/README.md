@@ -1,4 +1,4 @@
-# Arithmetic cancellation: common zero windows and the remaining joint estimate
+# Arithmetic cancellation: joint cuts and the remaining power bound
 
 **NON-CANONICAL, no authority. Candidate-D paper deductions; candidate-C finite audits.**
 Owner: A. M. Thorn / ChatGPT arithmetic-kernel session, 24 November 2026.
@@ -6,11 +6,34 @@ Claim: [#2087](https://github.com/mathorn1973/twist-j/issues/2087).
 Action layer: NOT_APPLICABLE. No Canon promotion or independent RH proof.
 
 The first result bounds the moving support d^3 <= n^2 unconditionally.
-The latest continuation removes complete original numerator packets on
-specified periodic time windows, including conductors with a fixed small
-prime factor. A separate arithmetic regroup absorbs repeated large-prime
-squares by a strict contraction. The full jointly signed power estimate
-remains open.
+The latest continuation derives a longer integer factor cut, a sharper
+whole-prime correction contraction, and additive joint covariance estimates.
+It also proves that the earlier sufficient shortcut omitting the overlap
+square is false for the actual coefficients. The full jointly signed
+all-epsilon power estimate remains open.
+
+## Joint cancellation and necessary squares
+
+**Candidate-D, paper only.** The [round-nine report](round9/REPORT.md)
+retains seven author proofs, four frozen question records and same-session
+opposition. All earlier non-index files keep their original bytes.
+
+| Actual expression | Proved estimate or limitation | Proof |
+|---|---|---|
+| Original linear profile after omitting the overlap square | Positive squared taper energy is at least order X^(18/7) on infinitely many dyadic blocks; weighted energy is at least order Y^(5/7) on every late complete window. The full two-square expression is not lower-bounded. | [Square retention](round9/sol_squares/SQUARE-RETENTION.md), [complete windows](round9/INTEGER-CUBIC-CUT.md) |
+| Actual inverse and integer cubic-moment cut | The inverse mean has resolved cubic term and error O(y^(7/22)). Integer weights from delta_1-2delta_8 cancel that moment exactly. The full signed profile keeps both squares, differs from T by O(sqrt X), and uses upper prefix arguments at most O(X^(13/15)). | [Longer cut](round9/sol_squares/LONGER-FACTOR-CUT.md), [integer construction](round9/INTEGER-CUBIC-CUT.md) |
+| Complete rough-prime completion | The fifth-root correction strictly contracts the arithmetic critical norm. Its exact asymptotic threshold is proved. Moving the cutoff to log X makes the entire true smooth prefix subpower, with all rough multiplicities retained in the remaining joint sum. | [Rough completion](round9/astra_joint/ROUGH-COMPLETION-AND-CRITICAL-THRESHOLD.md) |
+| Logarithmic shares on marked primes | The specified uncorrected weighting leaves a nonzero whole-profile main term of order X/log^2 X. It does not close the original estimate. | [Actual obstruction](round9/astra_joint/LOG-SHARE-OBSTRUCTION.md) |
+| Full covariance at large arithmetic gcd | A fixed power contracts this joint part into earlier actual blocks for each fixed sigma>1/2. The low-gcd signed complement remains open. | [Arithmetic gcd](round9/sol_covariance/ARITHMETIC-GCD-COVARIANCE.md) |
+| Common weighted time levels | Every original mixed covariance changes additively by O_epsilon(X^(1+epsilon)H^2), including the moving mask and prime repeats. The joint level square is retained explicitly. | [Common taper](round9/sol_covariance/COMMON-TAPER-COVARIANCE.md) |
+
+**O:** the complete bound (Q8)_+ <<_epsilon X^(2+epsilon) is not proved.
+The new integer profile and logarithmic rough completion compose while
+retaining both negative squares at every lower argument. No generic
+operator lower test or comparison error is claimed as the missing
+arithmetic estimate. Read the [root review](round9/REVIEW-SYNTHESIS.md),
+[final synthesis review](round9/astra_joint/REVIEW-FINAL-SYNTHESIS.md)
+and [promotion handoff](round9/PROMO-C-RH-ARITHMETIC-KERNEL-N.md).
 
 ## Common zero windows and the complete power-saving gap
 

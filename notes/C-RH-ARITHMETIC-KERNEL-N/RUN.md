@@ -424,3 +424,83 @@ delimiters, whitespace and public content checks pass. All four frozen
 author proofs retain their reviewed SHA-256 values. The exact remote
 content readback, head-specific workflow and final unchanged-main check
 are recorded in the existing draft after delivery.
+
+
+## Round nine: the full joint cancellation, 25 November 2026
+
+PUBLIC main was freshly checked as
+`6f2e112aafc4f3aca4222bb4bf3dced1d79fe2ed`, declared Canon v117.
+STATUS was read first, followed by the required policy, agent, core,
+frontier, registry/evidence/gate/probe material and private startup
+instructions. The declared content is
+`d65e32c4b8e9a14496d3b7aba46fc384f51f81dc`; the annotated tag object
+`63ff3d2f7edc0c921a6c8ddd033badb59b632436` peels to the declared
+activation/main commit. Content ancestry, all five normative hashes,
+and the 1624192-byte Canon match. Exact-main workflow 45388050270
+has successful x86_64, aarch64 and aggregate jobs as recorded above.
+No private operating details are included in this paper package.
+
+The explicit branch scan captured 402 remote heads with SHA-256
+`fa13e9cefd9a95d2faa2d3382809e440b6097f1207c8105e9160bf52b63655fe`.
+Open issues and relevant candidates, registry, evidence, gates and
+probe paths were checked for collisions. The prospective continuation
+was appended to issue 2087 and its 30988-character body read back
+exactly before authoring. The existing candidate, branch and draft
+2089 were retained, incoming head
+`6a91ef48f6454743797614503aa5863dde54befb`.
+
+The neighboring public package at
+`ceb77e3632ec4617c54d8e1fd504d3b1c99dd106` has thirty files and
+29 matching manifest entries. The newly relevant Huang arithmetic
+bridge at `fd6232aa10da26a374e421d6d46538b36b41aafb` has fifteen
+files and 14 matching manifest entries. Their complete-window,
+signed-interval, prime-filter and reconstruction scopes were read.
+Their carriers and owners remain distinct. Discovery context and
+historical project uploads did not establish current authority.
+
+An Astra derived the full rough completion, sharp critical correction
+norm, logarithmic smooth-prefix removal and actual log-share obstruction.
+A Sol derived the resolved inverse mean, longer two-square factor cut
+and actual penalty-omission lower bounds. The other Sol derived the
+whole arithmetic-gcd recursion and direct common-taper covariance
+projection. Root reconstructed the arguments and derived the integer
+cubic-moment cut and its complete-window corollaries. The seven
+proof files retain their reviewed versions with four prospective
+question records. Further same-session reviewers checked the inputs,
+endpoints, multiplicities, floors, signed squares, critical versus
+supercritical quantifiers, source scopes and final synthesis.
+
+All new scientific work was paper algebra and analytic estimates.
+No new scientific numerical or symbolic execution, finite audit or
+formal proof build was performed. The earlier candidate-C evidence
+is unchanged. Reviewers could see the author proofs; this is neither
+blind independent confirmation nor external mathematical review.
+New deductions remain candidate-D and the full Q8 bound remains O.
+The old sufficient positive-linear-term shortcut is now ruled out
+at its unchanged cutoff; the old implication itself is not altered.
+
+Root reopened the primary Hardy, fixed-modulus prime-count,
+finite discrepancy and second-derivative sources. The finite-table
+scope of Yamada and all-fixed-order scope of Thorner--Zaman are
+kept distinct. Small final wording clarifications concerned the
+common H-block partition, the affine a versus long b coefficients,
+and the direction requiring lower-block induction. No threshold,
+fired falsifier, sealed probe or prior mathematical result changed.
+
+Main and the draft's incoming head were read back unchanged again
+before packaging. The exact delivered commit, remote byte readback,
+head-specific workflow and final main comparison are recorded in
+the existing issue and draft after delivery. Repository checks
+provide custody of the paper package, not promotion of its results.
+
+Before the content commit, local POLICY PASS and CANON PASS v117
+claims=639 were observed. The package has 129 manifest entries;
+all match. All 105 earlier non-index files match the incoming
+candidate byte for byte. The 25 changed files comprise 21 new
+round-nine files and the four package indices. The seven author
+proofs retain their final reviewed bytes. Relative links, paired
+math delimiters, whitespace and the public-content scan pass.
+No private archive files or operating details are part of the diff.
+The final report received a separate Astra paper review after its
+scope clarifications. Remote byte and workflow receipts follow
+in the draft and owner issue, rather than being predicted here.
