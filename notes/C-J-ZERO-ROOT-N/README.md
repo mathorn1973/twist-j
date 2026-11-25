@@ -1,7 +1,7 @@
 # Relative phase code, zero layers and a native two-digit write
 
 **NON-CANONICAL / L1 / no authority.**
-Analytical statements: candidate-T. New finite execution: candidate-C.
+Analytical statements: candidate-T. Recorded finite executions: candidate-C.
 Owner: A. M. Thorn / codex-zero-root-20261125. Reservation: #2097.
 Package: [PROMO-C-J-ZERO-ROOT-N.md](PROMO-C-J-ZERO-ROOT-N.md).
 
@@ -86,8 +86,8 @@ created by differencing must not be assigned an independent-symbol noise
 guarantee. An error-correcting code exists here as a mathematical
 construction; no autonomous native repair law has been demonstrated.
 
-The native writer's correlated preparation is supplied, its capacity is
-25 inputs, and its raw receiver is literal at cut3. The original
+The native writer's correlated preparation is supplied, its declared
+input family has 25 elements, and its raw receiver is literal at cut3. The original
 clock-assisted reader retains the data thereafter. The stronger reference
 reader removes the counter from the observation interface by reading
 four current pistons and the six-coordinate sum. The counter remains
