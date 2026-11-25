@@ -308,3 +308,14 @@ The current Canon is [pinned here](https://github.com/mathorn1973/twist-j/blob/6
 No new registry row, gate decision, physical carrier, autonomous repair,
 second message, renewal or Canon promotion is supplied. The original
 audit custody recorded in PROVENANCE.md remains unresolved separately.
+
+## Later source intake on 2026-11-25
+
+After this written review, the owner supplied the referenced RECON archive.
+[ARCHIVE-REVIEW.md](ARCHIVE-REVIEW.md) records its exact hashes and the
+separately pinned source replay. The unavailability statements above
+describe the earlier review stage. The new finite checks reproduce four
+stored outputs, confirm all common preparations at cuts one and two,
+and verify the exposed receiver collision at cuts three and 28.
+They do not turn these earlier exposed derivations into blind confirmation.
+The original zero-root audit's distinct missing-source obligation remains.

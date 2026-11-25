@@ -30,9 +30,14 @@ closed by this package.
 
 RECON-REVIEW.md adds written preparation counts, common-receiver split
 capacity bounds, the exact zero-record fibre and a receiver-only reading
-obstruction. It records no new scientific execution and does not replay
-the missing source archive. Its bounds do not claim a native archive,
-repeated acquisition, general absence test or physical realization.
+obstruction. That written review preceded receipt of the source archive.
+ARCHIVE-REVIEW.md separately records the subsequently received archive's
+custody and exposed-input replay: four stored outputs reproduced exactly,
+all common preparations audited at the two early cuts, and both exposed
+witnesses checked. The original-source publication permission and absent
+25-cell construction remain unresolved. These bounds and finite checks
+do not claim a native archive, repeated acquisition, general absence test
+or physical realization.
 
 The original audit intake is explicitly incomplete. Original authorship,
 script bytes and checked range must be recovered before that audit can be

@@ -83,3 +83,21 @@ codex-zero-root-20261125 and its bounded Astra/Sol helpers.
 Their code-distinct checks are same-session work. No blind external
 opponent or independent review is claimed. The original auditor is
 not assigned an invented identity or credited with these new files.
+
+## Later RECON archive intake, 2026-11-25
+
+The owner subsequently supplied twistj-recon-2026-11-25.tgz, 36076 bytes,
+SHA-256 137a48e98c1643fdc0fa6134279778333e2a7044dae68b529a7f5b8c8f43aa5d.
+ARCHIVE-MANIFEST.tsv identifies all 29 regular members. ARCHIVE-REVIEW.md
+records static source review, a prospectively pinned replay, exact output
+hashes and finite coverage. Four archived outputs reproduce byte for byte.
+This is a same-session, single-x86_64 reproduction of already exposed work.
+
+That archive is the later RECON exploration, not the missing first audit
+described above. It does not contain the latest corrected RECON note,
+the owner's later recheck script, or the reported 25-cell construction.
+No original author, licence, independent role or execution receipt is
+inferred from the archive's comments. Original third-party source and
+raw development logs have not been copied into this public package.
+The four inherited reservations above and the original intake obligation
+remain unchanged.

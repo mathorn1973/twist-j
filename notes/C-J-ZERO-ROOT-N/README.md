@@ -20,8 +20,11 @@ messages. The number 25 is this admitted domain size, not a native
 capacity theorem. The reference reader also observes source pistons.
 The [RECON review](RECON-REVIEW.md) makes these resource costs explicit,
 proves common-receiver split bounds 9/17/25, and counts the zero-record
-fibre without running new scientific code. Its missing source archive
-was not reproduced.
+fibre without running new scientific code at that stage. The subsequently
+received RECON archive is audited in [ARCHIVE-REVIEW.md](ARCHIVE-REVIEW.md).
+Its prospectively pinned replay reproduces four stored outputs exactly
+and checks every common preparation at the two early cuts. The original
+unpreregistered exploration and this exposed-input replay remain distinct.
 
 ## What has been established
 
@@ -78,6 +81,14 @@ Commands, immutable pins, hashes and the single local architecture are in
 [RUN.md](RUN.md). Ordinary repository CI is distinct from scientific
 execution of these notes. No public two-architecture computation gate or
 Canon promotion is claimed.
+
+The later [archive audit](ARCHIVE-REVIEW.md) has its own execution record
+and prospective scope. It reproduces the received B, C32, C-matrix and
+A-million outputs, audits all 125 listed preparations, and checks all
+625 common preparations for each of six piston splits. It confirms the
+receiver collision at cuts 3 and 28 and distinguishes an admitted contact
+overwrite from literal equality of its mark to J. It leaves the absent
+25-cell construction and original-source publication custody unresolved.
 
 ## Limits that matter
 
