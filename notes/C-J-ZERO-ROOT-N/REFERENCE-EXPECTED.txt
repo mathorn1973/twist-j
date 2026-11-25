@@ -1,0 +1,7 @@
+Complete native cuts and edges: 1625, 1600
+Counter-free BLANK and PRESENT readings: 75, 1550
+Reference signs and invariant coordinate products: 1550, 1550
+Distinct recorded pairs: 25, zero-pair readings: 62
+Four-piston readiness collision: 25 equal projections at cuts 2 and 8
+Raw all-zero control: BLANK at 3 cuts, PRESENT(0,3) at 62 cuts
+PASS
