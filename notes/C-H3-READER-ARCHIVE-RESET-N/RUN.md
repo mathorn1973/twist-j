@@ -36,3 +36,14 @@ c3ab196ea79e0589c25d4a2fc80b4d58ac7e252ffc368b3760deca15d321977a  D.txt
 ```
 
 No registry/Canon change. No formal scientific gate or authority claimed.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit 580c174d44607887de3cb76cb3614a1a357b5318 and the immutable
+public H3 source at the base were fetched as raw files. All nine
+script, source and transcript SHA-256 values were checked before
+execution. Primary A, B and D and alternate A/D1 and selected D2
+exited zero with empty stderr. The four complete outputs match the
+archived A.txt, B.txt, D.txt and BREAK.txt byte for byte. The
+alternate does not independently repeat the B search. This is
+cross-architecture reproduction, not blind independent review or the
+formal public scientific gate.
