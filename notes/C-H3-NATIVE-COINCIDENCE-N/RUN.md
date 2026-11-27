@@ -35,3 +35,12 @@ a61ddff6991732077c5caa8a59491e07026158016d3ac15ff816f5dec6c6ce64  D.txt
 The negative recurrence tests, fixed single-port scans,
 control aliases and finite hold boundary are preserved.
 No formal scientific gate, public registry or Canon change.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit 8999a5de549a92ef3276adcba011232e7ec878c2 and the immutable
+public H3 source at the base were fetched as raw files. All six
+executed script, transcript and source SHA-256 values were checked
+before execution. Primary A-C, primary D and both alternate stages
+passed with empty stderr. Both full output pairs match the respective
+EXPECTED.txt and D.txt byte for byte. This is cross-architecture
+reproduction, not blind independent review or the formal public gate.
