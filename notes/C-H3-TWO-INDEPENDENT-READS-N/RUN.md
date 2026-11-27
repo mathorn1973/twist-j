@@ -47,3 +47,13 @@ d347884271750a07be18c1b1d6b7aeb47f20153cf2bd9885f268b40925e24663  break.py
 ```
 
 No registry/Canon change. No formal scientific gate or authority claimed.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit a17197ae9188fec0f702200fc89c7905034fdc47 and the immutable
+public H3 source at the base were fetched as raw files. All eight
+source and transcript SHA-256 values were checked before execution.
+Primary A/C, primary D/E, alternate A and alternate DE passed with
+empty stderr. Both full transcript pairs match EXPECTED.txt and D_E.txt
+byte for byte across implementations and architectures. This is
+result-exposed reproduction, not blind independent review or the
+formal public scientific gate.
