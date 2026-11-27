@@ -31,3 +31,12 @@ ac9e45d120b0d3465e2edc38472aef801ae299776c9582d50d74df31d35ff5d2  EXPECTED.txt
 
 No formal public computation gate, status promotion or physical
 inference is claimed. No external preprint code was incorporated.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit 4592122927f36ef5be9fe601cdafce6bdac252d5 and the immutable
+public H3 source at the base were fetched as raw files. All five source
+and transcript SHA-256 values listed above were verified before execution.
+Both scripts exited zero with empty stderr. Both full outputs matched
+EXPECTED.txt and BREAK.txt byte for byte, and the 36 READ lines matched
+BREAK.txt. This is reproduction of the same scripts, not a third
+independent method or the repository's formal two-architecture gate.
