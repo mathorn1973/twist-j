@@ -1,0 +1,288 @@
+C STOCK -3 0 0 24 POS (1, -2, 6, -5) NEG (7, -2, 12, -2)
+C CENSUS -3 0 0 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 0 1 38 POS (1, -5, 12, -8) NEG (7, -2, 12, -2)
+C CENSUS -3 0 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 0 2 24 POS (1, -2, 6, -5) NEG (7, -2, 12, -2)
+C CENSUS -3 0 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 0 3 24 POS (1, -2, 6, -5) NEG (7, -2, 12, -2)
+C CENSUS -3 0 3 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 0 4 24 POS (1, -2, 6, -5) NEG (7, -2, 12, -2)
+C CENSUS -3 0 4 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 0 6 38 POS (1, -5, 12, -8) NEG (7, -2, 12, -2)
+C CENSUS -3 0 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 0 7 24 POS (1, -2, 6, -5) NEG (7, -2, 12, -2)
+C CENSUS -3 0 7 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 0 8 24 POS (1, -2, 6, -5) NEG (7, -2, 12, -2)
+C CENSUS -3 0 8 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 0 9 24 POS (1, -2, 6, -5) NEG (7, -2, 12, -2)
+C CENSUS -3 0 9 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 1 0 24 POS (7, 7, 6, 10) NEG (4, 10, 3, 13)
+C CENSUS -3 1 0 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 1 1 24 POS (7, 7, 6, 10) NEG (4, 10, 3, 13)
+C CENSUS -3 1 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 1 2 24 POS (7, 7, 6, 10) NEG (4, 10, 3, 13)
+C CENSUS -3 1 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 1 4 86 POS (7, 7, 6, 10) NEG (4, 10, 3, 13)
+C CENSUS -3 1 4 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 1 5 24 POS (7, 7, 6, 10) NEG (4, 10, 3, 13)
+C CENSUS -3 1 5 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 1 6 24 POS (7, 7, 6, 10) NEG (4, 10, 3, 13)
+C CENSUS -3 1 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 1 7 24 POS (7, 7, 6, 10) NEG (4, 10, 3, 13)
+C CENSUS -3 1 7 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 1 9 86 POS (7, 7, 6, 10) NEG (4, 10, 3, 13)
+C CENSUS -3 1 9 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 1 10 24 POS (7, 7, 6, 10) NEG (4, 10, 3, 13)
+C CENSUS -3 1 10 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 2 0 24 POS (-8, -2, 0, -5) NEG (-11, -8, 0, -11)
+C CENSUS -3 2 0 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 2 1 24 POS (-8, -2, 0, -5) NEG (-11, -8, 0, -11)
+C CENSUS -3 2 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 2 2 24 POS (-8, -2, 0, -5) NEG (-11, -8, 0, -11)
+C CENSUS -3 2 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 2 3 24 POS (-8, -2, 0, -5) NEG (-11, -8, 0, -11)
+C CENSUS -3 2 3 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 2 5 24 POS (-8, -2, 0, -5) NEG (-11, -8, 0, -11)
+C CENSUS -3 2 5 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 2 6 24 POS (-8, -2, 0, -5) NEG (-11, -8, 0, -11)
+C CENSUS -3 2 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 2 7 24 POS (-8, -2, 0, -5) NEG (-11, -8, 0, -11)
+C CENSUS -3 2 7 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 2 8 24 POS (-8, -2, 0, -5) NEG (-11, -8, 0, -11)
+C CENSUS -3 2 8 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 2 10 24 POS (-8, -2, 0, -5) NEG (-11, -8, 0, -11)
+C CENSUS -3 2 10 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 3 1 24 POS (7, -2, 6, 4) NEG (13, 1, 6, 10)
+C CENSUS -3 3 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 3 3 24 POS (7, -2, 6, 4) NEG (13, 1, 6, 10)
+C CENSUS -3 3 3 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 3 4 24 POS (7, -2, 6, 4) NEG (13, 1, 6, 10)
+C CENSUS -3 3 4 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 3 5 24 POS (7, -2, 6, 4) NEG (13, 1, 6, 10)
+C CENSUS -3 3 5 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 3 6 24 POS (7, -2, 6, 4) NEG (13, 1, 6, 10)
+C CENSUS -3 3 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 3 8 24 POS (7, -2, 6, 4) NEG (13, 1, 6, 10)
+C CENSUS -3 3 8 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 3 9 24 POS (7, -2, 6, 4) NEG (13, 1, 6, 10)
+C CENSUS -3 3 9 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -3 3 10 24 POS (7, -2, 6, 4) NEG (13, 1, 6, 10)
+C CENSUS -3 3 10 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 0 0 24 POS (1, 0, 4, -1) NEG (3, 0, 6, 0)
+C CENSUS -1 0 0 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 0 1 38 POS (1, -1, 6, -2) NEG (3, 0, 6, 0)
+C CENSUS -1 0 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 0 2 24 POS (1, 0, 4, -1) NEG (3, 0, 6, 0)
+C CENSUS -1 0 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 0 3 24 POS (1, 0, 4, -1) NEG (3, 0, 6, 0)
+C CENSUS -1 0 3 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 0 4 24 POS (1, 0, 4, -1) NEG (3, 0, 6, 0)
+C CENSUS -1 0 4 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 0 6 38 POS (1, -1, 6, -2) NEG (3, 0, 6, 0)
+C CENSUS -1 0 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 0 7 24 POS (1, 0, 4, -1) NEG (3, 0, 6, 0)
+C CENSUS -1 0 7 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 0 8 24 POS (1, 0, 4, -1) NEG (3, 0, 6, 0)
+C CENSUS -1 0 8 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 0 9 24 POS (1, 0, 4, -1) NEG (3, 0, 6, 0)
+C CENSUS -1 0 9 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 1 0 24 POS (3, 3, 4, 4) NEG (2, 4, 3, 5)
+C CENSUS -1 1 0 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 1 1 24 POS (3, 3, 4, 4) NEG (2, 4, 3, 5)
+C CENSUS -1 1 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 1 2 24 POS (3, 3, 4, 4) NEG (2, 4, 3, 5)
+C CENSUS -1 1 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 1 4 86 POS (3, 3, 4, 4) NEG (2, 4, 3, 5)
+C CENSUS -1 1 4 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 1 5 24 POS (3, 3, 4, 4) NEG (2, 4, 3, 5)
+C CENSUS -1 1 5 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 1 6 24 POS (3, 3, 4, 4) NEG (2, 4, 3, 5)
+C CENSUS -1 1 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 1 7 24 POS (3, 3, 4, 4) NEG (2, 4, 3, 5)
+C CENSUS -1 1 7 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 1 9 86 POS (3, 3, 4, 4) NEG (2, 4, 3, 5)
+C CENSUS -1 1 9 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 1 10 24 POS (3, 3, 4, 4) NEG (2, 4, 3, 5)
+C CENSUS -1 1 10 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 2 0 24 POS (-2, 0, 2, -1) NEG (-3, -2, 2, -3)
+C CENSUS -1 2 0 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 2 1 24 POS (-2, 0, 2, -1) NEG (-3, -2, 2, -3)
+C CENSUS -1 2 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 2 2 24 POS (-2, 0, 2, -1) NEG (-3, -2, 2, -3)
+C CENSUS -1 2 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 2 3 24 POS (-2, 0, 2, -1) NEG (-3, -2, 2, -3)
+C CENSUS -1 2 3 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 2 5 24 POS (-2, 0, 2, -1) NEG (-3, -2, 2, -3)
+C CENSUS -1 2 5 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 2 6 24 POS (-2, 0, 2, -1) NEG (-3, -2, 2, -3)
+C CENSUS -1 2 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 2 7 24 POS (-2, 0, 2, -1) NEG (-3, -2, 2, -3)
+C CENSUS -1 2 7 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 2 8 24 POS (-2, 0, 2, -1) NEG (-3, -2, 2, -3)
+C CENSUS -1 2 8 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 2 10 24 POS (-2, 0, 2, -1) NEG (-3, -2, 2, -3)
+C CENSUS -1 2 10 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 3 1 24 POS (3, 0, 4, 2) NEG (5, 1, 4, 4)
+C CENSUS -1 3 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 3 2 146 POS (6, 2, 6, 5) NEG (5, 1, 4, 4)
+C CENSUS -1 3 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 3 3 24 POS (3, 0, 4, 2) NEG (5, 1, 4, 4)
+C CENSUS -1 3 3 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 3 4 24 POS (3, 0, 4, 2) NEG (5, 1, 4, 4)
+C CENSUS -1 3 4 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 3 5 24 POS (3, 0, 4, 2) NEG (5, 1, 4, 4)
+C CENSUS -1 3 5 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 3 6 24 POS (3, 0, 4, 2) NEG (5, 1, 4, 4)
+C CENSUS -1 3 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 3 8 24 POS (3, 0, 4, 2) NEG (5, 1, 4, 4)
+C CENSUS -1 3 8 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 3 9 24 POS (3, 0, 4, 2) NEG (5, 1, 4, 4)
+C CENSUS -1 3 9 REJECT [('early', 120)] HOLD_HIST []
+C STOCK -1 3 10 24 POS (3, 0, 4, 2) NEG (5, 1, 4, 4)
+C CENSUS -1 3 10 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 0 0 24 POS (1, 2, 2, 3) NEG (-1, 2, 0, 2)
+C CENSUS 1 0 0 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 0 1 38 POS (1, 3, 0, 4) NEG (-1, 2, 0, 2)
+C CENSUS 1 0 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 0 2 24 POS (1, 2, 2, 3) NEG (-1, 2, 0, 2)
+C CENSUS 1 0 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 0 3 24 POS (1, 2, 2, 3) NEG (-1, 2, 0, 2)
+C CENSUS 1 0 3 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 0 4 24 POS (1, 2, 2, 3) NEG (-1, 2, 0, 2)
+C CENSUS 1 0 4 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 0 6 38 POS (1, 3, 0, 4) NEG (-1, 2, 0, 2)
+C CENSUS 1 0 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 0 7 24 POS (1, 2, 2, 3) NEG (-1, 2, 0, 2)
+C CENSUS 1 0 7 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 0 8 24 POS (1, 2, 2, 3) NEG (-1, 2, 0, 2)
+C CENSUS 1 0 8 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 0 9 24 POS (1, 2, 2, 3) NEG (-1, 2, 0, 2)
+C CENSUS 1 0 9 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 1 0 24 POS (-1, -1, 2, -2) NEG (0, -2, 3, -3)
+C CENSUS 1 1 0 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 1 1 24 POS (-1, -1, 2, -2) NEG (0, -2, 3, -3)
+C CENSUS 1 1 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 1 2 24 POS (-1, -1, 2, -2) NEG (0, -2, 3, -3)
+C CENSUS 1 1 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 1 4 86 POS (-1, -1, 2, -2) NEG (0, -2, 3, -3)
+C CENSUS 1 1 4 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 1 5 24 POS (-1, -1, 2, -2) NEG (0, -2, 3, -3)
+C CENSUS 1 1 5 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 1 6 24 POS (-1, -1, 2, -2) NEG (0, -2, 3, -3)
+C CENSUS 1 1 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 1 7 24 POS (-1, -1, 2, -2) NEG (0, -2, 3, -3)
+C CENSUS 1 1 7 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 1 9 86 POS (-1, -1, 2, -2) NEG (0, -2, 3, -3)
+C CENSUS 1 1 9 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 1 10 24 POS (-1, -1, 2, -2) NEG (0, -2, 3, -3)
+C CENSUS 1 1 10 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 2 0 24 POS (4, 2, 4, 3) NEG (5, 4, 4, 5)
+C CENSUS 1 2 0 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 2 1 24 POS (4, 2, 4, 3) NEG (5, 4, 4, 5)
+C CENSUS 1 2 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 2 2 24 POS (4, 2, 4, 3) NEG (5, 4, 4, 5)
+C CENSUS 1 2 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 2 3 24 POS (4, 2, 4, 3) NEG (5, 4, 4, 5)
+C CENSUS 1 2 3 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 2 5 24 POS (4, 2, 4, 3) NEG (5, 4, 4, 5)
+C CENSUS 1 2 5 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 2 6 24 POS (4, 2, 4, 3) NEG (5, 4, 4, 5)
+C CENSUS 1 2 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 2 7 24 POS (4, 2, 4, 3) NEG (5, 4, 4, 5)
+C CENSUS 1 2 7 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 2 8 24 POS (4, 2, 4, 3) NEG (5, 4, 4, 5)
+C CENSUS 1 2 8 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 2 10 24 POS (4, 2, 4, 3) NEG (5, 4, 4, 5)
+C CENSUS 1 2 10 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 3 1 24 POS (-1, 2, 2, 0) NEG (-3, 1, 2, -2)
+C CENSUS 1 3 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 3 3 24 POS (-1, 2, 2, 0) NEG (-3, 1, 2, -2)
+C CENSUS 1 3 3 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 3 4 24 POS (-1, 2, 2, 0) NEG (-3, 1, 2, -2)
+C CENSUS 1 3 4 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 3 5 24 POS (-1, 2, 2, 0) NEG (-3, 1, 2, -2)
+C CENSUS 1 3 5 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 3 6 24 POS (-1, 2, 2, 0) NEG (-3, 1, 2, -2)
+C CENSUS 1 3 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 3 7 110 POS (0, 0, 4, -1) NEG (-3, 1, 2, -2)
+C CENSUS 1 3 7 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 3 8 24 POS (-1, 2, 2, 0) NEG (-3, 1, 2, -2)
+C CENSUS 1 3 8 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 3 9 24 POS (-1, 2, 2, 0) NEG (-3, 1, 2, -2)
+C CENSUS 1 3 9 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 1 3 10 24 POS (-1, 2, 2, 0) NEG (-3, 1, 2, -2)
+C CENSUS 1 3 10 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 0 0 24 POS (1, 4, 0, 7) NEG (-5, 4, -6, 4)
+C CENSUS 3 0 0 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 0 1 38 POS (1, 7, -6, 10) NEG (-5, 4, -6, 4)
+C CENSUS 3 0 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 0 2 24 POS (1, 4, 0, 7) NEG (-5, 4, -6, 4)
+C CENSUS 3 0 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 0 3 24 POS (1, 4, 0, 7) NEG (-5, 4, -6, 4)
+C CENSUS 3 0 3 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 0 4 24 POS (1, 4, 0, 7) NEG (-5, 4, -6, 4)
+C CENSUS 3 0 4 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 0 6 38 POS (1, 7, -6, 10) NEG (-5, 4, -6, 4)
+C CENSUS 3 0 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 0 7 24 POS (1, 4, 0, 7) NEG (-5, 4, -6, 4)
+C CENSUS 3 0 7 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 0 8 24 POS (1, 4, 0, 7) NEG (-5, 4, -6, 4)
+C CENSUS 3 0 8 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 0 9 24 POS (1, 4, 0, 7) NEG (-5, 4, -6, 4)
+C CENSUS 3 0 9 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 1 0 24 POS (-5, -5, 0, -8) NEG (-2, -8, 3, -11)
+C CENSUS 3 1 0 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 1 1 24 POS (-5, -5, 0, -8) NEG (-2, -8, 3, -11)
+C CENSUS 3 1 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 1 2 24 POS (-5, -5, 0, -8) NEG (-2, -8, 3, -11)
+C CENSUS 3 1 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 1 4 86 POS (-5, -5, 0, -8) NEG (-2, -8, 3, -11)
+C CENSUS 3 1 4 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 1 5 24 POS (-5, -5, 0, -8) NEG (-2, -8, 3, -11)
+C CENSUS 3 1 5 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 1 6 24 POS (-5, -5, 0, -8) NEG (-2, -8, 3, -11)
+C CENSUS 3 1 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 1 7 24 POS (-5, -5, 0, -8) NEG (-2, -8, 3, -11)
+C CENSUS 3 1 7 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 1 9 86 POS (-5, -5, 0, -8) NEG (-2, -8, 3, -11)
+C CENSUS 3 1 9 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 1 10 24 POS (-5, -5, 0, -8) NEG (-2, -8, 3, -11)
+C CENSUS 3 1 10 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 2 0 24 POS (10, 4, 6, 7) NEG (13, 10, 6, 13)
+C CENSUS 3 2 0 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 2 1 24 POS (10, 4, 6, 7) NEG (13, 10, 6, 13)
+C CENSUS 3 2 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 2 2 24 POS (10, 4, 6, 7) NEG (13, 10, 6, 13)
+C CENSUS 3 2 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 2 3 24 POS (10, 4, 6, 7) NEG (13, 10, 6, 13)
+C CENSUS 3 2 3 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 2 5 24 POS (10, 4, 6, 7) NEG (13, 10, 6, 13)
+C CENSUS 3 2 5 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 2 6 24 POS (10, 4, 6, 7) NEG (13, 10, 6, 13)
+C CENSUS 3 2 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 2 7 24 POS (10, 4, 6, 7) NEG (13, 10, 6, 13)
+C CENSUS 3 2 7 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 2 8 24 POS (10, 4, 6, 7) NEG (13, 10, 6, 13)
+C CENSUS 3 2 8 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 2 10 24 POS (10, 4, 6, 7) NEG (13, 10, 6, 13)
+C CENSUS 3 2 10 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 3 1 24 POS (-5, 4, 0, -2) NEG (-11, 1, 0, -8)
+C CENSUS 3 3 1 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 3 2 146 POS (-14, -2, -6, -11) NEG (-11, 1, 0, -8)
+C CENSUS 3 3 2 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 3 3 24 POS (-5, 4, 0, -2) NEG (-11, 1, 0, -8)
+C CENSUS 3 3 3 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 3 4 24 POS (-5, 4, 0, -2) NEG (-11, 1, 0, -8)
+C CENSUS 3 3 4 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 3 5 24 POS (-5, 4, 0, -2) NEG (-11, 1, 0, -8)
+C CENSUS 3 3 5 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 3 6 24 POS (-5, 4, 0, -2) NEG (-11, 1, 0, -8)
+C CENSUS 3 3 6 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 3 8 24 POS (-5, 4, 0, -2) NEG (-11, 1, 0, -8)
+C CENSUS 3 3 8 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 3 9 24 POS (-5, 4, 0, -2) NEG (-11, 1, 0, -8)
+C CENSUS 3 3 9 REJECT [('early', 120)] HOLD_HIST []
+C STOCK 3 3 10 24 POS (-5, 4, 0, -2) NEG (-11, 1, 0, -8)
+C CENSUS 3 3 10 REJECT [('early', 120)] HOLD_HIST []
+C NO CAPTURE
+DONE exact equal-account source echo capture
