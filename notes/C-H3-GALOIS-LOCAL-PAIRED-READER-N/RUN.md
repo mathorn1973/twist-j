@@ -50,3 +50,14 @@ beb32b6d47763790df311fe986b99b2ac8142329f3c3c523ad35aabf73b37e71  D_FIRST_PARTIA
 ```
 
 No formal scientific gate or registry/Canon change is claimed.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit 5b999c2bc5747857b736e3f5c298fcbe6774c6e4 and the immutable
+public H3 source at the base were fetched as raw files. All nine
+executed script, transcript and source SHA-256 values were checked
+before execution. Primary A-C, D and E and alternate A-E all
+passed, with empty stderr. All four complete outputs match their
+respective EXPECTED.txt, D.txt, E.txt and BREAK.txt byte for byte;
+the alternate E section also matches E.txt byte for byte. This
+is cross-architecture reproduction, not blind independent review
+or the repository's formal two-architecture scientific gate.
