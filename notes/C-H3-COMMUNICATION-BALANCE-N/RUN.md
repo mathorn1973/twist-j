@@ -41,3 +41,14 @@ e102be57c6428d78bcd5205e0bdbdc905141484366146d9f693f86bcb5a79b1d  EXPECTED.txt
 ```
 
 No registry/Canon change. No formal scientific gate or authority claimed.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit e7194a7866834e4524d4c8cd0ada4bcc418d0da5 and the immutable
+public H3 source at the base were fetched as raw files. All nine
+source and transcript SHA-256 values were checked before execution.
+Primary A-C, primary D and alternate A/local-B/selected-D passed
+with empty stderr. All three complete outputs match the archived
+EXPECTED.txt, D.txt and BREAK.txt byte for byte. The alternate does
+not independently replay all600 complete B histories. This is
+cross-architecture reproduction, not blind independent review or the
+formal public scientific gate.
