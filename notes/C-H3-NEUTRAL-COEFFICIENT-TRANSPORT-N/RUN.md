@@ -53,3 +53,13 @@ d6a1cab6bde5f30467d9fca268d19ee33acce321b5a741de6883f0769b899886  follow_break.p
 ```
 
 No scientific registry, Canon or formal gate change.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit d09a7961e2444216b8ad626fc8a9a169db8e2af5 and the immutable
+public H3 source at the base were fetched as raw files. All thirteen
+script, transcript and source SHA-256 values were checked before
+execution. Primary A-C, literal closed-period replay, primary D-G,
+and alternate A-C plus D-G all passed with empty stderr. The exact
+output SHA-256 values are the same EXPECTED.txt, CLOSED.txt and
+FOLLOW.txt values above. This is cross-architecture reproduction,
+not blind independent review or the repository's formal public gate.
