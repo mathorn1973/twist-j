@@ -30,3 +30,12 @@ SHA-256:
 
 No formal public computation gate, status promotion or physical
 inference is claimed.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit c5608ca67f0999a22140980a78b84dc900bfcade and the immutable
+public H3 source at the base were fetched as raw files. All five source
+and transcript SHA-256 values were checked before execution. Both
+scripts exited zero with empty stderr, and all four outputs (two
+implementations on two architectures) match the same expected 135-line
+transcript byte for byte. This is reproduction, not blind independent
+review or the repository's formal two-architecture scientific gate.
