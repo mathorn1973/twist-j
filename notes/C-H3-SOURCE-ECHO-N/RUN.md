@@ -40,3 +40,14 @@ unchanged exact full stdout hash covers every candidate line.
 No formal scientific gate or registry/Canon change.
 
 Compact summary SHA-256: 3509f3baeced4cfdc78fe4deebc38554ce32c4c1f0bc3ce1f448a63930e44caf
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit 1538d88b873e41a24c6c980a79905ff05e476f3c and the immutable
+public H3 source at the base were fetched as raw files. All eight
+executed script, transcript and source SHA-256 values were checked
+before execution. Primary A, B and C and alternate A, B and C passed
+with empty stderr. Both full transcript pairs for A and B, and the
+complete 853921-byte C transcript, match byte for byte and all
+recorded hashes agree. The compact C summary also matches. This is
+cross-architecture reproduction, not blind independent review or the
+formal public scientific gate.
