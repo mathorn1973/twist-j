@@ -1,0 +1,30 @@
+D PERIOD static 928 DISTINCT 928
+D CONTEXT static 114 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 2 FIRST (5, 0, 3)
+D CONTEXT static 384 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 2 FIRST (5, 0, 3)
+D CONTEXT static 758 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 1 FIRST (7, 0, 3)
+D CONTEXT static 928 COMMON_WORKER 1 TWO_ARCHIVE 0 PORTS 0 FIRST None
+D CONTEXT static 1042 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 2 FIRST (5, 0, 3)
+D CONTEXT static 1312 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 2 FIRST (5, 0, 3)
+D CONTEXT static 1686 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 1 FIRST (7, 0, 3)
+D CONTEXT static 1856 COMMON_WORKER 1 TWO_ARCHIVE 0 PORTS 0 FIRST None
+D CONTEXT static 1970 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 2 FIRST (5, 0, 3)
+D CONTEXT static 2240 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 2 FIRST (5, 0, 3)
+D CONTEXT static 2614 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 1 FIRST (7, 0, 3)
+D CONTEXT static 2784 COMMON_WORKER 1 TWO_ARCHIVE 0 PORTS 0 FIRST None
+D CONTEXT static 2898 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 2 FIRST (5, 0, 3)
+D CONTEXT static 3168 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 2 FIRST (5, 0, 3)
+D CONTEXT static 3542 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 1 FIRST (7, 0, 3)
+D CONTEXT static 3712 COMMON_WORKER 1 TWO_ARCHIVE 0 PORTS 0 FIRST None
+D CONTEXT static 3826 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 2 FIRST (5, 0, 3)
+D CONTEXT static 4096 COMMON_WORKER 0 TWO_ARCHIVE 1 PORTS 2 FIRST (5, 0, 3)
+D CONTEXT_SUMMARY static TIMES []
+D CONTEXT_SUMMARY rotating TIMES []
+D DELAYED_TIMES [114, 384, 758]
+D LATE_ELIGIBLE 114 5 RP (1, -5, 6, -2)
+D LATE_SELECT 114 5 F (0, 0, 0, 1) W (1, 0, 0, 0) INIT ((1, 1, 0, 1), (1, 1, 2, 1)) G (1, -5, 6, 0) MARK (1, -4, 7, 0) Q 2952 WEAK [114] COMMON [] FULL [] LOSS (115, 0)
+D LATE_WITNESS 0 SOURCE ((1, 0, 0, 0), (-1, 0, 0, 0), (6, 2, 4, 2), (0, 0, 0, 0), (0, 3, 0, 0), (0, -3, 0, 0), (6, 2, 4, 2), (6, 2, 4, 2)) WORKER ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (7, -2, 12, -2), (0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (6, 2, 4, 2)) ARCHIVE_CELL ((0, 1, 1, 1), (0, -1, -1, -1), (1, -5, 6, 0), (7, -2, 12, -2), (2, 1, 1, 1), (-2, -1, -1, -1), (1, -5, 6, 0), (6, 2, 4, 2))
+D LATE_SECTORS 0 ((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)) ((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)) ((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0))
+D LATE_WITNESS 1 SOURCE ((0, 1, 0, 0), (0, -1, 0, 0), (6, 2, 4, 2), (0, 0, 0, 0), (0, 3, 0, 0), (0, -3, 0, 0), (6, 2, 4, 2), (6, 2, 4, 2)) WORKER ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (1, -5, 12, -8), (0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (6, 2, 4, 2)) ARCHIVE_CELL ((0, 0, 0, 1), (0, 0, 0, -1), (1, -4, 7, 0), (1, -6, 5, -2), (2, 1, 1, 1), (-2, -1, -1, -1), (1, -5, 6, 0), (6, 2, 4, 2))
+D LATE_SECTORS 1 ((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)) ((0, 0, 0, 0), (-6, -3, 0, -6), (132, 0, 69, 69)) ((0, 0, 0, 0), (6, 3, 0, 6), (-132, 0, -69, -69))
+D LATE_COUNTS [('PASS', 1), ('pretest_pass', 1), ('tried', 1)]
+DONE D exact common-context and delayed archive checks
