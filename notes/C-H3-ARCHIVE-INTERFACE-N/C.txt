@@ -1,0 +1,18 @@
+C1 TAGS 1 1 [('pass', 100), ('tried', 100)]
+C1 TAGS 1 2 [('pass', 100), ('tried', 100)]
+C1 TAGS 2 1 [('pass', 100), ('tried', 100)]
+C1 TAGS 2 2 [('pass', 100), ('tried', 100)]
+C1 COUNTS [('pass', 400), ('tried', 400)]
+C1 SELECT (1, 1, 0, 0, ((-33, -9, -18, -30), (-15, 3, -18, 6)), ((-21, -8, 5, -36), (3, 28, -19, 30)))
+C1 PASS Q 18202 CORR_DIFFS [(7, 0, (12, 12, 0, 6))]
+C2 GROUP 6 1 [('guard_first_111', 50), ('guard_first_4', 219), ('guard_first_45', 1), ('guard_first_5', 72), ('guard_first_53', 1), ('guard_first_6', 19), ('guard_first_7', 2), ('guard_first_73', 1), ('pass', 240), ('tried', 605)]
+C2 GROUP 6 2 [('guard_first_1', 14), ('guard_first_103', 1), ('guard_first_111', 29), ('guard_first_13', 1), ('guard_first_15', 3), ('guard_first_17', 2), ('guard_first_19', 1), ('guard_first_2', 11), ('guard_first_3', 3), ('guard_first_4', 180), ('guard_first_5', 46), ('guard_first_6', 20), ('guard_first_7', 2), ('guard_first_73', 2), ('guard_first_77', 2), ('guard_first_89', 2), ('guard_first_9', 2), ('guard_first_91', 2), ('pass', 282), ('tried', 605)]
+C2 GROUP 8 1 [('guard_first_11', 1), ('guard_first_111', 25), ('guard_first_4', 341), ('guard_first_5', 48), ('guard_first_6', 68), ('guard_first_8', 1), ('pass', 121), ('tried', 605)]
+C2 GROUP 8 2 [('guard_first_1', 14), ('guard_first_111', 14), ('guard_first_2', 11), ('guard_first_29', 1), ('guard_first_3', 2), ('guard_first_33', 1), ('guard_first_4', 310), ('guard_first_5', 43), ('guard_first_53', 1), ('guard_first_55', 1), ('guard_first_57', 1), ('guard_first_6', 68), ('guard_first_61', 1), ('guard_first_81', 1), ('guard_first_83', 1), ('guard_first_9', 1), ('pass', 134), ('tried', 605)]
+C2 COUNTS [('guard_first_1', 28), ('guard_first_103', 1), ('guard_first_11', 1), ('guard_first_111', 118), ('guard_first_13', 1), ('guard_first_15', 3), ('guard_first_17', 2), ('guard_first_19', 1), ('guard_first_2', 22), ('guard_first_29', 1), ('guard_first_3', 5), ('guard_first_33', 1), ('guard_first_4', 1050), ('guard_first_45', 1), ('guard_first_5', 209), ('guard_first_53', 2), ('guard_first_55', 1), ('guard_first_57', 1), ('guard_first_6', 175), ('guard_first_61', 1), ('guard_first_7', 4), ('guard_first_73', 3), ('guard_first_77', 2), ('guard_first_8', 1), ('guard_first_81', 1), ('guard_first_83', 1), ('guard_first_89', 2), ('guard_first_9', 3), ('guard_first_91', 2), ('pass', 777), ('tried', 2420)]
+C2 SELECT (6, 1, 0, 1, 2, ((1, 0, 6, -7), (2, 0, 6, -6), (1, 2, 7, -5), (-1, 0, 5, -7), (0, 0, 6, -6), (1, 0, 6, -5)), (-17, -5, 15, -17))
+C2 PASS Q 36156 CORR_DIFFS [(5, 0), (5, 2), (5, 4)]
+C3 FIRST PASS NY 6 Q 80436
+C3 WRITE6 25
+C3 SUMMARY RESETS [] WINS [] FIRST_LOSS None
+DONE C exact inverse synthesis
