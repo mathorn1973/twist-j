@@ -43,3 +43,16 @@ c689dd80a2a4ac5a594173abcf21980ce348c587b0cded77ecb72a09342c1fdb  D.txt
 ```
 
 No registry/Canon change. No authority or formal gate claimed.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit 843022a6e7b3cd4d43db3c7694b245ae81d6a8b0 and the immutable
+public H3 source at the base were fetched as raw files. All ten
+script, source and transcript SHA-256 values were checked before
+execution. Primary A-C (including the frozen first-success search),
+D and E and alternate A,C,selected B via D,D,E all passed with empty
+stderr. All four complete outputs match their archived hashes byte
+for byte; the A/C extracts and D/E complete comparisons also match.
+C remains a failed scientific prediction, correctly reproduced.
+The alternate does not independently repeat the B search. This is
+cross-architecture reproduction, not blind independent review or the
+formal public scientific gate.
