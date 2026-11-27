@@ -55,3 +55,14 @@ Original private-path C exception stderr SHA-256:
 Not an archived public log.
 
 No registry/Canon change. No formal scientific gate or authority claimed.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit a423155aeee1d4bb3da8dc4c3e61c06a89794202 and the immutable
+public H3 source at the base were fetched as raw files. All eleven
+source and transcript SHA-256 values were checked before execution.
+Primary A/B, corrected C, D and alternate A/B/C and core D passed with
+empty stderr. All four complete outputs match the corresponding
+EXPECTED.txt, C.txt, D.txt and BREAK.txt byte for byte across the two
+architectures. The alternate has its own compact print format.
+This is result-exposed reproduction, not blind independent review
+or the formal public scientific gate.
