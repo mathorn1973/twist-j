@@ -1,0 +1,6 @@
+GRAM smith=1,5,5,5 rank_mod5=1
+SELF identity=576/576 cut_smith=1,1,1,5 cut_rank_mod5=3 target_rank_mod5=6
+DUAL identity=576/576 cut_smith=1,1,1,1 cut_rank_mod5=4 target_rank_mod5=24
+READER fibres=5x125 reconstructed=625/625 added_digits_min=3
+COMMUTATOR D_rank=3 K_unimodular=YES K2=-conjugation K4=I paired_covariance=YES norms=4,6
+PASS: non-canonical L1 audit; no native readout or asymptotic claim
