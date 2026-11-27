@@ -37,3 +37,12 @@ The failed recovery tests and finite read/hold horizons are
 preserved. The active source is a scaled single reference
 column, not the full original periodic two-track motor.
 No formal scientific gate or registry/Canon change.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit 398f57c4f7dff77199f61d84ac54d95915d121f7 and the immutable
+public H3 source at the base were fetched as raw files. All six
+executed script, transcript and source SHA-256 values were checked
+before execution. Primary A-C, primary D and both alternate stages
+passed with empty stderr. Both full output pairs match the respective
+EXPECTED.txt and D.txt byte for byte. This is cross-architecture
+reproduction, not blind independent review or the formal public gate.
