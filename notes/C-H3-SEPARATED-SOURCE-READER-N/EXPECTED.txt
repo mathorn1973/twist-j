@@ -1,0 +1,74 @@
+A REFERENCE single INPUTS 4 RAD_CLASSES 1 B_CLASSES 1 RETURN 4 Q 1024
+A REFERENCE paired INPUTS 16 RAD_CLASSES 1 B_CLASSES 1 RETURN 16 Q 1024
+B STOCK 0 (0, 0, 10, 10) (-12, 4, -22, -20) (-12, 4, -22, -20) (-80, 30, -106, -50) (-27, -33, -18, -67) (-5, -15, -10, -25) (-5, -15, -10, -25)
+B STOCK 1 (0, 0, -10, -10) (8, 20, 16, 16) (8, 20, 16, 16) (48, 42, 2, 50) (27, 29, 26, 43) (5, 15, 30, 25) (5, 15, 30, 25)
+B STOCK 2 (0, 0, 10, 10) (-8, 0, 4, 4) (-8, 0, 4, 4) (-16, 2, -22, -6) (-27, -9, -6, -23) (-5, -15, -30, -25) (-5, -15, -30, -25)
+B STOCK 3 (0, 0, -10, -10) (8, 0, -4, -4) (8, 0, -4, -4) (40, 22, 6, 14) (19, 33, 22, 31) (5, 15, 30, 25) (5, 15, 30, 25)
+B STOCK 4 (0, 0, 10, 10) (-8, 0, 4, 4) (-8, 0, 4, 4) (-8, -22, -38, -14) (-19, -33, -22, -31) (-5, -15, -30, -25) (-5, -15, -30, -25)
+B STOCK 5 (0, 0, -10, -10) (8, 0, -4, -4) (8, 0, -4, -4) (40, 22, 6, 14) (19, 33, 22, 31) (5, 15, 30, 25) (5, 15, 30, 25)
+B STOCK 6 (0, 0, 10, 10) (-8, 0, 4, 4) (-8, 0, 4, 4) (-8, -22, -38, -14) (-19, -33, -22, -31) (-5, -15, -30, -25) (-5, -15, -30, -25)
+B STOCK 7 (0, 0, -10, -10) (8, 0, -4, -4) (8, 0, -4, -4) (48, -2, -10, 6) (27, 9, 6, 23) (5, 15, 30, 25) (5, 15, 30, 25)
+B ETA (-5, -10, -10, -5) Q_ETA 175
+B CASE 0 0 T4_C_ADMIT 1 T4_TAG 0 REMOTE5 (-5, -35, -30, -30)
+B SOURCE4 0 0 PRE_D (0, 0, -5, -10) POST_D (0, 0, -5, -10)
+B CASE 0 1 T4_C_ADMIT 1 T4_TAG 0 REMOTE5 (-5, -35, -30, -30)
+B SOURCE4 0 1 PRE_D (10, 10, 10, 5) POST_D (10, 10, 10, 5)
+B CASE 0 2 T4_C_ADMIT 0 T4_TAG 2 REMOTE5 (5, -15, -15, -25)
+B SOURCE4 0 2 PRE_D (5, 0, 5, 0) POST_D (5, 0, 0, 0)
+B CASE 0 3 T4_C_ADMIT 1 T4_TAG 0 REMOTE5 (-5, -35, -30, -30)
+B SOURCE4 0 3 PRE_D (10, 10, 10, 5) POST_D (10, 10, 10, 5)
+B CASE 1 0 T4_C_ADMIT 1 T4_TAG 0 REMOTE5 (-5, -35, -30, -30)
+B SOURCE4 1 0 PRE_D (10, 10, 10, 5) POST_D (10, 10, 10, 5)
+B CASE 1 1 T4_C_ADMIT 1 T4_TAG 0 REMOTE5 (-5, -35, -30, -30)
+B SOURCE4 1 1 PRE_D (0, 0, -5, -10) POST_D (0, 0, -5, -10)
+B CASE 1 2 T4_C_ADMIT 1 T4_TAG 0 REMOTE5 (-5, -35, -30, -30)
+B SOURCE4 1 2 PRE_D (10, 10, 10, 5) POST_D (10, 10, 10, 5)
+B CASE 1 3 T4_C_ADMIT 0 T4_TAG 2 REMOTE5 (5, -15, -15, -25)
+B SOURCE4 1 3 PRE_D (5, 0, 5, 0) POST_D (5, 0, 0, 0)
+B CASE 2 0 T4_C_ADMIT 0 T4_TAG 2 REMOTE5 (5, -15, -15, -25)
+B SOURCE4 2 0 PRE_D (5, 0, 5, 0) POST_D (5, 0, 0, 0)
+B CASE 2 1 T4_C_ADMIT 1 T4_TAG 0 REMOTE5 (-5, -35, -30, -30)
+B SOURCE4 2 1 PRE_D (10, 10, 10, 5) POST_D (10, 10, 10, 5)
+B CASE 2 2 T4_C_ADMIT 1 T4_TAG 0 REMOTE5 (-5, -35, -30, -30)
+B SOURCE4 2 2 PRE_D (0, 0, -5, -10) POST_D (0, 0, -5, -10)
+B CASE 2 3 T4_C_ADMIT 1 T4_TAG 0 REMOTE5 (-5, -35, -30, -30)
+B SOURCE4 2 3 PRE_D (10, 10, 10, 5) POST_D (10, 10, 10, 5)
+B CASE 3 0 T4_C_ADMIT 1 T4_TAG 0 REMOTE5 (-5, -35, -30, -30)
+B SOURCE4 3 0 PRE_D (10, 10, 10, 5) POST_D (10, 10, 10, 5)
+B CASE 3 1 T4_C_ADMIT 0 T4_TAG 2 REMOTE5 (5, -15, -15, -25)
+B SOURCE4 3 1 PRE_D (5, 0, 5, 0) POST_D (5, 0, 0, 0)
+B CASE 3 2 T4_C_ADMIT 1 T4_TAG 0 REMOTE5 (-5, -35, -30, -30)
+B SOURCE4 3 2 PRE_D (10, 10, 10, 5) POST_D (10, 10, 10, 5)
+B CASE 3 3 T4_C_ADMIT 1 T4_TAG 0 REMOTE5 (-5, -35, -30, -30)
+B SOURCE4 3 3 PRE_D (0, 0, -5, -10) POST_D (0, 0, -5, -10)
+B PASS 16 POSITIVE 4 Q 110208 R_POS (5, -15, -15, -25) R_NEG (-5, -35, -30, -30)
+B READER_PREFIX 1 1
+B READER_PREFIX 2 1
+B READER_PREFIX 3 1
+B READER_PREFIX 4 1
+B READER_PREFIX 5 2
+B READER_PREFIX 6 2
+B READER_PREFIX 7 2
+B READER_PREFIX 8 2
+B READER_PREFIX 9 2
+B READER_PREFIX 10 2
+B READER_PREFIX 11 2
+B READER_PREFIX 12 2
+B HOLD 5 POST_C 4 FULL 4
+B HOLD 6 POST_C 1 FULL 1
+B HOLD 7 POST_C 0 FULL 0
+B HOLD 8 POST_C 0 FULL 0
+B HOLD 9 POST_C 0 FULL 0
+B HOLD 10 POST_C 0 FULL 0
+B HOLD 11 POST_C 0 FULL 0
+B HOLD 12 POST_C 0 FULL 0
+C COMMON material_ref [1]
+C HIST material_ref [(0, 159), (4, 1)]
+C CUTS material_ref [(5, 0), (40, 0), (80, 0), (120, 0), (160, 0)]
+C COMMON full_ref [1]
+C HIST full_ref [(0, 159), (4, 1)]
+C CUTS full_ref [(5, 0), (40, 0), (80, 0), (120, 0), (160, 0)]
+C COMMON material_initial []
+C HIST material_initial [(0, 160)]
+C CUTS material_initial [(5, 0), (40, 0), (80, 0), (120, 0), (160, 0)]
+DONE exact separated-source active interrogation and recovery boundary
