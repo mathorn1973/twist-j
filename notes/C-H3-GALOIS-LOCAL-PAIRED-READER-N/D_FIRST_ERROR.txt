@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/h3-galois-local-reader.VdROj8wU/local_material.py", line 130, in <module>
+    w0,x=read(0,F);w1,f=read(1,F)
+         ^^^^^^^^^
+  File "/tmp/h3-galois-local-reader.VdROj8wU/local_material.py", line 120, in read
+    out=rsum(scale(u,z) for u,z in zip(ww,targets[track]))
+        ^^^^
+NameError: name 'rsum' is not defined. Did you mean: 'sum'?
