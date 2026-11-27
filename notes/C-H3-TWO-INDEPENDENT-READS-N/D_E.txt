@@ -1,0 +1,65 @@
+D START 114 FIRST_FOUR_HISTORIES (2, 1)
+D PRE6 114 (0, 0) CELL ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (7, -2, 12, -2)) H_D ('1', '0', '-1', '-1') H_F ('5/2', '0', '-3/4', '-3/4') PARITY 1 0 TAG 0
+D PRE6 114 (0, 1) CELL ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (4, -2, 12, 1)) H_D ('1', '0', '-1', '-1') H_F ('1', '0', '0', '0') PARITY 1 1 TAG 1
+D PRE6 114 (1, 0) CELL ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (7, -2, 12, -2)) H_D ('1', '0', '-1', '-1') H_F ('5/2', '0', '-3/4', '-3/4') PARITY 1 0 TAG 0
+D PRE6 114 (1, 1) CELL ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (7, -2, 12, -2)) H_D ('1', '0', '-1', '-1') H_F ('5/2', '0', '-3/4', '-3/4') PARITY 1 0 TAG 0
+D POS_CORR_DIFF 114 (3, 0, 0, -3)
+D RESET114 114 (16, 0, 0, 0)
+D ARCH114 114 (0, 0) SHA 0429a944cb7e84c1ce898a4f1112516c11d76c2d56d1c0a0d469f5121cbe2749 SOURCE_READY 1 WORKER_READY 1
+D ARCH114 114 (0, 1) SHA 2fef2510b142260ee500b0c4f421202da873ef3170a3aa7ab7e830ecd86c9160 SOURCE_READY 1 WORKER_READY 0
+D ARCH114 114 (1, 0) SHA 5f899318dac5044542bb086f5cff2d2b8cc37259cee4c4d1371fa18d7e87a758 SOURCE_READY 1 WORKER_READY 0
+D ARCH114 114 (1, 1) SHA d76aac5036889870552bb84d96cfeb1dc60d77e09411c736903c1c90849576c7 SOURCE_READY 0 WORKER_READY 0
+COLUMN 1 DISTINCT 1 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 2 DISTINCT 1 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 3 DISTINCT 1 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 4 DISTINCT 3 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 5 DISTINCT 4 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 7 DISTINCT 4 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+READ_CLASS INDEPENDENT (0, 0) FOUR_SINGLE 10 FIRST_FOUR (0, 5, 0, 3) PICK ((0, 1, 0, 2), (0, 5, 0, 3))
+D READ 114 ((0, 1, 0, 2), (0, 5, 0, 3)) VALUES (((0, 0), ((0, 0, 0, 0), (7, -2, 12, -2))), ((0, 1), ((0, 0, 0, 0), (1, -5, 6, -2))), ((1, 0), ((0, 0, 0, 0), (-2, -1, 10, -7))), ((1, 1), ((0, 0, 0, 0), (7, -5, 12, -5))))
+D READ_LOSS 114 (115, 1) (116, 1)
+D START 198 FIRST_FOUR_HISTORIES (2, 1)
+D PRE6 198 (0, 0) CELL ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (7, -2, 12, -2)) H_D ('1', '0', '-1', '-1') H_F ('5/2', '0', '-3/4', '-3/4') PARITY 1 0 TAG 0
+D PRE6 198 (0, 1) CELL ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (4, -2, 12, 1)) H_D ('1', '0', '-1', '-1') H_F ('1', '0', '0', '0') PARITY 1 1 TAG 1
+D PRE6 198 (1, 0) CELL ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (7, -2, 12, -2)) H_D ('1', '0', '-1', '-1') H_F ('5/2', '0', '-3/4', '-3/4') PARITY 1 0 TAG 0
+D PRE6 198 (1, 1) CELL ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (7, -2, 12, -2)) H_D ('1', '0', '-1', '-1') H_F ('5/2', '0', '-3/4', '-3/4') PARITY 1 0 TAG 0
+D POS_CORR_DIFF 198 (3, 0, 0, -3)
+D RESET114 198 (16, 0, 0, 0)
+D ARCH114 198 (0, 0) SHA aa9c9c06812ded74822c8dd279fcd493c33955efa5c0dfb37678c0a5e9789e0e SOURCE_READY 1 WORKER_READY 1
+D ARCH114 198 (0, 1) SHA 9692a495510de5aaf23adcb6c34462d45d2f097fdfd5859a5105e0972d23720f SOURCE_READY 1 WORKER_READY 0
+D ARCH114 198 (1, 0) SHA 47be0c0c24e6faa7ed10cf7d953660d09077fe3e2f9e3f99d6e90ec9586d2b21 SOURCE_READY 1 WORKER_READY 0
+D ARCH114 198 (1, 1) SHA 62bc8c79e14206413d044b7e91a2f478ccdf7fa040dbb37de2798f0d96a4473e SOURCE_READY 0 WORKER_READY 0
+COLUMN 1 DISTINCT 1 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 2 DISTINCT 1 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 3 DISTINCT 1 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 4 DISTINCT 3 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 5 DISTINCT 4 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 7 DISTINCT 3 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+READ_CLASS INDEPENDENT (0, 0) FOUR_SINGLE 5 FIRST_FOUR (0, 5, 0, 3) PICK ((0, 1, 0, 2), (0, 5, 0, 3))
+D READ 198 ((0, 1, 0, 2), (0, 5, 0, 3)) VALUES (((0, 0), ((0, 0, 0, 0), (7, -2, 12, -2))), ((0, 1), ((0, 0, 0, 0), (1, -5, 6, -2))), ((1, 0), ((0, 0, 0, 0), (7, -6, 9, -5))), ((1, 1), ((0, 0, 0, 0), (7, -2, 10, -5))))
+D READ_LOSS 198 (115, 1) (116, 1)
+D START 244 FIRST_FOUR_HISTORIES (2, 1)
+D PRE6 244 (0, 0) CELL ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (7, -2, 12, -2)) H_D ('1', '0', '-1', '-1') H_F ('5/2', '0', '-3/4', '-3/4') PARITY 1 0 TAG 0
+D PRE6 244 (0, 1) CELL ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (4, -2, 12, 1)) H_D ('1', '0', '-1', '-1') H_F ('1', '0', '0', '0') PARITY 1 1 TAG 1
+D PRE6 244 (1, 0) CELL ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (7, -5, 15, -2)) H_D ('1', '0', '-1', '-1') H_F ('49/4', '0', '15/2', '15/2') PARITY 1 0 TAG 0
+D PRE6 244 (1, 1) CELL ((0, -1, -1, 0), (0, 1, 1, 0), (6, -2, 12, 1), (7, -5, 15, -2)) H_D ('1', '0', '-1', '-1') H_F ('49/4', '0', '15/2', '15/2') PARITY 1 0 TAG 0
+D POS_CORR_DIFF 244 (3, -3, 3, -3)
+D RESET114 244 (16, 0, 0, 0)
+D ARCH114 244 (0, 0) SHA 0429a944cb7e84c1ce898a4f1112516c11d76c2d56d1c0a0d469f5121cbe2749 SOURCE_READY 1 WORKER_READY 1
+D ARCH114 244 (0, 1) SHA 2fef2510b142260ee500b0c4f421202da873ef3170a3aa7ab7e830ecd86c9160 SOURCE_READY 1 WORKER_READY 0
+D ARCH114 244 (1, 0) SHA 89b623e86a22a9f2b096ba86d4aa11bb2e88145ed140baef99efbe99e40a153d SOURCE_READY 1 WORKER_READY 0
+D ARCH114 244 (1, 1) SHA 40a8dc6699b62cab3559b61a6b0fed27a30a42d12cfe84c288b1880c14465892 SOURCE_READY 0 WORKER_READY 0
+COLUMN 1 DISTINCT 1 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 2 DISTINCT 1 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 3 DISTINCT 1 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 4 DISTINCT 2 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 5 DISTINCT 4 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+COLUMN 7 DISTINCT 4 COUNTS (1, 1, 1, 1) BIT_ONLY (0, 0)
+READ_CLASS INDEPENDENT (0, 0) FOUR_SINGLE 10 FIRST_FOUR (0, 5, 0, 3) PICK ((0, 1, 0, 2), (0, 5, 0, 3))
+D READ 244 ((0, 1, 0, 2), (0, 5, 0, 3)) VALUES (((0, 0), ((0, 0, 0, 0), (7, -2, 12, -2))), ((0, 1), ((0, 0, 0, 0), (1, -5, 6, -2))), ((1, 0), ((0, 0, 0, 0), (-2, -8, 6, -11))), ((1, 1), ((0, 0, 0, 0), (-2, -4, 4, -3))))
+D READ_LOSS 244 (116, 1) (116, 1)
+E LOCAL 1 [('admitted', 300), ('guard_reject', 10), ('screen_1110', 300), ('tried', 310)]
+E LOCAL 2 [('admitted', 300), ('guard_reject', 10), ('screen_1110', 300), ('tried', 310)]
+E COUNTS [('admitted', 600), ('guard_reject', 20), ('screen_1110', 600), ('tried', 620)] FIRST_READY None
+E NO QUALIFYING SECOND READ
+DONE D/E exact diagnostic and bounded family
