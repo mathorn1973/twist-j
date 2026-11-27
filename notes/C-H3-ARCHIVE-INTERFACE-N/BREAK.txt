@@ -1,0 +1,57 @@
+ALT A 114 DIFF ((5, 0, (0, -6, 0, 0)), (7, 0, (12, 6, 6, 6))) ALIASES [(5, 0, None), (7, 0, (4, 1))]
+ALT A INTERFACE 114 0 (10, 1)
+ALT A INTERFACE 114 1 (2, 1)
+ALT A INTERFACE 114 2 (10, 1)
+ALT A INTERFACE 114 3 (10, 1)
+ALT A INTERFACE 114 4 (10, 1)
+ALT A 198 DIFF ((5, 0, (0, -6, 0, 0)), (7, 0, (12, 6, 6, 6))) ALIASES [(5, 0, (123, 1)), (7, 0, (113, 1))]
+ALT A INTERFACE 198 0 (10, 1)
+ALT A INTERFACE 198 1 (2, 1)
+ALT A INTERFACE 198 2 (10, 1)
+ALT A INTERFACE 198 3 (10, 1)
+ALT A INTERFACE 198 4 (10, 1)
+ALT A 244 DIFF ((4, 0, (-3, -6, -3, -3)), (5, 0, (3, 0, 3, 3)), (7, 0, (12, 6, 6, 6))) ALIASES [(4, 0, (149, 1)), (5, 0, (149, 1)), (7, 0, (4, 1))]
+ALT A INTERFACE 244 0 (2, 1)
+ALT A INTERFACE 244 1 (2, 1)
+ALT A INTERFACE 244 2 (2, 1)
+ALT A INTERFACE 244 3 (2, 1)
+ALT A INTERFACE 244 4 (2, 1)
+ALT B 1 0 None 25 20
+ALT B 1 1 None 25 20
+ALT B 1 2 None 25 20
+ALT B 1 3 None 25 20
+ALT B 1 4 (1, 49, 1, 1, 1, 0) 25 20
+ALT B -1 0 None 25 20
+ALT B -1 1 None 25 20
+ALT B -1 2 None 25 20
+ALT B -1 3 (1, 39, 1, 1, 1, 0) 25 20
+ALT B -1 4 (1, 49, 1, 1, 1, 0) 25 20
+ALT B WINS [(1, 0), (1, 1), (1, 2), (1, 3), (-1, 0), (-1, 1), (-1, 2)]
+ALT C1 1 1 100
+ALT C1 1 2 100
+ALT C1 2 1 100
+ALT C1 2 2 100
+ALT C1 SELECT ((-33, -9, -18, -30), (-15, 3, -18, 6)) ((-21, -8, 5, -36), (3, 28, -19, 30)) 18202
+ALT C2 6 1 [('guard_first_111', 50), ('guard_first_4', 219), ('guard_first_45', 1), ('guard_first_5', 72), ('guard_first_53', 1), ('guard_first_6', 19), ('guard_first_7', 2), ('guard_first_73', 1), ('pass', 240)]
+ALT C2 6 2 [('guard_first_1', 14), ('guard_first_103', 1), ('guard_first_111', 29), ('guard_first_13', 1), ('guard_first_15', 3), ('guard_first_17', 2), ('guard_first_19', 1), ('guard_first_2', 11), ('guard_first_3', 3), ('guard_first_4', 180), ('guard_first_5', 46), ('guard_first_6', 20), ('guard_first_7', 2), ('guard_first_73', 2), ('guard_first_77', 2), ('guard_first_89', 2), ('guard_first_9', 2), ('guard_first_91', 2), ('pass', 282)]
+ALT C2 8 1 [('guard_first_11', 1), ('guard_first_111', 25), ('guard_first_4', 341), ('guard_first_5', 48), ('guard_first_6', 68), ('guard_first_8', 1), ('pass', 121)]
+ALT C2 8 2 [('guard_first_1', 14), ('guard_first_111', 14), ('guard_first_2', 11), ('guard_first_29', 1), ('guard_first_3', 2), ('guard_first_33', 1), ('guard_first_4', 310), ('guard_first_5', 43), ('guard_first_53', 1), ('guard_first_55', 1), ('guard_first_57', 1), ('guard_first_6', 68), ('guard_first_61', 1), ('guard_first_81', 1), ('guard_first_83', 1), ('guard_first_9', 1), ('pass', 134)]
+ALT C2 FULL 36156
+ALT C3 FIRST 80436 48
+ALT C3 SECOND WRITE 25 FOUR 256 HIST (2, 1) SPLIT None LOSS None RESETS []
+ALT D INTERFACE 0 (6, 1)
+ALT D INTERFACE 1 (116, 1)
+ALT D INTERFACE 2 (6, 1)
+ALT D INTERFACE 3 (6, 1)
+ALT D INTERFACE 4 (6, 1)
+ALT D END (0, 0) (((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)), ((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)), ((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)))
+ALT D END (0, 1) (((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)), ((0, 0, 0, 0), (0, -9, 18, -9), (585, 0, 225, 225)), ((0, 0, 0, 0), (0, 9, -18, 9), (-585, 0, -225, -225)))
+ALT D END (1, 0) (((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)), ((0, 0, 0, 0), (-1, -3, -1, 0), (115, 0, -40, -40)), ((0, 0, 0, 0), (1, 3, 1, 0), (-115, 0, 40, 40)))
+ALT D END (1, 1) (((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)), ((0, 0, 0, 0), (0, -9, 18, -9), (585, 0, 225, 225)), ((0, 0, 0, 0), (0, 9, -18, 9), (-585, 0, -225, -225)))
+ALT D READ [(15, 10, 47, 3), (24, 16, 53, 12), (18, 19, 50, 3), (15, 13, 41, 6)]
+ALT D PASSIVE 0 19022
+ALT D PASSIVE 1 19022
+ALT D PASSIVE 2 19022
+ALT D PASSIVE 3 19022
+ALT D PASSIVE 4 19022
+PASS alternate independent ring A/B/C and selected D
