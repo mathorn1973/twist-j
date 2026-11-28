@@ -272,10 +272,12 @@ the identity on the retained reserves. Each C preserves its pair sum and
 Hermitian account because `h(rho)=1`; refused pairs are fixed. Each B
 preserves material and radiation centers separately and preserves the
 combined Hermitian account by its balance equality. Its two branches
-are inverse. Reversing C on each preserved admission domain, applying B
-again and retaining the matching bit therefore gives the exact inverse
-of each native tick. The external swaps remain separately declared
-boundaries, not extra native gates hidden inside that tick.
+are inverse. To invert a full native tick, first undo the bit flip to
+recover the previous matching, then apply B, which is its own inverse,
+and finally apply C^-1 with that recovered matching. Every inverse C
+uses its preserved admission domain. All reserves remain unchanged.
+The external swaps remain separately declared boundaries, not extra
+native gates hidden inside that tick.
 
 If any further external action is admitted, its dependence must also be
 specified. Merely writing outside the read column is insufficient to
