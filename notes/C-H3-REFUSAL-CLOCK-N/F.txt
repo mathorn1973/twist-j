@@ -1,0 +1,31 @@
+A PARTNER 1 1 READY113 (24, 31, 8, 42) ODD (-42, -11, -22, -48) POST_B113 (12, 25, 8, 30) READY114 (9, -8, 5, -6) REFUSAL_IMPOSSIBLE 1
+A PARTNER 1 2 READY113 (24, 31, 8, 42) ODD (6, 13, 26, 0) POST_B113 (12, 25, 8, 30) READY114 (33, 28, 29, 30) REFUSAL_IMPOSSIBLE 1
+A PARTNER 2 1 READY113 (24, -5, 32, -6) ODD (54, 1, 26, 24) POST_B113 (12, -11, 32, -18) READY114 (9, -8, 5, -6) REFUSAL_IMPOSSIBLE 1
+A PARTNER 2 2 READY113 (24, -5, 32, -6) ODD (102, 25, 74, 72) POST_B113 (12, -11, 32, -18) READY114 (33, 28, 29, 30) REFUSAL_IMPOSSIBLE 1
+F CENSUS CLOCKS 75 COUNTS [('no_prior_refusal_or_change', 496500), ('qualified', 943500), ('tried', 1440000)] HIST [(2, 44500), (3, 145000), (4, 55000), (5, 145000), (6, 55000), (7, 145000), (8, 55000), (9, 123000), (10, 22000), (11, 22000), (12, 22000), (13, 22000), (14, 22000), (15, 22000), (16, 22000), (17, 22000)] GT5 554000 GE10 176000 GE114 0
+F SELECT DELAY 17 HEIGHT 4 SEED (2, 0, 1) PERIOD 18 ROW 0 READY (0, 0, 1, 0) W (1, 0, 0, 0) TAG 1 PHASE 2 REFERENCE (2, 0, 1, 0) F (-1, 0, -1, 0) INIT ((0, 0, 1, 0), (0, 0, -1, 0), (1, 0, 0, 0), (0, 0, 0, 0)) WORD CRCRCRCRRRRRRRRRC
+F NATIVE 1 R0 (-1, -1, -1, -1) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 2 R0 (-1, -1, -1, -1) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 3 R0 (0, 1, 0, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 4 R0 (0, 1, 0, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 5 R0 (0, 0, 0, 1) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 6 R0 (0, 0, 0, 1) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 7 R0 (1, 0, 0, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 8 R0 (1, 0, 0, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 9 R0 (1, 0, 0, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 10 R0 (1, 0, 0, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 11 R0 (1, 0, 0, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 12 R0 (1, 0, 0, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 13 R0 (1, 0, 0, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 14 R0 (1, 0, 0, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 15 R0 (1, 0, 0, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F NATIVE 16 R0 (1, 0, 0, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ()
+F WRITE PRE ((0, 0, 1, 0), (2, 0, 1, 0), (-2, 0, -2, 0), (0, 0, 0, 0)) POST ((0, 0, 0, 0), (2, 0, 2, 0), (-2, 0, -1, 0), (0, 0, -1, 0)) ACCOUNT ((9, 0, 4, 0), (-56, 0, -56, 0), (247, 0, 120, 120)) Q 374
+F NATIVE 17 R0 (0, 0, 0, 0) R2 (2, 0, 2, 0) CLK (-2, 0, -1, 0) TAGS ((0, 0, 1),)
+F NATIVE 18 R0 (0, 0, 1, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ((0, 0, 2),)
+F NATIVE 35 R0 (0, 0, 0, 0) R2 (2, 0, 2, 0) CLK (-2, 0, -1, 0) TAGS ((0, 0, 1),)
+F NATIVE 36 R0 (0, 0, 1, 0) R2 (2, 0, 1, 0) CLK (-2, 0, -2, 0) TAGS ((0, 0, 2),)
+F HOLD SUBSEQUENT 0 OF 32
+F PHASES [(0, 1, 1, (0, 0, 1, 0)), (2, 17, 1, (0, 0, 1, 0)), (4, 15, 1, (0, 0, 1, 0)), (6, 13, 1, (0, 0, 1, 0)), (8, 11, 1, (0, 0, 1, 0)), (10, 9, 1, (0, 0, 1, 0)), (12, 7, 1, (0, 0, 1, 0)), (14, 5, 1, (0, 0, 1, 0)), (16, 3, 1, (0, 0, 1, 0))]
+F FORCED_LINEAR FIRST_BALANCE (10, 1) TARGET_R0 (Fraction(1, 2), Fraction(0, 1), Fraction(-1, 4), Fraction(-1, 2)) SAME_READY 0
+PASS actual reference-gated refusal-clock write

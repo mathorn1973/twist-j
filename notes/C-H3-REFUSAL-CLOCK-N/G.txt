@@ -1,0 +1,11 @@
+A PARTNER 1 1 READY113 (24, 31, 8, 42) ODD (-42, -11, -22, -48) POST_B113 (12, 25, 8, 30) READY114 (9, -8, 5, -6) REFUSAL_IMPOSSIBLE 1
+A PARTNER 1 2 READY113 (24, 31, 8, 42) ODD (6, 13, 26, 0) POST_B113 (12, 25, 8, 30) READY114 (33, 28, 29, 30) REFUSAL_IMPOSSIBLE 1
+A PARTNER 2 1 READY113 (24, -5, 32, -6) ODD (54, 1, 26, 24) POST_B113 (12, -11, 32, -18) READY114 (9, -8, 5, -6) REFUSAL_IMPOSSIBLE 1
+A PARTNER 2 2 READY113 (24, -5, 32, -6) ODD (102, 25, 74, 72) POST_B113 (12, -11, 32, -18) READY114 (33, 28, 29, 30) REFUSAL_IMPOSSIBLE 1
+G HEIGHT 6 [('repeated', 3672), ('row_phase', 3672), ('vectors', 36)]
+G HEIGHT 8 [('repeated', 14688), ('row_phase', 14688), ('vectors', 108)]
+G HEIGHT 10 [('repeated', 36720), ('row_phase', 36720), ('vectors', 216)]
+G HEIGHT 12 [('repeated', 73440), ('row_phase', 73440), ('vectors', 360)]
+G HEIGHT 14 [('repeated', 128520), ('row_phase', 128520), ('vectors', 540)]
+G COUNTS [('repeated', 257040), ('row_phase', 257040), ('vectors', 1260)]
+G NO EXACT114
