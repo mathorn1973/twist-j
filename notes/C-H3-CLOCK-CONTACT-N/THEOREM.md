@@ -119,7 +119,16 @@ whose two material rails and CLK are zero. Keep its CORR and every other
 slot unchanged. Let a finite collection of baseline input histories be
 supplied, including any explicitly declared input boundaries, through one
 absolute target tick `tau`. Each baseline history is a literal native
-trajectory between those boundaries. No boundary acts on the new column.
+trajectory between those boundaries. Every boundary leaves the entire new
+column and the matching bit unchanged and does not advance the native
+transport schedule. It must also preserve equality outside that column:
+when two states agree on every outside coordinate, including any retained
+reserves and other context, the same supplied input action gives outputs
+agreeing on every outside coordinate. It is sufficient that the outside
+update depend only on those outside coordinates and the common supplied
+input. Merely writing outside the column is insufficient: a boundary
+that reads a clock value and uses it to change another column need not
+preserve the equality required by the proof.
 
 Let `u(t,z)` and `v(t,z)` be two supplied free vertical C trajectories on
 this height, with the same absolute matching bit as the apparatus. They
@@ -257,9 +266,11 @@ rails follow the free words by Section 3. Every CORR value remains equal
 to baseline because its horizontal C input remains equal. Every other
 column is exactly baseline before B and hence after its local B. The
 constructed tests make B idle in the new column at all unwanted events.
-This closes the induction until the wanted contact. Any declared input
-boundary acting only outside that column preserves the same induction
-when the baseline and constructed histories receive the same input action.
+This closes the induction until the wanted contact. At a declared input
+boundary, the equality-preservation condition of Section 3 carries the
+outside equality to the outputs under the common supplied input, while
+the new column and its matching schedule remain unchanged. Thus the
+induction also passes each such boundary.
 
 At the wanted tick, all other cells still have their baseline pre-B states,
 so all their B tags and post-B states are unchanged. The new column has
@@ -285,8 +296,12 @@ at full 114. For each even source row the outgoing pair is
 `2*h(eta)`, because `h(p)=h(q)=1`. The replacement therefore preserves
 the apparatus's complete accounts. Retaining the outgoing pair in the
 same slots of the reserve that supplied the incoming pair makes the
-combined boundary an ordinary reversible swap. No source information is
-discarded and no native implementation of this boundary is inferred.
+combined boundary an ordinary reversible swap. This fixed-coordinate swap
+reads and changes only the source pairs and their reserve pairs, all
+outside the new column. It therefore satisfies the stronger outside
+equality-preservation condition of Section 3, as well as leaving the
+matching schedule unchanged. No source information is discarded and no
+native implementation of this boundary is inferred.
 The baseline source-readiness premise at that boundary is part of the
 prior apparatus certificate and must also be reproduced in the literal run.
 
@@ -321,9 +336,10 @@ tick or an exception hidden inside a tick-inverse assertion.
 
 ## 6. What the contact records
 
-**Conditional record statement, candidate-T.** At the target full cut the
-fixed material read pair in the new column has exactly two values, indexed
-by whether the wanted fresh-input predicate holds. Both raw words and
+**Conditional record statement, candidate-T.** Assume that the declared
+input family contains both a wanted and an excluded fresh-predicate value.
+At the target full cut the fixed material read pair in the new column then
+has exactly two values, indexed by that predicate. Both raw words and
 their supplied stock are common to every history. Negative histories
 leave the target pair unchanged; positive histories add exactly
 `(Delta,-Delta)` by Section 2. Nonzero `Delta` makes the two values
@@ -332,9 +348,14 @@ different, and neither depends on the previous input.
 If, at this same target cut, the baseline old-archive material has exactly
 two values indexed by the old predicate and independent of the fresh
 input, its equality with the actual old archive through the target gives
-the same property here. The combined old and new material readouts then
-have exactly four classes, because the four predicate combinations occur
-and equality of the combined readout requires equality of each component.
+the same property here. Assume additionally that all four combinations of
+the old and fresh predicates occur in the declared input family. The
+combined old and new material readouts then have exactly four classes:
+all four combinations occur, and equality of the combined readout requires
+equality of each component. Both occurrence assumptions hold for the frozen
+25 ordered fifth-root input pairs with predicates `p==j` and `q==j`.
+Without these assumptions, only the corresponding occurring classes can
+be asserted, not an exact class count of two or four.
 The baseline old-archive premise is separate and must be checked on the
 complete declared input family. The proof does not supply it from equal
 global accounts alone.
