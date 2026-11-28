@@ -27,3 +27,13 @@ fbadb2c23b5e09970bf18b00018919fd917b3effe0199ddbd2f834bbf19342f3  CLOCK.txt
 EXPECTED.txt: 17 lines, 7666 bytes.
 CLOCK.txt: 5 lines, 681 bytes.
 No registry/Canon change; no authority or formal gate claimed.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit 2a46d561cec90e66f7a4c647fa62902e41d41a9b and the immutable
+public H3 source at the base were fetched as raw files. All six
+source and transcript SHA-256 values were checked before execution.
+Primary verify.py, clock_check.py and alternate break.py exited zero
+with empty stderr. Both full B/C outputs match EXPECTED.txt, and the
+sample output matches CLOCK.txt byte for byte on both architectures.
+This is result-exposed reproduction, not blind independent review
+or the formal public scientific gate.
