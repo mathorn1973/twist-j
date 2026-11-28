@@ -35,3 +35,14 @@ bb30ae1cc2c6aacfe8959dec39e6b16b282faa3598828e3e051c94f2e923b4fd  reference_gate
 ```
 
 No registry/Canon change; no authority or formal gate claimed.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit 06f86cf4db3b5e657629f76677cc3e6e41d5ca0e and immutable
+public H3 source at the base were fetched as raw files. All thirteen
+source and transcript SHA-256 values were checked before execution.
+All five primary scripts and the alternate exited zero with empty
+stderr. Each of the six complete stdout transcripts agrees byte
+for byte with its own archived transcript across the two architectures.
+Result-exposed reproduction, not blind independent review or the
+formal public scientific gate. Trailing whitespace only was normalized
+in the copied issue preregistrations; no scientific criterion changed.
