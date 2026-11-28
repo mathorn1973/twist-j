@@ -1,0 +1,2 @@
+D TARGET226 POS [(21, 10, 17, 12)] NEG [(21, 10, 17, 12)] DELTA4 (24, 0, 12, 12)
+D STOP target radiation unavailable
