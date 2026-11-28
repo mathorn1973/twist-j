@@ -9,8 +9,8 @@ No registry, Canon, workflow, sealed probe or predecessor is changed.
 
 | Question | Result and boundary |
 |---|---|
-|Can a previous exact reader endpoint have one original-time-zero common probe?|A: one of six passes, the tag1 waiting probe at107; four preinstalled radiation slots, added Q=52, all25 histories and original material preserved.|
-|Can a common prepared H3 link read, transmit and write another material bank?|B: all60 labels pass on actual25 and crossed50, with paid assembly at107, native arrival/read108, buffer109 and receiver write110.|
+|Can a previous exact reader endpoint have one original-time-zero common probe?|A: one of six passes, the tag1 waiting probe at 107; four preinstalled radiation slots, added Q=52, all 25 histories and original material preserved.|
+|Can a common prepared H3 link read, transmit and write another material bank?|B: all 60 labels pass on actual25 and crossed50, with paid assembly at 107, native arrival/read108, buffer109 and receiver write110.|
 |Does the receiving cell remain literally fixed for32 subsequent ticks?|No label passes. DRAIN extends local retention to eight complete subsequent ticks, then a delayed undo occurs.|
 |Does the six-row receiver sum retain its exact value for32 subsequent ticks?|Ten SEALED labels pass, m=4 or8 with all five phases; first in frozen order is SEALED,4,0. S6 is a mathematical readout, not a native summing circuit.|
 |Are A and B already one fully prepared original-start apparatus?|No. Their source words can be compared exactly, but B's common receiver/environment preparation has not been realized in A's complete history.|
