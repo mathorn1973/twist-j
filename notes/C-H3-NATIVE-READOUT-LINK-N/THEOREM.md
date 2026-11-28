@@ -572,3 +572,71 @@ source/probe loader, a universal column-sum reader, worker restoration,
 environment reset, repeated fresh inputs or unlimited retained history.
 The earlier failures retain their original scope. There is no Canon
 promotion, physical occurrence law, native-U assertion or layer lift.
+
+## 11. Separate port compatibility of the two reader amplitudes
+
+Status: conditional candidate-T. This additional algebraic interface lemma
+does not assert a combined original-full0 assembly or a new trajectory.
+Write the amplitude used above as fB and define
+
+```text
+fB=(-3,-5,-4,0),
+d_star=J*fB=(1,-1,-3,-1),
+fA=J^2*fB=(3,2,1,1).
+```
+
+Multiplication by `J=1+j^2` and reduction of
+`j^4=-1-j-j^2-j^3` prove both displayed identities exactly.
+For positive material half-difference d_star, common radiation `(fB,-fB)`
+triggers B2, whereas `(fA,-fA)` triggers B1. Their positive outgoing
+radiation pairs are identical:
+
+```text
+(J*fB,-J*fB)=(J^-1*fA,-J^-1*fA).
+```
+
+The negative material pair has an odd difference and is idle for either
+probe. Its outgoing pairs are respectively `(fB,-fB)` and `(fA,-fA)`.
+Thus the two readers need not have the same negative radiation word.
+Their positive outgoing material half-differences also differ: they are
+fB after B2 and fA after B1. Equality of the positive radiation pair is
+not equality of the local cells or complete successor fields.
+
+Keep the same buffer ready value `b=-J*fB-8*v`. For the A reader,
+
+```text
+(-fA)-b = J*fB-fA+8*v
+        = (-2,-3,-4,-2)+8*v
+        = j mod2.
+```
+
+Its negative CORR input therefore refuses the next C contact with buffer
+b. Its positive CORR input is still `-J*fB`, whose difference from b
+is exactly `8*v`. Under the same common buffer, receiver and guard
+readiness premises as Section4, the two transport steps consequently
+give the same buffer values `b,b+4*eta*v`, the same arriving receiver
+values `b,b+2*eta^2*v`, and the same native receiver write at110.
+No modification of v, its label order, a guard, a time or a gate is used
+in this compatibility statement.
+
+The missing premise for composition is full-field readiness. An A endpoint
+whose target emits these words has not thereby supplied the prescribed
+buffer CORR and CLK, uniform receiver material and CLK, horizontal partner
+values, or DRAIN stock. Their common phase and the guard conditions that
+exclude other material-background influences must also hold. In particular
+preserving the original worker material in column6 is not a proof that it
+equals the newly prepared receiver stock. The changed positive bank
+material can matter to later evolution as well. Checking a target word,
+an account, or an unchanged earlier material prefix cannot replace these
+conditions. No combined full0-to-receiver protocol or additional retention
+interval follows from this lemma.
+
+### Custody limitation of the associated finite runs
+
+The main A and B runs took place before the alternate checker's source
+freeze. This is a protocol deviation from the preregistered requirement
+to freeze both implementations before execution. A later checker replay
+is recorded as reproduction, not as satisfaction of that promised frozen
+blind confirmation. This limitation does not change any scientific gate
+or promote a finite claim, and it must accompany the associated numerical
+results. The identities and conditional proofs above use no such replay.
