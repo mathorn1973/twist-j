@@ -44,3 +44,16 @@ dbc4e4394020f60238d7ee1c5050168bfb9339a2f1af82335ddeedb4e08b10f2  EXPECTED.txt
 ```
 
 No registry/Canon change; no authority or formal gate claimed.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit 8c047afe950fdb2bdc65d0dc169feeec35ecc377 and the immutable
+public H3 source at the base were fetched as raw files. All eleven
+source and transcript SHA-256 values were checked before execution.
+Primary A-C, D, E and alternate A-E exited zero with empty stderr.
+Each complete stdout matches its own archived transcript byte for
+byte across architectures. The separately implemented alternate
+recomputes the principal results in its own print format. This is
+result-exposed reproduction, not blind independent review or the
+formal public scientific gate. At packaging only trailing whitespace
+in the copied issue preregistration was removed; the scientific
+criteria were unchanged.
