@@ -39,3 +39,13 @@ EXPECTED.txt: 25 lines, 8340 bytes.
 D.txt: 2 lines, 117 bytes.
 BREAK.txt: 25 lines, 5944 bytes.
 No registry/Canon change; no authority or formal gate claimed.
+
+Second-architecture informal reproduction: Linux x86_64, Python 3.12.3.
+Input commit de4f5bf836883ea3b513f34a0960f9544dfc8f1b and the immutable
+public H3 source at the base were fetched as raw files. All seven
+source and transcript SHA-256 values were checked before execution.
+Primary A-C, D and alternate A-D exited zero with empty stderr.
+Each complete stdout matches its own archived transcript byte for
+byte across architectures; the common result extracts and D match
+also across implementations. Result-exposed reproduction, not blind
+independent review or the formal public scientific gate.
